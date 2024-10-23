@@ -1,0 +1,119 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; ; Lapce
+; {:des "Lapce - alt - alphabet"
+;  :rules
+;  [;
+;   [:!O#Pa :!CSl [:lapce]]                                                                          ;
+;   ; [:!O#Pb : [:lapce]]                                                                            ;
+;   [:!O#Pc :!Cbackslash [:lapce]]                                                                   ;
+;   [:!O#Pd :!Cd [:lapce]]                                                                           ;
+;   ; [:!O#Pe : [:lapce]]                                                                            ;
+;   ; [:!O#Pf : [:lapce]]                                                                            ;
+;   ; [:!O#Pg : [:lapce]]                                                                            ;
+;   ; [:!O#Ph : [:lapce]]                                                                            ;
+;   [:!O#Pi :!Cclose_bracket [:lapce]]                                                               ;
+;   [:!O#Pj :!OCdown_arrow [:lapce]]                                                                 ;
+;   [:!O#Pk :!OCup_arrow [:lapce]]                                                                   ;
+;   ; [:!O#Pl : [:lapce]]                                                                            ;
+;   ; [:!O#Pm : [:lapce]]                                                                            ;
+;   ; [:!O#Pn : [:lapce]]                                                                            ;
+;   [:!O#Po :!Copen_bracket [:lapce]]                                                                ;
+;   ; [:!O#Pp : [:lapce]]                                                                            ;
+;   ; [:!O#Pq : [:lapce]]                                                                            ;
+;   ; [:!O#Pr : [:lapce]]                                                                            ;
+;   ; [:!O#Ps : [:lapce]]                                                                            ;
+;   ; [:!O#Pt : [:lapce]]                                                                            ;
+;   [:!O#Pu :!Cz [:lapce]]                                                                           ;
+;   ; [:!O#Pv : [:lapce]]                                                                            ;
+;   ; [:!O#Pw : [:lapce]]                                                                            ;
+;   ; [:!O#Px : [:lapce]]                                                                            ;
+;   ; [:!O#Py : [:lapce]]                                                                            ;
+;   [:!O#Pz :!Cu [:lapce]]                                                                           ;
+;   ; [:!O#Pright_control : [:lapce]]                                                                ;
+;   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; ; Lapce
+; {:des "Lapce - alt - alphabet"
+;  :rules
+;  [;
+;   ; [:!SO#Pa : [:lapce]]                                                                           ;
+;   ; [:!SO#Pb : [:lapce]]                                                                           ;
+;   [:!SO#Pc :!Cslash [:lapce]]                                                                      ;
+;   ; [:!SO#Pd : [:lapce]]                                                                           ;
+;   ; [:!SO#Pe : [:lapce]]                                                                           ;
+;   ; [:!SO#Pf : [:lapce]]                                                                           ;
+;   ; [:!SO#Pg : [:lapce]]                                                                           ;
+;   ; [:!SO#Ph : [:lapce]]                                                                           ;
+;   [:!SO#Pi :!Cclose_bracket [:lapce]]                                                              ;
+;   ; [:!SO#Pj : [:lapce]]                                                                           ;
+;   ; [:!SO#Pk : [:lapce]]                                                                           ;
+;   [:!SO#Pl :!Cl [:lapce]]                                                                          ;
+;   ; [:!SO#Pm : [:lapce]]                                                                           ;
+;   ; [:!SO#Pn : [:lapce]]                                                                           ;
+;   [:!SO#Po :!Copen_bracket [:lapce]]                                                               ;
+;   ; [:!SO#Pp : [:lapce]]                                                                           ;
+;   ; [:!SO#Pq : [:lapce]]                                                                           ;
+;   ; [:!SO#Pr : [:lapce]]                                                                           ;
+;   ; [:!SO#Ps : [:lapce]]                                                                           ;
+;   ; [:!SO#Pt : [:lapce]]                                                                           ;
+;   [:!SO#Pu :!CSz [:lapce]]                                                                         ;
+;   ; [:!SO#Pv : [:lapce]]                                                                           ;
+;   ; [:!SO#Pw : [:lapce]]                                                                           ;
+;   [:!SO#Px :!CSk [:lapce]]                                                                         ;
+;   ; [:!SO#Py : [:lapce]]                                                                           ;
+;   ; [:!SO#Pz : [:lapce]]                                                                           ;
+;   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; ; Lapce
+; {:des "Lapce - Sessions"
+;  :rules
+;  [;
+;   [:#Pescape :!EWright_shift :lapce {:alone [:!CSe]}]                          ; file explorer     ;
+;   ; [:#Pdelete_or_backspace :!WQright_shift :lapce {:alone [:!Cj]}]            ; terminal          ;
+
+;   ; [:!OT#Pright_shift :!Cbackslash [:lapce]]                                  ; split vertical    ;
+;   ; [:!OT#Pright_option :!CSbackslash [:lapce]]                                ; split horizontal  ;
+;   ; [:!OC#Pright_shift :!Cbackslash [:lapce]]                                  ; split vertical    ;
+;   ; [:!OC#Pright_option :!CSbackslash [:lapce]]                                ; split horizontal  ;
+;   ; [:!OT#Pright_command :!TCSbackslash [:lapce]]                                                  ;
+
+;   [:!OC#Pleft_arrow :!TStab [:lapce]]                                          ; left tab          ;
+;   [:!OC#Pright_arrow :!Ttab [:lapce]]                                          ; right tab         ;
+;   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; ; Lapce
+; {:des "Lapce - Control remappings"
+;  :rules
+;  [;
+;   ; [:!EQR#Ptab :!Th [:lapce]]                                                 ; del-tab           ;
+;   ; [:!EQR#Pcaps_lock :!Tg [:lapce]]                                           ; del-caps          ;
+;   ; [:!EQR#Pleft_shift :!Oc [:lapce]]                                          ; del-shift         ;
+;   [:!EQR#Pleft_control :!Cp [:lapce]]                                          ; del-ctl          ;
+;   ; [:!EQR#Pleft_option :!Ts [:lapce]]                                         ; del-alt           ;
+;   [:!EQR#Pleft_command :f1 [:lapce]]                                           ; del-cmd           ;
+;   ; [:!EQR#Pspacebar :!Ty [:lapce]]                                            ; del-space         ;
+;   ; [:!EQR#Pright_command :!Tj [:lapce]]                                       ; del-cmd           ;
+;   ; [:!EQR#Pright_option :!Tn [:lapce]]                                        ; del-alt           ;
+;   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; ; Lapce
+; {:des "Lapce - Interactive delete"
+;  :rules
+;  [;
+;   ; [:!S#Pright_option :!Odelete_forward [:lapce]]                             ; shift-alt         ;
+;   [:!S#Pright_command :!Tk [:lapce]]                                           ; shift-cmd         ;
+;   ; [:!R#Pleft_control :!Odelete_or_backspace [:lapce]]                        ; shift-ctl        ;
+;   ; [:!R#Pleft_command :!Cdelete_or_backspace [:lapce]]                        ; shift-cmd         ;
+;   ; [:!R#Pleft_option : [:lapce]]                                              ; shift-alt         ;
+;   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

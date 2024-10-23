@@ -1,0 +1,103 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; BS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; bspace
+{:des "BSpace Mode - symbols"
+ :rules
+ [;
+  ; [:!EQR#Popen_bracket []]                                                                       ;
+  ; [:!EQR#Pclose_bracket []]                                                                      ;
+  ; [:!EQR#Psemicolon []]                                                                          ;
+  ; [:!EQR#Pquote []]                                                                              ;
+  ; [:!EQR#Pbackslash []]                                                                          ;
+  ; [:!EQR#Pcomma []]                                                                              ;
+  ; [:!EQR#Pperiod []]                                                                             ;
+  ; [:!EQR#Pslash []]                                                                              ;
+
+  ; [:!EQR#Pdelete_or_backspace []]                                                 NOT AVAILABLE  ;
+  ; [:!EQR#Preturn_or_enter []]                                                                    ;
+  ; [:!EQR#Pright_shift []]                                                                        ;
+  ; [:!EQR#Pright_option []]                                                                       ;
+  ; [:!EQR#Pright_command []]                                                                      ;
+  ; [:!EQR#Pspacebar []]                                                                           ;
+
+  ; [:!EQR#Pleft_command []]                                                                       ;
+  ; [:!EQR#Pleft_option []]                                                                        ;
+  ; [:!EQR#Pleft_control []]                                                                       ;
+  ; [:!EQR#Pleft_shift []]                                                                         ;
+  ; [:!EQR#Pcaps_lock []]                                                                          ;
+  ; [:!EQR#Ptab []]                                                                                ;
+  ; [:!EQR#Pnon_us_backslash []]                                                                   ;
+  ; [:!EQR#Pescape []]                                                              NOT AVAILABLE  ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; bspace
+{:des "BSpace Mode - alphabet"
+ :rules
+ [;
+  ; [:!EQR#keypad_1 []]                                                                            ;
+  ; [:!EQR#keypad_2 []]                                                                            ;
+  ; [:!EQR#keypad_3 []]                                                                            ;
+  ; [:!EQR#keypad_4 []]                                                                            ;
+  ; [:!EQR#keypad_5 []]                                                                            ;
+  ; [:!EQR#keypad_6 []]                                                                            ;
+  ; [:!EQR#keypad_7 []]                                                                            ;
+  ; [:!EQR#keypad_8 []]                                                                            ;
+  ; [:!EQR#keypad_9 []]                                                                            ;
+  ; [:!EQR#keypad_0 []]                                                                            ;
+  ; [:!EQR#keypad_slash []]                                                                        ;
+  ; [:!EQR#keypad_asterisk []]                                                                     ;
+
+  ; [:!EQR#1 []]                                                                                   ;
+  ; [:!EQR#2 []]                                                                                   ;
+  ; [:!EQR#3 []]                                                                                   ;
+  ; [:!EQR#4 []]                                                                                   ;
+  ; [:!EQR#5 []]                                                                                   ;
+  ; [:!EQR#6 []]                                                                                   ;
+  ; [:!EQR#7 []]                                                                                   ;
+  ; [:!EQR#8 []]                                                                                   ;
+  ; [:!EQR#9 []]                                                                                   ;
+  ; [:!EQR#0 []]                                                                                   ;
+  ; [:!EQR#Phyphen []]                                                                             ;
+  ; [:!EQR#Pequal_sign []]                                                                         ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; bspace
+{:des "BSpace Mode - alphabet"
+ :rules
+ [;
+  ; [:!EQR#Pa []]                                                                                  ;
+  ; [:!EQR#Pb []]                                                                                  ;
+  ; [:!EQR#Pc []]                                                                                  ;
+  ; [:!EQR#Pd []]                                                                                  ;
+  ; [:!EQR#Pe []]                                                                                  ;
+  ; [:!EQR#Pf []]                                                                                  ;
+  ; [:!EQR#Pg []]                                                                                  ;
+  ; [:!EQR#Ph []]                                                                                  ;
+  ; [:!EQR#Pi []]                                                                                  ;
+  ; [:!EQR#Pj []]                                                                                  ;
+  ; [:!EQR#Pk []]                                                                                  ;
+  ; [:!EQR#Pl []]                                                                                  ;
+  ; [:!EQR#Pm []]                                                                                  ;
+  ; [:!EQR#Pn []]                                                                                  ;
+  ; [:!EQR#Po []]                                                                                  ;
+  ; [:!EQR#Pp []]                                                                                  ;
+  ; [:!EQR#Pq []]                                                                                  ;
+  ; [:!EQR#Pr []]                                                                                  ;
+  ; [:!EQR#Ps []]                                                                                  ;
+  ; [:!EQR#Pt []]                                                                                  ;
+  ; [:!EQR#Pu []]                                                                                  ;
+  ; [:!EQR#Pv []]                                                                                  ;
+  ; [:!EQR#Pw []]                                                                                  ;
+  ; [:!EQR#Px []]                                                                                  ;
+  ; [:!EQR#Py []]                                                                                  ;
+  ; [:!EQR#Pz []]                                                                                  ;
+  ; [:!EQR#Pright_control []]                                                                      ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

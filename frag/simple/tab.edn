@@ -1,0 +1,116 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; TAB => WQR
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; tab
+{:des "Tab Mode - arrow"
+ :rules
+ [;
+  [:!WQR#Pleft_arrow :!OSpage_up [:term]]                                                          ;
+  [:!WQR#Pright_arrow :!OSpage_down [:term]]                                                       ;
+  [:!WQR#Pup_arrow :!OShome [:term]]                                                               ;
+  [:!WQR#Pdown_arrow :!OSend [:term]]                                                              ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; tab
+{:des "Tab Mode - symbols"
+ :rules
+ [;
+  ; [:!WQR#Popen_bracket []]                                                                       ;
+  ; [:!WQR#Pclose_bracket []]                                                                      ;
+  ; [:!WQR#Psemicolon []]                                                                          ;
+  ; [:!WQR#Pquote []]                                                                              ;
+  ; [:!WQR#Pbackslash []]                                                                          ;
+  ; [:!WQR#Pcomma []]                                                                              ;
+  ; [:!WQR#Pperiod []]                                                                             ;
+  ; [:!WQR#Pslash []]                                                                              ;
+
+  [:!WQR#Pdelete_or_backspace [:!Sf2]]                                                             ;
+  ; [:!WQR#Preturn_or_enter []]                                                                    ;
+  ; [:!WQR#Pright_shift []]                                                                        ;
+  ; [:!WQR#Pright_option []]                                                                       ;
+  ; [:!WQR#Pright_command []]                                                                      ;
+  ; [:!WQR#Pspacebar []]                                                                           ;
+
+  ; [:!WQR#Pleft_command []]                                                                       ;
+  ; [:!WQR#Pleft_option []]                                                                        ;
+  ; [:!WQR#Pleft_control []]                                                                       ;
+  ; [:!WQR#Pleft_shift []]                                                                         ;
+  ; [:!WQR#Pcaps_lock []]                                                           NOT AVAILABLE  ;
+  ; [:!WQR#Ptab []]                                                                                ;
+  ; [:!WQR#Pnon_us_backslash []]                                                                   ;
+  ; [:!WQR#Pescape []]                                                                             ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; tab
+{:des "Tab Mode - numbers"
+ :rules
+ [;
+  ; [:!WQR#Pkeypad_1 []]                                                                           ;
+  ; [:!WQR#Pkeypad_2 []]                                                                           ;
+  ; [:!WQR#Pkeypad_3 []]                                                                           ;
+  ; [:!WQR#Pkeypad_4 []]                                                                           ;
+  ; [:!WQR#Pkeypad_5 []]                                                                           ;
+  ; [:!WQR#Pkeypad_6 []]                                                                           ;
+  ; [:!WQR#Pkeypad_7 []]                                                                           ;
+  ; [:!WQR#Pkeypad_8 []]                                                                           ;
+  ; [:!WQR#Pkeypad_9 []]                                                                           ;
+  ; [:!WQR#Pkeypad_0 []]                                                                           ;
+  ; [:!WQR#Pkeypad_slash []]                                                                       ;
+  ; [:!WQR#Pkeypad_asterisk []]                                                                    ;
+
+  ; [:!WQR#P1 []]                                                                                  ;
+  ; [:!WQR#P2 []]                                                                                  ;
+  ; [:!WQR#P3 []]                                                                                  ;
+  ; [:!WQR#P4 []]                                                                                  ;
+  ; [:!WQR#P5 []]                                                                                  ;
+  ; [:!WQR#P6 []]                                                                                  ;
+  ; [:!WQR#P7 []]                                                                                  ;
+  ; [:!WQR#P8 []]                                                                                  ;
+  ; [:!WQR#P9 []]                                                                                  ;
+  ; [:!WQR#P0 []]                                                                                  ;
+  ; [:!WQR#Phyphen []]                                                                             ;
+  ; [:!WQR#Pequal_sign []]                                                                         ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; tab
+{:des "Tab Mode - alphabet"
+ :rules
+ [;
+  ; [:!WQR#Pa []]                                                                                  ;
+  ; [:!WQR#Pb []]                                                                                  ;
+  ; [:!WQR#Pc []]                                                                                  ;
+  ; [:!WQR#Pd []]                                                                                  ;
+  [:!WQR#Pe [:!Ssemicolon :g :o :!Shyphen :e :r :r :o :r :!Ssemicolon]]                            ;
+  ; [:!WQR#Pf []]                                                                                  ;
+  ; [:!WQR#Pg []]                                                                                  ;
+  ; [:!WQR#Ph []]                                                                                  ;
+  ; [:!WQR#Pi []]                                                                                  ;
+  ; [:!WQR#Pj []]                                                                                  ;
+  ; [:!WQR#Pk []]                                                                                  ;
+  ; [:!WQR#Pl []]                                                                                  ;
+  ; [:!WQR#Pm []]                                                                                  ;
+  ; [:!WQR#Pn []]                                                                                  ;
+  ; [:!WQR#Po []]                                                                                  ;
+  [:!WQR#Pp [:!Ssemicolon :g :o :!Shyphen :p :r :i :n :t :!Ssemicolon]]                            ;
+  ; [:!WQR#Pq []]                                                                                  ;
+  ; [:!WQR#Pr []]                                                                                  ;
+  ; [:!WQR#Ps []]                                                                                  ;
+  ; [:!WQR#Pt []]                                                                                  ;
+  ; [:!WQR#Pu []]                                                                                  ;
+  ; [:!WQR#Pv []]                                                                                  ;
+  ; [:!WQR#Pw []]                                                                                  ;
+  ; [:!WQR#Px []]                                                                                  ;
+  ; [:!WQR#Py []]                                                                                  ;
+  ; [:!WQR#Pz []]                                                                                  ;
+  ; [:!WQR#Pright_control []]                                                                      ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

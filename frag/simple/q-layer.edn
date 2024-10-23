@@ -1,0 +1,68 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Q => ROTC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; hyper Q
+{:des "Hyper Q - symbols"
+ :rules
+ [;
+  ; [:!ROTC#Popen_bracket []]                                                                      ;
+  ; [:!ROTC#Pclose_bracket []]                                                                     ;
+  [:!ROTC#Psemicolon [:launch "Microsoft PowerPoint"]]                                             ;
+  [:!ROTC#Pquote [:launch "Microsoft Excel"]]                                                      ;
+  [:!ROTC#Pbackslash [:launch "Microsoft Word"]]                                                   ;
+  ; [:!ROTC#Pcomma []]                                                              COLLISION      ;
+  ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
+  [:!ROTC#Pslash [:launch "Skim"]]                                                                 ;
+
+  [:!ROTC#Pdelete_or_backspace [:launch "Arc"]]                                                    ;
+  [:!ROTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
+  [:!ROTC#Pright_shift [:launch "Canary Mail"]]                                                    ;
+  [:!ROTC#Pright_option [:launch "Lapce"]]                                                         ;
+  [:!ROTC#Pright_command [:launch "Zed"]]                                                          ;
+  ; [:!ROTC#Pspacebar []]                                                           COLLISION      ;
+
+  ; [:!ROTC#Pleft_command []]                                                                      ;
+  ; [:!ROTC#Pleft_option []]                                                                       ;
+  ; [:!ROTC#Pleft_control []]                                                                      ;
+  ; [:!ROTC#Pleft_shift []]                                                                        ;
+  ; [:!ROTC#Pcaps_lock []]                                                                         ;
+  ; [:!ROTC#Ptab []]                                                                               ;
+  ; [:!ROTC#Pnon_us_backslash []]                                                                  ;
+  ; [:!ROTC#Pescape []]                                                                            ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; hyper Q
+{:des "Funciton keys"
+:rules
+[;
+  [:f1 :!ROTC#Pkeypad_1]                                                                           ;
+  [:f2 :!ROTC#Pkeypad_2]                                                                           ;
+  [:f3 :!ROTC#Pkeypad_3]                                                                           ;
+  [:f4 :!ROTC#Pkeypad_4]                                                                           ;
+  [:f5 :!ROTC#Pkeypad_5]                                                                           ;
+  [:f6 :!ROTC#Pkeypad_6]                                                                           ;
+  [:f7 :!ROTC#Pkeypad_7]                                                                           ;
+  [:f8 :!ROTC#Pkeypad_8]                                                                           ;
+  [:f9 :!ROTC#Pkeypad_9]                                                                           ;
+  [:f10 :!ROTC#Pkeypad_0]                                                                          ;
+  [:f11 :!ROTC#Pkeypad_slash]                                                                      ;
+  [:f12 :!ROTC#Pkeypad_asterisk]                                                                   ;
+
+  ; [:!ROTC#P1 []]                                                                                 ;
+  ; [:!ROTC#P2 []]                                                                                 ;
+  ; [:!ROTC#P3 []]                                                                                 ;
+  ; [:!ROTC#P4 []]                                                                                 ;
+  ; [:!ROTC#P5 []]                                                                                 ;
+  ; [:!ROTC#P6 []]                                                                                 ;
+  ; [:!ROTC#P7 []]                                                                                 ;
+  ; [:!ROTC#P8 []]                                                                                 ;
+  ; [:!ROTC#P9 []]                                                                                 ;
+  ; [:!ROTC#P0 []]                                                                                 ;
+  ; [:!ROTC#PPhyphen []]                                                                           ;
+  ; [:!ROTC#PPequal_sign []]                                                                       ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

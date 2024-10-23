@@ -1,0 +1,19 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; browser
+{:des "Browser vimium mappings"
+ :rules
+ [;
+  [:#Pright_shift :right_shift :browser {:alone [:!Of1]}]                      ; focus             ;
+
+  [:!WQR#Pright_command :!Tf1 [:browser]]                                      ; down link         ;
+  [:!WQR#Pright_option :!Cf1 [:browser]]                                       ; copy link         ;
+
+  [:!WQR#Preturn_or_enter :!OTCf1 [:browser]]                                  ; current tab       ;
+
+  [:!WQR#Pright_shift :!OTf1 [:browser]]                                       ; new tab           ;
+  [:!WQR#Pspacebar :!TCf1 [:browser]]                                          ; new tab & go      ;
+  [:!WQR#Pdelete_or_backspace :!OCf1 [:browser]]                               ; multitab          ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

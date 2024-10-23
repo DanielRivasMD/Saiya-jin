@@ -1,0 +1,130 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; TODO: remap & autodoc alt-ctl & alt-cmd
+; Alacritty
+{:des "Terminal zellij bindings - alphabet"
+ :rules
+ [;
+  ; on demand window
+  [:#Pdelete_or_backspace :!EQright_shift  [:term] {:alone [:!Tv]}]                                ;
+
+  ; session lock
+  [:#Pleft_option :left_option [:term] {:alone [:!Oa]}]                        ; alt               ;
+
+  ; cursor movement
+  [:!O#Pleft_arrow :!Ob [:term]]                                               ; alt-left          ;
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ; [: :!Oc [:term]]                                                                COLLISION      ;
+  ; [: :!Od [:term]]                                                                COLLISION      ;
+  ; [: :!Oe [:term]]                                                                COLLISION      ;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; cursor movement
+  [:!O#Pright_arrow :!Of [:term]]                                              ; alt-right         ;
+
+  ; pop-up doc
+  [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]                          ; esc               ;
+
+   ; history editor
+   [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]                        ; shift             ;
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ; [: :!Oi [:term]]                                                                COLLISION      ;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; pane movement - alt-ctl
+  [:!OT#Pleft_arrow :!Oj [:term]]                                              ; alt-ctl-left      ;
+  [:!OT#Pright_arrow :!Ok [:term]]                                             ; alt-ctl-right     ;
+  [:!OT#Pup_arrow :!Ol [:term]]                                                ; alt-ctl-up        ;
+  [:!OT#Pdown_arrow :!Om [:term]]                                              ; alt-ctl-down      ;
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ; [: :!On [:term]]                                                                COLLISION      ;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; pane control - alt-ctl
+  [:!OT#Pdelete_or_backspace :!Oo [:term]]                                     ; alt-ctl-bspace    ;
+  [:!OT#Preturn_or_enter :!Op [:term]]                                         ; alt-ctl-enter     ;
+  [:!OT#Pright_shift :!Oq [:term]]                                             ; alt-ctl-shift     ;
+  [:!OT#Pright_option :!Or [:term]]                                            ; alt-ctl-alt       ;
+  [:!OT#Pright_command :!Os [:term]]                                           ; alt-ctl-cmd       ;
+  [:!OT#Pspacebar :!Ot [:term]]                                                ; alt-ctl-space     ;
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ; [: :!Ou [:term]]                                                                COLLISION      ;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; tab movement - alt-cmd
+  [:!OC#Pperiod :!Ov [:term]]                                                  ; alt-cmd-,         ;
+  [:!OC#Pcomma :!Ow [:term]]                                                   ; alt-cmd-.         ;
+  [:!OC#Pleft_arrow :!Ox [:term]]                                              ; alt-cmd-left      ;
+  [:!OC#Pright_arrow :!Oy [:term]]                                             ; alt-cmd-right     ;
+  [:!OC#Pslash :!Oz [:term]]                                                   ; alt-cmd-/         ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; TODO: remap & autodoc alt
+; Alacritty
+{:des "Terminal zellij bindings - alphabet"
+ :rules
+ [;
+  ; zellij controls - alt
+  [:!E#Pleft_command :!SOa [:term]]                                            ; alt-cmd           ;
+  [:!E#Pleft_option :!SOb [:term]]                                             ; alt-alt           ;
+  [:!E#Pleft_control :!SOc [:term]]                                            ; alt-ctl           ;
+  [:!E#Pleft_shift :!SOd [:term]]                                              ; alt-shift         ;
+  [:!E#Pcaps_lock :!SOe [:term]]                                               ; alt-caps          ;
+  [:!E#Ptab :!SOf [:term]]                                                     ; alt-tab           ;
+  [:!E#Pnon_us_backslash :!SOg [:term]]                                        ; alt-fn            ;
+  [:!E#Pescape :!SOh [:term]]                                                  ; alt-esc           ;
+
+  ; tab control - alt-cmd
+  [:!OC#Pdelete_or_backspace :!SOi [:term]]                                    ; alt-cmd-bspace    ;
+  [:!OC#Preturn_or_enter :!SOj [:term]]                                        ; alt-cmd-enter     ;
+  [:!OC#Pright_shift :!SOk [:term]]                                            ; alt-cmd-shift     ;
+  [:!OC#Pright_option :!SOl [:term]]                                           ; alt-cmd-alt       ;
+  [:!OC#Pright_command :!SOm [:term]]                                          ; alt-cmd-cmd       ;
+  [:!OC#Pspacebar :!SOn [:term]]                                               ; alt-cmd-space     ;
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ; [: :!SOo [:term]]                                                               COLLISION      ;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; zellij controls - alt
+  [:!E#Pright_command :!SOp [:term]]                                           ; alt-cmd           ;
+  [:!E#Pright_control :!SOq [:term]]                                           ; alt-ctl           ;
+
+  ; tab control - alt-cmd
+  [:!OC#P1 :!SOr [:term]]                                                      ; alt-cmd-1         ;
+  [:!OC#P2 :!SOs [:term]]                                                      ; alt-cmd-2         ;
+  [:!OC#P3 :!SOt [:term]]                                                      ; alt-cmd-3         ;
+  [:!OC#P4 :!SOu [:term]]                                                      ; alt-cmd-4         ;
+  [:!OC#P5 :!SOv [:term]]                                                      ; alt-cmd-5         ;
+  [:!OC#P6 :!SOw [:term]]                                                      ; alt-cmd-6         ;
+  [:!OC#P7 :!SOx [:term]]                                                      ; alt-cmd-7         ;
+  [:!OC#P8 :!SOy [:term]]                                                      ; alt-cmd-8         ;
+  [:!OC#P9 :!SOz [:term]]                                                      ; alt-cmd-9         ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Terminal zellij bindings - keypad"
+ :rules
+ [;
+  ; tab control - alt-cmd
+  [:!OC#Pkeypad_0 :!SOn [:term]]                                               ; alt-cmd-0         ;
+  [:!OC#Pkeypad_1 :!SOr [:term]]                                               ; alt-cmd-1         ;
+  [:!OC#Pkeypad_2 :!SOs [:term]]                                               ; alt-cmd-2         ;
+  [:!OC#Pkeypad_3 :!SOt [:term]]                                               ; alt-cmd-3         ;
+  [:!OC#Pkeypad_4 :!SOu [:term]]                                               ; alt-cmd-4         ;
+  [:!OC#Pkeypad_5 :!SOv [:term]]                                               ; alt-cmd-5         ;
+  [:!OC#Pkeypad_6 :!SOw [:term]]                                               ; alt-cmd-6         ;
+  [:!OC#Pkeypad_7 :!SOx [:term]]                                               ; alt-cmd-7         ;
+  [:!OC#Pkeypad_8 :!SOy [:term]]                                               ; alt-cmd-8         ;
+  [:!OC#Pkeypad_9 :!SOz [:term]]                                               ; alt-cmd-9         ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,0 +1,71 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Terminal alt - alphabet"
+ :rules
+ [;
+  [:!O#Pa :!Of1 [:term]]                                                                           ;
+  [:!O#Pb :!Of2 [:term]]                                                                           ;
+  [:!O#Pc :!Of4 [:term]]                                                                           ;
+  [:!O#Pd :!Of5 [:term]]                                                                           ;
+  [:!O#Pe :!Of6 [:term]]                                                                           ;
+  [:!O#Pf :!Of7 [:term]]                                                                           ;
+  [:!O#Pg :!Of8 [:term]]                                                                           ;
+  [:!O#Ph :!Of9 [:term]]                                                                           ;
+  [:!O#Pi :!Of10 [:term]]                                                                          ;
+  [:!O#Pj :!Tf1 [:term]]                                                                           ;
+  [:!O#Pk :!Tf2 [:term]]                                                                           ;
+  [:!O#Pl :!Tf4 [:term]]                                                                           ;
+  [:!O#Pm :!Tf5 [:term]]                                                                           ;
+  [:!O#Pn :!Tf6 [:term]]                                                                           ;
+  [:!O#Po :!Tf7 [:term]]                                                                           ;
+  [:!O#Pp :!Tf8 [:term]]                                                                           ;
+  [:!O#Pq :!Tf9 [:term]]                                                                           ;
+  [:!O#Pr :!Tf10 [:term]]                                                                          ;
+  [:!O#Ps :!OTf1 [:term]]                                                                          ;
+  [:!O#Pt :!OTf2 [:term]]                                                                          ;
+  [:!O#Pu :!OTf4 [:term]]                                                                          ;
+  [:!O#Pv :!OTf5 [:term]]                                                                          ;
+  [:!O#Pw :!OTf6 [:term]]                                                                          ;
+  [:!O#Px :!OTf7 [:term]]                                                                          ;
+  [:!O#Py :!OTf8 [:term]]                                                                          ;
+  [:!O#Pz :!OTf9 [:term]]                                                                          ;
+  [:!O#Pright_control :!OTf10 [:term]]                                                             ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Alacritty
+{:des "Terminal alt - alphabet"
+ :rules
+ [;
+  [:!SO#Pa :!SOf1 [:term]]                                                                         ;
+  [:!SO#Pb :!SOf2 [:term]]                                                                         ;
+  [:!SO#Pc :!SOf4 [:term]]                                                                         ;
+  [:!SO#Pd :!SOf5 [:term]]                                                                         ;
+  [:!SO#Pe :!SOf6 [:term]]                                                                         ;
+  [:!SO#Pf :!SOf7 [:term]]                                                                         ;
+  [:!SO#Pg :!SOf8 [:term]]                                                                         ;
+  [:!SO#Ph :!SOf9 [:term]]                                                                         ;
+  [:!SO#Pi :!SOf10 [:term]]                                                                        ;
+  [:!SO#Pj :!STf1 [:term]]                                                                         ;
+  [:!SO#Pk :!STf2 [:term]]                                                                         ;
+  [:!SO#Pl :!STf4 [:term]]                                                                         ;
+  [:!SO#Pm :!STf5 [:term]]                                                                         ;
+  [:!SO#Pn :!STf6 [:term]]                                                                         ;
+  [:!SO#Po :!STf7 [:term]]                                                                         ;
+  [:!SO#Pp :!STf8 [:term]]                                                                         ;
+  [:!SO#Pq :!STf9 [:term]]                                                                         ;
+  [:!SO#Pr :!STf10 [:term]]                                                                       ;
+  [:!SO#Ps :!SOTf1 [:term]]                                                                        ;
+  [:!SO#Pt :!SOTf2 [:term]]                                                                        ;
+  [:!SO#Pu :!SOTf4 [:term]]                                                                        ;
+  [:!SO#Pv :!SOTf5 [:term]]                                                                        ;
+  [:!SO#Pw :!SOTf6 [:term]]                                                                        ;
+  [:!SO#Px :!SOTf7 [:term]]                                                                        ;
+  [:!SO#Py :!SOTf8 [:term]]                                                                        ;
+  [:!SO#Pz :!SOTf9 [:term]]                                                                        ;
+  [:!SO#Pright_control :!SOTf10 [:term]]                                                           ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

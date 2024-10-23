@@ -1,0 +1,115 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; JOKER
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; joker
+{:des "Joker Mode - arrow"
+ :rules
+ [;
+  [:!EWQ#Pleft_arrow :!OTpage_up [:term]]                                                          ;
+  [:!EWQ#Pright_arrow :!OTpage_down [:term]]                                                       ;
+  [:!EWQ#Pup_arrow :!OThome [:term]]                                                               ;
+  [:!EWQ#Pdown_arrow :!OTend [:term]]                                                              ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; joker
+{:des "Joker Mode - symbols"
+ :rules
+ [;
+  [:!EWQ#Popen_bracket [:f8]]                                                                      ;
+  [:!EWQ#Pclose_bracket [:f9]]                                                                     ;
+  [:!EWQ#Psemicolon [:f10]]                                                                        ;
+  [:!EWQ#Pquote [:f11]]                                                                            ;
+  [:!EWQ#Pbackslash [:f12]]                                                                        ;
+  [:!EWQ#Pcomma [:f18]]                                                                            ;
+  [:!EWQ#Pperiod [:f19]]                                                                           ;
+  [:!EWQ#Pslash [:f20]]                                                                            ;
+
+  [:!EWQ#Pdelete_or_backspace [:f1]]                                                               ;
+  [:!EWQ#Preturn_or_enter [:f2]]                                                                   ;
+  [:!EWQ#Pright_shift [:f4]]                                                                       ;
+  [:!EWQ#Pright_option [:f5]]                                                                      ;
+  [:!EWQ#Pright_command [:f6]]                                                                     ;
+  [:!EWQ#Pspacebar [:caps_lock]]                                               ;    CAPS LOCK      ;
+
+  ; [:!EWQ#Pleft_command []]                                                                       ;
+  ; [:!EWQ#Pleft_option []]                                                                        ;
+  ; [:!EWQ#Pleft_control []]                                                                       ;
+  ; [:!EWQ#Pleft_shift []]                                                                         ;
+  ; [:!EWQ#Pcaps_lock []]                                                                          ;
+  ; [:!EWQ#Ptab []]                                                                 NOT AVAILABLE  ;
+  ; [:!EWQ#Pnon_us_backslash []]                                                                   ;
+  ; [:!EWQ#Pescape []]                                                                             ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; joker
+{:des "Joker Mode - numbers"
+ :rules
+ [;
+  ; [:!EWQ#keypad_1 []]                                                                            ;
+  ; [:!EWQ#keypad_2 []]                                                                            ;
+  ; [:!EWQ#keypad_3 []]                                                                            ;
+  ; [:!EWQ#keypad_4 []]                                                                            ;
+  ; [:!EWQ#keypad_5 []]                                                                            ;
+  ; [:!EWQ#keypad_6 []]                                                                            ;
+  ; [:!EWQ#keypad_7 []]                                                                            ;
+  ; [:!EWQ#keypad_8 []]                                                                            ;
+  ; [:!EWQ#keypad_9 []]                                                                            ;
+  ; [:!EWQ#keypad_0 []]                                                                            ;
+  ; [:!EWQ#keypad_slash []]                                                                        ;
+  ; [:!EWQ#keypad_asterisk []]                                                                     ;
+
+  ; [:!EWQ#1 []]                                                                                   ;
+  ; [:!EWQ#2 []]                                                                                   ;
+  ; [:!EWQ#3 []]                                                                                   ;
+  ; [:!EWQ#4 []]                                                                                   ;
+  ; [:!EWQ#5 []]                                                                                   ;
+  ; [:!EWQ#6 []]                                                                                   ;
+  ; [:!EWQ#7 []]                                                                                   ;
+  ; [:!EWQ#8 []]                                                                                   ;
+  ; [:!EWQ#9 []]                                                                                   ;
+  ; [:!EWQ#0 []]                                                                                   ;
+  [:!EWQ#Phyphen [:f13]]                                                                           ;
+  [:!EWQ#Pequal_sign [:f14]]                                                                       ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; joker
+{:des "Joker Mode - alphabet"
+ :rules
+ [;
+  ; [:!EWQ#Pa []]                                                                                  ;
+  ; [:!EWQ#Pb []]                                                                                  ;
+  ; [:!EWQ#Pc []]                                                                                  ;
+  ; [:!EWQ#Pd []]                                                                                  ;
+  ; [:!EWQ#Pe []]                                                                                  ;
+  ; [:!EWQ#Pf []]                                                                                  ;
+  ; [:!EWQ#Pg []]                                                                                  ;
+  ; [:!EWQ#Ph []]                                                                                  ;
+  ; [:!EWQ#Pi []]                                                                                  ;
+  ; [:!EWQ#Pj []]                                                                                  ;
+  ; [:!EWQ#Pk []]                                                                                  ;
+  ; [:!EWQ#Pl []]                                                                                  ;
+  ; [:!EWQ#Pm []]                                                                                  ;
+  ; [:!EWQ#Pn []]                                                                                  ;
+  ; [:!EWQ#Po []]                                                                                  ;
+  [:!EWQ#Pp [:!Ssemicolon :r :u :s :t :!Shyphen :p :r :i :n :t :!Ssemicolon]]                      ;
+  ; [:!EWQ#Pq []]                                                                                  ;
+  ; [:!EWQ#Pr []]                                                                                  ;
+  ; [:!EWQ#Ps []]                                                                                  ;
+  ; [:!EWQ#Pt []]                                                                                  ;
+  ; [:!EWQ#Pu []]                                                                                  ;
+  ; [:!EWQ#Pv []]                                                                                  ;
+  ; [:!EWQ#Pw []]                                                                                  ;
+  ; [:!EWQ#Px []]                                                                                  ;
+  ; [:!EWQ#Py []]                                                                                  ;
+  ; [:!EWQ#Pz []]                                                                                  ;
+  ; [:!EWQ#Pright_control []]                                                                      ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

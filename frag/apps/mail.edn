@@ -1,0 +1,24 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; ; mail
+; {:des "Mail bindings"
+;  :rules
+;  [;
+;   [:!C#Preturn_or_enter :!CSd [:mail]]                                         ; send              ;
+;   [:!O#Preturn_or_enter :!Cr [:mail]]                                          ; reply             ;
+;   [:!OS#Preturn_or_enter :!CSr [:mail]]                                        ; reply all         ;
+;   [:!OC#Preturn_or_enter :!CSf [:mail]]                                        ; forward           ;
+;   [:!EQR#Preturn_or_enter :!Cn [:mail]]                                        ; new               ;
+;   [:!EQR#Pspacebar :!CSj [:mail]]                                              ; junk              ;
+;   [:!T#Pspacebar :!CSu [:mail]]                                                ; unread            ;
+;   [:!S#Pspacebar :!CSl [:mail]]                                                ; flag              ;
+;   [:!C#Pspacebar :!CSn [:mail]]                                                ; get               ;
+;   [:!O#Pf :!OCf [:mail]]                                                       ; find mail         ;
+;   [:!OS#Pf :!Cf [:mail]]                                                       ; find              ;
+;   [:!O#Ph :!CSg [:mail]]                                                       ; find prev         ;
+;   [:!O#Pl :!Cg [:mail]]                                                        ; find next         ;
+;   [:!!#Pup_arrow :!TCopen_bracket [:mail]]                                     ; mailbox prev      ;
+;   [:!!#Pdown_arrow :!TCclose_bracket [:mail]]                                  ; mailbox next      ;
+;   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

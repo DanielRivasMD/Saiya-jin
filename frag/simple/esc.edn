@@ -1,0 +1,103 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; ESC => EWR
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; esc
+{:des "ESC Mode - symbols"
+ :rules
+ [;
+  [:!EWR#Popen_bracket [:!OSf13]]                                                                  ;
+  [:!EWR#Pclose_bracket [:!OSf14]]                                                                 ;
+  [:!EWR#Psemicolon [:!OSf18]]                                                                     ;
+  [:!EWR#Pquote [:!OSf19]]                                                                         ;
+  [:!EWR#Pbackslash [:!OSf20]]                                                                     ;
+  [:!EWR#Pcomma [:!OTSf18]]                                                                        ;
+  [:!EWR#Pperiod [:!OTSf19]]                                                                       ;
+  [:!EWR#Pslash [:!OTSf20]]                                                                        ;
+
+  [:!EWR#Pdelete_or_backspace [:!TSf11]]                                                           ;
+  [:!EWR#Preturn_or_enter [:!TSf12]]                                                               ;
+  [:!EWR#Pright_shift [:!TSf13]]                                                                   ;
+  [:!EWR#Pright_option [:!TSf18]]                                                                  ;
+  [:!EWR#Pright_command [:!TSf19]]                                                                 ;
+  [:!EWR#Pspacebar [:!TSf20]]                                                                      ;
+
+  ; [:!EWR#Pleft_command []]                                                                       ;
+  ; [:!EWR#Pleft_option []]                                                                        ;
+  ; [:!EWR#Pleft_control []]                                                                       ;
+  ; [:!EWR#Pleft_shift []]                                                                         ;
+  ; [:!EWR#Pcaps_lock []]                                                                          ;
+  ; [:!EWR#Ptab []]                                                                                ;
+  ; [:!EWR#Pnon_us_backslash []]                                                                   ;
+  ; [:!EWR#Pescape []]                                                              NOT AVAILABLE  ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; esc
+{:des "ESC Mode - numbers"
+ :rules
+ [;
+  ; [:!EWR#keypad_1 []]                                                                            ;
+  ; [:!EWR#keypad_2 []]                                                                            ;
+  ; [:!EWR#keypad_3 []]                                                                            ;
+  ; [:!EWR#keypad_4 []]                                                                            ;
+  ; [:!EWR#keypad_5 []]                                                                            ;
+  ; [:!EWR#keypad_6 []]                                                                            ;
+  ; [:!EWR#keypad_7 []]                                                                            ;
+  ; [:!EWR#keypad_8 []]                                                                            ;
+  ; [:!EWR#keypad_9 []]                                                                            ;
+  ; [:!EWR#keypad_0 []]                                                                            ;
+  ; [:!EWR#keypad_slash []]                                                                        ;
+  ; [:!EWR#keypad_asterisk []]                                                                     ;
+
+  ; [:!EWR#1 []]                                                                                   ;
+  ; [:!EWR#2 []]                                                                                   ;
+  ; [:!EWR#3 []]                                                                                   ;
+  ; [:!EWR#4 []]                                                                                   ;
+  ; [:!EWR#5 []]                                                                                   ;
+  ; [:!EWR#6 []]                                                                                   ;
+  ; [:!EWR#7 []]                                                                                   ;
+  ; [:!EWR#8 []]                                                                                   ;
+  ; [:!EWR#9 []]                                                                                   ;
+  ; [:!EWR#0 []]                                                                                   ;
+  [:!EWR#Phyphen [:!OSf11]]                                                                        ;
+  [:!EWR#Pequal_sign [:!OSf12]]                                                                    ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; esc
+{:des "ESC Mode - alphabet"
+ :rules
+ [;
+  ; [:!EWR#Pa []]                                                                                  ;
+  ; [:!EWR#Pb []]                                                                                  ;
+  ; [:!EWR#Pc []]                                                                                  ;
+  ; [:!EWR#Pd []]                                                                                  ;
+  ; [:!EWR#Pe []]                                                                                  ;
+  ; [:!EWR#Pf []]                                                                                  ;
+  ; [:!EWR#Pg []]                                                                                  ;
+  ; [:!EWR#Ph []]                                                                                  ;
+  ; [:!EWR#Pi []]                                                                                  ;
+  ; [:!EWR#Pj []]                                                                                  ;
+  ; [:!EWR#Pk []]                                                                                  ;
+  ; [:!EWR#Pl []]                                                                                  ;
+  ; [:!EWR#Pm []]                                                                                  ;
+  ; [:!EWR#Pn []]                                                                                  ;
+  ; [:!EWR#Po []]                                                                                  ;
+  ; [:!EWR#Pp []]                                                                                  ;
+  ; [:!EWR#Pq []]                                                                                  ;
+  ; [:!EWR#Pr []]                                                                                  ;
+  ; [:!EWR#Ps []]                                                                                  ;
+  ; [:!EWR#Pt []]                                                                                  ;
+  ; [:!EWR#Pu []]                                                                                  ;
+  ; [:!EWR#Pv []]                                                                                  ;
+  ; [:!EWR#Pw []]                                                                                  ;
+  ; [:!EWR#Px []]                                                                                  ;
+  ; [:!EWR#Py []]                                                                                  ;
+  ; [:!EWR#Pz []]                                                                                  ;
+  ; [:!EWR#Pright_control []]                                                                      ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

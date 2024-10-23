@@ -1,0 +1,68 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SHIFT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; shift
+{:des "Shift Mode - symbols"
+ :rules
+ [;
+  ; [:!R#Popen_bracket []]                                                                         ;
+  ; [:!R#Pclose_bracket []]                                                                        ;
+  ; [:!R#Psemicolon []]                                                                            ;
+  ; [:!R#Pquote []]                                                                                ;
+  ; [:!R#Pbackslash []]                                                                            ;
+  ; [:!R#Pcomma []]                                                                                ;
+  ; [:!R#Pperiod []]                                                                               ;
+  ; [:!R#Pslash []]                                                                                ;
+
+  ; [:!R#Pdelete_or_backspace []]                                                                  ;
+  ; [:!R#Preturn_or_enter []]                                                                      ;
+  ; [:!R#Pright_shift []]                                                           NOT AVAILABLE  ;
+  ; [:!R#Pright_option []]                                                                         ;
+  ; [:!R#Pright_command []]                                                                        ;
+  ; [:!R#Pspacebar []]                                                                             ;
+
+  [:!R#Pleft_command [:!Tu]]                                                                       ;
+  ; [:!Rleft_option []]                                                                            ;
+  [:!R#Pleft_control [:!Tw]]                                                                       ;
+  [:!R#Pleft_shift [:delete_or_backspace]]                                                         ;
+  ; [:!R#Pcaps_lock []]                                                                            ;
+  ; [:!R#Ptab []]                                                                                  ;
+  ; [:!R#Pnon_us_backslash []]                                                                     ;
+  ; [:!R#Pescape []]                                                                               ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; shift
+{:des "Shift Mode - numbers"
+ :rules
+ [;
+  ; [:!R#Pkeypad_1 []]                                                                             ;
+  ; [:!R#Pkeypad_2 []]                                                                             ;
+  ; [:!R#Pkeypad_3 []]                                                                             ;
+  ; [:!R#Pkeypad_4 []]                                                                             ;
+  ; [:!R#Pkeypad_5 []]                                                                             ;
+  ; [:!R#Pkeypad_6 []]                                                                             ;
+  ; [:!R#Pkeypad_7 []]                                                                             ;
+  ; [:!R#Pkeypad_8 []]                                                                             ;
+  ; [:!R#Pkeypad_9 []]                                                                             ;
+  ; [:!R#Pkeypad_0 []]                                                                             ;
+  ; [:!R#Pkeypad_slash []]                                                                         ;
+  ; [:!R#Pkeypad_asterisk []]                                                                      ;
+
+  ; [:!R#P1 []]                                                                                    ;
+  ; [:!R#P2 []]                                                                                    ;
+  ; [:!R#P3 []]                                                                                    ;
+  ; [:!R#P4 []]                                                                                    ;
+  ; [:!R#P5 []]                                                                                    ;
+  ; [:!R#P6 []]                                                                                    ;
+  ; [:!R#P7 []]                                                                                    ;
+  ; [:!R#P8 []]                                                                                    ;
+  ; [:!R#P9 []]                                                                                    ;
+  ; [:!R#P0 []]                                                                                    ;
+  ; [:!R#Phyphen []]                                                                               ;
+  ; [:!R#Pequal_sign []]                                                                           ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
