@@ -21,7 +21,7 @@ _default:
 
 # link in-situ archive
 [group('link')]
-@in-situ:
+@link:
   source .just/link.sh
 
 ####################################################################################################
