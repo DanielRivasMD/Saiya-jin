@@ -3,13 +3,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; control - command
-{:des "Control - Command Mode - symbols"
+{:des "Control - Command Mode - arrow"
  :rules
  [;
-  [:!TC#Pleft_arrow :!Tb [:term]]                                                                ;
-  [:!TC#Pright_arrow :!Tf [:term]]                                                               ;
-  [:!TC#Pup_arrow :!Tn [:term]]                                                                  ;
-  [:!TC#Pdown_arrow :!Tp [:term]]                                                                ;
+  [:!TC#Pleft_arrow [:!Tb]]                                                                        ;
+  [:!TC#Pright_arrow [:!Tf]]                                                                       ;
+  [:!TC#Pup_arrow [:!Tn]]                                                                          ;
+  [:!TC#Pdown_arrow [:!Tp]]                                                                        ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -18,8 +18,8 @@
 {:des "Control - Command Mode - symbols"
  :rules
  [;
-  [:!TC#Popen_bracket [:!Th]]                                                                      ;
-  [:!TC#Pclose_bracket [:!Oc]]                                                                     ;
+  ; [:!TC#Popen_bracket []]                                                                        ;
+  ; [:!TC#Pclose_bracket []]                                                                       ;
   ; [:!TC#Psemicolon []]                                                                           ;
   ; [:!TC#Pquote []]                                                                               ;
   ; [:!TC#Pbackslash []]                                                                           ;
@@ -34,14 +34,14 @@
   [:!TC#Pright_command [:!Sf6]]                                                                    ;
   [:!TC#Pspacebar [:!To]]                                                                          ;
 
-  ; [:!TCleft_command [:term]]                                                      NOT AVAILABLE  ;
-  ; [:!TC#Pleft_option [:term]]                                                                    ;
-  ; [:!TCleft_control [:term]]                                                      NOT AVAILABLE  ;
-  ; [:!TC#Pleft_shift [:term]]                                                                     ;
-  ; [:!TC#Pcaps_lock [:term]]                                                                      ;
-  ; [:!TC#Ptab [:term]]                                                                            ;
-  ; [:!TC#Pnon_us_backslash [:term]]                                                               ;
-  ; [:!TC#Pescape [:term]]                                                                         ;
+  ; [:!TCleft_command []]                                                           NOT AVAILABLE  ;
+  ; [:!TC#Pleft_option []]                                                                         ;
+  ; [:!TCleft_control []]                                                           NOT AVAILABLE  ;
+  ; [:!TC#Pleft_shift []]                                                                          ;
+  ; [:!TC#Pcaps_lock []]                                                                           ;
+  ; [:!TC#Ptab []]                                                                                 ;
+  ; [:!TC#Pnon_us_backslash []]                                                                    ;
+  ; [:!TC#Pescape []]                                                                              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
