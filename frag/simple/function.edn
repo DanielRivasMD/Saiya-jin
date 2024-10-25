@@ -66,3 +66,38 @@
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Fn
+{:des "Fn Mode - numbers"
+ :rules
+ [;
+  [:!F#Pa [:!Ssemicolon :a :slash :!Ssemicolon]]                                                   ;
+  ; [:!F#Pb []]                                                                                    ;
+  ; [:!F#Pc []]                                                                                    ;
+  ; [:!F#Pd []]                                                                                    ;
+  [:!F#Pe [:!Ssemicolon :e :slash :!Ssemicolon]]                                                   ;
+  ; [:!F#Pf []]                                                                                    ;
+  ; [:!F#Pg []]                                                                                    ;
+  ; [:!F#Ph []]                                                                                    ;
+  [:!F#Pi [:!Ssemicolon :i :slash :!Ssemicolon]]                                                   ;
+  ; [:!F#Pj []]                                                                                    ;
+  ; [:!F#Pk []]                                                                                    ;
+  ; [:!F#Pl []]                                                                                    ;
+  ; [:!F#Pm []]                                                                                    ;
+  ; [:!F#Pn []]                                                                                    ;
+  [:!F#Po [:!Ssemicolon :o :slash :!Ssemicolon]]                                                   ;
+  ; [:!F#Pp []]                                                                                    ;
+  ; [:!F#Pq []]                                                                                    ;
+  ; [:!F#Pr []]                                                                                    ;
+  ; [:!F#Ps []]                                                                                    ;
+  ; [:!F#Pt []]                                                                                    ;
+  [:!F#Pu [:!Ssemicolon :u :slash :!Ssemicolon]]                                                   ;
+  ; [:!F#Pv []]                                                                                    ;
+  ; [:!F#Pw []]                                                                                    ;
+  ; [:!F#Px []]                                                                                    ;
+  ; [:!F#Py []]                                                                                    ;
+  ; [:!F#Pz []]                                                                                    ;
+  ; [:!F#Pright_control []]                                                                        ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
