@@ -6,10 +6,10 @@
 {:des "Tab Mode - arrow"
  :rules
  [;
-  [:!WQR#Pleft_arrow :!OSpage_up [:term]]                                                          ;
-  [:!WQR#Pright_arrow :!OSpage_down [:term]]                                                       ;
-  [:!WQR#Pup_arrow :!OShome [:term]]                                                               ;
-  [:!WQR#Pdown_arrow :!OSend [:term]]                                                              ;
+  [:!WQR#Pleft_arrow [:!OSpage_up]]                                                                ;
+  [:!WQR#Pright_arrow [:!OSpage_down]]                                                             ;
+  [:!WQR#Pup_arrow [:!OShome]]                                                                     ;
+  [:!WQR#Pdown_arrow [:!OSend]]                                                                    ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -27,7 +27,7 @@
   ; [:!WQR#Pperiod []]                                                                             ;
   ; [:!WQR#Pslash []]                                                                              ;
 
-  [:!WQR#Pdelete_or_backspace [:!Sf2]]                                                             ;
+  ; [:!WQR#Pdelete_or_backspace []]                                                                ;
   ; [:!WQR#Preturn_or_enter []]                                                                    ;
   ; [:!WQR#Pright_shift []]                                                                        ;
   ; [:!WQR#Pright_option []]                                                                       ;
@@ -113,4 +113,3 @@
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
