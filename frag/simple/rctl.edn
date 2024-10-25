@@ -6,10 +6,10 @@
 {:des "Control Mode - arrow"
  :rules
  [;
-  [:!W#Pleft_arrow :!Wpage_up [:term]]                                                             ;
-  [:!W#Pright_arrow :!Wpage_down [:term]]                                                          ;
-  [:!W#Pup_arrow :!Whome [:term]]                                                                  ;
-  [:!W#Pdown_arrow :!Wend [:term]]                                                                 ;
+  [:!W#Pleft_arrow [:!Wpage_up]]                                                                   ;
+  [:!W#Pright_arrow [:!Wpage_down]]                                                                ;
+  [:!W#Pup_arrow [:!Whome]]                                                                        ;
+  [:!W#Pdown_arrow [:!Wend]]                                                                       ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -18,10 +18,10 @@
 {:des "Control Mode - arrow"
  :rules
  [;
-  ; [:!WS#Pleft_arrow :!Tb [:term]]                                                                  ;
-  ; [:!WS#Pright_arrow :!Tf [:term]]                                                                 ;
-  ; [:!WS#Pup_arrow :!Tn [:term]]                                                                    ;
-  ; [:!WS#Pdown_arrow :!Tp [:term]]                                                                  ;
+  [:!WS#Pleft_arrow [:!WSpage_up]]                                                                 ;
+  [:!WS#Pright_arrow [:!WSpage_down]]                                                              ;
+  [:!WS#Pup_arrow [:!WShome]]                                                                      ;
+  [:!WS#Pdown_arrow [:!WSend]]                                                                     ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -35,15 +35,15 @@
   [:!W#Psemicolon [:!Sf10]]                                                                        ;
   [:!W#Pquote [:!Sf11]]                                                                            ;
   [:!W#Pbackslash [:!Sf12]]                                                                        ;
-  [:!W#Pcomma [:!Sf18]]                                                                            ;
-  [:!W#Pperiod [:!Sf19]]                                                                           ;
+  [:!W#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                                              ; ' <- '
+  [:!W#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                                            ; ' -> '
   [:!W#Pslash [:!Sf20]]                                                                            ;
 
-  [:!W#Pdelete_or_backspace [:!Sf7]]                                                               ;
+  [:!W#Pdelete_or_backspace [:!Wr]]                                                                ;
   [:!W#Preturn_or_enter [:!Ws]]                                                                    ;
   [:!W#Pright_shift [:!Wt]]                                                                        ;
-  [:!W#Pright_option [:!Wr]]                                                                       ;
-  ; [:!W#Pright_command [:!Sf2]]                                                                   ;
+  [:!W#Pright_option [:!Ec]]                                                                       ;
+  [:!W#Pright_command [:!Wh]]                                                                      ;
   [:!W#Pspacebar [:f7]]                                                                            ;
 
   ; [:!W#Pleft_command []]                                                                         ;
@@ -62,30 +62,30 @@
 {:des "Control Mode - symbols"
  :rules
  [;
-  ; [:!WS#Popen_bracket [:!Th]]                                                                      ;
-  ; [:!WS#Pclose_bracket [:!Oc]]                                                                     ;
-  ; ; [:!WS#Psemicolon []]                                                                           ;
-  ; ; [:!WS#Pquote []]                                                                               ;
-  ; ; [:!WS#Pbackslash []]                                                                           ;
-  ; [:!WS#Pcomma [:!Sf1]]                                                                            ;
-  ; [:!WS#Pperiod [:!Sf4]]                                                                           ;
-  ; ; [:!WS#Pslash []]                                                                               ;
+  ; [:!WS#Popen_bracket []]                                                                        ;
+  ; [:!WS#Pclose_bracket []]                                                                       ;
+  ; [:!WS#Psemicolon []]                                                                           ;
+  ; [:!WS#Pquote []]                                                                               ;
+  ; [:!WS#Pbackslash []]                                                                           ;
+  [:!WS#Pcomma [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]                                    ; ' <<- '
+  [:!WS#Pperiod [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]                                 ; ' ->> '
+  ; [:!WS#Pslash []]                                                                               ;
 
-  ; [:!WS#Pdelete_or_backspace [:!Tl]]                                                               ;
-  ; [:!WS#Preturn_or_enter [:!Tg]]                                                                   ;
-  ; [:!WS#Pright_shift [:!Tj]]                                                                       ;
-  ; [:!WS#Pright_option [:!Sf5]]                                                                     ;
-  ; [:!WS#Pright_command [:!Sf6]]                                                                    ;
-  ; [:!WS#Pspacebar [:!To]]                                                                          ;
+  ; [:!WS#Pdelete_or_backspace []]                                                                 ;
+  [:!WS#Preturn_or_enter [:!Sf2]]                                                                  ;
+  ; [:!WS#Pright_shift []]                                                                         ;
+  ; [:!WS#Pright_option []]                                                                        ;
+  ; [:!WS#Pright_command []]                                                                       ;
+  ; [:!WS#Pspacebar []]                                                                            ;
 
-  ; ; [:!WS#Pleft_command []]                                                                        ;
-  ; ; [:!WS#Pleft_option []]                                                                         ;
-  ; ; [:!WS#Pleft_control []]                                                                        ;
-  ; ; [:!WS#Pleft_shift []]                                                           NOT AVAILABLE  ;
-  ; ; [:!WS#Pcaps_lock []]                                                                           ;
-  ; ; [:!WS#Ptab []]                                                                                 ;
-  ; ; [:!WS#Pnon_us_backslash []]                                                                    ;
-  ; ; [:!WS#Pescape []]                                                                              ;
+  ; [:!WS#Pleft_command []]                                                                        ;
+  ; [:!WS#Pleft_option []]                                                                         ;
+  ; [:!WS#Pleft_control []]                                                                        ;
+  ; [:!WS#Pleft_shift []]                                                           NOT AVAILABLE  ;
+  ; [:!WS#Pcaps_lock []]                                                                           ;
+  ; [:!WS#Ptab []]                                                                                 ;
+  ; [:!WS#Pnon_us_backslash []]                                                                    ;
+  ; [:!WS#Pescape []]                                                                              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
