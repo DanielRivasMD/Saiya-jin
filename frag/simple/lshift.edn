@@ -32,7 +32,7 @@
   [:!S#Pright_shift [:delete_forward]]                                                             ;
   [:!S#Pright_option [:!Od]]                                                                       ;
   [:!S#Pright_command [:!Tk]]                                                                      ;
-  ; [:!S#Pspacebar []]                                                                             ;
+  [:!S#Pspacebar [:!Tv]]                                                                           ;
 
   ; [:!S#Pleft_command []]                                                                         ;
   ; [:!S#Pleft_option []]                                                                          ;
