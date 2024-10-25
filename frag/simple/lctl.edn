@@ -6,10 +6,10 @@
 {:des "Control Mode - arrow"
  :rules
  [;
-  ; [:!T#Pleft_arrow [:term]]                                                                      ;
-  ; [:!T#Pright_arrow [:term]]                                                                     ;
-  ; [:!T#Pup_arrow [:term]]                                                                        ;
-  ; [:!T#Pdown_arrow [:term]]                                                                      ;
+  ; [:!T#Pleft_arrow []]                                                                           ;
+  ; [:!T#Pright_arrow []]                                                                          ;
+  ; [:!T#Pup_arrow []]                                                                             ;
+  ; [:!T#Pdown_arrow []]                                                                           ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -18,10 +18,10 @@
 {:des "Control Mode - arrow"
  :rules
  [;
-  ; [:!TS#Pleft_arrow [:term]]                                                                     ;
-  ; [:!TS#Pright_arrow [:term]]                                                                    ;
-  ; [:!TS#Pup_arrow [:term]]                                                                       ;
-  ; [:!TS#Pdown_arrow [:term]]                                                                     ;
+  ; [:!TS#Pleft_arrow []]                                                                          ;
+  ; [:!TS#Pright_arrow []]                                                                         ;
+  ; [:!TS#Pup_arrow []]                                                                            ;
+  ; [:!TS#Pdown_arrow []]                                                                          ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -39,7 +39,7 @@
   [:!T#Pperiod [:spacebar :!Speriod :!Speriod :spacebar]]                                          ; ' >> '
   [:!T#Pslash [:slash :slash :slash :spacebar]]                                                    ; '/// '
 
-  [:!T#Pdelete_or_backspace [:!S1 :!S1]]                                                           ; '!!'
+  [:!TS#Pdelete_or_backspace [:spacebar :!Ssemicolon :equal_sign :spacebar]]                       ; ' := '
   [:!T#Preturn_or_enter [:spacebar :equal_sign :equal_sign :spacebar]]                             ; ' == '
   [:!T#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]                                   ; ' => '
   [:!T#Pright_option [:spacebar :!S8 :!S8 :spacebar]]                                              ; ' ** '
@@ -71,7 +71,7 @@
   [:!TS#Pperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]                               ; ' >>> '
   [:!TS#Pslash [:slash :slash :slash :spacebar]]                                                   ; '/// '
 
-  ; [:!TS#Pdelete_or_backspace []]                                                                 ;
+  [:!TS#Pdelete_or_backspace [:!S1 :!S1]]                                                          ; '!!'
   [:!TS#Preturn_or_enter [:spacebar :period :equal_sign :equal_sign :spacebar]]                    ; ' .== '
   [:!TS#Pright_shift [:spacebar :period :equal_sign :!Speriod :spacebar]]                          ; ' .=> '
   [:!TS#Pright_option [:spacebar :period :!S8 :!S8 :spacebar]]                                     ; ' .** '
