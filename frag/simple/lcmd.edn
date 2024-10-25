@@ -44,7 +44,7 @@
   [:!C#Pright_shift [:period :period]]                                                             ; '..'
   [:!C#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                                       ; ' *= '
   [:!C#Pright_command [:spacebar :slash :equal_sign :spacebar]]                                    ; ' /= '
-  ; [:!C#Pspacebar []]                                                                             ;
+  [:!C#Pspacebar [:!Sf7]]                                                                          ;
 
   ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
   ; [:!C#Pleft_option []]                                                                          ;
