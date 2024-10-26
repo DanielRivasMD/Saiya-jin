@@ -95,9 +95,9 @@
   ; [:!QR#Pt [:!Ssemicolon :comma :t :!Ssemicolon]]                            ;                   ;    
   [:!QR#Pu [:!Ssemicolon :comma :u :!Ssemicolon]]                              ; u ogonek          ; 'ų'
   [:!QR#Pv [:!Ssemicolon :comma :v :!Ssemicolon]]                              ; ΩMEΓA             ; 'Ω'
-  [:!QR#Pw [:!Ssemicolon :comma :w :!Ssemicolon]]                              ; eł                ; 'ł'
+  [:!QR#Pw [:!Ssemicolon :comma :w :!Ssemicolon]]                              ; πωμεγα            ; 'ϖ'
   [:!QR#Px [:!Ssemicolon :comma :x :!Ssemicolon]]                              ; yogh              ; 'ʒ'
-  [:!QR#Py [:!Ssemicolon :comma :y :!Ssemicolon]]                              ; yen               ; '¥'
+  [:!QR#Pw [:!Ssemicolon :comma :y :!Ssemicolon]]                              ; eł                ; 'ł'
   [:!QR#Pz [:!Ssemicolon :comma :z :!Ssemicolon]]                              ; cyrillic з        ; 'з'
   [:!QR#Pright_control [:!Ssemicolon :comma :q :!Ssemicolon]]                  ; ø                 ; 'ø'
   ]}
