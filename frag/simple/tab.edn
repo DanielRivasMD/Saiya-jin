@@ -3,18 +3,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; tab
-{:des "Tab Mode - arrow"
- :rules
- [;
-  [:!WQR#Pleft_arrow [:!OSpage_up]]                                                                ;
-  [:!WQR#Pright_arrow [:!OSpage_down]]                                                             ;
-  [:!WQR#Pup_arrow [:!OShome]]                                                                     ;
-  [:!WQR#Pdown_arrow [:!OSend]]                                                                    ;
- ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; tab
 {:des "Tab Mode - symbols"
  :rules
  [;

@@ -3,30 +3,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; control
-{:des "Control Mode - arrow"
- :rules
- [;
-  [:!W#Pleft_arrow [:!Wpage_up]]                                                                   ;
-  [:!W#Pright_arrow [:!Wpage_down]]                                                                ;
-  [:!W#Pup_arrow [:!Whome]]                                                                        ;
-  [:!W#Pdown_arrow [:!Wend]]                                                                       ;
- ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control
-{:des "Control Mode - arrow"
- :rules
- [;
-  [:!WS#Pleft_arrow [:!WSpage_up]]                                                                 ;
-  [:!WS#Pright_arrow [:!WSpage_down]]                                                              ;
-  [:!WS#Pup_arrow [:!WShome]]                                                                      ;
-  [:!WS#Pdown_arrow [:!WSend]]                                                                     ;
- ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control
 {:des "Control Mode - symbols"
  :rules
  [;

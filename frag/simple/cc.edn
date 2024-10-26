@@ -3,18 +3,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; control - command
-{:des "Control - Command Mode - arrow"
- :rules
- [;
-  [:!TC#Pleft_arrow [:!Tb]]                                                                        ;
-  [:!TC#Pright_arrow [:!Tf]]                                                                       ;
-  [:!TC#Pup_arrow [:!Tn]]                                                                          ;
-  [:!TC#Pdown_arrow [:!Tp]]                                                                        ;
- ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control - command
 {:des "Control - Command Mode - symbols"
  :rules
  [;

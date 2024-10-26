@@ -3,30 +3,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; command
-{:des "Command Mode - arrow"
- :rules
- [;
-  ; [:!C#Pleft_arrow []]                                                                           ;
-  ; [:!C#Pright_arrow []]                                                                          ;
-  [:!C#Pup_arrow [:home]]                                                                          ;
-  [:!C#Pdown_arrow [:end]]                                                                         ;
- ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - arrow"
- :rules
- [;
-  [:!CS#Pleft_arrow [:!Oleft_arrow]]                                                               ;
-  [:!CS#Pright_arrow [:!Oright_arrow]]                                                             ;
-  [:!CS#Pup_arrow [:!Oup_arrow]]                                                                   ;
-  [:!CS#Pdown_arrow [:!Odown_arrow]]                                                               ;
- ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
 {:des "Command Mode - symbols"
  :rules
  [;

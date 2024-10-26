@@ -3,18 +3,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; joker
-{:des "Joker Mode - arrow"
- :rules
- [;
-  [:!EWQ#Pleft_arrow :!OTpage_up [:term]]                                                          ;
-  [:!EWQ#Pright_arrow :!OTpage_down [:term]]                                                       ;
-  [:!EWQ#Pup_arrow :!OThome [:term]]                                                               ;
-  [:!EWQ#Pdown_arrow :!OTend [:term]]                                                              ;
- ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; joker
 {:des "Joker Mode - symbols"
  :rules
  [;
