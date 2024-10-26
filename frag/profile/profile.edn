@@ -33,7 +33,7 @@
 
 :applications
 {;
- :browser ["org.mozilla.firefox", "com.google.Chrome"]                                             ;
+ :browser ["org.mozilla.firefox", "com.google.Chrome", "Arc"]                                      ;
  :mail ["canary"]                                                                                  ;
  :editor ["lapce", "zed", "alacritty"]                                                             ;
  :gui ["lapce", "zed"]                                                                             ;
