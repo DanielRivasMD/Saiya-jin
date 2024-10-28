@@ -6,6 +6,17 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
+  ; function
+  [{:key :up_arrow :modi [:right_option :right_control :right_command]} [:f6] [:function-mode]]
+  [{:key :down_arrow :modi [:right_option :right_control :right_command]} [:f5] [:function-mode]]
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; joker
+{:des "Joker Mode - symbols"
+ :rules
+ [;
   [:!EWQ#Popen_bracket [:f8]]                                                                      ;
   [:!EWQ#Pclose_bracket [:f9]]                                                                     ;
   [:!EWQ#Psemicolon [:f10]]                                                                        ;
