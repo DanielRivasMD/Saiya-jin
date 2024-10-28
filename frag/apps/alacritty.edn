@@ -95,11 +95,11 @@
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ; ; joker
-  ; [:!EWQ#Pleft_arrow [:!OTpage_up] [:term]]                                                        ;
-  ; [:!EWQ#Pright_arrow [:!OTpage_down] [:term]]                                                     ;
-  ; [:!EWQ#Pup_arrow [:!OThome] [:term]]                                                             ;
-  ; [:!EWQ#Pdown_arrow [:!OTend] [:term]]                                                            ;
+  ; joker
+  [:!EWQ#Pleft_arrow [:!OTpage_up] [:term]]                                                        ;
+  [:!EWQ#Pright_arrow [:!OTpage_down] [:term]]                                                     ;
+  [:!EWQ#Pup_arrow [:!OThome] [:term]]                                                             ;
+  [:!EWQ#Pdown_arrow [:!OTend] [:term]]                                                            ;
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
