@@ -1,15 +1,29 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; ; mouse
-; {:des "Zero Mode - mouse"
-;  :rules
-;  [:zero-mode
-;   [:#Pdown_arrow {:mkey {:y 1000}}]                                                                ;
-;   [:#Pup_arrow {:mkey {:y -1000}}]                                                                 ;
-;   [:#Pleft_arrow {:mkey {:x -1000}}]                                                               ;
-;   [:#Pright_arrow {:mkey {:x 1000}}]                                                               ;
-;   [:#Preturn_or_enter {:pkey :button1}]                                                            ;
-;   [:#Pbackslash {:pkey :button2}]                                                                  ;
-;   ]}
+; mouse
+{:des "Zero Mode - mouse"
+ :rules
+ [:zero-mode
+        ; [:down_arrow {:mkey {:y 1200}}]
+        ; [:up_arrow {:mkey {:y -1200}}]
+        ; [:left_arrow {:mkey {:x -1200}}]
+        ; [:right_arrow {:mkey {:x 1200}}]
+        ; [:!Sdown_arrow {:mkey {:y 600}}]
+        ; [:!Sup_arrow {:mkey {:y -600}}]
+        ; [:!Sleft_arrow {:mkey {:x -600}}]
+        ; [:!Sright_arrow {:mkey {:x 600}}]
+        ; [:!TSdown_arrow {:mkey {:y 300}}]
+        ; [:!TSup_arrow {:mkey {:y -300}}]
+        ; [:!TSleft_arrow {:mkey {:x -300}}]
+        ; [:!TSright_arrow {:mkey {:x 300}}]
+        ; [:return_or_enter {:pkey :button1}]
+        ; [:!Creturn_or_enter {:pkey :button2}]
+  [:#Pdown_arrow {:mkey {:y 1000}}]                                                                ;
+  [:#Pup_arrow {:mkey {:y -1000}}]                                                                 ;
+  [:#Pleft_arrow {:mkey {:x -1000}}]                                                               ;
+  [:#Pright_arrow {:mkey {:x 1000}}]                                                               ;
+  [:#Preturn_or_enter {:pkey :button1}]                                                            ;
+  [:#Pbackslash {:pkey :button2}]                                                                  ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
