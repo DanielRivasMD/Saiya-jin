@@ -33,3 +33,39 @@
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; ; You can use karabiner command-line interface to set variables when you open specifc type of files in your editor. See ISSUE #79.
+
+; {:profiles
+;  {:Default {:default true
+;             :sim     50
+;             :delay   80
+;             :alone   120
+;             :held    70}}
+;  :simlayers {:js-mode {:key :period :condi ["in-js" 1]} ;;  karabiner_cli --set-variables {"in-js": 1}
+;              :go-mode {:key :period :condi ["in-go" 1]} ;;  karabiner_cli --set-variables {"in-go": 1}
+;              :py-mode {:key :period :condi ["in-python" 1]} ;;  karabiner_cli --set-variables {"in-python": 1}
+;              :elixir-mode {:key :period :condi ["in-elixir" 1]} ;;  karabiner_cli --set-variables {"in-elixir": 1}
+;              :rust-mode {:key :period :condi ["in-rust" 1]}} ;;  karabiner_cli --set-variables {"in-rust": 1}
+;  :main [{:des "jsdot"
+;          :rules [:js-mode
+;                  [:a [:c :o :n :s :o :l :e :period :l :o :g :!S9 :!S0 :left_arrow]] ; -> console.log()
+;                  [:v [:j :a :v :a :s :c :r :i :p :t :spacebar]]]} ; -> javascript
+;         {:des "godot"
+;          :rules[:go-mode
+;                 [:a [:f :m :t :period :!Sp :r :i :n :t :l :n :!S9 :!S0 :left_arrow]] ; -> fmt.Println()
+;                 [:v [:g :o :l :a :n :g :spacebar]]]} ; -> golang
+;         {:des "pydot"
+;          :rules[:py-mode
+;                 [:a [:p :r :i :n :t :!S9 :!S0 :left_arrow]] ; -> print()
+;                 [:v [:p :y :t :h :o :n :spacebar]]]} ; -> python
+;         {:des "elixdot"
+;          :rules[:elixir-mode
+;                 [:a [:!Si :!So :period :p :u :t :s :!S9 :!S0 :left_arrow]] ; -> IO.puts()
+;                 [:v [:e :l :i :x :i :r :spacebar]]]} ; -> elixir
+;         {:des "rustdot"
+;          :rules[:rust-mode
+;                 [:a [:p :r :i :n :t :l :n :!S1 :!S9 :!S0 :left_arrow]] ; -> println!()
+;                 [:v [:r :u :s :t :spacebar]]]}]} ; -> rust
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
