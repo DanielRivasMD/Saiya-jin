@@ -21,7 +21,7 @@
  {:default true
   :sim     50      ; simultaneous_threshold_milliseconds (def: 50)                                 ;
                    ; keys need to be pressed within this threshold to be considered simultaneous   ;
-  :delay   300     ; to_delayed_action_delay_milliseconds (def: 500)                               ;
+  :delay   100     ; to_delayed_action_delay_milliseconds (def: 500)                               ;
                    ; basically it means time after which the key press is count delayed            ;
   :alone   300     ; to_if_alone_timeout_milliseconds (def: 1000)                                  ;
                    ; hold for 995s and single tap registered; hold for 1005s and seen as modifier  ;
@@ -63,7 +63,18 @@
     :semicolon-mode {:key :semicolon}                   ;; ';' + vowel = umlaut
     :backslash-mode {:key :backslash}                   ;; '\' + vowel = grave accent
     :quote-mode {:key :quote}                           ;; '6' + vowel = circumflex
-    :function-mode {:key :f}
+
+    :test-mode {:key :r}
+    :param-mode {:key :d}
+    :func-mode {:key :f}
+    :class-mode {:key :c}
  }
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+:modifiers
+{;
+ :joker [:right_option :right_control :right_command]
+}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
