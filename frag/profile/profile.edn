@@ -21,7 +21,7 @@
  {:default true
   :sim     50      ; simultaneous_threshold_milliseconds (def: 50)                                 ;
                    ; keys need to be pressed within this threshold to be considered simultaneous   ;
-  :delay   100     ; to_delayed_action_delay_milliseconds (def: 500)                               ;
+  :delay   300     ; to_delayed_action_delay_milliseconds (def: 500)                               ;
                    ; basically it means time after which the key press is count delayed            ;
   :alone   300     ; to_if_alone_timeout_milliseconds (def: 1000)                                  ;
                    ; hold for 995s and single tap registered; hold for 1005s and seen as modifier  ;
@@ -56,25 +56,10 @@
 :layers
 {;
  :zero-mode {:key :keypad_num_lock}                                                                ;
-    ; :hyper-mode {:key :caps_lock :alone {:key :escape}} ;; make the caps_lock key the hyper key
-                                                        ;; In "System Preferences/Keyboard/Modifier Keys..."
-                                                        ;; the Caps Lock Key is set to "No Action".
-    :slash-mode {:key :slash}                           ;; '/' + vowel = acute accent
-    :semicolon-mode {:key :semicolon}                   ;; ';' + vowel = umlaut
-    :backslash-mode {:key :backslash}                   ;; '\' + vowel = grave accent
-    :quote-mode {:key :quote}                           ;; '6' + vowel = circumflex
-
-    :test-mode {:key :r}
-    :param-mode {:key :d}
-    :func-mode {:key :f}
-    :class-mode {:key :c}
- }
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-:modifiers
-{;
- :joker [:right_option :right_control :right_command]
+ :slash-mode {:key :slash}                           ;; '/' + vowel = acute accent
+ :semicolon-mode {:key :semicolon}                   ;; ';' + vowel = umlaut
+ :backslash-mode {:key :backslash}                   ;; '\' + vowel = grave accent
+ :quote-mode {:key :quote}                           ;; ''' + vowel = circumflex
 }
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
