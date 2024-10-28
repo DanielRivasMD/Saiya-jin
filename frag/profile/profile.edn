@@ -56,6 +56,14 @@
 :layers
 {;
  :zero-mode {:key :keypad_num_lock}                                                                ;
+    ; :hyper-mode {:key :caps_lock :alone {:key :escape}} ;; make the caps_lock key the hyper key
+                                                        ;; In "System Preferences/Keyboard/Modifier Keys..."
+                                                        ;; the Caps Lock Key is set to "No Action".
+    :slash-mode {:key :slash}                           ;; '/' + vowel = acute accent
+    :semicolon-mode {:key :semicolon}                   ;; ';' + vowel = umlaut
+    :backslash-mode {:key :backslash}                   ;; '\' + vowel = grave accent
+    :quote-mode {:key :quote}                           ;; '6' + vowel = circumflex
+    :function-mode {:key :f}
  }
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
