@@ -33,7 +33,6 @@
 
 :applications
 {;
- :browser ["org.mozilla.firefox", "com.google.Chrome", "Arc"]                                      ;
  :mail ["canary"]                                                                                  ;
  :editor ["lapce", "zed", "alacritty"]                                                             ;
  :gui ["lapce", "zed"]                                                                             ;
@@ -56,10 +55,11 @@
 :layers
 {;
  :zero-mode {:key :keypad_num_lock}                                                                ;
- :slash-mode {:key :slash}                           ;; '/' + vowel = acute accent
- :semicolon-mode {:key :semicolon}                   ;; ';' + vowel = umlaut
- :backslash-mode {:key :backslash}                   ;; '\' + vowel = grave accent
- :quote-mode {:key :quote}                           ;; ''' + vowel = circumflex
+
+ :slash-mode {:key :slash}                                           ; '/' + vowel = acute accent  ;
+ :semicolon-mode {:key :semicolon}                                   ; ';' + vowel = umlaut        ;
+ :backslash-mode {:key :backslash}                                   ; '\' + vowel = grave accent  ;
+ :quote-mode {:key :quote}                                           ; ''' + vowel = circumflex    ;
 }
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
