@@ -54,12 +54,16 @@
 
 :layers
 {;
+ ; TODO: find binding => mouse mode
  :zero-mode {:key :keypad_num_lock}                                                                ;
 
- :slash-mode {:key :slash}                                           ; '/' + vowel = acute accent  ;
- :semicolon-mode {:key :semicolon}                                   ; ';' + vowel = umlaut        ;
- :backslash-mode {:key :backslash}                                   ; '\' + vowel = grave accent  ;
- :quote-mode {:key :quote}                                           ; ''' + vowel = circumflex    ;
+ :open_bracket-mode {:key :open_bracket}                   ; '[' + letter = rust snippet           ;
+ :close_bracket-mode {:key :close_bracket}                 ; ']' + letter = go snippet             ;
+
+ :slash-mode {:key :slash}                                 ; '/' + vowel = acute accent            ;
+ :semicolon-mode {:key :semicolon}                         ; ';' + vowel = umlaut                  ;
+ :backslash-mode {:key :backslash}                         ; '\' + vowel = grave accent            ;
+ :quote-mode {:key :quote}                                 ; ''' + vowel = circumflex              ;
 }
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
