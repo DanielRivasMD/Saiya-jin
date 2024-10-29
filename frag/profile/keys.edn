@@ -8,28 +8,29 @@
   [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
 
   ; joker
-  [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ;
+  [:##caps_lock :!EWright_command nil {:alone :escape}]              ;
 
   ; hyper
-  [:#Pq :!OTCright_shift nil {:alone :q}]                                                          ;
+  [:#Pq :!OTCright_shift nil {:alone :q}]                            ; spectacle control, speak & app launcher
 
   ; grave
-  [:#Pright_control :right_control nil {:alone [:f3]}]                                             ;
+  [:#Pright_control :right_control nil {:alone [:f3]}]               ;
 
   ; modifiers
-  [:#Pescape :!EWright_shift nil {:alone [:!EWRf3]}]                                               ;
-  [:#Pdelete_or_backspace :!EQright_shift nil {:alone [:!EQRf3]}]                                  ;
+  [:#Pescape :!EWright_shift nil {:alone [:!EWRf3]}]                 ; menu search. 'term' pop-up new
+  [:#Pdelete_or_backspace :!EQright_shift nil {:alone [:!EQRf3]}]    ; now empty
 
   ; lefts
-  [:#Ptab :!WQright_shift nil {:alone [:tab]}]                                                     ;
-  [:#Pleft_control :left_control nil {:alone [:!Tf3]}]                                             ;
-  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ;
-  [:#Pleft_command :left_command nil {:alone [:!Ctab]}]                                            ;
+  [:#Ptab :!WQright_shift nil {:alone [:tab]}]                       ;
+  [:#Pleft_control :left_control nil {:alone [:!Tf3]}]               ; alfred window switcher
+  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                ; global in-app window cycler. 'term' session locked
+  [:#Pleft_command :left_command nil {:alone [:!Ctab]}]              ; switch most recent app
 
+  ; DOC: silenced right shift in favor of 'browser' binding
   ; rights
-  [:#Pright_shift :right_shift nil {:alone [:!Sf3]}]                                               ;
-  [:#Pright_option :right_option nil {:alone [:!Of3]}]                                             ;
-  [:#Pright_command :right_command nil {:alone [:!Cf3]}]                                           ;
+  ; [:#Pright_shift :right_shift nil {:alone [:!Sf3]}]               ;
+  [:#Pright_option :right_option nil {:alone [:!Of3]}]               ; alfred paste
+  [:#Pright_command :right_command nil {:alone [:!Cf3]}]             ; alfred clipboard select
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
