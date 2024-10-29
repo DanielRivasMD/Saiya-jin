@@ -7,36 +7,20 @@
  :rules
  [;
   ; test
-  [:!EWQS#Pup_arrow :f13]
-  [:!EWQS#Pdown_arrow :f14]
+  [:!EWQS#Pup_arrow :f13]                                                                          ;
+  [:!EWQS#Pdown_arrow :f14]                                                                        ;
 
   ; parameter
-  [:!EWQO#Pup_arrow :f10]
-  [:!EWQO#Pdown_arrow :f11]
+  [:!EWQO#Pup_arrow :f10]                                                                          ;
+  [:!EWQO#Pdown_arrow :f11]                                                                        ;
 
   ; function
-  [:!EWQC#Pup_arrow :f6]
-  [:!EWQC#Pdown_arrow :f5]
+  [:!EWQC#Pup_arrow :f6]                                                                           ;
+  [:!EWQC#Pdown_arrow :f5]                                                                         ;
 
   ; class
-  [:!EWQT#Pup_arrow :f8]
-  [:!EWQT#Pdown_arrow :f9]
-
-  ; ; test
-  ; [{:key :up_arrow :modi [:right_option :right_control :right_command]} [:f13] [:test-mode]]
-  ; [{:key :down_arrow :modi [:right_option :right_control :right_command]} [:f14] [:test-mode]]
-
-  ; ; parameter
-  ; [{:key :up_arrow :modi [:right_option :right_control :right_command]} [:f10] [:param-mode]]
-  ; [{:key :down_arrow :modi [:right_option :right_control :right_command]} [:f11] [:param-mode]]
-
-  ; ; function
-  ; [{:key :up_arrow :modi [:right_option :right_control :right_command]} [:f6] [:func-mode]]
-  ; [{:key :down_arrow :modi [:right_option :right_control :right_command]} [:f5] [:func-mode]]
-
-  ; ; class
-  ; [{:key :up_arrow :modi [:right_option :right_control :right_command]} [:f8] [:class-mode]]
-  ; [{:key :down_arrow :modi [:right_option :right_control :right_command]} [:f9] [:class-mode]]
+  [:!EWQT#Pup_arrow :f8]                                                                           ;
+  [:!EWQT#Pdown_arrow :f9]                                                                         ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -45,22 +29,21 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  ; [:!EWQ#Popen_bracket [:f8]]                                                                      ;
-  ; [:!EWQ#Pclose_bracket [:f9]]                                                                     ;
-  ; [:!EWQ#Psemicolon [:f10]]                                                                        ;
-  ; [:!EWQ#Pquote [:f11]]                                                                            ;
-  ; [:!EWQ#Pbackslash [:f12]]                                                                        ;
-  ; [:!EWQ#Pcomma [:f18]]                                                                            ;
-  ; [:!EWQ#Pperiod [:f19]]                                                                           ;
-  ; [:!EWQ#Pslash [:f20]]                                                                            ;
+  ; [:!EWQ#Popen_bracket [:f8]]                                                                    ;
+  ; [:!EWQ#Pclose_bracket [:f9]]                                                                   ;
+  ; [:!EWQ#Psemicolon [:f10]]                                                                      ;
+  ; [:!EWQ#Pquote [:f11]]                                                                          ;
+  ; [:!EWQ#Pbackslash [:f12]]                                                                      ;
+  ; [:!EWQ#Pcomma [:f18]]                                                                          ;
+  ; [:!EWQ#Pperiod [:f19]]                                                                         ;
+  ; [:!EWQ#Pslash [:f20]]                                                                          ;
 
   [:!EWQ#Pdelete_or_backspace [:f20]]                                                              ;
   [:!EWQ#Preturn_or_enter [:f2]]                                                                   ;
-  [:!EWQ#Pright_shift [:f19]]                                                                       ;
-  [:!EWQ#Pright_option [:f4]]                                                                     ;
+  [:!EWQ#Pright_shift [:f19]]                                                                      ;
+  [:!EWQ#Pright_option [:f4]]                                                                      ;
   [:!EWQ#Pright_command [:f18]]                                                                    ;
   [:!EWQ#Pspacebar [:f1]]                                                                          ;
-  ; [:!EWQ#Pspacebar [:caps_lock]]                                               ;    CAPS LOCK      ;
 
   ; [:!EWQ#Pleft_command []]                                                                       ;
   ; [:!EWQ#Pleft_option []]                                                                        ;
@@ -127,7 +110,7 @@
   ; [:!EWQ#Pm []]                                                                                  ;
   ; [:!EWQ#Pn []]                                                                                  ;
   ; [:!EWQ#Po []]                                                                                  ;
-  [:!EWQ#Pp [:!Ssemicolon :r :u :s :t :!Shyphen :p :r :i :n :t :!Ssemicolon]]                      ;
+  [:#Pp [:!Ssemicolon :r :u :s :t :!Shyphen :p :r :i :n :t :!Ssemicolon] [:obracket-mode]]         ;
   ; [:!EWQ#Pq []]                                                                                  ;
   ; [:!EWQ#Pr []]                                                                                  ;
   ; [:!EWQ#Ps []]                                                                                  ;
