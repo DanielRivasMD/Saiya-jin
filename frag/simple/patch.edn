@@ -30,13 +30,19 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; simple
-{:des "Simple modifications"
+; keypad
+{:des "Keypad modifications"
  :rules
  [;
   [:#Pkeypad_hyphen :mute]                                                                         ;
   [:#Pkeypad_plus :volume_increment]                                                               ;
   [:#Pkeypad_enter :volume_decrement]                                                              ;
+
+  [:!S#Pkeypad_hyphen :keypad_hyphen]                                                              ;
+  [:!S#Pkeypad_plus :keypad_plus]                                                                  ;
+  [:!S#Pkeypad_enter :equal_sign]                                                                  ;
+  [:!Sf18 :keypad_slash]                                                                           ;
+  [:!Sf19 :keypad_asterisk]                                                                        ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
