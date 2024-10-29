@@ -4,6 +4,7 @@
 {:des "Zero Mode - mouse"
  :rules
  [:zero-mode
+; TODO: implement mouse mode
         ; [:down_arrow {:mkey {:y 1200}}]
         ; [:up_arrow {:mkey {:y -1200}}]
         ; [:left_arrow {:mkey {:x -1200}}]
@@ -28,6 +29,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: segregate to independent layers
     ;; Special 'vowel' characters, '/', ';' and '\' are easy to remember as shortcut keys
     {:des "Lowercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex. Example: 'slash' + 'a' = á"
      :rules [
