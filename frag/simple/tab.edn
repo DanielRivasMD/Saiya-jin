@@ -76,7 +76,7 @@
   ; [:!WQR#Pb []]                                                                                  ;
   ; [:!WQR#Pc []]                                                                                  ;
   ; [:!WQR#Pd []]                                                                                  ;
-  [:!WQR#Pe [:!Ssemicolon :g :o :!Shyphen :e :r :r :o :r :!Ssemicolon]]                            ;
+  [:#Pe [:!Ssemicolon :g :o :!Shyphen :e :r :r :o :r :!Ssemicolon] [:cbracket-mode]]               ;
   ; [:!WQR#Pf []]                                                                                  ;
   ; [:!WQR#Pg []]                                                                                  ;
   ; [:!WQR#Ph []]                                                                                  ;
@@ -87,7 +87,7 @@
   ; [:!WQR#Pm []]                                                                                  ;
   ; [:!WQR#Pn []]                                                                                  ;
   ; [:!WQR#Po []]                                                                                  ;
-  [:!WQR#Pp [:!Ssemicolon :g :o :!Shyphen :p :r :i :n :t :!Ssemicolon]]                            ;
+  [:#Pp [:!Ssemicolon :g :o :!Shyphen :p :r :i :n :t :!Ssemicolon] [:cbracket-mode]]               ;
   ; [:!WQR#Pq []]                                                                                  ;
   ; [:!WQR#Pr []]                                                                                  ;
   ; [:!WQR#Ps []]                                                                                  ;
