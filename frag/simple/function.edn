@@ -71,27 +71,27 @@
 {:des "Fn Mode - numbers"
  :rules
  [;
-  [:!F#Pa [:!Ssemicolon :a :slash :!Ssemicolon]]                                                   ;
+  ; [:!F#Pa []]                                                                                    ;
   ; [:!F#Pb []]                                                                                    ;
   ; [:!F#Pc []]                                                                                    ;
   ; [:!F#Pd []]                                                                                    ;
-  [:!F#Pe [:!Ssemicolon :e :slash :!Ssemicolon]]                                                   ;
+  ; [:!F#Pe []]                                                                                    ;
   ; [:!F#Pf []]                                                                                    ;
   ; [:!F#Pg []]                                                                                    ;
   ; [:!F#Ph []]                                                                                    ;
-  [:!F#Pi [:!Ssemicolon :i :slash :!Ssemicolon]]                                                   ;
+  ; [:!F#Pi []]                                                                                    ;
   ; [:!F#Pj []]                                                                                    ;
   ; [:!F#Pk []]                                                                                    ;
   ; [:!F#Pl []]                                                                                    ;
   ; [:!F#Pm []]                                                                                    ;
   ; [:!F#Pn []]                                                                                    ;
-  [:!F#Po [:!Ssemicolon :o :slash :!Ssemicolon]]                                                   ;
+  ; [:!F#Po []]                                                                                    ;
   ; [:!F#Pp []]                                                                                    ;
   ; [:!F#Pq []]                                                                                    ;
   ; [:!F#Pr []]                                                                                    ;
   ; [:!F#Ps []]                                                                                    ;
   ; [:!F#Pt []]                                                                                    ;
-  [:!F#Pu [:!Ssemicolon :u :slash :!Ssemicolon]]                                                   ;
+  ; [:!F#Pu []]                                                                                    ;
   ; [:!F#Pv []]                                                                                    ;
   ; [:!F#Pw []]                                                                                    ;
   ; [:!F#Px []]                                                                                    ;
