@@ -71,7 +71,7 @@
 {:des "ESC Mode - alphabet"
  :rules
  [;
-  [:!EWR#Pa [:!Ssemicolon :a :!Ssemicolon :!Ssemicolon]]                                           ;
+  ; [:!EWR#Pa []]                                                                                  ;
   ; [:!EWR#Pb []]                                                                                  ;
   ; [:!EWR#Pc []]                                                                                  ;
   ; [:!EWR#Pd []]                                                                                  ;
@@ -84,14 +84,14 @@
   ; [:!EWR#Pk []]                                                                                  ;
   ; [:!EWR#Pl []]                                                                                  ;
   ; [:!EWR#Pm []]                                                                                  ;
-  [:!EWR#Pn [:!Ssemicolon :n :hyphen :!Ssemicolon]]                                                ;
-  [:!EWR#Po [:!Ssemicolon :o :!Ssemicolon :!Ssemicolon]]                                           ;
+  ; [:!EWR#Pn []]                                                                                  ;
+  ; [:!EWR#Po []]                                                                                  ;
   ; [:!EWR#Pp []]                                                                                  ;
   ; [:!EWR#Pq []]                                                                                  ;
   ; [:!EWR#Pr []]                                                                                  ;
   ; [:!EWR#Ps []]                                                                                  ;
   ; [:!EWR#Pt []]                                                                                  ;
-  [:!EWR#Pu [:!Ssemicolon :u :!Ssemicolon :!Ssemicolon]]                                           ;
+  ; [:!EWR#Pu []]                                                                                  ;
   ; [:!EWR#Pv []]                                                                                  ;
   ; [:!EWR#Pw []]                                                                                  ;
   ; [:!EWR#Px []]                                                                                  ;
