@@ -11,7 +11,7 @@
   [:##caps_lock :!EWright_command nil {:alone :escape}]              ;
 
   ; hyper
-  [:#Pq :!OTCright_shift nil {:alone :q}]                            ; spectacle control, speak & app launcher
+  [:#Ptab :!OTCright_shift nil {:alone :tab}]                        ; spectacle control, speak & app launcher
 
   ; grave
   [:#Pright_control :right_control nil {:alone [:f3]}]               ;
@@ -21,7 +21,7 @@
   [:#Pdelete_or_backspace :!EQright_shift nil {:alone [:!EQRf3]}]    ; now empty
 
   ; lefts
-  [:#Ptab :!WQright_shift nil {:alone [:tab]}]                       ;
+  ; [:#Ptab :!WQright_shift nil {:alone [:tab]}]                       ;
   [:#Pleft_control :left_control nil {:alone [:!Tf3]}]               ; alfred window switcher
   [:#Pleft_option :left_option nil {:alone [:!Otab]}]                ; global in-app window cycler. 'term' session locked
   [:#Pleft_command :left_command nil {:alone [:!Ctab]}]              ; switch most recent app
