@@ -1,35 +1,35 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; TAB => WQR
+; TAB => ROTC
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; tab
 {:des "Tab Mode - symbols"
  :rules
  [;
-  ; [:!WQR#Popen_bracket []]                                                                       ;
-  ; [:!WQR#Pclose_bracket []]                                                                      ;
-  ; [:!WQR#Psemicolon []]                                                                          ;
-  ; [:!WQR#Pquote []]                                                                              ;
-  ; [:!WQR#Pbackslash []]                                                                          ;
-  ; [:!WQR#Pcomma []]                                                                              ;
-  ; [:!WQR#Pperiod []]                                                                             ;
-  ; [:!WQR#Pslash []]                                                                              ;
+  ; [:!ROTC#Popen_bracket []]                                                                      ;
+  ; [:!ROTC#Pclose_bracket []]                                                                     ;
+  [:!ROTC#Psemicolon [:launch "Microsoft PowerPoint"]]                                             ;
+  [:!ROTC#Pquote [:launch "Microsoft Excel"]]                                                      ;
+  [:!ROTC#Pbackslash [:launch "Microsoft Word"]]                                                   ;
+  ; [:!ROTC#Pcomma []]                                                              COLLISION      ;
+  ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
+  [:!ROTC#Pslash [:launch "Skim"]]                                                                 ;
 
-  ; [:!WQR#Pdelete_or_backspace []]                                                                ;
-  ; [:!WQR#Preturn_or_enter []]                                                                    ;
-  ; [:!WQR#Pright_shift []]                                                                        ;
-  ; [:!WQR#Pright_option []]                                                                       ;
-  ; [:!WQR#Pright_command []]                                                                      ;
-  ; [:!WQR#Pspacebar []]                                                                           ;
+  [:!ROTC#Pdelete_or_backspace [:launch "Arc"]]                                                    ;
+  [:!ROTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
+  [:!ROTC#Pright_shift [:launch "Canary Mail"]]                                                    ;
+  [:!ROTC#Pright_option [:launch "Lapce"]]                                                         ;
+  [:!ROTC#Pright_command [:launch "Zed"]]                                                          ;
+  ; [:!ROTC#Pspacebar []]                                                           COLLISION      ;
 
-  ; [:!WQR#Pleft_command []]                                                                       ;
-  ; [:!WQR#Pleft_option []]                                                                        ;
-  ; [:!WQR#Pleft_control []]                                                                       ;
-  ; [:!WQR#Pleft_shift []]                                                                         ;
-  ; [:!WQR#Pcaps_lock []]                                                           NOT AVAILABLE  ;
-  ; [:!WQR#Ptab []]                                                                                ;
-  ; [:!WQR#Pnon_us_backslash []]                                                                   ;
-  ; [:!WQR#Pescape []]                                                                             ;
+  ; [:!ROTC#Pleft_command []]                                                                      ;
+  ; [:!ROTC#Pleft_option []]                                                                       ;
+  ; [:!ROTC#Pleft_control []]                                                                      ;
+  ; [:!ROTC#Pleft_shift []]                                                                        ;
+  ; [:!ROTC#Pcaps_lock []]                                                                         ;
+  ; [:!ROTC#Ptab []]                                                                NOT AVAILABLE  ;
+  ; [:!ROTC#Pnon_us_backslash []]                                                                  ;
+  ; [:!ROTC#Pescape []]                                                                            ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,67 +38,67 @@
 {:des "Tab Mode - numbers"
  :rules
  [;
-  ; [:!WQR#Pkeypad_1 []]                                                                           ;
-  ; [:!WQR#Pkeypad_2 []]                                                                           ;
-  ; [:!WQR#Pkeypad_3 []]                                                                           ;
-  ; [:!WQR#Pkeypad_4 []]                                                                           ;
-  ; [:!WQR#Pkeypad_5 []]                                                                           ;
-  ; [:!WQR#Pkeypad_6 []]                                                                           ;
-  ; [:!WQR#Pkeypad_7 []]                                                                           ;
-  ; [:!WQR#Pkeypad_8 []]                                                                           ;
-  ; [:!WQR#Pkeypad_9 []]                                                                           ;
-  ; [:!WQR#Pkeypad_0 []]                                                                           ;
-  ; [:!WQR#Pkeypad_slash []]                                                                       ;
-  ; [:!WQR#Pkeypad_asterisk []]                                                                    ;
+  [:f1 :!ROTC#Pkeypad_1]                                                                           ;
+  [:f2 :!ROTC#Pkeypad_2]                                                                           ;
+  [:f3 :!ROTC#Pkeypad_3]                                                                           ;
+  [:f4 :!ROTC#Pkeypad_4]                                                                           ;
+  [:f5 :!ROTC#Pkeypad_5]                                                                           ;
+  [:f6 :!ROTC#Pkeypad_6]                                                                           ;
+  [:f7 :!ROTC#Pkeypad_7]                                                                           ;
+  [:f8 :!ROTC#Pkeypad_8]                                                                           ;
+  [:f9 :!ROTC#Pkeypad_9]                                                                           ;
+  [:f10 :!ROTC#Pkeypad_0]                                                                          ;
+  [:f11 :!ROTC#Pkeypad_slash]                                                                      ;
+  [:f12 :!ROTC#Pkeypad_asterisk]                                                                   ;
 
-  ; [:!WQR#P1 []]                                                                                  ;
-  ; [:!WQR#P2 []]                                                                                  ;
-  ; [:!WQR#P3 []]                                                                                  ;
-  ; [:!WQR#P4 []]                                                                                  ;
-  ; [:!WQR#P5 []]                                                                                  ;
-  ; [:!WQR#P6 []]                                                                                  ;
-  ; [:!WQR#P7 []]                                                                                  ;
-  ; [:!WQR#P8 []]                                                                                  ;
-  ; [:!WQR#P9 []]                                                                                  ;
-  ; [:!WQR#P0 []]                                                                                  ;
-  ; [:!WQR#Phyphen []]                                                                             ;
-  ; [:!WQR#Pequal_sign []]                                                                         ;
+  ; [:!ROTC#P1 []]                                                                                 ;
+  ; [:!ROTC#P2 []]                                                                                 ;
+  ; [:!ROTC#P3 []]                                                                                 ;
+  ; [:!ROTC#P4 []]                                                                                 ;
+  ; [:!ROTC#P5 []]                                                                                 ;
+  ; [:!ROTC#P6 []]                                                                                 ;
+  ; [:!ROTC#P7 []]                                                                                 ;
+  ; [:!ROTC#P8 []]                                                                                 ;
+  ; [:!ROTC#P9 []]                                                                                 ;
+  ; [:!ROTC#P0 []]                                                                                 ;
+  ; [:!ROTC#PPhyphen []]                                                                           ;
+  ; [:!ROTC#PPequal_sign []]                                                                       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: remap to close bracket
-; tab
-{:des "Tab Mode - alphabet"
- :rules
- [;
-  ; [:!WQR#Pa []]                                                                                  ;
-  ; [:!WQR#Pb []]                                                                                  ;
-  ; [:!WQR#Pc []]                                                                                  ;
-  ; [:!WQR#Pd []]                                                                                  ;
-  [:#Pe [:!Ssemicolon :g :o :!Shyphen :e :r :r :o :r :!Ssemicolon] [:cbracket-mode]]               ;
-  ; [:!WQR#Pf []]                                                                                  ;
-  ; [:!WQR#Pg []]                                                                                  ;
-  ; [:!WQR#Ph []]                                                                                  ;
-  ; [:!WQR#Pi []]                                                                                  ;
-  ; [:!WQR#Pj []]                                                                                  ;
-  ; [:!WQR#Pk []]                                                                                  ;
-  ; [:!WQR#Pl []]                                                                                  ;
-  ; [:!WQR#Pm []]                                                                                  ;
-  ; [:!WQR#Pn []]                                                                                  ;
-  ; [:!WQR#Po []]                                                                                  ;
-  [:#Pp [:!Ssemicolon :g :o :!Shyphen :p :r :i :n :t :!Ssemicolon] [:cbracket-mode]]               ;
-  ; [:!WQR#Pq []]                                                                                  ;
-  ; [:!WQR#Pr []]                                                                                  ;
-  ; [:!WQR#Ps []]                                                                                  ;
-  ; [:!WQR#Pt []]                                                                                  ;
-  ; [:!WQR#Pu []]                                                                                  ;
-  ; [:!WQR#Pv []]                                                                                  ;
-  ; [:!WQR#Pw []]                                                                                  ;
-  ; [:!WQR#Px []]                                                                                  ;
-  ; [:!WQR#Py []]                                                                                  ;
-  ; [:!WQR#Pz []]                                                                                  ;
-  ; [:!WQR#Pright_control []]                                                                      ;
-  ]}
+; ; TODO: remap to close bracket
+; ; tab
+; {:des "Tab Mode - alphabet"
+;  :rules
+;  [;
+;   ; [:!WQR#Pa []]                                                                                  ;
+;   ; [:!WQR#Pb []]                                                                                  ;
+;   ; [:!WQR#Pc []]                                                                                  ;
+;   ; [:!WQR#Pd []]                                                                                  ;
+;   [:#Pe [:!Ssemicolon :g :o :!Shyphen :e :r :r :o :r :!Ssemicolon] [:cbracket-mode]]               ;
+;   ; [:!WQR#Pf []]                                                                                  ;
+;   ; [:!WQR#Pg []]                                                                                  ;
+;   ; [:!WQR#Ph []]                                                                                  ;
+;   ; [:!WQR#Pi []]                                                                                  ;
+;   ; [:!WQR#Pj []]                                                                                  ;
+;   ; [:!WQR#Pk []]                                                                                  ;
+;   ; [:!WQR#Pl []]                                                                                  ;
+;   ; [:!WQR#Pm []]                                                                                  ;
+;   ; [:!WQR#Pn []]                                                                                  ;
+;   ; [:!WQR#Po []]                                                                                  ;
+;   [:#Pp [:!Ssemicolon :g :o :!Shyphen :p :r :i :n :t :!Ssemicolon] [:cbracket-mode]]               ;
+;   ; [:!WQR#Pq []]                                                                                  ;
+;   ; [:!WQR#Pr []]                                                                                  ;
+;   ; [:!WQR#Ps []]                                                                                  ;
+;   ; [:!WQR#Pt []]                                                                                  ;
+;   ; [:!WQR#Pu []]                                                                                  ;
+;   ; [:!WQR#Pv []]                                                                                  ;
+;   ; [:!WQR#Pw []]                                                                                  ;
+;   ; [:!WQR#Px []]                                                                                  ;
+;   ; [:!WQR#Py []]                                                                                  ;
+;   ; [:!WQR#Pz []]                                                                                  ;
+;   ; [:!WQR#Pright_control []]                                                                      ;
+;   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
