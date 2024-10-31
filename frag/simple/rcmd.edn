@@ -20,7 +20,7 @@
   ; [:!Q#Pright_shift []]                                                                          ;
   ; [:!Q#Pright_option []]                                                                         ;
   ; [:!Q#Pright_command []]                                                         NOT AVAILABLE  ;
-  ; [:!Q#Pspacebar []]                                                                             ;
+  [:!Q#Pspacebar [:caps_lock]]                                                                     ;
 
   ; [:!Q#Pleft_command []]                                                                         ;
   ; [:!Q#Pleft_option []]                                                                          ;
