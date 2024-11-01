@@ -39,6 +39,7 @@
  :term ["alacritty"]                                                                               ;
  :lapce ["lapce"]                                                                                  ;
  :zed ["zed"]                                                                                      ;
+ :zoom ["zoom"]                                                                                    ;
  }
 
 :devices
