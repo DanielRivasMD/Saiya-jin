@@ -33,6 +33,7 @@
 
 :applications
 {;
+ :browser ["arc"]                                                                                  ;
  :mail ["canary"]                                                                                  ;
  :editor ["lapce", "zed", "alacritty"]                                                             ;
  :gui ["lapce", "zed"]                                                                             ;

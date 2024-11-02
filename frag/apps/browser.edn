@@ -1,11 +1,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; DOC: could not find how to configure Arc as browser, thus left global bindings
+; TODO: urgent => find out how to map directly to arc
 ; browser
 {:des "Browser vimium mappings"
  :rules
  [;
-  [:#Pright_shift :right_shift nil {:alone [:!Of1]}]                           ; focus             ;
+  [:#Pright_shift :right_shift :browser {:alone [:!Of1]}]                           ; focus             ;
 
   [:!WQR#Pright_command :!Tf1]                                                 ; down link         ;
   [:!WQR#Pright_option :!Cf1]                                                  ; copy link         ;
@@ -17,6 +18,8 @@
   [:!WQR#Pdelete_or_backspace :!OCf1]                                          ; multitab          ;
 
   [:#Pspacebar :!SC#Pa [:zoom]]                                                                    ;
+
+  [:!C#Preturn_or_enter :!Co :browser]
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
