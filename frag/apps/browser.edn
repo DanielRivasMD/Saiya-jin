@@ -6,20 +6,37 @@
 {:des "Browser vimium mappings"
  :rules
  [;
-  [:#Pright_shift :right_shift :browser {:alone [:!Of1]}]                           ; focus             ;
+  [:#Pright_shift :right_shift [:browser] {:alone [:!Of1]}]                    ; focus             ;
 
-  [:!WQR#Pright_command :!Tf1]                                                 ; down link         ;
-  [:!WQR#Pright_option :!Cf1]                                                  ; copy link         ;
+  [:!WQR#Pright_command :!Tf1 [:browser]]                                      ; down link         ;
+  [:!WQR#Pright_option :!Cf1 [:browser]]                                       ; copy link         ;
 
-  [:!WQR#Preturn_or_enter :!OTCf1]                                             ; current tab       ;
+  [:!WQR#Preturn_or_enter :!OTCf1 [:browser]]                                  ; current tab       ;
 
-  [:!WQR#Pright_shift :!OTf1]                                                  ; new tab           ;
-  [:!WQR#Pspacebar :!TCf1]                                                     ; new tab & go      ;
-  [:!WQR#Pdelete_or_backspace :!OCf1]                                          ; multitab          ;
+  [:!WQR#Pright_shift :!OTf1 [:browser]]                                       ; new tab           ;
+  [:!WQR#Pspacebar :!TCf1 [:browser]]                                          ; new tab & go      ;
+  [:!WQR#Pdelete_or_backspace :!OCf1 [:browser]]                               ; multitab          ;
 
-  [:#Pspacebar :!SC#Pa [:zoom]]                                                                    ;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  [:!C#Preturn_or_enter :!Co :browser]
+  
+  ; mute / unmute
+  [:!Q#Pspacebar :!SC#Pa [:zoom]]                                                                  ;
+
+  ; camera on / off
+  ; [:!Q#Pspacebar :!SC#Pa [:zoom]]                                                                ;
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; mute / unmute
+  [:!Q#Pspacebar :!SC#Pm [:skype]]                                                                 ;
+
+  ; camera on / off
+  [:!Q#Preturn_or_enter :!SC#Pk [:skype]]                                                          ;
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  [:!C#Preturn_or_enter :!Co [:browser]]
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
