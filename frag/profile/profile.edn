@@ -33,14 +33,16 @@
 
 :applications
 {;
- :browser ["arc"]                                                                                  ;
- :mail ["canary"]                                                                                  ;
- :editor ["lapce", "zed", "alacritty"]                                                             ;
- :gui ["lapce", "zed"]                                                                             ;
- :term ["alacritty"]                                                                               ;
- :lapce ["lapce"]                                                                                  ;
- :zed ["zed"]                                                                                      ;
- :zoom ["zoom"]                                                                                    ;
+ :browser ["company.thebrowser.Browser"]                                                           ;
+ :mail ["io.canarymail.mac"]                                                                       ;
+ :editor ["io.lapce", "dev.zed.Zed", "org.alacritty"]                                              ;
+ :gui ["io.lapce", "dev.zed.Zed"]                                                                  ;
+ :term ["org.alacritty"]                                                                           ;
+ :lapce ["io.lapce"]                                                                               ;
+ :skim ["net.sourceforge.skim-app.skim"]                                                           ;
+ :skype ["com.skype.skype"]                                                                        ;
+ :zed ["dev.zed.Zed"]                                                                              ;
+ :zoom ["us.zoom.xos"]                                                                             ;
  }
 
 :devices
