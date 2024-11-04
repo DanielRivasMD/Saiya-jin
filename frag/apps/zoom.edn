@@ -7,13 +7,13 @@
  :rules
  [;
   ; mute / unmute
-  [:!T#Pspacebar :!SC#Pa [:zoom]]                                                                  ;
+  [:!C#Pspacebar :!SC#Pa [:zoom]]                                                                  ;
 
   ; camera on / off
-  [:!W#Pspacebar :!SC#Pv [:zoom]]                                                                  ;
+  [:!EWQ#Pspacebar :!SC#Pv [:zoom]]                                                                ;
 
   ; text show
-  [:!EWQ#Pspacebar :!SC#Ph [:zoom]]                                                                ;
+  [:#Pright_shift :right_shift [:zoom] {:alone [:!SC#Ph]}]                                         ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
