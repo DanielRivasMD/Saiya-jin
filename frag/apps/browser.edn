@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; browser
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; DOC: could not find how to configure Arc as browser, thus left global bindings
-; TODO: urgent => find out how to map directly to arc
 ; browser
 {:des "Browser vimium mappings"
  :rules
@@ -21,22 +21,6 @@
 
   [:!EWQ#Pspacebar [:!Cs] [:browser]]                                                              ;
   [:!C#Preturn_or_enter :!Co [:browser]]
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ; mute / unmute
-  [:!Q#Pspacebar :!SC#Pa [:zoom]]                                                                  ;
-
-  ; camera on / off
-  ; [:!Q#Pspacebar :!SC#Pa [:zoom]]                                                                ;
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ; mute / unmute
-  [:!Q#Pspacebar :!SC#Pm [:skype]]                                                                 ;
-
-  ; camera on / off
-  [:!Q#Preturn_or_enter :!SC#Pk [:skype]]                                                          ;
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
