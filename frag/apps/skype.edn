@@ -7,10 +7,10 @@
  :rules
  [;
   ; mute / unmute
-  [:!T#Pspacebar :!SC#Pm [:skype]]                                                                 ;
+  [:!C#Pspacebar :!SC#Pm [:skype]]                                                                 ;
 
   ; camera on / off
-  [:!W#Pspacebar :!SC#Pk [:skype]]                                                                 ;
+  [:!EWQ#Pspacebar :!SC#Pk [:skype]]                                                               ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
