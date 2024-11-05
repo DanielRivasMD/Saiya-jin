@@ -1,0 +1,31 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; QUOTE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; quote
+{:des "Lowercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+ :rules [
+  [:a [:!Oi :a] [:quote-mode]]                                                                     ; ''' + a = â
+  [:e [:!Oi :e] [:quote-mode]]                                                                     ; ''' + e = ê
+  [:i [:!Oi :i] [:quote-mode]]                                                                     ; ''' + i = î
+  [:o [:!Oi :o] [:quote-mode]]                                                                     ; ''' + o = ô
+  [:u [:!Oi :u] [:quote-mode]]                                                                     ; ''' + u = û
+
+  [:n [:!On :n] [:quote-mode]]                                                                     ; ''' + n = ñ
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; quote
+{:des "Uppercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+ :rules [
+  [{:key :a :modi :shift} [:!Oi :!Sa] [:quote-mode]]                                               ; ''' + A = Â
+  [{:key :e :modi :shift} [:!Oi :!Se] [:quote-mode]]                                               ; ''' + E = Ê
+  [{:key :i :modi :shift} [:!Oi :!Si] [:quote-mode]]                                               ; ''' + I = Î
+  [{:key :o :modi :shift} [:!Oi :!So] [:quote-mode]]                                               ; ''' + O = Ô
+  [{:key :u :modi :shift} [:!Oi :!Su] [:quote-mode]]                                               ; ''' + U = Û
+
+  [{:key :n :modi :shift} [:!On :!Sn] [:quote-mode]]                                               ; ''' + n = Ñ
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
