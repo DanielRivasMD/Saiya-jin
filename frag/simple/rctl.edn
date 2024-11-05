@@ -11,8 +11,8 @@
   [:!W#Psemicolon [:!Sf10]]                                                                        ;
   [:!W#Pquote [:!Sf11]]                                                                            ;
   [:!W#Pbackslash [:!Sf12]]                                                                        ;
-  [:!W#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                                              ; ' <- '
-  [:!W#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                                            ; ' -> '
+  ; [:!W#Pcomma []]                                                                                ;
+  ; [:!W#Pperiod []]                                                                               ;
   [:!W#Pslash [:!Sf20]]                                                                            ;
 
   [:!W#Pdelete_or_backspace [:!Wr]]                                                                ;
@@ -43,8 +43,8 @@
   ; [:!WS#Psemicolon []]                                                                           ;
   ; [:!WS#Pquote []]                                                                               ;
   ; [:!WS#Pbackslash []]                                                                           ;
-  [:!WS#Pcomma [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]                                    ; ' <<- '
-  [:!WS#Pperiod [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]                                 ; ' ->> '
+  ; [:!WS#Pcomma []]                                                                               ;
+  ; [:!WS#Pperiod []]                                                                              ;
   ; [:!WS#Pslash []]                                                                               ;
 
   ; [:!WS#Pdelete_or_backspace []]                                                                 ;
