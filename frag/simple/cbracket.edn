@@ -1,8 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: remap to close bracket
-; tab
-{:des "Tab Mode - alphabet"
+; close bracket
+{:des "Close Bracket Mode - alphabet"
  :rules
  [;
   ; [:!WQR#Pa []]                                                                                  ;
