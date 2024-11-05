@@ -11,8 +11,8 @@
   ; [:!Q#Psemicolon []]                                                                            ;
   ; [:!Q#Pquote []]                                                                                ;
   ; [:!Q#Pbackslash []]                                                                            ;
-  ; [:!Q#Pcomma []]                                                                                ;
-  ; [:!Q#Pperiod []]                                                                               ;
+  [:!Q#Pcomma [:spacebar :!Scomma :!Scomma :spacebar]]                                             ; ' << '
+  [:!Q#Pperiod [:spacebar :!Speriod :!Speriod :spacebar]]                                          ; ' >> '
   ; [:!Q#Pslash []]                                                                                ;
 
   ; [:!Q#Pdelete_or_backspace []]                                                                  ;
@@ -20,16 +20,48 @@
   ; [:!Q#Pright_shift []]                                                                          ;
   ; [:!Q#Pright_option []]                                                                         ;
   ; [:!Q#Pright_command []]                                                         NOT AVAILABLE  ;
-  [:!Q#Pspacebar [:caps_lock]]                                                                     ;
+  [:!Q#Pspacebar [:!Q#Pcomma]]                                                 ;    PREFERENCES    ;
 
   ; [:!Q#Pleft_command []]                                                                         ;
   ; [:!Q#Pleft_option []]                                                                          ;
   ; [:!Q#Pleft_control []]                                                                         ;
   ; [:!Q#Pleft_shift []]                                                                           ;
-  ; [:!Q#Pcaps_lock []]                                                                            ;
-  ; [:!Q#Ptab []]                                                                                  ;
+  [:!Q#Pcaps_lock [:spacebar :!S1 :equal_sign :spacebar]]                                          ; ' != '
+  [:!Q#Ptab [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]                             ; ' === '
   ; [:!Q#Pnon_us_backslash []]                                                                     ;
   ; [:!Q#Pescape []]                                                                               ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command - shift
+{:des "Command Mode - symbols"
+ :rules
+ [;
+  ; [:!QR#Popen_bracket []]                                                                        ;
+  ; [:!QR#Pclose_bracket []]                                                                       ;
+  ; [:!QR#Psemicolon []]                                                                           ;
+  ; [:!QR#Pquote []]                                                                               ;
+  ; [:!QR#Pbackslash []]                                                                           ;
+  [:!QR#Pcomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]                                   ; ' <<< '
+  [:!QR#Pperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]                               ; ' >>> '
+  ; [:!QR#Pslash []]                                                                               ;
+
+  ; [:!QR#Pdelete_or_backspace []]                                                                 ;
+  ; [:!QR#Preturn_or_enter []]                                                                     ;
+  ; [:!QR#Pright_shift []]                                                          NOT AVAILABLE  ;
+  ; [:!QR#Pright_option []]                                                                        ;
+  ; [:!QR#Pright_command []]                                                        NOT AVAILABLE  ;
+  ; [:!QR#Pspacebar []]                                                                            ;
+
+  ; [:!QR#Pleft_command []]                                                                        ;
+  ; [:!QR#Pleft_option []]                                                                         ;
+  ; [:!QR#Pleft_control []]                                                                        ;
+  ; [:!QR#Pleft_shift []]                                                                          ;
+  [:!QR#Pcaps_lock [:spacebar :period :!S1 :equal_sign :spacebar]]                                 ; ' .!= '
+  [:!QR#Ptab [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]                    ; ' .=== '
+  ; [:!QR#Pnon_us_backslash []]                                                                    ;
+  ; [:!QR#Pescape []]                                                                              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
