@@ -67,38 +67,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; command
-{:des "Command Mode - symbols"
- :rules
- [;
-  [:!CEWQ#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]                    ; ' %<+% '
-  [:!CEWQ#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]                  ; ' %+>% '
-  [:!CEWQ#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                                         ; ' %$% '
-  [:!CEWQ#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                                   ; ' %T>% '
-  [:!CEWQ#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]                           ; ' %<>% '
-  [:!CEWQ#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                                         ; ' %<% '
-  [:!CEWQ#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                                       ; ' %>% '
-  [:!CEWQ#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                                   ; ' %!>% '
-
-  ; [:!CEWQ#Pdelete_or_backspace []]                                                               ;
-  ; [:!CEWQ#Preturn_or_enter []]                                                                   ;
-  ; [:!CEWQ#Pright_shift []]                                                                       ;
-  ; [:!CEWQ#Pright_option []]                                                                      ;
-  ; [:!CEWQ#Pright_command []]                                                                     ;
-  ; [:!CEWQ#Pspacebar []]                                                                          ;
-
-  ; [:!CEWQ#Pleft_command []]                                                       NOT AVAILABLE  ;
-  ; [:!CEWQ#Pleft_option []]                                                                       ;
-  ; [:!CEWQ#Pleft_control []]                                                                      ;
-  ; [:!CEWQ#Pleft_shift []]                                                                        ;
-  ; [:!CEWQ#Pcaps_lock []]                                                          NOT AVAILABLE  ;
-  ; [:!CEWQ#Ptab []]                                                                               ;
-  ; [:!CEWQ#Pnon_us_backslash []]                                                                  ;
-  ; [:!CEWQ#Pescape []]                                                                            ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
 {:des "Command Mode - numbers"
  :rules
  [;
@@ -160,39 +128,6 @@
   ; [:!CS#P0 []]                                                                                   ;
   [:!CS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]                                 ; ' .-= '
   [:!CS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]                       ; ' .+= '
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - numbers"
- :rules
- [;
-  ; [:!CEWQ#Pkeypad_1 []]                                                                          ;
-  ; [:!CEWQ#Pkeypad_2 []]                                                                          ;
-  ; [:!CEWQ#Pkeypad_3 []]                                                                          ;
-  ; [:!CEWQ#Pkeypad_4 []]                                                                          ;
-  ; [:!CEWQ#Pkeypad_5 []]                                                                          ;
-  ; [:!CEWQ#Pkeypad_6 []]                                                                          ;
-  ; [:!CEWQ#Pkeypad_7 []]                                                                          ;
-  ; [:!CEWQ#Pkeypad_8 []]                                                                          ;
-  ; [:!CEWQ#Pkeypad_9 []]                                                                          ;
-  ; [:!CEWQ#Pkeypad_0 []]                                                                          ;
-  ; [:!CEWQ#Pkeypad_slash []]                                                                      ;
-  ; [:!CEWQ#Pkeypad_asterisk []]                                                                   ;
-
-  ; [:!CEWQ#P1 []]                                                                                 ;
-  ; [:!CEWQ#P2 []]                                                                                 ;
-  ; [:!CEWQ#P3 []]                                                                                 ;
-  ; [:!CEWQ#P4 []]                                                                                 ;
-  ; [:!CEWQ#P5 []]                                                                                 ;
-  ; [:!CEWQ#P6 []]                                                                                 ;
-  ; [:!CEWQ#P7 []]                                                                                 ;
-  ; [:!CEWQ#P8 []]                                                                                 ;
-  ; [:!CEWQ#P9 []]                                                                                 ;
-  ; [:!CEWQ#P0 []]                                                                                 ;
-  ; [:!CEWQ#Phyphen []]                                                                            ;
-  ; [:!CEWQ#Pequal_sign []]                                                                        ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -263,41 +198,6 @@
   ; [:!CS#Py []]                                                                                   ;
   ; [:!CS#Pz []]                                                                                   ;
   ; [:!CS#Pright_control []]                                                                       ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - alphabet"
- :rules
- [;
-  ; [:!CEWQ#Pa []]                                                                                 ;
-  ; [:!CEWQ#Pb []]                                                                                 ;
-  ; [:!CEWQ#Pc []]                                                                                 ;
-  ; [:!CEWQ#Pd []]                                                                                 ;
-  ; [:!CEWQ#Pe []]                                                                                 ;
-  ; [:!CEWQ#Pf []]                                                                                 ;
-  ; [:!CEWQ#Pg []]                                                                                 ;
-  ; [:!CEWQ#Ph []]                                                                                 ;
-  ; [:!CEWQ#Pi []]                                                                                 ;
-  ; [:!CEWQ#Pj []]                                                                                 ;
-  ; [:!CEWQ#Pk []]                                                                                 ;
-  ; [:!CEWQ#Pl []]                                                                                 ;
-  ; [:!CEWQ#Pm []]                                                                                 ;
-  ; [:!CEWQ#Pn []]                                                                                 ;
-  ; [:!CEWQ#Po []]                                                                                 ;
-  ; [:!CEWQ#Pp []]                                                                                 ;
-  ; [:!CEWQ#Pq []]                                                                                 ;
-  ; [:!CEWQ#Pr []]                                                                                 ;
-  ; [:!CEWQ#Ps []]                                                                                 ;
-  ; [:!CEWQ#Pt []]                                                                                 ;
-  ; [:!CEWQ#Pu []]                                                                                 ;
-  ; [:!CEWQ#Pv []]                                                                                 ;
-  ; [:!CEWQ#Pw []]                                                                                 ;
-  ; [:!CEWQ#Px []]                                                                                 ;
-  ; [:!CEWQ#Py []]                                                                                 ;
-  ; [:!CEWQ#Pz []]                                                                                 ;
-  ; [:!CEWQ#Pright_control []]                                                                     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
