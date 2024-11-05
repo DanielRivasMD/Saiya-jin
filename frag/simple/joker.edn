@@ -29,14 +29,23 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  ; [:!EWQ#Popen_bracket [:f8]]                                                                    ;
-  ; [:!EWQ#Pclose_bracket [:f9]]                                                                   ;
-  ; [:!EWQ#Psemicolon [:f10]]                                                                      ;
-  ; [:!EWQ#Pquote [:f11]]                                                                          ;
-  [:!EWQ#Pbackslash [:f12]]                                                                        ;
-  ; [:!EWQ#Pcomma [:f18]]                                                                          ;
-  ; [:!EWQ#Pperiod [:f19]]                                                                         ;
-  ; [:!EWQ#Pslash [:f20]]                                                                          ;
+  [:!EWQ#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]                     ; ' %<+% '
+  [:!EWQ#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]                   ; ' %+>% '
+  [:!EWQ#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                                          ; ' %$% '
+  [:!EWQ#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                                    ; ' %T>% '
+  [:!EWQ#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]                            ; ' %<>% '
+  [:!EWQ#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                                          ; ' %<% '
+  [:!EWQ#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                                        ; ' %>% '
+  [:!EWQ#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                                    ; ' %!>% '
+
+  ; ; [:!EWQ#Popen_bracket [:f8]]                                                                    ;
+  ; ; [:!EWQ#Pclose_bracket [:f9]]                                                                   ;
+  ; ; [:!EWQ#Psemicolon [:f10]]                                                                      ;
+  ; ; [:!EWQ#Pquote [:f11]]                                                                          ;
+  ; [:!EWQ#Pbackslash [:f12]]                                                                        ;
+  ; ; [:!EWQ#Pcomma [:f18]]                                                                          ;
+  ; ; [:!EWQ#Pperiod [:f19]]                                                                         ;
+  ; ; [:!EWQ#Pslash [:f20]]                                                                          ;
 
   [:!EWQ#Pdelete_or_backspace [:f20]]                                                              ;
   [:!EWQ#Preturn_or_enter [:f2]]                                                                   ;
