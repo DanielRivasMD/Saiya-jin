@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; slash
-{:des "Lowercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+{:des "Slash mode"
  :rules [
   [:a [:!Oe :a] [:slash-mode]]                                                                     ; '/' + a = á
   [:e [:!Oe :e] [:slash-mode]]                                                                     ; '/' + e = é
@@ -15,7 +15,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; slash
-{:des "Uppercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+{:des "Slash mode"
  :rules [
   [{:key :a :modi :shift} [:!Oe :!Sa] [:slash-mode]]                                               ; '/' + A = Á
   [{:key :e :modi :shift} [:!Oe :!Se] [:slash-mode]]                                               ; '/' + E = É

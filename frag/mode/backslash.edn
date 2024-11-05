@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; backslash
-{:des "Lowercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+{:des "Backslash mode"
  :rules [
   [:a [:!Ograve_accent_and_tilde :a] [:backslash-mode]]                                            ; '\' + a = à
   [:e [:!Ograve_accent_and_tilde :e] [:backslash-mode]]                                            ; '\' + e = è
@@ -15,7 +15,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; backslash
-{:des "Uppercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+{:des "Backslash mode"
  :rules [
   [{:key :a :modi :shift} [:!Ograve_accent_and_tilde :!Sa] [:backslash-mode]]                      ; '\' + A = À
   [{:key :e :modi :shift} [:!Ograve_accent_and_tilde :!Se] [:backslash-mode]]                      ; '\' + E = È

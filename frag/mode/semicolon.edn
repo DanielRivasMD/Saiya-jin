@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; semicolon
-{:des "Lowercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+{:des "Semicolon"
  :rules [
   [:a [:!Ou :a] [:semicolon-mode]]                                                                 ; ';' + a = ä
   [:e [:!Ou :e] [:semicolon-mode]]                                                                 ; ';' + e = ë
@@ -15,7 +15,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; semicolon
-{:des "Uppercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+{:des "Semicolon"
  :rules [
   [{:key :a :modi :shift} [:!Ou :!Sa] [:semicolon-mode]]                                           ; ';' + A = Ä
   [{:key :e :modi :shift} [:!Ou :!Se] [:semicolon-mode]]                                           ; ';' + E = Ë

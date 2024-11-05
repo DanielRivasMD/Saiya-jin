@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; quote
-{:des "Lowercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+{:des "Quote mode"
  :rules [
   [:a [:!Oi :a] [:quote-mode]]                                                                     ; ''' + a = â
   [:e [:!Oi :e] [:quote-mode]]                                                                     ; ''' + e = ê
@@ -17,7 +17,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; quote
-{:des "Uppercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+{:des "Quote mode"
  :rules [
   [{:key :a :modi :shift} [:!Oi :!Sa] [:quote-mode]]                                               ; ''' + A = Â
   [{:key :e :modi :shift} [:!Oi :!Se] [:quote-mode]]                                               ; ''' + E = Ê
