@@ -156,7 +156,7 @@
   [:!OS#P6 [:spacebar :period :!S6 :spacebar]]                                                     ; ' .^ '
   [:!OS#P7 [:spacebar :period :!S7 :spacebar]]                                                     ; ' .& '
   ; [:!OS#P8 []]                                                                                   ;
-  ; [:!OS#P9 []]                                                                                   ;
+  [:!OS#P9 [:period :!S9]]                                                                         ; '.('
   ; [:!OS#P0 []]                                                                                   ;
   [:!OS#Phyphen [:spacebar :period :hyphen :spacebar]]                                             ; ' .- '
   [:!OS#Pequal_sign [:spacebar :period :!Sequal_sign :spacebar]]                                   ; ' .+ '
@@ -189,7 +189,7 @@
   ; [:!OEWQ#P6 []]                                                                                 ;
   ; [:!OEWQ#P7 []]                                                                                 ;
   ; [:!OEWQ#P8 []]                                                                                 ;
-  ; [:!OEWQ#P9 []]                                                                                 ;
+  [:!OEWQ#P9 [:!Ssemicolon :!S9]]                                                                  ; ':('
   ; [:!OEWQ#P0 []]                                                                                 ;
   ; [:!OEWQ#Phyphen []]                                                                            ;
   ; [:!OEWQ#Pequal_sign []]                                                                        ;
