@@ -16,7 +16,7 @@
   ; [:!S#Pslash []]                                                                                ;
 
   ; [:!S#Pdelete_or_backspace []]                                                                  ;
-  ; [:!S#Preturn_or_enter []]                                                                      ;
+  [:!S#Preturn_or_enter [:spacebar :!Ssemicolon :equal_sign :spacebar]]                            ; ' := '
   [:!S#Pright_shift [:delete_forward]]                                                             ;
   [:!S#Pright_option [:!Od]]                                                                       ;
   [:!S#Pright_command [:!Tk]]                                                                      ;
