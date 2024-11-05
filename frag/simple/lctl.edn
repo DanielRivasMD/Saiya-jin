@@ -66,38 +66,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; control - shift
-{:des "Control Mode - symbols"
- :rules
- [;
-  ; [:!TEWQ#Popen_bracket []]                                                                      ;
-  ; [:!TEWQ#Pclose_bracket []]                                                                     ;
-  ; [:!TEWQ#Psemicolon []]                                                                         ;
-  ; [:!TEWQ#Pquote []]                                                                             ;
-  ; [:!TEWQ#Pbackslash []]                                                                         ;
-  ; [:!TEWQ#Pcomma []]                                                                             ;
-  ; [:!TEWQ#Pperiod []]                                                                            ;
-  ; [:!TEWQ#Pslash []]                                                                             ;
-
-  ; [:!TEWQ#Pdelete_or_backspace                                                                   ;
-  [:!TEWQ#Preturn_or_enter [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]              ; ' === '
-  ; [:!TEWQ#Pright_shift []]                                                                       ;
-  ; [:!TEWQ#Pright_option []]                                                                      ;
-  ; [:!TEWQ#Pright_command []]                                                                     ;
-  ; [:!TEWQ#Pspacebar []]                                                                          ;
- 
-  ; [:!TEWQ#Pleft_command []]                                                                      ;
-  ; [:!TEWQ#Pleft_option []]                                                                       ;
-  ; [:!TEWQ#Pleft_control []]                                                       NOT AVAILABLE  ;
-  ; [:!TEWQ#Pleft_shift []]                                                                        ;
-  ; [:!TEWQ#Pcaps_lock []]                                                          NOT AVAILABLE  ;
-  ; [:!TEWQ#Ptab []]                                                                               ;
-  ; [:!TEWQ#Pnon_us_backslash []]                                                                  ;
-  ; [:!TEWQ#Pescape []]                                                                            ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ; control
 {:des "Control Mode - numbers"
  :rules
@@ -160,39 +128,6 @@
   [:!TS#P0 [:!S0 :!S0]]                                                                            ; '))'
   [:!TS#Phyphen [:spacebar :period :hyphen :hyphen :spacebar]]                                     ; ' .-- '
   [:!TS#Pequal_sign [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]                     ; ' .++ '
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control
-{:des "Control Mode - numbers"
- :rules
- [;
-  ; [:!TEWQ#Pkeypad_1 []]                                                                          ;
-  ; [:!TEWQ#Pkeypad_2 []]                                                                          ;
-  ; [:!TEWQ#Pkeypad_3 []]                                                                          ;
-  ; [:!TEWQ#Pkeypad_4 []]                                                                          ;
-  ; [:!TEWQ#Pkeypad_5 []]                                                                          ;
-  ; [:!TEWQ#Pkeypad_6 []]                                                                          ;
-  ; [:!TEWQ#Pkeypad_7 []]                                                                          ;
-  ; [:!TEWQ#Pkeypad_8 []]                                                                          ;
-  ; [:!TEWQ#Pkeypad_9 []]                                                                          ;
-  ; [:!TEWQ#Pkeypad_0 []]                                                                          ;
-  ; [:!TEWQ#Pkeypad_slash []]                                                                      ;
-  ; [:!TEWQ#Pkeypad_asterisk []]                                                                   ;
-
-  ; [:!TEWQ#P1 []]                                                                                 ;
-  ; [:!TEWQ#P2 []]                                                                                 ;
-  ; [:!TEWQ#P3 []]                                                                                 ;
-  ; [:!TEWQ#P4 []]                                                                                 ;
-  ; [:!TEWQ#P5 []]                                                                                 ;
-  ; [:!TEWQ#P6 []]                                                                                 ;
-  ; [:!TEWQ#P7 []]                                                                                 ;
-  ; [:!TEWQ#P8 []]                                                                                 ;
-  ; [:!TEWQ#P9 []]                                                                                 ;
-  ; [:!TEWQ#P0 []]                                                                                 ;
-  ; [:!TEWQ#Phyphen []]                                                                            ;
-  ; [:!TEWQ#Pequal_sign []]                                                                        ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -263,41 +198,6 @@
   ; [:!TS#Py []]                                                                                   ;
   ; [:!TS#Pz []]                                                                                   ;
   ; [:!TS#Pright_control []]                                                                       ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control
-{:des "Control Mode - alphabet"
- :rules
- [;
-  ; [:!TEWQ#Pa []]                                                                                 ;
-  ; [:!TEWQ#Pb []]                                                                                 ;
-  ; [:!TEWQ#Pc []]                                                                                 ;
-  ; [:!TEWQ#Pd []]                                                                                 ;
-  ; [:!TEWQ#Pe []]                                                                                 ;
-  ; [:!TEWQ#Pf []]                                                                                 ;
-  ; [:!TEWQ#Pg []]                                                                                 ;
-  ; [:!TEWQ#Ph []]                                                                                 ;
-  ; [:!TEWQ#Pi []]                                                                                 ;
-  ; [:!TEWQ#Pj []]                                                                                 ;
-  ; [:!TEWQ#Pk []]                                                                                 ;
-  ; [:!TEWQ#Pl []]                                                                                 ;
-  ; [:!TEWQ#Pm []]                                                                                 ;
-  ; [:!TEWQ#Pn []]                                                                                 ;
-  ; [:!TEWQ#Po []]                                                                                 ;
-  ; [:!TEWQ#Pp []]                                                                                 ;
-  ; [:!TEWQ#Pq []]                                                                                 ;
-  ; [:!TEWQ#Pr []]                                                                                 ;
-  ; [:!TEWQ#Ps []]                                                                                 ;
-  ; [:!TEWQ#Pt []]                                                                                 ;
-  ; [:!TEWQ#Pu []]                                                                                 ;
-  ; [:!TEWQ#Pv []]                                                                                 ;
-  ; [:!TEWQ#Pw []]                                                                                 ;
-  ; [:!TEWQ#Px []]                                                                                 ;
-  ; [:!TEWQ#Py []]                                                                                 ;
-  ; [:!TEWQ#Pz []]                                                                                 ;
-  ; [:!TEWQ#Pright_control []]                                                                     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
