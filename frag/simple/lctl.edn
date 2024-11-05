@@ -11,11 +11,11 @@
   [:!T#Psemicolon [:!Ssemicolon :!Ssemicolon]]                                                     ; '::'
   [:!T#Pquote [:quote :quote :quote]]                                                              ; '''''
   [:!T#Pbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]                                 ; ' || '
-  [:!T#Pcomma [:spacebar :!Scomma :!Scomma :spacebar]]                                             ; ' << '
-  [:!T#Pperiod [:spacebar :!Speriod :!Speriod :spacebar]]                                          ; ' >> '
+  [:!T#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                                              ; ' <- '
+  [:!T#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                                            ; ' -> '
   [:!T#Pslash [:slash :slash :slash :spacebar]]                                                    ; '/// '
 
-  [:!T#Pdelete_or_backspace [:spacebar :!Ssemicolon :equal_sign :spacebar]]                        ; ' := '
+  [:!T#Pdelete_or_backspace [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]; '```'
   [:!T#Preturn_or_enter [:spacebar :equal_sign :equal_sign :spacebar]]                             ; ' == '
   [:!T#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]                                   ; ' => '
   [:!T#Pright_option [:spacebar :!S8 :!S8 :spacebar]]                                              ; ' ** '
@@ -43,8 +43,8 @@
   [:!TS#Psemicolon [:!Ssemicolon :!Ssemicolon :!Scomma]]                                           ; '::<'
   [:!TS#Pquote [:!Squote :!Squote :!Squote]]                                                       ; '"""'
   [:!TS#Pbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]                        ; ' .|| '
-  [:!TS#Pcomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]                                   ; ' <<< '
-  [:!TS#Pperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]                               ; ' >>> '
+  [:!TS#Pcomma [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]                                    ; ' <<- '
+  [:!TS#Pperiod [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]                                 ; ' ->> '
   [:!TS#Pslash [:slash :slash :slash :spacebar]]                                                   ; '/// '
 
   ; [:!TS#Pdelete_or_backspace []]                                                                 ;
@@ -92,7 +92,7 @@
   [:!T#P7 [:spacebar :!S7 :!S7 :spacebar]]                                                         ; ' && '
   ; [:!T#P8 []]                                                                                    ;
   ; [:!T#P9 []]                                                                                    ;
-  ; [:!T#P0 []]                                                                     REDUNDANT      ;
+  ; [:!T#P0 []]                                                                                    ;
   [:!T#Phyphen [:spacebar :hyphen :hyphen :spacebar]]                                              ; ' -- '
   [:!T#Pequal_sign [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]                              ; ' ++ '
   ]}
