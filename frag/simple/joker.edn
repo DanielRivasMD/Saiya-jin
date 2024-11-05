@@ -90,38 +90,37 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; ; TODO: remap to open bracket
-; ; joker
-; {:des "Joker Mode - alphabet"
-;  :rules
-;  [;
-;   ; [:!EWQ#Pa []]                                                                                  ;
-;   ; [:!EWQ#Pb []]                                                                                  ;
-;   ; [:!EWQ#Pc []]                                                                                  ;
-;   ; [:!EWQ#Pd []]                                                                                  ;
-;   ; [:!EWQ#Pe []]                                                                                  ;
-;   ; [:!EWQ#Pf []]                                                                                  ;
-;   ; [:!EWQ#Pg []]                                                                                  ;
-;   ; [:!EWQ#Ph []]                                                                                  ;
-;   ; [:!EWQ#Pi []]                                                                                  ;
-;   ; [:!EWQ#Pj []]                                                                                  ;
-;   ; [:!EWQ#Pk []]                                                                                  ;
-;   ; [:!EWQ#Pl []]                                                                                  ;
-;   ; [:!EWQ#Pm []]                                                                                  ;
-;   ; [:!EWQ#Pn []]                                                                                  ;
-;   ; [:!EWQ#Po []]                                                                                  ;
-;   [:#Pp [:!Ssemicolon :r :u :s :t :!Shyphen :p :r :i :n :t :!Ssemicolon] [:obracket-mode]]         ;
-;   ; [:!EWQ#Pq []]                                                                                  ;
-;   ; [:!EWQ#Pr []]                                                                                  ;
-;   ; [:!EWQ#Ps []]                                                                                  ;
-;   ; [:!EWQ#Pt []]                                                                                  ;
-;   ; [:!EWQ#Pu []]                                                                                  ;
-;   ; [:!EWQ#Pv []]                                                                                  ;
-;   ; [:!EWQ#Pw []]                                                                                  ;
-;   ; [:!EWQ#Px []]                                                                                  ;
-;   ; [:!EWQ#Py []]                                                                                  ;
-;   ; [:!EWQ#Pz []]                                                                                  ;
-;   ; [:!EWQ#Pright_control []]                                                                      ;
-;   ]}
+; joker
+{:des "Joker Mode - alphabet"
+ :rules
+ [;
+  ; [:!EWQ#Pa []]                                                                                  ;
+  ; [:!EWQ#Pb []]                                                                                  ;
+  ; [:!EWQ#Pc []]                                                                                  ;
+  ; [:!EWQ#Pd []]                                                                                  ;
+  ; [:!EWQ#Pe []]                                                                                  ;
+  ; [:!EWQ#Pf []]                                                                                  ;
+  ; [:!EWQ#Pg []]                                                                                  ;
+  ; [:!EWQ#Ph []]                                                                                  ;
+  ; [:!EWQ#Pi []]                                                                                  ;
+  ; [:!EWQ#Pj []]                                                                                  ;
+  ; [:!EWQ#Pk []]                                                                                  ;
+  ; [:!EWQ#Pl []]                                                                                  ;
+  ; [:!EWQ#Pm []]                                                                                  ;
+  ; [:!EWQ#Pn []]                                                                                  ;
+  ; [:!EWQ#Po []]                                                                                  ;
+  ; [:!EWQ#Pp []]                                                                                  ;
+  ; [:!EWQ#Pq []]                                                                                  ;
+  ; [:!EWQ#Pr []]                                                                                  ;
+  ; [:!EWQ#Ps []]                                                                                  ;
+  ; [:!EWQ#Pt []]                                                                                  ;
+  ; [:!EWQ#Pu []]                                                                                  ;
+  ; [:!EWQ#Pv []]                                                                                  ;
+  ; [:!EWQ#Pw []]                                                                                  ;
+  ; [:!EWQ#Px []]                                                                                  ;
+  ; [:!EWQ#Py []]                                                                                  ;
+  ; [:!EWQ#Pz []]                                                                                  ;
+  ; [:!EWQ#Pright_control []]                                                                      ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
