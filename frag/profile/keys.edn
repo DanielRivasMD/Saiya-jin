@@ -1,4 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; KEYS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; key modifiers
 {:des "Modifier key remappings"
@@ -7,30 +9,27 @@
   [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]                                                  ;
   [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
 
-  ; joker
-  [:##caps_lock :!EWright_command nil {:alone :escape}]              ;
+  ; modifiers
+  [:#Pescape :!EWright_shift nil {:alone [:!EW#Pnon_us_pound]}]                                    ; menu search. `term` pop-up new
 
-  ; hyper
-  [:#Ptab :!OTCright_shift nil {:alone :tab}]                        ; spectacle control, speak & app launcher
+  ; launcher
+  [:#Ptab :!OTCright_shift nil {:alone :tab}]                                                      ; spectacle control, speak & app launcher
+
+  ; joker
+  [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ; esc, tydiverse, language server protocol
 
   ; grave
-  [:#Pright_control :right_control nil {:alone [:f3]}]               ;
-
-  ; modifiers
-  [:#Pescape :!EWright_shift nil {:alone [:!EWRf3]}]                 ; menu search. 'term' pop-up new
-  [:#Pdelete_or_backspace :!EQright_shift nil {:alone [:!EQRf3]}]    ; now empty
+  [:#Pright_control :right_control nil {:alone [:!W#Pnon_us_pound]}]                               ; arc bind
 
   ; lefts
-  ; [:#Ptab :!WQright_shift nil {:alone [:tab]}]                       ;
-  [:#Pleft_control :left_control nil {:alone [:!Tf3]}]               ; alfred window switcher
-  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                ; global in-app window cycler. 'term' session locked
-  [:#Pleft_command :left_command nil {:alone [:!Ctab]}]              ; switch most recent app
+  [:#Pleft_control :left_control nil {:alone [:!EWQ#Onon_us_pound]}]                               ; alfred window switcher
+  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ; global in-app window cycler. `term` session locked
+  [:#Pleft_command :left_command nil {:alone [:!Ctab]}]                                            ; switch most recent app
 
-  ; DOC: silenced right shift in favor of 'browser' binding
   ; rights
-  ; [:#Pright_shift :right_shift nil {:alone [:!Sf3]}]               ;
-  [:#Pright_option :right_option nil {:alone [:!Of3]}]               ; alfred paste
-  [:#Pright_command :right_command nil {:alone [:!Cf3]}]             ; alfred clipboard select
+  [:#Pright_shift :right_shift nil {:alone [:!R#Pnon_us_pound]}]                                   ; `browser` input. `term` history edit
+  [:#Pright_option :right_option nil {:alone [:!E#Pnon_us_pound]}]                                 ; alfred paste
+  [:#Pright_command :right_command nil {:alone [:!Q#Pnon_us_pound]}]                               ; alfred clipboard select
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
