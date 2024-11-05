@@ -123,8 +123,8 @@
   ; [:!C#P6 []]                                                                                    ;
   ; [:!C#P7 []]                                                                                    ;
   ; [:!C#P8 []]                                                                                    ;
-  [:!C#P9 [:period :!S9]]                                                                          ; '.('
-  ; [:!C#P0 []]                                                                                    ;
+  [:!C#P9 [:!Scomma :!S9]]                                                                         ; '<('
+  [:!C#P0 [:!S0 :spacebar]]                                                                        ; ') '
   [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                                          ; ' -= '
   [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]                                ; ' += '
   ]}
@@ -157,7 +157,7 @@
   ; [:!CS#P7 []]                                                                                   ;
   ; [:!CS#P8 []]                                                                                   ;
   [:!CS#P9 [:!S4 :!S9]]                                                                            ; '$('
-  [:!CS#P0 [:!S0 :spacebar]]                                                                       ; ') '
+  ; [:!CS#P0 []]                                                                                   ;
   [:!CS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]                                 ; ' .-= '
   [:!CS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]                       ; ' .+= '
   ]}
@@ -189,7 +189,7 @@
   ; [:!CEWQ#P6 []]                                                                                 ;
   ; [:!CEWQ#P7 []]                                                                                 ;
   ; [:!CEWQ#P8 []]                                                                                 ;
-  [:!CEWQ#P9 [:!Ssemicolon :!S9]]                                                                  ; ':('
+  ; [:!CEWQ#P9 []]                                                                                 ;
   ; [:!CEWQ#P0 []]                                                                                 ;
   ; [:!CEWQ#Phyphen []]                                                                            ;
   ; [:!CEWQ#Pequal_sign []]                                                                        ;
