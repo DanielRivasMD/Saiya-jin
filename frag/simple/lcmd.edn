@@ -9,7 +9,7 @@
   [:!C#Popen_bracket [:!S3 :open_bracket]]                                                         ; '#['
   [:!C#Pclose_bracket [:close_bracket :spacebar]]                                                  ; '] '
   [:!C#Psemicolon [:semicolon :spacebar]]                                                          ; '; '
-  ; [:!C#Pquote []]                                                                                ;
+  ; [:!C#Pquote []]                                                                                ; TODO: concatenate strings
   ; [:!C#Pbackslash []]                                                                            ;
   [:!C#Pcomma [:comma :spacebar]]                                                                  ; ', '
   [:!C#Pperiod [:period :spacebar]]                                                                ; '. '
