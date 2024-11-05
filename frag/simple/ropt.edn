@@ -34,6 +34,38 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; option - shift
+{:des "Option Mode - symbols"
+ :rules
+ [;
+  ; [:!ER#Popen_bracket []]                                                                        ;
+  ; [:!ER#Pclose_bracket []]                                                                       ;
+  ; [:!ER#Psemicolon []]                                                                           ;
+  ; [:!ER#Pquote []]                                                                               ;
+  ; [:!ER#Pbackslash []]                                                                           ;
+  ; [:!ER#Pcomma []]                                                                               ;
+  ; [:!ER#Pperiod []]                                                                              ;
+  ; [:!ER#Pslash []]                                                                               ;
+
+  ; [:!ER#Pdelete_or_backspace []]                                                                 ;
+  ; [:!ER#Preturn_or_enter []]                                                                     ;
+  ; [:!ER#Pright_shift []]                                                          NOT AVAILABLE  ;
+  ; [:!ER#Pright_option []]                                                         NOT AVAILABLE  ;
+  ; [:!ER#Pright_command []]                                                                       ;
+  ; [:!ER#Pspacebar []]                                                                            ;
+
+  ; [:!ER#Pleft_command []]                                                                        ;
+  ; [:!ER#Pleft_option []]                                                                         ;
+  ; [:!ER#Pleft_control []]                                                                        ;
+  ; [:!ER#Pleft_shift []]                                                                          ;
+  ; [:!ER#Pcaps_lock []]                                                                           ;
+  ; [:!ER#Ptab []]                                                                                 ;
+  ; [:!ER#Pnon_us_backslash []]                                                                    ;
+  ; [:!ER#Pescape []]                                                                              ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; TODO: update
 ; option
 {:des "Option Mode - alphabet"
