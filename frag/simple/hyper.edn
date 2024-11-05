@@ -16,18 +16,18 @@
   ; [:!OTC#Pslash []]                                                                              ;
 
   ; [:!OTC#Pdelete_or_backspace []]                                                                ;
-  [:!OTC#Preturn_or_enter [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]               ; ' === '
+  [:!OTC#Preturn_or_enter [:equal_sign :equal_sign]]                                               ; '=='
   [:!OTC#Pright_shift [:!S1 :!S1]]                                                                 ; '!!'
   [:!OTC#Pright_option [:!S8 :!S8]]                                                                ; '**'
   [:!OTC#Pright_command [:slash :slash]]                                                           ; '//'
   ; [:!OTC#Pspacebar []]                                                                           ;
 
-  ; [:!OTC#Pleft_command []]                                                                       ;
-  ; [:!OTC#Pleft_option []]                                                                        ;
-  ; [:!OTC#Pleft_control []]                                                                       ;
+  ; [:!OTC#Pleft_command []]                                                        NOT AVAILABLE  ;
+  ; [:!OTC#Pleft_option []]                                                         NOT AVAILABLE  ;
+  ; [:!OTC#Pleft_control []]                                                        NOT AVAILABLE  ;
   ; [:!OTC#Pleft_shift []]                                                                         ;
   ; [:!OTC#Pcaps_lock []]                                                                          ;
-  ; [:!OTC#Ptab []]                                                                 NOT AVAILABLE  ;
+  ; [:!OTC#Ptab []]                                                                                ;
   ; [:!OTC#Pnon_us_backslash []]                                                                   ;
   ; [:!OTC#Pescape []]                                                                             ;
   ]}
