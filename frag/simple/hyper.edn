@@ -16,7 +16,7 @@
   ; [:!OTC#Pslash []]                                                                              ;
 
   ; [:!OTC#Pdelete_or_backspace []]                                                                ;
-  ; [:!OTC#Preturn_or_enter []]                                                                    ;
+  [:!OTC#Preturn_or_enter [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]               ; ' === '
   [:!OTC#Pright_shift [:!S1 :!S1]]                                                                 ; '!!'
   [:!OTC#Pright_option [:!S8 :!S8]]                                                                ; '**'
   [:!OTC#Pright_command [:slash :slash]]                                                           ; '//'
