@@ -1,0 +1,103 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; HYPER
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; hyper
+{:des "Hyper Mode - symbols"
+ :rules
+ [;
+  ; [:!OTC#Popen_bracket []]                                                                       ;
+  ; [:!OTC#Pclose_bracket []]                                                                      ;
+  ; [:!OTC#Psemicolon []]                                                                          ;
+  ; [:!OTC#Pquote []]                                                                              ;
+  [:!OTC#Pbackslash [:!Sbackslash :!Sbackslash]]                                                   ; '||'
+  [:!OTC#Pcomma [:!Scomma :!Scomma]]                                                               ; '<<'
+  [:!OTC#Pperiod [:!Speriod :!Speriod]]                                                            ; '>>'
+  ; [:!OTC#Pslash []]                                                                              ;
+
+  ; [:!OTC#Pdelete_or_backspace []]                                                                ;
+  ; [:!OTC#Preturn_or_enter []]                                                                    ;
+  [:!OTC#Pright_shift [:!S1 :!S1]]                                                                 ; '!!'
+  [:!OTC#Pright_option [:!S8 :!S8]]                                                                ; '**'
+  [:!OTC#Pright_command [:slash :slash]]                                                           ; '//'
+  ; [:!OTC#Pspacebar []]                                                                           ;
+
+  ; [:!OTC#Pleft_command []]                                                                       ;
+  ; [:!OTC#Pleft_option []]                                                                        ;
+  ; [:!OTC#Pleft_control []]                                                                       ;
+  ; [:!OTC#Pleft_shift []]                                                                         ;
+  ; [:!OTC#Pcaps_lock []]                                                                          ;
+  ; [:!OTC#Ptab []]                                                                 NOT AVAILABLE  ;
+  ; [:!OTC#Pnon_us_backslash []]                                                                   ;
+  ; [:!OTC#Pescape []]                                                                             ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; hyper
+{:des "Hyper Mode - numbers"
+ :rules
+ [;
+  ; [:!OTC#keypad_1 []]                                                                            ;
+  ; [:!OTC#keypad_2 []]                                                                            ;
+  ; [:!OTC#keypad_3 []]                                                                            ;
+  ; [:!OTC#keypad_4 []]                                                                            ;
+  ; [:!OTC#keypad_5 []]                                                                            ;
+  ; [:!OTC#keypad_6 []]                                                                            ;
+  ; [:!OTC#keypad_7 []]                                                                            ;
+  ; [:!OTC#keypad_8 []]                                                                            ;
+  ; [:!OTC#keypad_9 []]                                                                            ;
+  ; [:!OTC#keypad_0 []]                                                                            ;
+  ; [:!OTC#keypad_slash []]                                                                        ;
+  ; [:!OTC#keypad_asterisk []]                                                                     ;
+
+  ; [:!OTC#1 []]                                                                                   ;
+  ; [:!OTC#2 []]                                                                                   ;
+  ; [:!OTC#3 []]                                                                                   ;
+  ; [:!OTC#4 []]                                                                                   ;
+  ; [:!OTC#5 []]                                                                                   ;
+  ; [:!OTC#6 []]                                                                                   ;
+  ; [:!OTC#7 []]                                                                                   ;
+  ; [:!OTC#8 []]                                                                                   ;
+  ; [:!OTC#9 []]                                                                                   ;
+  ; [:!OTC#0 []]                                                                                   ;
+  [:!OTC#Phyphen [:hyphen :hyphen]]                                                                ; '--'
+  [:!OTC#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                                                ; '++'
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; hyper
+{:des "Hyper Mode - alphabet"
+ :rules
+ [;
+  ; [:!OTC#Pa []]                                                                                  ;
+  ; [:!OTC#Pb []]                                                                                  ;
+  ; [:!OTC#Pc []]                                                                                  ;
+  ; [:!OTC#Pd []]                                                                                  ;
+  ; [:!OTC#Pe []]                                                                                  ;
+  ; [:!OTC#Pf []]                                                                                  ;
+  ; [:!OTC#Pg []]                                                                                  ;
+  ; [:!OTC#Ph []]                                                                                  ;
+  ; [:!OTC#Pi []]                                                                                  ;
+  ; [:!OTC#Pj []]                                                                                  ;
+  ; [:!OTC#Pk []]                                                                                  ;
+  ; [:!OTC#Pl []]                                                                                  ;
+  ; [:!OTC#Pm []]                                                                                  ;
+  ; [:!OTC#Pn []]                                                                                  ;
+  ; [:!OTC#Po []]                                                                                  ;
+  ; [:!OTC#Pp []]                                                                                  ;
+  ; [:!OTC#Pq []]                                                                                  ;
+  ; [:!OTC#Pr []]                                                                                  ;
+  ; [:!OTC#Ps []]                                                                                  ;
+  ; [:!OTC#Pt []]                                                                                  ;
+  ; [:!OTC#Pu []]                                                                                  ;
+  ; [:!OTC#Pv []]                                                                                  ;
+  ; [:!OTC#Pw []]                                                                                  ;
+  ; [:!OTC#Px []]                                                                                  ;
+  ; [:!OTC#Py []]                                                                                  ;
+  ; [:!OTC#Pz []]                                                                                  ;
+  ; [:!OTC#Pright_control []]                                                                      ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
