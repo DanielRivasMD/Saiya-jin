@@ -15,7 +15,7 @@
   [:!T#Pperiod [:spacebar :!Speriod :!Speriod :spacebar]]                                          ; ' >> '
   [:!T#Pslash [:slash :slash :slash :spacebar]]                                                    ; '/// '
 
-  [:!T#Pdelete_or_backspace [:!S1 :!S1]]                                                           ; '!!'
+  [:!T#Pdelete_or_backspace [:spacebar :!Ssemicolon :equal_sign :spacebar]]                        ; ' := '
   [:!T#Preturn_or_enter [:spacebar :equal_sign :equal_sign :spacebar]]                             ; ' == '
   [:!T#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]                                   ; ' => '
   [:!T#Pright_option [:spacebar :!S8 :!S8 :spacebar]]                                              ; ' ** '
@@ -47,7 +47,7 @@
   [:!TS#Pperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]                               ; ' >>> '
   [:!TS#Pslash [:slash :slash :slash :spacebar]]                                                   ; '/// '
 
-  [:!TS#Pdelete_or_backspace [:spacebar :!Ssemicolon :equal_sign :spacebar]]                       ; ' := '
+  ; [:!TS#Pdelete_or_backspace []]                                                                 ;
   [:!TS#Preturn_or_enter [:spacebar :period :equal_sign :equal_sign :spacebar]]                    ; ' .== '
   [:!TS#Pright_shift [:spacebar :period :equal_sign :!Speriod :spacebar]]                          ; ' .=> '
   [:!TS#Pright_option [:spacebar :period :!S8 :!S8 :spacebar]]                                     ; ' .** '
@@ -74,16 +74,16 @@
   ; [:!TEWQ#Pclose_bracket []]                                                                     ;
   ; [:!TEWQ#Psemicolon []]                                                                         ;
   ; [:!TEWQ#Pquote []]                                                                             ;
-  [:!TEWQ#Pbackslash [:!Sbackslash :!Sbackslash]]                                                  ; '||'
-  [:!TEWQ#Pcomma [:!Scomma :!Scomma]]                                                              ; '<<'
-  [:!TEWQ#Pperiod [:!Speriod :!Speriod]]                                                           ; '>>'
+  ; [:!TEWQ#Pbackslash []]                                                                         ;
+  ; [:!TEWQ#Pcomma []]                                                                             ;
+  ; [:!TEWQ#Pperiod []]                                                                            ;
   ; [:!TEWQ#Pslash []]                                                                             ;
 
   ; [:!TEWQ#Pdelete_or_backspace                                                                   ;
   [:!TEWQ#Preturn_or_enter [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]              ; ' === '
-  ; [:!TEWQ#Pright_shift                                                                           ;
-  [:!TEWQ#Pright_option [:!S8 :!S8]]                                                               ; '**'
-  [:!TEWQ#Pright_command [:slash :slash]]                                                          ; '//'
+  ; [:!TEWQ#Pright_shift []]                                                                       ;
+  ; [:!TEWQ#Pright_option []]                                                                      ;
+  ; [:!TEWQ#Pright_command []]                                                                     ;
   ; [:!TEWQ#Pspacebar []]                                                                          ;
  
   ; [:!TEWQ#Pleft_command []]                                                                      ;
@@ -191,8 +191,8 @@
   ; [:!TEWQ#P8 []]                                                                                 ;
   ; [:!TEWQ#P9 []]                                                                                 ;
   ; [:!TEWQ#P0 []]                                                                                 ;
-  [:!TEWQ#Phyphen [:hyphen :hyphen]]                                                               ; '--'
-  [:!TEWQ#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                                               ; '++'
+  ; [:!TEWQ#Phyphen []]                                                                            ;
+  ; [:!TEWQ#Pequal_sign []]                                                                        ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
