@@ -66,38 +66,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; option - shift
-{:des "Option Mode - symbols"
- :rules
- [;
-  ; [:!OEWQ#Popen_bracket []]                                                                      ;
-  ; [:!OEWQ#Pclose_bracket []]                                                                     ;
-  ; [:!OEWQ#Psemicolon []]                                                                         ;
-  ; [:!OEWQ#Pquote []]                                                                             ;
-  ; [:!OEWQ#Pbackslash []]                                                                         ;
-  ; [:!OEWQ#Pcomma []]                                                              COLLISION      ;
-  ; [:!OEWQ#Pperiod []]                                                                            ;
-  ; [:!OEWQ#Pslash []]                                                                             ;
-
-  ; [:!OEWQ#Pdelete_or_backspace []]                                                               ;
-  ; [:!OEWQ#Preturn_or_enter []]                                                                   ;
-  ; [:!OEWQ#Pright_shift []]                                                                       ;
-  ; [:!OEWQ#Pright_option []]                                                                      ;
-  ; [:!OEWQ#Pright_command []]                                                                     ;
-  ; [:!OEWQ#Pspacebar []]                                                                          ;
-
-  ; [:!OEWQ#Pleft_command []]                                                                      ;
-  ; [:!OEWQ#Pleft_option []]                                                        NOT AVAILABLE  ;
-  ; [:!OEWQ#Pleft_control []]                                                                      ;
-  ; [:!OEWQ#Pleft_shift []]                                                                        ;
-  ; [:!OEWQ#Pcaps_lock []]                                                          NOT AVAILABLE  ;
-  ; [:!OEWQ#Ptab []]                                                                               ;
-  ; [:!OEWQ#Pnon_us_backslash []]                                                                  ;
-  ; [:!OEWQ#Pescape []]                                                                            ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ; option
 {:des "Option Mode - numbers"
  :rules
@@ -123,7 +91,7 @@
   [:!O#P6 [:spacebar :!S6 :spacebar]]                                                              ; ' ^ '
   [:!O#P7 [:spacebar :!S7 :spacebar]]                                                              ; ' & '
   ; [:!O#P8 []]                                                                                    ;
-  ; [:!O#P9 []]                                                                                    ;
+  [:!O#P9 [:period :!S9]]                                                                          ; '.('
   ; [:!O#P0 []]                                                                                    ;
   [:!O#Phyphen [:spacebar :hyphen :spacebar]]                                                      ; ' - '
   [:!O#Pequal_sign [:spacebar :!Sequal_sign :spacebar]]                                            ; ' + '
@@ -156,43 +124,10 @@
   [:!OS#P6 [:spacebar :period :!S6 :spacebar]]                                                     ; ' .^ '
   [:!OS#P7 [:spacebar :period :!S7 :spacebar]]                                                     ; ' .& '
   ; [:!OS#P8 []]                                                                                   ;
-  [:!OS#P9 [:period :!S9]]                                                                         ; '.('
+  [:!OS#P9 [:!Ssemicolon :!S9]]                                                                    ; ':('
   ; [:!OS#P0 []]                                                                                   ;
   [:!OS#Phyphen [:spacebar :period :hyphen :spacebar]]                                             ; ' .- '
   [:!OS#Pequal_sign [:spacebar :period :!Sequal_sign :spacebar]]                                   ; ' .+ '
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option
-{:des "Option Mode - numbers"
- :rules
- [;
-  ; [:!OEWQ#Pkeypad_1 []]                                                                          ;
-  ; [:!OEWQ#Pkeypad_2 []]                                                                          ;
-  ; [:!OEWQ#Pkeypad_3 []]                                                                          ;
-  ; [:!OEWQ#Pkeypad_4 []]                                                                          ;
-  ; [:!OEWQ#Pkeypad_5 []]                                                                          ;
-  ; [:!OEWQ#Pkeypad_6 []]                                                                          ;
-  ; [:!OEWQ#Pkeypad_7 []]                                                                          ;
-  ; [:!OEWQ#Pkeypad_8 []]                                                                          ;
-  ; [:!OEWQ#Pkeypad_9 []]                                                                          ;
-  ; [:!OEWQ#Pkeypad_0 []]                                                                          ;
-  ; [:!OEWQ#Pkeypad_slash []]                                                                      ;
-  ; [:!OEWQ#Pkeypad_asterisk []]                                                                   ;
-
-  ; [:!OEWQ#P1 []]                                                                                 ;
-  ; [:!OEWQ#P2 []]                                                                                 ;
-  ; [:!OEWQ#P3 []]                                                                                 ;
-  ; [:!OEWQ#P4 []]                                                                                 ;
-  ; [:!OEWQ#P5 []]                                                                                 ;
-  ; [:!OEWQ#P6 []]                                                                                 ;
-  ; [:!OEWQ#P7 []]                                                                                 ;
-  ; [:!OEWQ#P8 []]                                                                                 ;
-  [:!OEWQ#P9 [:!Ssemicolon :!S9]]                                                                  ; ':('
-  ; [:!OEWQ#P0 []]                                                                                 ;
-  ; [:!OEWQ#Phyphen []]                                                                            ;
-  ; [:!OEWQ#Pequal_sign []]                                                                        ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -263,41 +198,6 @@
   ; [:!OS#Py []]                                                                    REDUNDANT      ;
   ; [:!OS#Pz []]                                                                    REDUNDANT      ;
   ; [:!OS#Pright_control []]                                                        REDUNDANT      ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option
-{:des "Option Mode - alphabet"
- :rules
- [;
-  ; [:!OEWQ#Pa []]                                                                                 ;
-  ; [:!OEWQ#Pb []]                                                                                 ;
-  ; [:!OEWQ#Pc []]                                                                                 ;
-  ; [:!OEWQ#Pd []]                                                                                 ;
-  ; [:!OEWQ#Pe []]                                                                                 ;
-  ; [:!OEWQ#Pf []]                                                                                 ;
-  ; [:!OEWQ#Pg []]                                                                                 ;
-  ; [:!OEWQ#Ph []]                                                                                 ;
-  ; [:!OEWQ#Pi []]                                                                                 ;
-  ; [:!OEWQ#Pj []]                                                                                 ;
-  ; [:!OEWQ#Pk []]                                                                                 ;
-  ; [:!OEWQ#Pl []]                                                                                 ;
-  ; [:!OEWQ#Pm []]                                                                                 ;
-  ; [:!OEWQ#Pn []]                                                                                 ;
-  ; [:!OEWQ#Po []]                                                                                 ;
-  ; [:!OEWQ#Pp []]                                                                                 ;
-  ; [:!OEWQ#Pq []]                                                                                 ;
-  ; [:!OEWQ#Pr []]                                                                                 ;
-  ; [:!OEWQ#Ps []]                                                                                 ;
-  ; [:!OEWQ#Pt []]                                                                                 ;
-  ; [:!OEWQ#Pu []]                                                                                 ;
-  ; [:!OEWQ#Pv []]                                                                                 ;
-  ; [:!OEWQ#Pw []]                                                                                 ;
-  ; [:!OEWQ#Px []]                                                                                 ;
-  ; [:!OEWQ#Py []]                                                                                 ;
-  ; [:!OEWQ#Pz []]                                                                                 ;
-  ; [:!OEWQ#Pright_control []]                                                                     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
