@@ -1,0 +1,27 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SLASH
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; slash
+{:des "Lowercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+ :rules [
+  [:a [:!Oe :a] [:slash-mode]]                                                                     ; '/' + a = á
+  [:e [:!Oe :e] [:slash-mode]]                                                                     ; '/' + e = é
+  [:i [:!Oe :i] [:slash-mode]]                                                                     ; '/' + i = í
+  [:o [:!Oe :o] [:slash-mode]]                                                                     ; '/' + o = ó
+  [:u [:!Oe :u] [:slash-mode]]                                                                     ; '/' + u = ú
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; slash
+{:des "Uppercase diacritic characters - '/' for acute accent and ';' for umlaut, '\\' for grave accent and '6' for circumflex"
+ :rules [
+  [{:key :a :modi :shift} [:!Oe :!Sa] [:slash-mode]]                                               ; '/' + A = Á
+  [{:key :e :modi :shift} [:!Oe :!Se] [:slash-mode]]                                               ; '/' + E = É
+  [{:key :i :modi :shift} [:!Oe :!Si] [:slash-mode]]                                               ; '/' + I = Í
+  [{:key :o :modi :shift} [:!Oe :!So] [:slash-mode]]                                               ; '/' + O = Ó
+  [{:key :u :modi :shift} [:!Oe :!Su] [:slash-mode]]                                               ; '/' + U = Ú
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
