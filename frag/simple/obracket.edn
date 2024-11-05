@@ -1,8 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: remap to open bracket
-; joker
-{:des "Joker Mode - alphabet"
+; open bracket
+{:des "Open Bracket Mode - alphabet"
  :rules
  [;
   ; [:!EWQ#Pa []]                                                                                  ;
