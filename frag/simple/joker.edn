@@ -70,29 +70,29 @@
 {:des "Joker Mode - numbers"
  :rules
  [;
-  ; [:!EWQ#keypad_1 []]                                                                            ;
-  ; [:!EWQ#keypad_2 []]                                                                            ;
-  ; [:!EWQ#keypad_3 []]                                                                            ;
-  ; [:!EWQ#keypad_4 []]                                                                            ;
-  ; [:!EWQ#keypad_5 []]                                                                            ;
-  ; [:!EWQ#keypad_6 []]                                                                            ;
-  ; [:!EWQ#keypad_7 []]                                                                            ;
-  ; [:!EWQ#keypad_8 []]                                                                            ;
-  ; [:!EWQ#keypad_9 []]                                                                            ;
-  ; [:!EWQ#keypad_0 []]                                                                            ;
-  ; [:!EWQ#keypad_slash []]                                                                        ;
-  ; [:!EWQ#keypad_asterisk []]                                                                     ;
+  ; [:!EWQ#Pkeypad_1 []]                                                                           ;
+  ; [:!EWQ#Pkeypad_2 []]                                                                           ;
+  ; [:!EWQ#Pkeypad_3 []]                                                                           ;
+  ; [:!EWQ#Pkeypad_4 []]                                                                           ;
+  ; [:!EWQ#Pkeypad_5 []]                                                                           ;
+  ; [:!EWQ#Pkeypad_6 []]                                                                           ;
+  ; [:!EWQ#Pkeypad_7 []]                                                                           ;
+  ; [:!EWQ#Pkeypad_8 []]                                                                           ;
+  ; [:!EWQ#Pkeypad_9 []]                                                                           ;
+  ; [:!EWQ#Pkeypad_0 []]                                                                           ;
+  ; [:!EWQ#Pkeypad_slash []]                                                                       ;
+  ; [:!EWQ#Pkeypad_asterisk []]                                                                    ;
 
-  ; [:!EWQ#1 []]                                                                                   ;
-  ; [:!EWQ#2 []]                                                                                   ;
-  ; [:!EWQ#3 []]                                                                                   ;
-  ; [:!EWQ#4 []]                                                                                   ;
-  ; [:!EWQ#5 []]                                                                                   ;
-  ; [:!EWQ#6 []]                                                                                   ;
-  ; [:!EWQ#7 []]                                                                                   ;
-  ; [:!EWQ#8 []]                                                                                   ;
-  ; [:!EWQ#9 []]                                                                                   ;
-  ; [:!EWQ#0 []]                                                                                   ;
+  ; [:!EWQ#P1 []]                                                                                  ;
+  ; [:!EWQ#P2 []]                                                                                  ;
+  ; [:!EWQ#P3 []]                                                                                  ;
+  ; [:!EWQ#P4 []]                                                                                  ;
+  ; [:!EWQ#P5 []]                                                                                  ;
+  ; [:!EWQ#P6 []]                                                                                  ;
+  ; [:!EWQ#P7 []]                                                                                  ;
+  ; [:!EWQ#P8 []]                                                                                  ;
+  ; [:!EWQ#P9 []]                                                                                  ;
+  [:!EWQ#P0 [:f12]]                                                                                ;
   [:!EWQ#Phyphen [:f13]]                                                                           ;
   [:!EWQ#Pequal_sign [:f14]]                                                                       ;
   ]}
