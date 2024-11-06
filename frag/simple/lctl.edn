@@ -15,7 +15,7 @@
   [:!T#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                                            ; ' -> '
   [:!T#Pslash [:slash :slash :slash :spacebar]]                                                    ; '/// '
 
-  [:!T#Pdelete_or_backspace [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]; '```'
+  [:!T#Pdelete_or_backspace [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]  ; '```'
   [:!T#Preturn_or_enter [:spacebar :equal_sign :equal_sign :spacebar]]                             ; ' == '
   [:!T#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]                                   ; ' => '
   [:!T#Pright_option [:spacebar :!S8 :!S8 :spacebar]]                                              ; ' ** '
