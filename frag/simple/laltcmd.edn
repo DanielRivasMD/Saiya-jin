@@ -1,0 +1,103 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; OPT-CMD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option - command
+{:des "Option - Command Mode - symbols"
+ :rules
+ [;
+  ; [:!OC#Popen_bracket []]                                                                        ;
+  ; [:!OC#Pclose_bracket []]                                                                       ;
+  ; [:!OC#Psemicolon []]                                                                           ;
+  ; [:!OC#Pquote []]                                                                               ;
+  ; [:!OC#Pbackslash []]                                                                           ;
+  ; [:!OC#Pcomma []]                                                                               ;
+  ; [:!OC#Pperiod []]                                                                              ;
+  ; [:!OC#Pslash []]                                                                               ;
+
+  ; [:!OC#Pdelete_or_backspace []]                                                                 ;
+  ; [:!OC#Preturn_or_enter []]                                                                     ;
+  ; [:!OC#Pright_shift []]                                                                         ;
+  ; [:!OC#Pright_option []]                                                         NOT AVAILABLE  ;
+  ; [:!OC#Pright_command []]                                                        NOT AVAILABLE  ;
+  ; [:!OC#Pspacebar []]                                                                            ;
+
+  ; [:!OCleft_command []]                                                                          ;
+  ; [:!OC#Pleft_option []]                                                                         ;
+  ; [:!OCleft_control []]                                                                          ;
+  ; [:!OC#Pleft_shift []]                                                                          ;
+  ; [:!OC#Pcaps_lock []]                                                                           ;
+  ; [:!OC#Ptab []]                                                                                 ;
+  ; [:!OC#Pnon_us_backslash []]                                                                    ;
+  ; [:!OC#Pescape []]                                                                              ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option - command
+{:des "Option - Command Mode - numbers"
+ :rules
+ [;
+  ; [:!OC#Pkeypad_1 []]                                                                            ;
+  ; [:!OC#Pkeypad_2 []]                                                                            ;
+  ; [:!OC#Pkeypad_3 []]                                                                            ;
+  ; [:!OC#Pkeypad_4 []]                                                                            ;
+  ; [:!OC#Pkeypad_5 []]                                                                            ;
+  ; [:!OC#Pkeypad_6 []]                                                                            ;
+  ; [:!OC#Pkeypad_7 []]                                                                            ;
+  ; [:!OC#Pkeypad_8 []]                                                                            ;
+  ; [:!OC#Pkeypad_9 []]                                                                            ;
+  ; [:!OC#Pkeypad_0 []]                                                                            ;
+  ; [:!OC#Pkeypad_slash []]                                                                        ;
+  ; [:!OC#Pkeypad_asterisk []]                                                                     ;
+
+  ; [:!OC#P1 []]                                                                                   ;
+  ; [:!OC#P2 []]                                                                                   ;
+  ; [:!OC#P3 []]                                                                                   ;
+  ; [:!OC#P4 []]                                                                                   ;
+  ; [:!OC#P5 []]                                                                                   ;
+  ; [:!OC#P6 []]                                                                                   ;
+  ; [:!OC#P7 []]                                                                                   ;
+  ; [:!OC#P8 []]                                                                                   ;
+  ; [:!OC#P9 []]                                                                                   ;
+  ; [:!OC#P0 []]                                                                                   ;
+  ; [:!OC#Phyphen []]                                                                              ;
+  ; [:!OC#Pequal_sign []]                                                                          ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option - command
+{:des "Option - Command Mode - alphabet"
+ :rules
+ [;
+  ; [:!OC#Pa []]                                                                                   ;
+  ; [:!OC#Pb []]                                                                                   ;
+  ; [:!OC#Pc []]                                                                                   ;
+  ; [:!OC#Pd []]                                                                                   ;
+  ; [:!OC#Pe []]                                                                                   ;
+  ; [:!OC#Pf []]                                                                                   ;
+  ; [:!OC#Pg []]                                                                                   ;
+  ; [:!OC#Ph []]                                                                                   ;
+  ; [:!OC#Pi []]                                                                                   ;
+  ; [:!OC#Pj []]                                                                                   ;
+  ; [:!OC#Pk []]                                                                                   ;
+  ; [:!OC#Pl []]                                                                                   ;
+  ; [:!OC#Pm []]                                                                                   ;
+  ; [:!OC#Pn []]                                                                                   ;
+  ; [:!OC#Po []]                                                                                   ;
+  ; [:!OC#Pp []]                                                                                   ;
+  ; [:!OC#Pq []]                                                                                   ;
+  ; [:!OC#Pr []]                                                                                   ;
+  ; [:!OC#Ps []]                                                                                   ;
+  ; [:!OC#Pt []]                                                                                   ;
+  ; [:!OC#Pu []]                                                                                   ;
+  ; [:!OC#Pv []]                                                                                   ;
+  ; [:!OC#Pw []]                                                                                   ;
+  ; [:!OC#Px []]                                                                                   ;
+  ; [:!OC#Py []]                                                                                   ;
+  ; [:!OC#Pz []]                                                                                   ;
+  ; [:!OC#Pright_control []]                                                                       ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
