@@ -18,12 +18,12 @@
   ; [:!OC#Pdelete_or_backspace []]                                                                 ;
   ; [:!OC#Preturn_or_enter []]                                                                     ;
   ; [:!OC#Pright_shift []]                                                                         ;
-  ; [:!OC#Pright_option []]                                                         NOT AVAILABLE  ;
-  ; [:!OC#Pright_command []]                                                        NOT AVAILABLE  ;
+  ; [:!OC#Pright_option []]                                                                        ;
+  ; [:!OC#Pright_command []]                                                                       ;
   ; [:!OC#Pspacebar []]                                                                            ;
 
-  ; [:!OCleft_command []]                                                                          ;
-  ; [:!OC#Pleft_option []]                                                                         ;
+  ; [:!OCleft_command []]                                                           NOT AVAILABLE  ;
+  ; [:!OC#Pleft_option []]                                                          NOT AVAILABLE  ;
   ; [:!OCleft_control []]                                                                          ;
   ; [:!OC#Pleft_shift []]                                                                          ;
   ; [:!OC#Pcaps_lock []]                                                                           ;
