@@ -16,14 +16,23 @@
   [:!WQR#Pright_shift :!OTf1 [:browser]]                                       ; new tab           ;
   [:!WQR#Pspacebar :!TCf1 [:browser]]                                          ; new tab & go      ;
   [:!WQR#Pdelete_or_backspace :!OCf1 [:browser]]                               ; multitab          ;
+  ]}
 
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; browser
+{:des "Browser overwrite Arc"
+ :rules
+ [;
   [:!EWQ#Pspacebar [:!Cs] [:browser]]                                          ; sidebar show      ;
   [:!C#Preturn_or_enter :!Co [:browser]]                                       ; fuse pop up       ;
+  [:!OC#P1 [:!T1] [:browser]]
+  [:!OC#P2 [:!T2] [:browser]]
+  [:!OC#P3 [:!T3] [:browser]]
 
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+  [:!OC#Pkeypad_1 [:!T1] [:browser]]
+  [:!OC#Pkeypad_2 [:!T2] [:browser]]
+  [:!OC#Pkeypad_3 [:!T3] [:browser]]
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
