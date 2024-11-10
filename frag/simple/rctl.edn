@@ -18,8 +18,8 @@
   [:!W#Pdelete_or_backspace [:!Wr]]                                                                ;
   [:!W#Preturn_or_enter [:!Ws]]                                                                    ;
   [:!W#Pright_shift [:!Wt]]                                                                        ;
-  [:!W#Pright_option [:!Ec]]                                                                       ;
-  [:!W#Pright_command [:!Wh]]                                                                      ;
+  ; [:!W#Pright_option []]                                                                         ;
+  ; [:!W#Pright_command []]                                                                        ;
   [:!W#Pspacebar [:f7]]                                                                            ;
 
   ; [:!W#Pleft_command []]                                                                         ;
