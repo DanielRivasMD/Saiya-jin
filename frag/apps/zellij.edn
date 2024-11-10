@@ -66,14 +66,14 @@
  :rules
  [;
   ; zellij controls - alt
-  [:!E#Pleft_command :!SOa [:term]]                        ; alt-cmd           ;                   ;
-  [:!E#Pleft_option :!SOb [:term]]                         ; alt-alt           ;                   ;
-  [:!E#Pleft_control :!SOc [:term]]                        ; alt-ctl           ;                   ;
-  [:!E#Pleft_shift :!SOd [:term]]                          ; alt-shift         ;                   ;
-  [:!E#Pcaps_lock :!SOe [:term]]                           ; alt-caps          ;                   ;
-  [:!E#Ptab :!SOf [:term]]                                 ; alt-tab           ;                   ;
-  [:!E#Pnon_us_backslash :!SOg [:term]]                    ; alt-fn            ;                   ;
-  [:!E#Pescape :!SOh [:term]]                              ; alt-esc           ;                   ;
+  [:!EQ#Pleft_command :!SOa [:term]]                       ; alt-cmd           ;                   ;
+  [:!EQ#Pleft_option :!SOb [:term]]                        ; alt-alt           ;                   ;
+  [:!EQ#Pleft_control :!SOc [:term]]                       ; alt-ctl           ;                   ;
+  [:!EQ#Pleft_shift :!SOd [:term]]                         ; alt-shift         ;                   ;
+  [:!EQ#Pcaps_lock :!SOe [:term]]                          ; alt-caps          ;                   ;
+  [:!EQ#Ptab :!SOf [:term]]                                ; alt-tab           ;                   ;
+  [:!EQ#Pnon_us_backslash :!SOg [:term]]                   ; alt-fn            ;                   ;
+  [:!EQ#Pescape :!SOh [:term]]                             ; alt-esc           ;                   ;
 
   ; tab control - alt-cmd
   [:!OC#Pdelete_or_backspace :!SOi [:term]]                ; alt-cmd-bspace    ;                   ;
@@ -88,8 +88,8 @@
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   ; zellij controls - alt
-  [:!E#Pright_command :!SOp [:term]]                       ; alt-cmd           ;                   ;
-  [:!E#Pright_control :!SOq [:term]]                       ; alt-ctl           ;                   ;
+  ; [:!EQ#Pright_command :!SOp [:term]]                       ; alt-cmd           ;                   ;
+  ; [:!EQ#Pright_control :!SOq [:term]]                       ; alt-ctl           ;                   ;
 
   ; tab control - alt-cmd
   [:!OC#P1 :!SOr [:term]]                                  ; alt-cmd-1         ;                   ;
