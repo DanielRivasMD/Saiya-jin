@@ -15,8 +15,8 @@
   ; [:!S#Pperiod []]                                                                               ;
   ; [:!S#Pslash []]                                                                                ;
 
-  ; [:!S#Pdelete_or_backspace []]                                                                  ;
-  ; [:!S#Preturn_or_enter []]                                                                      ;
+  [:!S#Pdelete_or_backspace [:!Ec]]                                                                  ;
+  [:!S#Preturn_or_enter [:!Wh]]                                                                      ;
   [:!S#Pright_shift [:delete_forward]]                                                             ;
   [:!S#Pright_option [:!Od]]                                                                       ;
   [:!S#Pright_command [:!Tk]]                                                                      ;
