@@ -22,11 +22,11 @@
   ; [:!E#Pright_command []]                                                         REDUNDANT      ;
   ; [:!E#Pspacebar []]                                                         ;    ESPANSO        ;
 
-  ; [:!E#Pleft_command []]                                                          REDUNDANT      ;
+  [:!E#Pleft_command [:spacebar :hyphen :!Speriod :spacebar]]                                      ; ' -> '
   ; [:!E#Pleft_option []]                                                           REDUNDANT      ;
-  ; [:!E#Pleft_control []]                                                          REDUNDANT      ;
-  ; [:!E#Pleft_shift []]                                                            REDUNDANT      ;
-  ; [:!E#Pcaps_lock []]                                                             REDUNDANT      ;
+  [:!E#Pleft_control [:spacebar :!Scomma :hyphen :spacebar]]                                       ; ' <- '
+  [:!E#Pleft_shift [:!S1 :!S1]]                                                                    ; '!!'
+  [:!E#Pcaps_lock [:spacebar :!Ssemicolon :equal_sign :spacebar]]                                  ; ' := ';
   ; [:!E#Ptab []]                                                                   REDUNDANT      ;
   ; [:!E#Pnon_us_backslash []]                                                      REDUNDANT      ;
   ; [:!E#Pescape []]                                                                REDUNDANT      ;
@@ -54,9 +54,9 @@
   ; [:!ER#Pright_command []]                                                                       ;
   ; [:!ER#Pspacebar []]                                                                            ;
 
-  ; [:!ER#Pleft_command []]                                                                        ;
+  [:!ER#Pleft_command [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]                           ; ' ->> '
   ; [:!ER#Pleft_option []]                                                                         ;
-  ; [:!ER#Pleft_control []]                                                                        ;
+  [:!ER#Pleft_control [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]                             ; ' <<- '
   ; [:!ER#Pleft_shift []]                                                                          ;
   ; [:!ER#Pcaps_lock []]                                                                           ;
   ; [:!ER#Ptab []]                                                                                 ;
