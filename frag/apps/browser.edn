@@ -8,14 +8,14 @@
  [;
   [:#Pright_shift :right_shift [:browser] {:alone [:!Of1]}]                    ; focus             ;
 
-  [:!WQR#Pright_command :!Tf1 [:browser]]                                      ; down link         ;
-  [:!WQR#Pright_option :!Cf1 [:browser]]                                       ; copy link         ;
+  [:!EWQ#Pright_command :!Tf1 [:browser]]                                      ; down link         ;
+  [:!EWQ#Pright_option :!Cf1 [:browser]]                                       ; copy link         ;
 
-  [:!WQR#Preturn_or_enter :!OTCf1 [:browser]]                                  ; current tab       ;
+  [:!EWQ#Preturn_or_enter :!OTCf1 [:browser]]                                  ; current tab       ;
 
-  [:!WQR#Pright_shift :!OTf1 [:browser]]                                       ; new tab           ;
-  [:!WQR#Pspacebar :!TCf1 [:browser]]                                          ; new tab & go      ;
-  [:!WQR#Pdelete_or_backspace :!OCf1 [:browser]]                               ; multitab          ;
+  [:!EWQ#Pright_shift :!OTf1 [:browser]]                                       ; new tab           ;
+  [:!EWQ#Pspacebar :!TCf1 [:browser]]                                          ; new tab & go      ;
+  [:!EWQ#Pdelete_or_backspace :!OCf1 [:browser]]                               ; multitab          ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -24,8 +24,9 @@
 {:des "Browser overwrite Arc"
  :rules
  [;
-  [:!EWQ#Pspacebar [:!Cs] [:browser]]                                          ; sidebar show      ;
+  [:!T#Pspacebar [:!Cs] [:browser]]                                            ; sidebar show      ;
   [:!C#Preturn_or_enter :!Co [:browser]]                                       ; fuse pop up       ;
+
   [:!OC#P1 [:!T1] [:browser]]
   [:!OC#P2 [:!T2] [:browser]]
   [:!OC#P3 [:!T3] [:browser]]
