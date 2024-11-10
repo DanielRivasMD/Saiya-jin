@@ -10,7 +10,7 @@
   [:!C#Pspacebar :!SC#Pa [:zoom]]                                                                  ;
 
   ; camera on / off
-  [:!EWQ#Pspacebar :!SC#Pv [:zoom]]                                                                ;
+  [:!T#Pspacebar :!SC#Pv [:zoom]]                                                                  ;
 
   ; text show
   [:#Pright_shift :right_shift [:zoom] {:alone [:!SC#Ph]}]                                         ;
