@@ -11,8 +11,8 @@
   ; [:!Q#Psemicolon []]                                                                            ;
   ; [:!Q#Pquote []]                                                                                ;
   ; [:!Q#Pbackslash []]                                                                            ;
-  [:!Q#Pcomma [:spacebar :!Scomma :!Scomma :spacebar]]                                             ; ' << '
-  [:!Q#Pperiod [:spacebar :!Speriod :!Speriod :spacebar]]                                          ; ' >> '
+  ; [:!Q#Pcomma []]                                                                                ;
+  ; [:!Q#Pperiod []]                                                                               ;
   ; [:!Q#Pslash []]                                                                                ;
 
   ; [:!Q#Pdelete_or_backspace []]                                                                  ;
@@ -25,9 +25,9 @@
   ; [:!Q#Pleft_command []]                                                                         ;
   ; [:!Q#Pleft_option []]                                                                          ;
   ; [:!Q#Pleft_control []]                                                                         ;
-  ; [:!Q#Pleft_shift []]                                                                           ;
-  [:!Q#Pcaps_lock [:spacebar :!S1 :equal_sign :spacebar]]                                          ; ' != '
-  [:!Q#Ptab [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]                             ; ' === '
+  [:!Q#Pleft_shift [:spacebar :!S1 :equal_sign :spacebar]]                                         ; ' != '
+  [:!Q#Pcaps_lock [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]                       ; ' === '
+  ; [:!Q#Ptab []]                                                                                  ;
   ; [:!Q#Pnon_us_backslash []]                                                                     ;
   ; [:!Q#Pescape []]                                                                               ;
   ]}
@@ -43,8 +43,8 @@
   ; [:!QR#Psemicolon []]                                                                           ;
   ; [:!QR#Pquote []]                                                                               ;
   ; [:!QR#Pbackslash []]                                                                           ;
-  [:!QR#Pcomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]                                   ; ' <<< '
-  [:!QR#Pperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]                               ; ' >>> '
+  ; [:!QR#Pcomma []]                                                                               ;
+  ; [:!QR#Pperiod []]                                                                              ;
   ; [:!QR#Pslash []]                                                                               ;
 
   ; [:!QR#Pdelete_or_backspace []]                                                                 ;
@@ -57,9 +57,9 @@
   ; [:!QR#Pleft_command []]                                                                        ;
   ; [:!QR#Pleft_option []]                                                                         ;
   ; [:!QR#Pleft_control []]                                                                        ;
-  ; [:!QR#Pleft_shift []]                                                                          ;
-  [:!QR#Pcaps_lock [:spacebar :period :!S1 :equal_sign :spacebar]]                                 ; ' .!= '
-  [:!QR#Ptab [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]                    ; ' .=== '
+  [:!QR#Pleft_shift [:spacebar :period :!S1 :equal_sign :spacebar]]                                ; ' .!= '
+  [:!QR#Pcaps_lock [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]              ; ' .=== '
+  ; [:!QR#Ptab []]                                                                                 ;
   ; [:!QR#Pnon_us_backslash []]                                                                    ;
   ; [:!QR#Pescape []]                                                                              ;
   ]}
