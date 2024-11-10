@@ -26,7 +26,7 @@
   ; [:!EQ#Pleft_option []]                                                                         ;
   ; [:!EQleft_control []]                                                                          ;
   ; [:!EQ#Pleft_shift []]                                                                          ;
-  [:!EQ#Pcaps_lock [:!S1 :!S1]]                                                                    ; '!!'
+  ; [:!EQ#Pcaps_lock []                                                                            ;
   ; [:!EQ#Ptab []]                                                                                 ;
   ; [:!EQ#Pnon_us_backslash []]                                                                    ;
   ; [:!EQ#Pescape []]                                                                              ;
