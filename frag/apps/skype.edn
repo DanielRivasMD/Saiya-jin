@@ -10,7 +10,7 @@
   [:!C#Pspacebar :!SC#Pm [:skype]]                                                                 ;
 
   ; camera on / off
-  [:!EWQ#Pspacebar :!SC#Pk [:skype]]                                                               ;
+  [:!T#Pspacebar :!SC#Pk [:skype]]                                                                 ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
