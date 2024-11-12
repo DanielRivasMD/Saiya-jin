@@ -6,33 +6,33 @@
 {:des "Close Bracket Mode - alphabet"
  :rules
  [;
-  ; [:!WQR#Pa []]                                                                                  ;
-  ; [:!WQR#Pb []]                                                                                  ;
-  ; [:!WQR#Pc []]                                                                                  ;
-  ; [:!WQR#Pd []]                                                                                  ;
+  ; [:#Pa []]                                                                                      ;
+  ; [:#Pb []]                                                                                      ;
+  ; [:#Pc []]                                                                                      ;
+  ; [:#Pd []]                                                                                      ;
   [:#Pe [:!Ssemicolon :g :o :!Shyphen :e :r :r :o :r :!Ssemicolon] [:cbracket-mode]]               ;
-  ; [:!WQR#Pf []]                                                                                  ;
-  ; [:!WQR#Pg []]                                                                                  ;
-  ; [:!WQR#Ph []]                                                                                  ;
-  ; [:!WQR#Pi []]                                                                                  ;
-  ; [:!WQR#Pj []]                                                                                  ;
-  ; [:!WQR#Pk []]                                                                                  ;
-  ; [:!WQR#Pl []]                                                                                  ;
-  ; [:!WQR#Pm []]                                                                                  ;
-  ; [:!WQR#Pn []]                                                                                  ;
-  ; [:!WQR#Po []]                                                                                  ;
+  ; [:#Pf []]                                                                                      ;
+  ; [:#Pg []]                                                                                      ;
+  ; [:#Ph []]                                                                                      ;
+  ; [:#Pi []]                                                                                      ;
+  ; [:#Pj []]                                                                                      ;
+  ; [:#Pk []]                                                                                      ;
+  ; [:#Pl []]                                                                                      ;
+  ; [:#Pm []]                                                                                      ;
+  ; [:#Pn []]                                                                                      ;
+  ; [:#Po []]                                                                                      ;
   [:#Pp [:!Ssemicolon :g :o :!Shyphen :p :r :i :n :t :!Ssemicolon] [:cbracket-mode]]               ;
-  ; [:!WQR#Pq []]                                                                                  ;
-  ; [:!WQR#Pr []]                                                                                  ;
-  ; [:!WQR#Ps []]                                                                                  ;
-  ; [:!WQR#Pt []]                                                                                  ;
-  ; [:!WQR#Pu []]                                                                                  ;
-  ; [:!WQR#Pv []]                                                                                  ;
-  ; [:!WQR#Pw []]                                                                                  ;
-  ; [:!WQR#Px []]                                                                                  ;
-  ; [:!WQR#Py []]                                                                                  ;
-  ; [:!WQR#Pz []]                                                                                  ;
-  ; [:!WQR#Pright_control []]                                                                      ;
+  ; [:#Pq []]                                                                                      ;
+  ; [:#Pr []]                                                                                      ;
+  ; [:#Ps []]                                                                                      ;
+  ; [:#Pt []]                                                                                      ;
+  ; [:#Pu []]                                                                                      ;
+  ; [:#Pv []]                                                                                      ;
+  ; [:#Pw []]                                                                                      ;
+  ; [:#Px []]                                                                                      ;
+  ; [:#Py []]                                                                                      ;
+  ; [:#Pz []]                                                                                      ;
+  ; [:#Pright_control []]                                                                          ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
