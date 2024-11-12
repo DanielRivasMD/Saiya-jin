@@ -52,7 +52,7 @@
   [:!TS#Pright_shift [:spacebar :period :equal_sign :!Speriod :spacebar]]                          ; ' .=> '
   [:!TS#Pright_option [:spacebar :period :!S8 :!S8 :spacebar]]                                     ; ' .** '
   [:!TS#Pright_command [:spacebar :period :slash :slash :spacebar]]                                ; ' .// '
-  ; [:!TS#Pspacebar []]                                                                            ;
+  [:!TS#Pspacebar [:!W#Pnon_us_pound]]                                         ;    ALFRED         ;
 
   ; [:!TS#Pleft_command []]                                                                        ;
   ; [:!TS#Pleft_option []]                                                                         ;
