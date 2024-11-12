@@ -9,8 +9,11 @@
   [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]                                                  ;
   [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
 
-  ; modifiers
+  ; esc
   [:#Pescape :!EWright_shift nil {:alone [:!EW#Pnon_us_pound]}]                                    ; menu search. `term` pop-up new
+
+  ; zero
+  ; mouse control
 
   ; launcher
   [:#Ptab :!OTCright_shift nil {:alone :tab}]                                                      ; spectacle control, speak & app launcher
@@ -19,7 +22,7 @@
   [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ; esc, tydiverse, language server protocol
 
   ; grave
-  [:#Pright_control :right_control nil {:alone [:!W#Pnon_us_pound]}]                               ; arc bind
+  [:#Pright_control :right_control nil {:alone [:vk_none]}]                               ; arc bind
 
   ; lefts
   [:#Pleft_control :left_control nil {:alone [:!EWQ#Onon_us_pound]}]                               ; alfred window switcher
