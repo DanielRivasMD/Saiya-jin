@@ -9,7 +9,7 @@
   [:!C#Popen_bracket [:!S3 :open_bracket]]                                                         ; '#['
   [:!C#Pclose_bracket [:close_bracket :spacebar]]                                                  ; '] '
   [:!C#Psemicolon [:semicolon :spacebar]]                                                          ; '; '
-  ; [:!C#Pquote []]                                                                                ; TODO: concatenate strings
+  [:!C#Pquote [:quote :slash :quote]]                                                              ; ''/''
   ; [:!C#Pbackslash []]                                                                            ;
   [:!C#Pcomma [:comma :spacebar]]                                                                  ; ', '
   [:!C#Pperiod [:period :spacebar]]                                                                ; '. '
@@ -41,7 +41,7 @@
   [:!CS#Popen_bracket [:!S4 :!Sopen_bracket]]                                                      ; '${'
   [:!CS#Pclose_bracket [:!Sclose_bracket :spacebar]]                                               ; '} '
   [:!CS#Psemicolon [:!Ssemicolon :spacebar]]                                                       ; ': '
-  ; [:!CS#Pquote []]                                                                               ;
+  [:!CS#Pquote [:!Squote :slash :!Squote]]                                                         ; '"/"'
   ; [:!CS#Pbackslash []]                                                                           ;
   [:!CS#Pcomma [:!Scomma :!Ssemicolon]]                                                            ; '<:'
   [:!CS#Pperiod [:!Speriod :!Ssemicolon]]                                                          ; '>:'
