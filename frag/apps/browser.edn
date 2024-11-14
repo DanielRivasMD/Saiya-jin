@@ -8,14 +8,13 @@
  [;
   [:#Pright_shift :right_shift [:browser] {:alone [:!Of1]}]                    ; focus             ;
 
-  [:!EWQ#Pright_command :!Tf1 [:browser]]                                      ; down link         ;
-  [:!EWQ#Pright_option :!Cf1 [:browser]]                                       ; copy link         ;
+  [:!EWQ#Pdelete_or_backspace :!Cf1 [:browser]]                                ; copy link         ;
+  [:!EWQ#Pright_option :!Tf1 [:browser]]                                       ; down link         ;
 
-  [:!EWQ#Preturn_or_enter :!OTCf1 [:browser]]                                  ; current tab       ;
+  [:!EWQ#Preturn_or_enter :!TCf1 [:browser]]                                   ; current tab       ;
 
   [:!EWQ#Pright_shift :!OTf1 [:browser]]                                       ; new tab           ;
-  [:!EWQ#Pspacebar :!TCf1 [:browser]]                                          ; new tab & go      ;
-  [:!EWQ#Pdelete_or_backspace :!OCf1 [:browser]]                               ; multitab          ;
+  [:!EWQ#Pright_command :!OCf1 [:browser]]                                     ; multitab          ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -27,13 +26,31 @@
   [:!T#Pspacebar [:!Cs] [:browser]]                                            ; sidebar show      ;
   [:!C#Preturn_or_enter :!Co [:browser]]                                       ; fuse pop up       ;
 
-  [:!OC#P1 [:!T1] [:browser]]
-  [:!OC#P2 [:!T2] [:browser]]
-  [:!OC#P3 [:!T3] [:browser]]
+  [:!OC#P1 [:!T1] [:browser]]                                                  ; work space        ;
+  [:!OC#P2 [:!T2] [:browser]]                                                  ; work space        ;
+  [:!OC#P3 [:!T3] [:browser]]                                                  ; work space        ;
 
-  [:!OC#Pkeypad_1 [:!T1] [:browser]]
-  [:!OC#Pkeypad_2 [:!T2] [:browser]]
-  [:!OC#Pkeypad_3 [:!T3] [:browser]]
+  [:!OC#Pkeypad_1 [:!T1] [:browser]]                                           ; work space        ;
+  [:!OC#Pkeypad_2 [:!T2] [:browser]]                                           ; work space        ;
+  [:!OC#Pkeypad_3 [:!T3] [:browser]]                                           ; work space        ;
+
+  [:!OC#Preturn_or_enter [:!OCn] [:browser]]                                   ; little arc        ;
+  [:!OC#Pdelete_or_backspace [:!Cw] [:browser]]                                ; close tab         ;
+  [:!OS#Pd [:!OSd] [:browser]]                                                 ; duplicate         ;
+
+  [:!OT#Pdelete_or_backspace [:!TShyphen] [:browser]]                          ; close split       ;
+  [:!OT#Preturn_or_enter [:!Ct] [:browser]]
+  [:!OT#Pright_shift [:!TSequal_sign] [:browser]]                              ; new split         ;
+  [:!OT#Pleft_arrow [:!TSopen_bracket] [:browser]]                             ; left split        ;
+  [:!OT#Pright_arrow [:!TSclose_bracket] [:browser]]                           ; right split       ;
+
+  [:!EWQ#Pleft_arrow [:!Copen_bracket] [:browser]]                             ; backward          ;
+  [:!EWQ#Pright_arrow [:!Cclose_bracket] [:browser]]                           ; forward           ;
+
+  [:!EWQ#Pup_arrow [:!CSa] [:browser]]                                         ; archive           ;
+  [:!EWQ#Pdown_arrow [:!CSj] [:browser]]                                       ; downloads         ;
+
+  [:!O#Py [:!CSc] [:browser]]                                                  ; copy url          ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
