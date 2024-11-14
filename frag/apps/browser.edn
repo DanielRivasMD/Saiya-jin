@@ -36,10 +36,12 @@
 
   [:!OC#Preturn_or_enter [:!OCn] [:browser]]                                   ; little arc        ;
   [:!OC#Pdelete_or_backspace [:!Cw] [:browser]]                                ; close tab         ;
+  [:!OC#Pspacebar [:!CSm] [:browser]]                                          ; spaces            ;
   [:!OS#Pd [:!OSd] [:browser]]                                                 ; duplicate         ;
 
   [:!OT#Pdelete_or_backspace [:!TShyphen] [:browser]]                          ; close split       ;
-  [:!OT#Preturn_or_enter [:!Ct] [:browser]]
+  [:!OT#Preturn_or_enter [:!Ct] [:browser]]                                    ; new tab           ;
+  [:!OT#Pspacebar [:!Cd] [:browser]]                                           ; pin / unpin       ;
   [:!OT#Pright_shift [:!TSequal_sign] [:browser]]                              ; new split         ;
   [:!OT#Pleft_arrow [:!TSopen_bracket] [:browser]]                             ; left split        ;
   [:!OT#Pright_arrow [:!TSclose_bracket] [:browser]]                           ; right split       ;
