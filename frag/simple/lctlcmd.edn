@@ -11,8 +11,8 @@
   ; [:!TC#Psemicolon []]                                                                           ;
   ; [:!TC#Pquote []]                                                                               ;
   ; [:!TC#Pbackslash []]                                                                           ;
-  [:!TC#Pcomma [:!Sf1]]                                                                            ;
-  [:!TC#Pperiod [:!Sf4]]                                                                           ;
+  ; [:!TC#Pcomma [:!Sf1]]                                                                            ;
+  ; [:!TC#Pperiod [:!Sf4]]                                                                           ;
   ; [:!TC#Pslash []]                                                                               ;
 
   [:!TC#Pdelete_or_backspace [:!Tl]]                                                               ;
@@ -61,8 +61,8 @@
   ; [:!TC#P8 []]                                                                                   ;
   ; [:!TC#P9 []]                                                                                   ;
   ; [:!TC#P0 []]                                                                                   ;
-  [:!TC#Phyphen [:!Sf13]]                                                                          ;
-  [:!TC#Pequal_sign [:!Sf14]]                                                                      ;
+  ; [:!TC#Phyphen [:!Sf13]]                                                                          ;
+  ; [:!TC#Pequal_sign [:!Sf14]]                                                                      ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
