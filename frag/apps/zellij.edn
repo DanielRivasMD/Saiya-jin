@@ -10,8 +10,8 @@
   ; ; on demand window
   ; [:#Pdelete_or_backspace :!EQright_shift  [:term] {:alone [:!Tv]}]                              ;
 
-  [:#Pleft_option :left_option [:term] {:alone [:!SOb]}]    ; alt               ; session lock      ;
-  ; [:#Pleft_option :left_option [:term] {:alone [:!Oa]}]    ; alt               ; session lock      ;
+  [:#Pleft_option :left_option [:term] {:alone [:!SOb]}]   ; alt               ; session lock      ;
+  ; [:#Pleft_option :left_option [:term] {:alone [:!Oa]}]  ; alt               ; session lock      ;
 
   [:!O#Pleft_arrow :!Ob [:term]]                           ; alt-left          ; cursor movement   ;
 
@@ -67,14 +67,14 @@
  :rules
  [;
   ; zellij controls - alt
-  [:!EQ#Pspacebar :!Oa [:term]]                        ; alt-alt           ;                   ;
+  [:!EQ#Pspacebar :!Oa [:term]]                            ; alt-alt           ;                   ;
   [:!EQ#Pleft_command :!SOa [:term]]                       ; alt-cmd           ;                   ;
-  ; [:!EQ#Pleft_option :!SOb [:term]]                        ; alt-alt           ;                   ;
+  ; [:!EQ#Pleft_option :!SOb [:term]]                      ; alt-alt           ;                   ;
   [:!EQ#Pleft_control :!SOc [:term]]                       ; alt-ctl           ;                   ;
   [:!EQ#Pleft_shift :!SOd [:term]]                         ; alt-shift         ;                   ;
   [:!EQ#Pcaps_lock :!SOe [:term]]                          ; alt-caps          ;                   ;
   [:!EQ#Ptab :!SOf [:term]]                                ; alt-tab           ;                   ;
-  [:!EQ#Pkeypad_num_lock :!SOg [:term]]                   ; alt-fn            ;                   ;
+  [:!EQ#Pkeypad_num_lock :!SOg [:term]]                    ; alt-fn            ;                   ;
   [:!EQ#Pescape :!SOh [:term]]                             ; alt-esc           ;                   ;
 
   ; tab control - alt-cmd
