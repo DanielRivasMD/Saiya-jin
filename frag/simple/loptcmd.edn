@@ -28,7 +28,7 @@
   ; [:!OC#Pleft_shift []]                                                                          ;
   ; [:!OC#Pcaps_lock []]                                                                           ;
   ; [:!OC#Ptab []]                                                                                 ;
-  ; [:!OC#Pnon_us_backslash []]                                                                    ;
+  ; [:!OC#Pkeypad_num_lock []]                                                                     ;
   ; [:!OC#Pescape []]                                                                              ;
   ]}
 

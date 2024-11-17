@@ -28,7 +28,7 @@
   ; [:!W#Pleft_shift []]                                                                           ;
   ; [:!W#Pcaps_lock []]                                                                            ;
   ; [:!W#Ptab []]                                                                                  ;
-  ; [:!W#Pnon_us_backslash []]                                                                     ;
+  ; [:!W#Pkeypad_num_lock []]                                                                      ;
   ; [:!W#Pescape []]                                                                               ;
   ]}
 
@@ -60,7 +60,7 @@
   ; [:!WS#Pleft_shift []]                                                           NOT AVAILABLE  ;
   ; [:!WS#Pcaps_lock []]                                                                           ;
   ; [:!WS#Ptab []]                                                                                 ;
-  ; [:!WS#Pnon_us_backslash []]                                                                    ;
+  ; [:!WS#Pkeypad_num_lock []]                                                                     ;
   ; [:!WS#Pescape []]                                                                              ;
   ]}
 

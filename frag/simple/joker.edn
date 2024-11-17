@@ -61,7 +61,7 @@
   ; [:!EWQ#Pleft_shift []]                                                                         ;
   ; [:!EWQ#Pcaps_lock []]                                                                          ;
   ; [:!EWQ#Ptab []]                                                                 NOT AVAILABLE  ;
-  ; [:!EWQ#Pnon_us_backslash []]                                                                   ;
+  ; [:!EWQ#Pkeypad_num_lock []]                                                                    ;
   ; [:!EWQ#Pescape []]                                                                             ;
   ]}
 

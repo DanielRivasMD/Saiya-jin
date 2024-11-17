@@ -28,7 +28,7 @@
   [:!Q#Pleft_shift [:spacebar :!S1 :equal_sign :spacebar]]                                         ; ' != '
   [:!Q#Pcaps_lock [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]                       ; ' === '
   ; [:!Q#Ptab []]                                                                                  ;
-  ; [:!Q#Pnon_us_backslash []]                                                                     ;
+  ; [:!Q#Pkeypad_num_lock []]                                                                      ;
   ; [:!Q#Pescape []]                                                                               ;
   ]}
 
@@ -60,7 +60,7 @@
   [:!QR#Pleft_shift [:spacebar :period :!S1 :equal_sign :spacebar]]                                ; ' .!= '
   [:!QR#Pcaps_lock [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]              ; ' .=== '
   ; [:!QR#Ptab []]                                                                                 ;
-  ; [:!QR#Pnon_us_backslash []]                                                                    ;
+  ; [:!QR#Pkeypad_num_lock []]                                                                     ;
   ; [:!QR#Pescape []]                                                                              ;
   ]}
 

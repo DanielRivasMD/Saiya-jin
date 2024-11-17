@@ -28,7 +28,7 @@
   ; [:!ROTC#Pleft_shift []]                                                                        ;
   ; [:!ROTC#Pcaps_lock []]                                                                         ;
   ; [:!ROTC#Ptab []]                                                                NOT AVAILABLE  ;
-  ; [:!ROTC#Pnon_us_backslash []]                                                                  ;
+  ; [:!ROTC#Pkeypad_num_lock []]                                                                   ;
   ; [:!ROTC#Pescape []]                                                                            ;
   ]}
 

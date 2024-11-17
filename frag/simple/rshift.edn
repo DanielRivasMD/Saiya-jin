@@ -28,7 +28,7 @@
   [:!R#Pleft_shift [:delete_or_backspace]]                                                         ;
   ; [:!R#Pcaps_lock []]                                                                            ;
   ; [:!R#Ptab []]                                                                                  ;
-  ; [:!R#Pnon_us_backslash []]                                                                     ;
+  ; [:!R#Pkeypad_num_lock []]                                                                      ;
   ; [:!R#Pescape []]                                                                               ;
   ]}
 
