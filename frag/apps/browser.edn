@@ -34,6 +34,9 @@
   [:!OC#Pkeypad_2 [:!T2] [:browser]]                                           ; work space        ;
   [:!OC#Pkeypad_3 [:!T3] [:browser]]                                           ; work space        ;
 
+  [:!OC#Popen_bracket [:!OCopen_bracket] [:browser]]                           ; collapse folders  ;
+  [:!OC#Pclose_bracket [:!OCclose_bracket] [:browser]]                         ; expand folders    ;
+
   [:!OC#Preturn_or_enter [:!OCn] [:browser]]                                   ; little arc        ;
   [:!OC#Pdelete_or_backspace [:!Cw] [:browser]]                                ; close tab         ;
   [:!OC#Pspacebar [:!CSm] [:browser]]                                          ; spaces            ;
