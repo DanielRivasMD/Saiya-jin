@@ -19,17 +19,17 @@
   ; [:!E#Preturn_or_enter []]                                                                      ;
   ; [:!E#Pright_shift []]                                                                          ;
   ; [:!E#Pright_option []]                                                          NOT AVAILABLE  ;
-  ; [:!E#Pright_command []]                                                         REDUNDANT      ;
+  ; [:!E#Pright_command []]                                                                        ;
   ; [:!E#Pspacebar []]                                                         ;    ESPANSO        ;
 
   [:!E#Pleft_command [:spacebar :hyphen :!Speriod :spacebar]]                                      ; ' -> '
-  ; [:!E#Pleft_option []]                                                           REDUNDANT      ;
+  ; [:!E#Pleft_option []]                                                                          ;
   [:!E#Pleft_control [:spacebar :!Scomma :hyphen :spacebar]]                                       ; ' <- '
   [:!E#Pleft_shift [:!S1 :!S1]]                                                                    ; '!!'
   [:!E#Pcaps_lock [:spacebar :!Ssemicolon :equal_sign :spacebar]]                                  ; ' := ';
-  ; [:!E#Ptab []]                                                                   REDUNDANT      ;
-  ; [:!E#Pnon_us_backslash []]                                                      REDUNDANT      ;
-  ; [:!E#Pescape []]                                                                REDUNDANT      ;
+  ; [:!E#Ptab []]                                                                                  ;
+  ; [:!E#Pkeypad_num_lock []]                                                                      ;
+  ; [:!E#Pescape []]                                                                               ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -60,7 +60,7 @@
   ; [:!ER#Pleft_shift []]                                                                          ;
   ; [:!ER#Pcaps_lock []]                                                                           ;
   ; [:!ER#Ptab []]                                                                                 ;
-  ; [:!ER#Pnon_us_backslash []]                                                                    ;
+  ; [:!ER#Pkeypad_num_lock []]                                                                     ;
   ; [:!ER#Pescape []]                                                                              ;
   ]}
 
