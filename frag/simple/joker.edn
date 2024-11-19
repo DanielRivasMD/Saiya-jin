@@ -2,29 +2,6 @@
 ; JOKER
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; joker
-{:des "Joker Mode - symbols"
- :rules
- [;
-  ; test
-  [:!EWQS#Pup_arrow :f13]                                                                          ;
-  [:!EWQS#Pdown_arrow :f14]                                                                        ;
-
-  ; parameter
-  [:!EWQO#Pup_arrow :f10]                                                                          ;
-  [:!EWQO#Pdown_arrow :f11]                                                                        ;
-
-  ; function
-  [:!EWQC#Pup_arrow :f5]                                                                           ;
-  [:!EWQC#Pdown_arrow :f6]                                                                         ;
-
-  ; class
-  [:!EWQT#Pup_arrow :f8]                                                                           ;
-  [:!EWQT#Pdown_arrow :f9]                                                                         ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ; TODO: update order
 ; joker
 {:des "Joker Mode - symbols"
