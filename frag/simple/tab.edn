@@ -17,7 +17,7 @@
 
   [:!ROTC#Pdelete_or_backspace [:launch "Arc"]]                                                    ;
   [:!ROTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
-  [:!ROTC#Pright_shift [:launch "Canary Mail"]]                                                    ;
+  [:!ROTC#Pright_shift [:launch "Mail"]]                                                           ;
   [:!ROTC#Pright_option [:launch "Lapce"]]                                                         ;
   [:!ROTC#Pright_command [:launch "Zed"]]                                                          ;
   ; [:!ROTC#Pspacebar []]                                                           COLLISION      ;
