@@ -75,3 +75,30 @@
 }
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; function
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; 1 - 10
+; alt           => remap zellij alphabet
+; ctl           => remap zellij alphabet
+; alt-clt       => remap zellij alphabet
+
+; 1 - 10
+; shift-alt     => remap zellij alphabet
+; shift-ctl     => remap zellij alphabet
+; shift-alt-clt => remap zellij alphabet
+
+; 11 - 20
+; alt           => 
+; ctl           => 
+; alt-clt       => 
+
+; 11 - 20
+; shift-alt     => 
+; shift-ctl     => 
+; shift-alt-clt => 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
