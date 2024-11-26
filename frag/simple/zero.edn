@@ -1,5 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; ZERO
+; ZERO => EQR
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; TODO: update
@@ -7,30 +7,30 @@
 {:des "ZERO Mode - symbols"
  :rules
  [;
-  [:!F#Popen_bracket [:!Of13]]                                                                     ;
-  [:!F#Pclose_bracket [:!Of14]]                                                                    ;
-  [:!F#Psemicolon [:!Of18]]                                                                        ;
-  [:!F#Pquote [:!Of19]]                                                                            ;
-  [:!F#Pbackslash [:!Of20]]                                                                        ;
-  [:!F#Pcomma [:!OTf18]]                                                                           ;
-  [:!F#Pperiod [:!OTf19]]                                                                          ;
-  [:!F#Pslash [:!OTf20]]                                                                           ;
+  [:!EQR#Popen_bracket [:!Of13]]                                                                   ;
+  [:!EQR#Pclose_bracket [:!Of14]]                                                                  ;
+  [:!EQR#Psemicolon [:!Of18]]                                                                      ;
+  [:!EQR#Pquote [:!Of19]]                                                                          ;
+  [:!EQR#Pbackslash [:!Of20]]                                                                      ;
+  [:!EQR#Pcomma [:!OTf18]]                                                                         ;
+  [:!EQR#Pperiod [:!OTf19]]                                                                        ;
+  [:!EQR#Pslash [:!OTf20]]                                                                         ;
 
-  [:!F#Pdelete_or_backspace [:!Tf11]]                                                              ;
-  [:!F#Preturn_or_enter [:!Tf12]]                                                                  ;
-  [:!F#Pright_shift [:!Tf13]]                                                                      ;
-  [:!F#Pright_option [:!Tf18]]                                                                     ;
-  [:!F#Pright_command [:!Tf19]]                                                                    ;
-  [:!F#Pspacebar [:!Tf20]]                                                                         ;
+  [:!EQR#Pdelete_or_backspace [:!Tf11]]                                                            ;
+  [:!EQR#Preturn_or_enter [:!Tf12]]                                                                ;
+  [:!EQR#Pright_shift [:!Tf13]]                                                                    ;
+  [:!EQR#Pright_option [:!Tf18]]                                                                   ;
+  [:!EQR#Pright_command [:!Tf19]]                                                                  ;
+  [:!EQR#Pspacebar [:!Tf20]]                                                                       ;
 
-  ; [:!F#Pleft_command []]                                                                         ;
-  ; [:!F#Pleft_option []]                                                                          ;
-  ; [:!F#Pleft_control []]                                                                         ;
-  ; [:!F#Pleft_shift []]                                                                           ;
-  ; [:!F#Pcaps_lock []]                                                                            ;
-  ; [:!F#Ptab []]                                                                                  ;
-  ; [:!F#Pnon_us_backslash []]                                                      NOT AVAILABLE  ;
-  ; [:!F#Pescape []]                                                                               ;
+  ; [:!EQR#Pleft_command []]                                                                       ;
+  ; [:!EQR#Pleft_option []]                                                                        ;
+  ; [:!EQR#Pleft_control []]                                                                       ;
+  ; [:!EQR#Pleft_shift []]                                                                         ;
+  ; [:!EQR#Pcaps_lock []]                                                                          ;
+  ; [:!EQR#Ptab []]                                                                                ;
+  ; [:!EQR#Pnon_us_backslash []]                                                    NOT AVAILABLE  ;
+  ; [:!EQR#Pescape []]                                                                             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -39,31 +39,31 @@
 {:des "ZERO Mode - numbers"
  :rules
  [;
-  ; [:!F#Pkeypad_1 []]                                                                             ;
-  ; [:!F#Pkeypad_2 []]                                                                             ;
-  ; [:!F#Pkeypad_3 []]                                                                             ;
-  ; [:!F#Pkeypad_4 []]                                                                             ;
-  ; [:!F#Pkeypad_5 []]                                                                             ;
-  ; [:!F#Pkeypad_6 []]                                                                             ;
-  ; [:!F#Pkeypad_7 []]                                                                             ;
-  ; [:!F#Pkeypad_8 []]                                                                             ;
-  ; [:!F#Pkeypad_9 []]                                                                             ;
-  ; [:!F#Pkeypad_0 []]                                                                             ;
-  ; [:!F#Pkeypad_slash []]                                                                         ;
-  ; [:!F#Pkeypad_asterisk []]                                                                      ;
+  ; [:!EQR#Pkeypad_1 []]                                                                           ;
+  ; [:!EQR#Pkeypad_2 []]                                                                           ;
+  ; [:!EQR#Pkeypad_3 []]                                                                           ;
+  ; [:!EQR#Pkeypad_4 []]                                                                           ;
+  ; [:!EQR#Pkeypad_5 []]                                                                           ;
+  ; [:!EQR#Pkeypad_6 []]                                                                           ;
+  ; [:!EQR#Pkeypad_7 []]                                                                           ;
+  ; [:!EQR#Pkeypad_8 []]                                                                           ;
+  ; [:!EQR#Pkeypad_9 []]                                                                           ;
+  ; [:!EQR#Pkeypad_0 []]                                                                           ;
+  ; [:!EQR#Pkeypad_slash []]                                                                       ;
+  ; [:!EQR#Pkeypad_asterisk []]                                                                    ;
 
-  ; [:!F#P1 []]                                                                                    ;
-  ; [:!F#P2 []]                                                                                    ;
-  ; [:!F#P3 []]                                                                                    ;
-  ; [:!F#P4 []]                                                                                    ;
-  ; [:!F#P5 []]                                                                                    ;
-  ; [:!F#P6 []]                                                                                    ;
-  ; [:!F#P7 []]                                                                                    ;
-  ; [:!F#P8 []]                                                                                    ;
-  ; [:!F#P9 []]                                                                                    ;
-  ; [:!F#P0 []]                                                                                    ;
-  [:!F#Phyphen [:!Of11]]                                                                           ;
-  [:!F#Pequal_sign [:!Of12]]                                                                       ;
+  ; [:!EQR#P1 []]                                                                                  ;
+  ; [:!EQR#P2 []]                                                                                  ;
+  ; [:!EQR#P3 []]                                                                                  ;
+  ; [:!EQR#P4 []]                                                                                  ;
+  ; [:!EQR#P5 []]                                                                                  ;
+  ; [:!EQR#P6 []]                                                                                  ;
+  ; [:!EQR#P7 []]                                                                                  ;
+  ; [:!EQR#P8 []]                                                                                  ;
+  ; [:!EQR#P9 []]                                                                                  ;
+  ; [:!EQR#P0 []]                                                                                  ;
+  [:!EQR#Phyphen [:!Of11]]                                                                         ;
+  [:!EQR#Pequal_sign [:!Of12]]                                                                     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -72,33 +72,33 @@
 {:des "ZERO Mode - numbers"
  :rules
  [;
-  ; [:!F#Pa []]                                                                                    ;
-  ; [:!F#Pb []]                                                                                    ;
-  ; [:!F#Pc []]                                                                                    ;
-  ; [:!F#Pd []]                                                                                    ;
-  ; [:!F#Pe []]                                                                                    ;
-  ; [:!F#Pf []]                                                                                    ;
-  ; [:!F#Pg []]                                                                                    ;
-  ; [:!F#Ph []]                                                                                    ;
-  ; [:!F#Pi []]                                                                                    ;
-  ; [:!F#Pj []]                                                                                    ;
-  ; [:!F#Pk []]                                                                                    ;
-  ; [:!F#Pl []]                                                                                    ;
-  ; [:!F#Pm []]                                                                                    ;
-  ; [:!F#Pn []]                                                                                    ;
-  ; [:!F#Po []]                                                                                    ;
-  ; [:!F#Pp []]                                                                                    ;
-  ; [:!F#Pq []]                                                                                    ;
-  ; [:!F#Pr []]                                                                                    ;
-  ; [:!F#Ps []]                                                                                    ;
-  ; [:!F#Pt []]                                                                                    ;
-  ; [:!F#Pu []]                                                                                    ;
-  ; [:!F#Pv []]                                                                                    ;
-  ; [:!F#Pw []]                                                                                    ;
-  ; [:!F#Px []]                                                                                    ;
-  ; [:!F#Py []]                                                                                    ;
-  ; [:!F#Pz []]                                                                                    ;
-  ; [:!F#Pright_control []]                                                                        ;
+  ; [:!EQR#Pa []]                                                                                  ;
+  ; [:!EQR#Pb []]                                                                                  ;
+  ; [:!EQR#Pc []]                                                                                  ;
+  ; [:!EQR#Pd []]                                                                                  ;
+  ; [:!EQR#Pe []]                                                                                  ;
+  ; [:!EQR#Pf []]                                                                                  ;
+  ; [:!EQR#Pg []]                                                                                  ;
+  ; [:!EQR#Ph []]                                                                                  ;
+  ; [:!EQR#Pi []]                                                                                  ;
+  ; [:!EQR#Pj []]                                                                                  ;
+  ; [:!EQR#Pk []]                                                                                  ;
+  ; [:!EQR#Pl []]                                                                                  ;
+  ; [:!EQR#Pm []]                                                                                  ;
+  ; [:!EQR#Pn []]                                                                                  ;
+  ; [:!EQR#Po []]                                                                                  ;
+  ; [:!EQR#Pp []]                                                                                  ;
+  ; [:!EQR#Pq []]                                                                                  ;
+  ; [:!EQR#Pr []]                                                                                  ;
+  ; [:!EQR#Ps []]                                                                                  ;
+  ; [:!EQR#Pt []]                                                                                  ;
+  ; [:!EQR#Pu []]                                                                                  ;
+  ; [:!EQR#Pv []]                                                                                  ;
+  ; [:!EQR#Pw []]                                                                                  ;
+  ; [:!EQR#Px []]                                                                                  ;
+  ; [:!EQR#Py []]                                                                                  ;
+  ; [:!EQR#Pz []]                                                                                  ;
+  ; [:!EQR#Pright_control []]                                                                      ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
