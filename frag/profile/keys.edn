@@ -22,7 +22,7 @@
   [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ; esc, tydiverse, language server protocol
 
   ; grave
-  [:#Pright_control :right_control nil {:alone [:vk_none]}]                                        ; arc bind
+  [:#Pright_control :right_control nil {:alone [:!W#Pnon_us_pound]}]                               ; arc bind
 
   ; lefts
   [:#Pleft_control :left_control nil {:alone [:!EWQ#Onon_us_pound]}]                               ; alfred window switcher
