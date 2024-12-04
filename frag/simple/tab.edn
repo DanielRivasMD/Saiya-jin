@@ -6,7 +6,7 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
-  ; [:!ROTC#Popen_bracket []]                                                                      ;
+  [:!ROTC#Popen_bracket [:launch "Slack"]]                                                         ;
   ; [:!ROTC#Pclose_bracket []]                                                                     ;
   [:!ROTC#Psemicolon [:launch "Microsoft PowerPoint"]]                                             ;
   [:!ROTC#Pquote [:launch "Microsoft Excel"]]                                                      ;
