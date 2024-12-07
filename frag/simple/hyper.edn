@@ -20,7 +20,7 @@
   ; [:!OTC#Pright_shift []]                                                                        ;
   [:!OTC#Pright_option [:!S8 :!S8]]                                                                ; '**'
   [:!OTC#Pright_command [:slash :slash]]                                                           ; '//'
-  ; [:!OTC#Pspacebar []]                                                                           ;
+  [:!OTC#Pspacebar [:caps_lock]]                                                                           ;
 
   ; [:!OTC#Pleft_command []]                                                        NOT AVAILABLE  ;
   ; [:!OTC#Pleft_option []]                                                         NOT AVAILABLE  ;
