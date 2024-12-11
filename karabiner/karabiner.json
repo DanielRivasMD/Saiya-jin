@@ -1698,8 +1698,8 @@
         "description" : "Terminal zellij bindings - alphabet",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "b",
-            "modifiers" : [ "left_option", "left_shift" ]
+            "key_code" : "a",
+            "modifiers" : [ "left_option" ]
           } ],
           "from" : {
             "key_code" : "left_option",
@@ -2045,23 +2045,6 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "spacebar",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "a",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "left_command",
             "modifiers" : {
               "mandatory" : [ "right_command", "right_option" ],
@@ -2070,6 +2053,23 @@
           },
           "to" : [ {
             "key_code" : "a",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "b",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
