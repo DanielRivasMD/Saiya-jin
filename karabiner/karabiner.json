@@ -8530,7 +8530,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Additional key - MacPro",
+        "description" : "Additional keys - MacPro",
         "manipulators" : [ {
           "from" : {
             "key_code" : "delete_or_backspace",
