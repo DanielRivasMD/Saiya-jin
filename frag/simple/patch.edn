@@ -4,13 +4,19 @@
 
 ; TODO: update
 ; additional
-{:des "Additional key - MacPro"
+{:des "Additional keys - MacPro"
  :rules
  [:pro
   [:#Pdelete_or_backspace [:grave_accent_and_tilde]]                                               ; '`'
   [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
   [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
   ]}
+
+; additional
+{:des "Additional keys - MacAir"
+ :rules
+ [:air]
+ }
 
 ; additional
 {:des "Additional keys - Master"
