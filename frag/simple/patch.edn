@@ -15,7 +15,15 @@
 ; additional
 {:des "Additional keys - MacAir"
  :rules
- [:air]
+ [:air
+ ; [volume up]
+ ; [volume down]
+ ; [volume mute]
+ ; [brightness up]
+ ; [brightness down]
+ ; [keyboard up]
+ ; [keyboard down]
+ ]
  }
 
 ; additional
