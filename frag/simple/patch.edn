@@ -16,15 +16,14 @@
 {:des "Additional keys - MacAir"
  :rules
  [:air
- ; [volume up]
- ; [volume down]
- ; [volume mute]
- ; [brightness up]
- ; [brightness down]
- ; [keyboard up]
- ; [keyboard down]
- ]
- }
+  [:f1 :display_brightness_decrement]
+  [:f2 :display_brightness_increment]
+  [:f3 :illumination_decrement]
+  [:f4 :illumination_increment]
+  [:f10 :mute]
+  [:f11 :volume_decrement]
+  [:f12 :volume_increment]
+ ]}
 
 ; additional
 {:des "Additional keys - Master"
