@@ -72,8 +72,8 @@
  {:des "Zed - Sessions"
   :rules
   [;
-   [:#Pescape :!EWright_shift [:zed] {:alone [:!Cb]}]                          ; file explorer     ;
-   [:#Pdelete_or_backspace :!WQright_shift [:zed] {:alone [:!Cj]}]             ; terminal          ;
+   [:#Pdelete_or_backspace :!EWright_shift [:zed] {:alone [:!Cb]}]             ; file explorer     ;
+   [:#Pright_shift :!WQright_shift [:zed] {:alone [:!Cj]}]                     ; terminal          ;
 
    ; [:!OT#Pright_shift :!Cbackslash [:zed]]                                    ; split vertical    ;
    ; [:!OT#Pright_option :!CSbackslash [:zed]]                                  ; split horizontal  ;
