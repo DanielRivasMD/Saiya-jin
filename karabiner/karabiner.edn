@@ -573,127 +573,127 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; ; Zed
-; {:des "Zed - alt - alphabet"
-;  :rules
-;  [;
-;   [:!O#Pa :!CSl [:zed]]                                                                            ;
-;   ; [:!O#Pb : [:zed]]                                                                              ;
-;   ; [:!O#Pc : [:zed]]                                                                              ;
-;   [:!O#Pd :!Cd [:zed]]                                                                             ;
-;   ; [:!O#Pe : [:zed]]                                                                              ;
-;   [:!O#Pf :!Cf [:zed]]                                                                             ;
-;   ; [:!O#Pg : [:zed]]                                                                              ;
-;   [:!O#Ph :!CSg [:zed]]                                                                            ;
-;   ; [:!O#Pi : [:zed]]                                                                              ;
-;   [:!O#Pj :!TCn [:zed]]                                                                            ;
-;   [:!O#Pk :!TCp [:zed]]                                                                            ;
-;   [:!O#Pl :!Cg [:zed]]                                                                             ;
-;   ; [:!O#Pm : [:zed]]                                                                              ;
-;   ; [:!O#Pn : [:zed]]                                                                              ;
-;   ; [:!O#Po : [:zed]]                                                                              ;
-;   ; [:!O#Pp : [:zed]]                                                                              ;
-;   ; [:!O#Pq : [:zed]]                                                                              ;
-;   ; [:!O#Pr : [:zed]]                                                                              ;
-;   ; [:!O#Ps : [:zed]]                                                                              ;
-;   ; [:!O#Pt : [:zed]]                                                                              ;
-;   ; [:!O#Pu : [:zed]]                                                                              ;
-;   ; [:!O#Pv : [:zed]]                                                                              ;
-;   ; [:!O#Pw : [:zed]]                                                                              ;
-;   ; [:!O#Px : [:zed]]                                                                              ;
-;   ; [:!O#Py : [:zed]]                                                                              ;
-;   ; [:!O#Pz : [:zed]]                                                                              ;
-;   ]}
+ ; Zed
+ {:des "Zed - alt - alphabet"
+  :rules
+  [;
+   ; [:!O#Pa :!CSl [:zed]]                                                                           ;
+   ; [:!O#Pb : [:zed]]                                                                             ;
+   ; [:!O#Pc : [:zed]]                                                                             ;
+   ; [:!O#Pd :!Cd [:zed]]                                                                            ;
+   ; [:!O#Pe : [:zed]]                                                                             ;
+   [:!O#Pf :!Cf [:zed]]                                                                            ;
+   ; [:!O#Pg : [:zed]]                                                                             ;
+   [:!O#Ph :!CSg [:zed]]                                                                           ;
+   ; [:!O#Pi : [:zed]]                                                                             ;
+   [:!O#Pj :!TCn [:zed]]                                                                           ;
+   [:!O#Pk :!TCp [:zed]]                                                                           ;
+   [:!O#Pl :!Cg [:zed]]                                                                            ;
+   ; [:!O#Pm : [:zed]]                                                                             ;
+   ; [:!O#Pn : [:zed]]                                                                             ;
+   ; [:!O#Po : [:zed]]                                                                             ;
+   ; [:!O#Pp : [:zed]]                                                                             ;
+   ; [:!O#Pq : [:zed]]                                                                             ;
+   ; [:!O#Pr : [:zed]]                                                                             ;
+   ; [:!O#Ps : [:zed]]                                                                             ;
+   ; [:!O#Pt : [:zed]]                                                                             ;
+   ; [:!O#Pu : [:zed]]                                                                             ;
+   ; [:!O#Pv : [:zed]]                                                                             ;
+   ; [:!O#Pw : [:zed]]                                                                             ;
+   ; [:!O#Px : [:zed]]                                                                             ;
+   ; [:!O#Py : [:zed]]                                                                             ;
+   ; [:!O#Pz : [:zed]]                                                                             ;
+   ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; ; Zed
-; {:des "Zed - alt - alphabet"
-;  :rules
-;  [;
-;   ; [:!SO#Pa : [:zed]]                                                                             ;
-;   ; [:!SO#Pb : [:zed]]                                                                             ;
-;   [:!OS#Pc :!Cslash [:zed]]                                                                        ;
-;   [:!OS#Pd :!CSd [:zed]]                                                                           ;
-;   ; [:!SO#Pe : [:zed]]                                                                             ;
-;   ; [:!SO#Pf : [:zed]]                                                                             ;
-;   ; [:!SO#Pg : [:zed]]                                                                             ;
-;   ; [:!SO#Ph : [:zed]]                                                                             ;
-;   [:!OS#Pi :!Cclose_bracket [:zed]]                                                                ;
-;   [:!OS#Pj :!TCdown_arrow [:zed]]                                                                  ;
-;   [:!OS#Pk :!TCup_arrow [:zed]]                                                                    ;
-;   ; [:!SO#Pl : [:zed]]                                                                             ;
-;   ; [:!SO#Pm : [:zed]]                                                                             ;
-;   ; [:!SO#Pn : [:zed]]                                                                             ;
-;   [:!OS#Po :!Copen_bracket [:zed]]                                                                 ;
-;   ; [:!SO#Pp : [:zed]]                                                                             ;
-;   ; [:!SO#Pq  : [:zed]]                                                                            ;
-;   ; [:!SO#Pr : [:zed]]                                                                             ;
-;   ; [:!SO#Ps : [:zed]]                                                                             ;
-;   ; [:!SO#Pt : [:zed]]                                                                             ;
-;   ; [:!SO#Pu : [:zed]]                                                                             ;
-;   ; [:!SO#Pv : [:zed]]                                                                             ;
-;   ; [:!SO#Pw : [:zed]]                                                                             ;
-;   [:!OS#Px :!TSk [:zed]]                                                                           ;
-;   ; [:!SO#Py : [:zed]]                                                                             ;
-;   ; [:!SO#Pz : [:zed]]                                                                             ;
-;   ]}
+ ; Zed
+ {:des "Zed - alt - alphabet"
+  :rules
+  [;
+   ; [:!SO#Pa : [:zed]]                                                                            ;
+   ; [:!SO#Pb : [:zed]]                                                                            ;
+   [:!OS#Pc :!Cslash [:zed]]                                                                       ;
+   [:!OS#Pd :!OSdown_arrow [:zed]]                                                                 ;
+   ; [:!SO#Pe : [:zed]]                                                                            ;
+   ; [:!SO#Pf : [:zed]]                                                                            ;
+   ; [:!SO#Pg : [:zed]]                                                                            ;
+   ; [:!SO#Ph : [:zed]]                                                                            ;
+   [:!OS#Pi :!Cclose_bracket [:zed]]                                                               ;
+   [:!OS#Pj :!Odown_arrow [:zed]]                                                                  ;
+   [:!OS#Pk :!Oup_arrow [:zed]]                                                                    ;
+   ; [:!SO#Pl : [:zed]]                                                                            ;
+   ; [:!SO#Pm : [:zed]]                                                                            ;
+   ; [:!SO#Pn : [:zed]]                                                                            ;
+   [:!OS#Po :!Copen_bracket [:zed]]                                                                ;
+   ; [:!SO#Pp : [:zed]]                                                                            ;
+   ; [:!SO#Pq  : [:zed]]                                                                           ;
+   ; [:!SO#Pr : [:zed]]                                                                            ;
+   ; [:!SO#Ps : [:zed]]                                                                            ;
+   ; [:!SO#Pt : [:zed]]                                                                            ;
+   ; [:!SO#Pu : [:zed]]                                                                            ;
+   ; [:!SO#Pv : [:zed]]                                                                            ;
+   ; [:!SO#Pw : [:zed]]                                                                            ;
+   [:!OS#Px :!CSk [:zed]]                                                                          ;
+   ; [:!SO#Py : [:zed]]                                                                            ;
+   ; [:!SO#Pz : [:zed]]                                                                            ;
+   ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; ; Zed
-; {:des "Zed - Sessions"
-;  :rules
-;  [;
-;   [:#Pescape :!EWright_shift :zed {:alone [:!Cb]}]                             ; file explorer     ;
-;   ; [:#Pdelete_or_backspace :!WQright_shift :zed {:alone [:!Cj]}]              ; terminal          ;
+ ; Zed
+ {:des "Zed - Sessions"
+  :rules
+  [;
+   [:#Pescape :!EWright_shift [:zed] {:alone [:!Cb]}]                          ; file explorer     ;
+   [:#Pdelete_or_backspace :!WQright_shift [:zed] {:alone [:!Cj]}]             ; terminal          ;
 
-;   ; [:!OT#Pright_shift :!Cbackslash [:zed]]                                    ; split vertical    ;
-;   ; [:!OT#Pright_option :!CSbackslash [:zed]]                                  ; split horizontal  ;
-;   ; [:!OC#Pright_shift :!Cbackslash [:zed]]                                    ; split vertical    ;
-;   ; [:!OC#Pright_option :!CSbackslash [:zed]]                                  ; split horizontal  ;
-;   ; [:!OT#Pright_command :!TCSbackslash [:zed]]                                                    ;
+   ; [:!OT#Pright_shift :!Cbackslash [:zed]]                                    ; split vertical    ;
+   ; [:!OT#Pright_option :!CSbackslash [:zed]]                                  ; split horizontal  ;
+   ; [:!OC#Pright_shift :!Cbackslash [:zed]]                                    ; split vertical    ;
+   ; [:!OC#Pright_option :!CSbackslash [:zed]]                                  ; split horizontal  ;
+   ; [:!OT#Pright_command :!TCSbackslash [:zed]]                                                    ;
 
-;   [:!O#Pup_arrow :!Tup_arrow [:zed]]                                           ; prev para         ;
-;   [:!O#Pdown_arrow :!Tdown_arrow [:zed]]                                       ; next para         ;
-;   [:!O#PSup_arrow :!TSup_arrow [:zed]]                                         ; select prev para  ;
-;   [:!O#PSdown_arrow :!TSdown_arrow [:zed]]                                     ; select next para  ;
+   [:!O#Pup_arrow :!Tup_arrow [:zed]]                                          ; prev para         ;
+   [:!O#Pdown_arrow :!Tdown_arrow [:zed]]                                      ; next para         ;
+   [:!O#PSup_arrow :!TSup_arrow [:zed]]                                        ; select prev para  ;
+   [:!O#PSdown_arrow :!TSdown_arrow [:zed]]                                    ; select next para  ;
 
-;   [:!TC#Pright_command :!OCy [:zed]]                                           ; close docks       ;
+   [:!TC#Pright_command :!OCy [:zed]]                                          ; close docks       ; TODO: update
 
-;   [:!TC#Pd :f12 [:zed]]                                                        ; definition        ;
-;   [:!TC#Pr :!OSf12 [:zed]]                                                     ; references        ;
-;   ]}
+   ; [:!TC#Pd :f12 [:zed]]                                                        ; definition        ;
+   ; [:!TC#Pr :!OSf12 [:zed]]                                                     ; references        ;
+   ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; ; Zed
-; {:des "Zed - Control remappings"
-;  :rules
-;  [;
-;   ; [:!EQR#Ptab :!Th [:zed]]                                                   ; del-tab           ;
-;   ; [:!EQR#Pcaps_lock :!Tg [:zed]]                                             ; del-caps          ;
-;   ; [:!EQR#Pleft_shift :!Oc [:zed]]                                            ; del-shift         ;
-;   [:!EQR#Pleft_control :!Cp [:zed]]                                            ; del-ctl          ;
-;   ; [:!EQR#Pleft_option :!Ts [:zed]]                                           ; del-alt           ;
-;   [:!EQR#Pleft_command :!CSp [:zed]]                                           ; del-cmd           ;
-;   ; [:!EQR#Pspacebar :!Ty [:zed]]                                              ; del-space         ;
-;   ; [:!EQR#Pright_command :!Tj [:zed]]                                         ; del-cmd           ;
-;   ; [:!EQR#Pright_option :!Tn [:zed]]                                          ; del-alt           ;
-;   ]}
+ ; Zed
+ {:des "Zed - Control remappings"
+  :rules
+  [;
+   ; [:!EQR#Ptab :!Th [:zed]]                                                   ; del-tab           ;
+   ; [:!EQR#Pcaps_lock :!Tg [:zed]]                                             ; del-caps          ;
+   ; [:!EQR#Pleft_shift :!Oc [:zed]]                                            ; del-shift         ;
+   ; [:!EQR#Pleft_control :!Cp [:zed]]                                            ; del-ctl          ;
+   ; [:!EQR#Pleft_option :!Ts [:zed]]                                           ; del-alt           ;
+   ; [:!EQR#Pleft_command :!CSp [:zed]]                                           ; del-cmd           ;
+   ; [:!EQR#Pspacebar :!Ty [:zed]]                                              ; del-space         ;
+   ; [:!EQR#Pright_command :!Tj [:zed]]                                         ; del-cmd           ;
+   ; [:!EQR#Pright_option :!Tn [:zed]]                                          ; del-alt           ;
+   ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; ; Zed
-; {:des "Zed - Interactive delete"
-;  :rules
-;  [;
-;   ; [:!S#Pright_option :!Odelete_forward [:zed]]                               ; shift-alt         ;
-;   [:!S#Pright_command :!Cdelete_forward [:zed]]                                ; shift-cmd         ;
-;   ; [:!R#Pleft_control :!Odelete_or_backspace [:zed]]                          ; shift-ctl        ;
-;   ; [:!R#Pleft_command :!Cdelete_or_backspace [:zed]]                          ; shift-cmd         ;
-;   ; [:!R#Pleft_option : [:zed]]                                                ; shift-alt         ;
-;   ]}
+ ; Zed
+ {:des "Zed - Interactive delete"
+  :rules
+  [;
+   [:!S#Pright_option :!Odelete_forward [:zed]]                                                    ; shift-alt
+   [:!S#Pright_command :!Cdelete_forward [:zed]]                                                   ; shift-cmd
+   [:!R#Pleft_control :!Odelete_or_backspace [:zed]]                                               ; shift-ctl
+   [:!R#Pleft_command :!Cdelete_or_backspace [:zed]]                                               ; shift-cmd
+   ; [:!R#Pleft_option : [:zed]]                                                                   ; shift-alt
+   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -2686,15 +2686,14 @@
 {:des "Additional keys - MacAir"
  :rules
  [:air
- ; [volume up]
- ; [volume down]
- ; [volume mute]
- ; [brightness up]
- ; [brightness down]
- ; [keyboard up]
- ; [keyboard down]
- ]
- }
+  [:f1 :display_brightness_decrement]
+  [:f2 :display_brightness_increment]
+  [:f3 :illumination_decrement]
+  [:f4 :illumination_increment]
+  [:f10 :mute]
+  [:f11 :volume_decrement]
+  [:f12 :volume_increment]
+ ]}
 
 ; additional
 {:des "Additional keys - Master"
@@ -3343,18 +3342,18 @@
 {:des "Tab Mode - numbers"
  :rules
  [;
-  [:f1 :!ROTC#Pkeypad_1]                                                                           ;
-  [:f2 :!ROTC#Pkeypad_2]                                                                           ;
-  [:f3 :!ROTC#Pkeypad_3]                                                                           ;
-  [:f4 :!ROTC#Pkeypad_4]                                                                           ;
-  [:f5 :!ROTC#Pkeypad_5]                                                                           ;
-  [:f6 :!ROTC#Pkeypad_6]                                                                           ;
-  [:f7 :!ROTC#Pkeypad_7]                                                                           ;
-  [:f8 :!ROTC#Pkeypad_8]                                                                           ;
-  [:f9 :!ROTC#Pkeypad_9]                                                                           ;
-  [:f10 :!ROTC#Pkeypad_0]                                                                          ;
-  [:f11 :!ROTC#Pkeypad_slash]                                                                      ;
-  [:f12 :!ROTC#Pkeypad_asterisk]                                                                   ;
+  ; [:f1 :!ROTC#Pkeypad_1]                                                                           ;
+  ; [:f2 :!ROTC#Pkeypad_2]                                                                           ;
+  ; [:f3 :!ROTC#Pkeypad_3]                                                                           ;
+  ; [:f4 :!ROTC#Pkeypad_4]                                                                           ;
+  ; [:f5 :!ROTC#Pkeypad_5]                                                                           ;
+  ; [:f6 :!ROTC#Pkeypad_6]                                                                           ;
+  ; [:f7 :!ROTC#Pkeypad_7]                                                                           ;
+  ; [:f8 :!ROTC#Pkeypad_8]                                                                           ;
+  ; [:f9 :!ROTC#Pkeypad_9]                                                                           ;
+  ; [:f10 :!ROTC#Pkeypad_0]                                                                          ;
+  ; [:f11 :!ROTC#Pkeypad_slash]                                                                      ;
+  ; [:f12 :!ROTC#Pkeypad_asterisk]                                                                   ;
 
   ; [:!ROTC#P1 []]                                                                                 ;
   ; [:!ROTC#P2 []]                                                                                 ;
