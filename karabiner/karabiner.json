@@ -1909,7 +1909,7 @@
             "modifiers" : [ "left_command" ]
           } ],
           "from" : {
-            "key_code" : "escape",
+            "key_code" : "delete_or_backspace",
             "modifiers" : {
               "optional" : [ "caps_lock" ]
             }
@@ -1929,7 +1929,7 @@
             "modifiers" : [ "left_command" ]
           } ],
           "from" : {
-            "key_code" : "delete_or_backspace",
+            "key_code" : "right_shift",
             "modifiers" : {
               "optional" : [ "caps_lock" ]
             }
