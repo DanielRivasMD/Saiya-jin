@@ -38,18 +38,18 @@
 {:des "Tab Mode - numbers"
  :rules
  [;
-  [:f1 :!ROTC#Pkeypad_1]                                                                           ;
-  [:f2 :!ROTC#Pkeypad_2]                                                                           ;
-  [:f3 :!ROTC#Pkeypad_3]                                                                           ;
-  [:f4 :!ROTC#Pkeypad_4]                                                                           ;
-  [:f5 :!ROTC#Pkeypad_5]                                                                           ;
-  [:f6 :!ROTC#Pkeypad_6]                                                                           ;
-  [:f7 :!ROTC#Pkeypad_7]                                                                           ;
-  [:f8 :!ROTC#Pkeypad_8]                                                                           ;
-  [:f9 :!ROTC#Pkeypad_9]                                                                           ;
-  [:f10 :!ROTC#Pkeypad_0]                                                                          ;
-  [:f11 :!ROTC#Pkeypad_slash]                                                                      ;
-  [:f12 :!ROTC#Pkeypad_asterisk]                                                                   ;
+  ; [:f1 :!ROTC#Pkeypad_1]                                                                           ;
+  ; [:f2 :!ROTC#Pkeypad_2]                                                                           ;
+  ; [:f3 :!ROTC#Pkeypad_3]                                                                           ;
+  ; [:f4 :!ROTC#Pkeypad_4]                                                                           ;
+  ; [:f5 :!ROTC#Pkeypad_5]                                                                           ;
+  ; [:f6 :!ROTC#Pkeypad_6]                                                                           ;
+  ; [:f7 :!ROTC#Pkeypad_7]                                                                           ;
+  ; [:f8 :!ROTC#Pkeypad_8]                                                                           ;
+  ; [:f9 :!ROTC#Pkeypad_9]                                                                           ;
+  ; [:f10 :!ROTC#Pkeypad_0]                                                                          ;
+  ; [:f11 :!ROTC#Pkeypad_slash]                                                                      ;
+  ; [:f12 :!ROTC#Pkeypad_asterisk]                                                                   ;
 
   ; [:!ROTC#P1 []]                                                                                 ;
   ; [:!ROTC#P2 []]                                                                                 ;
