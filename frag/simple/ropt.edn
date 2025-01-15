@@ -70,31 +70,31 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  ; [:!E#Pa []]                                                                                    ;
+  [:!E#Pa [:a :w :a :i :t]]                                                                        ; 'await'
   [:!E#Pb [:b :e :g :i :n]]                                                                        ; 'begin'
-  [:!E#Pc [:w :h :i :c :h]]                                                                        ; 'which'
+  [:!E#Pc [:c :o :n :s :t]]                                                                        ; 'const'
   [:!E#Pd [:u :p :d :a :t :e]]                                                                     ; 'update'
   [:!E#Pe [:e :n :u :m]]                                                                           ; 'enum'
   [:!E#Pf [:f :u :n :c :t :i :o :n]]                                                               ; 'function'
   [:!E#Pg [:g :l :o :b :a :l]]                                                                     ; 'global'
-  ; [:!E#Ph []]                                                                                    ;
-  ; [:!E#Pi []]                                                                                    ;
-  ; [:!E#Pj []]                                                                                    ;
+  [:!E#Ph [:i :f]]                                                                                 ; 'if'
+  [:!E#Pi [:w :h :i :c :h]]                                                                        ; 'which'
+  [:!E#Pj [:e :l :s :e]]                                                                           ; 'else'
   [:!E#Pk [:l :o :c :a :l]]                                                                        ; 'local'
   [:!E#Pl [:l :e :t]]                                                                              ; 'let'
   [:!E#Pm [:m :u :t :a :b :l :e]]                                                                  ; 'mutable'
   [:!E#Pn [:e :n :d]]                                                                              ; 'end'
-  ; [:!E#Po []]                                                                                    ;
-  ; [:!E#Pp []]                                                                                    ;
+  [:!E#Po [:t :y :p :e]]                                                                           ; 'type'
+  [:!E#Pp [:p :u :b]]                                                                              ; 'pub'
   [:!E#Pq [:d :e :p :r :e :c :a :t :e]]                                                            ; 'deprecate'
   [:!E#Pr [:s :t :r :u :c :t]]                                                                     ; 'struct'
-  [:!E#Ps [:s :t :r :i :n :g]]                                                                     ; 'string'
+  [:!E#Ps [:a :s :y :n :c]]                                                                        ; 'async'
   [:!E#Pt [:t :e :s :t]]                                                                           ; 'test'
   [:!E#Pu [:u :s :i :n :g]]                                                                        ; 'using'
   [:!E#Pv [:w :h :i :l :e]]                                                                        ; 'while'
   [:!E#Pw [:w :h :e :r :e]]                                                                        ; 'where'
   [:!E#Px [:e :x :i :t]]                                                                           ; 'exit'
-  [:!E#Py [:t :y :p :e]]                                                                           ; 'type'
+  [:!E#Py [:s :t :r :i :n :g]]                                                                     ; 'string'
   [:!E#Pz [:f :o :r]]                                                                              ; 'for'
   [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]                                           ; ' ∈ '
   ]}
