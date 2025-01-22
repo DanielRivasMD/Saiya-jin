@@ -7,7 +7,7 @@
    ; [:!O#Pa :!CSl [:zed]]                                                                           ;
    ; [:!O#Pb : [:zed]]                                                                             ;
    ; [:!O#Pc : [:zed]]                                                                             ;
-   ; [:!O#Pd :!Cd [:zed]]                                                                            ;
+   [:!O#Pd :!Cd [:zed]]                                                                            ;
    ; [:!O#Pe : [:zed]]                                                                             ;
    [:!O#Pf :!Cf [:zed]]                                                                            ;
    ; [:!O#Pg : [:zed]]                                                                             ;
@@ -98,6 +98,7 @@
  {:des "Zed - Control remappings"
   :rules
   [;
+  [:!W#Preturn_or_enter [:!Cp]]                                                                    ;
    ; [:!EQR#Ptab :!Th [:zed]]                                                   ; del-tab           ;
    ; [:!EQR#Pcaps_lock :!Tg [:zed]]                                             ; del-caps          ;
    ; [:!EQR#Pleft_shift :!Oc [:zed]]                                            ; del-shift         ;
