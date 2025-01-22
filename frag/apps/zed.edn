@@ -98,16 +98,16 @@
  {:des "Zed - Control remappings"
   :rules
   [;
-  [:!W#Preturn_or_enter [:!Cp]]                                                                    ;
-   ; [:!EQR#Ptab :!Th [:zed]]                                                   ; del-tab           ;
-   ; [:!EQR#Pcaps_lock :!Tg [:zed]]                                             ; del-caps          ;
-   ; [:!EQR#Pleft_shift :!Oc [:zed]]                                            ; del-shift         ;
-   ; [:!EQR#Pleft_control :!Cp [:zed]]                                            ; del-ctl          ;
-   ; [:!EQR#Pleft_option :!Ts [:zed]]                                           ; del-alt           ;
-   ; [:!EQR#Pleft_command :!CSp [:zed]]                                           ; del-cmd           ;
-   ; [:!EQR#Pspacebar :!Ty [:zed]]                                              ; del-space         ;
-   ; [:!EQR#Pright_command :!Tj [:zed]]                                         ; del-cmd           ;
-   ; [:!EQR#Pright_option :!Tn [:zed]]                                          ; del-alt           ;
+  [:!W#Preturn_or_enter [:!Cp] [:zed]]                                                             ;
+   ; [:!EQR#Ptab :!Th [:zed]]                                                   ; del-tab          ;
+   ; [:!EQR#Pcaps_lock :!Tg [:zed]]                                             ; del-caps         ;
+   ; [:!EQR#Pleft_shift :!Oc [:zed]]                                            ; del-shift        ;
+   ; [:!EQR#Pleft_control :!Cp [:zed]]                                            ; del-ctl        ;
+   ; [:!EQR#Pleft_option :!Ts [:zed]]                                           ; del-alt          ;
+   ; [:!EQR#Pleft_command :!CSp [:zed]]                                           ; del-cmd        ;
+   ; [:!EQR#Pspacebar :!Ty [:zed]]                                              ; del-space        ;
+   ; [:!EQR#Pright_command :!Tj [:zed]]                                         ; del-cmd          ;
+   ; [:!EQR#Pright_option :!Tn [:zed]]                                          ; del-alt          ;
    ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
