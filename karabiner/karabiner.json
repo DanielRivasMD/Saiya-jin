@@ -1698,6 +1698,23 @@
         "description" : "Zed - alt - alphabet",
         "manipulators" : [ {
           "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "d",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.zed.Zed" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "f",
             "modifiers" : {
               "mandatory" : [ "left_option" ],
@@ -2021,6 +2038,26 @@
           "to" : [ {
             "key_code" : "y",
             "modifiers" : [ "left_command", "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.zed.Zed" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Zed - Control remappings",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "p",
+            "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
