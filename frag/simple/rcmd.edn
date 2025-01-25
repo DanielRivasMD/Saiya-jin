@@ -2,6 +2,7 @@
 ; CMD
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: congregate control letter keys
 ; command
 {:des "Command Mode - symbols"
  :rules
@@ -20,6 +21,7 @@
   ; [:!Q#Pright_shift []]                                                                          ;
   ; [:!Q#Pright_option []]                                                                         ;
   ; [:!Q#Pright_command []]                                                         NOT AVAILABLE  ;
+  [:!Q#Pspacebar [:!T#Pc] [:term]]                                                 ;    PREFERENCES    ;
   [:!Q#Pspacebar [:!Q#Pcomma]]                                                 ;    PREFERENCES    ;
 
   ; [:!Q#Pleft_command []]                                                                         ;
