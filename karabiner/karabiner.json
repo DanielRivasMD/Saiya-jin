@@ -5892,6 +5892,23 @@
             }
           },
           "to" : [ {
+            "key_code" : "c",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
             "key_code" : "comma",
             "modifiers" : [ "right_command" ]
           } ],
