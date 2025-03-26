@@ -532,6 +532,19 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+ {:des "Press twice to enter double mode, press once to leave"
+  :rules [
+   [:non_us_backslash ["double-right-shift-mode" 1] ["shift-pressed-once" 1]]
+   [:non_us_backslash [:non_us_backslash ["shift-pressed-once" 1]] ["double-right-shift-mode" 0] {:delayed {:invoked ["shift-pressed-once" 0] :canceled ["shift-pressed-once" 0]}}]
+
+   :double-right-shift-mode
+   [:non_us_backslash ["double-right-shift-mode" 0]]
+   [:a :!Ws]      ;
+   [:!Sa :!Wt]    ;
+   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; TODO: update
 ; ; mail
 ; {:des "Mail bindings"
@@ -744,6 +757,9 @@
   [:!OT#Pright_option :!Or [:term]]                        ; alt-ctl-alt       ; spawn new down    ;
   [:!OT#Pright_command :!Os [:term]]                       ; alt-ctl-cmd       ; float             ;
   [:!OT#Pspacebar :!Ot [:term]]                            ; alt-ctl-space     ; jump back         ;
+
+  [:!OT#Pright_shift :!Cj [:zed]]                  ; alt-ctl-shift     ; spawn new right   ;
+  ; [:!OT#Pright_option :!Cj [:zed]]                ; alt-ctl-alt       ; spawn new down    ;
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ; [: :!Ou [:term]]                                                                COLLISION      ;
@@ -2866,35 +2882,35 @@
 ; CTL
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; control
-{:des "Control Mode - symbols"
- :rules
- [;
-  [:!W#Popen_bracket [:!Sf8]]                                                                      ;
-  [:!W#Pclose_bracket [:!Sf9]]                                                                     ;
-  [:!W#Psemicolon [:!Sf10]]                                                                        ;
-  [:!W#Pquote [:!Sf11]]                                                                            ;
-  [:!W#Pbackslash [:!Sf12]]                                                                        ;
-  ; [:!W#Pcomma []]                                                                                ;
-  ; [:!W#Pperiod []]                                                                               ;
-  [:!W#Pslash [:!Sf20]]                                                                            ;
+; ; control
+; {:des "Control Mode - symbols"
+;  :rules
+;  [;
+;   [:!W#Popen_bracket [:!Sf8]]                                                                      ;
+;   [:!W#Pclose_bracket [:!Sf9]]                                                                     ;
+;   [:!W#Psemicolon [:!Sf10]]                                                                        ;
+;   [:!W#Pquote [:!Sf11]]                                                                            ;
+;   [:!W#Pbackslash [:!Sf12]]                                                                        ;
+;   ; [:!W#Pcomma []]                                                                                ;
+;   ; [:!W#Pperiod []]                                                                               ;
+;   [:!W#Pslash [:!Sf20]]                                                                            ;
 
-  [:!W#Pdelete_or_backspace [:!Wr]]                                                                ;
-  [:!W#Preturn_or_enter [:!Ws]]                                                                    ;
-  [:!W#Pright_shift [:!Wt]]                                                                        ;
-  ; [:!W#Pright_option []]                                                                         ;
-  ; [:!W#Pright_command []]                                                                        ;
-  [:!W#Pspacebar [:f7]]                                                                            ;
+;   [:!W#Pdelete_or_backspace [:!Wr]]                                                                ;
+;   [:!W#Preturn_or_enter [:!Ws]]                                                                    ;
+;   [:!W#Pright_shift [:!Wt]]                                                                        ;
+;   ; [:!W#Pright_option []]                                                                         ;
+;   ; [:!W#Pright_command []]                                                                        ;
+;   [:!W#Pspacebar [:f7]]                                                                            ;
 
-  ; [:!W#Pleft_command []]                                                                         ;
-  ; [:!W#Pleft_option []]                                                                          ;
-  ; [:!W#Pleft_control []]                                                                         ;
-  ; [:!W#Pleft_shift []]                                                                           ;
-  ; [:!W#Pcaps_lock []]                                                                            ;
-  ; [:!W#Ptab []]                                                                                  ;
-  ; [:!W#Pkeypad_num_lock []]                                                                      ;
-  ; [:!W#Pescape []]                                                                               ;
-  ]}
+;   ; [:!W#Pleft_command []]                                                                         ;
+;   ; [:!W#Pleft_option []]                                                                          ;
+;   ; [:!W#Pleft_control []]                                                                         ;
+;   ; [:!W#Pleft_shift []]                                                                           ;
+;   ; [:!W#Pcaps_lock []]                                                                            ;
+;   ; [:!W#Ptab []]                                                                                  ;
+;   ; [:!W#Pkeypad_num_lock []]                                                                      ;
+;   ; [:!W#Pescape []]                                                                               ;
+;   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -3251,11 +3267,11 @@
   [:!E#Pi [:w :h :i :c :h]]                                                                        ; 'which'
   [:!E#Pj [:e :l :s :e]]                                                                           ; 'else'
   [:!E#Pk [:l :o :c :a :l]]                                                                        ; 'local'
-  [:!E#Pl [:l :e :t]]                                                                              ; 'let'
+  ; [:!E#Pl [:l :e :t]]                                                                              ; 'let'
   [:!E#Pm [:m :u :t :a :b :l :e]]                                                                  ; 'mutable'
-  [:!E#Pn [:e :n :d]]                                                                              ; 'end'
+  ; [:!E#Pn [:e :n :d]]                                                                              ; 'end'
   [:!E#Po [:t :y :p :e]]                                                                           ; 'type'
-  [:!E#Pp [:p :u :b]]                                                                              ; 'pub'
+  ; [:!E#Pp [:p :u :b]]                                                                              ; 'pub'
   [:!E#Pq [:d :e :p :r :e :c :a :t :e]]                                                            ; 'deprecate'
   [:!E#Pr [:s :t :r :u :c :t]]                                                                     ; 'struct'
   [:!E#Ps [:a :s :y :n :c]]                                                                        ; 'async'
@@ -3548,51 +3564,6 @@
   [:#Pright_option :right_option nil {:alone [:!E#Pnon_us_pound]}]                                 ; alfred paste
   [:#Pright_command :right_command nil {:alone [:!Q#Pnon_us_pound]}]                               ; alfred clipboard select
   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; ; You can use karabiner command-line interface to set variables when you open specifc type of files in your editor. See ISSUE #79.
-
-; {:profiles
-;  {:Default {:default true
-;             :sim     50
-;             :delay   80
-;             :alone   120
-;             :held    70}}
-;  :simlayers {:js-mode {:key :period :condi ["in-js" 1]} ;;  karabiner_cli --set-variables {"in-js": 1}
-;              :go-mode {:key :period :condi ["in-go" 1]} ;;  karabiner_cli --set-variables {"in-go": 1}
-;              :py-mode {:key :period :condi ["in-python" 1]} ;;  karabiner_cli --set-variables {"in-python": 1}
-;              :elixir-mode {:key :period :condi ["in-elixir" 1]} ;;  karabiner_cli --set-variables {"in-elixir": 1}
-;              :rust-mode {:key :period :condi ["in-rust" 1]}} ;;  karabiner_cli --set-variables {"in-rust": 1}
-;  :main [{:des "jsdot"
-;          :rules [:js-mode
-;                  [:a [:c :o :n :s :o :l :e :period :l :o :g :!S9 :!S0 :left_arrow]] ; -> console.log()
-;                  [:v [:j :a :v :a :s :c :r :i :p :t :spacebar]]]} ; -> javascript
-;         {:des "godot"
-;          :rules[:go-mode
-;                 [:a [:f :m :t :period :!Sp :r :i :n :t :l :n :!S9 :!S0 :left_arrow]] ; -> fmt.Println()
-;                 [:v [:g :o :l :a :n :g :spacebar]]]} ; -> golang
-;         {:des "pydot"
-;          :rules[:py-mode
-;                 [:a [:p :r :i :n :t :!S9 :!S0 :left_arrow]] ; -> print()
-;                 [:v [:p :y :t :h :o :n :spacebar]]]} ; -> python
-;         {:des "elixdot"
-;          :rules[:elixir-mode
-;                 [:a [:!Si :!So :period :p :u :t :s :!S9 :!S0 :left_arrow]] ; -> IO.puts()
-;                 [:v [:e :l :i :x :i :r :spacebar]]]} ; -> elixir
-;         {:des "rustdot"
-;          :rules[:rust-mode
-;                 [:a [:p :r :i :n :t :l :n :!S1 :!S9 :!S0 :left_arrow]] ; -> println!()
-;                 [:v [:r :u :s :t :spacebar]]]}]} ; -> rust
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; {:des   "Press right_shift twice to enter double shift mode, press right_shift once to leave it"
-;                        :rules [[:right_shift ["double-right-shift-mode" 1] ["shift-pressed-once" 1]]
-;                                [:right_shift [:right_shift ["shift-pressed-once" 1]] ["double-right-shift-mode" 0] {:delayed {:invoked ["shift-pressed-once" 0] :canceled ["shift-pressed-once" 0]}}]
-;                                :double-right-shift-mode
-;                                [:right_shift ["double-right-shift-mode" 0]]
-;                                [:a "say 'know we are in double shift mode'"]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
