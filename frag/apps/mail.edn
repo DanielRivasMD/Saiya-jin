@@ -1,5 +1,18 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+ {:des "Press twice to enter double mode, press once to leave"
+  :rules [
+   [:non_us_backslash ["double-right-shift-mode" 1] ["shift-pressed-once" 1]]
+   [:non_us_backslash [:non_us_backslash ["shift-pressed-once" 1]] ["double-right-shift-mode" 0] {:delayed {:invoked ["shift-pressed-once" 0] :canceled ["shift-pressed-once" 0]}}]
+
+   :double-right-shift-mode
+   [:non_us_backslash ["double-right-shift-mode" 0]]
+   [:a :!Ws]      ;
+   [:!Sa :!Wt]    ;
+   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; TODO: update
 ; ; mail
 ; {:des "Mail bindings"
