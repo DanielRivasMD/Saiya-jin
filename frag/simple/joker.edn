@@ -2,6 +2,18 @@
 ; JOKER => EWQ
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; joker
+{:des "Joker Mode - symbols"
+ :rules
+ [;
+  [:!EWQ#Pleft_arrow [:!OTpage_up] [:term]]                                                        ;
+  [:!EWQ#Pright_arrow [:!OTpage_down] [:term]]                                                     ;
+  [:!EWQ#Pup_arrow [:!OThome] [:term]]                                                             ;
+  [:!EWQ#Pdown_arrow [:!OTend] [:term]]                                                            ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; TODO: update order
 ; joker
 {:des "Joker Mode - symbols"
