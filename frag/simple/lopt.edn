@@ -6,6 +6,18 @@
 {:des "Option Mode - symbols"
  :rules
  [;
+  ; [:!O#Pleft_arrow [] [:term]]                                                                   ;
+  ; [:!O#Pright_arrow [] [:term]]                                                                  ;
+  [:!O#Pup_arrow [:page_up] [:term]]                                                               ;
+  [:!O#Pdown_arrow [:page_down] [:term]]                                                           ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option
+{:des "Option Mode - symbols"
+ :rules
+ [;
   [:!O#Popen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]                                   ; ' <= '
   [:!O#Pclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]                                 ; ' >= '
   [:!O#Psemicolon [:spacebar :!Ssemicolon :spacebar]]                                              ; ' : '
@@ -31,6 +43,18 @@
   ; [:!O#Pkeypad_num_lock []]                                                                      ;
   ; [:!O#Pescape []]                                                                               ;
   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option - shift
+{:des "Option Mode - symbols"
+ :rules
+ [;
+  ; [:!OS#Pleft_arrow [] [:term]]                                                                  ;
+  ; [:!OS#Pright_arrow [] [:term]]                                                                 ;
+  ; [:!OS#Pup_arrow [] [:term]]                                                                    ;
+  ; [:!OS#Pdown_arrow [] [:term]]                                                                  ;
+ ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
