@@ -6,6 +6,18 @@
 {:des "Option - Command Mode - symbols"
  :rules
  [;
+  ; [:!EQ#Pleft_arrow [] []]                                                                       ;
+  ; [:!EQ#Pright_arrow [] []]                                                                      ;
+  ; [:!EQ#Pup_arrow [] []]                                                                         ;
+  ; [:!EQ#Pdown_arrow [] []]                                                                       ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option - command
+{:des "Option - Command Mode - symbols"
+ :rules
+ [;
   ; [:!EQ#Popen_bracket []]                                                                        ;
   ; [:!EQ#Pclose_bracket []]                                                                       ;
   ; [:!EQ#Psemicolon []]                                                                           ;
