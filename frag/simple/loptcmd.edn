@@ -6,21 +6,36 @@
 {:des "Option - Command Mode - symbols"
  :rules
  [;
+  ; tab control - bound for zellij
+  [:!OC#Pleft_arrow :!Ox [:term]]                          ; alt-cmd-left      ;                   ;
+  [:!OC#Pright_arrow :!Oy [:term]]                         ; alt-cmd-right     ;                   ;
+  [:!OC#Pup_arrow [:!Tx] [:term]]                                                                  ;
+  [:!OC#Pdown_arrow [:!Ty] [:term]]                                                                ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option - command
+{:des "Option - Command Mode - symbols"
+ :rules
+ [;
+  ; tab movement - bound for zellij
   ; [:!OC#Popen_bracket []]                                                                        ;
   ; [:!OC#Pclose_bracket []]                                                                       ;
   ; [:!OC#Psemicolon []]                                                                           ;
   ; [:!OC#Pquote []]                                                                               ;
   ; [:!OC#Pbackslash []]                                                                           ;
-  ; [:!OC#Pcomma []]                                                                               ;
-  ; [:!OC#Pperiod []]                                                                              ;
-  ; [:!OC#Pslash []]                                                                               ;
+  [:!OC#Pcomma :!Ow [:term]]                               ; alt-cmd-.         ;                   ;
+  [:!OC#Pperiod :!Ov [:term]]                              ; alt-cmd-,         ;                   ;
+  [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ;                   ;
 
-  ; [:!OC#Pdelete_or_backspace []]                                                                 ;
-  ; [:!OC#Preturn_or_enter []]                                                                     ;
-  ; [:!OC#Pright_shift []]                                                                         ;
-  ; [:!OC#Pright_option []]                                                                        ;
-  ; [:!OC#Pright_command []]                                                                       ;
-  ; [:!OC#Pspacebar []]                                                                            ;
+  ; tab control - bound for zellij
+  [:!OC#Pdelete_or_backspace :!SOi [:term]]                ; alt-cmd-bspace    ;                   ;
+  [:!OC#Preturn_or_enter :!SOj [:term]]                    ; alt-cmd-enter     ;                   ;
+  [:!OC#Pright_shift :!SOk [:term]]                        ; alt-cmd-shift     ;                   ;
+  [:!OC#Pright_option :!SOl [:term]]                       ; alt-cmd-alt       ;                   ;
+  [:!OC#Pright_command :!SOm [:term]]                      ; alt-cmd-cmd       ;                   ;
+  [:!OC#Pspacebar :!SOn [:term]]                           ; alt-cmd-space     ;                   ;
 
   ; [:!OCleft_command []]                                                           NOT AVAILABLE  ;
   ; [:!OC#Pleft_option []]                                                          NOT AVAILABLE  ;
