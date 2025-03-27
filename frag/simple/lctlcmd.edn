@@ -6,6 +6,20 @@
 {:des "Control - Command Mode - symbols"
  :rules
  [;
+  ; editor control - bound for zellij
+  [:!TC#Pleft_arrow [:!Tb] [:term]]                                                                ;
+  [:!TC#Pright_arrow [:!Tf] [:term]]                                                               ;
+  [:!TC#Pup_arrow [:!Tn] [:term]]                                                                  ;
+  [:!TC#Pdown_arrow [:!Tp] [:term]]                                                                ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; control - command
+{:des "Control - Command Mode - symbols"
+ :rules
+ [;
+  ; editor control - bound for zellij
   ; [:!TC#Popen_bracket []]                                                                        ;
   ; [:!TC#Pclose_bracket []]                                                                       ;
   ; [:!TC#Psemicolon []]                                                                           ;
@@ -15,11 +29,12 @@
   ; [:!TC#Pperiod [:!Sf4]]                                                                           ;
   ; [:!TC#Pslash []]                                                                               ;
 
+  ; editor control - bound for zellij
   [:!TC#Pdelete_or_backspace [:!Tl]]                                                               ;
   [:!TC#Preturn_or_enter [:!Tg]]                                                                   ;
   [:!TC#Pright_shift [:!Tj]]                                                                       ;
-  [:!TC#Pright_option [:!Sf5]]                                                                     ;
-  [:!TC#Pright_command [:!Sf6]]                                                                    ;
+  ; [:!TC#Pright_option [:!Sf5]]                                                                     ;
+  ; [:!TC#Pright_command [:!Sf6]]                                                                    ;
   [:!TC#Pspacebar [:!To]]                                                                          ;
 
   ; [:!TCleft_command []]                                                           NOT AVAILABLE  ;
