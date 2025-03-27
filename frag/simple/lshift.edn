@@ -6,6 +6,18 @@
 {:des "Shift Mode - symbols"
  :rules
  [;
+  ; [:!S#Pleft_arrow [] [:term]]                                                                   ;
+  ; [:!S#Pright_arrow [] [:term]]                                                                  ;
+  ; [:!S#Pup_arrow [] [:term]]                                                                     ;
+  ; [:!S#Pdown_arrow [] [:term]]                                                                   ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; shift
+{:des "Shift Mode - symbols"
+ :rules
+ [;
   ; [:!S#Popen_bracket []]                                                                         ;
   ; [:!S#Pclose_bracket []]                                                                        ;
   ; [:!S#Psemicolon []]                                                                            ;
