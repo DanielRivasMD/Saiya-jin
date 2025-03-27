@@ -2,35 +2,59 @@
 ; CTL
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; ; control
-; {:des "Control Mode - symbols"
-;  :rules
-;  [;
-;   [:!W#Popen_bracket [:!Sf8]]                                                                      ;
-;   [:!W#Pclose_bracket [:!Sf9]]                                                                     ;
-;   [:!W#Psemicolon [:!Sf10]]                                                                        ;
-;   [:!W#Pquote [:!Sf11]]                                                                            ;
-;   [:!W#Pbackslash [:!Sf12]]                                                                        ;
-;   ; [:!W#Pcomma []]                                                                                ;
-;   ; [:!W#Pperiod []]                                                                               ;
-;   [:!W#Pslash [:!Sf20]]                                                                            ;
+; control
+{:des "Control Mode - symbols"
+ :rules
+ [;
+  [:!W#Pleft_arrow [:!Wpage_up] [:term]]                                                           ;
+  [:!W#Pright_arrow [:!Wpage_down] [:term]]                                                        ;
+  [:!W#Pup_arrow [:!Whome] [:term]]                                                                ;
+  [:!W#Pdown_arrow [:!Wend] [:term]]                                                               ;
+ ]}
 
-;   [:!W#Pdelete_or_backspace [:!Wr]]                                                                ;
-;   [:!W#Preturn_or_enter [:!Ws]]                                                                    ;
-;   [:!W#Pright_shift [:!Wt]]                                                                        ;
-;   ; [:!W#Pright_option []]                                                                         ;
-;   ; [:!W#Pright_command []]                                                                        ;
-;   [:!W#Pspacebar [:f7]]                                                                            ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;   ; [:!W#Pleft_command []]                                                                         ;
-;   ; [:!W#Pleft_option []]                                                                          ;
-;   ; [:!W#Pleft_control []]                                                                         ;
-;   ; [:!W#Pleft_shift []]                                                                           ;
-;   ; [:!W#Pcaps_lock []]                                                                            ;
-;   ; [:!W#Ptab []]                                                                                  ;
-;   ; [:!W#Pkeypad_num_lock []]                                                                      ;
-;   ; [:!W#Pescape []]                                                                               ;
-;   ]}
+; control
+{:des "Control Mode - symbols"
+ :rules
+ [;
+  [:!W#Popen_bracket [:!Sf8]]                                                                      ;
+  [:!W#Pclose_bracket [:!Sf9]]                                                                     ;
+  [:!W#Psemicolon [:!Sf10]]                                                                        ;
+  [:!W#Pquote [:!Sf11]]                                                                            ;
+  [:!W#Pbackslash [:!Sf12]]                                                                        ;
+  ; [:!W#Pcomma []]                                                                                ;
+  ; [:!W#Pperiod []]                                                                               ;
+  [:!W#Pslash [:!Sf20]]                                                                            ;
+
+  [:!W#Pdelete_or_backspace [:!Wr]]                                                                ;
+  [:!W#Preturn_or_enter [:!Ws]]                                                                    ;
+  [:!W#Pright_shift [:!Wt]]                                                                        ;
+  ; [:!W#Pright_option []]                                                                         ;
+  ; [:!W#Pright_command []]                                                                        ;
+  [:!W#Pspacebar [:f7]]                                                                            ;
+
+  ; [:!W#Pleft_command []]                                                                         ;
+  ; [:!W#Pleft_option []]                                                                          ;
+  ; [:!W#Pleft_control []]                                                                         ;
+  ; [:!W#Pleft_shift []]                                                                           ;
+  ; [:!W#Pcaps_lock []]                                                                            ;
+  ; [:!W#Ptab []]                                                                                  ;
+  ; [:!W#Pkeypad_num_lock []]                                                                      ;
+  ; [:!W#Pescape []]                                                                               ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; control - shift
+{:des "Control Mode - symbols"
+ :rules
+ [;
+  [:!WS#Pleft_arrow [:!WSpage_up] [:term]]                                                         ;
+  [:!WS#Pright_arrow [:!WSpage_down] [:term]]                                                      ;
+  [:!WS#Pup_arrow [:!WShome] [:term]]                                                              ;
+  [:!WS#Pdown_arrow [:!WSend] [:term]]                                                             ;
+ ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
