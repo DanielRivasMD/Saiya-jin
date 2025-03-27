@@ -6,6 +6,18 @@
 {:des "Control Mode - symbols"
  :rules
  [;
+  ; [:!T#Pleft_arrow [] [:term]]                                                                   ;
+  ; [:!T#Pright_arrow [] [:term]]                                                                  ;
+  ; [:!T#Pup_arrow [] [:term]]                                                                     ;
+  ; [:!T#Pdown_arrow [] [:term]]                                                                   ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; control
+{:des "Control Mode - symbols"
+ :rules
+ [;
   [:!T#Popen_bracket [:open_bracket :open_bracket]]                                                ; '[['
   [:!T#Pclose_bracket [:close_bracket :close_bracket]]                                             ; ']]'
   [:!T#Psemicolon [:!Ssemicolon :!Ssemicolon]]                                                     ; '::'
@@ -31,6 +43,18 @@
   ; [:!T#Pkeypad_num_lock []]                                                                      ;
   ; [:!T#Pescape []]                                                                               ;
   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; control - shift
+{:des "Control Mode - symbols"
+ :rules
+ [;
+  ; [:!TS#Pleft_arrow [] [:term]]                                                                  ;
+  ; [:!TS#Pright_arrow [] [:term]]                                                                 ;
+  ; [:!TS#Pup_arrow [] [:term]]                                                                    ;
+  ; [:!TS#Pdown_arrow [] [:term]]                                                                  ;
+ ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
