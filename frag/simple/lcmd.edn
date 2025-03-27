@@ -6,6 +6,18 @@
 {:des "Command Mode - symbols"
  :rules
  [;
+  ; [:!C#Pleft_arrow [] [:term]]                                                                   ;
+  ; [:!C#Pright_arrow [] [:term]]                                                                  ;
+  [:!C#Pup_arrow [:home] [:term]]                                                                  ;
+  [:!C#Pdown_arrow [:end] [:term]]                                                                 ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command
+{:des "Command Mode - symbols"
+ :rules
+ [;
   [:!C#Popen_bracket [:!S3 :open_bracket]]                                                         ; '#['
   [:!C#Pclose_bracket [:close_bracket :spacebar]]                                                  ; '] '
   [:!C#Psemicolon [:semicolon :spacebar]]                                                          ; '; '
@@ -20,7 +32,7 @@
   [:!C#Pright_shift [:period :period]]                                                             ; '..'
   [:!C#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                                       ; ' *= '
   [:!C#Pright_command [:spacebar :slash :equal_sign :spacebar]]                                    ; ' /= '
-  [:!C#Pspacebar [:!Sf7]]                                                                          ;
+  ; [:!C#Pspacebar [:!Sf7]]                                                                          ;
 
   ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
   ; [:!C#Pleft_option []]                                                                          ;
@@ -30,6 +42,18 @@
   ; [:!C#Ptab []]                                                                                  ;
   ; [:!C#Pkeypad_num_lock []]                                                                      ;
   ; [:!C#Pescape []]                                                                               ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command
+{:des "Command Mode - symbols"
+ :rules
+ [;
+  [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]                                                       ;
+  [:!CS#Pright_arrow [:!Oright_arrow] [:term]]                                                     ;
+  [:!CS#Pup_arrow [:!Oup_arrow] [:term]]                                                           ;
+  [:!CS#Pdown_arrow [:!Odown_arrow] [:term]]                                                       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
