@@ -6,6 +6,20 @@
 {:des "Option - Control Mode - symbols"
  :rules
  [;
+  ; pane control - bound for zellij
+  [:!OT#Pleft_arrow :!Oj [:term]]                          ; alt-ctl-left      ;                   ;
+  [:!OT#Pright_arrow :!Ok [:term]]                         ; alt-ctl-right     ;                   ;
+  [:!OT#Pup_arrow :!Ol [:term]]                            ; alt-ctl-up        ;                   ;
+  [:!OT#Pdown_arrow :!Om [:term]]                          ; alt-ctl-down      ;                   ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option - control
+{:des "Option - Control Mode - symbols"
+ :rules
+ [;
+  ; pane control - bound for zellij
   ; [:!OT#Popen_bracket []]                                                                        ;
   ; [:!OT#Pclose_bracket []]                                                                       ;
   ; [:!OT#Psemicolon []]                                                                           ;
@@ -15,12 +29,13 @@
   ; [:!OT#Pperiod []]                                                                              ;
   ; [:!OT#Pslash []]                                                                               ;
 
-  ; [:!OT#Pdelete_or_backspace []]                                                                 ;
-  ; [:!OT#Preturn_or_enter []]                                                                     ;
-  ; [:!OT#Pright_shift []]                                                                         ;
-  ; [:!OT#Pright_option []]                                                                        ;
-  ; [:!OT#Pright_command []]                                                                       ;
-  ; [:!OT#Pspacebar []]                                                                            ;
+  ; pane control - bound for zellij
+  [:!OT#Pdelete_or_backspace :!Oo [:term]]                 ; alt-ctl-bspace    ; close             ;
+  [:!OT#Preturn_or_enter :!Op [:term]]                     ; alt-ctl-enter     ; focus             ;
+  [:!OT#Pright_shift :!Oq [:term]]                         ; alt-ctl-shift     ; spawn new right   ;
+  [:!OT#Pright_option :!Or [:term]]                        ; alt-ctl-alt       ; spawn new down    ;
+  [:!OT#Pright_command :!Os [:term]]                       ; alt-ctl-cmd       ; float             ;
+  [:!OT#Pspacebar :!Ot [:term]]                            ; alt-ctl-space     ; jump back         ;
 
   ; [:!OTleft_command []]                                                                          ;
   ; [:!OT#Pleft_option []]                                                          NOT AVAILABLE  ;
