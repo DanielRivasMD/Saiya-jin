@@ -6,10 +6,10 @@
 {:des "Control Mode - symbols"
  :rules
  [;
-  ; [:!T#Pleft_arrow [] [:term]]                                                                   ;
-  ; [:!T#Pright_arrow [] [:term]]                                                                  ;
-  ; [:!T#Pup_arrow [] [:term]]                                                                     ;
-  ; [:!T#Pdown_arrow [] [:term]]                                                                   ;
+  ; [:!T#Pleft_arrow []]                                                                           ;
+  ; [:!T#Pright_arrow []]                                                                          ;
+  ; [:!T#Pup_arrow []]                                                                             ;
+  ; [:!T#Pdown_arrow []]                                                                           ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -34,14 +34,14 @@
   [:!T#Pright_command [:spacebar :slash :slash :spacebar]]                                         ; ' // '
   ; [:!T#Pspacebar []]                                                              DEFAULT        ;
 
-  ; [:!T#Pleft_command []]                                                                         ;
-  ; [:!T#Pleft_option []]                                                                          ;
+  ; [:!T#Pleft_command []]                                                          NOT USEFUL     ;
+  ; [:!T#Pleft_option []]                                                           NOT USEFUL     ;
   ; [:!T#Pleft_control []]                                                          NOT AVAILABLE  ;
-  ; [:!T#Pleft_shift []]                                                                           ;
-  ; [:!T#Pcaps_lock []]                                                                            ;
-  ; [:!T#Ptab []]                                                                                  ;
-  ; [:!T#Pkeypad_num_lock []]                                                                      ;
-  ; [:!T#Pescape []]                                                                               ;
+  ; [:!T#Pleft_shift []]                                                            NOT USEFUL     ;
+  ; [:!T#Pcaps_lock []]                                                             NOT USEFUL     ;
+  ; [:!T#Ptab []]                                                                   NOT USEFUL     ;
+  ; [:!T#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
+  ; [:!T#Pescape []]                                                                NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -50,10 +50,10 @@
 {:des "Control Mode - symbols"
  :rules
  [;
-  ; [:!TS#Pleft_arrow [] [:term]]                                                                  ;
-  ; [:!TS#Pright_arrow [] [:term]]                                                                 ;
-  ; [:!TS#Pup_arrow [] [:term]]                                                                    ;
-  ; [:!TS#Pdown_arrow [] [:term]]                                                                  ;
+  ; [:!TS#Pleft_arrow []]                                                                          ;
+  ; [:!TS#Pright_arrow []]                                                                         ;
+  ; [:!TS#Pup_arrow []]                                                                            ;
+  ; [:!TS#Pdown_arrow []]                                                                          ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -78,14 +78,14 @@
   [:!TS#Pright_command [:spacebar :period :slash :slash :spacebar]]                                ; ' .// '
   ; [:!TS#Pspacebar []]                                                                            ;
 
-  ; [:!TS#Pleft_command []]                                                                        ;
-  ; [:!TS#Pleft_option []]                                                                         ;
+  ; [:!TS#Pleft_command []]                                                         NOT USEFUL     ;
+  ; [:!TS#Pleft_option []]                                                          NOT USEFUL     ;
   ; [:!TS#Pleft_control []]                                                         NOT AVAILABLE  ;
   ; [:!TS#Pleft_shift []]                                                           NOT AVAILABLE  ;
-  ; [:!TS#Pcaps_lock []]                                                                           ;
-  ; [:!TS#Ptab []]                                                                                 ;
-  ; [:!TS#Pkeypad_num_lock []]                                                                     ;
-  ; [:!TS#Pescape []]                                                                              ;
+  ; [:!TS#Pcaps_lock []]                                                            NOT USEFUL     ;
+  ; [:!TS#Ptab []]                                                                  NOT USEFUL     ;
+  ; [:!TS#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
+  ; [:!TS#Pescape []]                                                               NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
