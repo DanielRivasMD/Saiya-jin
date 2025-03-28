@@ -6,8 +6,8 @@
 {:des "Option Mode - symbols"
  :rules
  [;
-  ; [:!O#Pleft_arrow [] [:term]]                                                                   ;
-  ; [:!O#Pright_arrow [] [:term]]                                                                  ;
+  ; [:!O#Pleft_arrow []]                                                                           ;
+  ; [:!O#Pright_arrow []]                                                                          ;
   [:!O#Pup_arrow [:page_up] [:term]]                                                               ;
   [:!O#Pdown_arrow [:page_down] [:term]]                                                           ;
  ]}
@@ -34,14 +34,14 @@
   [:!O#Pright_command [:spacebar :slash :spacebar]]                                                ; ' / '
   [:!O#Pspacebar [:!OCnon_us_pound]]                                           ;    ALFRED         ;
 
-  ; [:!O#Pleft_command []]                                                                         ;
+  ; [:!O#Pleft_command []]                                                          NOT USEFUL     ;
   ; [:!O#Pleft_option []]                                                           NOT AVAILABLE  ;
-  ; [:!O#Pleft_control []]                                                                         ;
-  ; [:!O#Pleft_shift []]                                                                           ;
-  ; [:!O#Pcaps_lock []]                                                                            ;
-  ; [:!O#Ptab []]                                                                                  ;
-  ; [:!O#Pkeypad_num_lock []]                                                                      ;
-  ; [:!O#Pescape []]                                                                               ;
+  ; [:!O#Pleft_control []]                                                          NOT USEFUL     ;
+  ; [:!O#Pleft_shift []]                                                            NOT USEFUL     ;
+  ; [:!O#Pcaps_lock []]                                                             NOT USEFUL     ;
+  ; [:!O#Ptab []]                                                                   NOT USEFUL     ;
+  ; [:!O#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
+  ; [:!O#Pescape []]                                                                NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -78,14 +78,14 @@
   [:!OS#Pright_command [:spacebar :period :slash :spacebar]]                                       ; ' ./ '
   [:!OS#Pspacebar [:!OCSnon_us_pound]]                                         ;    ALFRED         ;
 
-  ; [:!OS#Pleft_command []]                                                                        ;
+  ; [:!OS#Pleft_command []]                                                         NOT USEFUL     ;
   ; [:!OS#Pleft_option []]                                                          NOT AVAILABLE  ;
-  ; [:!OS#Pleft_control []]                                                                        ;
+  ; [:!OS#Pleft_control []]                                                         NOT USEFUL     ;
   ; [:!OS#Pleft_shift []]                                                           NOT AVAILABLE  ;
-  ; [:!OS#Pcaps_lock []]                                                                           ;
-  ; [:!OS#Ptab []]                                                                                 ;
-  ; [:!OS#Pkeypad_num_lock []]                                                                     ;
-  ; [:!OS#Pescape []]                                                                              ;
+  ; [:!OS#Pcaps_lock []]                                                            NOT USEFUL     ;
+  ; [:!OS#Ptab []]                                                                  NOT USEFUL     ;
+  ; [:!OS#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
+  ; [:!OS#Pescape []]                                                               NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
