@@ -6,8 +6,8 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  ; [:!C#Pleft_arrow [] [:term]]                                                                   ;
-  ; [:!C#Pright_arrow [] [:term]]                                                                  ;
+  ; [:!C#Pleft_arrow []]                                                                           ;
+  ; [:!C#Pright_arrow []]                                                                          ;
   [:!C#Pup_arrow [:home] [:term]]                                                                  ;
   [:!C#Pdown_arrow [:end] [:term]]                                                                 ;
   ]}
@@ -35,13 +35,13 @@
   ; [:!C#Pspacebar [:!Sf7]]                                                                          ;
 
   ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
-  ; [:!C#Pleft_option []]                                                                          ;
-  ; [:!C#Pleft_control []]                                                                         ;
-  ; [:!C#Pleft_shift []]                                                                           ;
-  ; [:!C#Pcaps_lock []]                                                                            ;
-  ; [:!C#Ptab []]                                                                                  ;
-  ; [:!C#Pkeypad_num_lock []]                                                                      ;
-  ; [:!C#Pescape []]                                                                               ;
+  ; [:!C#Pleft_option []]                                                           NOT USEFUL     ;
+  ; [:!C#Pleft_control []]                                                          NOT USEFUL     ;
+  ; [:!C#Pleft_shift []]                                                            NOT USEFUL     ;
+  ; [:!C#Pcaps_lock []]                                                             NOT USEFUL     ;
+  ; [:!C#Ptab []]                                                                   NOT USEFUL     ;
+  ; [:!C#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
+  ; [:!C#Pescape []]                                                                NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -76,16 +76,16 @@
   [:!CS#Pright_shift [:period :period :period]]                                                    ; '...'
   [:!CS#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]                              ; ' .*= '
   [:!CS#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]                           ; ' ./= '
-  ; [:!CS#Pspacebar []]                                                             TODO:          ;
+  ; [:!CS#Pspacebar []]                                                                            ;
 
   ; [:!CS#Pleft_command []]                                                         NOT AVAILABLE  ;
-  ; [:!CS#Pleft_option []]                                                                         ;
-  ; [:!CS#Pleft_control []]                                                                        ;
+  ; [:!CS#Pleft_option []]                                                          NOT USEFUL     ;
+  ; [:!CS#Pleft_control []]                                                         NOT USEFUL     ;
   ; [:!CS#Pleft_shift []]                                                           NOT AVAILABLE  ;
-  ; [:!CS#Pcaps_lock []]                                                                           ;
-  ; [:!CS#Ptab []]                                                                                 ;
-  ; [:!CS#Pkeypad_num_lock []]                                                                     ;
-  ; [:!CS#Pescape []]                                                                              ;
+  ; [:!CS#Pcaps_lock []]                                                            NOT USEFUL     ;
+  ; [:!CS#Ptab []]                                                                  NOT USEFUL     ;
+  ; [:!CS#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
+  ; [:!CS#Pescape []]                                                               NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
