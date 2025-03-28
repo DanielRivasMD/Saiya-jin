@@ -19,11 +19,11 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
-  [:!ROTC#Popen_bracket [:launch "Slack"]]                                                         ;
+  ; [:!ROTC#Popen_bracket []]                                                                      ;
   ; [:!ROTC#Pclose_bracket []]                                                                     ;
-  [:!ROTC#Psemicolon [:launch "Microsoft PowerPoint"]]                                             ;
-  [:!ROTC#Pquote [:launch "Microsoft Excel"]]                                                      ;
-  [:!ROTC#Pbackslash [:launch "Microsoft Word"]]                                                   ;
+  ; [:!ROTC#Psemicolon []]                                                                         ;
+  ; [:!ROTC#Pquote []]                                                                             ;
+  ; [:!ROTC#Pbackslash []]                                                                         ;
   ; [:!ROTC#Pcomma []]                                                              COLLISION      ;
   ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
   [:!ROTC#Pslash [:launch "Skim"]]                                                                 ;
@@ -35,14 +35,14 @@
   [:!ROTC#Pright_command [:launch "Zed"]]                                                          ;
   ; [:!ROTC#Pspacebar []]                                                           COLLISION      ;
 
-  ; [:!ROTC#Pleft_command []]                                                                      ;
-  ; [:!ROTC#Pleft_option []]                                                                       ;
-  ; [:!ROTC#Pleft_control []]                                                                      ;
-  ; [:!ROTC#Pleft_shift []]                                                                        ;
-  ; [:!ROTC#Pcaps_lock []]                                                                         ;
+  ; [:!ROTC#Pleft_command []]                                                       NOT USEFUL     ;
+  ; [:!ROTC#Pleft_option []]                                                        NOT USEFUL     ;
+  ; [:!ROTC#Pleft_control []]                                                       NOT USEFUL     ;
+  ; [:!ROTC#Pleft_shift []]                                                         NOT USEFUL     ;
+  ; [:!ROTC#Pcaps_lock []]                                                          NOT USEFUL     ;
   ; [:!ROTC#Ptab []]                                                                NOT AVAILABLE  ;
-  ; [:!ROTC#Pkeypad_num_lock []]                                                                   ;
-  ; [:!ROTC#Pescape []]                                                                            ;
+  ; [:!ROTC#Pkeypad_num_lock []]                                                    NOT USEFUL     ;
+  ; [:!ROTC#Pescape []]                                                             NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
