@@ -6,21 +6,21 @@
 {:des "ESC Mode - symbols"
  :rules
  [;
-  [:!EWR#Popen_bracket [:!OSf13]]                                                                  ;
-  [:!EWR#Pclose_bracket [:!OSf14]]                                                                 ;
-  [:!EWR#Psemicolon [:!OSf18]]                                                                     ;
-  [:!EWR#Pquote [:!OSf19]]                                                                         ;
-  [:!EWR#Pbackslash [:!OSf20]]                                                                     ;
-  [:!EWR#Pcomma [:!OTSf18]]                                                                        ;
-  [:!EWR#Pperiod [:!OTSf19]]                                                                       ;
-  [:!EWR#Pslash [:!OTSf20]]                                                                        ;
+  ; [:!EWR#Popen_bracket []]                                                                       ;
+  ; [:!EWR#Pclose_bracket []]                                                                      ;
+  ; [:!EWR#Psemicolon []]                                                                          ;
+  ; [:!EWR#Pquote []]                                                                              ;
+  ; [:!EWR#Pbackslash []]                                                                          ;
+  ; [:!EWR#Pcomma []]                                                                              ;
+  ; [:!EWR#Pperiod []]                                                                             ;
+  ; [:!EWR#Pslash []]                                                                              ;
 
-  [:!EWR#Pdelete_or_backspace [:!TSf11]]                                                           ;
-  [:!EWR#Preturn_or_enter [:!TSf12]]                                                               ;
-  [:!EWR#Pright_shift [:!TSf13]]                                                                   ;
-  [:!EWR#Pright_option [:!TSf18]]                                                                  ;
-  [:!EWR#Pright_command [:!TSf19]]                                                                 ;
-  [:!EWR#Pspacebar [:!TSf20]]                                                                      ;
+  ; [:!EWR#Pdelete_or_backspace []]                                                                ;
+  ; [:!EWR#Preturn_or_enter []]                                                                    ;
+  ; [:!EWR#Pright_shift []]                                                                        ;
+  ; [:!EWR#Pright_option []]                                                                       ;
+  ; [:!EWR#Pright_command []]                                                                      ;
+  ; [:!EWR#Pspacebar []]                                                                           ;
 
   ; [:!EWR#Pleft_command []]                                                                       ;
   ; [:!EWR#Pleft_option []]                                                                        ;
@@ -61,8 +61,8 @@
   ; [:!EWR#8 []]                                                                                   ;
   ; [:!EWR#9 []]                                                                                   ;
   ; [:!EWR#0 []]                                                                                   ;
-  [:!EWR#Phyphen [:!OSf11]]                                                                        ;
-  [:!EWR#Pequal_sign [:!OSf12]]                                                                    ;
+  ; [:!EWR#Phyphen []]                                                                             ;
+  ; [:!EWR#Pequal_sign []]                                                                         ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
