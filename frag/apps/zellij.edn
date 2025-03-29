@@ -12,7 +12,7 @@
 
   [:#Pleft_option :left_option [:term] {:alone [:!Oa]}]    ; alt               ;                   ;
 
-  [:!O#Pleft_arrow :!Ob [:term]]                           ; alt-left          ; cursor movement   ;
+  ; [:!O#Pleft_arrow :!Ob [:term]]                           ; alt-left          ; cursor movement   ;
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ; [: :!Oc [:term]]                                                                COLLISION      ;
@@ -20,7 +20,7 @@
   ; [: :!Oe [:term]]                                                                COLLISION      ;
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  [:!O#Pright_arrow :!Of [:term]]                          ; alt-right         ; cursor movement
+  ; [:!O#Pright_arrow :!Of [:term]]                          ; alt-right         ; cursor movement
   [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]      ; esc               ; pop-up window
   [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history editor
 
@@ -93,16 +93,16 @@
   ; [:!EQ#Pright_command :!SOp [:term]]                       ; alt-cmd           ;                   ;
   ; [:!EQ#Pright_control :!SOq [:term]]                       ; alt-ctl           ;                   ;
 
-  ; tab control - alt-cmd
-  [:!OC#P1 :!SOr [:term]]                                  ; alt-cmd-1         ;                   ;
-  [:!OC#P2 :!SOs [:term]]                                  ; alt-cmd-2         ;                   ;
-  [:!OC#P3 :!SOt [:term]]                                  ; alt-cmd-3         ;                   ;
-  [:!OC#P4 :!SOu [:term]]                                  ; alt-cmd-4         ;                   ;
-  [:!OC#P5 :!SOv [:term]]                                  ; alt-cmd-5         ;                   ;
-  [:!OC#P6 :!SOw [:term]]                                  ; alt-cmd-6         ;                   ;
-  [:!OC#P7 :!SOx [:term]]                                  ; alt-cmd-7         ;                   ;
-  [:!OC#P8 :!SOy [:term]]                                  ; alt-cmd-8         ;                   ;
-  [:!OC#P9 :!SOz [:term]]                                  ; alt-cmd-9         ;                   ;
+  ; ; tab control - alt-cmd
+  ; [:!OC#P1 :!SOr [:term]]                                  ; alt-cmd-1         ;                   ;
+  ; [:!OC#P2 :!SOs [:term]]                                  ; alt-cmd-2         ;                   ;
+  ; [:!OC#P3 :!SOt [:term]]                                  ; alt-cmd-3         ;                   ;
+  ; [:!OC#P4 :!SOu [:term]]                                  ; alt-cmd-4         ;                   ;
+  ; [:!OC#P5 :!SOv [:term]]                                  ; alt-cmd-5         ;                   ;
+  ; [:!OC#P6 :!SOw [:term]]                                  ; alt-cmd-6         ;                   ;
+  ; [:!OC#P7 :!SOx [:term]]                                  ; alt-cmd-7         ;                   ;
+  ; [:!OC#P8 :!SOy [:term]]                                  ; alt-cmd-8         ;                   ;
+  ; [:!OC#P9 :!SOz [:term]]                                  ; alt-cmd-9         ;                   ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -111,17 +111,17 @@
 {:des "Terminal zellij bindings - keypad"
  :rules
  [;
-  ; tab control - alt-cmd
-  [:!OC#Pkeypad_0 :!SOn [:term]]                           ; alt-cmd-0         ;                   ;
-  [:!OC#Pkeypad_1 :!SOr [:term]]                           ; alt-cmd-1         ;                   ;
-  [:!OC#Pkeypad_2 :!SOs [:term]]                           ; alt-cmd-2         ;                   ;
-  [:!OC#Pkeypad_3 :!SOt [:term]]                           ; alt-cmd-3         ;                   ;
-  [:!OC#Pkeypad_4 :!SOu [:term]]                           ; alt-cmd-4         ;                   ;
-  [:!OC#Pkeypad_5 :!SOv [:term]]                           ; alt-cmd-5         ;                   ;
-  [:!OC#Pkeypad_6 :!SOw [:term]]                           ; alt-cmd-6         ;                   ;
-  [:!OC#Pkeypad_7 :!SOx [:term]]                           ; alt-cmd-7         ;                   ;
-  [:!OC#Pkeypad_8 :!SOy [:term]]                           ; alt-cmd-8         ;                   ;
-  [:!OC#Pkeypad_9 :!SOz [:term]]                           ; alt-cmd-9         ;                   ;
+  ; ; tab control - alt-cmd
+  ; [:!OC#Pkeypad_0 :!SOn [:term]]                           ; alt-cmd-0         ;                   ;
+  ; [:!OC#Pkeypad_1 :!SOr [:term]]                           ; alt-cmd-1         ;                   ;
+  ; [:!OC#Pkeypad_2 :!SOs [:term]]                           ; alt-cmd-2         ;                   ;
+  ; [:!OC#Pkeypad_3 :!SOt [:term]]                           ; alt-cmd-3         ;                   ;
+  ; [:!OC#Pkeypad_4 :!SOu [:term]]                           ; alt-cmd-4         ;                   ;
+  ; [:!OC#Pkeypad_5 :!SOv [:term]]                           ; alt-cmd-5         ;                   ;
+  ; [:!OC#Pkeypad_6 :!SOw [:term]]                           ; alt-cmd-6         ;                   ;
+  ; [:!OC#Pkeypad_7 :!SOx [:term]]                           ; alt-cmd-7         ;                   ;
+  ; [:!OC#Pkeypad_8 :!SOy [:term]]                           ; alt-cmd-8         ;                   ;
+  ; [:!OC#Pkeypad_9 :!SOz [:term]]                           ; alt-cmd-9         ;                   ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -131,33 +131,33 @@
 {:des "Terminal alt - alphabet"
  :rules
  [;
-  [:!O#Pa :!Of1 [:term]]                                                                           ;
-  [:!O#Pb :!Of2 [:term]]                                                                           ;
-  [:!O#Pc :!Of4 [:term]]                                                                           ;
-  [:!O#Pd :!Of5 [:term]]                                                                           ;
-  [:!O#Pe :!Of6 [:term]]                                                                           ;
-  [:!O#Pf :!Of7 [:term]]                                                                           ;
-  [:!O#Pg :!Of8 [:term]]                                                                           ;
-  [:!O#Ph :!Of9 [:term]]                                                                           ;
-  [:!O#Pi :!Of10 [:term]]                                                                          ;
-  [:!O#Pj :!Tf1 [:term]]                                                                           ;
-  [:!O#Pk :!Tf2 [:term]]                                                                           ;
-  [:!O#Pl :!Tf4 [:term]]                                                                           ;
-  [:!O#Pm :!Tf5 [:term]]                                                                           ;
-  [:!O#Pn :!Tf6 [:term]]                                                                           ;
-  [:!O#Po :!Tf7 [:term]]                                                                           ;
-  [:!O#Pp :!Tf8 [:term]]                                                                           ;
-  [:!O#Pq :!Tf9 [:term]]                                                                           ;
-  [:!O#Pr :!Tf10 [:term]]                                                                          ;
-  [:!O#Ps :!OTf1 [:term]]                                                                          ;
-  [:!O#Pt :!OTf2 [:term]]                                                                          ;
-  [:!O#Pu :!OTf4 [:term]]                                                                          ;
-  [:!O#Pv :!OTf5 [:term]]                                                                          ;
-  [:!O#Pw :!OTf6 [:term]]                                                                          ;
-  [:!O#Px :!OTf7 [:term]]                                                                          ;
-  [:!O#Py :!OTf8 [:term]]                                                                          ;
-  [:!O#Pz :!OTf9 [:term]]                                                                          ;
-  [:!O#Pright_control :!OTf10 [:term]]                                                             ;
+  ; [:!O#Pa :!Of1 [:term]]                                                                           ;
+  ; [:!O#Pb :!Of2 [:term]]                                                                           ;
+  ; [:!O#Pc :!Of4 [:term]]                                                                           ;
+  ; [:!O#Pd :!Of5 [:term]]                                                                           ;
+  ; [:!O#Pe :!Of6 [:term]]                                                                           ;
+  ; [:!O#Pf :!Of7 [:term]]                                                                           ;
+  ; [:!O#Pg :!Of8 [:term]]                                                                           ;
+  ; [:!O#Ph :!Of9 [:term]]                                                                           ;
+  ; [:!O#Pi :!Of10 [:term]]                                                                          ;
+  ; [:!O#Pj :!Tf1 [:term]]                                                                           ;
+  ; [:!O#Pk :!Tf2 [:term]]                                                                           ;
+  ; [:!O#Pl :!Tf4 [:term]]                                                                           ;
+  ; [:!O#Pm :!Tf5 [:term]]                                                                           ;
+  ; [:!O#Pn :!Tf6 [:term]]                                                                           ;
+  ; [:!O#Po :!Tf7 [:term]]                                                                           ;
+  ; [:!O#Pp :!Tf8 [:term]]                                                                           ;
+  ; [:!O#Pq :!Tf9 [:term]]                                                                           ;
+  ; [:!O#Pr :!Tf10 [:term]]                                                                          ;
+  ; [:!O#Ps :!OTf1 [:term]]                                                                          ;
+  ; [:!O#Pt :!OTf2 [:term]]                                                                          ;
+  ; [:!O#Pu :!OTf4 [:term]]                                                                          ;
+  ; [:!O#Pv :!OTf5 [:term]]                                                                          ;
+  ; [:!O#Pw :!OTf6 [:term]]                                                                          ;
+  ; [:!O#Px :!OTf7 [:term]]                                                                          ;
+  ; [:!O#Py :!OTf8 [:term]]                                                                          ;
+  ; [:!O#Pz :!OTf9 [:term]]                                                                          ;
+  ; [:!O#Pright_control :!OTf10 [:term]]                                                             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -166,33 +166,33 @@
 {:des "Terminal alt - alphabet"
  :rules
  [;
-  [:!SO#Pa :!SOf1 [:term]]                                                                         ;
-  [:!SO#Pb :!SOf2 [:term]]                                                                         ;
-  [:!SO#Pc :!SOf4 [:term]]                                                                         ;
-  [:!SO#Pd :!SOf5 [:term]]                                                                         ;
-  [:!SO#Pe :!SOf6 [:term]]                                                                         ;
-  [:!SO#Pf :!SOf7 [:term]]                                                                         ;
-  [:!SO#Pg :!SOf8 [:term]]                                                                         ;
-  [:!SO#Ph :!SOf9 [:term]]                                                                         ;
-  [:!SO#Pi :!SOf10 [:term]]                                                                        ;
-  [:!SO#Pj :!STf1 [:term]]                                                                         ;
-  [:!SO#Pk :!STf2 [:term]]                                                                         ;
-  [:!SO#Pl :!STf4 [:term]]                                                                         ;
-  [:!SO#Pm :!STf5 [:term]]                                                                         ;
-  [:!SO#Pn :!STf6 [:term]]                                                                         ;
-  [:!SO#Po :!STf7 [:term]]                                                                         ;
-  [:!SO#Pp :!STf8 [:term]]                                                                         ;
-  [:!SO#Pq :!STf9 [:term]]                                                                         ;
-  [:!SO#Pr :!STf10 [:term]]                                                                        ;
-  [:!SO#Ps :!SOTf1 [:term]]                                                                        ;
-  [:!SO#Pt :!SOTf2 [:term]]                                                                        ;
-  [:!SO#Pu :!SOTf4 [:term]]                                                                        ;
-  [:!SO#Pv :!SOTf5 [:term]]                                                                        ;
-  [:!SO#Pw :!SOTf6 [:term]]                                                                        ;
-  [:!SO#Px :!SOTf7 [:term]]                                                                        ;
-  [:!SO#Py :!SOTf8 [:term]]                                                                        ;
-  [:!SO#Pz :!SOTf9 [:term]]                                                                        ;
-  [:!SO#Pright_control :!SOTf10 [:term]]                                                           ;
+  ; [:!SO#Pa :!SOf1 [:term]]                                                                         ;
+  ; [:!SO#Pb :!SOf2 [:term]]                                                                         ;
+  ; [:!SO#Pc :!SOf4 [:term]]                                                                         ;
+  ; [:!SO#Pd :!SOf5 [:term]]                                                                         ;
+  ; [:!SO#Pe :!SOf6 [:term]]                                                                         ;
+  ; [:!SO#Pf :!SOf7 [:term]]                                                                         ;
+  ; [:!SO#Pg :!SOf8 [:term]]                                                                         ;
+  ; [:!SO#Ph :!SOf9 [:term]]                                                                         ;
+  ; [:!SO#Pi :!SOf10 [:term]]                                                                        ;
+  ; [:!SO#Pj :!STf1 [:term]]                                                                         ;
+  ; [:!SO#Pk :!STf2 [:term]]                                                                         ;
+  ; [:!SO#Pl :!STf4 [:term]]                                                                         ;
+  ; [:!SO#Pm :!STf5 [:term]]                                                                         ;
+  ; [:!SO#Pn :!STf6 [:term]]                                                                         ;
+  ; [:!SO#Po :!STf7 [:term]]                                                                         ;
+  ; [:!SO#Pp :!STf8 [:term]]                                                                         ;
+  ; [:!SO#Pq :!STf9 [:term]]                                                                         ;
+  ; [:!SO#Pr :!STf10 [:term]]                                                                        ;
+  ; [:!SO#Ps :!SOTf1 [:term]]                                                                        ;
+  ; [:!SO#Pt :!SOTf2 [:term]]                                                                        ;
+  ; [:!SO#Pu :!SOTf4 [:term]]                                                                        ;
+  ; [:!SO#Pv :!SOTf5 [:term]]                                                                        ;
+  ; [:!SO#Pw :!SOTf6 [:term]]                                                                        ;
+  ; [:!SO#Px :!SOTf7 [:term]]                                                                        ;
+  ; [:!SO#Py :!SOTf8 [:term]]                                                                        ;
+  ; [:!SO#Pz :!SOTf9 [:term]]                                                                        ;
+  ; [:!SO#Pright_control :!SOTf10 [:term]]                                                           ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
