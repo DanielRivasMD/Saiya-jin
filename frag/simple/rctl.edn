@@ -6,11 +6,11 @@
 {:des "Control Mode - symbols"
  :rules
  [;
-  [:!W#Pleft_arrow [:!Wpage_up] [:term]]                                                           ;
-  [:!W#Pright_arrow [:!Wpage_down] [:term]]                                                        ;
-  [:!W#Pup_arrow [:!Whome] [:term]]                                                                ;
-  [:!W#Pdown_arrow [:!Wend] [:term]]                                                               ;
- ]}
+  ; [:!W#Pleft_arrow [:!Wpage_up] [:term]]                                                           ;
+  ; [:!W#Pright_arrow [:!Wpage_down] [:term]]                                                        ;
+  ; [:!W#Pup_arrow [:!Whome] [:term]]                                                                ;
+  ; [:!W#Pdown_arrow [:!Wend] [:term]]                                                               ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -18,14 +18,14 @@
 {:des "Control Mode - symbols"
  :rules
  [;
-  [:!W#Popen_bracket [:!Sf8]]                                                                      ;
-  [:!W#Pclose_bracket [:!Sf9]]                                                                     ;
-  [:!W#Psemicolon [:!Sf10]]                                                                        ;
-  [:!W#Pquote [:!Sf11]]                                                                            ;
-  [:!W#Pbackslash [:!Sf12]]                                                                        ;
+  ; [:!W#Popen_bracket []]                                                                         ;
+  ; [:!W#Pclose_bracket []]                                                                        ;
+  ; [:!W#Psemicolon []]                                                                            ;
+  ; [:!W#Pquote []]                                                                                ;
+  ; [:!W#Pbackslash []]                                                                            ;
   ; [:!W#Pcomma []]                                                                                ;
   ; [:!W#Pperiod []]                                                                               ;
-  [:!W#Pslash [:!Sf20]]                                                                            ;
+  ; [:!W#Pslash []]                                                                                ;
 
   [:!W#Pdelete_or_backspace [:!Wr]]                                                                ;
   [:!W#Preturn_or_enter [:!Ws]]                                                                    ;
@@ -34,14 +34,14 @@
   ; [:!W#Pright_command []]                                                                        ;
   [:!W#Pspacebar [:f7]]                                                                            ;
 
-  ; [:!W#Pleft_command []]                                                                         ;
-  ; [:!W#Pleft_option []]                                                                          ;
-  ; [:!W#Pleft_control []]                                                                         ;
-  ; [:!W#Pleft_shift []]                                                                           ;
-  ; [:!W#Pcaps_lock []]                                                                            ;
-  ; [:!W#Ptab []]                                                                                  ;
-  ; [:!W#Pkeypad_num_lock []]                                                                      ;
-  ; [:!W#Pescape []]                                                                               ;
+  ; [:!W#Pleft_command []]                                                          NOT USEFUL     ;
+  ; [:!W#Pleft_option []]                                                           NOT USEFUL     ;
+  ; [:!W#Pleft_control []]                                                          NOT USEFUL     ;
+  ; [:!W#Pleft_shift []]                                                            NOT USEFUL     ;
+  ; [:!W#Pcaps_lock []]                                                             NOT USEFUL     ;
+  ; [:!W#Ptab []]                                                                   NOT USEFUL     ;
+  ; [:!W#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
+  ; [:!W#Pescape []]                                                                NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -50,10 +50,10 @@
 {:des "Control Mode - symbols"
  :rules
  [;
-  [:!WS#Pleft_arrow [:!WSpage_up] [:term]]                                                         ;
-  [:!WS#Pright_arrow [:!WSpage_down] [:term]]                                                      ;
-  [:!WS#Pup_arrow [:!WShome] [:term]]                                                              ;
-  [:!WS#Pdown_arrow [:!WSend] [:term]]                                                             ;
+  ; [:!WS#Pleft_arrow [:!WSpage_up] [:term]]                                                         ;
+  ; [:!WS#Pright_arrow [:!WSpage_down] [:term]]                                                      ;
+  ; [:!WS#Pup_arrow [:!WShome] [:term]]                                                              ;
+  ; [:!WS#Pdown_arrow [:!WSend] [:term]]                                                             ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -72,20 +72,20 @@
   ; [:!WS#Pslash []]                                                                               ;
 
   ; [:!WS#Pdelete_or_backspace []]                                                                 ;
-  [:!WS#Preturn_or_enter [:!Sf2]]                                                                  ;
+  ; [:!WS#Preturn_or_enter []]                                                                     ;
   ; [:!WS#Pright_shift []]                                                                         ;
   ; [:!WS#Pright_option []]                                                                        ;
   ; [:!WS#Pright_command []]                                                                       ;
   ; [:!WS#Pspacebar []]                                                                            ;
 
-  ; [:!WS#Pleft_command []]                                                                        ;
-  ; [:!WS#Pleft_option []]                                                                         ;
-  ; [:!WS#Pleft_control []]                                                                        ;
+  ; [:!WS#Pleft_command []]                                                         NOT USEFUL     ;
+  ; [:!WS#Pleft_option []]                                                          NOT USEFUL     ;
+  ; [:!WS#Pleft_control []]                                                         NOT USEFUL     ;
   ; [:!WS#Pleft_shift []]                                                           NOT AVAILABLE  ;
-  ; [:!WS#Pcaps_lock []]                                                                           ;
-  ; [:!WS#Ptab []]                                                                                 ;
-  ; [:!WS#Pkeypad_num_lock []]                                                                     ;
-  ; [:!WS#Pescape []]                                                                              ;
+  ; [:!WS#Pcaps_lock []]                                                            NOT USEFUL     ;
+  ; [:!WS#Ptab []]                                                                  NOT USEFUL     ;
+  ; [:!WS#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
+  ; [:!WS#Pescape []]                                                               NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -150,8 +150,8 @@
   ; [:!WS#P8 []]                                                                                   ;
   ; [:!WS#P9 []]                                                                                   ;
   ; [:!WS#P0 []]                                                                                   ;
-  [:!WS#Phyphen [:!Sf13]]                                                                          ;
-  [:!WS#Pequal_sign [:!Sf14]]                                                                      ;
+  ; [:!WS#Phyphen []]                                                                              ;
+  ; [:!WS#Pequal_sign []]                                                                          ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
