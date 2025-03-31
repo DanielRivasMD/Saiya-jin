@@ -6,11 +6,10 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
-  ; ; TODO: review redundant keys
-  ; [:!WQR#Pleft_arrow [:!OSpage_up] [:term]]                                                        ;
-  ; [:!WQR#Pright_arrow [:!OSpage_down] [:term]]                                                     ;
-  ; [:!WQR#Pup_arrow [:!OShome] [:term]]                                                             ;
-  ; [:!WQR#Pdown_arrow [:!OSend] [:term]]                                                            ;
+  ; [:!ROTC#Pleft_arrow []]                                                    ; system space      ;
+  ; [:!ROTC#Pright_arrow []]                                                   ; system space      ;
+  ; [:!ROTC#Pup_arrow []]                                                      ; system menu       ;
+  ; [:!ROTC#Pdown_arrow []]                                                    ; system dock       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -33,7 +32,7 @@
   [:!ROTC#Pright_shift [:launch "Mail"]]                                                           ;
   [:!ROTC#Pright_option [:launch "Lapce"]]                                                         ;
   [:!ROTC#Pright_command [:launch "Zed"]]                                                          ;
-  ; [:!ROTC#Pspacebar []]                                                           COLLISION      ;
+  ; [:!ROTC#Pspacebar []]                                                      ; system speak      ;
 
   ; [:!ROTC#Pleft_command []]                                                       NOT USEFUL     ;
   ; [:!ROTC#Pleft_option []]                                                        NOT USEFUL     ;
@@ -51,18 +50,18 @@
 {:des "Tab Mode - numbers"
  :rules
  [;
-  ; [:f1 :!ROTC#Pkeypad_1]                                                                           ;
-  ; [:f2 :!ROTC#Pkeypad_2]                                                                           ;
-  ; [:f3 :!ROTC#Pkeypad_3]                                                                           ;
-  ; [:f4 :!ROTC#Pkeypad_4]                                                                           ;
-  ; [:f5 :!ROTC#Pkeypad_5]                                                                           ;
-  ; [:f6 :!ROTC#Pkeypad_6]                                                                           ;
-  ; [:f7 :!ROTC#Pkeypad_7]                                                                           ;
-  ; [:f8 :!ROTC#Pkeypad_8]                                                                           ;
-  ; [:f9 :!ROTC#Pkeypad_9]                                                                           ;
-  ; [:f10 :!ROTC#Pkeypad_0]                                                                          ;
-  ; [:f11 :!ROTC#Pkeypad_slash]                                                                      ;
-  ; [:f12 :!ROTC#Pkeypad_asterisk]                                                                   ;
+  ; [:!ROTC#Pkeypad_1 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_2 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_3 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_4 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_5 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_6 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_7 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_8 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_9 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_0 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_slash []]                                                                      ;
+  ; [:!ROTC#Pkeypad_asterisk []]                                                                   ;
 
   ; [:!ROTC#P1 []]                                                                                 ;
   ; [:!ROTC#P2 []]                                                                                 ;
