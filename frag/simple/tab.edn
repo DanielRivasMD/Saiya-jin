@@ -6,10 +6,10 @@
 {:des "Tab Mode - symbols"
  :rules
  [;
-  ; [:!ROTC#Pleft_arrow []]                                                    ; system space      ;
-  ; [:!ROTC#Pright_arrow []]                                                   ; system space      ;
-  ; [:!ROTC#Pup_arrow []]                                                      ; system menu       ;
-  ; [:!ROTC#Pdown_arrow []]                                                    ; system dock       ;
+  ; [:!ROTC#Pleft_arrow []]                                                    ; space             ; system
+  ; [:!ROTC#Pright_arrow []]                                                   ; space             ; system
+  ; [:!ROTC#Pup_arrow []]                                                      ; menu              ; system
+  ; [:!ROTC#Pdown_arrow []]                                                    ; dock              ; system
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -32,7 +32,7 @@
   [:!ROTC#Pright_shift [:launch "Mail"]]                                                           ;
   [:!ROTC#Pright_option [:launch "Lapce"]]                                                         ;
   [:!ROTC#Pright_command [:launch "Zed"]]                                                          ;
-  ; [:!ROTC#Pspacebar []]                                                      ; system speak      ;
+  ; [:!ROTC#Pspacebar []]                                                      ; speak             ; system
 
   ; [:!ROTC#Pleft_command []]                                                       NOT USEFUL     ;
   ; [:!ROTC#Pleft_option []]                                                        NOT USEFUL     ;
