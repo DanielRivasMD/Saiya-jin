@@ -6,11 +6,10 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  ; editor control - bound for helix
-  [:!EWQ#Pleft_arrow [:!Tpage_up] [:term]]                                     ; prev character    ;
-  [:!EWQ#Pright_arrow [:!Tpage_down] [:term]]                                  ; next character    ;
-  [:!EWQ#Pup_arrow [:!Thome] [:term]]                                          ; prev change       ;
-  [:!EWQ#Pdown_arrow [:!Tend] [:term]]                                         ; next change       ;
+  [:!EWQ#Pleft_arrow [:!Tpage_up] [:term]]                                     ; prev character    ; helix
+  [:!EWQ#Pright_arrow [:!Tpage_down] [:term]]                                  ; next character    ; helix
+  [:!EWQ#Pup_arrow [:!Thome] [:term]]                                          ; prev change       ; helix
+  [:!EWQ#Pdown_arrow [:!Tend] [:term]]                                         ; next change       ; helix
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -19,22 +18,21 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  ; editor control - bound for helix
-  [:!EWQ#Popen_bracket [:!Of11]]                                               ; prev comment      ;
-  [:!EWQ#Pclose_bracket [:!Of12]]                                              ; next comment      ;
-  [:!EWQ#Psemicolon [:!Of13]]                                                                      ;
-  [:!EWQ#Pquote [:!Of14]]                                                                          ;
-  [:!EWQ#Pbackslash [:!Of15]]                                                                      ;
-  [:!EWQ#Pcomma [:!Of18]]                                                      ; definition        ;
-  [:!EWQ#Pperiod [:!Of19]]                                                     ; reference         ;
-  [:!EWQ#Pslash [:!Of20]]                                                      ; implementation    ;
+  [:!EWQ#Popen_bracket [:!Of11]]                                               ; prev comment      ; helix
+  [:!EWQ#Pclose_bracket [:!Of12]]                                              ; next comment      ; helix
+  [:!EWQ#Psemicolon [:!Of13]]                                                                      ; helix
+  [:!EWQ#Pquote [:!Of14]]                                                                          ; helix
+  [:!EWQ#Pbackslash [:!Of15]]                                                                      ; helix
+  [:!EWQ#Pcomma [:!Of18]]                                                      ; definition        ; helix
+  [:!EWQ#Pperiod [:!Of19]]                                                     ; reference         ; helix
+  [:!EWQ#Pslash [:!Of20]]                                                      ; implementation    ; helix
 
-  [:!EWQ#Pdelete_or_backspace [:!Tf11]]                                        ; rename symbol     ;
-  [:!EWQ#Preturn_or_enter [:!Tf12]]                                            ; symbol            ;
-  [:!EWQ#Pright_shift [:!Tf13]]                                                ; type definition   ;
-  [:!EWQ#Pright_option [:!Tf14]]                                                                   ;
-  [:!EWQ#Pright_command [:!Tf15]]                                                                  ;
-  [:!EWQ#Pspacebar [:!Tf18]]                                                   ; last motion       ;
+  [:!EWQ#Pdelete_or_backspace [:!Tf11]]                                        ; rename symbol     ; helix
+  [:!EWQ#Preturn_or_enter [:!Tf12]]                                            ; symbol            ; helix
+  [:!EWQ#Pright_shift [:!Tf13]]                                                ; type definition   ; helix
+  [:!EWQ#Pright_option [:!Tf14]]                                                                   ; helix
+  [:!EWQ#Pright_command [:!Tf15]]                                                                  ; helix
+  [:!EWQ#Pspacebar [:!Tf18]]                                                   ; last motion       ; helix
 
   ; [:!EWQ#Pleft_command []]                                                        NOT USEFUL     ;
   ; [:!EWQ#Pleft_option []]                                                         NOT USEFUL     ;
@@ -62,8 +60,8 @@
   ; [:!EWQ#Pkeypad_8 []]                                                                           ;
   ; [:!EWQ#Pkeypad_9 []]                                                                           ;
   ; [:!EWQ#Pkeypad_0 []]                                                                           ;
-  [:!EWQ#Pkeypad_slash [:!Tf19]]                                                                   ;
-  [:!EWQ#Pkeypad_asterisk [:!Tf20]]                                                                ;
+  ; [:!EWQ#Pkeypad_slash []]                                                                       ;
+  ; [:!EWQ#Pkeypad_asterisk []]                                                                    ;
 
   ; [:!EWQ#P1 []]                                                                                  ;
   ; [:!EWQ#P2 []]                                                                                  ;
@@ -75,8 +73,8 @@
   ; [:!EWQ#P8 []]                                                                                  ;
   ; [:!EWQ#P9 []]                                                                                  ;
   ; [:!EWQ#P0 []]                                                                                  ;
-  ; [:!EWQ#Phyphen []]                                                                             ;
-  ; [:!EWQ#Pequal_sign []]                                                                         ;
+  [:!EWQ#Phyphen [:!Tf19]]                                                                         ; helix
+  [:!EWQ#Pequal_sign [:!Tf20]]                                                                     ; helix
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -120,11 +118,10 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  ; editor control - bound for helix
-  [:!EWQS#Pleft_arrow [:!WSpage_up] [:term]]                                   ; prev jump         ;
-  [:!EWQS#Pright_arrow [:!WSpage_down] [:term]]                                ; next jump         ;
-  ; [:!EWQS#Pup_arrow [:!WShome] [:term]]                                        ;                   ;
-  ; [:!EWQS#Pdown_arrow [:!WSend] [:term]]                                       ;                   ;
+  [:!EWQS#Pleft_arrow [:!WSpage_up] [:term]]                                   ; prev jump         ; helix
+  [:!EWQS#Pright_arrow [:!WSpage_down] [:term]]                                ; next jump         ; helix
+  ; [:!EWQS#Pup_arrow [:!WShome] [:term]]                                      ;                   ; helix
+  ; [:!EWQS#Pdown_arrow [:!WSend] [:term]]                                     ;                   ; helix
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -133,22 +130,21 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  ; editor control - bound for helix
-  [:!SEWQ#Popen_bracket [:!SOf11]]                                                                 ;
-  [:!SEWQ#Pclose_bracket [:!SOf12]]                                                                ;
-  [:!SEWQ#Psemicolon [:!SOf13]]                                                                    ;
-  [:!SEWQ#Pquote [:!SOf14]]                                                                        ;
-  [:!SEWQ#Pbackslash [:!SOf15]]                                                                    ;
-  [:!SEWQ#Pcomma [:!SOf18]]                                                                        ;
-  [:!SEWQ#Pperiod [:!SOf19]]                                                                       ;
-  [:!SEWQ#Pslash [:!SOf20]]                                                                        ;
+  [:!SEWQ#Popen_bracket [:!SOf11]]                                                                 ; helix
+  [:!SEWQ#Pclose_bracket [:!SOf12]]                                                                ; helix
+  [:!SEWQ#Psemicolon [:!SOf13]]                                                                    ; helix
+  [:!SEWQ#Pquote [:!SOf14]]                                                                        ; helix
+  [:!SEWQ#Pbackslash [:!SOf15]]                                                                    ; helix
+  [:!SEWQ#Pcomma [:!SOf18]]                                                                        ; helix
+  [:!SEWQ#Pperiod [:!SOf19]]                                                                       ; helix
+  [:!SEWQ#Pslash [:!SOf20]]                                                                        ; helix
 
-  [:!SEWQ#Pdelete_or_backspace [:!STf11]]                                                          ;
-  [:!SEWQ#Preturn_or_enter [:!STf12]]                                          ; jump              ;
-  [:!SEWQ#Pright_shift [:!STf13]]                                                                  ;
-  [:!SEWQ#Pright_option [:!STf14]]                                                                 ;
-  [:!SEWQ#Pright_command [:!STf15]]                                                                ;
-  [:!SEWQ#Pspacebar [:!STf18]]                                                 ; save jump         ;
+  [:!SEWQ#Pdelete_or_backspace [:!STf11]]                                                          ; helix
+  [:!SEWQ#Preturn_or_enter [:!STf12]]                                          ; jump              ; helix
+  [:!SEWQ#Pright_shift [:!STf13]]                                                                  ; helix
+  [:!SEWQ#Pright_option [:!STf14]]                                                                 ; helix
+  [:!SEWQ#Pright_command [:!STf15]]                                                                ; helix
+  [:!SEWQ#Pspacebar [:!STf18]]                                                 ; save jump         ; helix
 
   ; [:!SEWQ#Pleft_command []]                                                       NOT USEFUL     ;
   ; [:!SEWQ#Pleft_option []]                                                        NOT USEFUL     ;
