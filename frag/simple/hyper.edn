@@ -6,6 +6,18 @@
 {:des "Hyper Mode - symbols"
  :rules
  [;
+  [:!OTC#Pleft_arrow [:!OSpage_up]]                                                                ;
+  [:!OTC#Pright_arrow [:!OSpage_down]]                                                             ;
+  [:!OTC#Pup_arrow [:!OShome]]                                                 ; increment         ; helix
+  [:!OTC#Pdown_arrow [:!OSend]]                                                ; decrement         ; helix
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; hyper
+{:des "Hyper Mode - symbols"
+ :rules
+ [;
   ; [:!OTC#Popen_bracket []]                                                                       ;
   ; [:!OTC#Pclose_bracket []]                                                                      ;
   ; [:!OTC#Psemicolon []]                                                                          ;
@@ -20,16 +32,16 @@
   ; [:!OTC#Pright_shift []]                                                                        ;
   [:!OTC#Pright_option [:!S8 :!S8]]                                                                ; '**'
   [:!OTC#Pright_command [:slash :slash]]                                                           ; '//'
-  [:!OTC#Pspacebar [:caps_lock]]                                                                           ;
+  ; [:!OTC#Pspacebar []]                                                                           ;
 
   ; [:!OTC#Pleft_command []]                                                        NOT AVAILABLE  ;
   ; [:!OTC#Pleft_option []]                                                         NOT AVAILABLE  ;
   ; [:!OTC#Pleft_control []]                                                        NOT AVAILABLE  ;
-  ; [:!OTC#Pleft_shift []]                                                                         ;
-  ; [:!OTC#Pcaps_lock []]                                                                          ;
-  ; [:!OTC#Ptab []]                                                                                ;
-  ; [:!OTC#Pkeypad_num_lock []]                                                                    ;
-  ; [:!OTC#Pescape []]                                                                             ;
+  ; [:!OTC#Pleft_shift []]                                                          NOT USEFUL     ;
+  ; [:!OTC#Pcaps_lock []]                                                           NOT USEFUL     ;
+  ; [:!OTC#Ptab []]                                                                 NOT USEFUL     ;
+  ; [:!OTC#Pkeypad_num_lock []]                                                     NOT USEFUL     ;
+  ; [:!OTC#Pescape []]                                                              NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
