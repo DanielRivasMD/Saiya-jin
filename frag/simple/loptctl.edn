@@ -6,11 +6,10 @@
 {:des "Option - Control Mode - symbols"
  :rules
  [;
-  ; pane control - bound for zellij
-  [:!OT#Pleft_arrow :!Oj [:term]]                          ; alt-ctl-left      ;                   ;
-  [:!OT#Pright_arrow :!Ok [:term]]                         ; alt-ctl-right     ;                   ;
-  [:!OT#Pup_arrow :!Ol [:term]]                            ; alt-ctl-up        ;                   ;
-  [:!OT#Pdown_arrow :!Om [:term]]                          ; alt-ctl-down      ;                   ;
+  [:!OT#Pleft_arrow :!Oj [:term]]                                                                  ; zellij
+  [:!OT#Pright_arrow :!Ok [:term]]                                                                 ; zellij
+  [:!OT#Pup_arrow :!Ol [:term]]                                                                    ; zellij
+  [:!OT#Pdown_arrow :!Om [:term]]                                                                  ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -19,32 +18,30 @@
 {:des "Option - Control Mode - symbols"
  :rules
  [;
-  ; pane control - bound for zellij
   ; [:!OT#Popen_bracket []]                                                                        ;
   ; [:!OT#Pclose_bracket []]                                                                       ;
   ; [:!OT#Psemicolon []]                                                                           ;
   ; [:!OT#Pquote []]                                                                               ;
-  ; [:!OT#Pbackslash []]                                                                           ;
+  [:!OT#Pbackslash :!Os [:term]]                                               ; float             ; zellij
   ; [:!OT#Pcomma []]                                                                               ;
   ; [:!OT#Pperiod []]                                                                              ;
   ; [:!OT#Pslash []]                                                                               ;
 
-  ; pane control - bound for zellij
-  [:!OT#Pdelete_or_backspace :!Oo [:term]]                 ; alt-ctl-bspace    ; close             ;
-  [:!OT#Preturn_or_enter :!Op [:term]]                     ; alt-ctl-enter     ; focus             ;
-  [:!OT#Pright_shift :!Oq [:term]]                         ; alt-ctl-shift     ; spawn new right   ;
-  [:!OT#Pright_option :!Or [:term]]                        ; alt-ctl-alt       ; spawn new down    ;
-  [:!OT#Pright_command :!Os [:term]]                       ; alt-ctl-cmd       ; float             ;
-  [:!OT#Pspacebar :!Ot [:term]]                            ; alt-ctl-space     ; jump back         ;
+  [:!OT#Pdelete_or_backspace :!Oo [:term]]                                     ; close             ; zellij
+  [:!OT#Preturn_or_enter :!Op [:term]]                                         ; focus             ; zellij
+  [:!OT#Pright_shift :!Oq [:term]]                                             ; split right       ; zellij
+  [:!OT#Pright_option :!Or [:term]]                                            ; split down        ; zellij
+  [:!OT#Pright_command :!SOc [:term]]                                          ; rename            ; zellij
+  [:!OT#Pspacebar :!Ot [:term]]                                                ; jump back         ; zellij
 
-  ; [:!OTleft_command []]                                                                          ;
+  ; [:!OTleft_command []]                                                           NOT USEFUL     ;
   ; [:!OT#Pleft_option []]                                                          NOT AVAILABLE  ;
   ; [:!OTleft_control []]                                                           NOT AVAILABLE  ;
-  ; [:!OT#Pleft_shift []]                                                                          ;
-  ; [:!OT#Pcaps_lock []]                                                                           ;
-  ; [:!OT#Ptab []]                                                                                 ;
-  ; [:!OT#Pkeypad_num_lock []]                                                                     ;
-  ; [:!OT#Pescape []]                                                                              ;
+  ; [:!OT#Pleft_shift []]                                                           NOT USEFUL     ;
+  ; [:!OT#Pcaps_lock []]                                                            NOT USEFUL     ;
+  ; [:!OT#Ptab []]                                                                  NOT USEFUL     ;
+  ; [:!OT#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
+  ; [:!OT#Pescape []]                                                               NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
