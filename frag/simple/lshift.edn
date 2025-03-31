@@ -6,10 +6,10 @@
 {:des "Shift Mode - symbols"
  :rules
  [;
-  ; [:!S#Pleft_arrow [] [:term]]                                                                   ;
-  ; [:!S#Pright_arrow [] [:term]]                                                                  ;
-  ; [:!S#Pup_arrow [] [:term]]                                                                     ;
-  ; [:!S#Pdown_arrow [] [:term]]                                                                   ;
+  ; [:!S#Pleft_arrow []]                                                            NOT USEFUL     ;
+  ; [:!S#Pright_arrow []]                                                           NOT USEFUL     ;
+  ; [:!S#Pup_arrow []]                                                              NOT USEFUL     ;
+  ; [:!S#Pdown_arrow []]                                                            NOT USEFUL     ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -18,14 +18,14 @@
 {:des "Shift Mode - symbols"
  :rules
  [;
-  ; [:!S#Popen_bracket []]                                                                         ;
-  ; [:!S#Pclose_bracket []]                                                                        ;
-  ; [:!S#Psemicolon []]                                                                            ;
-  ; [:!S#Pquote []]                                                                                ;
-  ; [:!S#Pbackslash []]                                                                            ;
-  ; [:!S#Pcomma []]                                                                                ;
-  ; [:!S#Pperiod []]                                                                               ;
-  ; [:!S#Pslash []]                                                                                ;
+  ; [:!S#Popen_bracket []]                                                          NOT USEFUL     ;
+  ; [:!S#Pclose_bracket []]                                                         NOT USEFUL     ;
+  ; [:!S#Psemicolon []]                                                             NOT USEFUL     ;
+  ; [:!S#Pquote []]                                                                 NOT USEFUL     ;
+  ; [:!S#Pbackslash []]                                                             NOT USEFUL     ;
+  ; [:!S#Pcomma []]                                                                 NOT USEFUL     ;
+  ; [:!S#Pperiod []]                                                                NOT USEFUL     ;
+  ; [:!S#Pslash []]                                                                 NOT USEFUL     ;
 
   ; [:!S#Pdelete_or_backspace []]                                                                  ;
   [:!S#Preturn_or_enter [:!Wh]]                                                                    ;
@@ -34,14 +34,14 @@
   [:!S#Pright_command [:!Tk]]                                                                      ;
   [:!S#Pspacebar [:!Ec]]                                                                           ;
 
-  ; [:!S#Pleft_command []]                                                                         ;
-  ; [:!S#Pleft_option []]                                                                          ;
-  ; [:!S#Pleft_control []]                                                                         ;
+  ; [:!S#Pleft_command []]                                                          NOT USEFUL     ;
+  ; [:!S#Pleft_option []]                                                           NOT USEFUL     ;
+  ; [:!S#Pleft_control []]                                                          NOT USEFUL     ;
   ; [:!S#Pleft_shift []]                                                            NOT AVAILABLE  ;
-  ; [:!S#Pcaps_lock []]                                                                            ;
-  ; [:!S#Ptab []]                                                                                  ;
-  ; [:!S#Pkeypad_num_lock []]                                                                      ;
-  ; [:!S#Pescape []]                                                                               ;
+  ; [:!S#Pcaps_lock []]                                                             NOT USEFUL     ;
+  ; [:!S#Ptab []]                                                                   NOT USEFUL     ;
+  ; [:!S#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
+  ; [:!S#Pescape []]                                                                NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -50,31 +50,31 @@
 {:des "Shift Mode - numbers"
  :rules
  [;
-  ; [:!S#Pkeypad_1 []]                                                                             ;
-  ; [:!S#Pkeypad_2 []]                                                                             ;
-  ; [:!S#Pkeypad_3 []]                                                                             ;
-  ; [:!S#Pkeypad_4 []]                                                                             ;
-  ; [:!S#Pkeypad_5 []]                                                                             ;
-  ; [:!S#Pkeypad_6 []]                                                                             ;
-  ; [:!S#Pkeypad_7 []]                                                                             ;
-  ; [:!S#Pkeypad_8 []]                                                                             ;
-  ; [:!S#Pkeypad_9 []]                                                                             ;
-  ; [:!S#Pkeypad_0 []]                                                                             ;
-  ; [:!S#Pkeypad_slash []]                                                                         ;
-  ; [:!S#Pkeypad_asterisk []]                                                                      ;
+  ; [:!S#Pkeypad_1 []]                                                              NOT USEFUL     ;
+  ; [:!S#Pkeypad_2 []]                                                              NOT USEFUL     ;
+  ; [:!S#Pkeypad_3 []]                                                              NOT USEFUL     ;
+  ; [:!S#Pkeypad_4 []]                                                              NOT USEFUL     ;
+  ; [:!S#Pkeypad_5 []]                                                              NOT USEFUL     ;
+  ; [:!S#Pkeypad_6 []]                                                              NOT USEFUL     ;
+  ; [:!S#Pkeypad_7 []]                                                              NOT USEFUL     ;
+  ; [:!S#Pkeypad_8 []]                                                              NOT USEFUL     ;
+  ; [:!S#Pkeypad_9 []]                                                              NOT USEFUL     ;
+  ; [:!S#Pkeypad_0 []]                                                              NOT USEFUL     ;
+  ; [:!S#Pkeypad_slash []]                                                          NOT USEFUL     ;
+  ; [:!S#Pkeypad_asterisk []]                                                       NOT USEFUL     ;
 
-  ; [:!S#P1 []]                                                                                    ;
-  ; [:!S#P2 []]                                                                                    ;
-  ; [:!S#P3 []]                                                                                    ;
-  ; [:!S#P4 []]                                                                                    ;
-  ; [:!S#P5 []]                                                                                    ;
-  ; [:!S#P6 []]                                                                                    ;
-  ; [:!S#P7 []]                                                                                    ;
-  ; [:!S#P8 []]                                                                                    ;
-  ; [:!S#P9 []]                                                                                    ;
-  ; [:!S#P0 []]                                                                                    ;
-  ; [:!S#Phyphen []]                                                                               ;
-  ; [:!S#Pequal_sign []]                                                                           ;
+  ; [:!S#P1 []]                                                                     NOT USEFUL     ;
+  ; [:!S#P2 []]                                                                     NOT USEFUL     ;
+  ; [:!S#P3 []]                                                                     NOT USEFUL     ;
+  ; [:!S#P4 []]                                                                     NOT USEFUL     ;
+  ; [:!S#P5 []]                                                                     NOT USEFUL     ;
+  ; [:!S#P6 []]                                                                     NOT USEFUL     ;
+  ; [:!S#P7 []]                                                                     NOT USEFUL     ;
+  ; [:!S#P8 []]                                                                     NOT USEFUL     ;
+  ; [:!S#P9 []]                                                                     NOT USEFUL     ;
+  ; [:!S#P0 []]                                                                     NOT USEFUL     ;
+  ; [:!S#Phyphen []]                                                                NOT USEFUL     ;
+  ; [:!S#Pequal_sign []]                                                            NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -83,33 +83,33 @@
 {:des "BSpace Mode - alphabet"
  :rules
  [;
-  ; [:!S#Pa []]                                                                                    ;
-  ; [:!S#Pb []]                                                                                    ;
-  ; [:!S#Pc []]                                                                                    ;
-  ; [:!S#Pd []]                                                                                    ;
-  ; [:!S#Pe []]                                                                                    ;
-  ; [:!S#Pf []]                                                                                    ;
-  ; [:!S#Pg []]                                                                                    ;
-  ; [:!S#Ph []]                                                                                    ;
-  ; [:!S#Pi []]                                                                                    ;
-  ; [:!S#Pj []]                                                                                    ;
-  ; [:!S#Pk []]                                                                                    ;
-  ; [:!S#Pl []]                                                                                    ;
-  ; [:!S#Pm []]                                                                                    ;
-  ; [:!S#Pn []]                                                                                    ;
-  ; [:!S#Po []]                                                                                    ;
-  ; [:!S#Pp []]                                                                                    ;
-  ; [:!S#Pq []]                                                                                    ;
-  ; [:!S#Pr []]                                                                                    ;
-  ; [:!S#Ps []]                                                                                    ;
-  ; [:!S#Pt []]                                                                                    ;
-  ; [:!S#Pu []]                                                                                    ;
-  ; [:!S#Pv []]                                                                                    ;
-  ; [:!S#Pw []]                                                                                    ;
-  ; [:!S#Px []]                                                                                    ;
-  ; [:!S#Py []]                                                                                    ;
-  ; [:!S#Pz []]                                                                                    ;
-  ; [:!S#Pright_control []]                                                                        ;
+  ; [:!S#Pa []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pb []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pc []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pd []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pe []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pf []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pg []]                                                                     NOT USEFUL     ;
+  ; [:!S#Ph []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pi []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pj []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pk []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pl []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pm []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pn []]                                                                     NOT USEFUL     ;
+  ; [:!S#Po []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pp []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pq []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pr []]                                                                     NOT USEFUL     ;
+  ; [:!S#Ps []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pt []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pu []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pv []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pw []]                                                                     NOT USEFUL     ;
+  ; [:!S#Px []]                                                                     NOT USEFUL     ;
+  ; [:!S#Py []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pz []]                                                                     NOT USEFUL     ;
+  ; [:!S#Pright_control []]                                                         NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
