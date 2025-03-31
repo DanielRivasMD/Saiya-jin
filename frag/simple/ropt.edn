@@ -32,14 +32,14 @@
   ; [:!E#Pright_shift []]                                                           NOT USEFUL     ;
   ; [:!E#Pright_option []]                                                          NOT AVAILABLE  ;
   ; [:!E#Pright_command []]                                                         NOT USEFUL     ;
-  ; [:!E#Pspacebar []]                                                                             ;
+  [:!E#Pspacebar :!Sf7]                                                        ; completion        ; helix
 
-  [:!E#Pleft_command [:f13]]                                                   ; redo              ;
-  [:!E#Pleft_option [:f14]]                                                    ; last modification ;
-  [:!E#Pleft_control [:f15]]                                                   ; undo              ;
-  [:!E#Pleft_shift [:f16]]                                                     ; next diag         ;
-  [:!E#Pcaps_lock [:f17]]                                                      ; diag              ;
-  [:!E#Ptab [:f18]]                                                            ; prev diag         ;
+  [:!E#Pleft_command [:f13]]                                                   ; redo              ; helix
+  [:!E#Pleft_option [:f14]]                                                    ; last modification ; helix
+  [:!E#Pleft_control [:f15]]                                                   ; undo              ; helix
+  [:!E#Pleft_shift [:f16]]                                                     ; next diag         ; helix
+  [:!E#Pcaps_lock [:f17]]                                                      ; diag              ; helix
+  [:!E#Ptab [:f18]]                                                            ; prev diag         ; helix
   [:!E#Pkeypad_num_lock [:f19]]                                                                    ;
   [:!E#Pescape [:f20]]                                                                             ;
   ]}
