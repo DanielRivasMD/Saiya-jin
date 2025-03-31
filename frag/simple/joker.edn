@@ -6,52 +6,44 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  [:!EWQ#Pleft_arrow [:!OTpage_up] [:term]]                                                        ;
-  [:!EWQ#Pright_arrow [:!OTpage_down] [:term]]                                                     ;
-  [:!EWQ#Pup_arrow [:!OThome] [:term]]                                                             ;
-  [:!EWQ#Pdown_arrow [:!OTend] [:term]]                                                            ;
- ]}
+  ; editor control - bound for helix
+  [:!EWQ#Pleft_arrow [:!Tpage_up] [:term]]                                     ; prev character    ;
+  [:!EWQ#Pright_arrow [:!Tpage_down] [:term]]                                  ; next character    ;
+  [:!EWQ#Pup_arrow [:!Thome] [:term]]                                          ; prev change       ;
+  [:!EWQ#Pdown_arrow [:!Tend] [:term]]                                         ; next change       ;
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: update order
 ; joker
 {:des "Joker Mode - symbols"
  :rules
  [;
-  ; [:!EWQ#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]                     ; ' %<+% '
-  ; [:!EWQ#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]                   ; ' %+>% '
-  ; [:!EWQ#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                                          ; ' %$% '
-  ; [:!EWQ#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                                    ; ' %T>% '
-  ; [:!EWQ#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]                            ; ' %<>% '
-  ; [:!EWQ#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                                          ; ' %<% '
-  ; [:!EWQ#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                                        ; ' %>% '
-  ; [:!EWQ#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                                    ; ' %!>% '
+  ; editor control - bound for helix
+  [:!EWQ#Popen_bracket [:!Of11]]                                               ; prev comment      ;
+  [:!EWQ#Pclose_bracket [:!Of12]]                                              ; next comment      ;
+  [:!EWQ#Psemicolon [:!Of13]]                                                                      ;
+  [:!EWQ#Pquote [:!Of14]]                                                                          ;
+  [:!EWQ#Pbackslash [:!Of15]]                                                                      ;
+  [:!EWQ#Pcomma [:!Of18]]                                                      ; definition        ;
+  [:!EWQ#Pperiod [:!Of19]]                                                     ; reference         ;
+  [:!EWQ#Pslash [:!Of20]]                                                      ; implementation    ;
 
-  ; [:!EWQ#Popen_bracket [:f8]]                                                                    ;
-  ; [:!EWQ#Pclose_bracket [:f9]]                                                                   ;
-  ; [:!EWQ#Psemicolon [:f10]]                                                                      ;
-  ; [:!EWQ#Pquote [:f11]]                                                                          ;
-  ; [:!EWQ#Pbackslash [:f12]]                                                                      ;
-  ; [:!EWQ#Pcomma [:f18]]                                                                          ;
-  ; [:!EWQ#Pperiod [:f19]]                                                                         ;
-  ; [:!EWQ#Pslash [:f20]]                                                                          ;
+  [:!EWQ#Pdelete_or_backspace [:!Tf11]]                                        ; rename symbol     ;
+  [:!EWQ#Preturn_or_enter [:!Tf12]]                                            ; symbol            ;
+  [:!EWQ#Pright_shift [:!Tf13]]                                                ; type definition   ;
+  [:!EWQ#Pright_option [:!Tf14]]                                                                   ;
+  [:!EWQ#Pright_command [:!Tf15]]                                                                  ;
+  [:!EWQ#Pspacebar [:!Tf18]]                                                   ; last motion       ;
 
-  [:!EWQ#Pdelete_or_backspace [:!Sf1]]                                                             ;
-  [:!EWQ#Preturn_or_enter [:!Sf2]]                                                                 ;
-  [:!EWQ#Pright_shift [:!Sf3]]                                                                     ;
-  [:!EWQ#Pright_option [:!Sf4]]                                                                    ;
-  [:!EWQ#Pright_command [:!Sf5]]                                                                   ;
-  [:!EWQ#Pspacebar [:!Sf6]]                                                                        ;
-
-  ; [:!EWQ#Pleft_command []]                                                                       ;
-  ; [:!EWQ#Pleft_option []]                                                                        ;
-  ; [:!EWQ#Pleft_control []]                                                                       ;
-  ; [:!EWQ#Pleft_shift []]                                                                         ;
-  ; [:!EWQ#Pcaps_lock []]                                                                          ;
+  ; [:!EWQ#Pleft_command []]                                                        NOT USEFUL     ;
+  ; [:!EWQ#Pleft_option []]                                                         NOT USEFUL     ;
+  ; [:!EWQ#Pleft_control []]                                                        NOT USEFUL     ;
+  ; [:!EWQ#Pleft_shift []]                                                          NOT USEFUL     ;
+  ; [:!EWQ#Pcaps_lock []]                                                           NOT USEFUL     ;
   ; [:!EWQ#Ptab []]                                                                 NOT AVAILABLE  ;
-  ; [:!EWQ#Pkeypad_num_lock []]                                                                    ;
-  ; [:!EWQ#Pescape []]                                                                             ;
+  ; [:!EWQ#Pkeypad_num_lock []]                                                     NOT USEFUL     ;
+  ; [:!EWQ#Pescape []]                                                              NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -70,8 +62,8 @@
   ; [:!EWQ#Pkeypad_8 []]                                                                           ;
   ; [:!EWQ#Pkeypad_9 []]                                                                           ;
   ; [:!EWQ#Pkeypad_0 []]                                                                           ;
-  ; [:!EWQ#Pkeypad_slash []]                                                                       ;
-  ; [:!EWQ#Pkeypad_asterisk []]                                                                    ;
+  [:!EWQ#Pkeypad_slash [:!Tf19]]                                                                   ;
+  [:!EWQ#Pkeypad_asterisk [:!Tf20]]                                                                ;
 
   ; [:!EWQ#P1 []]                                                                                  ;
   ; [:!EWQ#P2 []]                                                                                  ;
@@ -83,13 +75,12 @@
   ; [:!EWQ#P8 []]                                                                                  ;
   ; [:!EWQ#P9 []]                                                                                  ;
   ; [:!EWQ#P0 []]                                                                                  ;
-  [:!EWQ#Phyphen [:f13]]                                                                           ;
-  [:!EWQ#Pequal_sign [:f14]]                                                                       ;
+  ; [:!EWQ#Phyphen []]                                                                             ;
+  ; [:!EWQ#Pequal_sign []]                                                                         ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: julia macros
 ; joker
 {:des "Joker Mode - alphabet"
  :rules
@@ -121,6 +112,76 @@
   ; [:!EWQ#Py []]                                                                                  ;
   ; [:!EWQ#Pz []]                                                                                  ;
   ; [:!EWQ#Pright_control []]                                                                      ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; joker
+{:des "Joker Mode - symbols"
+ :rules
+ [;
+  ; editor control - bound for helix
+  [:!EWQS#Pleft_arrow [:!WSpage_up] [:term]]                                   ; prev jump         ;
+  [:!EWQS#Pright_arrow [:!WSpage_down] [:term]]                                ; next jump         ;
+  ; [:!EWQS#Pup_arrow [:!WShome] [:term]]                                        ;                   ;
+  ; [:!EWQS#Pdown_arrow [:!WSend] [:term]]                                       ;                   ;
+ ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; joker
+{:des "Joker Mode - symbols"
+ :rules
+ [;
+  ; editor control - bound for helix
+  [:!SEWQ#Popen_bracket [:!SOf11]]                                                                 ;
+  [:!SEWQ#Pclose_bracket [:!SOf12]]                                                                ;
+  [:!SEWQ#Psemicolon [:!SOf13]]                                                                    ;
+  [:!SEWQ#Pquote [:!SOf14]]                                                                        ;
+  [:!SEWQ#Pbackslash [:!SOf15]]                                                                    ;
+  [:!SEWQ#Pcomma [:!SOf18]]                                                                        ;
+  [:!SEWQ#Pperiod [:!SOf19]]                                                                       ;
+  [:!SEWQ#Pslash [:!SOf20]]                                                                        ;
+
+  [:!SEWQ#Pdelete_or_backspace [:!STf11]]                                                          ;
+  [:!SEWQ#Preturn_or_enter [:!STf12]]                                          ; jump              ;
+  [:!SEWQ#Pright_shift [:!STf13]]                                                                  ;
+  [:!SEWQ#Pright_option [:!STf14]]                                                                 ;
+  [:!SEWQ#Pright_command [:!STf15]]                                                                ;
+  [:!SEWQ#Pspacebar [:!STf18]]                                                 ; save jump         ;
+
+  ; [:!SEWQ#Pleft_command []]                                                       NOT USEFUL     ;
+  ; [:!SEWQ#Pleft_option []]                                                        NOT USEFUL     ;
+  ; [:!SEWQ#Pleft_control []]                                                       NOT USEFUL     ;
+  ; [:!SEWQ#Pleft_shift []]                                                         NOT USEFUL     ;
+  ; [:!SEWQ#Pcaps_lock []]                                                          NOT USEFUL     ;
+  ; [:!SEWQ#Ptab []]                                                                NOT AVAILABLE  ;
+  ; [:!SEWQ#Pkeypad_num_lock []]                                                    NOT USEFUL     ;
+  ; [:!SEWQ#Pescape []]                                                             NOT USEFUL     ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+; joker
+{:des "Joker Mode - symbols"
+ :rules
+ [;
+  ; ; test
+  ; [:!EWQS#Pup_arrow :f13]                                                                          ;
+  ; [:!EWQS#Pdown_arrow :f14]                                                                        ;
+
+  ; class
+  [:!EWQT#Pup_arrow :f8]                                                                           ;
+  [:!EWQT#Pdown_arrow :f9]                                                                         ;
+
+  ; parameter
+  [:!EWQO#Pup_arrow :f10]                                                                          ;
+  [:!EWQO#Pdown_arrow :f11]                                                                        ;
+
+  ; function
+  [:!EWQC#Pup_arrow :f5]                                                                           ;
+  [:!EWQC#Pdown_arrow :f6]                                                                         ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
