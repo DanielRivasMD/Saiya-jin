@@ -2,7 +2,18 @@
 ; CMD
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: congregate control letter keys
+; command
+{:des "Command Mode - symbols"
+ :rules
+ [;
+  ; [:!Q#Pleft_arrow []]                                                                           ;
+  ; [:!Q#Pright_arrow []]                                                                          ;
+  ; [:!Q#Pup_arrow []]                                                                             ;
+  ; [:!Q#Pdown_arrow []]                                                                           ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; command
 {:des "Command Mode - symbols"
  :rules
@@ -17,18 +28,17 @@
   ; [:!Q#Pslash []]                                                                                ;
 
   ; [:!Q#Pdelete_or_backspace []]                                                                  ;
-  ; [:!Q#Preturn_or_enter []]                                                                      ;
-  ; [:!Q#Pright_shift []]                                                                          ;
-  ; [:!Q#Pright_option []]                                                                         ;
+  [:!Q#Preturn_or_enter [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]                 ; ' === '
+  ; [:!Q#Pright_shift []]                                                           NOT USEFUL     ;
+  ; [:!Q#Pright_option []]                                                          NOT USEFUL     ;
   ; [:!Q#Pright_command []]                                                         NOT AVAILABLE  ;
-  [:!Q#Pspacebar [:!T#Pc] [:term]]                                                 ;    PREFERENCES    ;
-  [:!Q#Pspacebar [:!Q#Pcomma]]                                                 ;    PREFERENCES    ;
+  ; [:!Q#Pspacebar [:!Q#Pcomma]]                                                 ;    PREFERENCES    ;
 
-  ; [:!Q#Pleft_command []]                                                                         ;
-  ; [:!Q#Pleft_option []]                                                                          ;
-  ; [:!Q#Pleft_control []]                                                                         ;
+  [:!Q#Pleft_command [:spacebar :hyphen :!Speriod :spacebar]]                                      ; ' -> '
+  [:!Q#Pleft_option [:period :period]]                                                             ; '..'
+  [:!Q#Pleft_control [:spacebar :!Scomma :hyphen :spacebar]]                                       ; ' <- '
   [:!Q#Pleft_shift [:spacebar :!S1 :equal_sign :spacebar]]                                         ; ' != '
-  [:!Q#Pcaps_lock [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]                       ; ' === '
+  [:!Q#Pcaps_lock [:spacebar :!Ssemicolon :equal_sign :spacebar]]                                  ; ' := ';
   ; [:!Q#Ptab []]                                                                                  ;
   ; [:!Q#Pkeypad_num_lock []]                                                                      ;
   ; [:!Q#Pescape []]                                                                               ;
@@ -50,17 +60,17 @@
   ; [:!QR#Pslash []]                                                                               ;
 
   ; [:!QR#Pdelete_or_backspace []]                                                                 ;
-  ; [:!QR#Preturn_or_enter []]                                                                     ;
+  [:!QR#Preturn_or_enter [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]        ; ' .=== '
   ; [:!QR#Pright_shift []]                                                          NOT AVAILABLE  ;
-  ; [:!QR#Pright_option []]                                                                        ;
+  ; [:!QR#Pright_option []]                                                         NOT USEFUL     ;
   ; [:!QR#Pright_command []]                                                        NOT AVAILABLE  ;
   ; [:!QR#Pspacebar []]                                                                            ;
 
-  ; [:!QR#Pleft_command []]                                                                        ;
-  ; [:!QR#Pleft_option []]                                                                         ;
-  ; [:!QR#Pleft_control []]                                                                        ;
+  [:!QR#Pleft_command [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]                           ; ' ->> '
+  [:!QR#Pleft_option [:period :period :period]]                                                    ; '...'
+  [:!QR#Pleft_control [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]                             ; ' <<- '
   [:!QR#Pleft_shift [:spacebar :period :!S1 :equal_sign :spacebar]]                                ; ' .!= '
-  [:!QR#Pcaps_lock [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]              ; ' .=== '
+  [:!QR#Pcaps_lock [:!S1 :!S1]]                                                                    ; '!!'
   ; [:!QR#Ptab []]                                                                                 ;
   ; [:!QR#Pkeypad_num_lock []]                                                                     ;
   ; [:!QR#Pescape []]                                                                              ;
@@ -72,33 +82,33 @@
 {:des "Command Mode - alphabet"
  :rules
  [;
-  [:!Q#Pa [:!Ssemicolon :semicolon :a :!Ssemicolon]]                           ; αλφα              ; 'α'
-  [:!Q#Pb [:!Ssemicolon :semicolon :b :!Ssemicolon]]                           ; βητα              ; 'β'
-  [:!Q#Pc [:!Ssemicolon :semicolon :c :!Ssemicolon]]                           ; σιγμα             ; 'ς'
-  [:!Q#Pd [:!Ssemicolon :semicolon :d :!Ssemicolon]]                           ; δελτα             ; 'δ'
-  [:!Q#Pe [:!Ssemicolon :semicolon :e :!Ssemicolon]]                           ; εψιλον            ; 'ε'
-  [:!Q#Pf [:!Ssemicolon :semicolon :f :!Ssemicolon]]                           ; φι                ; 'φ'
-  [:!Q#Pg [:!Ssemicolon :semicolon :g :!Ssemicolon]]                           ; γαμμα             ; 'γ'
-  [:!Q#Ph [:!Ssemicolon :semicolon :h :!Ssemicolon]]                           ; ητα               ; 'η'
-  [:!Q#Pi [:!Ssemicolon :semicolon :i :!Ssemicolon]]                           ; ιωτα              ; 'ι'
-  [:!Q#Pj [:!Ssemicolon :semicolon :j :!Ssemicolon]]                           ; ξι                ; 'ξ'
-  [:!Q#Pk [:!Ssemicolon :semicolon :k :!Ssemicolon]]                           ; καππα             ; 'κ'
-  [:!Q#Pl [:!Ssemicolon :semicolon :l :!Ssemicolon]]                           ; λαμβδα            ; 'λ'
-  [:!Q#Pm [:!Ssemicolon :semicolon :m :!Ssemicolon]]                           ; μυ                ; 'μ'
-  [:!Q#Pn [:!Ssemicolon :semicolon :n :!Ssemicolon]]                           ; νυ                ; 'ν'
-  [:!Q#Po [:!Ssemicolon :semicolon :o :!Ssemicolon]]                           ; ομικρον           ; 'ο'
-  [:!Q#Pp [:!Ssemicolon :semicolon :p :!Ssemicolon]]                           ; πι                ; 'π'
-  ; [:!Q#Pq []]                                                                     DEFAULT        ;
-  [:!Q#Pr [:!Ssemicolon :semicolon :r :!Ssemicolon]]                           ; ρω                ; 'ρ'
-  [:!Q#Ps [:!Ssemicolon :semicolon :s :!Ssemicolon]]                           ; σιγμα             ; 'σ'
-  [:!Q#Pt [:!Ssemicolon :semicolon :t :!Ssemicolon]]                           ; ταυ               ; 'τ'
-  [:!Q#Pu [:!Ssemicolon :semicolon :u :!Ssemicolon]]                           ; θητα              ; 'Θ'
-  [:!Q#Pv [:!Ssemicolon :semicolon :v :!Ssemicolon]]                           ; ωμεγα             ; 'ω'
-  [:!Q#Pw [:!Ssemicolon :semicolon :w :!Ssemicolon]]                           ; ψι                ; 'ψ'
-  [:!Q#Px [:!Ssemicolon :semicolon :x :!Ssemicolon]]                           ; χι                ; 'χ'
-  [:!Q#Py [:!Ssemicolon :semicolon :y :!Ssemicolon]]                           ; υψιλον            ; 'υ'
-  [:!Q#Pz [:!Ssemicolon :semicolon :z :!Ssemicolon]]                           ; ζητα              ; 'ζ'
-  [:!Q#Pright_control [:!Ssemicolon :semicolon :q :!Ssemicolon]]               ; κοππα             ; 'ϙ'
+  ; [:!Q#Pa [:!Ssemicolon :semicolon :a :!Ssemicolon]]                           ; αλφα              ; 'α'
+  ; [:!Q#Pb [:!Ssemicolon :semicolon :b :!Ssemicolon]]                           ; βητα              ; 'β'
+  ; [:!Q#Pc [:!Ssemicolon :semicolon :c :!Ssemicolon]]                           ; σιγμα             ; 'ς'
+  ; [:!Q#Pd [:!Ssemicolon :semicolon :d :!Ssemicolon]]                           ; δελτα             ; 'δ'
+  ; [:!Q#Pe [:!Ssemicolon :semicolon :e :!Ssemicolon]]                           ; εψιλον            ; 'ε'
+  ; [:!Q#Pf [:!Ssemicolon :semicolon :f :!Ssemicolon]]                           ; φι                ; 'φ'
+  ; [:!Q#Pg [:!Ssemicolon :semicolon :g :!Ssemicolon]]                           ; γαμμα             ; 'γ'
+  ; [:!Q#Ph [:!Ssemicolon :semicolon :h :!Ssemicolon]]                           ; ητα               ; 'η'
+  ; [:!Q#Pi [:!Ssemicolon :semicolon :i :!Ssemicolon]]                           ; ιωτα              ; 'ι'
+  ; [:!Q#Pj [:!Ssemicolon :semicolon :j :!Ssemicolon]]                           ; ξι                ; 'ξ'
+  ; [:!Q#Pk [:!Ssemicolon :semicolon :k :!Ssemicolon]]                           ; καππα             ; 'κ'
+  ; [:!Q#Pl [:!Ssemicolon :semicolon :l :!Ssemicolon]]                           ; λαμβδα            ; 'λ'
+  ; [:!Q#Pm [:!Ssemicolon :semicolon :m :!Ssemicolon]]                           ; μυ                ; 'μ'
+  ; [:!Q#Pn [:!Ssemicolon :semicolon :n :!Ssemicolon]]                           ; νυ                ; 'ν'
+  ; [:!Q#Po [:!Ssemicolon :semicolon :o :!Ssemicolon]]                           ; ομικρον           ; 'ο'
+  ; [:!Q#Pp [:!Ssemicolon :semicolon :p :!Ssemicolon]]                           ; πι                ; 'π'
+  ; ; [:!Q#Pq []]                                                                     DEFAULT        ;
+  ; [:!Q#Pr [:!Ssemicolon :semicolon :r :!Ssemicolon]]                           ; ρω                ; 'ρ'
+  ; [:!Q#Ps [:!Ssemicolon :semicolon :s :!Ssemicolon]]                           ; σιγμα             ; 'σ'
+  ; [:!Q#Pt [:!Ssemicolon :semicolon :t :!Ssemicolon]]                           ; ταυ               ; 'τ'
+  ; [:!Q#Pu [:!Ssemicolon :semicolon :u :!Ssemicolon]]                           ; θητα              ; 'Θ'
+  ; [:!Q#Pv [:!Ssemicolon :semicolon :v :!Ssemicolon]]                           ; ωμεγα             ; 'ω'
+  ; [:!Q#Pw [:!Ssemicolon :semicolon :w :!Ssemicolon]]                           ; ψι                ; 'ψ'
+  ; [:!Q#Px [:!Ssemicolon :semicolon :x :!Ssemicolon]]                           ; χι                ; 'χ'
+  ; [:!Q#Py [:!Ssemicolon :semicolon :y :!Ssemicolon]]                           ; υψιλον            ; 'υ'
+  ; [:!Q#Pz [:!Ssemicolon :semicolon :z :!Ssemicolon]]                           ; ζητα              ; 'ζ'
+  ; [:!Q#Pright_control [:!Ssemicolon :semicolon :q :!Ssemicolon]]               ; κοππα             ; 'ϙ'
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -107,33 +117,33 @@
 {:des "Command Mode - alphabet"
  :rules
  [;
-  [:!QR#Pa [:!Ssemicolon :comma :a :!Ssemicolon]]                              ; a ogonek          ; 'ą'
-  [:!QR#Pb [:!Ssemicolon :comma :b :!Ssemicolon]]                              ; eszett            ; 'ß'
-  [:!QR#Pc [:!Ssemicolon :comma :c :!Ssemicolon]]                              ; c cedille         ; 'ç'
-  [:!QR#Pd [:!Ssemicolon :comma :d :!Ssemicolon]]                              ; ΔEΛTA             ; 'Δ'
-  [:!QR#Pe [:!Ssemicolon :comma :e :!Ssemicolon]]                              ; e ogonek          ; 'ę'
-  [:!QR#Pf [:!Ssemicolon :comma :f :!Ssemicolon]]                              ; florin            ; 'ƒ'
-  [:!QR#Pg [:!Ssemicolon :comma :g :!Ssemicolon]]                              ; e caron           ; 'ě'
-  [:!QR#Ph [:!Ssemicolon :comma :h :!Ssemicolon]]                              ; cyrillic и        ; 'и'
-  [:!QR#Pi [:!Ssemicolon :comma :i :!Ssemicolon]]                              ; i ogonek          ; 'į'
-  [:!QR#Pj [:!Ssemicolon :comma :j :!Ssemicolon]]                              ; caret             ; 'ʌ'
-  [:!QR#Pk [:!Ssemicolon :comma :k :!Ssemicolon]]                              ; phonetic ɒ        ; 'ɒ'
-  [:!QR#Pl [:!Ssemicolon :comma :l :!Ssemicolon]]                              ; ΛAMBΔA            ; 'Λ'
-  [:!QR#Pm [:!Ssemicolon :comma :m :!Ssemicolon]]                              ; meng              ; 'ɱ'
-  [:!QR#Pn [:!Ssemicolon :comma :n :!Ssemicolon]]                              ; eng               ; 'ŋ'
-  [:!QR#Po [:!Ssemicolon :comma :o :!Ssemicolon]]                              ; o ogonek          ; 'ǫ'
-  [:!QR#Pp [:!Ssemicolon :comma :p :!Ssemicolon]]                              ; cyrillic п        ; 'п'
-  ; [:!QR#Pq []]                                                                    DEFAULT        ;
-  [:!QR#Pr [:!Ssemicolon :comma :r :!Ssemicolon]]                              ; cyrillic я        ; 'я'
-  [:!QR#Ps [:!Ssemicolon :comma :s :!Ssemicolon]]                              ; ΣIΓMA             ; 'Σ'
-  ; [:!QR#Pt [:!Ssemicolon :comma :t :!Ssemicolon]]                            ;                   ;    
-  [:!QR#Pu [:!Ssemicolon :comma :u :!Ssemicolon]]                              ; u ogonek          ; 'ų'
-  [:!QR#Pv [:!Ssemicolon :comma :v :!Ssemicolon]]                              ; ΩMEΓA             ; 'Ω'
-  [:!QR#Pw [:!Ssemicolon :comma :w :!Ssemicolon]]                              ; πωμεγα            ; 'ϖ'
-  [:!QR#Px [:!Ssemicolon :comma :x :!Ssemicolon]]                              ; yogh              ; 'ʒ'
-  [:!QR#Pw [:!Ssemicolon :comma :y :!Ssemicolon]]                              ; eł                ; 'ł'
-  [:!QR#Pz [:!Ssemicolon :comma :z :!Ssemicolon]]                              ; cyrillic з        ; 'з'
-  [:!QR#Pright_control [:!Ssemicolon :comma :q :!Ssemicolon]]                  ; ø                 ; 'ø'
+  ; [:!QR#Pa [:!Ssemicolon :comma :a :!Ssemicolon]]                              ; a ogonek          ; 'ą'
+  ; [:!QR#Pb [:!Ssemicolon :comma :b :!Ssemicolon]]                              ; eszett            ; 'ß'
+  ; [:!QR#Pc [:!Ssemicolon :comma :c :!Ssemicolon]]                              ; c cedille         ; 'ç'
+  ; [:!QR#Pd [:!Ssemicolon :comma :d :!Ssemicolon]]                              ; ΔEΛTA             ; 'Δ'
+  ; [:!QR#Pe [:!Ssemicolon :comma :e :!Ssemicolon]]                              ; e ogonek          ; 'ę'
+  ; [:!QR#Pf [:!Ssemicolon :comma :f :!Ssemicolon]]                              ; florin            ; 'ƒ'
+  ; [:!QR#Pg [:!Ssemicolon :comma :g :!Ssemicolon]]                              ; e caron           ; 'ě'
+  ; [:!QR#Ph [:!Ssemicolon :comma :h :!Ssemicolon]]                              ; cyrillic и        ; 'и'
+  ; [:!QR#Pi [:!Ssemicolon :comma :i :!Ssemicolon]]                              ; i ogonek          ; 'į'
+  ; [:!QR#Pj [:!Ssemicolon :comma :j :!Ssemicolon]]                              ; caret             ; 'ʌ'
+  ; [:!QR#Pk [:!Ssemicolon :comma :k :!Ssemicolon]]                              ; phonetic ɒ        ; 'ɒ'
+  ; [:!QR#Pl [:!Ssemicolon :comma :l :!Ssemicolon]]                              ; ΛAMBΔA            ; 'Λ'
+  ; [:!QR#Pm [:!Ssemicolon :comma :m :!Ssemicolon]]                              ; meng              ; 'ɱ'
+  ; [:!QR#Pn [:!Ssemicolon :comma :n :!Ssemicolon]]                              ; eng               ; 'ŋ'
+  ; [:!QR#Po [:!Ssemicolon :comma :o :!Ssemicolon]]                              ; o ogonek          ; 'ǫ'
+  ; [:!QR#Pp [:!Ssemicolon :comma :p :!Ssemicolon]]                              ; cyrillic п        ; 'п'
+  ; ; [:!QR#Pq []]                                                                    DEFAULT        ;
+  ; [:!QR#Pr [:!Ssemicolon :comma :r :!Ssemicolon]]                              ; cyrillic я        ; 'я'
+  ; [:!QR#Ps [:!Ssemicolon :comma :s :!Ssemicolon]]                              ; ΣIΓMA             ; 'Σ'
+  ; ; [:!QR#Pt [:!Ssemicolon :comma :t :!Ssemicolon]]                            ;                   ;    
+  ; [:!QR#Pu [:!Ssemicolon :comma :u :!Ssemicolon]]                              ; u ogonek          ; 'ų'
+  ; [:!QR#Pv [:!Ssemicolon :comma :v :!Ssemicolon]]                              ; ΩMEΓA             ; 'Ω'
+  ; [:!QR#Pw [:!Ssemicolon :comma :w :!Ssemicolon]]                              ; πωμεγα            ; 'ϖ'
+  ; [:!QR#Px [:!Ssemicolon :comma :x :!Ssemicolon]]                              ; yogh              ; 'ʒ'
+  ; [:!QR#Pw [:!Ssemicolon :comma :y :!Ssemicolon]]                              ; eł                ; 'ł'
+  ; [:!QR#Pz [:!Ssemicolon :comma :z :!Ssemicolon]]                              ; cyrillic з        ; 'з'
+  ; [:!QR#Pright_control [:!Ssemicolon :comma :q :!Ssemicolon]]                  ; ø                 ; 'ø'
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
