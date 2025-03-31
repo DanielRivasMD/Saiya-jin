@@ -6,11 +6,11 @@
 {:des "Option Mode - symbols"
  :rules
  [;
-  ; [:!O#Pleft_arrow []]                                                                           ;
-  ; [:!O#Pright_arrow []]                                                                          ;
-  [:!O#Pup_arrow [:page_up] [:term]]                                                               ;
-  [:!O#Pdown_arrow [:page_down] [:term]]                                                           ;
- ]}
+  [:!O#Pleft_arrow :!Ob [:term]]                                               ; cursor movement   ; alacritty
+  [:!O#Pright_arrow :!Of [:term]]                                              ; cursor movement   ; alacritty
+  [:!O#Pup_arrow [:page_up] [:term]]                                           ; cursor movement   ; alacritty
+  [:!O#Pdown_arrow [:page_down] [:term]]                                       ; cursor movement   ; alacritty
+  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -50,10 +50,10 @@
 {:des "Option Mode - symbols"
  :rules
  [;
-  ; [:!OS#Pleft_arrow [] [:term]]                                                                  ;
-  ; [:!OS#Pright_arrow [] [:term]]                                                                 ;
-  ; [:!OS#Pup_arrow [] [:term]]                                                                    ;
-  ; [:!OS#Pdown_arrow [] [:term]]                                                                  ;
+  ; [:!OS#Pleft_arrow []]                                                                          ;
+  ; [:!OS#Pright_arrow []]                                                                         ;
+  ; [:!OS#Pup_arrow []]                                                                            ;
+  ; [:!OS#Pdown_arrow []]                                                                          ;
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -160,33 +160,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  ; [:!O#Pa []]                                                                     REDUNDANT      ;
-  ; [:!O#Pb []]                                                                     REDUNDANT      ;
-  ; [:!O#Pc []]                                                                     REDUNDANT      ;
-  ; [:!O#Pd []]                                                                     REDUNDANT      ;
-  ; [:!O#Pe []]                                                                     REDUNDANT      ;
-  ; [:!O#Pf []]                                                                     REDUNDANT      ;
-  ; [:!O#Pg []]                                                                     REDUNDANT      ;
-  ; [:!O#Ph []]                                                                     REDUNDANT      ;
-  ; [:!O#Pi []]                                                                     REDUNDANT      ;
-  ; [:!O#Pj []]                                                                     REDUNDANT      ;
-  ; [:!O#Pk []]                                                                     REDUNDANT      ;
-  ; [:!O#Pl []]                                                                     REDUNDANT      ;
-  ; [:!O#Pm []]                                                                     REDUNDANT      ;
-  ; [:!O#Pn []]                                                                     REDUNDANT      ;
-  ; [:!O#Po []]                                                                     REDUNDANT      ;
-  ; [:!O#Pp []]                                                                     REDUNDANT      ;
-  ; [:!O#Pq []]                                                                     REDUNDANT      ;
-  ; [:!O#Pr []]                                                                     REDUNDANT      ;
-  ; [:!O#Ps []]                                                                     REDUNDANT      ;
-  ; [:!O#Pt []]                                                                     REDUNDANT      ;
-  ; [:!O#Pu []]                                                                     REDUNDANT      ;
-  ; [:!O#Pv []]                                                                     REDUNDANT      ;
-  ; [:!O#Pw []]                                                                     REDUNDANT      ;
-  ; [:!O#Px []]                                                                     REDUNDANT      ;
-  ; [:!O#Py []]                                                                     REDUNDANT      ;
-  ; [:!O#Pz []]                                                                     REDUNDANT      ;
-  ; [:!O#Pright_control []]                                                         REDUNDANT      ;
+  [:!O#Pa :!Of1 [:term]]                                                                           ; zellij
+  [:!O#Pb :!Of2 [:term]]                                                                           ; zellij
+  [:!O#Pc :!Of4 [:term]]                                                                           ; zellij
+  [:!O#Pd :!Of5 [:term]]                                                                           ; zellij
+  [:!O#Pe :!Of6 [:term]]                                                                           ; zellij
+  [:!O#Pf :!Of7 [:term]]                                                                           ; zellij
+  [:!O#Pg :!Of8 [:term]]                                                                           ; zellij
+  [:!O#Ph :!Of9 [:term]]                                                                           ; zellij
+  [:!O#Pi :!Of10 [:term]]                                                                          ; zellij
+  [:!O#Pj :!Tf1 [:term]]                                                                           ; zellij
+  [:!O#Pk :!Tf2 [:term]]                                                                           ; zellij
+  [:!O#Pl :!Tf4 [:term]]                                                                           ; zellij
+  [:!O#Pm :!Tf5 [:term]]                                                                           ; zellij
+  [:!O#Pn :!Tf6 [:term]]                                                                           ; zellij
+  [:!O#Po :!Tf7 [:term]]                                                                           ; zellij
+  [:!O#Pp :!Tf8 [:term]]                                                                           ; zellij
+  [:!O#Pq :!Tf9 [:term]]                                                                           ; zellij
+  [:!O#Pr :!Tf10 [:term]]                                                                          ; zellij
+  [:!O#Ps :!OTf1 [:term]]                                                                          ; zellij
+  [:!O#Pt :!OTf2 [:term]]                                                                          ; zellij
+  [:!O#Pu :!OTf4 [:term]]                                                                          ; zellij
+  [:!O#Pv :!OTf5 [:term]]                                                                          ; zellij
+  [:!O#Pw :!OTf6 [:term]]                                                                          ; zellij
+  [:!O#Px :!OTf7 [:term]]                                                                          ; zellij
+  [:!O#Py :!OTf8 [:term]]                                                                          ; zellij
+  [:!O#Pz :!OTf9 [:term]]                                                                          ; zellij
+  [:!O#Pright_control :!OTf10 [:term]]                                                             ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -195,33 +195,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  ; [:!OS#Pa []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pb []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pc []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pd []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pe []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pf []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pg []]                                                                    REDUNDANT      ;
-  ; [:!OS#Ph []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pi []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pj []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pk []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pl []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pm []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pn []]                                                                    REDUNDANT      ;
-  ; [:!OS#Po []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pp []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pq []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pr []]                                                                    REDUNDANT      ;
-  ; [:!OS#Ps []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pt []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pu []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pv []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pw []]                                                                    REDUNDANT      ;
-  ; [:!OS#Px []]                                                                    REDUNDANT      ;
-  ; [:!OS#Py []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pz []]                                                                    REDUNDANT      ;
-  ; [:!OS#Pright_control []]                                                        REDUNDANT      ;
+  [:!SO#Pa :!SOf1 [:term]]                                                                         ; zellij
+  [:!SO#Pb :!SOf2 [:term]]                                                                         ; zellij
+  [:!SO#Pc :!SOf4 [:term]]                                                                         ; zellij
+  [:!SO#Pd :!SOf5 [:term]]                                                                         ; zellij
+  [:!SO#Pe :!SOf6 [:term]]                                                                         ; zellij
+  [:!SO#Pf :!SOf7 [:term]]                                                                         ; zellij
+  [:!SO#Pg :!SOf8 [:term]]                                                                         ; zellij
+  [:!SO#Ph :!SOf9 [:term]]                                                                         ; zellij
+  [:!SO#Pi :!SOf10 [:term]]                                                                        ; zellij
+  [:!SO#Pj :!STf1 [:term]]                                                                         ; zellij
+  [:!SO#Pk :!STf2 [:term]]                                                                         ; zellij
+  [:!SO#Pl :!STf4 [:term]]                                                                         ; zellij
+  [:!SO#Pm :!STf5 [:term]]                                                                         ; zellij
+  [:!SO#Pn :!STf6 [:term]]                                                                         ; zellij
+  [:!SO#Po :!STf7 [:term]]                                                                         ; zellij
+  [:!SO#Pp :!STf8 [:term]]                                                                         ; zellij
+  [:!SO#Pq :!STf9 [:term]]                                                                         ; zellij
+  [:!SO#Pr :!STf10 [:term]]                                                                        ; zellij
+  [:!SO#Ps :!SOTf1 [:term]]                                                                        ; zellij
+  [:!SO#Pt :!SOTf2 [:term]]                                                                        ; zellij
+  [:!SO#Pu :!SOTf4 [:term]]                                                                        ; zellij
+  [:!SO#Pv :!SOTf5 [:term]]                                                                        ; zellij
+  [:!SO#Pw :!SOTf6 [:term]]                                                                        ; zellij
+  [:!SO#Px :!SOTf7 [:term]]                                                                        ; zellij
+  [:!SO#Py :!SOTf8 [:term]]                                                                        ; zellij
+  [:!SO#Pz :!SOTf9 [:term]]                                                                        ; zellij
+  [:!SO#Pright_control :!SOTf10 [:term]]                                                           ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
