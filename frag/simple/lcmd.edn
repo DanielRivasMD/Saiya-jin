@@ -6,10 +6,10 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  ; [:!C#Pleft_arrow []]                                                                           ;
-  ; [:!C#Pright_arrow []]                                                                          ;
-  [:!C#Pup_arrow [:home] [:term]]                                                                  ;
-  [:!C#Pdown_arrow [:end] [:term]]                                                                 ;
+  ; [:!C#Pleft_arrow []]                                                            DEFAULT        ;
+  ; [:!C#Pright_arrow []]                                                           DEFAULT        ;
+  [:!C#Pup_arrow [:home] [:term]]                                                                  ; alacritty
+  [:!C#Pdown_arrow [:end] [:term]]                                                                 ; alacritty
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -22,17 +22,17 @@
   [:!C#Pclose_bracket [:close_bracket :spacebar]]                                                  ; '] '
   [:!C#Psemicolon [:semicolon :spacebar]]                                                          ; '; '
   [:!C#Pquote [:quote :slash :quote]]                                                              ; ''/''
-  [:!C#Pbackslash [:vk_none]]                                                  ;    EMPTY          ;
+  [:!C#Pbackslash [:spacebar :hyphen]]                                                             ; ' -'
   [:!C#Pcomma [:comma :spacebar]]                                                                  ; ', '
   [:!C#Pperiod [:period :spacebar]]                                                                ; '. '
   [:!C#Pslash [:slash :slash :!S1 :spacebar]]                                                      ; '//! '
 
-  [:!C#Pdelete_or_backspace [:spacebar :hyphen]]                                                   ; ' -'
+  ; [:!C#Pdelete_or_backspace []]                                                                  ;
   ; [:!C#Preturn_or_enter []]                                                       COLLISION      ;
-  [:!C#Pright_shift [:period :period]]                                                             ; '..'
+  ; [:!C#Pright_shift []]                                                                          ;
   [:!C#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                                       ; ' *= '
   [:!C#Pright_command [:spacebar :slash :equal_sign :spacebar]]                                    ; ' /= '
-  ; [:!C#Pspacebar [:!Sf7]]                                                                          ;
+  ; [:!C#Pspacebar []]                                                                             ;
 
   ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
   ; [:!C#Pleft_option []]                                                           NOT USEFUL     ;
@@ -50,10 +50,10 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]                                                       ;
-  [:!CS#Pright_arrow [:!Oright_arrow] [:term]]                                                     ;
-  [:!CS#Pup_arrow [:!Oup_arrow] [:term]]                                                           ;
-  [:!CS#Pdown_arrow [:!Odown_arrow] [:term]]                                                       ;
+  [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]                                                       ; alacritty
+  [:!CS#Pright_arrow [:!Oright_arrow] [:term]]                                                     ; alacritty
+  [:!CS#Pup_arrow [:!Oup_arrow] [:term]]                                                           ; alacritty
+  [:!CS#Pdown_arrow [:!Odown_arrow] [:term]]                                                       ; alacritty
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -66,17 +66,17 @@
   [:!CS#Pclose_bracket [:!Sclose_bracket :spacebar]]                                               ; '} '
   [:!CS#Psemicolon [:!Ssemicolon :spacebar]]                                                       ; ': '
   [:!CS#Pquote [:!Squote :slash :!Squote]]                                                         ; '"/"'
-  [:!CS#Pbackslash [:vk_none]]                                                 ;    EMPTY          ;
+  [:!CS#Pbackslash [:spacebar :hyphen :hyphen]]                                                    ; ' --'
   [:!CS#Pcomma [:!Scomma :!Ssemicolon]]                                                            ; '<:'
   [:!CS#Pperiod [:!Speriod :!Ssemicolon]]                                                          ; '>:'
   [:!CS#Pslash [:!S3 :!S1 :slash]]                                                                 ; '#!/'
 
-  [:!CS#Pdelete_or_backspace [:spacebar :hyphen :hyphen]]                                          ; ' --'
-  ; [:!CS#Preturn_or_enter []]                                                      TODO:          ;
-  [:!CS#Pright_shift [:period :period :period]]                                                    ; '...'
+  ; [:!CS#Pdelete_or_backspace []]                                                                 ;
+  ; [:!CS#Preturn_or_enter []]                                                                     ;
+  ; [:!CS#Pright_shift []]                                                                         ;
   [:!CS#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]                              ; ' .*= '
   [:!CS#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]                           ; ' ./= '
-  ; [:!CS#Pspacebar []]                                                                            ;
+  [:!CS#Pspacebar :!Ospacebar]                                                 ;    ESPANSO        ;
 
   ; [:!CS#Pleft_command []]                                                         NOT AVAILABLE  ;
   ; [:!CS#Pleft_option []]                                                          NOT USEFUL     ;
