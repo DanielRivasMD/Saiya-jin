@@ -6,10 +6,10 @@
 {:des "Option - Command Mode - symbols"
  :rules
  [;
-  ; [:!EQ#Pleft_arrow [] []]                                                                       ;
-  ; [:!EQ#Pright_arrow [] []]                                                                      ;
-  ; [:!EQ#Pup_arrow [] []]                                                                         ;
-  ; [:!EQ#Pdown_arrow [] []]                                                                       ;
+  ; [:!EQ#Pleft_arrow []]                                                                          ;
+  ; [:!EQ#Pright_arrow []]                                                                         ;
+  ; [:!EQ#Pup_arrow []]                                                                            ;
+  ; [:!EQ#Pdown_arrow []]                                                                          ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -29,13 +29,13 @@
 
   ; [:!EQ#Pdelete_or_backspace []]                                                                 ;
   ; [:!EQ#Preturn_or_enter []]                                                                     ;
-  ; [:!EQ#Pright_shift []]                                                                         ;
+  ; [:!EQ#Pright_shift []]                                                          NOT USEFUL     ;
   ; [:!EQ#Pright_option []]                                                         NOT AVAILABLE  ;
   ; [:!EQ#Pright_command []]                                                        NOT AVAILABLE  ;
   ; [:!EQ#Pspacebar []]                                                                            ;
 
   ; [:!EQleft_command []]                                                                          ;
-  ; [:!EQ#Pleft_option []]                                                                         ;
+  [:!EQ#Pleft_option [:caps_lock]]                                                                 ;
   ; [:!EQleft_control []]                                                                          ;
   ; [:!EQ#Pleft_shift []]                                                                          ;
   ; [:!EQ#Pcaps_lock []                                                                            ;
