@@ -6,6 +6,18 @@
 {:des "ESC Mode - symbols"
  :rules
  [;
+  ; [:!EWR#Pleft_arrow []]                                                                         ;
+  ; [:!EWR#Pright_arrow []]                                                                        ;
+  ; [:!EWR#Pup_arrow []]                                                                           ;
+  ; [:!EWR#Pdown_arrow []]                                                                         ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; esc
+{:des "ESC Mode - symbols"
+ :rules
+ [;
   ; [:!EWR#Popen_bracket []]                                                                       ;
   ; [:!EWR#Pclose_bracket []]                                                                      ;
   ; [:!EWR#Psemicolon []]                                                                          ;
@@ -22,13 +34,13 @@
   ; [:!EWR#Pright_command []]                                                                      ;
   ; [:!EWR#Pspacebar []]                                                                           ;
 
-  ; [:!EWR#Pleft_command []]                                                                       ;
-  ; [:!EWR#Pleft_option []]                                                                        ;
-  ; [:!EWR#Pleft_control []]                                                                       ;
-  ; [:!EWR#Pleft_shift []]                                                                         ;
-  ; [:!EWR#Pcaps_lock []]                                                                          ;
-  ; [:!EWR#Ptab []]                                                                                ;
-  ; [:!EWR#Pkeypad_num_lock []]                                                                    ;
+  ; [:!EWR#Pleft_command []]                                                        NOT USEFUL     ;
+  ; [:!EWR#Pleft_option []]                                                         NOT USEFUL     ;
+  ; [:!EWR#Pleft_control []]                                                        NOT USEFUL     ;
+  ; [:!EWR#Pleft_shift []]                                                          NOT USEFUL     ;
+  ; [:!EWR#Pcaps_lock []]                                                           NOT USEFUL     ;
+  ; [:!EWR#Ptab []]                                                                 NOT USEFUL     ;
+  ; [:!EWR#Pkeypad_num_lock []]                                                     NOT USEFUL     ;
   ; [:!EWR#Pescape []]                                                              NOT AVAILABLE  ;
   ]}
 
