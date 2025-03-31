@@ -2,35 +2,34 @@
 ; ZERO => EQR
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: update
 ; ZERO
 {:des "ZERO Mode - symbols"
  :rules
  [;
-  [:!EQR#Popen_bracket [:!Of13]]                                                                   ;
-  [:!EQR#Pclose_bracket [:!Of14]]                                                                  ;
-  [:!EQR#Psemicolon [:!Of18]]                                                                      ;
-  [:!EQR#Pquote [:!Of19]]                                                                          ;
-  [:!EQR#Pbackslash [:!Of20]]                                                                      ;
-  [:!EQR#Pcomma [:!OTf18]]                                                                         ;
-  [:!EQR#Pperiod [:!OTf19]]                                                                        ;
-  [:!EQR#Pslash [:!OTf20]]                                                                         ;
+  ; [:!EQR#Popen_bracket []]                                                                       ;
+  ; [:!EQR#Pclose_bracket []]                                                                      ;
+  ; [:!EQR#Psemicolon []]                                                                          ;
+  ; [:!EQR#Pquote []]                                                                              ;
+  ; [:!EQR#Pbackslash []]                                                                          ;
+  ; [:!EQR#Pcomma []]                                                                              ;
+  ; [:!EQR#Pperiod []]                                                                             ;
+  ; [:!EQR#Pslash []]                                                                              ;
 
-  [:!EQR#Pdelete_or_backspace [:!Tf11]]                                                            ;
-  [:!EQR#Preturn_or_enter [:!Tf12]]                                                                ;
-  [:!EQR#Pright_shift [:!Tf13]]                                                                    ;
-  [:!EQR#Pright_option [:!Tf18]]                                                                   ;
-  [:!EQR#Pright_command [:!Tf19]]                                                                  ;
-  [:!EQR#Pspacebar [:!Tf20]]                                                                       ;
+  ; [:!EQR#Pdelete_or_backspace []]                                                                ;
+  ; [:!EQR#Preturn_or_enter []]                                                                    ;
+  ; [:!EQR#Pright_shift []]                                                                        ;
+  ; [:!EQR#Pright_option []]                                                                       ;
+  ; [:!EQR#Pright_command []]                                                                      ;
+  ; [:!EQR#Pspacebar []]                                                                           ;
 
-  ; [:!EQR#Pleft_command []]                                                                       ;
-  ; [:!EQR#Pleft_option []]                                                                        ;
-  ; [:!EQR#Pleft_control []]                                                                       ;
-  ; [:!EQR#Pleft_shift []]                                                                         ;
-  ; [:!EQR#Pcaps_lock []]                                                                          ;
-  ; [:!EQR#Ptab []]                                                                                ;
+  ; [:!EQR#Pleft_command []]                                                        NOT USEFUL     ;
+  ; [:!EQR#Pleft_option []]                                                         NOT USEFUL     ;
+  ; [:!EQR#Pleft_control []]                                                        NOT USEFUL     ;
+  ; [:!EQR#Pleft_shift []]                                                          NOT USEFUL     ;
+  ; [:!EQR#Pcaps_lock []]                                                           NOT USEFUL     ;
+  ; [:!EQR#Ptab []]                                                                 NOT USEFUL     ;
   ; [:!EQR#Pnon_us_backslash []]                                                    NOT AVAILABLE  ;
-  ; [:!EQR#Pescape []]                                                                             ;
+  ; [:!EQR#Pescape []]                                                              NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -62,8 +61,8 @@
   ; [:!EQR#P8 []]                                                                                  ;
   ; [:!EQR#P9 []]                                                                                  ;
   ; [:!EQR#P0 []]                                                                                  ;
-  [:!EQR#Phyphen [:!Of11]]                                                                         ;
-  [:!EQR#Pequal_sign [:!Of12]]                                                                     ;
+  ; [:!EQR#Phyphen []]                                                                             ;
+  ; [:!EQR#Pequal_sign []]                                                                         ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
