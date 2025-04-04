@@ -1564,8 +1564,8 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  [:!EWQ#Pleft_arrow [:!Tpage_up] [:term]]                                     ; prev character    ; helix
-  [:!EWQ#Pright_arrow [:!Tpage_down] [:term]]                                  ; next character    ; helix
+  [:!EWQ#Pleft_arrow [:!Tpage_up] [:term]]                                     ; undo              ; helix
+  [:!EWQ#Pright_arrow [:!Tpage_down] [:term]]                                  ; redo              ; helix
   [:!EWQ#Pup_arrow [:!Thome] [:term]]                                          ; prev change       ; helix
   [:!EWQ#Pdown_arrow [:!Tend] [:term]]                                         ; next change       ; helix
   ]}
@@ -1576,8 +1576,8 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  [:!EWQ#Popen_bracket [:!Of11]]                                               ; prev comment      ; helix
-  [:!EWQ#Pclose_bracket [:!Of12]]                                              ; next comment      ; helix
+  [:!EWQ#Popen_bracket [:!Of11]]                                                                   ; helix
+  [:!EWQ#Pclose_bracket [:!Of12]]                                                                  ; helix
   [:!EWQ#Psemicolon [:!Of13]]                                                                      ; helix
   [:!EWQ#Pquote [:!Of14]]                                                                          ; helix
   [:!EWQ#Pbackslash [:!Of15]]                                                                      ; helix
@@ -1678,8 +1678,8 @@
  [;
   [:!EWQS#Pleft_arrow [:!WSpage_up] [:term]]                                   ; prev jump         ; helix
   [:!EWQS#Pright_arrow [:!WSpage_down] [:term]]                                ; next jump         ; helix
-  ; [:!EWQS#Pup_arrow [:!WShome] [:term]]                                      ;                   ; helix
-  ; [:!EWQS#Pdown_arrow [:!WSend] [:term]]                                     ;                   ; helix
+  [:!EWQS#Pup_arrow [:!WShome] [:term]]                                        ; prev comment      ; helix
+  [:!EWQS#Pdown_arrow [:!WSend] [:term]]                                       ; next comment      ; helix
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1698,11 +1698,11 @@
   [:!SEWQ#Pslash [:!SOf20]]                                                                        ; helix
 
   [:!SEWQ#Pdelete_or_backspace [:!STf11]]                                                          ; helix
-  [:!SEWQ#Preturn_or_enter [:!STf12]]                                          ; jump              ; helix
+  [:!SEWQ#Preturn_or_enter [:!STf12]]                                          ; jump list         ; helix
   [:!SEWQ#Pright_shift [:!STf13]]                                                                  ; helix
   [:!SEWQ#Pright_option [:!STf14]]                                                                 ; helix
   [:!SEWQ#Pright_command [:!STf15]]                                                                ; helix
-  [:!SEWQ#Pspacebar [:!STf18]]                                                 ; save jump         ; helix
+  [:!SEWQ#Pspacebar [:!STf18]]                                                 ; jump save         ; helix
 
   ; [:!SEWQ#Pleft_command []]                                                       NOT USEFUL     ;
   ; [:!SEWQ#Pleft_option []]                                                        NOT USEFUL     ;
@@ -1726,16 +1726,16 @@
   ; [:!EWQS#Pdown_arrow :f14]                                                                        ;
 
   ; class
-  [:!EWQT#Pup_arrow :f8]                                                                           ;
-  [:!EWQT#Pdown_arrow :f9]                                                                         ;
+  [:!EWQT#Pup_arrow :f8]                                                       ; prev class        ;
+  [:!EWQT#Pdown_arrow :f9]                                                     ; next class        ;
 
   ; parameter
-  [:!EWQO#Pup_arrow :f10]                                                                          ;
-  [:!EWQO#Pdown_arrow :f11]                                                                        ;
+  [:!EWQO#Pup_arrow :f10]                                                      ; prev fn           ;
+  [:!EWQO#Pdown_arrow :f11]                                                    ; next fn           ;
 
   ; function
-  [:!EWQC#Pup_arrow :f5]                                                                           ;
-  [:!EWQC#Pdown_arrow :f6]                                                                         ;
+  [:!EWQC#Pup_arrow :f5]                                                       ; prev param        ;
+  [:!EWQC#Pdown_arrow :f6]                                                     ; next param        ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -2001,8 +2001,8 @@
   [:!TC#Pdelete_or_backspace [:!Tl]]                                           ; close             ; helix
   [:!TC#Preturn_or_enter [:!Tg]]                                               ; new               ; helix
   [:!TC#Pright_shift [:!Tj]]                                                   ; split right       ; helix
-  [:!TC#Pright_option [:!Sf5]]                                                 ; split down        ; helix
-  [:!TC#Pright_command [:!Sf6]]                                                ; unsplit           ; helix
+  [:!TC#Pright_option [:!Tn]]                                                  ; split down        ; helix
+  [:!TC#Pright_command [:!Tp]]                                                 ; unsplit           ; helix
   [:!TC#Pspacebar [:!To]]                                                      ; jump back         ; helix
 
   ; [:!TCleft_command []]                                                           NOT AVAILABLE  ;
@@ -2475,33 +2475,33 @@
 {:des "Control Mode - alphabet"
  :rules
  [;
-  ; [:!T#Pa [:!Ssemicolon :g :d :l :!Ssemicolon]]                                                    ;
-  ; [:!T#Pb []]                                                                                    ;
-  ; [:!T#Pc []]                                                                                    ;
-  ; [:!T#PD []]                                                                                    ;
-  ; [:!T#Pe []]                                                                                    ;
-  ; [:!T#Pf []]                                                                                    ;
-  ; [:!T#Pg []]                                                                                    ;
-  ; [:!T#Ph []]                                                                                    ;
-  ; [:!T#Pi [:!Ssemicolon :i :d :!Ssemicolon]]                                                       ;
-  ; [:!T#Pj []]                                                                                    ;
-  ; [:!T#Pk []]                                                                                    ;
-  ; [:!T#Pl []]                                                                                    ;
-  ; [:!T#Pm [:!Ssemicolon :m :a :i :l :!Ssemicolon]]                                                 ;
-  ; [:!T#Pn [:!Ssemicolon :n :a :m :e :!Ssemicolon]]                                                 ;
-  ; [:!T#Po []]                                                                                    ;
-  ; [:!T#Pp [:!Ssemicolon :p :h :o :n :e :!Ssemicolon]]                                              ;
-  ; [:!T#Pq []]                                                                                    ;
-  ; [:!T#Pr []]                                                                                    ;
-  ; [:!T#Ps [:!Ssemicolon :s :i :g :!Ssemicolon]]                                                    ;
-  ; [:!T#Pt []]                                                                                    ;
-  ; [:!T#Pu []]                                                                                    ;
-  ; [:!T#Pv []]                                                                                    ;
-  ; [:!T#Pw []]                                                                                    ;
-  ; [:!T#Px []]                                                                                    ;
-  ; [:!T#Py []]                                                                                    ;
-  ; [:!T#Pz []]                                                                                    ;
-  ; [:!T#Pright_control []]                                                                        ;
+  [:!T#Pa [:!Ssemicolon :g :d :l :!Ssemicolon]]                                                    ;
+  [:!T#Pb []]                                                                                    ;
+  [:!T#Pc []]                                                                                    ;
+  [:!T#Pd []]                                                                                    ;
+  [:!T#Pe []]                                                                                    ;
+  [:!T#Pf []]                                                                                    ;
+  [:!T#Pg []]                                                                                    ;
+  [:!T#Ph []]                                                                                    ;
+  [:!T#Pi [:!Ssemicolon :i :d :!Ssemicolon]]                                                       ;
+  [:!T#Pj []]                                                                                    ;
+  [:!T#Pk []]                                                                                    ;
+  [:!T#Pl []]                                                                                    ;
+  [:!T#Pm [:!Ssemicolon :m :a :i :l :!Ssemicolon]]                                                 ;
+  [:!T#Pn [:!Ssemicolon :n :a :m :e :!Ssemicolon]]                                                 ;
+  [:!T#Po []]                                                                                    ;
+  [:!T#Pp [:!Ssemicolon :p :h :o :n :e :!Ssemicolon]]                                              ;
+  [:!T#Pq []]                                                                                    ;
+  [:!T#Pr []]                                                                                    ;
+  [:!T#Ps [:!Ssemicolon :s :i :g :!Ssemicolon]]                                                    ;
+  [:!T#Pt []]                                                                                    ;
+  [:!T#Pu []]                                                                                    ;
+  [:!T#Pv []]                                                                                    ;
+  [:!T#Pw []]                                                                                    ;
+  [:!T#Px []]                                                                                    ;
+  [:!T#Py []]                                                                                    ;
+  [:!T#Pz []]                                                                                    ;
+  [:!T#Pright_control []]                                                                        ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -2510,33 +2510,33 @@
 {:des "Control Mode - alphabet"
  :rules
  [;
-  ; [:!TS#Pa []]                                                                                   ;
-  ; [:!TS#Pb []]                                                                                   ;
-  ; [:!TS#Pc []]                                                                                   ;
-  ; [:!TS#Pd []]                                                                                   ;
-  ; [:!TS#Pe []]                                                                                   ;
-  ; [:!TS#Pf []]                                                                                   ;
-  ; [:!TS#Pg []]                                                                                   ;
-  ; [:!TS#Ph []]                                                                                   ;
-  ; [:!TS#Pi []]                                                                                   ;
-  ; [:!TS#Pj []]                                                                                   ;
-  ; [:!TS#Pk []]                                                                                   ;
-  ; [:!TS#Pl []]                                                                                   ;
-  ; [:!TS#Pm [:!Ssemicolon :g :m :a :i :l :!Ssemicolon]]                                             ;
-  ; [:!TS#Pn [:!Ssemicolon :d :r :!Ssemicolon]]                                                      ;
-  ; [:!TS#Po []]                                                                                   ;
-  ; [:!TS#Pp []]                                                                                   ;
-  ; [:!TS#Pq []]                                                                                   ;
-  ; [:!TS#Pr []]                                                                                   ;
-  ; [:!TS#Ps []]                                                                                   ;
-  ; [:!TS#Pt []]                                                                                   ;
-  ; [:!TS#Pu []]                                                                                   ;
-  ; [:!TS#Pv []]                                                                                   ;
-  ; [:!TS#Pw []]                                                                                   ;
-  ; [:!TS#Px []]                                                                                   ;
-  ; [:!TS#Py []]                                                                                   ;
-  ; [:!TS#Pz []]                                                                                   ;
-  ; [:!TS#Pright_control []]                                                                       ;
+  [:!TS#Pa []]                                                                                   ;
+  [:!TS#Pb []]                                                                                   ;
+  [:!TS#Pc []]                                                                                   ;
+  [:!TS#Pd []]                                                                                   ;
+  [:!TS#Pe []]                                                                                   ;
+  [:!TS#Pf []]                                                                                   ;
+  [:!TS#Pg []]                                                                                   ;
+  [:!TS#Ph []]                                                                                   ;
+  [:!TS#Pi []]                                                                                   ;
+  [:!TS#Pj []]                                                                                   ;
+  [:!TS#Pk []]                                                                                   ;
+  [:!TS#Pl []]                                                                                   ;
+  [:!TS#Pm [:!Ssemicolon :g :m :a :i :l :!Ssemicolon]]                                             ;
+  [:!TS#Pn [:!Ssemicolon :d :r :!Ssemicolon]]                                                      ;
+  [:!TS#Po []]                                                                                   ;
+  [:!TS#Pp []]                                                                                   ;
+  [:!TS#Pq []]                                                                                   ;
+  [:!TS#Pr []]                                                                                   ;
+  [:!TS#Ps []]                                                                                   ;
+  [:!TS#Pt []]                                                                                   ;
+  [:!TS#Pu []]                                                                                   ;
+  [:!TS#Pv []]                                                                                   ;
+  [:!TS#Pw []]                                                                                   ;
+  [:!TS#Px []]                                                                                   ;
+  [:!TS#Py []]                                                                                   ;
+  [:!TS#Pz []]                                                                                   ;
+  [:!TS#Pright_control []]                                                                       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -3806,7 +3806,7 @@
   [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
 
   ; esc
-  [:#Pescape :!EWright_shift nil {:alone [:!EW#Pnon_us_pound]}]                                    ; menu search. `term` pop-up new
+  [:#Pescape :!EWright_shift nil {:alone [:!EW#Pnon_us_pound]}]                                    ; menu search. TODO: CHANGE `term` pop-up new
 
   ; zero
   [:#Pkeypad_num_lock :!EQright_shift nil {:alone [:keypad_num_lock]}]                             ; mouse control
@@ -3815,14 +3815,14 @@
   [:#Ptab :!OTCright_shift nil {:alone :tab}]                                                      ; spectacle control, speak & app launcher
 
   ; joker
-  [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ; esc, tydiverse, language server protocol
+  [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ; esc, language server protocol
 
   ; grave
   [:#Pright_control :right_control nil {:alone [:!W#Pnon_us_pound]}]                               ; arc bind
 
   ; lefts
   [:#Pleft_control :left_control nil {:alone [:!EWQ#Onon_us_pound]}]                               ; alfred window switcher
-  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ; global in-app window cycler. `term` session locked
+  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ; global in-app window cycler. TODO: CHANGE `term` session locked
   [:#Pleft_command :left_command nil {:alone [:!Ctab]}]                                            ; switch most recent app
 
   ; rights
