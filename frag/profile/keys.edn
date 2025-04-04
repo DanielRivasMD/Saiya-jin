@@ -10,7 +10,7 @@
   [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
 
   ; esc
-  [:#Pescape :!EWright_shift nil {:alone [:!EW#Pnon_us_pound]}]                                    ; menu search. `term` pop-up new
+  [:#Pescape :!EWright_shift nil {:alone [:!EW#Pnon_us_pound]}]                                    ; menu search. TODO: CHANGE `term` pop-up new
 
   ; zero
   [:#Pkeypad_num_lock :!EQright_shift nil {:alone [:keypad_num_lock]}]                             ; mouse control
@@ -19,14 +19,14 @@
   [:#Ptab :!OTCright_shift nil {:alone :tab}]                                                      ; spectacle control, speak & app launcher
 
   ; joker
-  [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ; esc, tydiverse, language server protocol
+  [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ; esc, language server protocol
 
   ; grave
   [:#Pright_control :right_control nil {:alone [:!W#Pnon_us_pound]}]                               ; arc bind
 
   ; lefts
   [:#Pleft_control :left_control nil {:alone [:!EWQ#Onon_us_pound]}]                               ; alfred window switcher
-  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ; global in-app window cycler. `term` session locked
+  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ; global in-app window cycler. TODO: CHANGE `term` session locked
   [:#Pleft_command :left_command nil {:alone [:!Ctab]}]                                            ; switch most recent app
 
   ; rights
