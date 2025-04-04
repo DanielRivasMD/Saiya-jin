@@ -6,8 +6,8 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  [:!EWQ#Pleft_arrow [:!Tpage_up] [:term]]                                     ; prev character    ; helix
-  [:!EWQ#Pright_arrow [:!Tpage_down] [:term]]                                  ; next character    ; helix
+  [:!EWQ#Pleft_arrow [:!Tpage_up] [:term]]                                     ; undo              ; helix
+  [:!EWQ#Pright_arrow [:!Tpage_down] [:term]]                                  ; redo              ; helix
   [:!EWQ#Pup_arrow [:!Thome] [:term]]                                          ; prev change       ; helix
   [:!EWQ#Pdown_arrow [:!Tend] [:term]]                                         ; next change       ; helix
   ]}
@@ -18,8 +18,8 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
-  [:!EWQ#Popen_bracket [:!Of11]]                                               ; prev comment      ; helix
-  [:!EWQ#Pclose_bracket [:!Of12]]                                              ; next comment      ; helix
+  [:!EWQ#Popen_bracket [:!Of11]]                                                                   ; helix
+  [:!EWQ#Pclose_bracket [:!Of12]]                                                                  ; helix
   [:!EWQ#Psemicolon [:!Of13]]                                                                      ; helix
   [:!EWQ#Pquote [:!Of14]]                                                                          ; helix
   [:!EWQ#Pbackslash [:!Of15]]                                                                      ; helix
@@ -120,8 +120,8 @@
  [;
   [:!EWQS#Pleft_arrow [:!WSpage_up] [:term]]                                   ; prev jump         ; helix
   [:!EWQS#Pright_arrow [:!WSpage_down] [:term]]                                ; next jump         ; helix
-  ; [:!EWQS#Pup_arrow [:!WShome] [:term]]                                      ;                   ; helix
-  ; [:!EWQS#Pdown_arrow [:!WSend] [:term]]                                     ;                   ; helix
+  [:!EWQS#Pup_arrow [:!WShome] [:term]]                                        ; prev comment      ; helix
+  [:!EWQS#Pdown_arrow [:!WSend] [:term]]                                       ; next comment      ; helix
  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -140,11 +140,11 @@
   [:!SEWQ#Pslash [:!SOf20]]                                                                        ; helix
 
   [:!SEWQ#Pdelete_or_backspace [:!STf11]]                                                          ; helix
-  [:!SEWQ#Preturn_or_enter [:!STf12]]                                          ; jump              ; helix
+  [:!SEWQ#Preturn_or_enter [:!STf12]]                                          ; jump list         ; helix
   [:!SEWQ#Pright_shift [:!STf13]]                                                                  ; helix
   [:!SEWQ#Pright_option [:!STf14]]                                                                 ; helix
   [:!SEWQ#Pright_command [:!STf15]]                                                                ; helix
-  [:!SEWQ#Pspacebar [:!STf18]]                                                 ; save jump         ; helix
+  [:!SEWQ#Pspacebar [:!STf18]]                                                 ; jump save         ; helix
 
   ; [:!SEWQ#Pleft_command []]                                                       NOT USEFUL     ;
   ; [:!SEWQ#Pleft_option []]                                                        NOT USEFUL     ;
@@ -168,16 +168,16 @@
   ; [:!EWQS#Pdown_arrow :f14]                                                                        ;
 
   ; class
-  [:!EWQT#Pup_arrow :f8]                                                                           ;
-  [:!EWQT#Pdown_arrow :f9]                                                                         ;
+  [:!EWQT#Pup_arrow :f8]                                                       ; prev class        ;
+  [:!EWQT#Pdown_arrow :f9]                                                     ; next class        ;
 
   ; parameter
-  [:!EWQO#Pup_arrow :f10]                                                                          ;
-  [:!EWQO#Pdown_arrow :f11]                                                                        ;
+  [:!EWQO#Pup_arrow :f10]                                                      ; prev fn           ;
+  [:!EWQO#Pdown_arrow :f11]                                                    ; next fn           ;
 
   ; function
-  [:!EWQC#Pup_arrow :f5]                                                                           ;
-  [:!EWQC#Pdown_arrow :f6]                                                                         ;
+  [:!EWQC#Pup_arrow :f5]                                                       ; prev param        ;
+  [:!EWQC#Pdown_arrow :f6]                                                     ; next param        ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
