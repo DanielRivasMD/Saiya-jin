@@ -46,6 +46,39 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; option
+{:des "Option Mode - numbers"
+ :rules
+ [;
+  [:!E#Pkeypad_1 [:f1]]                                                                            ;
+  [:!E#Pkeypad_2 [:f2]]                                                                            ;
+  [:!E#Pkeypad_3 [:f3]]                                                                            ;
+  [:!E#Pkeypad_4 [:f4]]                                                                            ;
+  [:!E#Pkeypad_5 [:f5]]                                                                            ;
+  [:!E#Pkeypad_6 [:f6]]                                                                            ;
+  [:!E#Pkeypad_7 [:f7]]                                                                            ;
+  [:!E#Pkeypad_8 [:f8]]                                                                            ;
+  [:!E#Pkeypad_9 [:f9]]                                                                            ;
+  [:!E#Pkeypad_0 [:f10]]                                                                           ;
+  [:!E#Pkeypad_slash [:f11]]                                                                       ;
+  [:!E#Pkeypad_asterisk [:f12]]                                                                    ;
+
+  [:!E#P1 [:f1]]                                                                                   ;
+  [:!E#P2 [:f2]]                                                                                   ;
+  [:!E#P3 [:f3]]                                                                                   ;
+  [:!E#P4 [:f4]]                                                                                   ;
+  [:!E#P5 [:f5]]                                                                                   ;
+  [:!E#P6 [:f6]]                                                                                   ;
+  [:!E#P7 [:f7]]                                                                                   ;
+  [:!E#P8 [:f8]]                                                                                   ;
+  [:!E#P9 [:f9]]                                                                                   ;
+  [:!E#P0 [:f10]]                                                                                  ;
+  [:!E#Phyphen [:f11]]                                                                             ;
+  [:!E#Pequal_sign [:f12]]                                                                         ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; option - shift
 {:des "Option Mode - symbols"
  :rules
