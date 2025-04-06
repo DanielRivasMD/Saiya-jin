@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; option - control
-{:des "Option - Control Mode - symbols"
+{:des "Option - Control Mode - arrows"
  :rules
  [;
   [:!OT#Pleft_arrow :!Oj [:term]]                                                                  ; zellij
