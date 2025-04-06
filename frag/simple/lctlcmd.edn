@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; control - command
-{:des "Control - Command Mode - symbols"
+{:des "Control - Command Mode - arrows"
  :rules
  [;
   [:!TC#Pleft_arrow [:!Tb] [:term]]                                                                ; helix
@@ -29,9 +29,9 @@
 
   [:!TC#Pdelete_or_backspace [:!Tl]]                                           ; close             ; helix
   [:!TC#Preturn_or_enter [:!Tg]]                                               ; new               ; helix
-  [:!TC#Pright_shift [:!Tj]]                                                   ; split right       ; helix
-  [:!TC#Pright_option [:!Tn]]                                                  ; split down        ; helix
-  [:!TC#Pright_command [:!Tp]]                                                 ; unsplit           ; helix
+  [:!TC#Pright_shift [:!Tv]]                                                   ; split right       ; helix
+  [:!TC#Pright_option [:!Th]]                                                  ; split down        ; helix
+  [:!TC#Pright_command [:!Tj]]                                                 ; unsplit           ; helix
   [:!TC#Pspacebar [:!To]]                                                      ; jump back         ; helix
 
   ; [:!TCleft_command []]                                                           NOT AVAILABLE  ;
