@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; command
-{:des "Command Mode - symbols"
+{:des "Command Mode - arrows"
  :rules
  [;
   ; [:!C#Pleft_arrow []]                                                            DEFAULT        ;
@@ -47,7 +47,75 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; command
-{:des "Command Mode - symbols"
+{:des "Command Mode - numbers"
+ :rules
+ [;
+  [:!C#Pkeypad_1 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!C#Pkeypad_2 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!C#Pkeypad_3 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!C#Pkeypad_4 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!C#Pkeypad_5 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!C#Pkeypad_6 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!C#Pkeypad_7 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!C#Pkeypad_8 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!C#Pkeypad_9 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!C#Pkeypad_0 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!C#Pkeypad_slash [:vk_none]]                                               ;    EMPTY          ;
+  [:!C#Pkeypad_asterisk [:vk_none]]                                            ;    EMPTY          ;
+
+  [:!C#P1 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!C#P2 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!C#P3 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!C#P4 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!C#P5 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!C#P6 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!C#P7 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!C#P8 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!C#P9 [:!Scomma :!S9]]                                                                         ; '<('
+  [:!C#P0 [:!S0 :spacebar]]                                                                        ; ') '
+  [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                                          ; ' -= '
+  [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]                                ; ' += '
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command
+{:des "Command Mode - alphabet"
+ :rules
+ [;
+  ; [:!C#Pa []]                                                                                    ;
+  ; [:!C#Pb []]                                                                                    ;
+  ; [:!C#Pc []]                                                                                    ;
+  ; [:!C#Pd []]                                                                                    ;
+  ; [:!C#Pe []]                                                                                    ;
+  ; [:!C#Pf []]                                                                                    ;
+  ; [:!C#Pg []]                                                                                    ;
+  ; [:!C#Ph []]                                                                                    ;
+  ; [:!C#Pi []]                                                                                    ;
+  ; [:!C#Pj []]                                                                                    ;
+  ; [:!C#Pk []]                                                                                    ;
+  ; [:!C#Pl []]                                                                                    ;
+  ; [:!C#Pm []]                                                                                    ;
+  ; [:!C#Pn []]                                                                                    ;
+  ; [:!C#Po []]                                                                                    ;
+  ; [:!C#Pp []]                                                                                    ;
+  ; [:!C#Pq []]                                                                                    ;
+  ; [:!C#Pr []]                                                                                    ;
+  ; [:!C#Ps []]                                                                                    ;
+  ; [:!C#Pt []]                                                                                    ;
+  ; [:!C#Pu []]                                                                                    ;
+  ; [:!C#Pv []]                                                                                    ;
+  ; [:!C#Pw []]                                                                                    ;
+  ; [:!C#Px []]                                                                                    ;
+  ; [:!C#Py []]                                                                                    ;
+  ; [:!C#Pz []]                                                                                    ;
+  ; [:!C#Pright_control []]                                                                        ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command
+{:des "Command Mode - arrows"
  :rules
  [;
   [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]                                                       ; alacritty
@@ -94,39 +162,6 @@
 {:des "Command Mode - numbers"
  :rules
  [;
-  [:!C#Pkeypad_1 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!C#Pkeypad_2 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!C#Pkeypad_3 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!C#Pkeypad_4 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!C#Pkeypad_5 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!C#Pkeypad_6 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!C#Pkeypad_7 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!C#Pkeypad_8 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!C#Pkeypad_9 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!C#Pkeypad_0 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!C#Pkeypad_slash [:vk_none]]                                               ;    EMPTY          ;
-  [:!C#Pkeypad_asterisk [:vk_none]]                                            ;    EMPTY          ;
-
-  [:!C#P1 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!C#P2 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!C#P3 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!C#P4 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!C#P5 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!C#P6 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!C#P7 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!C#P8 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!C#P9 [:!Scomma :!S9]]                                                                         ; '<('
-  [:!C#P0 [:!S0 :spacebar]]                                                                        ; ') '
-  [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                                          ; ' -= '
-  [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]                                ; ' += '
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - numbers"
- :rules
- [;
   [:!CS#Pkeypad_1 [:vk_none]]                                                  ;    EMPTY          ;
   [:!CS#Pkeypad_2 [:vk_none]]                                                  ;    EMPTY          ;
   [:!CS#Pkeypad_3 [:vk_none]]                                                  ;    EMPTY          ;
@@ -152,41 +187,6 @@
   [:!CS#P0 [:vk_none]]                                                         ;    EMPTY          ;
   [:!CS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]                                 ; ' .-= '
   [:!CS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]                       ; ' .+= '
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - alphabet"
- :rules
- [;
-  ; [:!C#Pa []]                                                                                    ;
-  ; [:!C#Pb []]                                                                                    ;
-  ; [:!C#Pc []]                                                                                    ;
-  ; [:!C#Pd []]                                                                                    ;
-  ; [:!C#Pe []]                                                                                    ;
-  ; [:!C#Pf []]                                                                                    ;
-  ; [:!C#Pg []]                                                                                    ;
-  ; [:!C#Ph []]                                                                                    ;
-  ; [:!C#Pi []]                                                                                    ;
-  ; [:!C#Pj []]                                                                                    ;
-  ; [:!C#Pk []]                                                                                    ;
-  ; [:!C#Pl []]                                                                                    ;
-  ; [:!C#Pm []]                                                                                    ;
-  ; [:!C#Pn []]                                                                                    ;
-  ; [:!C#Po []]                                                                                    ;
-  ; [:!C#Pp []]                                                                                    ;
-  ; [:!C#Pq []]                                                                                    ;
-  ; [:!C#Pr []]                                                                                    ;
-  ; [:!C#Ps []]                                                                                    ;
-  ; [:!C#Pt []]                                                                                    ;
-  ; [:!C#Pu []]                                                                                    ;
-  ; [:!C#Pv []]                                                                                    ;
-  ; [:!C#Pw []]                                                                                    ;
-  ; [:!C#Px []]                                                                                    ;
-  ; [:!C#Py []]                                                                                    ;
-  ; [:!C#Pz []]                                                                                    ;
-  ; [:!C#Pright_control []]                                                                        ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
