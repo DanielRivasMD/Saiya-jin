@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; option - command
-{:des "Option - Command Mode - symbols"
+{:des "Option - Command Mode - arrows"
  :rules
  [;
   ; [:!EQ#Pleft_arrow []]                                                                          ;
