@@ -1,24 +1,24 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
- {:des "Double function - Press twice to enter double mode, press once to leave"
-  :rules [
-   [:f20 ["double-function-mode" 1] ["function-pressed-once" 1]]
-   [:f20 [:f20 ["function-pressed-once" 1]] ["double-function-mode" 0] {:delayed {:invoked ["function-pressed-once" 0] :canceled ["function-pressed-once" 0]}}]
+ ; {:des "Double function - Press twice to enter double mode, press once to leave"
+ ;  :rules [
+ ;   [:f20 ["double-function-mode" 1] ["function-pressed-once" 1]]
+ ;   [:f20 [:f20 ["function-pressed-once" 1]] ["double-function-mode" 0] {:delayed {:invoked ["function-pressed-once" 0] :canceled ["function-pressed-once" 0]}}]
 
-   :double-function-mode
-   [:f20 ["double-function-mode" 0]]
+ ;   :double-function-mode
+ ;   [:f20 ["double-function-mode" 0]]
 
-   [:#Pkeypad_slash [:spacebar :slash :spacebar]]      ;
-   [:#Pkeypad_asterisk  [:spacebar :!S8 :spacebar]]    ;
-   [:#Pkeypad_hyphen [:spacebar :hyphen :spacebar]]
-   [:#Pkeypad_plus [:spacebar :!Sequal_sign :spacebar]]
-   [:#Pkeypad_enter [:spacebar :equal_sign :spacebar]]
+ ;   [:#Pkeypad_slash [:spacebar :slash :spacebar]]      ;
+ ;   [:#Pkeypad_asterisk  [:spacebar :!S8 :spacebar]]    ;
+ ;   [:#Pkeypad_hyphen [:spacebar :hyphen :spacebar]]
+ ;   [:#Pkeypad_plus [:spacebar :!Sequal_sign :spacebar]]
+ ;   [:#Pkeypad_enter [:spacebar :equal_sign :spacebar]]
 
-   [:!S#Pkeypad_slash [:spacebar :period :slash :spacebar]]      ;
-   [:!S#Pkeypad_asterisk  [:spacebar :period :!S8 :spacebar]]    ;
-   [:!S#Pkeypad_hyphen [:spacebar :period :hyphen :spacebar]]
-   [:!S#Pkeypad_plus [:spacebar :period :!Sequal_sign :spacebar]]
-   [:!S#Pkeypad_enter [:spacebar :period :equal_sign :spacebar]]
-   ]}
+ ;   [:!S#Pkeypad_slash [:spacebar :period :slash :spacebar]]      ;
+ ;   [:!S#Pkeypad_asterisk  [:spacebar :period :!S8 :spacebar]]    ;
+ ;   [:!S#Pkeypad_hyphen [:spacebar :period :hyphen :spacebar]]
+ ;   [:!S#Pkeypad_plus [:spacebar :period :!Sequal_sign :spacebar]]
+ ;   [:!S#Pkeypad_enter [:spacebar :period :equal_sign :spacebar]]
+ ;   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
