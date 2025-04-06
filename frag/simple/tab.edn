@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; tab
-{:des "Tab Mode - symbols"
+{:des "Tab Mode - arrows"
  :rules
  [;
   ; [:!ROTC#Pleft_arrow []]                                                    ; space             ; system
