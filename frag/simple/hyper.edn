@@ -3,13 +3,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; hyper
-{:des "Hyper Mode - symbols"
+{:des "Hyper Mode - arrows"
  :rules
  [;
-  [:!OTC#Pleft_arrow [:!OSpage_up]]                                                                ;
-  [:!OTC#Pright_arrow [:!OSpage_down]]                                                             ;
-  [:!OTC#Pup_arrow [:!OShome]]                                                 ; increment         ; helix
-  [:!OTC#Pdown_arrow [:!OSend]]                                                ; decrement         ; helix
+  [:!OTC#Pleft_arrow [:!Spage_up] [:term]]                                                         ;
+  [:!OTC#Pright_arrow [:!Spage_down] [:term]]                                                      ;
+  [:!OTC#Pup_arrow [:!Shome] [:term]]                                          ; increment         ; helix
+  [:!OTC#Pdown_arrow [:!Send] [:term]]                                         ; decrement         ; helix
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
