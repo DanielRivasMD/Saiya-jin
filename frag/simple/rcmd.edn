@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; command
-{:des "Command Mode - symbols"
+{:des "Command Mode - arrows"
  :rules
  [;
   ; [:!Q#Pleft_arrow []]                                                                           ;
@@ -46,34 +46,35 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; command - shift
-{:des "Command Mode - symbols"
+; command
+{:des "Command Mode - numbers"
  :rules
  [;
-  ; [:!QR#Popen_bracket []]                                                                        ;
-  ; [:!QR#Pclose_bracket []]                                                                       ;
-  ; [:!QR#Psemicolon []]                                                                           ;
-  ; [:!QR#Pquote []]                                                                               ;
-  ; [:!QR#Pbackslash []]                                                                           ;
-  ; [:!QR#Pcomma []]                                                                               ;
-  ; [:!QR#Pperiod []]                                                                              ;
-  ; [:!QR#Pslash []]                                                                               ;
+  ; [:!Q#Pkeypad_1 []]                                                                             ;
+  ; [:!Q#Pkeypad_2 []]                                                                             ;
+  ; [:!Q#Pkeypad_3 []]                                                                             ;
+  ; [:!Q#Pkeypad_4 []]                                                                             ;
+  ; [:!Q#Pkeypad_5 []]                                                                             ;
+  ; [:!Q#Pkeypad_6 []]                                                                             ;
+  ; [:!Q#Pkeypad_7 []]                                                                             ;
+  ; [:!Q#Pkeypad_8 []]                                                                             ;
+  ; [:!Q#Pkeypad_9 []]                                                                             ;
+  ; [:!Q#Pkeypad_0 []]                                                                             ;
+  ; [:!Q#Pkeypad_slash []]                                                                         ;
+  ; [:!Q#Pkeypad_asterisk []]                                                                      ;
 
-  ; [:!QR#Pdelete_or_backspace []]                                                                 ;
-  [:!QR#Preturn_or_enter [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]        ; ' .=== '
-  ; [:!QR#Pright_shift []]                                                          NOT AVAILABLE  ;
-  ; [:!QR#Pright_option []]                                                         NOT USEFUL     ;
-  ; [:!QR#Pright_command []]                                                        NOT AVAILABLE  ;
-  ; [:!QR#Pspacebar []]                                                                            ;
-
-  [:!QR#Pleft_command [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]                           ; ' ->> '
-  [:!QR#Pleft_option [:period :period :period]]                                                    ; '...'
-  [:!QR#Pleft_control [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]                             ; ' <<- '
-  [:!QR#Pleft_shift [:spacebar :period :!S1 :equal_sign :spacebar]]                                ; ' .!= '
-  [:!QR#Pcaps_lock [:!S1 :!S1]]                                                                    ; '!!'
-  ; [:!QR#Ptab []]                                                                                 ;
-  ; [:!QR#Pkeypad_num_lock []]                                                                     ;
-  ; [:!QR#Pescape []]                                                                              ;
+  ; [:!Q#P1 []]                                                                                    ;
+  ; [:!Q#P2 []]                                                                                    ;
+  ; [:!Q#P3 []]                                                                                    ;
+  ; [:!Q#P4 []]                                                                                    ;
+  ; [:!Q#P5 []]                                                                                    ;
+  ; [:!Q#P6 []]                                                                                    ;
+  ; [:!Q#P7 []]                                                                                    ;
+  ; [:!Q#P8 []]                                                                                    ;
+  ; [:!Q#P9 []]                                                                                    ;
+  ; [:!Q#P0 []]                                                                                    ;
+  ; [:!Q#Phyphen []]                                                                               ;
+  ; [:!Q#Pequal_sign []]                                                                           ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -113,7 +114,84 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; command
+; command - shift
+{:des "Command Mode - arrows"
+ :rules
+ [;
+  ; [:!QR#Pleft_arrow []]                                                                          ;
+  ; [:!QR#Pright_arrow []]                                                                         ;
+  ; [:!QR#Pup_arrow []]                                                                            ;
+  ; [:!QR#Pdown_arrow []]                                                                          ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command - shift
+{:des "Command Mode - symbols"
+ :rules
+ [;
+  ; [:!QR#Popen_bracket []]                                                                        ;
+  ; [:!QR#Pclose_bracket []]                                                                       ;
+  ; [:!QR#Psemicolon []]                                                                           ;
+  ; [:!QR#Pquote []]                                                                               ;
+  ; [:!QR#Pbackslash []]                                                                           ;
+  ; [:!QR#Pcomma []]                                                                               ;
+  ; [:!QR#Pperiod []]                                                                              ;
+  ; [:!QR#Pslash []]                                                                               ;
+
+  ; [:!QR#Pdelete_or_backspace []]                                                                 ;
+  [:!QR#Preturn_or_enter [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]        ; ' .=== '
+  ; [:!QR#Pright_shift []]                                                          NOT AVAILABLE  ;
+  ; [:!QR#Pright_option []]                                                         NOT USEFUL     ;
+  ; [:!QR#Pright_command []]                                                        NOT AVAILABLE  ;
+  ; [:!QR#Pspacebar []]                                                                            ;
+
+  [:!QR#Pleft_command [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]                           ; ' ->> '
+  [:!QR#Pleft_option [:period :period :period]]                                                    ; '...'
+  [:!QR#Pleft_control [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]                             ; ' <<- '
+  [:!QR#Pleft_shift [:spacebar :period :!S1 :equal_sign :spacebar]]                                ; ' .!= '
+  [:!QR#Pcaps_lock [:!S1 :!S1]]                                                                    ; '!!'
+  ; [:!QR#Ptab []]                                                                                 ;
+  ; [:!QR#Pkeypad_num_lock []]                                                                     ;
+  ; [:!QR#Pescape []]                                                                              ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command - shift
+{:des "Command Mode - numbers"
+ :rules
+ [;
+  ; [:!QR#Pkeypad_1 []]                                                                            ;
+  ; [:!QR#Pkeypad_2 []]                                                                            ;
+  ; [:!QR#Pkeypad_3 []]                                                                            ;
+  ; [:!QR#Pkeypad_4 []]                                                                            ;
+  ; [:!QR#Pkeypad_5 []]                                                                            ;
+  ; [:!QR#Pkeypad_6 []]                                                                            ;
+  ; [:!QR#Pkeypad_7 []]                                                                            ;
+  ; [:!QR#Pkeypad_8 []]                                                                            ;
+  ; [:!QR#Pkeypad_9 []]                                                                            ;
+  ; [:!QR#Pkeypad_0 []]                                                                            ;
+  ; [:!QR#Pkeypad_slash []]                                                                        ;
+  ; [:!QR#Pkeypad_asterisk []]                                                                     ;
+
+  ; [:!QR#P1 []]                                                                                   ;
+  ; [:!QR#P2 []]                                                                                   ;
+  ; [:!QR#P3 []]                                                                                   ;
+  ; [:!QR#P4 []]                                                                                   ;
+  ; [:!QR#P5 []]                                                                                   ;
+  ; [:!QR#P6 []]                                                                                   ;
+  ; [:!QR#P7 []]                                                                                   ;
+  ; [:!QR#P8 []]                                                                                   ;
+  ; [:!QR#P9 []]                                                                                   ;
+  ; [:!QR#P0 []]                                                                                   ;
+  ; [:!QR#Phyphen []]                                                                              ;
+  ; [:!QR#Pequal_sign []]                                                                          ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; command - shift
 {:des "Command Mode - alphabet"
  :rules
  [;
