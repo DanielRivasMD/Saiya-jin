@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; option - command
-{:des "Option - Command Mode - symbols"
+{:des "Option - Command Mode - arrows"
  :rules
  [;
   [:!OC#Pleft_arrow :!Ox [:term]]                                              ; tab movement      ; zellij
