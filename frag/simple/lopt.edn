@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; option
-{:des "Option Mode - symbols"
+{:des "Option Mode - arrows"
  :rules
  [;
   [:!O#Pleft_arrow :!Ob [:term]]                                               ; cursor movement   ; alacritty
@@ -46,8 +46,76 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; option
+{:des "Option Mode - numbers"
+ :rules
+ [;
+  [:!O#Pkeypad_1 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!O#Pkeypad_2 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!O#Pkeypad_3 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!O#Pkeypad_4 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!O#Pkeypad_5 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!O#Pkeypad_6 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!O#Pkeypad_7 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!O#Pkeypad_8 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!O#Pkeypad_9 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!O#Pkeypad_0 [:vk_none]]                                                   ;    EMPTY          ;
+  [:!O#Pkeypad_slash [:vk_none]]                                               ;    EMPTY          ;
+  [:!O#Pkeypad_asterisk [:vk_none]]                                            ;    EMPTY          ;
+
+  [:!O#P1 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!O#P2 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!O#P3 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!O#P4 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!O#P5 [:spacebar :!S5 :spacebar]]                                                              ; ' % '
+  [:!O#P6 [:spacebar :!S6 :spacebar]]                                                              ; ' ^ '
+  [:!O#P7 [:spacebar :!S7 :spacebar]]                                                              ; ' & '
+  [:!O#P8 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!O#P9 [:period :!S9]]                                                                          ; '.('
+  [:!O#P0 [:vk_none]]                                                          ;    EMPTY          ;
+  [:!O#Phyphen [:spacebar :hyphen :spacebar]]                                                      ; ' - '
+  [:!O#Pequal_sign [:spacebar :!Sequal_sign :spacebar]]                                            ; ' + '
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; option
+{:des "Option Mode - alphabet"
+ :rules
+ [;
+  [:!O#Pa :!Of1 [:term]]                                                                           ; zellij
+  [:!O#Pb :!Of2 [:term]]                                                                           ; zellij
+  [:!O#Pc :!Of4 [:term]]                                                                           ; zellij
+  [:!O#Pd :!Of5 [:term]]                                                                           ; zellij
+  [:!O#Pe :!Of6 [:term]]                                                                           ; zellij
+  [:!O#Pf :!Of7 [:term]]                                                                           ; zellij
+  [:!O#Pg :!Of8 [:term]]                                                                           ; zellij
+  [:!O#Ph :!Of9 [:term]]                                                                           ; zellij
+  [:!O#Pi :!Of10 [:term]]                                                                          ; zellij
+  [:!O#Pj :!Tf1 [:term]]                                                                           ; zellij
+  [:!O#Pk :!Tf2 [:term]]                                                                           ; zellij
+  [:!O#Pl :!Tf4 [:term]]                                                                           ; zellij
+  [:!O#Pm :!Tf5 [:term]]                                                                           ; zellij
+  [:!O#Pn :!Tf6 [:term]]                                                                           ; zellij
+  [:!O#Po :!Tf7 [:term]]                                                                           ; zellij
+  [:!O#Pp :!Tf8 [:term]]                                                                           ; zellij
+  [:!O#Pq :!Tf9 [:term]]                                                                           ; zellij
+  [:!O#Pr :!Tf10 [:term]]                                                                          ; zellij
+  [:!O#Ps :!OTf1 [:term]]                                                                          ; zellij
+  [:!O#Pt :!OTf2 [:term]]                                                                          ; zellij
+  [:!O#Pu :!OTf4 [:term]]                                                                          ; zellij
+  [:!O#Pv :!OTf5 [:term]]                                                                          ; zellij
+  [:!O#Pw :!OTf6 [:term]]                                                                          ; zellij
+  [:!O#Px :!OTf7 [:term]]                                                                          ; zellij
+  [:!O#Py :!OTf8 [:term]]                                                                          ; zellij
+  [:!O#Pz :!OTf9 [:term]]                                                                          ; zellij
+  [:!O#Pright_control :!OTf10 [:term]]                                                             ; zellij
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; option - shift
-{:des "Option Mode - symbols"
+{:des "Option Mode - arrows"
  :rules
  [;
   ; [:!OS#Pleft_arrow []]                                                                          ;
@@ -94,39 +162,6 @@
 {:des "Option Mode - numbers"
  :rules
  [;
-  [:!O#Pkeypad_1 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!O#Pkeypad_2 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!O#Pkeypad_3 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!O#Pkeypad_4 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!O#Pkeypad_5 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!O#Pkeypad_6 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!O#Pkeypad_7 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!O#Pkeypad_8 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!O#Pkeypad_9 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!O#Pkeypad_0 [:vk_none]]                                                   ;    EMPTY          ;
-  [:!O#Pkeypad_slash [:vk_none]]                                               ;    EMPTY          ;
-  [:!O#Pkeypad_asterisk [:vk_none]]                                            ;    EMPTY          ;
-
-  [:!O#P1 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!O#P2 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!O#P3 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!O#P4 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!O#P5 [:spacebar :!S5 :spacebar]]                                                              ; ' % '
-  [:!O#P6 [:spacebar :!S6 :spacebar]]                                                              ; ' ^ '
-  [:!O#P7 [:spacebar :!S7 :spacebar]]                                                              ; ' & '
-  [:!O#P8 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!O#P9 [:period :!S9]]                                                                          ; '.('
-  [:!O#P0 [:vk_none]]                                                          ;    EMPTY          ;
-  [:!O#Phyphen [:spacebar :hyphen :spacebar]]                                                      ; ' - '
-  [:!O#Pequal_sign [:spacebar :!Sequal_sign :spacebar]]                                            ; ' + '
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option
-{:des "Option Mode - numbers"
- :rules
- [;
   [:!OS#Pkeypad_1 [:vk_none]]                                                  ;    EMPTY          ;
   [:!OS#Pkeypad_2 [:vk_none]]                                                  ;    EMPTY          ;
   [:!OS#Pkeypad_3 [:vk_none]]                                                  ;    EMPTY          ;
@@ -160,68 +195,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  [:!O#Pa :!Of1 [:term]]                                                                           ; zellij
-  [:!O#Pb :!Of2 [:term]]                                                                           ; zellij
-  [:!O#Pc :!Of4 [:term]]                                                                           ; zellij
-  [:!O#Pd :!Of5 [:term]]                                                                           ; zellij
-  [:!O#Pe :!Of6 [:term]]                                                                           ; zellij
-  [:!O#Pf :!Of7 [:term]]                                                                           ; zellij
-  [:!O#Pg :!Of8 [:term]]                                                                           ; zellij
-  [:!O#Ph :!Of9 [:term]]                                                                           ; zellij
-  [:!O#Pi :!Of10 [:term]]                                                                          ; zellij
-  [:!O#Pj :!Tf1 [:term]]                                                                           ; zellij
-  [:!O#Pk :!Tf2 [:term]]                                                                           ; zellij
-  [:!O#Pl :!Tf4 [:term]]                                                                           ; zellij
-  [:!O#Pm :!Tf5 [:term]]                                                                           ; zellij
-  [:!O#Pn :!Tf6 [:term]]                                                                           ; zellij
-  [:!O#Po :!Tf7 [:term]]                                                                           ; zellij
-  [:!O#Pp :!Tf8 [:term]]                                                                           ; zellij
-  [:!O#Pq :!Tf9 [:term]]                                                                           ; zellij
-  [:!O#Pr :!Tf10 [:term]]                                                                          ; zellij
-  [:!O#Ps :!OTf1 [:term]]                                                                          ; zellij
-  [:!O#Pt :!OTf2 [:term]]                                                                          ; zellij
-  [:!O#Pu :!OTf4 [:term]]                                                                          ; zellij
-  [:!O#Pv :!OTf5 [:term]]                                                                          ; zellij
-  [:!O#Pw :!OTf6 [:term]]                                                                          ; zellij
-  [:!O#Px :!OTf7 [:term]]                                                                          ; zellij
-  [:!O#Py :!OTf8 [:term]]                                                                          ; zellij
-  [:!O#Pz :!OTf9 [:term]]                                                                          ; zellij
-  [:!O#Pright_control :!OTf10 [:term]]                                                             ; zellij
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option
-{:des "Option Mode - alphabet"
- :rules
- [;
-  [:!SO#Pa :!SOf1 [:term]]                                                                         ; zellij
-  [:!SO#Pb :!SOf2 [:term]]                                                                         ; zellij
-  [:!SO#Pc :!SOf4 [:term]]                                                                         ; zellij
-  [:!SO#Pd :!SOf5 [:term]]                                                                         ; zellij
-  [:!SO#Pe :!SOf6 [:term]]                                                                         ; zellij
-  [:!SO#Pf :!SOf7 [:term]]                                                                         ; zellij
-  [:!SO#Pg :!SOf8 [:term]]                                                                         ; zellij
-  [:!SO#Ph :!SOf9 [:term]]                                                                         ; zellij
-  [:!SO#Pi :!SOf10 [:term]]                                                                        ; zellij
-  [:!SO#Pj :!STf1 [:term]]                                                                         ; zellij
-  [:!SO#Pk :!STf2 [:term]]                                                                         ; zellij
-  [:!SO#Pl :!STf4 [:term]]                                                                         ; zellij
-  [:!SO#Pm :!STf5 [:term]]                                                                         ; zellij
-  [:!SO#Pn :!STf6 [:term]]                                                                         ; zellij
-  [:!SO#Po :!STf7 [:term]]                                                                         ; zellij
-  [:!SO#Pp :!STf8 [:term]]                                                                         ; zellij
-  [:!SO#Pq :!STf9 [:term]]                                                                         ; zellij
-  [:!SO#Pr :!STf10 [:term]]                                                                        ; zellij
-  [:!SO#Ps :!SOTf1 [:term]]                                                                        ; zellij
-  [:!SO#Pt :!SOTf2 [:term]]                                                                        ; zellij
-  [:!SO#Pu :!SOTf4 [:term]]                                                                        ; zellij
-  [:!SO#Pv :!SOTf5 [:term]]                                                                        ; zellij
-  [:!SO#Pw :!SOTf6 [:term]]                                                                        ; zellij
-  [:!SO#Px :!SOTf7 [:term]]                                                                        ; zellij
-  [:!SO#Py :!SOTf8 [:term]]                                                                        ; zellij
-  [:!SO#Pz :!SOTf9 [:term]]                                                                        ; zellij
-  [:!SO#Pright_control :!SOTf10 [:term]]                                                           ; zellij
+  [:!OS#Pa :!SOf1 [:term]]                                                                         ; zellij
+  [:!OS#Pb :!SOf2 [:term]]                                                                         ; zellij
+  [:!OS#Pc :!SOf4 [:term]]                                                                         ; zellij
+  [:!OS#Pd :!SOf5 [:term]]                                                                         ; zellij
+  [:!OS#Pe :!SOf6 [:term]]                                                                         ; zellij
+  [:!OS#Pf :!SOf7 [:term]]                                                                         ; zellij
+  [:!OS#Pg :!SOf8 [:term]]                                                                         ; zellij
+  [:!OS#Ph :!SOf9 [:term]]                                                                         ; zellij
+  [:!OS#Pi :!SOf10 [:term]]                                                                        ; zellij
+  [:!OS#Pj :!STf1 [:term]]                                                                         ; zellij
+  [:!OS#Pk :!STf2 [:term]]                                                                         ; zellij
+  [:!OS#Pl :!STf4 [:term]]                                                                         ; zellij
+  [:!OS#Pm :!STf5 [:term]]                                                                         ; zellij
+  [:!OS#Pn :!STf6 [:term]]                                                                         ; zellij
+  [:!OS#Po :!STf7 [:term]]                                                                         ; zellij
+  [:!OS#Pp :!STf8 [:term]]                                                                         ; zellij
+  [:!OS#Pq :!STf9 [:term]]                                                                         ; zellij
+  [:!OS#Pr :!STf10 [:term]]                                                                        ; zellij
+  [:!OS#Ps :!SOTf1 [:term]]                                                                        ; zellij
+  [:!OS#Pt :!SOTf2 [:term]]                                                                        ; zellij
+  [:!OS#Pu :!SOTf4 [:term]]                                                                        ; zellij
+  [:!OS#Pv :!SOTf5 [:term]]                                                                        ; zellij
+  [:!OS#Pw :!SOTf6 [:term]]                                                                        ; zellij
+  [:!OS#Px :!SOTf7 [:term]]                                                                        ; zellij
+  [:!OS#Py :!SOTf8 [:term]]                                                                        ; zellij
+  [:!OS#Pz :!SOTf9 [:term]]                                                                        ; zellij
+  [:!OS#Pright_control :!SOTf10 [:term]]                                                           ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
