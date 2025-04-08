@@ -30,8 +30,8 @@
   [:!W#Pdelete_or_backspace [:!Tf11]]                                          ; rename symbol     ; helix
   [:!W#Preturn_or_enter [:!Tf12]]                                              ; symbol            ; helix
   [:!W#Pright_shift [:!Tf13]]                                                  ; type definition   ; helix
-  [:!W#Pright_option [:!Tf14]]                                                                     ; helix
-  [:!W#Pright_command [:!Tf15]]                                                                    ; helix
+  [:!W#Pright_option [:!Tf16]]                                                                     ; helix
+  [:!W#Pright_command [:!Tf17]]                                                                    ; helix
   [:!W#Pspacebar [:!Tf18]]                                                     ; last edit         ; helix
 
   ; [:!W#Pleft_command []]                                                          NOT USEFUL     ;
@@ -142,8 +142,8 @@
   [:!WS#Pdelete_or_backspace [:!TSf11]]                                                            ; helix
   [:!WS#Preturn_or_enter [:!TSf12]]                                            ; jump list         ; helix
   [:!WS#Pright_shift [:!TSf13]]                                                                    ; helix
-  [:!WS#Pright_option [:!TSf14]]                                                                   ; helix
-  [:!WS#Pright_command [:!TSf15]]                                                                  ; helix
+  [:!WS#Pright_option [:!TSf16]]                                                                   ; helix
+  [:!WS#Pright_command [:!TSf17]]                                                                  ; helix
   [:!WS#Pspacebar [:!TSf18]]                                                   ; jump save         ; helix
 
   ; [:!WS#Pleft_command []]                                                         NOT USEFUL     ;
