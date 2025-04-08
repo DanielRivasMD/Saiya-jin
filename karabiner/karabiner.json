@@ -1261,45 +1261,6 @@
         "description" : "Terminal zellij bindings - alphabet",
         "manipulators" : [ {
           "to_if_alone" : [ {
-            "key_code" : "a",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "from" : {
-            "key_code" : "left_option",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "left_option"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_alone" : [ {
-            "key_code" : "g",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "from" : {
-            "key_code" : "escape",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "right_shift",
-            "modifiers" : [ "right_control", "right_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_alone" : [ {
             "key_code" : "h",
             "modifiers" : [ "left_option" ]
           } ],
@@ -2950,19 +2911,6 @@
           "to" : [ {
             "key_code" : "t",
             "modifiers" : [ "right_control" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "spacebar",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_control", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f11",
-            "modifiers" : [ "left_control", "left_option" ]
           } ],
           "type" : "basic"
         }, {
@@ -5897,7 +5845,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f14",
+            "key_code" : "f16",
             "modifiers" : [ "left_control" ]
           } ],
           "type" : "basic"
@@ -5910,7 +5858,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f15",
+            "key_code" : "f17",
             "modifiers" : [ "left_control" ]
           } ],
           "type" : "basic"
@@ -6079,7 +6027,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f14",
+            "key_code" : "f16",
             "modifiers" : [ "left_control", "left_shift" ]
           } ],
           "type" : "basic"
@@ -6092,7 +6040,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f15",
+            "key_code" : "f17",
             "modifiers" : [ "left_control", "left_shift" ]
           } ],
           "type" : "basic"
@@ -7551,19 +7499,6 @@
           "to" : [ {
             "key_code" : "non_us_pound",
             "modifiers" : [ "left_command", "left_option", "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "spacebar",
-            "modifiers" : {
-              "mandatory" : [ "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f12",
-            "modifiers" : [ "left_control", "left_option" ]
           } ],
           "type" : "basic"
         }, {
