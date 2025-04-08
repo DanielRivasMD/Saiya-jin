@@ -2,6 +2,8 @@
 ; browser
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: update config
+
 ; browser
 {:des "Browser vimium mappings"
  :rules

@@ -3,6 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; TODO: remap & autodoc alt-ctl & alt-cmd
+; TODO: check documentation for pop-up windows
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules
@@ -10,7 +11,7 @@
   ; ; on demand window
   ; [:#Pdelete_or_backspace :!EQright_shift  [:term] {:alone [:!Tv]}]                              ;
 
-  [:#Pleft_option :left_option [:term] {:alone [:!Oa]}]    ; alt               ;                   ;
+  ; [:#Pleft_option :left_option [:term] {:alone [:!Oa]}]    ; alt               ;                   ;
 
   ; [:!O#Pleft_arrow :!Ob [:term]]                           ; alt-left          ; cursor movement   ;
 
@@ -21,7 +22,7 @@
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   ; [:!O#Pright_arrow :!Of [:term]]                          ; alt-right         ; cursor movement
-  [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]      ; esc               ; pop-up window
+  ; [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]      ; esc               ; pop-up window
   [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history editor
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
