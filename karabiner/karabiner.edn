@@ -87,6 +87,8 @@
 ; browser
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: update config
+
 ; browser
 {:des "Browser vimium mappings"
  :rules
@@ -526,6 +528,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; TODO: remap & autodoc alt-ctl & alt-cmd
+; TODO: check documentation for pop-up windows
 ; Alacritty
 {:des "Terminal zellij bindings - alphabet"
  :rules
@@ -533,7 +536,7 @@
   ; ; on demand window
   ; [:#Pdelete_or_backspace :!EQright_shift  [:term] {:alone [:!Tv]}]                              ;
 
-  [:#Pleft_option :left_option [:term] {:alone [:!Oa]}]    ; alt               ;                   ;
+  ; [:#Pleft_option :left_option [:term] {:alone [:!Oa]}]    ; alt               ;                   ;
 
   ; [:!O#Pleft_arrow :!Ob [:term]]                           ; alt-left          ; cursor movement   ;
 
@@ -544,7 +547,7 @@
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   ; [:!O#Pright_arrow :!Of [:term]]                          ; alt-right         ; cursor movement
-  [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]      ; esc               ; pop-up window
+  ; [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]      ; esc               ; pop-up window
   [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history editor
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1572,7 +1575,7 @@
   [:!EWQ#Pright_shift [:!Wt]]                                                                      ;
   ; [:!EWQ#Pright_option []]                                                                       ;
   ; [:!EWQ#Pright_command []]                                                                      ;
-  [:!EWQ#Pspacebar [:!OTf11]]                                                                      ;
+  ; [:!EWQ#Pspacebar []]                                                                           ;
 
   ; [:!EWQ#Pleft_command []]                                                        NOT USEFUL     ;
   ; [:!EWQ#Pleft_option []]                                                         NOT USEFUL     ;
@@ -3212,8 +3215,8 @@
   [:!W#Pdelete_or_backspace [:!Tf11]]                                          ; rename symbol     ; helix
   [:!W#Preturn_or_enter [:!Tf12]]                                              ; symbol            ; helix
   [:!W#Pright_shift [:!Tf13]]                                                  ; type definition   ; helix
-  [:!W#Pright_option [:!Tf14]]                                                                     ; helix
-  [:!W#Pright_command [:!Tf15]]                                                                    ; helix
+  [:!W#Pright_option [:!Tf16]]                                                                     ; helix
+  [:!W#Pright_command [:!Tf17]]                                                                    ; helix
   [:!W#Pspacebar [:!Tf18]]                                                     ; last edit         ; helix
 
   ; [:!W#Pleft_command []]                                                          NOT USEFUL     ;
@@ -3324,8 +3327,8 @@
   [:!WS#Pdelete_or_backspace [:!TSf11]]                                                            ; helix
   [:!WS#Preturn_or_enter [:!TSf12]]                                            ; jump list         ; helix
   [:!WS#Pright_shift [:!TSf13]]                                                                    ; helix
-  [:!WS#Pright_option [:!TSf14]]                                                                   ; helix
-  [:!WS#Pright_command [:!TSf15]]                                                                  ; helix
+  [:!WS#Pright_option [:!TSf16]]                                                                   ; helix
+  [:!WS#Pright_command [:!TSf17]]                                                                  ; helix
   [:!WS#Pspacebar [:!TSf18]]                                                   ; jump save         ; helix
 
   ; [:!WS#Pleft_command []]                                                         NOT USEFUL     ;
@@ -3556,7 +3559,7 @@
   ; [:!E#Pright_shift []]                                                           NOT USEFUL     ;
   ; [:!E#Pright_option []]                                                          NOT AVAILABLE  ;
   ; [:!E#Pright_command []]                                                         NOT USEFUL     ;
-  [:!E#Pspacebar :!OTf12]                                                      ; completion        ; helix
+  ; [:!E#Pspacebar []]                                                                             ;
 
   [:!E#Pleft_command [:f13]]                                                   ; move forward      ; helix
   [:!E#Pleft_option [:f14]]                                                    ; repeat motion     ; helix
@@ -3971,6 +3974,7 @@
 ; KEYS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: update
 ; key modifiers
 {:des "Modifier key remappings"
  :rules
