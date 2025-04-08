@@ -32,7 +32,7 @@
   ; [:!E#Pright_shift []]                                                           NOT USEFUL     ;
   ; [:!E#Pright_option []]                                                          NOT AVAILABLE  ;
   ; [:!E#Pright_command []]                                                         NOT USEFUL     ;
-  [:!E#Pspacebar :!OTf12]                                                      ; completion        ; helix
+  ; [:!E#Pspacebar []]                                                                             ;
 
   [:!E#Pleft_command [:f13]]                                                   ; move forward      ; helix
   [:!E#Pleft_option [:f14]]                                                    ; repeat motion     ; helix

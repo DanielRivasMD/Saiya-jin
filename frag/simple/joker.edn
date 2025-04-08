@@ -32,7 +32,7 @@
   [:!EWQ#Pright_shift [:!Wt]]                                                                      ;
   ; [:!EWQ#Pright_option []]                                                                       ;
   ; [:!EWQ#Pright_command []]                                                                      ;
-  [:!EWQ#Pspacebar [:!OTf11]]                                                                      ;
+  ; [:!EWQ#Pspacebar []]                                                                           ;
 
   ; [:!EWQ#Pleft_command []]                                                        NOT USEFUL     ;
   ; [:!EWQ#Pleft_option []]                                                         NOT USEFUL     ;
