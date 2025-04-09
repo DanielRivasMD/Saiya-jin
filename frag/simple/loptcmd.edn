@@ -6,10 +6,10 @@
 {:des "Option - Command Mode - arrows"
  :rules
  [;
-  [:!OC#Pleft_arrow :!Ox [:term]]                                              ; tab movement      ; zellij
-  [:!OC#Pright_arrow :!Oy [:term]]                                             ; tab movement      ; zellij
-  [:!OC#Pup_arrow :!Tx [:term]]                                                ; screen movement   ; zellij
-  [:!OC#Pdown_arrow :!Ty [:term]]                                              ; screen movement   ; zellij
+  [:!OC#Pleft_arrow :!Ox [:term]]                                              ; tab motion        ; zellij
+  [:!OC#Pright_arrow :!Oy [:term]]                                             ; tab motion        ; zellij
+  [:!OC#Pup_arrow :!Tx [:term]]                                                ; screen motion     ; zellij
+  [:!OC#Pdown_arrow :!Ty [:term]]                                              ; screen motion     ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -23,9 +23,9 @@
   ; [:!OC#Psemicolon []]                                                                           ;
   ; [:!OC#Pquote []]                                                                               ;
   ; [:!OC#Pbackslash []]                                                                           ;
-  [:!OC#Pcomma :!Ow [:term]]                               ; alt-cmd-.         ; nushell movement  ; zellij
-  [:!OC#Pperiod :!Ov [:term]]                              ; alt-cmd-,         ; nushell movement  ; zellij
-  [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ; nushell movement  ; zellij
+  [:!OC#Pcomma :!Ow [:term]]                               ; alt-cmd-.         ; nushell motion    ; zellij
+  [:!OC#Pperiod :!Ov [:term]]                              ; alt-cmd-,         ; nushell motion    ; zellij
+  [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ; nushell motion    ; zellij
 
   [:!OC#Pdelete_or_backspace :!SOi [:term]]                                    ; close             ; zellij
   [:!OC#Preturn_or_enter :!SOj [:term]]                                        ; plugin room       ; zellij
