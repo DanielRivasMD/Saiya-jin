@@ -23,15 +23,15 @@
   [:!W#Psemicolon [:!Of13]]                                                                        ; helix
   [:!W#Pquote [:!Of14]]                                                                            ; helix
   [:!W#Pbackslash [:!Of15]]                                                                        ; helix
-  [:!W#Pcomma [:!Of18]]                                                        ; definition        ; helix
-  [:!W#Pperiod [:!Of19]]                                                       ; reference         ; helix
-  [:!W#Pslash [:!Of20]]                                                        ; implementation    ; helix
+  [:!W#Pcomma [:!Of18]]                                                        ; next test         ; helix
+  [:!W#Pperiod [:!Of19]]                                                       ; next class        ; helix
+  [:!W#Pslash [:!Of20]]                                                        ; next function     ; helix
 
   [:!W#Pdelete_or_backspace [:!Tf11]]                                          ; rename symbol     ; helix
   [:!W#Preturn_or_enter [:!Tf12]]                                              ; symbol            ; helix
-  [:!W#Pright_shift [:!Tf13]]                                                  ; type definition   ; helix
-  [:!W#Pright_option [:!Tf16]]                                                                     ; helix
-  [:!W#Pright_command [:!Tf17]]                                                                    ; helix
+  [:!W#Pright_shift [:!Tf13]]                                                  ; next parameter    ; helix
+  [:!W#Pright_option [:!Tf17]]                                                 ; reference         ; helix
+  [:!W#Pright_command [:!Tf16]]                                                ; definition        ; helix
   [:!W#Pspacebar [:!Tf18]]                                                     ; last edit         ; helix
 
   ; [:!W#Pleft_command []]                                                          NOT USEFUL     ;
@@ -135,15 +135,15 @@
   [:!WS#Psemicolon [:!OSf13]]                                                                      ; helix
   [:!WS#Pquote [:!OSf14]]                                                                          ; helix
   [:!WS#Pbackslash [:!OSf15]]                                                                      ; helix
-  [:!WS#Pcomma [:!OSf18]]                                                                          ; helix
-  [:!WS#Pperiod [:!OSf19]]                                                                         ; helix
-  [:!WS#Pslash [:!OSf20]]                                                                          ; helix
+  [:!WS#Pcomma [:!OSf18]]                                                      ; prev test         ; helix
+  [:!WS#Pperiod [:!OSf19]]                                                     ; prev class        ; helix
+  [:!WS#Pslash [:!OSf20]]                                                      ; prev function     ; helix
 
   [:!WS#Pdelete_or_backspace [:!TSf11]]                                                            ; helix
   [:!WS#Preturn_or_enter [:!TSf12]]                                            ; jump list         ; helix
-  [:!WS#Pright_shift [:!TSf13]]                                                                    ; helix
-  [:!WS#Pright_option [:!TSf16]]                                                                   ; helix
-  [:!WS#Pright_command [:!TSf17]]                                                                  ; helix
+  [:!WS#Pright_shift [:!TSf13]]                                                ; prev parameter    ; helix
+  [:!WS#Pright_option [:!TSf16]]                                               ; implementation    ; helix
+  [:!WS#Pright_command [:!TSf17]]                                              ; type definition   ; helix
   [:!WS#Pspacebar [:!TSf18]]                                                   ; jump save         ; helix
 
   ; [:!WS#Pleft_command []]                                                         NOT USEFUL     ;
