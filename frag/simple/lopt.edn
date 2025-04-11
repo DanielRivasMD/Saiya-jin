@@ -6,10 +6,10 @@
 {:des "Option Mode - arrows"
  :rules
  [;
-  [:!O#Pleft_arrow :!Ob [:term]]                                               ; cursor movement   ; alacritty
-  [:!O#Pright_arrow :!Of [:term]]                                              ; cursor movement   ; alacritty
-  [:!O#Pup_arrow [:page_up] [:term]]                                           ; cursor movement   ; alacritty
-  [:!O#Pdown_arrow [:page_down] [:term]]                                       ; cursor movement   ; alacritty
+  [:!O#Pleft_arrow :!Ob [:term]]                                               ; cursor motion     ; alacritty
+  [:!O#Pright_arrow :!Of [:term]]                                              ; cursor motion     ; alacritty
+  [:!O#Pup_arrow [:page_up] [:term]]                                           ; cursor motion     ; alacritty
+  [:!O#Pdown_arrow [:page_down] [:term]]                                       ; cursor motion     ; alacritty
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -83,33 +83,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  [:!O#Pa :!Of1 [:term]]                                                                           ; zellij
-  [:!O#Pb :!Of2 [:term]]                                                                           ; zellij
-  [:!O#Pc :!Of4 [:term]]                                                                           ; zellij
-  [:!O#Pd :!Of5 [:term]]                                                                           ; zellij
-  [:!O#Pe :!Of6 [:term]]                                                                           ; zellij
-  [:!O#Pf :!Of7 [:term]]                                                                           ; zellij
-  [:!O#Pg :!Of8 [:term]]                                                                           ; zellij
-  [:!O#Ph :!Of9 [:term]]                                                                           ; zellij
-  [:!O#Pi :!Of10 [:term]]                                                                          ; zellij
-  [:!O#Pj :!Tf1 [:term]]                                                                           ; zellij
-  [:!O#Pk :!Tf2 [:term]]                                                                           ; zellij
-  [:!O#Pl :!Tf4 [:term]]                                                                           ; zellij
-  [:!O#Pm :!Tf5 [:term]]                                                                           ; zellij
-  [:!O#Pn :!Tf6 [:term]]                                                                           ; zellij
-  [:!O#Po :!Tf7 [:term]]                                                                           ; zellij
-  [:!O#Pp :!Tf8 [:term]]                                                                           ; zellij
-  [:!O#Pq :!Tf9 [:term]]                                                                           ; zellij
-  [:!O#Pr :!Tf10 [:term]]                                                                          ; zellij
-  [:!O#Ps :!OTf1 [:term]]                                                                          ; zellij
-  [:!O#Pt :!OTf2 [:term]]                                                                          ; zellij
-  [:!O#Pu :!OTf4 [:term]]                                                                          ; zellij
-  [:!O#Pv :!OTf5 [:term]]                                                                          ; zellij
-  [:!O#Pw :!OTf6 [:term]]                                                                          ; zellij
-  [:!O#Px :!OTf7 [:term]]                                                                          ; zellij
-  [:!O#Py :!OTf8 [:term]]                                                                          ; zellij
-  [:!O#Pz :!OTf9 [:term]]                                                                          ; zellij
-  [:!O#Pright_control :!OTf10 [:term]]                                                             ; zellij
+  [:!O#Pa :!Of1 [:editor]]                                                                           ; zellij
+  [:!O#Pb :!Of2 [:editor]]                                                                           ; zellij
+  [:!O#Pc :!Of4 [:editor]]                                                                           ; zellij
+  [:!O#Pd :!Of5 [:editor]]                                                                           ; zellij
+  [:!O#Pe :!Of6 [:editor]]                                                                           ; zellij
+  [:!O#Pf :!Of7 [:editor]]                                                                           ; zellij
+  [:!O#Pg :!Of8 [:editor]]                                                                           ; zellij
+  [:!O#Ph :!Of9 [:editor]]                                                                           ; zellij
+  [:!O#Pi :!Of10 [:editor]]                                                                          ; zellij
+  [:!O#Pj :!Tf1 [:editor]]                                                                           ; zellij
+  [:!O#Pk :!Tf2 [:editor]]                                                                           ; zellij
+  [:!O#Pl :!Tf4 [:editor]]                                                                           ; zellij
+  [:!O#Pm :!Tf5 [:editor]]                                                                           ; zellij
+  [:!O#Pn :!Tf6 [:editor]]                                                                           ; zellij
+  [:!O#Po :!Tf7 [:editor]]                                                                           ; zellij
+  [:!O#Pp :!Tf8 [:editor]]                                                                           ; zellij
+  [:!O#Pq :!Tf9 [:editor]]                                                                           ; zellij
+  [:!O#Pr :!Tf10 [:editor]]                                                                          ; zellij
+  [:!O#Ps :!OTf1 [:editor]]                                                                          ; zellij
+  [:!O#Pt :!OTf2 [:editor]]                                                                          ; zellij
+  [:!O#Pu :!OTf4 [:editor]]                                                                          ; zellij
+  [:!O#Pv :!OTf5 [:editor]]                                                                          ; zellij
+  [:!O#Pw :!OTf6 [:editor]]                                                                          ; zellij
+  [:!O#Px :!OTf7 [:editor]]                                                                          ; zellij
+  [:!O#Py :!OTf8 [:editor]]                                                                          ; zellij
+  [:!O#Pz :!OTf9 [:editor]]                                                                          ; zellij
+  [:!O#Pright_control :!OTf10 [:editor]]                                                             ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -195,33 +195,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  [:!OS#Pa :!SOf1 [:term]]                                                                         ; zellij
-  [:!OS#Pb :!SOf2 [:term]]                                                                         ; zellij
-  [:!OS#Pc :!SOf4 [:term]]                                                                         ; zellij
-  [:!OS#Pd :!SOf5 [:term]]                                                                         ; zellij
-  [:!OS#Pe :!SOf6 [:term]]                                                                         ; zellij
-  [:!OS#Pf :!SOf7 [:term]]                                                                         ; zellij
-  [:!OS#Pg :!SOf8 [:term]]                                                                         ; zellij
-  [:!OS#Ph :!SOf9 [:term]]                                                                         ; zellij
-  [:!OS#Pi :!SOf10 [:term]]                                                                        ; zellij
-  [:!OS#Pj :!STf1 [:term]]                                                                         ; zellij
-  [:!OS#Pk :!STf2 [:term]]                                                                         ; zellij
-  [:!OS#Pl :!STf4 [:term]]                                                                         ; zellij
-  [:!OS#Pm :!STf5 [:term]]                                                                         ; zellij
-  [:!OS#Pn :!STf6 [:term]]                                                                         ; zellij
-  [:!OS#Po :!STf7 [:term]]                                                                         ; zellij
-  [:!OS#Pp :!STf8 [:term]]                                                                         ; zellij
-  [:!OS#Pq :!STf9 [:term]]                                                                         ; zellij
-  [:!OS#Pr :!STf10 [:term]]                                                                        ; zellij
-  [:!OS#Ps :!SOTf1 [:term]]                                                                        ; zellij
-  [:!OS#Pt :!SOTf2 [:term]]                                                                        ; zellij
-  [:!OS#Pu :!SOTf4 [:term]]                                                                        ; zellij
-  [:!OS#Pv :!SOTf5 [:term]]                                                                        ; zellij
-  [:!OS#Pw :!SOTf6 [:term]]                                                                        ; zellij
-  [:!OS#Px :!SOTf7 [:term]]                                                                        ; zellij
-  [:!OS#Py :!SOTf8 [:term]]                                                                        ; zellij
-  [:!OS#Pz :!SOTf9 [:term]]                                                                        ; zellij
-  [:!OS#Pright_control :!SOTf10 [:term]]                                                           ; zellij
+  [:!OS#Pa :!SOf1 [:editor]]                                                                         ; zellij
+  [:!OS#Pb :!SOf2 [:editor]]                                                                         ; zellij
+  [:!OS#Pc :!SOf4 [:editor]]                                                                         ; zellij
+  [:!OS#Pd :!SOf5 [:editor]]                                                                         ; zellij
+  [:!OS#Pe :!SOf6 [:editor]]                                                                         ; zellij
+  [:!OS#Pf :!SOf7 [:editor]]                                                                         ; zellij
+  [:!OS#Pg :!SOf8 [:editor]]                                                                         ; zellij
+  [:!OS#Ph :!SOf9 [:editor]]                                                                         ; zellij
+  [:!OS#Pi :!SOf10 [:editor]]                                                                        ; zellij
+  [:!OS#Pj :!STf1 [:editor]]                                                                         ; zellij
+  [:!OS#Pk :!STf2 [:editor]]                                                                         ; zellij
+  [:!OS#Pl :!STf4 [:editor]]                                                                         ; zellij
+  [:!OS#Pm :!STf5 [:editor]]                                                                         ; zellij
+  [:!OS#Pn :!STf6 [:editor]]                                                                         ; zellij
+  [:!OS#Po :!STf7 [:editor]]                                                                         ; zellij
+  [:!OS#Pp :!STf8 [:editor]]                                                                         ; zellij
+  [:!OS#Pq :!STf9 [:editor]]                                                                         ; zellij
+  [:!OS#Pr :!STf10 [:editor]]                                                                        ; zellij
+  [:!OS#Ps :!SOTf1 [:editor]]                                                                        ; zellij
+  [:!OS#Pt :!SOTf2 [:editor]]                                                                        ; zellij
+  [:!OS#Pu :!SOTf4 [:editor]]                                                                        ; zellij
+  [:!OS#Pv :!SOTf5 [:editor]]                                                                        ; zellij
+  [:!OS#Pw :!SOTf6 [:editor]]                                                                        ; zellij
+  [:!OS#Px :!SOTf7 [:editor]]                                                                        ; zellij
+  [:!OS#Py :!SOTf8 [:editor]]                                                                        ; zellij
+  [:!OS#Pz :!SOTf9 [:editor]]                                                                        ; zellij
+  [:!OS#Pright_control :!SOTf10 [:editor]]                                                           ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
