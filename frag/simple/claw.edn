@@ -32,7 +32,7 @@
   ; [:!EQ#Pright_shift []]                                                          NOT USEFUL     ;
   ; [:!EQ#Pright_option []]                                                         NOT AVAILABLE  ;
   ; [:!EQ#Pright_command []]                                                        NOT AVAILABLE  ;
-  ; [:!EQ#Pspacebar []]                                                                            ;
+  [:!EQ#Pspacebar :!SOb [:term]]                    ;
 
   ; [:!EQleft_command []]                                                                          ;
   [:!EQ#Pleft_option [:caps_lock]]                                                                 ;
