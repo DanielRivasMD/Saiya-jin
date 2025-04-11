@@ -30,8 +30,8 @@
   [:!W#Pdelete_or_backspace [:!Tf11]]                                          ; rename symbol     ; helix
   [:!W#Preturn_or_enter [:!Tf12]]                                              ; symbol            ; helix
   [:!W#Pright_shift [:!Tf13]]                                                  ; next parameter    ; helix
-  [:!W#Pright_option [:!Tf17]]                                                 ; reference         ; helix
-  [:!W#Pright_command [:!Tf16]]                                                ; definition        ; helix
+  [:!W#Pright_option [:!Tf16]]                                                 ; reference         ; helix
+  [:!W#Pright_command [:!Tf17]]                                                ; definition        ; helix
   [:!W#Pspacebar [:!Tf18]]                                                     ; last edit         ; helix
 
   ; [:!W#Pleft_command []]                                                          NOT USEFUL     ;
