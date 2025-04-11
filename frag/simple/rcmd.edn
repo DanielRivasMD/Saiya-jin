@@ -32,7 +32,7 @@
   ; [:!Q#Pright_shift []]                                                           NOT USEFUL     ;
   ; [:!Q#Pright_option []]                                                          NOT USEFUL     ;
   ; [:!Q#Pright_command []]                                                         NOT AVAILABLE  ;
-  ; [:!Q#Pspacebar [:!Q#Pcomma]]                                                 ;    PREFERENCES    ;
+  ; [:!Q#Pspacebar []]                                                                             ;
 
   [:!Q#Pleft_command [:spacebar :hyphen :!Speriod :spacebar]]                                      ; ' -> '
   [:!Q#Pleft_option [:period :period]]                                                             ; '..'
@@ -83,33 +83,33 @@
 {:des "Command Mode - alphabet"
  :rules
  [;
-  ; [:!Q#Pa [:!Ssemicolon :semicolon :a :!Ssemicolon]]                           ; αλφα              ; 'α'
-  ; [:!Q#Pb [:!Ssemicolon :semicolon :b :!Ssemicolon]]                           ; βητα              ; 'β'
-  ; [:!Q#Pc [:!Ssemicolon :semicolon :c :!Ssemicolon]]                           ; σιγμα             ; 'ς'
-  ; [:!Q#Pd [:!Ssemicolon :semicolon :d :!Ssemicolon]]                           ; δελτα             ; 'δ'
-  ; [:!Q#Pe [:!Ssemicolon :semicolon :e :!Ssemicolon]]                           ; εψιλον            ; 'ε'
-  ; [:!Q#Pf [:!Ssemicolon :semicolon :f :!Ssemicolon]]                           ; φι                ; 'φ'
-  ; [:!Q#Pg [:!Ssemicolon :semicolon :g :!Ssemicolon]]                           ; γαμμα             ; 'γ'
-  ; [:!Q#Ph [:!Ssemicolon :semicolon :h :!Ssemicolon]]                           ; ητα               ; 'η'
-  ; [:!Q#Pi [:!Ssemicolon :semicolon :i :!Ssemicolon]]                           ; ιωτα              ; 'ι'
-  ; [:!Q#Pj [:!Ssemicolon :semicolon :j :!Ssemicolon]]                           ; ξι                ; 'ξ'
-  ; [:!Q#Pk [:!Ssemicolon :semicolon :k :!Ssemicolon]]                           ; καππα             ; 'κ'
-  ; [:!Q#Pl [:!Ssemicolon :semicolon :l :!Ssemicolon]]                           ; λαμβδα            ; 'λ'
-  ; [:!Q#Pm [:!Ssemicolon :semicolon :m :!Ssemicolon]]                           ; μυ                ; 'μ'
-  ; [:!Q#Pn [:!Ssemicolon :semicolon :n :!Ssemicolon]]                           ; νυ                ; 'ν'
-  ; [:!Q#Po [:!Ssemicolon :semicolon :o :!Ssemicolon]]                           ; ομικρον           ; 'ο'
-  ; [:!Q#Pp [:!Ssemicolon :semicolon :p :!Ssemicolon]]                           ; πι                ; 'π'
-  ; ; [:!Q#Pq []]                                                                     DEFAULT        ;
-  ; [:!Q#Pr [:!Ssemicolon :semicolon :r :!Ssemicolon]]                           ; ρω                ; 'ρ'
-  ; [:!Q#Ps [:!Ssemicolon :semicolon :s :!Ssemicolon]]                           ; σιγμα             ; 'σ'
-  ; [:!Q#Pt [:!Ssemicolon :semicolon :t :!Ssemicolon]]                           ; ταυ               ; 'τ'
-  ; [:!Q#Pu [:!Ssemicolon :semicolon :u :!Ssemicolon]]                           ; θητα              ; 'Θ'
-  ; [:!Q#Pv [:!Ssemicolon :semicolon :v :!Ssemicolon]]                           ; ωμεγα             ; 'ω'
-  ; [:!Q#Pw [:!Ssemicolon :semicolon :w :!Ssemicolon]]                           ; ψι                ; 'ψ'
-  ; [:!Q#Px [:!Ssemicolon :semicolon :x :!Ssemicolon]]                           ; χι                ; 'χ'
-  ; [:!Q#Py [:!Ssemicolon :semicolon :y :!Ssemicolon]]                           ; υψιλον            ; 'υ'
-  ; [:!Q#Pz [:!Ssemicolon :semicolon :z :!Ssemicolon]]                           ; ζητα              ; 'ζ'
-  ; [:!Q#Pright_control [:!Ssemicolon :semicolon :q :!Ssemicolon]]               ; κοππα             ; 'ϙ'
+  [:!Q#Pa [:!Ssemicolon :semicolon :a :!Ssemicolon]]                           ; αλφα              ; 'α'
+  [:!Q#Pb [:!Ssemicolon :semicolon :b :!Ssemicolon]]                           ; βητα              ; 'β'
+  [:!Q#Pc [:!Ssemicolon :semicolon :c :!Ssemicolon]]                           ; σιγμα             ; 'ς'
+  [:!Q#Pd [:!Ssemicolon :semicolon :d :!Ssemicolon]]                           ; δελτα             ; 'δ'
+  [:!Q#Pe [:!Ssemicolon :semicolon :e :!Ssemicolon]]                           ; εψιλον            ; 'ε'
+  [:!Q#Pf [:!Ssemicolon :semicolon :f :!Ssemicolon]]                           ; φι                ; 'φ'
+  [:!Q#Pg [:!Ssemicolon :semicolon :g :!Ssemicolon]]                           ; γαμμα             ; 'γ'
+  [:!Q#Ph [:!Ssemicolon :semicolon :h :!Ssemicolon]]                           ; ητα               ; 'η'
+  [:!Q#Pi [:!Ssemicolon :semicolon :i :!Ssemicolon]]                           ; ιωτα              ; 'ι'
+  [:!Q#Pj [:!Ssemicolon :semicolon :j :!Ssemicolon]]                           ; ξι                ; 'ξ'
+  [:!Q#Pk [:!Ssemicolon :semicolon :k :!Ssemicolon]]                           ; καππα             ; 'κ'
+  [:!Q#Pl [:!Ssemicolon :semicolon :l :!Ssemicolon]]                           ; λαμβδα            ; 'λ'
+  [:!Q#Pm [:!Ssemicolon :semicolon :m :!Ssemicolon]]                           ; μυ                ; 'μ'
+  [:!Q#Pn [:!Ssemicolon :semicolon :n :!Ssemicolon]]                           ; νυ                ; 'ν'
+  [:!Q#Po [:!Ssemicolon :semicolon :o :!Ssemicolon]]                           ; ομικρον           ; 'ο'
+  [:!Q#Pp [:!Ssemicolon :semicolon :p :!Ssemicolon]]                           ; πι                ; 'π'
+  ; [:!Q#Pq []]                                                                     DEFAULT        ;
+  [:!Q#Pr [:!Ssemicolon :semicolon :r :!Ssemicolon]]                           ; ρω                ; 'ρ'
+  [:!Q#Ps [:!Ssemicolon :semicolon :s :!Ssemicolon]]                           ; σιγμα             ; 'σ'
+  [:!Q#Pt [:!Ssemicolon :semicolon :t :!Ssemicolon]]                           ; ταυ               ; 'τ'
+  [:!Q#Pu [:!Ssemicolon :semicolon :u :!Ssemicolon]]                           ; θητα              ; 'Θ'
+  [:!Q#Pv [:!Ssemicolon :semicolon :v :!Ssemicolon]]                           ; ωμεγα             ; 'ω'
+  [:!Q#Pw [:!Ssemicolon :semicolon :w :!Ssemicolon]]                           ; ψι                ; 'ψ'
+  [:!Q#Px [:!Ssemicolon :semicolon :x :!Ssemicolon]]                           ; χι                ; 'χ'
+  [:!Q#Py [:!Ssemicolon :semicolon :y :!Ssemicolon]]                           ; υψιλον            ; 'υ'
+  [:!Q#Pz [:!Ssemicolon :semicolon :z :!Ssemicolon]]                           ; ζητα              ; 'ζ'
+  [:!Q#Pright_control [:!Ssemicolon :semicolon :q :!Ssemicolon]]               ; κοππα             ; 'ϙ'
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -195,33 +195,33 @@
 {:des "Command Mode - alphabet"
  :rules
  [;
-  ; [:!QR#Pa [:!Ssemicolon :comma :a :!Ssemicolon]]                              ; a ogonek          ; 'ą'
-  ; [:!QR#Pb [:!Ssemicolon :comma :b :!Ssemicolon]]                              ; eszett            ; 'ß'
-  ; [:!QR#Pc [:!Ssemicolon :comma :c :!Ssemicolon]]                              ; c cedille         ; 'ç'
-  ; [:!QR#Pd [:!Ssemicolon :comma :d :!Ssemicolon]]                              ; ΔEΛTA             ; 'Δ'
-  ; [:!QR#Pe [:!Ssemicolon :comma :e :!Ssemicolon]]                              ; e ogonek          ; 'ę'
-  ; [:!QR#Pf [:!Ssemicolon :comma :f :!Ssemicolon]]                              ; florin            ; 'ƒ'
-  ; [:!QR#Pg [:!Ssemicolon :comma :g :!Ssemicolon]]                              ; e caron           ; 'ě'
-  ; [:!QR#Ph [:!Ssemicolon :comma :h :!Ssemicolon]]                              ; cyrillic и        ; 'и'
-  ; [:!QR#Pi [:!Ssemicolon :comma :i :!Ssemicolon]]                              ; i ogonek          ; 'į'
-  ; [:!QR#Pj [:!Ssemicolon :comma :j :!Ssemicolon]]                              ; caret             ; 'ʌ'
-  ; [:!QR#Pk [:!Ssemicolon :comma :k :!Ssemicolon]]                              ; phonetic ɒ        ; 'ɒ'
-  ; [:!QR#Pl [:!Ssemicolon :comma :l :!Ssemicolon]]                              ; ΛAMBΔA            ; 'Λ'
-  ; [:!QR#Pm [:!Ssemicolon :comma :m :!Ssemicolon]]                              ; meng              ; 'ɱ'
-  ; [:!QR#Pn [:!Ssemicolon :comma :n :!Ssemicolon]]                              ; eng               ; 'ŋ'
-  ; [:!QR#Po [:!Ssemicolon :comma :o :!Ssemicolon]]                              ; o ogonek          ; 'ǫ'
-  ; [:!QR#Pp [:!Ssemicolon :comma :p :!Ssemicolon]]                              ; cyrillic п        ; 'п'
-  ; ; [:!QR#Pq []]                                                                    DEFAULT        ;
-  ; [:!QR#Pr [:!Ssemicolon :comma :r :!Ssemicolon]]                              ; cyrillic я        ; 'я'
-  ; [:!QR#Ps [:!Ssemicolon :comma :s :!Ssemicolon]]                              ; ΣIΓMA             ; 'Σ'
-  ; ; [:!QR#Pt [:!Ssemicolon :comma :t :!Ssemicolon]]                            ;                   ;    
-  ; [:!QR#Pu [:!Ssemicolon :comma :u :!Ssemicolon]]                              ; u ogonek          ; 'ų'
-  ; [:!QR#Pv [:!Ssemicolon :comma :v :!Ssemicolon]]                              ; ΩMEΓA             ; 'Ω'
-  ; [:!QR#Pw [:!Ssemicolon :comma :w :!Ssemicolon]]                              ; πωμεγα            ; 'ϖ'
-  ; [:!QR#Px [:!Ssemicolon :comma :x :!Ssemicolon]]                              ; yogh              ; 'ʒ'
-  ; [:!QR#Pw [:!Ssemicolon :comma :y :!Ssemicolon]]                              ; eł                ; 'ł'
-  ; [:!QR#Pz [:!Ssemicolon :comma :z :!Ssemicolon]]                              ; cyrillic з        ; 'з'
-  ; [:!QR#Pright_control [:!Ssemicolon :comma :q :!Ssemicolon]]                  ; ø                 ; 'ø'
+  [:!QR#Pa [:!Ssemicolon :comma :a :!Ssemicolon]]                              ; a ogonek          ; 'ą'
+  [:!QR#Pb [:!Ssemicolon :comma :b :!Ssemicolon]]                              ; eszett            ; 'ß'
+  [:!QR#Pc [:!Ssemicolon :comma :c :!Ssemicolon]]                              ; c cedille         ; 'ç'
+  [:!QR#Pd [:!Ssemicolon :comma :d :!Ssemicolon]]                              ; ΔEΛTA             ; 'Δ'
+  [:!QR#Pe [:!Ssemicolon :comma :e :!Ssemicolon]]                              ; e ogonek          ; 'ę'
+  [:!QR#Pf [:!Ssemicolon :comma :f :!Ssemicolon]]                              ; florin            ; 'ƒ'
+  [:!QR#Pg [:!Ssemicolon :comma :g :!Ssemicolon]]                              ; e caron           ; 'ě'
+  [:!QR#Ph [:!Ssemicolon :comma :h :!Ssemicolon]]                              ; cyrillic и        ; 'и'
+  [:!QR#Pi [:!Ssemicolon :comma :i :!Ssemicolon]]                              ; i ogonek          ; 'į'
+  [:!QR#Pj [:!Ssemicolon :comma :j :!Ssemicolon]]                              ; caret             ; 'ʌ'
+  [:!QR#Pk [:!Ssemicolon :comma :k :!Ssemicolon]]                              ; phonetic ɒ        ; 'ɒ'
+  [:!QR#Pl [:!Ssemicolon :comma :l :!Ssemicolon]]                              ; ΛAMBΔA            ; 'Λ'
+  [:!QR#Pm [:!Ssemicolon :comma :m :!Ssemicolon]]                              ; meng              ; 'ɱ'
+  [:!QR#Pn [:!Ssemicolon :comma :n :!Ssemicolon]]                              ; eng               ; 'ŋ'
+  [:!QR#Po [:!Ssemicolon :comma :o :!Ssemicolon]]                              ; o ogonek          ; 'ǫ'
+  [:!QR#Pp [:!Ssemicolon :comma :p :!Ssemicolon]]                              ; cyrillic п        ; 'п'
+  ; [:!QR#Pq []]                                                                    DEFAULT        ;
+  [:!QR#Pr [:!Ssemicolon :comma :r :!Ssemicolon]]                              ; cyrillic я        ; 'я'
+  [:!QR#Ps [:!Ssemicolon :comma :s :!Ssemicolon]]                              ; ΣIΓMA             ; 'Σ'
+  ; [:!QR#Pt [:!Ssemicolon :comma :t :!Ssemicolon]]                            ;                   ;    
+  [:!QR#Pu [:!Ssemicolon :comma :u :!Ssemicolon]]                              ; u ogonek          ; 'ų'
+  [:!QR#Pv [:!Ssemicolon :comma :v :!Ssemicolon]]                              ; ΩMEΓA             ; 'Ω'
+  [:!QR#Pw [:!Ssemicolon :comma :w :!Ssemicolon]]                              ; πωμεγα            ; 'ϖ'
+  [:!QR#Px [:!Ssemicolon :comma :x :!Ssemicolon]]                              ; yogh              ; 'ʒ'
+  [:!QR#Pw [:!Ssemicolon :comma :y :!Ssemicolon]]                              ; eł                ; 'ł'
+  [:!QR#Pz [:!Ssemicolon :comma :z :!Ssemicolon]]                              ; cyrillic з        ; 'з'
+  [:!QR#Pright_control [:!Ssemicolon :comma :q :!Ssemicolon]]                  ; ø                 ; 'ø'
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
