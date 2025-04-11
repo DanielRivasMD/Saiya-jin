@@ -6,8 +6,10 @@
 {:des "Hyper Mode - arrows"
  :rules
  [;
-  [:!OTC#Pleft_arrow [:!Spage_up] [:term]]                                                         ;
-  [:!OTC#Pright_arrow [:!Spage_down] [:term]]                                                      ;
+  [:!OTC#Pleft_arrow [:!Spage_up] [:term]]                                 ;                     ;
+  [:!OTC#Pleft_arrow [:f10] [:zed]]                                 ;                     ;
+  [:!OTC#Pright_arrow [:!Spage_down] [:term]]                              ;                     ;
+  [:!OTC#Pright_arrow [:f11] [:zed]]                              ;                     ;
   [:!OTC#Pup_arrow [:!Shome] [:term]]                                          ; increment         ; helix
   [:!OTC#Pdown_arrow [:!Send] [:term]]                                         ; decrement         ; helix
   ]}
