@@ -6,10 +6,10 @@
 {:des "Option - Control Mode - arrows"
  :rules
  [;
-  [:!OT#Pleft_arrow :!Oj [:editor]]                                            ;                      ; zellij
-  [:!OT#Pright_arrow :!Ok [:editor]]                                           ;                      ; zellij
-  [:!OT#Pup_arrow :!Ol [:term]]                                                ;                    ; zellij
-  [:!OT#Pdown_arrow :!Om [:term]]                                              ;                    ; zellij
+  [:!OT#Pleft_arrow :!Oj [:editor]]                                            ; pane left         ; zellij
+  [:!OT#Pright_arrow :!Ok [:editor]]                                           ; pane right        ; zellij
+  [:!OT#Pup_arrow :!Ol [:term]]                                                ; pane up           ; zellij
+  [:!OT#Pdown_arrow :!Om [:term]]                                              ; pane down         ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -21,18 +21,18 @@
   ; [:!OT#Popen_bracket []]                                                                        ;
   ; [:!OT#Pclose_bracket []]                                                                       ;
   ; [:!OT#Psemicolon []]                                                                           ;
-  ; [:!OT#Pquote []]                                                                               ;
-  [:!OT#Pbackslash :!Os [:term]]                                               ; float             ; zellij
+  [:!OT#Pquote [:!SOb]]                                                                               ;
+  [:!OT#Pbackslash :!SOc [:term]]                                               ; pane float       ; zellij
   ; [:!OT#Pcomma []]                                                                               ;
   ; [:!OT#Pperiod []]                                                                              ;
   ; [:!OT#Pslash []]                                                                               ;
 
-  [:!OT#Pdelete_or_backspace :!Oo [:editor]]                                     ; close             ; zellij
-  [:!OT#Preturn_or_enter :!Op [:editor]]                                         ; focus             ; zellij
-  [:!OT#Pright_shift :!Oq [:editor]]                                             ; split right       ; zellij
-  [:!OT#Pright_option :!Or [:editor]]                                            ; split down        ; zellij
-  [:!OT#Pright_command :!SOc [:editor]]                                          ; rename            ; zellij
-  [:!OT#Pspacebar :!Ot [:editor]]                                                ; jump back         ; zellij
+  [:!OT#Pdelete_or_backspace :!Oo [:editor]]                                     ; pane close      ; zellij
+  [:!OT#Preturn_or_enter :!Op [:editor]]                                         ; pane focus      ; zellij
+  [:!OT#Pright_shift :!Oq [:editor]]                                             ; pane split right; zellij
+  [:!OT#Pright_option :!Or [:editor]]                                            ; pane split down ; zellij
+  [:!OT#Pright_command :!Os [:editor]]                                           ; pane rename     ; zellij
+  [:!OT#Pspacebar :!Ot [:editor]]                                                ; pane jump back  ; zellij
 
   ; [:!OTleft_command []]                                                           NOT USEFUL     ;
   ; [:!OT#Pleft_option []]                                                          NOT AVAILABLE  ;
