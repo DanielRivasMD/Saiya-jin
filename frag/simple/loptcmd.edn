@@ -23,16 +23,16 @@
   ; [:!OC#Psemicolon []]                                                                           ;
   ; [:!OC#Pquote []]                                                                               ;
   ; [:!OC#Pbackslash []]                                                                           ;
-  [:!OC#Pcomma :!Ow [:term]]                               ; alt-cmd-.         ; nushell motion    ; zellij
-  [:!OC#Pperiod :!Ov [:term]]                              ; alt-cmd-,         ; nushell motion    ; zellij
-  [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ; nushell motion    ; zellij
+  [:!OC#Pcomma :!Ow [:term]]                               ; alt-cmd-.         ; nushell motion    ; alacritty
+  [:!OC#Pperiod :!Ov [:term]]                              ; alt-cmd-,         ; nushell motion    ; alacritty
+  [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ; nushell motion    ; alacritty
 
-  [:!OC#Pdelete_or_backspace :!SOi [:term]]                                    ; close             ; zellij
+  [:!OC#Pdelete_or_backspace :!SOi [:term]]                                    ; tab close         ; zellij
   [:!OC#Preturn_or_enter :!SOj [:term]]                                        ; plugin room       ; zellij
-  [:!OC#Pright_shift :!SOk [:term]]                                            ; new               ; zellij
+  [:!OC#Pright_shift :!SOk [:term]]                                            ; tab new           ; zellij
   ; [:!OC#Pright_option                                                                            ;
-  [:!OC#Pright_command :!SOa [:term]]                                          ; rename            ; zellij
-  [:!OC#Pspacebar :!SOn [:term]]                                               ; jump back         ; zellij
+  [:!OC#Pright_command :!SOa [:term]]                                          ; tab rename        ; zellij
+  [:!OC#Pspacebar :!SOn [:term]]                                               ; tab jump back     ; zellij
 
   ; [:!OCleft_command []]                                                           NOT AVAILABLE  ;
   ; [:!OC#Pleft_option []]                                                          NOT AVAILABLE  ;
