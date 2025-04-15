@@ -1258,45 +1258,6 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Terminal zellij bindings - alphabet",
-        "manipulators" : [ {
-          "to_if_alone" : [ {
-            "key_code" : "h",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "from" : {
-            "key_code" : "right_shift",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "right_shift"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_shift",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "j",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "Zero Mode - mouse",
         "manipulators" : [ {
           "from" : {
@@ -2353,7 +2314,54 @@
         "description" : "Option - Command Mode - symbols",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "left_option",
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "a",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_shift",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "e",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "caps_lock",
             "modifiers" : {
               "mandatory" : [ "right_command", "right_option" ],
               "optional" : [ "caps_lock" ]
@@ -2361,6 +2369,45 @@
           },
           "to" : [ {
             "key_code" : "caps_lock"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "tab",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "f",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "keypad_num_lock",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "d",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "escape",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g",
+            "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "type" : "basic"
         }, {
@@ -2555,6 +2602,22 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "left_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "f10"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.zed.Zed" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "right_arrow",
             "modifiers" : {
               "mandatory" : [ "left_command", "left_control", "left_option" ],
@@ -2568,6 +2631,22 @@
           "conditions" : [ {
             "type" : "frontmost_application_if",
             "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "f11"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "dev.zed.Zed" ]
           } ],
           "type" : "basic"
         }, {
@@ -2911,78 +2990,6 @@
           "to" : [ {
             "key_code" : "t",
             "modifiers" : [ "right_control" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "up_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "right_command", "right_control", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f8"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "down_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "right_command", "right_control", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f9"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "up_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "right_command", "right_control", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f10"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "down_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "right_command", "right_control", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f11"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "up_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "right_command", "right_control", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f5"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "down_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "right_command", "right_control", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f6"
           } ],
           "type" : "basic"
         } ]
@@ -3399,7 +3406,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3416,7 +3423,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3458,6 +3465,19 @@
         "description" : "Option - Control Mode - symbols",
         "manipulators" : [ {
           "from" : {
+            "key_code" : "quote",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "b",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "backslash",
             "modifiers" : {
               "mandatory" : [ "left_control", "left_option" ],
@@ -3465,8 +3485,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "s",
-            "modifiers" : [ "left_option" ]
+            "key_code" : "c",
+            "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -3487,7 +3507,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3504,7 +3524,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3521,7 +3541,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3538,7 +3558,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3550,12 +3570,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "c",
-            "modifiers" : [ "left_option", "left_shift" ]
+            "key_code" : "s",
+            "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3572,7 +3592,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         } ]
@@ -8962,7 +8982,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -8979,7 +8999,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -8996,7 +9016,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9013,7 +9033,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9030,7 +9050,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9047,7 +9067,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9064,7 +9084,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9081,7 +9101,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9098,7 +9118,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9115,7 +9135,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9132,7 +9152,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9149,7 +9169,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9166,7 +9186,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9183,7 +9203,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9200,7 +9220,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9217,7 +9237,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9234,7 +9254,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9251,7 +9271,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9268,7 +9288,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9285,7 +9305,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9302,7 +9322,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9319,7 +9339,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9336,7 +9356,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9353,7 +9373,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9370,7 +9390,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9387,7 +9407,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9404,7 +9424,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9421,7 +9441,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9438,7 +9458,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9455,7 +9475,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9472,7 +9492,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9489,7 +9509,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9506,7 +9526,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9523,7 +9543,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9540,7 +9560,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9557,7 +9577,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9574,7 +9594,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9591,7 +9611,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9608,7 +9628,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9625,7 +9645,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9642,7 +9662,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9659,7 +9679,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9676,7 +9696,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9693,7 +9713,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9710,7 +9730,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9727,7 +9747,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9744,7 +9764,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9761,7 +9781,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9778,7 +9798,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9795,7 +9815,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9812,7 +9832,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9829,7 +9849,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9846,7 +9866,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9863,7 +9883,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         } ]
@@ -10305,6 +10325,1029 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Command Mode - alphabet",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "a"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "b"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "c"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "d"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "e"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "f"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "g"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "h"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "j"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "k"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "l"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "m"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "n"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "o"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "p"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "r"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "s"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "t"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "u"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "v"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "w"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "x",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "x"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "y"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "z"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_control",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon"
+          }, {
+            "key_code" : "q"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "a"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "b"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "c"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "d"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "e"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "f"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "g"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "h"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "i"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "j"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "k"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "l"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "m"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "n"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "o"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "p"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "r"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "s"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "u"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "v"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "w"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "x",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "x"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "y"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "z"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_control",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma"
+          }, {
+            "key_code" : "q"
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Control Mode - arrows",
         "manipulators" : [ {
           "from" : {
@@ -10736,6 +11779,25 @@
           },
           "to" : [ {
             "key_code" : "right_command"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "h",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "from" : {
+            "key_code" : "right_shift",
+            "modifiers" : {
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_shift"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         } ]
