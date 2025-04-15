@@ -548,7 +548,7 @@
 
   ; [:!O#Pright_arrow :!Of [:term]]                          ; alt-right         ; cursor movement
   ; [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]      ; esc               ; pop-up window
-  [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history editor
+  ; [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history editor
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ; [: :!Oi [:term]]                                                                COLLISION      ;
@@ -572,7 +572,7 @@
   ; [:!OT#Pright_command :!Os [:term]]                       ; alt-ctl-cmd       ; float             ;
   ; [:!OT#Pspacebar :!Ot [:term]]                            ; alt-ctl-space     ; jump back         ;
 
-  [:!OT#Pright_shift :!Cj [:zed]]                  ; alt-ctl-shift     ; spawn new right   ;
+  ; [:!OT#Pright_shift :!Cj [:zed]]                  ; alt-ctl-shift     ; spawn new right   ;
   ; [:!OT#Pright_option :!Cj [:zed]]                ; alt-ctl-alt       ; spawn new down    ;
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1226,20 +1226,20 @@
   ; [:!EQ#Pslash []]                                                                               ;
 
   ; [:!EQ#Pdelete_or_backspace []]                                                                 ;
-  ; [:!EQ#Preturn_or_enter []]                                                                     ;
+  [:!EQ#Preturn_or_enter :!Og [:term]]                                                             ;
   ; [:!EQ#Pright_shift []]                                                          NOT USEFUL     ;
   ; [:!EQ#Pright_option []]                                                         NOT AVAILABLE  ;
   ; [:!EQ#Pright_command []]                                                        NOT AVAILABLE  ;
-  ; [:!EQ#Pspacebar []]                                                                            ;
+  [:!EQ#Pspacebar :!Oa [:term]]                                                                    ; zellij mode lock
 
   ; [:!EQleft_command []]                                                                          ;
-  [:!EQ#Pleft_option [:caps_lock]]                                                                 ;
+  ; [:!EQ#Pleft_option [:caps_lock]]                                                                 ;
   ; [:!EQleft_control []]                                                                          ;
-  ; [:!EQ#Pleft_shift []]                                                                          ;
-  ; [:!EQ#Pcaps_lock []                                                                            ;
-  ; [:!EQ#Ptab []]                                                                                 ;
-  ; [:!EQ#Pkeypad_num_lock []]                                                                     ;
-  ; [:!EQ#Pescape []]                                                                              ;
+  [:!EQ#Pleft_shift [:!SOe]]                                                                          ;
+  [:!EQ#Pcaps_lock [:caps_lock]]                                                                   ;
+  [:!EQ#Ptab [:!SOf]]                                                                                 ;
+  [:!EQ#Pkeypad_num_lock [:!SOd]]                                                                     ;
+  [:!EQ#Pescape [:!SOg]]                                                                              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1434,8 +1434,10 @@
 {:des "Hyper Mode - arrows"
  :rules
  [;
-  [:!OTC#Pleft_arrow [:!Spage_up] [:term]]                                                         ;
-  [:!OTC#Pright_arrow [:!Spage_down] [:term]]                                                      ;
+  [:!OTC#Pleft_arrow [:!Spage_up] [:term]]                                 ;                     ;
+  [:!OTC#Pleft_arrow [:f10] [:zed]]                                 ;                     ;
+  [:!OTC#Pright_arrow [:!Spage_down] [:term]]                              ;                     ;
+  [:!OTC#Pright_arrow [:f11] [:zed]]                              ;                     ;
   [:!OTC#Pup_arrow [:!Shome] [:term]]                                          ; increment         ; helix
   [:!OTC#Pdown_arrow [:!Send] [:term]]                                         ; decrement         ; helix
   ]}
@@ -1734,30 +1736,6 @@
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-; joker
-{:des "Joker Mode - symbols"
- :rules
- [;
-  ; ; test
-  ; [:!EWQS#Pup_arrow :f13]                                                                          ;
-  ; [:!EWQS#Pdown_arrow :f14]                                                                        ;
-
-  ; class
-  [:!EWQT#Pup_arrow :f8]                                                       ; prev class        ;
-  [:!EWQT#Pdown_arrow :f9]                                                     ; next class        ;
-
-  ; parameter
-  [:!EWQO#Pup_arrow :f10]                                                      ; prev fn           ;
-  [:!EWQO#Pdown_arrow :f11]                                                    ; next fn           ;
-
-  ; function
-  [:!EWQC#Pup_arrow :f5]                                                       ; prev param        ;
-  [:!EWQC#Pdown_arrow :f6]                                                     ; next param        ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; OPT-CMD
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1766,10 +1744,10 @@
 {:des "Option - Command Mode - arrows"
  :rules
  [;
-  [:!OC#Pleft_arrow :!Ox [:term]]                                              ; tab movement      ; zellij
-  [:!OC#Pright_arrow :!Oy [:term]]                                             ; tab movement      ; zellij
-  [:!OC#Pup_arrow :!Tx [:term]]                                                ; screen movement   ; zellij
-  [:!OC#Pdown_arrow :!Ty [:term]]                                              ; screen movement   ; zellij
+  [:!OC#Pleft_arrow :!Ox [:term]]                                              ; tab motion        ; zellij
+  [:!OC#Pright_arrow :!Oy [:term]]                                             ; tab motion        ; zellij
+  [:!OC#Pup_arrow :!Tx [:term]]                                                ; screen motion     ; zellij
+  [:!OC#Pdown_arrow :!Ty [:term]]                                              ; screen motion     ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1783,16 +1761,16 @@
   ; [:!OC#Psemicolon []]                                                                           ;
   ; [:!OC#Pquote []]                                                                               ;
   ; [:!OC#Pbackslash []]                                                                           ;
-  [:!OC#Pcomma :!Ow [:term]]                               ; alt-cmd-.         ; nushell movement  ; zellij
-  [:!OC#Pperiod :!Ov [:term]]                              ; alt-cmd-,         ; nushell movement  ; zellij
-  [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ; nushell movement  ; zellij
+  [:!OC#Pcomma :!Ow [:term]]                               ; alt-cmd-.         ; nushell motion    ; alacritty
+  [:!OC#Pperiod :!Ov [:term]]                              ; alt-cmd-,         ; nushell motion    ; alacritty
+  [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ; nushell motion    ; alacritty
 
-  [:!OC#Pdelete_or_backspace :!SOi [:term]]                                    ; close             ; zellij
+  [:!OC#Pdelete_or_backspace :!SOi [:term]]                                    ; tab close         ; zellij
   [:!OC#Preturn_or_enter :!SOj [:term]]                                        ; plugin room       ; zellij
-  [:!OC#Pright_shift :!SOk [:term]]                                            ; new               ; zellij
+  [:!OC#Pright_shift :!SOk [:term]]                                            ; tab new           ; zellij
   ; [:!OC#Pright_option                                                                            ;
-  [:!OC#Pright_command :!SOa [:term]]                                          ; rename            ; zellij
-  [:!OC#Pspacebar :!SOn [:term]]                                               ; jump back         ; zellij
+  [:!OC#Pright_command :!SOa [:term]]                                          ; tab rename        ; zellij
+  [:!OC#Pspacebar :!SOn [:term]]                                               ; tab jump back     ; zellij
 
   ; [:!OCleft_command []]                                                           NOT AVAILABLE  ;
   ; [:!OC#Pleft_option []]                                                          NOT AVAILABLE  ;
@@ -1881,10 +1859,10 @@
 {:des "Option - Control Mode - arrows"
  :rules
  [;
-  [:!OT#Pleft_arrow :!Oj [:term]]                                                                  ; zellij
-  [:!OT#Pright_arrow :!Ok [:term]]                                                                 ; zellij
-  [:!OT#Pup_arrow :!Ol [:term]]                                                                    ; zellij
-  [:!OT#Pdown_arrow :!Om [:term]]                                                                  ; zellij
+  [:!OT#Pleft_arrow :!Oj [:editor]]                                            ; pane left         ; zellij
+  [:!OT#Pright_arrow :!Ok [:editor]]                                           ; pane right        ; zellij
+  [:!OT#Pup_arrow :!Ol [:term]]                                                ; pane up           ; zellij
+  [:!OT#Pdown_arrow :!Om [:term]]                                              ; pane down         ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1896,18 +1874,18 @@
   ; [:!OT#Popen_bracket []]                                                                        ;
   ; [:!OT#Pclose_bracket []]                                                                       ;
   ; [:!OT#Psemicolon []]                                                                           ;
-  ; [:!OT#Pquote []]                                                                               ;
-  [:!OT#Pbackslash :!Os [:term]]                                               ; float             ; zellij
+  [:!OT#Pquote [:!SOb]]                                                                               ;
+  [:!OT#Pbackslash :!SOc [:term]]                                               ; pane float       ; zellij
   ; [:!OT#Pcomma []]                                                                               ;
   ; [:!OT#Pperiod []]                                                                              ;
   ; [:!OT#Pslash []]                                                                               ;
 
-  [:!OT#Pdelete_or_backspace :!Oo [:term]]                                     ; close             ; zellij
-  [:!OT#Preturn_or_enter :!Op [:term]]                                         ; focus             ; zellij
-  [:!OT#Pright_shift :!Oq [:term]]                                             ; split right       ; zellij
-  [:!OT#Pright_option :!Or [:term]]                                            ; split down        ; zellij
-  [:!OT#Pright_command :!SOc [:term]]                                          ; rename            ; zellij
-  [:!OT#Pspacebar :!Ot [:term]]                                                ; jump back         ; zellij
+  [:!OT#Pdelete_or_backspace :!Oo [:editor]]                                     ; pane close      ; zellij
+  [:!OT#Preturn_or_enter :!Op [:editor]]                                         ; pane focus      ; zellij
+  [:!OT#Pright_shift :!Oq [:editor]]                                             ; pane split right; zellij
+  [:!OT#Pright_option :!Or [:editor]]                                            ; pane split down ; zellij
+  [:!OT#Pright_command :!Os [:editor]]                                           ; pane rename     ; zellij
+  [:!OT#Pspacebar :!Ot [:editor]]                                                ; pane jump back  ; zellij
 
   ; [:!OTleft_command []]                                                           NOT USEFUL     ;
   ; [:!OT#Pleft_option []]                                                          NOT AVAILABLE  ;
@@ -2568,10 +2546,10 @@
 {:des "Option Mode - arrows"
  :rules
  [;
-  [:!O#Pleft_arrow :!Ob [:term]]                                               ; cursor movement   ; alacritty
-  [:!O#Pright_arrow :!Of [:term]]                                              ; cursor movement   ; alacritty
-  [:!O#Pup_arrow [:page_up] [:term]]                                           ; cursor movement   ; alacritty
-  [:!O#Pdown_arrow [:page_down] [:term]]                                       ; cursor movement   ; alacritty
+  [:!O#Pleft_arrow :!Ob [:term]]                                               ; cursor motion     ; alacritty
+  [:!O#Pright_arrow :!Of [:term]]                                              ; cursor motion     ; alacritty
+  [:!O#Pup_arrow [:page_up] [:term]]                                           ; cursor motion     ; alacritty
+  [:!O#Pdown_arrow [:page_down] [:term]]                                       ; cursor motion     ; alacritty
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -2645,33 +2623,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  [:!O#Pa :!Of1 [:term]]                                                                           ; zellij
-  [:!O#Pb :!Of2 [:term]]                                                                           ; zellij
-  [:!O#Pc :!Of4 [:term]]                                                                           ; zellij
-  [:!O#Pd :!Of5 [:term]]                                                                           ; zellij
-  [:!O#Pe :!Of6 [:term]]                                                                           ; zellij
-  [:!O#Pf :!Of7 [:term]]                                                                           ; zellij
-  [:!O#Pg :!Of8 [:term]]                                                                           ; zellij
-  [:!O#Ph :!Of9 [:term]]                                                                           ; zellij
-  [:!O#Pi :!Of10 [:term]]                                                                          ; zellij
-  [:!O#Pj :!Tf1 [:term]]                                                                           ; zellij
-  [:!O#Pk :!Tf2 [:term]]                                                                           ; zellij
-  [:!O#Pl :!Tf4 [:term]]                                                                           ; zellij
-  [:!O#Pm :!Tf5 [:term]]                                                                           ; zellij
-  [:!O#Pn :!Tf6 [:term]]                                                                           ; zellij
-  [:!O#Po :!Tf7 [:term]]                                                                           ; zellij
-  [:!O#Pp :!Tf8 [:term]]                                                                           ; zellij
-  [:!O#Pq :!Tf9 [:term]]                                                                           ; zellij
-  [:!O#Pr :!Tf10 [:term]]                                                                          ; zellij
-  [:!O#Ps :!OTf1 [:term]]                                                                          ; zellij
-  [:!O#Pt :!OTf2 [:term]]                                                                          ; zellij
-  [:!O#Pu :!OTf4 [:term]]                                                                          ; zellij
-  [:!O#Pv :!OTf5 [:term]]                                                                          ; zellij
-  [:!O#Pw :!OTf6 [:term]]                                                                          ; zellij
-  [:!O#Px :!OTf7 [:term]]                                                                          ; zellij
-  [:!O#Py :!OTf8 [:term]]                                                                          ; zellij
-  [:!O#Pz :!OTf9 [:term]]                                                                          ; zellij
-  [:!O#Pright_control :!OTf10 [:term]]                                                             ; zellij
+  [:!O#Pa :!Of1 [:editor]]                                                                           ; zellij
+  [:!O#Pb :!Of2 [:editor]]                                                                           ; zellij
+  [:!O#Pc :!Of4 [:editor]]                                                                           ; zellij
+  [:!O#Pd :!Of5 [:editor]]                                                                           ; zellij
+  [:!O#Pe :!Of6 [:editor]]                                                                           ; zellij
+  [:!O#Pf :!Of7 [:editor]]                                                                           ; zellij
+  [:!O#Pg :!Of8 [:editor]]                                                                           ; zellij
+  [:!O#Ph :!Of9 [:editor]]                                                                           ; zellij
+  [:!O#Pi :!Of10 [:editor]]                                                                          ; zellij
+  [:!O#Pj :!Tf1 [:editor]]                                                                           ; zellij
+  [:!O#Pk :!Tf2 [:editor]]                                                                           ; zellij
+  [:!O#Pl :!Tf4 [:editor]]                                                                           ; zellij
+  [:!O#Pm :!Tf5 [:editor]]                                                                           ; zellij
+  [:!O#Pn :!Tf6 [:editor]]                                                                           ; zellij
+  [:!O#Po :!Tf7 [:editor]]                                                                           ; zellij
+  [:!O#Pp :!Tf8 [:editor]]                                                                           ; zellij
+  [:!O#Pq :!Tf9 [:editor]]                                                                           ; zellij
+  [:!O#Pr :!Tf10 [:editor]]                                                                          ; zellij
+  [:!O#Ps :!OTf1 [:editor]]                                                                          ; zellij
+  [:!O#Pt :!OTf2 [:editor]]                                                                          ; zellij
+  [:!O#Pu :!OTf4 [:editor]]                                                                          ; zellij
+  [:!O#Pv :!OTf5 [:editor]]                                                                          ; zellij
+  [:!O#Pw :!OTf6 [:editor]]                                                                          ; zellij
+  [:!O#Px :!OTf7 [:editor]]                                                                          ; zellij
+  [:!O#Py :!OTf8 [:editor]]                                                                          ; zellij
+  [:!O#Pz :!OTf9 [:editor]]                                                                          ; zellij
+  [:!O#Pright_control :!OTf10 [:editor]]                                                             ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -2757,33 +2735,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  [:!OS#Pa :!SOf1 [:term]]                                                                         ; zellij
-  [:!OS#Pb :!SOf2 [:term]]                                                                         ; zellij
-  [:!OS#Pc :!SOf4 [:term]]                                                                         ; zellij
-  [:!OS#Pd :!SOf5 [:term]]                                                                         ; zellij
-  [:!OS#Pe :!SOf6 [:term]]                                                                         ; zellij
-  [:!OS#Pf :!SOf7 [:term]]                                                                         ; zellij
-  [:!OS#Pg :!SOf8 [:term]]                                                                         ; zellij
-  [:!OS#Ph :!SOf9 [:term]]                                                                         ; zellij
-  [:!OS#Pi :!SOf10 [:term]]                                                                        ; zellij
-  [:!OS#Pj :!STf1 [:term]]                                                                         ; zellij
-  [:!OS#Pk :!STf2 [:term]]                                                                         ; zellij
-  [:!OS#Pl :!STf4 [:term]]                                                                         ; zellij
-  [:!OS#Pm :!STf5 [:term]]                                                                         ; zellij
-  [:!OS#Pn :!STf6 [:term]]                                                                         ; zellij
-  [:!OS#Po :!STf7 [:term]]                                                                         ; zellij
-  [:!OS#Pp :!STf8 [:term]]                                                                         ; zellij
-  [:!OS#Pq :!STf9 [:term]]                                                                         ; zellij
-  [:!OS#Pr :!STf10 [:term]]                                                                        ; zellij
-  [:!OS#Ps :!SOTf1 [:term]]                                                                        ; zellij
-  [:!OS#Pt :!SOTf2 [:term]]                                                                        ; zellij
-  [:!OS#Pu :!SOTf4 [:term]]                                                                        ; zellij
-  [:!OS#Pv :!SOTf5 [:term]]                                                                        ; zellij
-  [:!OS#Pw :!SOTf6 [:term]]                                                                        ; zellij
-  [:!OS#Px :!SOTf7 [:term]]                                                                        ; zellij
-  [:!OS#Py :!SOTf8 [:term]]                                                                        ; zellij
-  [:!OS#Pz :!SOTf9 [:term]]                                                                        ; zellij
-  [:!OS#Pright_control :!SOTf10 [:term]]                                                           ; zellij
+  [:!OS#Pa :!SOf1 [:editor]]                                                                         ; zellij
+  [:!OS#Pb :!SOf2 [:editor]]                                                                         ; zellij
+  [:!OS#Pc :!SOf4 [:editor]]                                                                         ; zellij
+  [:!OS#Pd :!SOf5 [:editor]]                                                                         ; zellij
+  [:!OS#Pe :!SOf6 [:editor]]                                                                         ; zellij
+  [:!OS#Pf :!SOf7 [:editor]]                                                                         ; zellij
+  [:!OS#Pg :!SOf8 [:editor]]                                                                         ; zellij
+  [:!OS#Ph :!SOf9 [:editor]]                                                                         ; zellij
+  [:!OS#Pi :!SOf10 [:editor]]                                                                        ; zellij
+  [:!OS#Pj :!STf1 [:editor]]                                                                         ; zellij
+  [:!OS#Pk :!STf2 [:editor]]                                                                         ; zellij
+  [:!OS#Pl :!STf4 [:editor]]                                                                         ; zellij
+  [:!OS#Pm :!STf5 [:editor]]                                                                         ; zellij
+  [:!OS#Pn :!STf6 [:editor]]                                                                         ; zellij
+  [:!OS#Po :!STf7 [:editor]]                                                                         ; zellij
+  [:!OS#Pp :!STf8 [:editor]]                                                                         ; zellij
+  [:!OS#Pq :!STf9 [:editor]]                                                                         ; zellij
+  [:!OS#Pr :!STf10 [:editor]]                                                                        ; zellij
+  [:!OS#Ps :!SOTf1 [:editor]]                                                                        ; zellij
+  [:!OS#Pt :!SOTf2 [:editor]]                                                                        ; zellij
+  [:!OS#Pu :!SOTf4 [:editor]]                                                                        ; zellij
+  [:!OS#Pv :!SOTf5 [:editor]]                                                                        ; zellij
+  [:!OS#Pw :!SOTf6 [:editor]]                                                                        ; zellij
+  [:!OS#Px :!SOTf7 [:editor]]                                                                        ; zellij
+  [:!OS#Py :!SOTf8 [:editor]]                                                                        ; zellij
+  [:!OS#Pz :!SOTf9 [:editor]]                                                                        ; zellij
+  [:!OS#Pright_control :!SOTf10 [:editor]]                                                           ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -2990,7 +2968,7 @@
   ; [:!Q#Pright_shift []]                                                           NOT USEFUL     ;
   ; [:!Q#Pright_option []]                                                          NOT USEFUL     ;
   ; [:!Q#Pright_command []]                                                         NOT AVAILABLE  ;
-  ; [:!Q#Pspacebar [:!Q#Pcomma]]                                                 ;    PREFERENCES    ;
+  ; [:!Q#Pspacebar []]                                                                             ;
 
   [:!Q#Pleft_command [:spacebar :hyphen :!Speriod :spacebar]]                                      ; ' -> '
   [:!Q#Pleft_option [:period :period]]                                                             ; '..'
@@ -3041,33 +3019,33 @@
 {:des "Command Mode - alphabet"
  :rules
  [;
-  ; [:!Q#Pa [:!Ssemicolon :semicolon :a :!Ssemicolon]]                           ; αλφα              ; 'α'
-  ; [:!Q#Pb [:!Ssemicolon :semicolon :b :!Ssemicolon]]                           ; βητα              ; 'β'
-  ; [:!Q#Pc [:!Ssemicolon :semicolon :c :!Ssemicolon]]                           ; σιγμα             ; 'ς'
-  ; [:!Q#Pd [:!Ssemicolon :semicolon :d :!Ssemicolon]]                           ; δελτα             ; 'δ'
-  ; [:!Q#Pe [:!Ssemicolon :semicolon :e :!Ssemicolon]]                           ; εψιλον            ; 'ε'
-  ; [:!Q#Pf [:!Ssemicolon :semicolon :f :!Ssemicolon]]                           ; φι                ; 'φ'
-  ; [:!Q#Pg [:!Ssemicolon :semicolon :g :!Ssemicolon]]                           ; γαμμα             ; 'γ'
-  ; [:!Q#Ph [:!Ssemicolon :semicolon :h :!Ssemicolon]]                           ; ητα               ; 'η'
-  ; [:!Q#Pi [:!Ssemicolon :semicolon :i :!Ssemicolon]]                           ; ιωτα              ; 'ι'
-  ; [:!Q#Pj [:!Ssemicolon :semicolon :j :!Ssemicolon]]                           ; ξι                ; 'ξ'
-  ; [:!Q#Pk [:!Ssemicolon :semicolon :k :!Ssemicolon]]                           ; καππα             ; 'κ'
-  ; [:!Q#Pl [:!Ssemicolon :semicolon :l :!Ssemicolon]]                           ; λαμβδα            ; 'λ'
-  ; [:!Q#Pm [:!Ssemicolon :semicolon :m :!Ssemicolon]]                           ; μυ                ; 'μ'
-  ; [:!Q#Pn [:!Ssemicolon :semicolon :n :!Ssemicolon]]                           ; νυ                ; 'ν'
-  ; [:!Q#Po [:!Ssemicolon :semicolon :o :!Ssemicolon]]                           ; ομικρον           ; 'ο'
-  ; [:!Q#Pp [:!Ssemicolon :semicolon :p :!Ssemicolon]]                           ; πι                ; 'π'
-  ; ; [:!Q#Pq []]                                                                     DEFAULT        ;
-  ; [:!Q#Pr [:!Ssemicolon :semicolon :r :!Ssemicolon]]                           ; ρω                ; 'ρ'
-  ; [:!Q#Ps [:!Ssemicolon :semicolon :s :!Ssemicolon]]                           ; σιγμα             ; 'σ'
-  ; [:!Q#Pt [:!Ssemicolon :semicolon :t :!Ssemicolon]]                           ; ταυ               ; 'τ'
-  ; [:!Q#Pu [:!Ssemicolon :semicolon :u :!Ssemicolon]]                           ; θητα              ; 'Θ'
-  ; [:!Q#Pv [:!Ssemicolon :semicolon :v :!Ssemicolon]]                           ; ωμεγα             ; 'ω'
-  ; [:!Q#Pw [:!Ssemicolon :semicolon :w :!Ssemicolon]]                           ; ψι                ; 'ψ'
-  ; [:!Q#Px [:!Ssemicolon :semicolon :x :!Ssemicolon]]                           ; χι                ; 'χ'
-  ; [:!Q#Py [:!Ssemicolon :semicolon :y :!Ssemicolon]]                           ; υψιλον            ; 'υ'
-  ; [:!Q#Pz [:!Ssemicolon :semicolon :z :!Ssemicolon]]                           ; ζητα              ; 'ζ'
-  ; [:!Q#Pright_control [:!Ssemicolon :semicolon :q :!Ssemicolon]]               ; κοππα             ; 'ϙ'
+  [:!Q#Pa [:!Ssemicolon :semicolon :a :!Ssemicolon]]                           ; αλφα              ; 'α'
+  [:!Q#Pb [:!Ssemicolon :semicolon :b :!Ssemicolon]]                           ; βητα              ; 'β'
+  [:!Q#Pc [:!Ssemicolon :semicolon :c :!Ssemicolon]]                           ; σιγμα             ; 'ς'
+  [:!Q#Pd [:!Ssemicolon :semicolon :d :!Ssemicolon]]                           ; δελτα             ; 'δ'
+  [:!Q#Pe [:!Ssemicolon :semicolon :e :!Ssemicolon]]                           ; εψιλον            ; 'ε'
+  [:!Q#Pf [:!Ssemicolon :semicolon :f :!Ssemicolon]]                           ; φι                ; 'φ'
+  [:!Q#Pg [:!Ssemicolon :semicolon :g :!Ssemicolon]]                           ; γαμμα             ; 'γ'
+  [:!Q#Ph [:!Ssemicolon :semicolon :h :!Ssemicolon]]                           ; ητα               ; 'η'
+  [:!Q#Pi [:!Ssemicolon :semicolon :i :!Ssemicolon]]                           ; ιωτα              ; 'ι'
+  [:!Q#Pj [:!Ssemicolon :semicolon :j :!Ssemicolon]]                           ; ξι                ; 'ξ'
+  [:!Q#Pk [:!Ssemicolon :semicolon :k :!Ssemicolon]]                           ; καππα             ; 'κ'
+  [:!Q#Pl [:!Ssemicolon :semicolon :l :!Ssemicolon]]                           ; λαμβδα            ; 'λ'
+  [:!Q#Pm [:!Ssemicolon :semicolon :m :!Ssemicolon]]                           ; μυ                ; 'μ'
+  [:!Q#Pn [:!Ssemicolon :semicolon :n :!Ssemicolon]]                           ; νυ                ; 'ν'
+  [:!Q#Po [:!Ssemicolon :semicolon :o :!Ssemicolon]]                           ; ομικρον           ; 'ο'
+  [:!Q#Pp [:!Ssemicolon :semicolon :p :!Ssemicolon]]                           ; πι                ; 'π'
+  ; [:!Q#Pq []]                                                                     DEFAULT        ;
+  [:!Q#Pr [:!Ssemicolon :semicolon :r :!Ssemicolon]]                           ; ρω                ; 'ρ'
+  [:!Q#Ps [:!Ssemicolon :semicolon :s :!Ssemicolon]]                           ; σιγμα             ; 'σ'
+  [:!Q#Pt [:!Ssemicolon :semicolon :t :!Ssemicolon]]                           ; ταυ               ; 'τ'
+  [:!Q#Pu [:!Ssemicolon :semicolon :u :!Ssemicolon]]                           ; θητα              ; 'Θ'
+  [:!Q#Pv [:!Ssemicolon :semicolon :v :!Ssemicolon]]                           ; ωμεγα             ; 'ω'
+  [:!Q#Pw [:!Ssemicolon :semicolon :w :!Ssemicolon]]                           ; ψι                ; 'ψ'
+  [:!Q#Px [:!Ssemicolon :semicolon :x :!Ssemicolon]]                           ; χι                ; 'χ'
+  [:!Q#Py [:!Ssemicolon :semicolon :y :!Ssemicolon]]                           ; υψιλον            ; 'υ'
+  [:!Q#Pz [:!Ssemicolon :semicolon :z :!Ssemicolon]]                           ; ζητα              ; 'ζ'
+  [:!Q#Pright_control [:!Ssemicolon :semicolon :q :!Ssemicolon]]               ; κοππα             ; 'ϙ'
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -3153,33 +3131,33 @@
 {:des "Command Mode - alphabet"
  :rules
  [;
-  ; [:!QR#Pa [:!Ssemicolon :comma :a :!Ssemicolon]]                              ; a ogonek          ; 'ą'
-  ; [:!QR#Pb [:!Ssemicolon :comma :b :!Ssemicolon]]                              ; eszett            ; 'ß'
-  ; [:!QR#Pc [:!Ssemicolon :comma :c :!Ssemicolon]]                              ; c cedille         ; 'ç'
-  ; [:!QR#Pd [:!Ssemicolon :comma :d :!Ssemicolon]]                              ; ΔEΛTA             ; 'Δ'
-  ; [:!QR#Pe [:!Ssemicolon :comma :e :!Ssemicolon]]                              ; e ogonek          ; 'ę'
-  ; [:!QR#Pf [:!Ssemicolon :comma :f :!Ssemicolon]]                              ; florin            ; 'ƒ'
-  ; [:!QR#Pg [:!Ssemicolon :comma :g :!Ssemicolon]]                              ; e caron           ; 'ě'
-  ; [:!QR#Ph [:!Ssemicolon :comma :h :!Ssemicolon]]                              ; cyrillic и        ; 'и'
-  ; [:!QR#Pi [:!Ssemicolon :comma :i :!Ssemicolon]]                              ; i ogonek          ; 'į'
-  ; [:!QR#Pj [:!Ssemicolon :comma :j :!Ssemicolon]]                              ; caret             ; 'ʌ'
-  ; [:!QR#Pk [:!Ssemicolon :comma :k :!Ssemicolon]]                              ; phonetic ɒ        ; 'ɒ'
-  ; [:!QR#Pl [:!Ssemicolon :comma :l :!Ssemicolon]]                              ; ΛAMBΔA            ; 'Λ'
-  ; [:!QR#Pm [:!Ssemicolon :comma :m :!Ssemicolon]]                              ; meng              ; 'ɱ'
-  ; [:!QR#Pn [:!Ssemicolon :comma :n :!Ssemicolon]]                              ; eng               ; 'ŋ'
-  ; [:!QR#Po [:!Ssemicolon :comma :o :!Ssemicolon]]                              ; o ogonek          ; 'ǫ'
-  ; [:!QR#Pp [:!Ssemicolon :comma :p :!Ssemicolon]]                              ; cyrillic п        ; 'п'
-  ; ; [:!QR#Pq []]                                                                    DEFAULT        ;
-  ; [:!QR#Pr [:!Ssemicolon :comma :r :!Ssemicolon]]                              ; cyrillic я        ; 'я'
-  ; [:!QR#Ps [:!Ssemicolon :comma :s :!Ssemicolon]]                              ; ΣIΓMA             ; 'Σ'
-  ; ; [:!QR#Pt [:!Ssemicolon :comma :t :!Ssemicolon]]                            ;                   ;    
-  ; [:!QR#Pu [:!Ssemicolon :comma :u :!Ssemicolon]]                              ; u ogonek          ; 'ų'
-  ; [:!QR#Pv [:!Ssemicolon :comma :v :!Ssemicolon]]                              ; ΩMEΓA             ; 'Ω'
-  ; [:!QR#Pw [:!Ssemicolon :comma :w :!Ssemicolon]]                              ; πωμεγα            ; 'ϖ'
-  ; [:!QR#Px [:!Ssemicolon :comma :x :!Ssemicolon]]                              ; yogh              ; 'ʒ'
-  ; [:!QR#Pw [:!Ssemicolon :comma :y :!Ssemicolon]]                              ; eł                ; 'ł'
-  ; [:!QR#Pz [:!Ssemicolon :comma :z :!Ssemicolon]]                              ; cyrillic з        ; 'з'
-  ; [:!QR#Pright_control [:!Ssemicolon :comma :q :!Ssemicolon]]                  ; ø                 ; 'ø'
+  [:!QR#Pa [:!Ssemicolon :comma :a :!Ssemicolon]]                              ; a ogonek          ; 'ą'
+  [:!QR#Pb [:!Ssemicolon :comma :b :!Ssemicolon]]                              ; eszett            ; 'ß'
+  [:!QR#Pc [:!Ssemicolon :comma :c :!Ssemicolon]]                              ; c cedille         ; 'ç'
+  [:!QR#Pd [:!Ssemicolon :comma :d :!Ssemicolon]]                              ; ΔEΛTA             ; 'Δ'
+  [:!QR#Pe [:!Ssemicolon :comma :e :!Ssemicolon]]                              ; e ogonek          ; 'ę'
+  [:!QR#Pf [:!Ssemicolon :comma :f :!Ssemicolon]]                              ; florin            ; 'ƒ'
+  [:!QR#Pg [:!Ssemicolon :comma :g :!Ssemicolon]]                              ; e caron           ; 'ě'
+  [:!QR#Ph [:!Ssemicolon :comma :h :!Ssemicolon]]                              ; cyrillic и        ; 'и'
+  [:!QR#Pi [:!Ssemicolon :comma :i :!Ssemicolon]]                              ; i ogonek          ; 'į'
+  [:!QR#Pj [:!Ssemicolon :comma :j :!Ssemicolon]]                              ; caret             ; 'ʌ'
+  [:!QR#Pk [:!Ssemicolon :comma :k :!Ssemicolon]]                              ; phonetic ɒ        ; 'ɒ'
+  [:!QR#Pl [:!Ssemicolon :comma :l :!Ssemicolon]]                              ; ΛAMBΔA            ; 'Λ'
+  [:!QR#Pm [:!Ssemicolon :comma :m :!Ssemicolon]]                              ; meng              ; 'ɱ'
+  [:!QR#Pn [:!Ssemicolon :comma :n :!Ssemicolon]]                              ; eng               ; 'ŋ'
+  [:!QR#Po [:!Ssemicolon :comma :o :!Ssemicolon]]                              ; o ogonek          ; 'ǫ'
+  [:!QR#Pp [:!Ssemicolon :comma :p :!Ssemicolon]]                              ; cyrillic п        ; 'п'
+  ; [:!QR#Pq []]                                                                    DEFAULT        ;
+  [:!QR#Pr [:!Ssemicolon :comma :r :!Ssemicolon]]                              ; cyrillic я        ; 'я'
+  [:!QR#Ps [:!Ssemicolon :comma :s :!Ssemicolon]]                              ; ΣIΓMA             ; 'Σ'
+  ; [:!QR#Pt [:!Ssemicolon :comma :t :!Ssemicolon]]                            ;                   ;    
+  [:!QR#Pu [:!Ssemicolon :comma :u :!Ssemicolon]]                              ; u ogonek          ; 'ų'
+  [:!QR#Pv [:!Ssemicolon :comma :v :!Ssemicolon]]                              ; ΩMEΓA             ; 'Ω'
+  [:!QR#Pw [:!Ssemicolon :comma :w :!Ssemicolon]]                              ; πωμεγα            ; 'ϖ'
+  [:!QR#Px [:!Ssemicolon :comma :x :!Ssemicolon]]                              ; yogh              ; 'ʒ'
+  [:!QR#Pw [:!Ssemicolon :comma :y :!Ssemicolon]]                              ; eł                ; 'ł'
+  [:!QR#Pz [:!Ssemicolon :comma :z :!Ssemicolon]]                              ; cyrillic з        ; 'з'
+  [:!QR#Pright_control [:!Ssemicolon :comma :q :!Ssemicolon]]                  ; ø                 ; 'ø'
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -3208,15 +3186,15 @@
   [:!W#Psemicolon [:!Of13]]                                                                        ; helix
   [:!W#Pquote [:!Of14]]                                                                            ; helix
   [:!W#Pbackslash [:!Of15]]                                                                        ; helix
-  [:!W#Pcomma [:!Of18]]                                                        ; definition        ; helix
-  [:!W#Pperiod [:!Of19]]                                                       ; reference         ; helix
-  [:!W#Pslash [:!Of20]]                                                        ; implementation    ; helix
+  [:!W#Pcomma [:!Of18]]                                                        ; next test         ; helix
+  [:!W#Pperiod [:!Of19]]                                                       ; next class        ; helix
+  [:!W#Pslash [:!Of20]]                                                        ; next function     ; helix
 
   [:!W#Pdelete_or_backspace [:!Tf11]]                                          ; rename symbol     ; helix
   [:!W#Preturn_or_enter [:!Tf12]]                                              ; symbol            ; helix
-  [:!W#Pright_shift [:!Tf13]]                                                  ; type definition   ; helix
-  [:!W#Pright_option [:!Tf16]]                                                                     ; helix
-  [:!W#Pright_command [:!Tf17]]                                                                    ; helix
+  [:!W#Pright_shift [:!Tf13]]                                                  ; next parameter    ; helix
+  [:!W#Pright_option [:!Tf16]]                                                 ; reference         ; helix
+  [:!W#Pright_command [:!Tf17]]                                                ; definition        ; helix
   [:!W#Pspacebar [:!Tf18]]                                                     ; last edit         ; helix
 
   ; [:!W#Pleft_command []]                                                          NOT USEFUL     ;
@@ -3320,15 +3298,15 @@
   [:!WS#Psemicolon [:!OSf13]]                                                                      ; helix
   [:!WS#Pquote [:!OSf14]]                                                                          ; helix
   [:!WS#Pbackslash [:!OSf15]]                                                                      ; helix
-  [:!WS#Pcomma [:!OSf18]]                                                                          ; helix
-  [:!WS#Pperiod [:!OSf19]]                                                                         ; helix
-  [:!WS#Pslash [:!OSf20]]                                                                          ; helix
+  [:!WS#Pcomma [:!OSf18]]                                                      ; prev test         ; helix
+  [:!WS#Pperiod [:!OSf19]]                                                     ; prev class        ; helix
+  [:!WS#Pslash [:!OSf20]]                                                      ; prev function     ; helix
 
   [:!WS#Pdelete_or_backspace [:!TSf11]]                                                            ; helix
   [:!WS#Preturn_or_enter [:!TSf12]]                                            ; jump list         ; helix
-  [:!WS#Pright_shift [:!TSf13]]                                                                    ; helix
-  [:!WS#Pright_option [:!TSf16]]                                                                   ; helix
-  [:!WS#Pright_command [:!TSf17]]                                                                  ; helix
+  [:!WS#Pright_shift [:!TSf13]]                                                ; prev parameter    ; helix
+  [:!WS#Pright_option [:!TSf16]]                                               ; implementation    ; helix
+  [:!WS#Pright_command [:!TSf17]]                                              ; type definition   ; helix
   [:!WS#Pspacebar [:!TSf18]]                                                   ; jump save         ; helix
 
   ; [:!WS#Pleft_command []]                                                         NOT USEFUL     ;
@@ -3999,13 +3977,15 @@
 
   ; lefts
   [:#Pleft_control :left_control nil {:alone [:!EWQ#Onon_us_pound]}]                               ; alfred window switcher
-  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ; global in-app window cycler. TODO: CHANGE `term` session locked
+  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ; global in-app window cycler.
   [:#Pleft_command :left_command nil {:alone [:!Ctab]}]                                            ; switch most recent app
 
   ; rights
   [:#Pright_shift :right_shift nil {:alone [:!R#Pnon_us_pound]}]                                   ; `browser` input. `term` history edit
   [:#Pright_option :right_option nil {:alone [:!E#Pnon_us_pound]}]                                 ; alfred paste
   [:#Pright_command :right_command nil {:alone [:!Q#Pnon_us_pound]}]                               ; alfred clipboard select
+
+  [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]                        ; history editor    ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
