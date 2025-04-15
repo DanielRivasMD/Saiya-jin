@@ -23,7 +23,7 @@
 
   ; [:!O#Pright_arrow :!Of [:term]]                          ; alt-right         ; cursor movement
   ; [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]      ; esc               ; pop-up window
-  [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history editor
+  ; [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history editor
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ; [: :!Oi [:term]]                                                                COLLISION      ;
@@ -47,7 +47,7 @@
   ; [:!OT#Pright_command :!Os [:term]]                       ; alt-ctl-cmd       ; float             ;
   ; [:!OT#Pspacebar :!Ot [:term]]                            ; alt-ctl-space     ; jump back         ;
 
-  [:!OT#Pright_shift :!Cj [:zed]]                  ; alt-ctl-shift     ; spawn new right   ;
+  ; [:!OT#Pright_shift :!Cj [:zed]]                  ; alt-ctl-shift     ; spawn new right   ;
   ; [:!OT#Pright_option :!Cj [:zed]]                ; alt-ctl-alt       ; spawn new down    ;
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
