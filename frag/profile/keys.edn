@@ -35,7 +35,7 @@
   [:#Pright_option :right_option nil {:alone [:!E#Pnon_us_pound]}]                                 ; alfred paste
   [:#Pright_command :right_command nil {:alone [:!Q#Pnon_us_pound]}]                               ; alfred clipboard select
 
-  [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]                                            ; history editor
+  [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]                        ; history editor    ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
