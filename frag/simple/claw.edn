@@ -28,20 +28,20 @@
   ; [:!EQ#Pslash []]                                                                               ;
 
   ; [:!EQ#Pdelete_or_backspace []]                                                                 ;
-  ; [:!EQ#Preturn_or_enter []]                                                                     ;
+  [:!EQ#Preturn_or_enter :!Og [:term]]                                                             ;
   ; [:!EQ#Pright_shift []]                                                          NOT USEFUL     ;
   ; [:!EQ#Pright_option []]                                                         NOT AVAILABLE  ;
   ; [:!EQ#Pright_command []]                                                        NOT AVAILABLE  ;
-  [:!EQ#Pspacebar :!SOb [:term]]                    ;
+  [:!EQ#Pspacebar :!Oa [:term]]                                                                    ; zellij mode lock
 
   ; [:!EQleft_command []]                                                                          ;
-  [:!EQ#Pleft_option [:caps_lock]]                                                                 ;
+  ; [:!EQ#Pleft_option [:caps_lock]]                                                                 ;
   ; [:!EQleft_control []]                                                                          ;
-  ; [:!EQ#Pleft_shift []]                                                                          ;
-  ; [:!EQ#Pcaps_lock []                                                                            ;
-  ; [:!EQ#Ptab []]                                                                                 ;
-  ; [:!EQ#Pkeypad_num_lock []]                                                                     ;
-  ; [:!EQ#Pescape []]                                                                              ;
+  [:!EQ#Pleft_shift [:!SOe]]                                                                          ;
+  [:!EQ#Pcaps_lock [:caps_lock]]                                                                   ;
+  [:!EQ#Ptab [:!SOf]]                                                                                 ;
+  [:!EQ#Pkeypad_num_lock [:!SOd]]                                                                     ;
+  [:!EQ#Pescape [:!SOg]]                                                                              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
