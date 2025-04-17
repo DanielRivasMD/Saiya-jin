@@ -2321,7 +2321,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "a",
+            "key_code" : "g",
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
@@ -2350,7 +2350,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "l",
+            "key_code" : "v",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2367,7 +2367,58 @@
             }
           },
           "to" : [ {
-            "key_code" : "m",
+            "key_code" : "w",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "x",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "y",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "backslash",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "z",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2384,7 +2435,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "w",
+            "key_code" : "x",
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
@@ -2401,7 +2452,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "v",
+            "key_code" : "y",
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
@@ -2435,7 +2486,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "i",
+            "key_code" : "u",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2452,7 +2503,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "h",
+            "key_code" : "p",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2469,7 +2520,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "k",
+            "key_code" : "q",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2486,7 +2537,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "e",
+            "key_code" : "r",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2503,7 +2554,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "a",
+            "key_code" : "s",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2520,7 +2571,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "n",
+            "key_code" : "t",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2691,12 +2742,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "c",
+            "key_code" : "l",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -2708,7 +2759,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "q",
+            "key_code" : "m",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2739,8 +2790,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "b",
+            "key_code" : "n",
             "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -2782,7 +2837,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "g",
+            "key_code" : "h",
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
@@ -3016,8 +3071,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "x",
-            "modifiers" : [ "left_option" ]
+            "key_code" : "j",
+            "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -3033,8 +3088,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "y",
-            "modifiers" : [ "left_option" ]
+            "key_code" : "k",
+            "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
@@ -3087,7 +3142,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "r",
+            "key_code" : "a",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3104,7 +3159,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "s",
+            "key_code" : "b",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3121,7 +3176,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "t",
+            "key_code" : "c",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3138,7 +3193,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "u",
+            "key_code" : "d",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3155,7 +3210,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "v",
+            "key_code" : "e",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3172,7 +3227,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "w",
+            "key_code" : "f",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3189,7 +3244,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "x",
+            "key_code" : "g",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3206,7 +3261,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "y",
+            "key_code" : "h",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3223,7 +3278,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "z",
+            "key_code" : "i",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3240,7 +3295,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "n",
+            "key_code" : "j",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3257,7 +3312,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "r",
+            "key_code" : "a",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3274,7 +3329,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "s",
+            "key_code" : "b",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3291,7 +3346,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "t",
+            "key_code" : "c",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3308,7 +3363,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "u",
+            "key_code" : "d",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3325,7 +3380,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "v",
+            "key_code" : "e",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3342,7 +3397,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "w",
+            "key_code" : "f",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3359,7 +3414,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "x",
+            "key_code" : "g",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3376,7 +3431,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "y",
+            "key_code" : "h",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3393,7 +3448,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "z",
+            "key_code" : "i",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -9937,7 +9992,7 @@
           "type" : "basic"
         }, {
           "to_if_alone" : [ {
-            "key_code" : "h",
+            "key_code" : "a",
             "modifiers" : [ "left_option" ]
           } ],
           "from" : {
