@@ -1226,20 +1226,20 @@
   ; [:!EQ#Pslash []]                                                                               ;
 
   ; [:!EQ#Pdelete_or_backspace []]                                                                 ;
-  [:!EQ#Preturn_or_enter :!Og [:term]]                                                             ;
+  ; [:!EQ#Preturn_or_enter []]                                                                     ;
   ; [:!EQ#Pright_shift []]                                                          NOT USEFUL     ;
   ; [:!EQ#Pright_option []]                                                         NOT AVAILABLE  ;
   ; [:!EQ#Pright_command []]                                                        NOT AVAILABLE  ;
-  [:!EQ#Pspacebar :!Oa [:term]]                                                                    ; zellij mode lock
+  [:!EQ#Pspacebar :!Oa [:term]]                                                ;  mode lock        ; zellij
 
   ; [:!EQleft_command []]                                                                          ;
-  ; [:!EQ#Pleft_option [:caps_lock]]                                                                 ;
+  ; [:!EQ#Pleft_option []]                                                                         ;
   ; [:!EQleft_control []]                                                                          ;
-  [:!EQ#Pleft_shift [:!SOe]]                                                                          ;
+  ; [:!EQ#Pleft_shift []]                                                                          ;
   [:!EQ#Pcaps_lock [:caps_lock]]                                                                   ;
-  [:!EQ#Ptab [:!SOf]]                                                                                 ;
-  [:!EQ#Pkeypad_num_lock [:!SOd]]                                                                     ;
-  [:!EQ#Pescape [:!SOg]]                                                                              ;
+  ; [:!EQ#Ptab []]                                                                                 ;
+  ; [:!EQ#Pkeypad_num_lock []]                                                                     ;
+  ; [:!EQ#Pescape []]                                                                              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1455,14 +1455,14 @@
   [:!OTC#Pbackslash [:!Sbackslash :!Sbackslash]]                                                   ; '||'
   [:!OTC#Pcomma [:!Scomma :!Scomma]]                                                               ; '<<'
   [:!OTC#Pperiod [:!Speriod :!Speriod]]                                                            ; '>>'
-  ; [:!OTC#Pslash []]                                                                              ;
+  [:!OTC#Pslash :!SOc [:term]]                                                 ; pane float pop    ; zellij
 
-  ; [:!OTC#Pdelete_or_backspace []]                                                                ;
+  [:!OTC#Pdelete_or_backspace :!SOq [:editor]]                                 ; pane float pin    ; zellij
   [:!OTC#Preturn_or_enter [:equal_sign :equal_sign]]                                               ; '=='
-  ; [:!OTC#Pright_shift []]                                                                        ;
+  [:!OTC#Pright_shift [:!SOb]]                                                 ; pane float toggle ; zellij
   [:!OTC#Pright_option [:!S8 :!S8]]                                                                ; '**'
   [:!OTC#Pright_command [:slash :slash]]                                                           ; '//'
-  ; [:!OTC#Pspacebar []]                                                                           ;
+  [:!OTC#Pspacebar :!Og [:term]]                                               ;  mode search      ; zellij
 
   ; [:!OTC#Pleft_command []]                                                        NOT AVAILABLE  ;
   ; [:!OTC#Pleft_option []]                                                         NOT AVAILABLE  ;
@@ -1766,9 +1766,9 @@
   [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ; nushell motion    ; alacritty
 
   [:!OC#Pdelete_or_backspace :!SOi [:term]]                                    ; tab close         ; zellij
-  [:!OC#Preturn_or_enter :!SOj [:term]]                                        ; plugin room       ; zellij
+  [:!OC#Preturn_or_enter :!SOh [:term]]                                        ; tab sync          ; zellij
   [:!OC#Pright_shift :!SOk [:term]]                                            ; tab new           ; zellij
-  ; [:!OC#Pright_option                                                                            ;
+  [:!OC#Pright_option :!SOe [:term]]                                           ; tab break pane    ; zellij
   [:!OC#Pright_command :!SOa [:term]]                                          ; tab rename        ; zellij
   [:!OC#Pspacebar :!SOn [:term]]                                               ; tab jump back     ; zellij
 
@@ -1874,18 +1874,18 @@
   ; [:!OT#Popen_bracket []]                                                                        ;
   ; [:!OT#Pclose_bracket []]                                                                       ;
   ; [:!OT#Psemicolon []]                                                                           ;
-  [:!OT#Pquote [:!SOb]]                                                                               ;
-  [:!OT#Pbackslash :!SOc [:term]]                                               ; pane float       ; zellij
+  ; [:!OT#Pquote []]                                                                               ;
+  ; [:!OT#Pbackslash []]                                                                           ;
   ; [:!OT#Pcomma []]                                                                               ;
   ; [:!OT#Pperiod []]                                                                              ;
   ; [:!OT#Pslash []]                                                                               ;
 
-  [:!OT#Pdelete_or_backspace :!Oo [:editor]]                                     ; pane close      ; zellij
-  [:!OT#Preturn_or_enter :!Op [:editor]]                                         ; pane focus      ; zellij
-  [:!OT#Pright_shift :!Oq [:editor]]                                             ; pane split right; zellij
-  [:!OT#Pright_option :!Or [:editor]]                                            ; pane split down ; zellij
-  [:!OT#Pright_command :!Os [:editor]]                                           ; pane rename     ; zellij
-  [:!OT#Pspacebar :!Ot [:editor]]                                                ; pane jump back  ; zellij
+  [:!OT#Pdelete_or_backspace :!Oo [:editor]]                                   ; pane close        ; zellij
+  [:!OT#Preturn_or_enter :!Op [:editor]]                                       ; pane focus        ; zellij
+  [:!OT#Pright_shift :!Oq [:editor]]                                           ; pane split right  ; zellij
+  [:!OT#Pright_option :!Or [:editor]]                                          ; pane split down   ; zellij
+  [:!OT#Pright_command :!Os [:editor]]                                         ; pane rename       ; zellij
+  [:!OT#Pspacebar :!Ot [:editor]]                                              ; pane jump back    ; zellij
 
   ; [:!OTleft_command []]                                                           NOT USEFUL     ;
   ; [:!OT#Pleft_option []]                                                          NOT AVAILABLE  ;
@@ -3396,6 +3396,7 @@
 {:des "Shift Mode - symbols"
  :rules
  [;
+  [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history editor
   ; [:!R#Pleft_arrow []]                                                                           ;
   ; [:!R#Pright_arrow []]                                                                          ;
   ; [:!R#Pup_arrow []]                                                                             ;
@@ -3762,8 +3763,8 @@
   [:!ROTC#Pdelete_or_backspace [:launch "Arc"]]                                                    ;
   [:!ROTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
   [:!ROTC#Pright_shift [:launch "Mail"]]                                                           ;
-  [:!ROTC#Pright_option [:launch "Lapce"]]                                                         ;
-  [:!ROTC#Pright_command [:launch "Zed"]]                                                          ;
+  [:!ROTC#Pright_option [:launch "Zed"]]                                                           ;
+  [:!ROTC#Pright_command [:launch "Calendar"]]                                                     ;
   ; [:!ROTC#Pspacebar []]                                                      ; speak             ; system
 
   ; [:!ROTC#Pleft_command []]                                                       NOT USEFUL     ;
@@ -3984,8 +3985,6 @@
   [:#Pright_shift :right_shift nil {:alone [:!R#Pnon_us_pound]}]                                   ; `browser` input. `term` history edit
   [:#Pright_option :right_option nil {:alone [:!E#Pnon_us_pound]}]                                 ; alfred paste
   [:#Pright_command :right_command nil {:alone [:!Q#Pnon_us_pound]}]                               ; alfred clipboard select
-
-  [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]                        ; history editor    ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
