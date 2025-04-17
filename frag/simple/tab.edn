@@ -30,8 +30,8 @@
   [:!ROTC#Pdelete_or_backspace [:launch "Arc"]]                                                    ;
   [:!ROTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
   [:!ROTC#Pright_shift [:launch "Mail"]]                                                           ;
-  [:!ROTC#Pright_option [:launch "Lapce"]]                                                         ;
-  [:!ROTC#Pright_command [:launch "Zed"]]                                                          ;
+  [:!ROTC#Pright_option [:launch "Zed"]]                                                           ;
+  [:!ROTC#Pright_command [:launch "Calendar"]]                                                     ;
   ; [:!ROTC#Pspacebar []]                                                      ; speak             ; system
 
   ; [:!ROTC#Pleft_command []]                                                       NOT USEFUL     ;
