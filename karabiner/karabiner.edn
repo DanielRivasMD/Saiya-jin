@@ -1230,7 +1230,7 @@
   ; [:!EQ#Pright_shift []]                                                          NOT USEFUL     ;
   ; [:!EQ#Pright_option []]                                                         NOT AVAILABLE  ;
   ; [:!EQ#Pright_command []]                                                        NOT AVAILABLE  ;
-  [:!EQ#Pspacebar :!Oa [:term]]                                                ;  mode lock        ; zellij
+  [:!EQ#Pspacebar :!Og [:term]]                                                ;  mode lock        ; zellij
 
   ; [:!EQleft_command []]                                                                          ;
   ; [:!EQ#Pleft_option []]                                                                         ;
@@ -1455,14 +1455,14 @@
   [:!OTC#Pbackslash [:!Sbackslash :!Sbackslash]]                                                   ; '||'
   [:!OTC#Pcomma [:!Scomma :!Scomma]]                                                               ; '<<'
   [:!OTC#Pperiod [:!Speriod :!Speriod]]                                                            ; '>>'
-  [:!OTC#Pslash :!SOc [:term]]                                                 ; pane float pop    ; zellij
+  [:!OTC#Pslash :!SOl [:editor]]                                               ; pane float pop    ; zellij
 
-  [:!OTC#Pdelete_or_backspace :!SOq [:editor]]                                 ; pane float pin    ; zellij
+  [:!OTC#Pdelete_or_backspace :!SOm [:editor]]                                 ; pane float pin    ; zellij
   [:!OTC#Preturn_or_enter [:equal_sign :equal_sign]]                                               ; '=='
-  [:!OTC#Pright_shift [:!SOb]]                                                 ; pane float toggle ; zellij
+  [:!OTC#Pright_shift :!SOn [:editor]]                                         ; pane float toggle ; zellij
   [:!OTC#Pright_option [:!S8 :!S8]]                                                                ; '**'
   [:!OTC#Pright_command [:slash :slash]]                                                           ; '//'
-  [:!OTC#Pspacebar :!Og [:term]]                                               ;  mode search      ; zellij
+  [:!OTC#Pspacebar :!Oh [:term]]                                               ;  mode search      ; zellij
 
   ; [:!OTC#Pleft_command []]                                                        NOT AVAILABLE  ;
   ; [:!OTC#Pleft_option []]                                                         NOT AVAILABLE  ;
@@ -1744,8 +1744,8 @@
 {:des "Option - Command Mode - arrows"
  :rules
  [;
-  [:!OC#Pleft_arrow :!Ox [:term]]                                              ; tab motion        ; zellij
-  [:!OC#Pright_arrow :!Oy [:term]]                                             ; tab motion        ; zellij
+  [:!OC#Pleft_arrow :!SOj [:term]]                                             ; tab motion        ; zellij
+  [:!OC#Pright_arrow :!SOk [:term]]                                            ; tab motion        ; zellij
   [:!OC#Pup_arrow :!Tx [:term]]                                                ; screen motion     ; zellij
   [:!OC#Pdown_arrow :!Ty [:term]]                                              ; screen motion     ; zellij
   ]}
@@ -1756,21 +1756,21 @@
 {:des "Option - Command Mode - symbols"
  :rules
  [;
-  [:!OC#Popen_bracket :!SOl [:term]]                                           ; plugin jump-list  ; zellij
-  [:!OC#Pclose_bracket :!SOm [:term]]                                          ; plugin monocle    ; zellij
-  ; [:!OC#Psemicolon []]                                                                           ;
-  ; [:!OC#Pquote []]                                                                               ;
-  ; [:!OC#Pbackslash []]                                                                           ;
-  [:!OC#Pcomma :!Ow [:term]]                               ; alt-cmd-.         ; nushell motion    ; alacritty
-  [:!OC#Pperiod :!Ov [:term]]                              ; alt-cmd-,         ; nushell motion    ; alacritty
+  [:!OC#Popen_bracket :!SOv [:term]]                                           ; plugin room       ; zellij
+  [:!OC#Pclose_bracket :!SOw [:term]]                                          ; plugin jump-list  ; zellij
+  [:!OC#Psemicolon :!SOx [:term]]                                              ; plugin monocle    ; zellij
+  [:!OC#Pquote :!SOy [:term]]                                                  ; plugin            ; zellij
+  [:!OC#Pbackslash :!SOz [:term]]                                              ; plugin            ; zellij
+  [:!OC#Pcomma :!Ox [:term]]                               ; alt-cmd-.         ; nushell motion    ; alacritty
+  [:!OC#Pperiod :!Oy [:term]]                              ; alt-cmd-,         ; nushell motion    ; alacritty
   [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ; nushell motion    ; alacritty
 
-  [:!OC#Pdelete_or_backspace :!SOi [:term]]                                    ; tab close         ; zellij
-  [:!OC#Preturn_or_enter :!SOh [:term]]                                        ; tab sync          ; zellij
-  [:!OC#Pright_shift :!SOk [:term]]                                            ; tab new           ; zellij
-  [:!OC#Pright_option :!SOe [:term]]                                           ; tab break pane    ; zellij
-  [:!OC#Pright_command :!SOa [:term]]                                          ; tab rename        ; zellij
-  [:!OC#Pspacebar :!SOn [:term]]                                               ; tab jump back     ; zellij
+  [:!OC#Pdelete_or_backspace :!SOu [:term]]                                    ; tab close         ; zellij
+  [:!OC#Preturn_or_enter :!SOp [:term]]                                        ; tab sync          ; zellij
+  [:!OC#Pright_shift :!SOq [:term]]                                            ; tab new           ; zellij
+  [:!OC#Pright_option :!SOr [:term]]                                           ; tab break pane    ; zellij
+  [:!OC#Pright_command :!SOs [:term]]                                          ; tab rename        ; zellij
+  [:!OC#Pspacebar :!SOt [:term]]                                               ; tab jump back     ; zellij
 
   ; [:!OCleft_command []]                                                           NOT AVAILABLE  ;
   ; [:!OC#Pleft_option []]                                                          NOT AVAILABLE  ;
@@ -1788,28 +1788,28 @@
 {:des "Option - Command Mode - numbers"
  :rules
  [;
-  [:!OC#Pkeypad_1 :!SOr [:term]]                           ; alt-cmd-1         ;                   ; zellij
-  [:!OC#Pkeypad_2 :!SOs [:term]]                           ; alt-cmd-2         ;                   ; zellij
-  [:!OC#Pkeypad_3 :!SOt [:term]]                           ; alt-cmd-3         ;                   ; zellij
-  [:!OC#Pkeypad_4 :!SOu [:term]]                           ; alt-cmd-4         ;                   ; zellij
-  [:!OC#Pkeypad_5 :!SOv [:term]]                           ; alt-cmd-5         ;                   ; zellij
-  [:!OC#Pkeypad_6 :!SOw [:term]]                           ; alt-cmd-6         ;                   ; zellij
-  [:!OC#Pkeypad_7 :!SOx [:term]]                           ; alt-cmd-7         ;                   ; zellij
-  [:!OC#Pkeypad_8 :!SOy [:term]]                           ; alt-cmd-8         ;                   ; zellij
-  [:!OC#Pkeypad_9 :!SOz [:term]]                           ; alt-cmd-9         ;                   ; zellij
-  [:!OC#Pkeypad_0 :!SOn [:term]]                           ; alt-cmd-0         ;                   ; zellij
+  [:!OC#Pkeypad_1 :!SOa [:term]]                           ; alt-cmd-1         ;                   ; zellij
+  [:!OC#Pkeypad_2 :!SOb [:term]]                           ; alt-cmd-2         ;                   ; zellij
+  [:!OC#Pkeypad_3 :!SOc [:term]]                           ; alt-cmd-3         ;                   ; zellij
+  [:!OC#Pkeypad_4 :!SOd [:term]]                           ; alt-cmd-4         ;                   ; zellij
+  [:!OC#Pkeypad_5 :!SOe [:term]]                           ; alt-cmd-5         ;                   ; zellij
+  [:!OC#Pkeypad_6 :!SOf [:term]]                           ; alt-cmd-6         ;                   ; zellij
+  [:!OC#Pkeypad_7 :!SOg [:term]]                           ; alt-cmd-7         ;                   ; zellij
+  [:!OC#Pkeypad_8 :!SOh [:term]]                           ; alt-cmd-8         ;                   ; zellij
+  [:!OC#Pkeypad_9 :!SOi [:term]]                           ; alt-cmd-9         ;                   ; zellij
+  [:!OC#Pkeypad_0 :!SOj [:term]]                           ; alt-cmd-0         ;                   ; zellij
   ; [:!OC#Pkeypad_slash []]                                                                        ;
   ; [:!OC#Pkeypad_asterisk []]                                                                     ;
 
-  [:!OC#P1 :!SOr [:term]]                                  ; alt-cmd-1         ;                   ; zellij
-  [:!OC#P2 :!SOs [:term]]                                  ; alt-cmd-2         ;                   ; zellij
-  [:!OC#P3 :!SOt [:term]]                                  ; alt-cmd-3         ;                   ; zellij
-  [:!OC#P4 :!SOu [:term]]                                  ; alt-cmd-4         ;                   ; zellij
-  [:!OC#P5 :!SOv [:term]]                                  ; alt-cmd-5         ;                   ; zellij
-  [:!OC#P6 :!SOw [:term]]                                  ; alt-cmd-6         ;                   ; zellij
-  [:!OC#P7 :!SOx [:term]]                                  ; alt-cmd-7         ;                   ; zellij
-  [:!OC#P8 :!SOy [:term]]                                  ; alt-cmd-8         ;                   ; zellij
-  [:!OC#P9 :!SOz [:term]]                                  ; alt-cmd-9         ;                   ; zellij
+  [:!OC#P1 :!SOa [:term]]                                  ; alt-cmd-1         ;                   ; zellij
+  [:!OC#P2 :!SOb [:term]]                                  ; alt-cmd-2         ;                   ; zellij
+  [:!OC#P3 :!SOc [:term]]                                  ; alt-cmd-3         ;                   ; zellij
+  [:!OC#P4 :!SOd [:term]]                                  ; alt-cmd-4         ;                   ; zellij
+  [:!OC#P5 :!SOe [:term]]                                  ; alt-cmd-5         ;                   ; zellij
+  [:!OC#P6 :!SOf [:term]]                                  ; alt-cmd-6         ;                   ; zellij
+  [:!OC#P7 :!SOg [:term]]                                  ; alt-cmd-7         ;                   ; zellij
+  [:!OC#P8 :!SOh [:term]]                                  ; alt-cmd-8         ;                   ; zellij
+  [:!OC#P9 :!SOi [:term]]                                  ; alt-cmd-9         ;                   ; zellij
   ; [:!OC#P0 []]                                                                                   ;
   ; [:!OC#Phyphen []]                                                                              ;
   ; [:!OC#Pequal_sign []]                                                                          ;
@@ -3396,7 +3396,7 @@
 {:des "Shift Mode - symbols"
  :rules
  [;
-  [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history editor
+  [:#Pright_shift :right_shift [:term] {:alone [:!Oa]}]    ; shift             ; history editor
   ; [:!R#Pleft_arrow []]                                                                           ;
   ; [:!R#Pright_arrow []]                                                                          ;
   ; [:!R#Pup_arrow []]                                                                             ;
