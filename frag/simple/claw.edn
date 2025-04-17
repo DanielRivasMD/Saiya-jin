@@ -32,7 +32,7 @@
   ; [:!EQ#Pright_shift []]                                                          NOT USEFUL     ;
   ; [:!EQ#Pright_option []]                                                         NOT AVAILABLE  ;
   ; [:!EQ#Pright_command []]                                                        NOT AVAILABLE  ;
-  [:!EQ#Pspacebar :!Oa [:term]]                                                ;  mode lock        ; zellij
+  [:!EQ#Pspacebar :!Og [:term]]                                                ;  mode lock        ; zellij
 
   ; [:!EQleft_command []]                                                                          ;
   ; [:!EQ#Pleft_option []]                                                                         ;
