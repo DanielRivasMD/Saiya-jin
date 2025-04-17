@@ -28,20 +28,20 @@
   ; [:!EQ#Pslash []]                                                                               ;
 
   ; [:!EQ#Pdelete_or_backspace []]                                                                 ;
-  [:!EQ#Preturn_or_enter :!Og [:term]]                                                             ;
+  ; [:!EQ#Preturn_or_enter []]                                                                     ;
   ; [:!EQ#Pright_shift []]                                                          NOT USEFUL     ;
   ; [:!EQ#Pright_option []]                                                         NOT AVAILABLE  ;
   ; [:!EQ#Pright_command []]                                                        NOT AVAILABLE  ;
-  [:!EQ#Pspacebar :!Oa [:term]]                                                                    ; zellij mode lock
+  [:!EQ#Pspacebar :!Oa [:term]]                                                ;  mode lock        ; zellij
 
   ; [:!EQleft_command []]                                                                          ;
-  ; [:!EQ#Pleft_option [:caps_lock]]                                                                 ;
+  ; [:!EQ#Pleft_option []]                                                                         ;
   ; [:!EQleft_control []]                                                                          ;
-  [:!EQ#Pleft_shift [:!SOe]]                                                                          ;
+  ; [:!EQ#Pleft_shift []]                                                                          ;
   [:!EQ#Pcaps_lock [:caps_lock]]                                                                   ;
-  [:!EQ#Ptab [:!SOf]]                                                                                 ;
-  [:!EQ#Pkeypad_num_lock [:!SOd]]                                                                     ;
-  [:!EQ#Pescape [:!SOg]]                                                                              ;
+  ; [:!EQ#Ptab []]                                                                                 ;
+  ; [:!EQ#Pkeypad_num_lock []]                                                                     ;
+  ; [:!EQ#Pescape []]                                                                              ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
