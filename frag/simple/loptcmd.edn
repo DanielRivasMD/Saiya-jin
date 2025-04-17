@@ -28,9 +28,9 @@
   [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ; nushell motion    ; alacritty
 
   [:!OC#Pdelete_or_backspace :!SOi [:term]]                                    ; tab close         ; zellij
-  [:!OC#Preturn_or_enter :!SOj [:term]]                                        ; plugin room       ; zellij
+  [:!OC#Preturn_or_enter :!SOh [:term]]                                        ; tab sync          ; zellij
   [:!OC#Pright_shift :!SOk [:term]]                                            ; tab new           ; zellij
-  ; [:!OC#Pright_option                                                                            ;
+  [:!OC#Pright_option :!SOe [:term]]                                           ; tab break pane    ; zellij
   [:!OC#Pright_command :!SOa [:term]]                                          ; tab rename        ; zellij
   [:!OC#Pspacebar :!SOn [:term]]                                               ; tab jump back     ; zellij
 
