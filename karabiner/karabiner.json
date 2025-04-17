@@ -2314,23 +2314,6 @@
         "description" : "Option - Command Mode - symbols",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "return_or_enter",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "g",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "spacebar",
             "modifiers" : {
               "mandatory" : [ "right_command", "right_option" ],
@@ -2348,19 +2331,6 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "left_shift",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "e",
-            "modifiers" : [ "left_option", "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "caps_lock",
             "modifiers" : {
               "mandatory" : [ "right_command", "right_option" ],
@@ -2369,45 +2339,6 @@
           },
           "to" : [ {
             "key_code" : "caps_lock"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "tab",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f",
-            "modifiers" : [ "left_option", "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "keypad_num_lock",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "d",
-            "modifiers" : [ "left_option", "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "escape",
-            "modifiers" : {
-              "mandatory" : [ "right_command", "right_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "g",
-            "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "type" : "basic"
         }, {
@@ -2521,7 +2452,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "j",
+            "key_code" : "h",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2539,6 +2470,23 @@
           },
           "to" : [ {
             "key_code" : "k",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_option",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "e",
             "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2736,6 +2684,40 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "c",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "delete_or_backspace",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "q",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "return_or_enter",
             "modifiers" : {
               "mandatory" : [ "left_command", "left_control", "left_option" ],
@@ -2746,6 +2728,19 @@
             "key_code" : "equal_sign"
           }, {
             "key_code" : "equal_sign"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_shift",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "b",
+            "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "type" : "basic"
         }, {
@@ -2776,6 +2771,23 @@
             "key_code" : "slash"
           }, {
             "key_code" : "slash"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_control", "left_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         } ]
@@ -3464,36 +3476,6 @@
       }, {
         "description" : "Option - Control Mode - symbols",
         "manipulators" : [ {
-          "from" : {
-            "key_code" : "quote",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "b",
-            "modifiers" : [ "left_option", "left_shift" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "backslash",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "c",
-            "modifiers" : [ "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
-          } ],
-          "type" : "basic"
-        }, {
           "from" : {
             "key_code" : "delete_or_backspace",
             "modifiers" : {
@@ -9954,6 +9936,25 @@
           } ],
           "type" : "basic"
         }, {
+          "to_if_alone" : [ {
+            "key_code" : "h",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "from" : {
+            "key_code" : "right_shift",
+            "modifiers" : {
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_shift"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
           "from" : {
             "key_code" : "left_command",
             "modifiers" : {
@@ -11545,7 +11546,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Lapce\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Zed\" to activate'"
           } ],
           "type" : "basic"
         }, {
@@ -11557,7 +11558,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Zed\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Calendar\" to activate'"
           } ],
           "type" : "basic"
         } ]
@@ -11779,25 +11780,6 @@
           },
           "to" : [ {
             "key_code" : "right_command"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_alone" : [ {
-            "key_code" : "h",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "from" : {
-            "key_code" : "right_shift",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "right_shift"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         } ]
