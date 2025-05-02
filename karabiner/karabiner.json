@@ -3022,6 +3022,205 @@
         "description" : "Joker Mode - symbols",
         "manipulators" : [ {
           "from" : {
+            "key_code" : "open_bracket",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "equal_sign",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "close_bracket",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "equal_sign",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "period",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "4",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "t",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "period",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "backslash",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "period",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "comma",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "period",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar"
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "period",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "delete_or_backspace",
             "modifiers" : {
               "mandatory" : [ "right_command", "right_control", "right_option" ],
@@ -3707,205 +3906,6 @@
       }, {
         "description" : "Control - Command Mode - symbols",
         "manipulators" : [ {
-          "from" : {
-            "key_code" : "open_bracket",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "comma",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "equal_sign",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "close_bracket",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "equal_sign",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "period",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "semicolon",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "4",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "quote",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "t",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "period",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "backslash",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "comma",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "period",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "comma",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "comma",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "period",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "period",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "slash",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "period",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_shift" ]
-          }, {
-            "key_code" : "spacebar"
-          } ],
-          "type" : "basic"
-        }, {
           "from" : {
             "key_code" : "delete_or_backspace",
             "modifiers" : {
