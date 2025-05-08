@@ -6,12 +6,12 @@
 {:des "Control - Command Mode - arrows"
  :rules
  [;
-  [:!TC#Pleft_arrow [:!Tb] [:term]]                                                                ; helix
-  [:!TC#Pright_arrow [:!Tf] [:term]]                                                               ; helix
-  [:!TC#Pup_arrow [:!Tn] [:term]]                                                                  ; helix
-  [:!TC#Pdown_arrow [:!Tp] [:term]]                                                                ; helix
+  [:!TC#Pleft_arrow [:!Tb] [:term]]                        ; movement & helix                      ;
+  [:!TC#Pright_arrow [:!Tf] [:term]]                       ; movement & helix                      ;
+  [:!TC#Pup_arrow [:!Tn] [:term]]                          ; movement & helix                      ;
+  [:!TC#Pdown_arrow [:!Tp] [:term]]                        ; movement & helix                      ;
 
- ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   ; [:!TC#Popen_bracket []]                                                                        ;
   ; [:!TC#Pclose_bracket []]                                                                       ;
@@ -22,12 +22,12 @@
   ; [:!TC#Pperiod []]                                                                              ;
   ; [:!TC#Pslash []]                                                                               ;
 
-  [:!TC#Pdelete_or_backspace [:!Tl]]                                           ; close             ; helix
-  [:!TC#Preturn_or_enter [:!Tg]]                                               ; new               ; helix
-  [:!TC#Pright_shift [:!Tv]]                                                   ; split right       ; helix
-  [:!TC#Pright_option [:!Th]]                                                  ; split down        ; helix
-  [:!TC#Pright_command [:!Tj]]                                                 ; unsplit           ; helix
-  [:!TC#Pspacebar [:!To]]                                                      ; jump back         ; helix
+  [:!TC#Pdelete_or_backspace [:!Tl]]                       ; close & helix                         ;
+  [:!TC#Preturn_or_enter [:!Tg]]                           ; new & helix                           ;
+  [:!TC#Pright_shift [:!Tv]]                               ; split right & helix                   ;
+  [:!TC#Pright_option [:!Th]]                              ; split down & helix                    ;
+  [:!TC#Pright_command [:!Tj]]                             ; unsplit & helix                       ;
+  [:!TC#Pspacebar [:!To]]                                  ; jump back & helix                     ;
 
   ; [:!TCleft_command []]                                                           NOT AVAILABLE  ;
   ; [:!TC#Pleft_option []]                                                          NOT USEFUL     ;
