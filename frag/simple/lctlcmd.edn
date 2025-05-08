@@ -10,14 +10,9 @@
   [:!TC#Pright_arrow [:!Tf] [:term]]                                                               ; helix
   [:!TC#Pup_arrow [:!Tn] [:term]]                                                                  ; helix
   [:!TC#Pdown_arrow [:!Tp] [:term]]                                                                ; helix
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; control - command
-{:des "Control - Command Mode - symbols"
- :rules
- [;
   ; [:!TC#Popen_bracket []]                                                                        ;
   ; [:!TC#Pclose_bracket []]                                                                       ;
   ; [:!TC#Psemicolon []]                                                                           ;
@@ -42,14 +37,9 @@
   ; [:!TC#Ptab []]                                                                  NOT USEFUL     ;
   ; [:!TC#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
   ; [:!TC#Pescape []]                                                               NOT USEFUL     ;
-  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; control - command
-{:des "Control - Command Mode - numbers"
- :rules
- [;
   ; [:!TC#Pkeypad_1 []]                                                                            ;
   ; [:!TC#Pkeypad_2 []]                                                                            ;
   ; [:!TC#Pkeypad_3 []]                                                                            ;
@@ -75,15 +65,9 @@
   ; [:!TC#P0 []]                                                                                   ;
   ; [:!TC#Phyphen []]                                                                              ;
   ; [:!TC#Pequal_sign []]                                                                          ;
-  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: julia macros
-; control - command
-{:des "Control - Command Mode - alphabet"
- :rules
- [;
   ; [:!TC#Pa []]                                                                                   ;
   ; [:!TC#Pb []]                                                                                   ;
   ; [:!TC#Pc []]                                                                                   ;
