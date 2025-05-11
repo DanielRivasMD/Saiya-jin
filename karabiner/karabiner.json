@@ -3902,10 +3902,7 @@
             "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
-        } ]
-      }, {
-        "description" : "Control - Command Mode - symbols",
-        "manipulators" : [ {
+        }, {
           "from" : {
             "key_code" : "delete_or_backspace",
             "modifiers" : {
