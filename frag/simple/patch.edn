@@ -16,6 +16,9 @@
 {:des "Additional keys - MacAir"
  :rules
  [:air
+  [:#Pdelete_or_backspace [:grave_accent_and_tilde]]                                               ; '`'
+  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
+  [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
   [:f1 :display_brightness_decrement]
   [:f2 :display_brightness_increment]
   [:f3 :illumination_decrement]
