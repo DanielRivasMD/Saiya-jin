@@ -27,14 +27,14 @@
   [:!OTC#Pbackslash [:!Sbackslash :!Sbackslash]]                                                   ; '||'
   [:!OTC#Pcomma [:!Scomma :!Scomma]]                                                               ; '<<'
   [:!OTC#Pperiod [:!Speriod :!Speriod]]                                                            ; '>>'
-  [:!OTC#Pslash :!Oh [:term]]                                                  ;  mode search      ; zellij
+  [:!OTC#Pslash :!Oh [:term]]                                                  ; mode search       ; zellij
 
   [:!OTC#Pdelete_or_backspace :!SOm [:editor]]                                 ; pane float pin    ; zellij
   [:!OTC#Preturn_or_enter [:equal_sign :equal_sign]]                                               ; '=='
   [:!OTC#Pright_shift :!SOn [:editor]]                                         ; pane float toggle ; zellij
   [:!OTC#Pright_option [:!S8 :!S8]]                                                                ; '**'
   [:!OTC#Pright_command [:slash :slash]]                                                           ; '//'
-  [:!OTC#Pspacebar :!Og [:term]]                                               ;  mode lock        ; zellij
+  [:!OTC#Pspacebar :!Og [:term]]                                               ; mode lock         ; zellij
 
   ; [:!OTC#Pleft_command []]                                                        NOT AVAILABLE  ;
   ; [:!OTC#Pleft_option []]                                                         NOT AVAILABLE  ;
