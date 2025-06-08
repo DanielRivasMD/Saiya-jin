@@ -1455,14 +1455,14 @@
   [:!OTC#Pbackslash [:!Sbackslash :!Sbackslash]]                                                   ; '||'
   [:!OTC#Pcomma [:!Scomma :!Scomma]]                                                               ; '<<'
   [:!OTC#Pperiod [:!Speriod :!Speriod]]                                                            ; '>>'
-  [:!OTC#Pslash :!Oh [:term]]                                                  ;  mode search      ; zellij
+  [:!OTC#Pslash :!Oh [:term]]                                                  ; mode search       ; zellij
 
   [:!OTC#Pdelete_or_backspace :!SOm [:editor]]                                 ; pane float pin    ; zellij
   [:!OTC#Preturn_or_enter [:equal_sign :equal_sign]]                                               ; '=='
   [:!OTC#Pright_shift :!SOn [:editor]]                                         ; pane float toggle ; zellij
   [:!OTC#Pright_option [:!S8 :!S8]]                                                                ; '**'
   [:!OTC#Pright_command [:slash :slash]]                                                           ; '//'
-  [:!OTC#Pspacebar :!Og [:term]]                                               ;  mode lock        ; zellij
+  [:!OTC#Pspacebar :!Og [:term]]                                               ; mode lock         ; zellij
 
   ; [:!OTC#Pleft_command []]                                                        NOT AVAILABLE  ;
   ; [:!OTC#Pleft_option []]                                                         NOT AVAILABLE  ;
@@ -2882,6 +2882,9 @@
 {:des "Additional keys - MacAir"
  :rules
  [:air
+  [:#Pdelete_or_backspace [:grave_accent_and_tilde]]                                               ; '`'
+  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
+  [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
   [:f1 :display_brightness_decrement]
   [:f2 :display_brightness_increment]
   [:f3 :illumination_decrement]
