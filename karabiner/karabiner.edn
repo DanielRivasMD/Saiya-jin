@@ -1577,7 +1577,7 @@
   [:!EWQ#Pright_shift [:!Wt]]                                                                      ;
   ; [:!EWQ#Pright_option []]                                                                       ;
   ; [:!EWQ#Pright_command []]                                                                      ;
-  ; [:!EWQ#Pspacebar []]                                                                           ;
+  [:!EWQ#Pspacebar [:!Oc]]                                                                         ;
 
   ; [:!EWQ#Pleft_command []]                                                        NOT USEFUL     ;
   ; [:!EWQ#Pleft_option []]                                                         NOT USEFUL     ;
