@@ -3258,6 +3258,19 @@
             "modifiers" : [ "right_control" ]
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "right_command", "right_control", "right_option" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "c",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Option - Command Mode - arrows",
