@@ -6,10 +6,8 @@
 {:des "Hyper Mode - arrows"
  :rules
  [;
-  [:!OTC#Pleft_arrow [:!Spage_up] [:term]]                                 ;                     ;
-  [:!OTC#Pleft_arrow [:f10] [:zed]]                                 ;                     ;
-  [:!OTC#Pright_arrow [:!Spage_down] [:term]]                              ;                     ;
-  [:!OTC#Pright_arrow [:f11] [:zed]]                              ;                     ;
+  [:!OTC#Pleft_arrow [:!Spage_up] [:term]]                                     ;                   ;
+  [:!OTC#Pright_arrow [:!Spage_down] [:term]]                                  ;                   ;
   [:!OTC#Pup_arrow [:!Shome] [:term]]                                          ; increment         ; helix
   [:!OTC#Pdown_arrow [:!Send] [:term]]                                         ; decrement         ; helix
   ]}
@@ -20,7 +18,7 @@
 {:des "Hyper Mode - symbols"
  :rules
  [;
-  [:!OTC#Popen_bracket :!SOl [:editor]]                                        ; pane float pop    ; zellij
+  [:!OTC#Popen_bracket :!SOl [:term]]                                          ; pane float pop    ; zellij
   ; [:!OTC#Pclose_bracket []]                                                                      ;
   ; [:!OTC#Psemicolon []]                                                                          ;
   ; [:!OTC#Pquote []]                                                                              ;
@@ -29,9 +27,9 @@
   [:!OTC#Pperiod [:!Speriod :!Speriod]]                                                            ; '>>'
   [:!OTC#Pslash :!Oh [:term]]                                                  ; mode search       ; zellij
 
-  [:!OTC#Pdelete_or_backspace :!SOm [:editor]]                                 ; pane float pin    ; zellij
+  [:!OTC#Pdelete_or_backspace :!SOm [:term]]                                   ; pane float pin    ; zellij
   [:!OTC#Preturn_or_enter [:equal_sign :equal_sign]]                                               ; '=='
-  [:!OTC#Pright_shift :!SOn [:editor]]                                         ; pane float toggle ; zellij
+  [:!OTC#Pright_shift :!SOn [:term]]                                           ; pane float toggle ; zellij
   [:!OTC#Pright_option [:!S8 :!S8]]                                                                ; '**'
   [:!OTC#Pright_command [:slash :slash]]                                                           ; '//'
   [:!OTC#Pspacebar :!Og [:term]]                                               ; mode lock         ; zellij
