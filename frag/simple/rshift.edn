@@ -6,7 +6,7 @@
 {:des "Shift Mode - symbols"
  :rules
  [;
-  [:#Pright_shift :right_shift [:term] {:alone [:!Oa]}]    ; shift             ; history editor
+  [:#Pright_shift :right_shift [:term] {:alone [:!Oa]}]    ; shift             ; history term
   ; [:!R#Pleft_arrow []]                                                                           ;
   ; [:!R#Pright_arrow []]                                                                          ;
   ; [:!R#Pup_arrow []]                                                                             ;
