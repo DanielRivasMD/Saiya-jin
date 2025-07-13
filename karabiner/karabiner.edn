@@ -40,13 +40,8 @@
 {;
  :browser ["company.thebrowser.Browser"]                                                           ;
  :mail ["com.apple.mail"]                                                                          ;
- :editor ["io.lapce", "dev.zed.Zed", "org.alacritty"]                                              ;
- :gui ["io.lapce", "dev.zed.Zed"]                                                                  ;
  :term ["org.alacritty"]                                                                           ;
- :lapce ["io.lapce"]                                                                               ;
  :skim ["net.sourceforge.skim-app.skim"]                                                           ;
- :skype ["com.skype.skype"]                                                                        ;
- :zed ["dev.zed.Zed"]                                                                              ;
  :zoom ["us.zoom.xos"]                                                                             ;
  }
 
@@ -148,216 +143,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Editor
-{:des "Editor control - alphabet"
- :rules
- [;
-  [:!C#Pleft_arrow :!Ta [:editor]]                                             ; cmd-left          ;
-  ; [: :!Tb [:editor]]                                                         ; ctl-cmd-left      ;
-  ; [: :!Tc [:editor]]                                                              DEFAULT        ;
-  ; [: :!Td [:editor]]                                                              DEFAULT        ;
-  [:!C#Pright_arrow :!Te [:editor]]                                            ; cmd-right         ;
-  ; [: :!Tf [:editor]]                                                         ; ctl-cmd-right     ;
-  ; [:!EQR#Pcaps_lock :!Tg [:editor]]                                          ; bs-caps           ;
-  ; [:!EQR#Ptab :!Th [:editor]]                                                ; bs-tab            ;
-  ; [: :!Ti [:editor]]                                                              DEFAULT        ;
-  ; [:!EQR#Pright_command :!Tj [:editor]]                                      ; bs-ctl            ;
-  ; [: :!Tk [:editor]]                                                              COLLISION      ;
-  ; [: :!Tl [:editor]]                                                              COLLISION      ;
-  ; [: :!Tm [:editor]]                                                              DEFAULT        ;
-  ; [:!EQR#Pright_option :!Tn [:editor]]                                       ; bs-fn             ;
-  ; [:!C#Pup_arrow :!To [:editor]]                                             ; ctl-cmd-up        ;
-  ; [:!C#Pdown_arrow :!Tp [:editor]]                                           ; ctl-cmd-down      ;
-  ; [: :!Tq [:editor]]                                                              DEFAULT        ;
-  ; [:!EQR#Pleft_control :!Tr [:editor]]                                       ; bs-ctl            ;
-  ; [:!EQR#Pleft_option :!Ts [:editor]]                                        ; bs-alt            ;
-  ; [:!EQR#Pleft_command :!Tt [:editor]]                                       ; bs-cmd            ;
-  ; [: :!Tu [:editor]]                                                              COLLISION      ;
-  ; [: :!Tv [:editor]]                                                                             ;
-  ; [: :!Tw [:editor]]                                                              COLLISION      ;
-  ; [:#Pleft_option :left_option [:editor] {:alone [:!OTf13]}]                      ; alt               ;
-  ; [:#Pleft_option :left_option [:editor] {:alone [:!Tx]}]                      ; alt               ;
-  ; [:!EQR#Pspacebar :!Ty [:editor]]                                           ; bs-space          ;
-  ; [: :!Tz [:editor]]                                                              DEFAULT        ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; ; GUI
-; {:des "GUI - Sessions"
-;  :rules
-;  [;
-;   ; [:escape :!EWright_shift :gui {:alone [:!CSe]}]                            ; file explorer     ;
-;   [:#Pright_shift :right_shift :gui {:alone [:!Cj]}]                           ; terminal          ;
-
-;   [:!TC#Pright_shift :!Cbackslash [:gui]]                                      ; split vertical    ;
-;   [:!TC#Pright_option :!CSbackslash [:gui]]                                    ; split horizontal  ;
-;   ; [:!OT#Pright_command :!TCSbackslash [:gui]]                                                    ;
-
-;   ; [:!OC#Pleft_arrow :!TStab [:gui]]                                          ; left tab          ;
-;   ; [:!OC#Pright_arrow :!Ttab [:gui]]                                          ; right tab         ;
-;   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; ; GUI
-; {:des "GUI - Control remappings"
-;  :rules
-;  [;
-;   ; [:!EQR#Pdelete_or_backspace [:editor]]                                                         ;
-;   ; [:!EQR#Preturn_or_enter [:editor]]                                                             ;
-;   ; [:!EQR#Pright_shift [:editor]]                                                                 ;
-;   ; [:!EQR#Pright_option [:editor]]                                                                ;
-;   ; [:!EQR#Pright_command [:editor]]                                                               ;
-;   ; [:!EQR#Pspacebar :!Ty [:editor]]                                                                 ;
-
-;   [:!EQR#Pright_control :!Tj [:editor]]                                                            ;
-
-;   ; [:!EQR#Pleft_command :!Tt [:editor]]                                                           ;
-;   [:!EQR#Pleft_option :!Ts [:editor]]                                                              ;
-;   ; [:!EQR#Pleft_control :!Tr [:editor]]                                                           ;
-;   [:!EQR#Pleft_shift :!Oc [:editor]]                                                               ;
-;   [:!EQR#Pcaps_lock :!Tg [:editor]]                                                                ;
-;   [:!EQR#Ptab :!Th [:editor]]                                                                      ;
-;   [:!EQR#Pnon_us_backslash :!Tn [:editor]]                                                         ;
-;   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; ; GUI
-; {:des "GUI - Interactive delete"
-;  :rules
-;  [;
-;   ; [:!EQR#Pleft_shift :!Oc [:editor]]                                         ; bs-shift          ;
-;   [:!S#Pright_option :!Odelete_forward [:gui]]                                 ; del word fw       ;
-;   ; [:!S#Pright_command :!Cdelete_forward [:gui]]                              ; del line fw       ;
-;   [:!R#Pleft_control :!Odelete_or_backspace [:gui]]                            ; del word bw       ;
-;   [:!R#Pleft_command :!Cdelete_or_backspace [:gui]]                            ; del line bw       ;
-;   [:!R#Pleft_option :!Tl [:gui]]                                               ; shift-alt         ;
-;   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; ; Lapce
-; {:des "Lapce - alt - alphabet"
-;  :rules
-;  [;
-;   [:!O#Pa :!CSl [:lapce]]                                                                          ;
-;   ; [:!O#Pb : [:lapce]]                                                                            ;
-;   [:!O#Pc :!Cbackslash [:lapce]]                                                                   ;
-;   [:!O#Pd :!Cd [:lapce]]                                                                           ;
-;   ; [:!O#Pe : [:lapce]]                                                                            ;
-;   ; [:!O#Pf : [:lapce]]                                                                            ;
-;   ; [:!O#Pg : [:lapce]]                                                                            ;
-;   ; [:!O#Ph : [:lapce]]                                                                            ;
-;   [:!O#Pi :!Cclose_bracket [:lapce]]                                                               ;
-;   [:!O#Pj :!OCdown_arrow [:lapce]]                                                                 ;
-;   [:!O#Pk :!OCup_arrow [:lapce]]                                                                   ;
-;   ; [:!O#Pl : [:lapce]]                                                                            ;
-;   ; [:!O#Pm : [:lapce]]                                                                            ;
-;   ; [:!O#Pn : [:lapce]]                                                                            ;
-;   [:!O#Po :!Copen_bracket [:lapce]]                                                                ;
-;   ; [:!O#Pp : [:lapce]]                                                                            ;
-;   ; [:!O#Pq : [:lapce]]                                                                            ;
-;   ; [:!O#Pr : [:lapce]]                                                                            ;
-;   ; [:!O#Ps : [:lapce]]                                                                            ;
-;   ; [:!O#Pt : [:lapce]]                                                                            ;
-;   [:!O#Pu :!Cz [:lapce]]                                                                           ;
-;   ; [:!O#Pv : [:lapce]]                                                                            ;
-;   ; [:!O#Pw : [:lapce]]                                                                            ;
-;   ; [:!O#Px : [:lapce]]                                                                            ;
-;   ; [:!O#Py : [:lapce]]                                                                            ;
-;   [:!O#Pz :!Cu [:lapce]]                                                                           ;
-;   ; [:!O#Pright_control : [:lapce]]                                                                ;
-;   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; ; Lapce
-; {:des "Lapce - alt - alphabet"
-;  :rules
-;  [;
-;   ; [:!SO#Pa : [:lapce]]                                                                           ;
-;   ; [:!SO#Pb : [:lapce]]                                                                           ;
-;   [:!SO#Pc :!Cslash [:lapce]]                                                                      ;
-;   ; [:!SO#Pd : [:lapce]]                                                                           ;
-;   ; [:!SO#Pe : [:lapce]]                                                                           ;
-;   ; [:!SO#Pf : [:lapce]]                                                                           ;
-;   ; [:!SO#Pg : [:lapce]]                                                                           ;
-;   ; [:!SO#Ph : [:lapce]]                                                                           ;
-;   [:!SO#Pi :!Cclose_bracket [:lapce]]                                                              ;
-;   ; [:!SO#Pj : [:lapce]]                                                                           ;
-;   ; [:!SO#Pk : [:lapce]]                                                                           ;
-;   [:!SO#Pl :!Cl [:lapce]]                                                                          ;
-;   ; [:!SO#Pm : [:lapce]]                                                                           ;
-;   ; [:!SO#Pn : [:lapce]]                                                                           ;
-;   [:!SO#Po :!Copen_bracket [:lapce]]                                                               ;
-;   ; [:!SO#Pp : [:lapce]]                                                                           ;
-;   ; [:!SO#Pq : [:lapce]]                                                                           ;
-;   ; [:!SO#Pr : [:lapce]]                                                                           ;
-;   ; [:!SO#Ps : [:lapce]]                                                                           ;
-;   ; [:!SO#Pt : [:lapce]]                                                                           ;
-;   [:!SO#Pu :!CSz [:lapce]]                                                                         ;
-;   ; [:!SO#Pv : [:lapce]]                                                                           ;
-;   ; [:!SO#Pw : [:lapce]]                                                                           ;
-;   [:!SO#Px :!CSk [:lapce]]                                                                         ;
-;   ; [:!SO#Py : [:lapce]]                                                                           ;
-;   ; [:!SO#Pz : [:lapce]]                                                                           ;
-;   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; ; Lapce
-; {:des "Lapce - Sessions"
-;  :rules
-;  [;
-;   [:#Pescape :!EWright_shift :lapce {:alone [:!CSe]}]                          ; file explorer     ;
-;   ; [:#Pdelete_or_backspace :!WQright_shift :lapce {:alone [:!Cj]}]            ; terminal          ;
-
-;   ; [:!OT#Pright_shift :!Cbackslash [:lapce]]                                  ; split vertical    ;
-;   ; [:!OT#Pright_option :!CSbackslash [:lapce]]                                ; split horizontal  ;
-;   ; [:!OC#Pright_shift :!Cbackslash [:lapce]]                                  ; split vertical    ;
-;   ; [:!OC#Pright_option :!CSbackslash [:lapce]]                                ; split horizontal  ;
-;   ; [:!OT#Pright_command :!TCSbackslash [:lapce]]                                                  ;
-
-;   [:!OC#Pleft_arrow :!TStab [:lapce]]                                          ; left tab          ;
-;   [:!OC#Pright_arrow :!Ttab [:lapce]]                                          ; right tab         ;
-;   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; ; Lapce
-; {:des "Lapce - Control remappings"
-;  :rules
-;  [;
-;   ; [:!EQR#Ptab :!Th [:lapce]]                                                 ; del-tab           ;
-;   ; [:!EQR#Pcaps_lock :!Tg [:lapce]]                                           ; del-caps          ;
-;   ; [:!EQR#Pleft_shift :!Oc [:lapce]]                                          ; del-shift         ;
-;   [:!EQR#Pleft_control :!Cp [:lapce]]                                          ; del-ctl          ;
-;   ; [:!EQR#Pleft_option :!Ts [:lapce]]                                         ; del-alt           ;
-;   [:!EQR#Pleft_command :f1 [:lapce]]                                           ; del-cmd           ;
-;   ; [:!EQR#Pspacebar :!Ty [:lapce]]                                            ; del-space         ;
-;   ; [:!EQR#Pright_command :!Tj [:lapce]]                                       ; del-cmd           ;
-;   ; [:!EQR#Pright_option :!Tn [:lapce]]                                        ; del-alt           ;
-;   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; ; Lapce
-; {:des "Lapce - Interactive delete"
-;  :rules
-;  [;
-;   ; [:!S#Pright_option :!Odelete_forward [:lapce]]                             ; shift-alt         ;
-;   [:!S#Pright_command :!Tk [:lapce]]                                           ; shift-cmd         ;
-;   ; [:!R#Pleft_control :!Odelete_or_backspace [:lapce]]                        ; shift-ctl        ;
-;   ; [:!R#Pleft_command :!Cdelete_or_backspace [:lapce]]                        ; shift-cmd         ;
-;   ; [:!R#Pleft_option : [:lapce]]                                              ; shift-alt         ;
-;   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ; TODO: update
 ; ; mail
 ; {:des "Mail bindings"
@@ -379,148 +164,6 @@
 ;   [:!!#Pup_arrow :!TCopen_bracket [:mail]]                                     ; mailbox prev      ;
 ;   [:!!#Pdown_arrow :!TCclose_bracket [:mail]]                                  ; mailbox next      ;
 ;   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; skype
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; skype
-{:des ""
- :rules
- [;
-  ; mute / unmute
-  [:!C#Pspacebar :!SC#Pm [:skype]]                                                                 ;
-
-  ; camera on / off
-  [:!T#Pspacebar :!SC#Pk [:skype]]                                                                 ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
- ; Zed
- {:des "Zed - alt - alphabet"
-  :rules
-  [;
-   ; [:!O#Pa :!CSl [:zed]]                                                                           ;
-   ; [:!O#Pb : [:zed]]                                                                             ;
-   ; [:!O#Pc : [:zed]]                                                                             ;
-   [:!O#Pd :!Cd [:zed]]                                                                            ;
-   ; [:!O#Pe : [:zed]]                                                                             ;
-   [:!O#Pf :!Cf [:zed]]                                                                            ;
-   ; [:!O#Pg : [:zed]]                                                                             ;
-   [:!O#Ph :!CSg [:zed]]                                                                           ;
-   ; [:!O#Pi : [:zed]]                                                                             ;
-   [:!O#Pj :!TCn [:zed]]                                                                           ;
-   [:!O#Pk :!TCp [:zed]]                                                                           ;
-   [:!O#Pl :!Cg [:zed]]                                                                            ;
-   ; [:!O#Pm : [:zed]]                                                                             ;
-   ; [:!O#Pn : [:zed]]                                                                             ;
-   ; [:!O#Po : [:zed]]                                                                             ;
-   ; [:!O#Pp : [:zed]]                                                                             ;
-   ; [:!O#Pq : [:zed]]                                                                             ;
-   ; [:!O#Pr : [:zed]]                                                                             ;
-   ; [:!O#Ps : [:zed]]                                                                             ;
-   ; [:!O#Pt : [:zed]]                                                                             ;
-   ; [:!O#Pu : [:zed]]                                                                             ;
-   ; [:!O#Pv : [:zed]]                                                                             ;
-   ; [:!O#Pw : [:zed]]                                                                             ;
-   ; [:!O#Px : [:zed]]                                                                             ;
-   ; [:!O#Py : [:zed]]                                                                             ;
-   ; [:!O#Pz : [:zed]]                                                                             ;
-   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
- ; Zed
- {:des "Zed - alt - alphabet"
-  :rules
-  [;
-   ; [:!SO#Pa : [:zed]]                                                                            ;
-   ; [:!SO#Pb : [:zed]]                                                                            ;
-   [:!OS#Pc :!Cslash [:zed]]                                                                       ;
-   [:!OS#Pd :!OSdown_arrow [:zed]]                                                                 ;
-   ; [:!SO#Pe : [:zed]]                                                                            ;
-   ; [:!SO#Pf : [:zed]]                                                                            ;
-   ; [:!SO#Pg : [:zed]]                                                                            ;
-   ; [:!SO#Ph : [:zed]]                                                                            ;
-   [:!OS#Pi :!Cclose_bracket [:zed]]                                                               ;
-   [:!OS#Pj :!Odown_arrow [:zed]]                                                                  ;
-   [:!OS#Pk :!Oup_arrow [:zed]]                                                                    ;
-   ; [:!SO#Pl : [:zed]]                                                                            ;
-   ; [:!SO#Pm : [:zed]]                                                                            ;
-   ; [:!SO#Pn : [:zed]]                                                                            ;
-   [:!OS#Po :!Copen_bracket [:zed]]                                                                ;
-   ; [:!SO#Pp : [:zed]]                                                                            ;
-   ; [:!SO#Pq  : [:zed]]                                                                           ;
-   ; [:!SO#Pr : [:zed]]                                                                            ;
-   ; [:!SO#Ps : [:zed]]                                                                            ;
-   ; [:!SO#Pt : [:zed]]                                                                            ;
-   ; [:!SO#Pu : [:zed]]                                                                            ;
-   ; [:!SO#Pv : [:zed]]                                                                            ;
-   ; [:!SO#Pw : [:zed]]                                                                            ;
-   [:!OS#Px :!CSk [:zed]]                                                                          ;
-   ; [:!SO#Py : [:zed]]                                                                            ;
-   ; [:!SO#Pz : [:zed]]                                                                            ;
-   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
- ; Zed
- {:des "Zed - Sessions"
-  :rules
-  [;
-   [:#Pdelete_or_backspace :!EWright_shift [:zed] {:alone [:!Cb]}]             ; file explorer     ;
-   [:#Pright_shift :right_shift [:zed] {:alone [:!Cj]}]                     ; terminal          ;
-
-   ; [:!OT#Pright_shift :!Cbackslash [:zed]]                                    ; split vertical    ;
-   ; [:!OT#Pright_option :!CSbackslash [:zed]]                                  ; split horizontal  ;
-   ; [:!OC#Pright_shift :!Cbackslash [:zed]]                                    ; split vertical    ;
-   ; [:!OC#Pright_option :!CSbackslash [:zed]]                                  ; split horizontal  ;
-   ; [:!OT#Pright_command :!TCSbackslash [:zed]]                                                    ;
-
-   [:!O#Pup_arrow :!Tup_arrow [:zed]]                                          ; prev para         ;
-   [:!O#Pdown_arrow :!Tdown_arrow [:zed]]                                      ; next para         ;
-   [:!O#PSup_arrow :!TSup_arrow [:zed]]                                        ; select prev para  ;
-   [:!O#PSdown_arrow :!TSdown_arrow [:zed]]                                    ; select next para  ;
-
-   [:!TC#Pright_command :!OCy [:zed]]                                          ; close docks       ; TODO: update
-
-   ; [:!TC#Pd :f12 [:zed]]                                                        ; definition        ;
-   ; [:!TC#Pr :!OSf12 [:zed]]                                                     ; references        ;
-   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
- ; Zed
- {:des "Zed - Control remappings"
-  :rules
-  [;
-  [:!W#Preturn_or_enter [:!Cp] [:zed]]                                                             ;
-   ; [:!EQR#Ptab :!Th [:zed]]                                                   ; del-tab          ;
-   ; [:!EQR#Pcaps_lock :!Tg [:zed]]                                             ; del-caps         ;
-   ; [:!EQR#Pleft_shift :!Oc [:zed]]                                            ; del-shift        ;
-   ; [:!EQR#Pleft_control :!Cp [:zed]]                                            ; del-ctl        ;
-   ; [:!EQR#Pleft_option :!Ts [:zed]]                                           ; del-alt          ;
-   ; [:!EQR#Pleft_command :!CSp [:zed]]                                           ; del-cmd        ;
-   ; [:!EQR#Pspacebar :!Ty [:zed]]                                              ; del-space        ;
-   ; [:!EQR#Pright_command :!Tj [:zed]]                                         ; del-cmd          ;
-   ; [:!EQR#Pright_option :!Tn [:zed]]                                          ; del-alt          ;
-   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
- ; Zed
- {:des "Zed - Interactive delete"
-  :rules
-  [;
-   [:!S#Pright_option :!Odelete_forward [:zed]]                                                    ; shift-alt
-   [:!S#Pright_command :!Cdelete_forward [:zed]]                                                   ; shift-cmd
-   [:!R#Pleft_control :!Odelete_or_backspace [:zed]]                                               ; shift-ctl
-   [:!R#Pleft_command :!Cdelete_or_backspace [:zed]]                                               ; shift-cmd
-   ; [:!R#Pleft_option : [:zed]]                                                                   ; shift-alt
-   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -548,7 +191,7 @@
 
   ; [:!O#Pright_arrow :!Of [:term]]                          ; alt-right         ; cursor movement
   ; [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]      ; esc               ; pop-up window
-  ; [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history editor
+  ; [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history term
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ; [: :!Oi [:term]]                                                                COLLISION      ;
@@ -1434,10 +1077,8 @@
 {:des "Hyper Mode - arrows"
  :rules
  [;
-  [:!OTC#Pleft_arrow [:!Spage_up] [:term]]                                 ;                     ;
-  [:!OTC#Pleft_arrow [:f10] [:zed]]                                 ;                     ;
-  [:!OTC#Pright_arrow [:!Spage_down] [:term]]                              ;                     ;
-  [:!OTC#Pright_arrow [:f11] [:zed]]                              ;                     ;
+  [:!OTC#Pleft_arrow [:!Spage_up] [:term]]                                     ;                   ;
+  [:!OTC#Pright_arrow [:!Spage_down] [:term]]                                  ;                   ;
   [:!OTC#Pup_arrow [:!Shome] [:term]]                                          ; increment         ; helix
   [:!OTC#Pdown_arrow [:!Send] [:term]]                                         ; decrement         ; helix
   ]}
@@ -1448,7 +1089,7 @@
 {:des "Hyper Mode - symbols"
  :rules
  [;
-  [:!OTC#Popen_bracket :!SOl [:editor]]                                        ; pane float pop    ; zellij
+  [:!OTC#Popen_bracket :!SOl [:term]]                                          ; pane float pop    ; zellij
   ; [:!OTC#Pclose_bracket []]                                                                      ;
   ; [:!OTC#Psemicolon []]                                                                          ;
   ; [:!OTC#Pquote []]                                                                              ;
@@ -1457,9 +1098,9 @@
   [:!OTC#Pperiod [:!Speriod :!Speriod]]                                                            ; '>>'
   [:!OTC#Pslash :!Oh [:term]]                                                  ; mode search       ; zellij
 
-  [:!OTC#Pdelete_or_backspace :!SOm [:editor]]                                 ; pane float pin    ; zellij
+  [:!OTC#Pdelete_or_backspace :!SOm [:term]]                                   ; pane float pin    ; zellij
   [:!OTC#Preturn_or_enter [:equal_sign :equal_sign]]                                               ; '=='
-  [:!OTC#Pright_shift :!SOn [:editor]]                                         ; pane float toggle ; zellij
+  [:!OTC#Pright_shift :!SOn [:term]]                                           ; pane float toggle ; zellij
   [:!OTC#Pright_option [:!S8 :!S8]]                                                                ; '**'
   [:!OTC#Pright_command [:slash :slash]]                                                           ; '//'
   [:!OTC#Pspacebar :!Og [:term]]                                               ; mode lock         ; zellij
@@ -1859,8 +1500,8 @@
 {:des "Option - Control Mode - arrows"
  :rules
  [;
-  [:!OT#Pleft_arrow :!Oj [:editor]]                                            ; pane left         ; zellij
-  [:!OT#Pright_arrow :!Ok [:editor]]                                           ; pane right        ; zellij
+  [:!OT#Pleft_arrow :!Oj [:term]]                                              ; pane left         ; zellij
+  [:!OT#Pright_arrow :!Ok [:term]]                                             ; pane right        ; zellij
   [:!OT#Pup_arrow :!Ol [:term]]                                                ; pane up           ; zellij
   [:!OT#Pdown_arrow :!Om [:term]]                                              ; pane down         ; zellij
   ]}
@@ -1880,12 +1521,12 @@
   ; [:!OT#Pperiod []]                                                                              ;
   ; [:!OT#Pslash []]                                                                               ;
 
-  [:!OT#Pdelete_or_backspace :!Oo [:editor]]                                   ; pane close        ; zellij
-  [:!OT#Preturn_or_enter :!Op [:editor]]                                       ; pane focus        ; zellij
-  [:!OT#Pright_shift :!Oq [:editor]]                                           ; pane split right  ; zellij
-  [:!OT#Pright_option :!Or [:editor]]                                          ; pane split down   ; zellij
-  [:!OT#Pright_command :!Os [:editor]]                                         ; pane rename       ; zellij
-  [:!OT#Pspacebar :!Ot [:editor]]                                              ; pane jump back    ; zellij
+  [:!OT#Pdelete_or_backspace :!Oo [:term]]                                     ; pane close        ; zellij
+  [:!OT#Preturn_or_enter :!Op [:term]]                                         ; pane focus        ; zellij
+  [:!OT#Pright_shift :!Oq [:term]]                                             ; pane split right  ; zellij
+  [:!OT#Pright_option :!Or [:term]]                                            ; pane split down   ; zellij
+  [:!OT#Pright_command :!Os [:term]]                                           ; pane rename       ; zellij
+  [:!OT#Pspacebar :!Ot [:term]]                                                ; pane jump back    ; zellij
 
   ; [:!OTleft_command []]                                                           NOT USEFUL     ;
   ; [:!OT#Pleft_option []]                                                          NOT AVAILABLE  ;
@@ -2074,8 +1715,8 @@
 {:des "Command Mode - arrows"
  :rules
  [;
-  ; [:!C#Pleft_arrow []]                                                            DEFAULT        ;
-  ; [:!C#Pright_arrow []]                                                           DEFAULT        ;
+  [:!C#Pleft_arrow :!Ta [:term]]                                                                   ; alacritty
+  [:!C#Pright_arrow :!Te [:term]]                                                                  ; alacritty
   [:!C#Pup_arrow [:home] [:term]]                                                                  ; alacritty
   [:!C#Pdown_arrow [:end] [:term]]                                                                 ; alacritty
   ]}
@@ -2607,33 +2248,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  [:!O#Pa :!Of1 [:editor]]                                                                           ; zellij
-  [:!O#Pb :!Of2 [:editor]]                                                                           ; zellij
-  [:!O#Pc :!Of4 [:editor]]                                                                           ; zellij
-  [:!O#Pd :!Of5 [:editor]]                                                                           ; zellij
-  [:!O#Pe :!Of6 [:editor]]                                                                           ; zellij
-  [:!O#Pf :!Of7 [:editor]]                                                                           ; zellij
-  [:!O#Pg :!Of8 [:editor]]                                                                           ; zellij
-  [:!O#Ph :!Of9 [:editor]]                                                                           ; zellij
-  [:!O#Pi :!Of10 [:editor]]                                                                          ; zellij
-  [:!O#Pj :!Tf1 [:editor]]                                                                           ; zellij
-  [:!O#Pk :!Tf2 [:editor]]                                                                           ; zellij
-  [:!O#Pl :!Tf4 [:editor]]                                                                           ; zellij
-  [:!O#Pm :!Tf5 [:editor]]                                                                           ; zellij
-  [:!O#Pn :!Tf6 [:editor]]                                                                           ; zellij
-  [:!O#Po :!Tf7 [:editor]]                                                                           ; zellij
-  [:!O#Pp :!Tf8 [:editor]]                                                                           ; zellij
-  [:!O#Pq :!Tf9 [:editor]]                                                                           ; zellij
-  [:!O#Pr :!Tf10 [:editor]]                                                                          ; zellij
-  [:!O#Ps :!OTf1 [:editor]]                                                                          ; zellij
-  [:!O#Pt :!OTf2 [:editor]]                                                                          ; zellij
-  [:!O#Pu :!OTf4 [:editor]]                                                                          ; zellij
-  [:!O#Pv :!OTf5 [:editor]]                                                                          ; zellij
-  [:!O#Pw :!OTf6 [:editor]]                                                                          ; zellij
-  [:!O#Px :!OTf7 [:editor]]                                                                          ; zellij
-  [:!O#Py :!OTf8 [:editor]]                                                                          ; zellij
-  [:!O#Pz :!OTf9 [:editor]]                                                                          ; zellij
-  [:!O#Pright_control :!OTf10 [:editor]]                                                             ; zellij
+  [:!O#Pa :!Of1 [:term]]                                                                           ; zellij
+  [:!O#Pb :!Of2 [:term]]                                                                           ; zellij
+  [:!O#Pc :!Of4 [:term]]                                                                           ; zellij
+  [:!O#Pd :!Of5 [:term]]                                                                           ; zellij
+  [:!O#Pe :!Of6 [:term]]                                                                           ; zellij
+  [:!O#Pf :!Of7 [:term]]                                                                           ; zellij
+  [:!O#Pg :!Of8 [:term]]                                                                           ; zellij
+  [:!O#Ph :!Of9 [:term]]                                                                           ; zellij
+  [:!O#Pi :!Of10 [:term]]                                                                          ; zellij
+  [:!O#Pj :!Tf1 [:term]]                                                                           ; zellij
+  [:!O#Pk :!Tf2 [:term]]                                                                           ; zellij
+  [:!O#Pl :!Tf4 [:term]]                                                                           ; zellij
+  [:!O#Pm :!Tf5 [:term]]                                                                           ; zellij
+  [:!O#Pn :!Tf6 [:term]]                                                                           ; zellij
+  [:!O#Po :!Tf7 [:term]]                                                                           ; zellij
+  [:!O#Pp :!Tf8 [:term]]                                                                           ; zellij
+  [:!O#Pq :!Tf9 [:term]]                                                                           ; zellij
+  [:!O#Pr :!Tf10 [:term]]                                                                          ; zellij
+  [:!O#Ps :!OTf1 [:term]]                                                                          ; zellij
+  [:!O#Pt :!OTf2 [:term]]                                                                          ; zellij
+  [:!O#Pu :!OTf4 [:term]]                                                                          ; zellij
+  [:!O#Pv :!OTf5 [:term]]                                                                          ; zellij
+  [:!O#Pw :!OTf6 [:term]]                                                                          ; zellij
+  [:!O#Px :!OTf7 [:term]]                                                                          ; zellij
+  [:!O#Py :!OTf8 [:term]]                                                                          ; zellij
+  [:!O#Pz :!OTf9 [:term]]                                                                          ; zellij
+  [:!O#Pright_control :!OTf10 [:term]]                                                             ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -2719,33 +2360,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  [:!OS#Pa :!SOf1 [:editor]]                                                                         ; zellij
-  [:!OS#Pb :!SOf2 [:editor]]                                                                         ; zellij
-  [:!OS#Pc :!SOf4 [:editor]]                                                                         ; zellij
-  [:!OS#Pd :!SOf5 [:editor]]                                                                         ; zellij
-  [:!OS#Pe :!SOf6 [:editor]]                                                                         ; zellij
-  [:!OS#Pf :!SOf7 [:editor]]                                                                         ; zellij
-  [:!OS#Pg :!SOf8 [:editor]]                                                                         ; zellij
-  [:!OS#Ph :!SOf9 [:editor]]                                                                         ; zellij
-  [:!OS#Pi :!SOf10 [:editor]]                                                                        ; zellij
-  [:!OS#Pj :!STf1 [:editor]]                                                                         ; zellij
-  [:!OS#Pk :!STf2 [:editor]]                                                                         ; zellij
-  [:!OS#Pl :!STf4 [:editor]]                                                                         ; zellij
-  [:!OS#Pm :!STf5 [:editor]]                                                                         ; zellij
-  [:!OS#Pn :!STf6 [:editor]]                                                                         ; zellij
-  [:!OS#Po :!STf7 [:editor]]                                                                         ; zellij
-  [:!OS#Pp :!STf8 [:editor]]                                                                         ; zellij
-  [:!OS#Pq :!STf9 [:editor]]                                                                         ; zellij
-  [:!OS#Pr :!STf10 [:editor]]                                                                        ; zellij
-  [:!OS#Ps :!SOTf1 [:editor]]                                                                        ; zellij
-  [:!OS#Pt :!SOTf2 [:editor]]                                                                        ; zellij
-  [:!OS#Pu :!SOTf4 [:editor]]                                                                        ; zellij
-  [:!OS#Pv :!SOTf5 [:editor]]                                                                        ; zellij
-  [:!OS#Pw :!SOTf6 [:editor]]                                                                        ; zellij
-  [:!OS#Px :!SOTf7 [:editor]]                                                                        ; zellij
-  [:!OS#Py :!SOTf8 [:editor]]                                                                        ; zellij
-  [:!OS#Pz :!SOTf9 [:editor]]                                                                        ; zellij
-  [:!OS#Pright_control :!SOTf10 [:editor]]                                                           ; zellij
+  [:!OS#Pa :!SOf1 [:term]]                                                                         ; zellij
+  [:!OS#Pb :!SOf2 [:term]]                                                                         ; zellij
+  [:!OS#Pc :!SOf4 [:term]]                                                                         ; zellij
+  [:!OS#Pd :!SOf5 [:term]]                                                                         ; zellij
+  [:!OS#Pe :!SOf6 [:term]]                                                                         ; zellij
+  [:!OS#Pf :!SOf7 [:term]]                                                                         ; zellij
+  [:!OS#Pg :!SOf8 [:term]]                                                                         ; zellij
+  [:!OS#Ph :!SOf9 [:term]]                                                                         ; zellij
+  [:!OS#Pi :!SOf10 [:term]]                                                                        ; zellij
+  [:!OS#Pj :!STf1 [:term]]                                                                         ; zellij
+  [:!OS#Pk :!STf2 [:term]]                                                                         ; zellij
+  [:!OS#Pl :!STf4 [:term]]                                                                         ; zellij
+  [:!OS#Pm :!STf5 [:term]]                                                                         ; zellij
+  [:!OS#Pn :!STf6 [:term]]                                                                         ; zellij
+  [:!OS#Po :!STf7 [:term]]                                                                         ; zellij
+  [:!OS#Pp :!STf8 [:term]]                                                                         ; zellij
+  [:!OS#Pq :!STf9 [:term]]                                                                         ; zellij
+  [:!OS#Pr :!STf10 [:term]]                                                                        ; zellij
+  [:!OS#Ps :!SOTf1 [:term]]                                                                        ; zellij
+  [:!OS#Pt :!SOTf2 [:term]]                                                                        ; zellij
+  [:!OS#Pu :!SOTf4 [:term]]                                                                        ; zellij
+  [:!OS#Pv :!SOTf5 [:term]]                                                                        ; zellij
+  [:!OS#Pw :!SOTf6 [:term]]                                                                        ; zellij
+  [:!OS#Px :!SOTf7 [:term]]                                                                        ; zellij
+  [:!OS#Py :!SOTf8 [:term]]                                                                        ; zellij
+  [:!OS#Pz :!SOTf9 [:term]]                                                                        ; zellij
+  [:!OS#Pright_control :!SOTf10 [:term]]                                                           ; zellij
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -3383,7 +3024,7 @@
 {:des "Shift Mode - symbols"
  :rules
  [;
-  [:#Pright_shift :right_shift [:term] {:alone [:!Oa]}]    ; shift             ; history editor
+  [:#Pright_shift :right_shift [:term] {:alone [:!Oa]}]    ; shift             ; history term
   ; [:!R#Pleft_arrow []]                                                                           ;
   ; [:!R#Pright_arrow []]                                                                          ;
   ; [:!R#Pup_arrow []]                                                                             ;
@@ -3707,7 +3348,7 @@
   ; ; [:!ER#Pq []]                                                                                   ;
   ; ; [:!ER#Pr []]                                                                                   ;
   ; ; [:!ER#Ps [:!Ss :t :r :i :n :g]]                                                                  ; 'String'
-  ; [:!ER#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                                           ; 'TODO: '
+  [:!ER#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                                           ; 'TODO: '
   ; ; [:!ER#Pu []]                                                                                   ;
   ; ; [:!ER#Pv [:!Sv :e :c :t :o :r]]                                                                  ; 'Vector'
   ; [:!ER#Pw [:!Sw :!Si :!Sp :!Ssemicolon :spacebar]]                                                ; 'WIP: '
@@ -3745,12 +3386,12 @@
   ; [:!ROTC#Pbackslash []]                                                                         ;
   ; [:!ROTC#Pcomma []]                                                              COLLISION      ;
   ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
-  [:!ROTC#Pslash [:launch "Skim"]]                                                                 ;
+  ; [:!ROTC#Pslash []]                                                                             ;
 
   [:!ROTC#Pdelete_or_backspace [:launch "Arc"]]                                                    ;
   [:!ROTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
   [:!ROTC#Pright_shift [:launch "Mail"]]                                                           ;
-  [:!ROTC#Pright_option [:launch "Zed"]]                                                           ;
+  [:!ROTC#Pright_option [:launch "Skim"]]                                                          ;
   [:!ROTC#Pright_command [:launch "Calendar"]]                                                     ;
   ; [:!ROTC#Pspacebar []]                                                      ; speak             ; system
 
