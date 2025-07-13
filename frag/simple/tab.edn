@@ -25,12 +25,12 @@
   ; [:!ROTC#Pbackslash []]                                                                         ;
   ; [:!ROTC#Pcomma []]                                                              COLLISION      ;
   ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
-  [:!ROTC#Pslash [:launch "Skim"]]                                                                 ;
+  ; [:!ROTC#Pslash []]                                                                             ;
 
   [:!ROTC#Pdelete_or_backspace [:launch "Arc"]]                                                    ;
   [:!ROTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
   [:!ROTC#Pright_shift [:launch "Mail"]]                                                           ;
-  [:!ROTC#Pright_option [:launch "Zed"]]                                                           ;
+  [:!ROTC#Pright_option [:launch "Skim"]]                                                          ;
   [:!ROTC#Pright_command [:launch "Calendar"]]                                                     ;
   ; [:!ROTC#Pspacebar []]                                                      ; speak             ; system
 
