@@ -6,8 +6,8 @@
 {:des "Option - Control Mode - arrows"
  :rules
  [;
-  [:!OT#Pleft_arrow :!Oj [:editor]]                                            ; pane left         ; zellij
-  [:!OT#Pright_arrow :!Ok [:editor]]                                           ; pane right        ; zellij
+  [:!OT#Pleft_arrow :!Oj [:term]]                                              ; pane left         ; zellij
+  [:!OT#Pright_arrow :!Ok [:term]]                                             ; pane right        ; zellij
   [:!OT#Pup_arrow :!Ol [:term]]                                                ; pane up           ; zellij
   [:!OT#Pdown_arrow :!Om [:term]]                                              ; pane down         ; zellij
   ]}
@@ -27,12 +27,12 @@
   ; [:!OT#Pperiod []]                                                                              ;
   ; [:!OT#Pslash []]                                                                               ;
 
-  [:!OT#Pdelete_or_backspace :!Oo [:editor]]                                   ; pane close        ; zellij
-  [:!OT#Preturn_or_enter :!Op [:editor]]                                       ; pane focus        ; zellij
-  [:!OT#Pright_shift :!Oq [:editor]]                                           ; pane split right  ; zellij
-  [:!OT#Pright_option :!Or [:editor]]                                          ; pane split down   ; zellij
-  [:!OT#Pright_command :!Os [:editor]]                                         ; pane rename       ; zellij
-  [:!OT#Pspacebar :!Ot [:editor]]                                              ; pane jump back    ; zellij
+  [:!OT#Pdelete_or_backspace :!Oo [:term]]                                     ; pane close        ; zellij
+  [:!OT#Preturn_or_enter :!Op [:term]]                                         ; pane focus        ; zellij
+  [:!OT#Pright_shift :!Oq [:term]]                                             ; pane split right  ; zellij
+  [:!OT#Pright_option :!Or [:term]]                                            ; pane split down   ; zellij
+  [:!OT#Pright_command :!Os [:term]]                                           ; pane rename       ; zellij
+  [:!OT#Pspacebar :!Ot [:term]]                                                ; pane jump back    ; zellij
 
   ; [:!OTleft_command []]                                                           NOT USEFUL     ;
   ; [:!OT#Pleft_option []]                                                          NOT AVAILABLE  ;
