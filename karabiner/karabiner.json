@@ -689,79 +689,8 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Editor control - alphabet",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "left_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "a",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "e",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "",
         "manipulators" : [ {
-          "from" : {
-            "key_code" : "spacebar",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "m",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.skype.skype" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "spacebar",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "k",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "com.skype.skype" ]
-          } ],
-          "type" : "basic"
-        }, {
           "from" : {
             "key_code" : "spacebar",
             "modifiers" : {
@@ -812,448 +741,6 @@
           "conditions" : [ {
             "type" : "frontmost_application_if",
             "bundle_identifiers" : [ "us.zoom.xos" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Zed - alt - alphabet",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "d",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "d",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "f",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "h",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "g",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "n",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "p",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "l",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "g",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "c",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "slash",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "d",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_option", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "i",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "close_bracket",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "j",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "k",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "o",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "open_bracket",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "x",
-            "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "k",
-            "modifiers" : [ "left_command", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Zed - Sessions",
-        "manipulators" : [ {
-          "to_if_alone" : [ {
-            "key_code" : "b",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "from" : {
-            "key_code" : "delete_or_backspace",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "right_shift",
-            "modifiers" : [ "right_control", "right_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_alone" : [ {
-            "key_code" : "j",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "from" : {
-            "key_code" : "right_shift",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "right_shift"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "up_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "down_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "up_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ],
-              "optional" : [ "left_shift", "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_control", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "down_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ],
-              "optional" : [ "left_shift", "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_control", "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_command",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "y",
-            "modifiers" : [ "left_command", "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Zed - Control remappings",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "return_or_enter",
-            "modifiers" : {
-              "mandatory" : [ "right_control" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "p",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Zed - Interactive delete",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "right_option",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "delete_forward",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_command",
-            "modifiers" : {
-              "mandatory" : [ "left_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "delete_forward",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "left_control",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "delete_or_backspace",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "left_command",
-            "modifiers" : {
-              "mandatory" : [ "right_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "delete_or_backspace",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
           } ],
           "type" : "basic"
         } ]
@@ -2584,22 +2071,6 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "left_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f10"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "right_arrow",
             "modifiers" : {
               "mandatory" : [ "left_command", "left_control", "left_option" ],
@@ -2613,22 +2084,6 @@
           "conditions" : [ {
             "type" : "frontmost_application_if",
             "bundle_identifiers" : [ "org.alacritty" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_arrow",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f11"
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "dev.zed.Zed" ]
           } ],
           "type" : "basic"
         }, {
@@ -2682,7 +2137,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -2764,7 +2219,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -2795,7 +2250,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3685,7 +3140,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3702,7 +3157,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3756,7 +3211,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3773,7 +3228,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3790,7 +3245,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3807,7 +3262,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3824,7 +3279,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -3841,7 +3296,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         } ]
@@ -3997,6 +3452,40 @@
       }, {
         "description" : "Command Mode - arrows",
         "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "a",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "e",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
           "from" : {
             "key_code" : "up_arrow",
             "modifiers" : {
@@ -9029,7 +8518,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9046,7 +8535,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9063,7 +8552,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9080,7 +8569,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9097,7 +8586,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9114,7 +8603,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9131,7 +8620,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9148,7 +8637,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9165,7 +8654,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9182,7 +8671,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9199,7 +8688,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9216,7 +8705,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9233,7 +8722,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9250,7 +8739,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9267,7 +8756,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9284,7 +8773,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9301,7 +8790,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9318,7 +8807,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9335,7 +8824,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9352,7 +8841,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9369,7 +8858,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9386,7 +8875,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9403,7 +8892,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9420,7 +8909,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9437,7 +8926,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9454,7 +8943,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9471,7 +8960,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9488,7 +8977,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9505,7 +8994,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9522,7 +9011,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9539,7 +9028,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9556,7 +9045,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9573,7 +9062,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9590,7 +9079,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9607,7 +9096,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9624,7 +9113,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9641,7 +9130,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9658,7 +9147,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9675,7 +9164,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9692,7 +9181,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9709,7 +9198,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9726,7 +9215,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9743,7 +9232,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9760,7 +9249,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9777,7 +9266,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9794,7 +9283,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9811,7 +9300,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9828,7 +9317,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9845,7 +9334,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9862,7 +9351,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9879,7 +9368,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9896,7 +9385,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9913,7 +9402,7 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
           } ],
           "type" : "basic"
         }, {
@@ -9930,7 +9419,34 @@
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "io.lapce", "dev.zed.Zed", "org.alacritty" ]
+            "bundle_identifiers" : [ "org.alacritty" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "right_option", "right_shift" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "t",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "o",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "d",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "o",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_shift" ]
+          }, {
+            "key_code" : "spacebar"
           } ],
           "type" : "basic"
         } ]
@@ -11618,18 +11134,6 @@
         "description" : "Tab Mode - symbols",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "slash",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_control", "left_option", "right_shift" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Skim\" to activate'"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "delete_or_backspace",
             "modifiers" : {
               "mandatory" : [ "left_command", "left_control", "left_option", "right_shift" ],
@@ -11673,7 +11177,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Zed\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Skim\" to activate'"
           } ],
           "type" : "basic"
         }, {
