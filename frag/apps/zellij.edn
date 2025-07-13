@@ -23,7 +23,7 @@
 
   ; [:!O#Pright_arrow :!Of [:term]]                          ; alt-right         ; cursor movement
   ; [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]      ; esc               ; pop-up window
-  ; [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history editor
+  ; [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history term
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ; [: :!Oi [:term]]                                                                COLLISION      ;
