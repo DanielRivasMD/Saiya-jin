@@ -214,7 +214,7 @@
   ; ; [:!ER#Pq []]                                                                                   ;
   ; ; [:!ER#Pr []]                                                                                   ;
   ; ; [:!ER#Ps [:!Ss :t :r :i :n :g]]                                                                  ; 'String'
-  ; [:!ER#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                                           ; 'TODO: '
+  [:!ER#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                                           ; 'TODO: '
   ; ; [:!ER#Pu []]                                                                                   ;
   ; ; [:!ER#Pv [:!Sv :e :c :t :o :r]]                                                                  ; 'Vector'
   ; [:!ER#Pw [:!Sw :!Si :!Sp :!Ssemicolon :spacebar]]                                                ; 'WIP: '
