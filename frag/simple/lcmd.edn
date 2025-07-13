@@ -6,8 +6,8 @@
 {:des "Command Mode - arrows"
  :rules
  [;
-  ; [:!C#Pleft_arrow []]                                                            DEFAULT        ;
-  ; [:!C#Pright_arrow []]                                                           DEFAULT        ;
+  [:!C#Pleft_arrow :!Ta [:term]]                                                                   ; alacritty
+  [:!C#Pright_arrow :!Te [:term]]                                                                  ; alacritty
   [:!C#Pup_arrow [:home] [:term]]                                                                  ; alacritty
   [:!C#Pdown_arrow [:end] [:term]]                                                                 ; alacritty
   ]}
