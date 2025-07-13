@@ -37,13 +37,8 @@
 {;
  :browser ["company.thebrowser.Browser"]                                                           ;
  :mail ["com.apple.mail"]                                                                          ;
- :editor ["io.lapce", "dev.zed.Zed", "org.alacritty"]                                              ;
- :gui ["io.lapce", "dev.zed.Zed"]                                                                  ;
  :term ["org.alacritty"]                                                                           ;
- :lapce ["io.lapce"]                                                                               ;
  :skim ["net.sourceforge.skim-app.skim"]                                                           ;
- :skype ["com.skype.skype"]                                                                        ;
- :zed ["dev.zed.Zed"]                                                                              ;
  :zoom ["us.zoom.xos"]                                                                             ;
  }
 
