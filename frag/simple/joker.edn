@@ -27,12 +27,12 @@
   [:!EWQ#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                                        ; ' %>% '
   [:!EWQ#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                                    ; ' %!>% '
 
-  [:!EWQ#Pdelete_or_backspace [:!Wr]]                                                              ;
-  [:!EWQ#Preturn_or_enter [:!Ws]]                                                                  ;
-  [:!EWQ#Pright_shift [:!Wt]]                                                                      ;
-  ; [:!EWQ#Pright_option []]                                                                       ;
-  ; [:!EWQ#Pright_command []]                                                                      ;
-  [:!EWQ#Pspacebar [:!Oc]]                                                                         ;
+  [:!EWQ#Pdelete_or_backspace [:f13]]                                          ; prev diag         ; helix
+  [:!EWQ#Preturn_or_enter [:f14]]                                              ; diag              ; helix
+  [:!EWQ#Pright_shift [:f15]]                                                  ; next diag         ; helix
+  [:!EWQ#Pright_option [:f16]]                                                 ; move forward      ; helix
+  [:!EWQ#Pright_command [:f17]]                                                ; move backward     ; helix
+  [:!EWQ#Pspacebar [:f18]]                                                     ; repeat motion     ; helix
 
   ; [:!EWQ#Pleft_command []]                                                        NOT USEFUL     ;
   ; [:!EWQ#Pleft_option []]                                                         NOT USEFUL     ;
@@ -73,8 +73,8 @@
   ; [:!EWQ#P8 []]                                                                                  ;
   ; [:!EWQ#P9 []]                                                                                  ;
   ; [:!EWQ#P0 []]                                                                                  ;
-  ; [:!EWQ#Phyphen []]                                                                             ;
-  ; [:!EWQ#Pequal_sign []]                                                                         ;
+  [:!EWQ#Phyphen [:f19]]                                                                           ;
+  [:!EWQ#Pequal_sign [:f20]]                                                                       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -139,12 +139,12 @@
   ; [:!EWQS#Pperiod []]                                                                            ;
   ; [:!EWQS#Pslash []]                                                                             ;
 
-  ; [:!EWQS#Pdelete_or_backspace []]                                                               ;
-  ; [:!EWQS#Preturn_or_enter []]                                                                   ;
-  ; [:!EWQS#Pright_shift []]                                                                       ;
-  ; [:!EWQS#Pright_option []]                                                                      ;
-  ; [:!EWQS#Pright_command []]                                                                     ;
-  ; [:!EWQS#Pspacebar []]                                                                          ;
+  [:!EWQS#Pdelete_or_backspace [:!Sf13]]                                                           ;
+  [:!EWQS#Preturn_or_enter [:!Sf14]]                                                               ;
+  [:!EWQS#Pright_shift [:!Sf15]]                                                                   ;
+  [:!EWQS#Pright_option [:!Sf16]]                                                                  ;
+  [:!EWQS#Pright_command [:!Sf17]]                                                                 ;
+  [:!EWQS#Pspacebar [:!Sf18]]                                                                      ;
 
   ; [:!EWQS#Pleft_command []]                                                       NOT USEFUL     ;
   ; [:!EWQS#Pleft_option []]                                                        NOT USEFUL     ;
@@ -186,8 +186,8 @@
   ; [:!EWQS#P8 []]                                                                                 ;
   ; [:!EWQS#P9 []]                                                                                 ;
   ; [:!EWQS#P0 []]                                                                                 ;
-  ; [:!EWQS#Phyphen []]                                                                            ;
-  ; [:!EWQS#Pequal_sign []]                                                                        ;
+  [:!EWQS#Phyphen [:!Sf19]]                                                                        ;
+  [:!EWQS#Pequal_sign [:!Sf20]]                                                                    ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
