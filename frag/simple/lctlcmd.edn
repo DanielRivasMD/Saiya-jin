@@ -3,9 +3,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; control - command
-{:des "Control - Command Mode - arrows"
+{:des "Control - Command Mode"
  :rules
  [;
+  ; TODO: annotate for Babel compatibility
   [:!TC#Pleft_arrow [:!Tb] [:term]]                        ; movement & helix                      ;
   [:!TC#Pright_arrow [:!Tf] [:term]]                       ; movement & helix                      ;
   [:!TC#Pup_arrow [:!Tn] [:term]]                          ; movement & helix                      ;
@@ -22,6 +23,7 @@
   ; [:!TC#Pperiod []]                                                                              ;
   ; [:!TC#Pslash []]                                                                               ;
 
+  ; TODO: review bindings helix splits
   [:!TC#Pdelete_or_backspace [:!Tl]]                       ; close & helix                         ;
   [:!TC#Preturn_or_enter [:!Tg]]                           ; new & helix                           ;
   [:!TC#Pright_shift [:!Tv]]                               ; split right & helix                   ;
