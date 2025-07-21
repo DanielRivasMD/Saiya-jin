@@ -29,7 +29,7 @@
 
   [:!OC#Pdelete_or_backspace :!SOu [:term]]                                    ; tab close         ; zellij
   [:!OC#Preturn_or_enter :!SOp [:term]]                                        ; tab sync          ; zellij
-  [:!OC#Pright_shift :!SOq [:term]]                                            ; tab new           ; zellij
+  [:!OC#Pright_shift :!SOq]                                            ; tab new           ; zellij
   [:!OC#Pright_option :!SOr [:term]]                                           ; tab break pane    ; zellij
   [:!OC#Pright_command :!SOs [:term]]                                          ; tab rename        ; zellij
   [:!OC#Pspacebar :!SOt [:term]]                                               ; tab jump back     ; zellij
