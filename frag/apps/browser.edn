@@ -26,23 +26,23 @@
  :rules
  [;
   [:!T#Pspacebar [:!Cs] [:browser]]                                            ; sidebar show      ;
-  [:!C#Preturn_or_enter :!Co [:browser]]                                       ; fuse pop up       ;
+  [:!C#Preturn_or_enter [:!Co] [:browser]]                                     ; fuse pop up       ;
 
-  [:!OC#P1 [:!T1] [:browser]]                                                  ; work space        ;
-  [:!OC#P2 [:!T2] [:browser]]                                                  ; work space        ;
-  [:!OC#P3 [:!T3] [:browser]]                                                  ; work space        ;
+  ; [:!OC#P1 [:!T1] [:browser]]                                                  ; work space        ;
+  ; [:!OC#P2 [:!T2] [:browser]]                                                  ; work space        ;
+  ; [:!OC#P3 [:!T3] [:browser]]                                                  ; work space        ;
 
-  [:!OC#Pkeypad_1 [:!T1] [:browser]]                                           ; work space        ;
-  [:!OC#Pkeypad_2 [:!T2] [:browser]]                                           ; work space        ;
-  [:!OC#Pkeypad_3 [:!T3] [:browser]]                                           ; work space        ;
+  ; [:!OC#Pkeypad_1 [:!T1] [:browser]]                                           ; work space        ;
+  ; [:!OC#Pkeypad_2 [:!T2] [:browser]]                                           ; work space        ;
+  ; [:!OC#Pkeypad_3 [:!T3] [:browser]]                                           ; work space        ;
 
   [:!OC#Popen_bracket [:!OCopen_bracket] [:browser]]                           ; collapse folders  ;
   [:!OC#Pclose_bracket [:!OCclose_bracket] [:browser]]                         ; expand folders    ;
 
   [:!OC#Preturn_or_enter [:!OCn] [:browser]]                                   ; little arc        ;
   [:!OC#Pdelete_or_backspace [:!Cw] [:browser]]                                ; close tab         ;
-  [:!OC#Pspacebar [:!CSm] [:browser]]                                          ; spaces            ;
-  [:!OS#Pd [:!OSd] [:browser]]                                                 ; duplicate         ;
+  ; [:!OC#Pspacebar [:!CSm] [:browser]]                                          ; spaces            ;
+  ; [:!OS#Pd [:!OSd] [:browser]]                                                 ; duplicate         ;
 
   [:!OT#Pdelete_or_backspace [:!TShyphen] [:browser]]                          ; close split       ;
   [:!OT#Preturn_or_enter [:!Ct] [:browser]]                                    ; new tab           ;
@@ -54,7 +54,7 @@
   [:!EWQ#Pleft_arrow [:!Copen_bracket] [:browser]]                             ; backward          ;
   [:!EWQ#Pright_arrow [:!Cclose_bracket] [:browser]]                           ; forward           ;
 
-  [:!EWQ#Pup_arrow [:!CSa] [:browser]]                                         ; archive           ;
+  ; [:!EWQ#Pup_arrow [:!CSa] [:browser]]                                         ; archive           ;
   [:!EWQ#Pdown_arrow [:!CSj] [:browser]]                                       ; downloads         ;
 
   [:!O#Py [:!CSc] [:browser]]                                                  ; copy url          ;
