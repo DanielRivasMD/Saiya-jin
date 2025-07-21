@@ -27,12 +27,12 @@
   ; [:!S#Pperiod []]                                                                NOT USEFUL     ;
   ; [:!S#Pslash []]                                                                 NOT USEFUL     ;
 
-  ; [:!S#Pdelete_or_backspace []]                                                                  ;
-  [:!S#Preturn_or_enter [:!Wh]]                                                                    ;
+  [:!S#Pdelete_or_backspace [:!Wr]]                                                                ;
+  [:!S#Preturn_or_enter [:!Ws]]                                                                    ;
   [:!S#Pright_shift [:delete_forward]]                                                             ;
-  [:!S#Pright_option [:!Od]]                                                                       ;
-  [:!S#Pright_command [:!Tk]]                                                                      ;
-  [:!S#Pspacebar [:!Ec]]                                                                           ;
+  [:!S#Pright_option [:!Ed]]                                                                       ;
+  [:!S#Pright_command [:!Wk]]                                                                      ;
+  [:!S#Pspacebar [:!Wt]]                                                                           ;
 
   ; [:!S#Pleft_command []]                                                          NOT USEFUL     ;
   ; [:!S#Pleft_option []]                                                           NOT USEFUL     ;
