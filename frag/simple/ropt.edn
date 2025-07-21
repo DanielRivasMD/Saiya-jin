@@ -34,14 +34,14 @@
   ; [:!E#Pright_command []]                                                         NOT USEFUL     ;
   ; [:!E#Pspacebar []]                                                                             ;
 
-  [:!E#Pleft_command [:f13]]                                                   ; move forward      ; helix
-  [:!E#Pleft_option [:f14]]                                                    ; repeat motion     ; helix
-  [:!E#Pleft_control [:f15]]                                                   ; move backward     ; helix
-  [:!E#Pleft_shift [:f16]]                                                     ; next diag         ; helix
-  [:!E#Pcaps_lock [:f17]]                                                      ; diag              ; helix
-  [:!E#Ptab [:f18]]                                                            ; prev diag         ; helix
-  [:!E#Pkeypad_num_lock [:f19]]                                                                    ;
-  [:!E#Pescape [:f20]]                                                                             ;
+  ; [:!E#Pleft_command [:f13]]                                                   ; move forward      ; helix
+  ; [:!E#Pleft_option [:f14]]                                                    ; repeat motion     ; helix
+  ; [:!E#Pleft_control [:f15]]                                                   ; move backward     ; helix
+  ; [:!E#Pleft_shift [:f16]]                                                     ; next diag         ; helix
+  ; [:!E#Pcaps_lock [:f17]]                                                      ; diag              ; helix
+  ; [:!E#Ptab [:f18]]                                                            ; prev diag         ; helix
+  ; [:!E#Pkeypad_num_lock [:f19]]                                                                    ;
+  ; [:!E#Pescape [:f20]]                                                                             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
