@@ -50,6 +50,7 @@
 {:des "Control Mode - numbers"
  :rules
  [;
+ ; TODO: improve annotations for empty bindings
   [:!T#Pkeypad_1 [:vk_none]]                                                   ;    EMPTY          ;
   [:!T#Pkeypad_2 [:vk_none]]                                                   ;    EMPTY          ;
   [:!T#Pkeypad_3 [:vk_none]]                                                   ;    EMPTY          ;
@@ -79,7 +80,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: move to switched mode
+; TODO: move to switched mode?
 ; control
 {:des "Control Mode - alphabet"
  :rules

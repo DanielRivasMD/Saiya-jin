@@ -35,9 +35,9 @@
   ; [:!R#Pright_command []]                                                         NOT USEFUL     ;
   ; [:!R#Pspacebar []]                                                                             ;
 
-  [:!R#Pleft_command [:!Tu]]                                                                       ;
+  [:!R#Pleft_command [:!Wu]]                                                                       ;
   ; [:!Rleft_option []]                                                                            ;
-  [:!R#Pleft_control [:!Tw]]                                                                       ;
+  [:!R#Pleft_control [:!Ww]]                                                                       ;
   [:!R#Pleft_shift [:delete_or_backspace]]                                                         ;
   ; [:!R#Pcaps_lock []]                                                                            ;
   ; [:!R#Ptab []]                                                                                  ;
