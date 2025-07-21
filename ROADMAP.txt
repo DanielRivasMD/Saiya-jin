@@ -1,0 +1,3 @@
+- work annotation homogenity for Babel compatibility
+- coordinate Zellij / Helix
+- sync browser hotkeys
