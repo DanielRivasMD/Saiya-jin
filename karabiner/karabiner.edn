@@ -75,7 +75,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  :main [
+:main [
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -106,23 +106,23 @@
  :rules
  [;
   [:!T#Pspacebar [:!Cs] [:browser]]                                            ; sidebar show      ;
-  [:!C#Preturn_or_enter :!Co [:browser]]                                       ; fuse pop up       ;
+  [:!C#Preturn_or_enter [:!Co] [:browser]]                                     ; fuse pop up       ;
 
-  [:!OC#P1 [:!T1] [:browser]]                                                  ; work space        ;
-  [:!OC#P2 [:!T2] [:browser]]                                                  ; work space        ;
-  [:!OC#P3 [:!T3] [:browser]]                                                  ; work space        ;
+  ; [:!OC#P1 [:!T1] [:browser]]                                                  ; work space        ;
+  ; [:!OC#P2 [:!T2] [:browser]]                                                  ; work space        ;
+  ; [:!OC#P3 [:!T3] [:browser]]                                                  ; work space        ;
 
-  [:!OC#Pkeypad_1 [:!T1] [:browser]]                                           ; work space        ;
-  [:!OC#Pkeypad_2 [:!T2] [:browser]]                                           ; work space        ;
-  [:!OC#Pkeypad_3 [:!T3] [:browser]]                                           ; work space        ;
+  ; [:!OC#Pkeypad_1 [:!T1] [:browser]]                                           ; work space        ;
+  ; [:!OC#Pkeypad_2 [:!T2] [:browser]]                                           ; work space        ;
+  ; [:!OC#Pkeypad_3 [:!T3] [:browser]]                                           ; work space        ;
 
   [:!OC#Popen_bracket [:!OCopen_bracket] [:browser]]                           ; collapse folders  ;
   [:!OC#Pclose_bracket [:!OCclose_bracket] [:browser]]                         ; expand folders    ;
 
   [:!OC#Preturn_or_enter [:!OCn] [:browser]]                                   ; little arc        ;
   [:!OC#Pdelete_or_backspace [:!Cw] [:browser]]                                ; close tab         ;
-  [:!OC#Pspacebar [:!CSm] [:browser]]                                          ; spaces            ;
-  [:!OS#Pd [:!OSd] [:browser]]                                                 ; duplicate         ;
+  ; [:!OC#Pspacebar [:!CSm] [:browser]]                                          ; spaces            ;
+  ; [:!OS#Pd [:!OSd] [:browser]]                                                 ; duplicate         ;
 
   [:!OT#Pdelete_or_backspace [:!TShyphen] [:browser]]                          ; close split       ;
   [:!OT#Preturn_or_enter [:!Ct] [:browser]]                                    ; new tab           ;
@@ -134,7 +134,7 @@
   [:!EWQ#Pleft_arrow [:!Copen_bracket] [:browser]]                             ; backward          ;
   [:!EWQ#Pright_arrow [:!Cclose_bracket] [:browser]]                           ; forward           ;
 
-  [:!EWQ#Pup_arrow [:!CSa] [:browser]]                                         ; archive           ;
+  ; [:!EWQ#Pup_arrow [:!CSa] [:browser]]                                         ; archive           ;
   [:!EWQ#Pdown_arrow [:!CSj] [:browser]]                                       ; downloads         ;
 
   [:!O#Py [:!CSc] [:browser]]                                                  ; copy url          ;
@@ -1079,8 +1079,8 @@
  [;
   [:!OTC#Pleft_arrow [:!Spage_up] [:term]]                                     ;                   ;
   [:!OTC#Pright_arrow [:!Spage_down] [:term]]                                  ;                   ;
-  [:!OTC#Pup_arrow [:!Shome] [:term]]                                          ; increment         ; helix
-  [:!OTC#Pdown_arrow [:!Send] [:term]]                                         ; decrement         ; helix
+  [:!OTC#Pup_arrow [:!Shome] [:term]]                                          ;                   ;
+  [:!OTC#Pdown_arrow [:!Send] [:term]]                                         ;                   ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1089,6 +1089,7 @@
 {:des "Hyper Mode - symbols"
  :rules
  [;
+ ; TODO: review hyper - zellij bindings
   [:!OTC#Popen_bracket :!SOl [:term]]                                          ; pane float pop    ; zellij
   ; [:!OTC#Pclose_bracket []]                                                                      ;
   ; [:!OTC#Psemicolon []]                                                                          ;
@@ -1213,12 +1214,12 @@
   [:!EWQ#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                                        ; ' %>% '
   [:!EWQ#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                                    ; ' %!>% '
 
-  [:!EWQ#Pdelete_or_backspace [:!Wr]]                                                              ;
-  [:!EWQ#Preturn_or_enter [:!Ws]]                                                                  ;
-  [:!EWQ#Pright_shift [:!Wt]]                                                                      ;
-  ; [:!EWQ#Pright_option []]                                                                       ;
-  ; [:!EWQ#Pright_command []]                                                                      ;
-  [:!EWQ#Pspacebar [:!Oc]]                                                                         ;
+  [:!EWQ#Pdelete_or_backspace [:f13]]                                          ; prev diag         ; helix
+  [:!EWQ#Preturn_or_enter [:f14]]                                              ; diag              ; helix
+  [:!EWQ#Pright_shift [:f15]]                                                  ; next diag         ; helix
+  [:!EWQ#Pright_option [:f16]]                                                 ; move forward      ; helix
+  [:!EWQ#Pright_command [:f17]]                                                ; move backward     ; helix
+  [:!EWQ#Pspacebar [:f18]]                                                     ; repeat motion     ; helix
 
   ; [:!EWQ#Pleft_command []]                                                        NOT USEFUL     ;
   ; [:!EWQ#Pleft_option []]                                                         NOT USEFUL     ;
@@ -1259,8 +1260,8 @@
   ; [:!EWQ#P8 []]                                                                                  ;
   ; [:!EWQ#P9 []]                                                                                  ;
   ; [:!EWQ#P0 []]                                                                                  ;
-  ; [:!EWQ#Phyphen []]                                                                             ;
-  ; [:!EWQ#Pequal_sign []]                                                                         ;
+  [:!EWQ#Phyphen [:f19]]                                                                           ;
+  [:!EWQ#Pequal_sign [:f20]]                                                                       ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1325,12 +1326,12 @@
   ; [:!EWQS#Pperiod []]                                                                            ;
   ; [:!EWQS#Pslash []]                                                                             ;
 
-  ; [:!EWQS#Pdelete_or_backspace []]                                                               ;
-  ; [:!EWQS#Preturn_or_enter []]                                                                   ;
-  ; [:!EWQS#Pright_shift []]                                                                       ;
-  ; [:!EWQS#Pright_option []]                                                                      ;
-  ; [:!EWQS#Pright_command []]                                                                     ;
-  ; [:!EWQS#Pspacebar []]                                                                          ;
+  [:!EWQS#Pdelete_or_backspace [:!Sf13]]                                                           ;
+  [:!EWQS#Preturn_or_enter [:!Sf14]]                                                               ;
+  [:!EWQS#Pright_shift [:!Sf15]]                                                                   ;
+  [:!EWQS#Pright_option [:!Sf16]]                                                                  ;
+  [:!EWQS#Pright_command [:!Sf17]]                                                                 ;
+  [:!EWQS#Pspacebar [:!Sf18]]                                                                      ;
 
   ; [:!EWQS#Pleft_command []]                                                       NOT USEFUL     ;
   ; [:!EWQS#Pleft_option []]                                                        NOT USEFUL     ;
@@ -1372,8 +1373,8 @@
   ; [:!EWQS#P8 []]                                                                                 ;
   ; [:!EWQS#P9 []]                                                                                 ;
   ; [:!EWQS#P0 []]                                                                                 ;
-  ; [:!EWQS#Phyphen []]                                                                            ;
-  ; [:!EWQS#Pequal_sign []]                                                                        ;
+  [:!EWQS#Phyphen [:!Sf19]]                                                                        ;
+  [:!EWQS#Pequal_sign [:!Sf20]]                                                                    ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1408,7 +1409,7 @@
 
   [:!OC#Pdelete_or_backspace :!SOu [:term]]                                    ; tab close         ; zellij
   [:!OC#Preturn_or_enter :!SOp [:term]]                                        ; tab sync          ; zellij
-  [:!OC#Pright_shift :!SOq [:term]]                                            ; tab new           ; zellij
+  [:!OC#Pright_shift :!SOq]                                            ; tab new           ; zellij
   [:!OC#Pright_option :!SOr [:term]]                                           ; tab break pane    ; zellij
   [:!OC#Pright_command :!SOs [:term]]                                          ; tab rename        ; zellij
   [:!OC#Pspacebar :!SOt [:term]]                                               ; tab jump back     ; zellij
@@ -1612,9 +1613,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; control - command
-{:des "Control - Command Mode - arrows"
+{:des "Control - Command Mode"
  :rules
  [;
+  ; TODO: annotate for Babel compatibility
   [:!TC#Pleft_arrow [:!Tb] [:term]]                        ; movement & helix                      ;
   [:!TC#Pright_arrow [:!Tf] [:term]]                       ; movement & helix                      ;
   [:!TC#Pup_arrow [:!Tn] [:term]]                          ; movement & helix                      ;
@@ -1631,6 +1633,7 @@
   ; [:!TC#Pperiod []]                                                                              ;
   ; [:!TC#Pslash []]                                                                               ;
 
+  ; TODO: review bindings helix splits
   [:!TC#Pdelete_or_backspace [:!Tl]]                       ; close & helix                         ;
   [:!TC#Preturn_or_enter [:!Tg]]                           ; new & helix                           ;
   [:!TC#Pright_shift [:!Tv]]                               ; split right & helix                   ;
@@ -1986,6 +1989,7 @@
 {:des "Control Mode - numbers"
  :rules
  [;
+ ; TODO: improve annotations for empty bindings
   [:!T#Pkeypad_1 [:vk_none]]                                                   ;    EMPTY          ;
   [:!T#Pkeypad_2 [:vk_none]]                                                   ;    EMPTY          ;
   [:!T#Pkeypad_3 [:vk_none]]                                                   ;    EMPTY          ;
@@ -2015,7 +2019,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; TODO: move to switched mode
+; TODO: move to switched mode?
 ; control
 {:des "Control Mode - alphabet"
  :rules
@@ -2215,6 +2219,7 @@
 {:des "Option Mode - numbers"
  :rules
  [;
+ ; TODO: update empty keys
   [:!O#Pkeypad_1 [:vk_none]]                                                   ;    EMPTY          ;
   [:!O#Pkeypad_2 [:vk_none]]                                                   ;    EMPTY          ;
   [:!O#Pkeypad_3 [:vk_none]]                                                   ;    EMPTY          ;
@@ -2248,6 +2253,7 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
+ ; TODO: better annotations for Alacritty / Zellij remaps
   [:!O#Pa :!Of1 [:term]]                                                                           ; zellij
   [:!O#Pb :!Of2 [:term]]                                                                           ; zellij
   [:!O#Pc :!Of4 [:term]]                                                                           ; zellij
@@ -2419,12 +2425,12 @@
   ; [:!S#Pperiod []]                                                                NOT USEFUL     ;
   ; [:!S#Pslash []]                                                                 NOT USEFUL     ;
 
-  ; [:!S#Pdelete_or_backspace []]                                                                  ;
-  [:!S#Preturn_or_enter [:!Wh]]                                                                    ;
+  [:!S#Pdelete_or_backspace [:!Wr]]                                                                ;
+  [:!S#Preturn_or_enter [:!Ws]]                                                                    ;
   [:!S#Pright_shift [:delete_forward]]                                                             ;
-  [:!S#Pright_option [:!Od]]                                                                       ;
-  [:!S#Pright_command [:!Tk]]                                                                      ;
-  [:!S#Pspacebar [:!Ec]]                                                                           ;
+  [:!S#Pright_option [:!Ed]]                                                                       ;
+  [:!S#Pright_command [:!Wk]]                                                                      ;
+  [:!S#Pspacebar [:!Wt]]                                                                           ;
 
   ; [:!S#Pleft_command []]                                                          NOT USEFUL     ;
   ; [:!S#Pleft_option []]                                                           NOT USEFUL     ;
@@ -3053,9 +3059,9 @@
   ; [:!R#Pright_command []]                                                         NOT USEFUL     ;
   ; [:!R#Pspacebar []]                                                                             ;
 
-  [:!R#Pleft_command [:!Tu]]                                                                       ;
+  [:!R#Pleft_command [:!Wu]]                                                                       ;
   ; [:!Rleft_option []]                                                                            ;
-  [:!R#Pleft_control [:!Tw]]                                                                       ;
+  [:!R#Pleft_control [:!Ww]]                                                                       ;
   [:!R#Pleft_shift [:delete_or_backspace]]                                                         ;
   ; [:!R#Pcaps_lock []]                                                                            ;
   ; [:!R#Ptab []]                                                                                  ;
@@ -3168,14 +3174,14 @@
   ; [:!E#Pright_command []]                                                         NOT USEFUL     ;
   ; [:!E#Pspacebar []]                                                                             ;
 
-  [:!E#Pleft_command [:f13]]                                                   ; move forward      ; helix
-  [:!E#Pleft_option [:f14]]                                                    ; repeat motion     ; helix
-  [:!E#Pleft_control [:f15]]                                                   ; move backward     ; helix
-  [:!E#Pleft_shift [:f16]]                                                     ; next diag         ; helix
-  [:!E#Pcaps_lock [:f17]]                                                      ; diag              ; helix
-  [:!E#Ptab [:f18]]                                                            ; prev diag         ; helix
-  [:!E#Pkeypad_num_lock [:f19]]                                                                    ;
-  [:!E#Pescape [:f20]]                                                                             ;
+  ; [:!E#Pleft_command [:f13]]                                                   ; move forward      ; helix
+  ; [:!E#Pleft_option [:f14]]                                                    ; repeat motion     ; helix
+  ; [:!E#Pleft_control [:f15]]                                                   ; move backward     ; helix
+  ; [:!E#Pleft_shift [:f16]]                                                     ; next diag         ; helix
+  ; [:!E#Pcaps_lock [:f17]]                                                      ; diag              ; helix
+  ; [:!E#Ptab [:f18]]                                                            ; prev diag         ; helix
+  ; [:!E#Pkeypad_num_lock [:f19]]                                                                    ;
+  ; [:!E#Pescape [:f20]]                                                                             ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -3617,5 +3623,5 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-    ]}]}
+  ]}]}
 
