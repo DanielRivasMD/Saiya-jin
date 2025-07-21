@@ -50,6 +50,7 @@
 {:des "Option Mode - numbers"
  :rules
  [;
+ ; TODO: update empty keys
   [:!O#Pkeypad_1 [:vk_none]]                                                   ;    EMPTY          ;
   [:!O#Pkeypad_2 [:vk_none]]                                                   ;    EMPTY          ;
   [:!O#Pkeypad_3 [:vk_none]]                                                   ;    EMPTY          ;
@@ -83,6 +84,7 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
+ ; TODO: better annotations for Alacritty / Zellij remaps
   [:!O#Pa :!Of1 [:term]]                                                                           ; zellij
   [:!O#Pb :!Of2 [:term]]                                                                           ; zellij
   [:!O#Pc :!Of4 [:term]]                                                                           ; zellij
