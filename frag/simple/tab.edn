@@ -28,9 +28,9 @@
   ; [:!ROTC#Pslash []]                                                                             ;
 
   [:!ROTC#Pdelete_or_backspace [:launch "Arc"]]                                                    ;
-  [:!ROTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
-  [:!ROTC#Pright_shift [:launch "Mail"]]                                                           ;
-  [:!ROTC#Pright_option [:launch "Skim"]]                                                          ;
+  [:!ROTC#Preturn_or_enter [:!W#Pnon_us_pound]]                                ; spaces            ; arc
+  [:!ROTC#Pright_shift [:launch "Alacritty"]]                                                      ;
+  [:!ROTC#Pright_option [:launch "Mail"]]                                                          ;
   [:!ROTC#Pright_command [:launch "Calendar"]]                                                     ;
   ; [:!ROTC#Pspacebar []]                                                      ; speak             ; system
 
