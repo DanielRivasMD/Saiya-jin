@@ -27,12 +27,12 @@
   ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
   ; [:!ROTC#Pslash []]                                                                             ;
 
-  [:!ROTC#Pdelete_or_backspace [:launch "Arc"]]                                                    ;
-  [:!ROTC#Preturn_or_enter [:!W#Pnon_us_pound]]                                ; spaces            ; arc
-  [:!ROTC#Pright_shift [:launch "Alacritty"]]                                                      ;
+  [:!ROTC#Pdelete_or_backspace [:launch "Alacritty"]]                                              ;
+  ; [:!ROTC#Preturn_or_enter []]                                               ; speak             ; system
+  [:!ROTC#Pright_shift [:launch "Arc"]]                                                            ;
   [:!ROTC#Pright_option [:launch "Mail"]]                                                          ;
   [:!ROTC#Pright_command [:launch "Calendar"]]                                                     ;
-  ; [:!ROTC#Pspacebar []]                                                      ; speak             ; system
+  [:!ROTC#Pspacebar [:!W#Pnon_us_pound]]                                       ; spaces            ; arc
 
   ; [:!ROTC#Pleft_command []]                                                       NOT USEFUL     ;
   ; [:!ROTC#Pleft_option []]                                                        NOT USEFUL     ;
