@@ -6,6 +6,7 @@
 {:des "Control Mode - arrows"
  :rules
  [;
+ ; TODO: update helix annotations homogeneous format
   [:!W#Pleft_arrow [:!Wpage_up] [:term]]                                       ; undo              ; helix
   [:!W#Pright_arrow [:!Wpage_down] [:term]]                                    ; redo              ; helix
   [:!W#Pup_arrow [:!Whome] [:term]]                                            ; prev change       ; helix
