@@ -83,33 +83,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  ; [:!E#Pa [:a :w :a :i :t]]                                                                        ; 'await'
-  ; [:!E#Pb [:b :e :g :i :n]]                                                                        ; 'begin'
-  ; [:!E#Pc [:c :o :n :s :t]]                                                                        ; 'const'
-  ; [:!E#Pd [:u :p :d :a :t :e]]                                                                     ; 'update'
-  ; [:!E#Pe [:e :n :u :m]]                                                                           ; 'enum'
-  ; [:!E#Pf [:f :u :n :c :t :i :o :n]]                                                               ; 'function'
-  ; [:!E#Pg [:g :l :o :b :a :l]]                                                                     ; 'global'
-  ; ; [:!E#Ph [:i :f]]                                                                                 ; 'if'
-  ; [:!E#Pi [:w :h :i :c :h]]                                                                        ; 'which'
-  ; [:!E#Pj [:e :l :s :e]]                                                                           ; 'else'
-  ; [:!E#Pk [:l :o :c :a :l]]                                                                        ; 'local'
-  ; ; [:!E#Pl [:l :e :t]]                                                                              ; 'let'
-  ; [:!E#Pm [:m :u :t :a :b :l :e]]                                                                  ; 'mutable'
-  ; ; [:!E#Pn [:e :n :d]]                                                                              ; 'end'
-  ; [:!E#Po [:t :y :p :e]]                                                                           ; 'type'
-  ; ; [:!E#Pp [:p :u :b]]                                                                              ; 'pub'
-  ; [:!E#Pq [:d :e :p :r :e :c :a :t :e]]                                                            ; 'deprecate'
-  ; [:!E#Pr [:s :t :r :u :c :t]]                                                                     ; 'struct'
-  ; [:!E#Ps [:a :s :y :n :c]]                                                                        ; 'async'
-  ; [:!E#Pt [:t :e :s :t]]                                                                           ; 'test'
-  ; [:!E#Pu [:u :s :i :n :g]]                                                                        ; 'using'
-  ; [:!E#Pv [:w :h :i :l :e]]                                                                        ; 'while'
-  ; [:!E#Pw [:w :h :e :r :e]]                                                                        ; 'where'
-  ; [:!E#Px [:e :x :i :t]]                                                                           ; 'exit'
-  ; [:!E#Py [:s :t :r :i :n :g]]                                                                     ; 'string'
-  ; [:!E#Pz [:f :o :r]]                                                                              ; 'for'
-  ; [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]                                           ; ' ∈ '
+  ; [:!E#Pa []]                                                                                    ;
+  [:!E#Pb [:b :u :g :!Ssemicolon :spacebar]]                                                       ; 'bug: '
+  ; [:!E#Pc []]                                                                                    ;
+  [:!E#Pd [:d :o :c :!Ssemicolon :spacebar]]                                                       ; 'doc: '
+  ; [:!E#Pe []]                                                                                    ;
+  [:!E#Pf [:f :e :a :t :!Ssemicolon :spacebar]]                                                    ; 'feat: '
+  ; [:!E#Pg []]                                                                                    ;
+  ; [:!E#Ph []]                                                                                    ;
+  ; [:!E#Pi []]                                                                                    ;
+  ; [:!E#Pj []]                                                                                    ;
+  ; [:!E#Pk []]                                                                                    ;
+  ; [:!E#Pl []]                                                                                    ;
+  ; [:!E#Pm []]                                                                                    ;
+  ; [:!E#Pn []]                                                                                    ;
+  ; [:!E#Po []]                                                                                    ;
+  ; [:!E#Pp []]                                                                                    ;
+  ; [:!E#Pq []]                                                                                    ;
+  [:!E#Pr [:r :f :a :c :!Ssemicolon :spacebar]]                                                    ; 'rfac: '
+  ; [:!E#Ps []]                                                                                    ;
+  [:!E#Pt [:t :e :s :t :!Ssemicolon :spacebar]]                                                    ; 'test: '
+  ; [:!E#Pu []]                                                                                    ;
+  ; [:!E#Pv []]                                                                                    ;
+  [:!E#Pw [:w :i :p :!Ssemicolon :spacebar]]                                                       ; 'wip: '
+  [:!E#Px [:f :i :x :!Ssemicolon :spacebar]]                                                       ; 'fix: '
+  ; [:!E#Py []]                                                                                    ;
+  ; [:!E#Pz []]                                                                                    ;
+  [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]                                           ; ' ∈ '
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -146,14 +146,14 @@
   ; [:!ER#Pright_command []]                                                        NOT USEFUL     ;
   ; [:!ER#Pspacebar []]                                                                            ;
 
-  [:!ER#Pleft_command [:!Rf13]]                                                                    ;
-  [:!ER#Pleft_option [:!Rf14]]                                                                     ;
-  [:!ER#Pleft_control [:!Rf15]]                                                                    ;
-  [:!ER#Pleft_shift [:!Rf16]]                                                                      ;
-  [:!ER#Pcaps_lock [:!Rf17]]                                                                       ;
-  [:!ER#Ptab [:!Rf18]]                                                                             ;
-  [:!ER#Pkeypad_num_lock [:!Rf19]]                                                                 ;
-  [:!ER#Pescape [:!Rf20]]                                                                          ;
+  ; [:!ER#Pleft_command [:!Rf13]]                                                                    ;
+  ; [:!ER#Pleft_option [:!Rf14]]                                                                     ;
+  ; [:!ER#Pleft_control [:!Rf15]]                                                                    ;
+  ; [:!ER#Pleft_shift [:!Rf16]]                                                                      ;
+  ; [:!ER#Pcaps_lock [:!Rf17]]                                                                       ;
+  ; [:!ER#Ptab [:!Rf18]]                                                                             ;
+  ; [:!ER#Pkeypad_num_lock [:!Rf19]]                                                                 ;
+  ; [:!ER#Pescape [:!Rf20]]                                                                          ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -195,33 +195,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  ; ; [:!ER#Pa [:!Sa :n :y]]                                                                           ; 'Any'
-  ; [:!ER#Pb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                                                ; 'BUG: '
-  ; ; [:!ER#Pc []]                                                                                   ;
-  ; [:!ER#Pd [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]                                                ; 'DOC: '
-  ; ; [:!ER#Pe []]                                                                                   ;
-  ; ; [:!ER#Pf [:!Sd :a :t :a :!Sf :r :a :m :e]]                                                       ; 'DataFrame'
-  ; ; [:!ER#Pg []]                                                                                   ;
-  ; ; [:!ER#Ph []]                                                                                   ;
-  ; [:!ER#Pi [:!Si :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]                                           ; 'IDEA: '
-  ; ; [:!ER#Pj []]                                                                                   ;
-  ; [:!ER#Pk [:!Sk :!Se :!Sy :!Ssemicolon :spacebar]]                                                ; 'KEY: '
-  ; [:!ER#Pl [:!Sn :!Su :!Sl :!Sl]]                                                                  ; 'NULL'
-  ; ; [:!ER#Pm [:!Sf :l :o :a :t :6 :4]]                                                               ; 'Float64'
-  ; ; [:!ER#Pn [:!Si :n :t :6 :4]]                                                                     ; 'Int64'
-  ; ; [:!ER#Po []]                                                                                   ;
-  ; ; [:!ER#Pp []]                                                                                   ;
-  ; ; [:!ER#Pq []]                                                                                   ;
-  ; ; [:!ER#Pr []]                                                                                   ;
-  ; ; [:!ER#Ps [:!Ss :t :r :i :n :g]]                                                                  ; 'String'
+  ; [:!ER#Pa []]                                                                                   ;
+  [:!ER#Pb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                                                ; 'BUG: '
+  ; [:!ER#Pc []]                                                                                   ;
+  [:!ER#Pd [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]                                                ; 'DOC: '
+  ; [:!ER#Pe []]                                                                                   ;
+  [:!ER#Pf [:!Sf :!Se :!Sa :!St :!Ssemicolon :spacebar]]                                           ; 'FEAT: '
+  ; [:!ER#Pg []]                                                                                   ;
+  ; [:!ER#Ph []]                                                                                   ;
+  ; [:!ER#Pi []]                                                                                   ;
+  ; [:!ER#Pj []]                                                                                   ;
+  ; [:!ER#Pk []]                                                                                   ;
+  ; [:!ER#Pl []]                                                                                   ;
+  ; [:!ER#Pm []]                                                                                   ;
+  ; [:!ER#Pn []]                                                                                   ;
+  ; [:!ER#Po []]                                                                                   ;
+  ; [:!ER#Pp []]                                                                                   ;
+  ; [:!ER#Pq []]                                                                                   ;
+  [:!ER#Pr [:!Sr :!Sf :!Sa :!Sc :!Ssemicolon :spacebar]]                                           ; 'RFAC: '
+  ; [:!ER#Ps []]                                                                                   ;
   [:!ER#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                                           ; 'TODO: '
-  ; ; [:!ER#Pu []]                                                                                   ;
-  ; ; [:!ER#Pv [:!Sv :e :c :t :o :r]]                                                                  ; 'Vector'
-  ; [:!ER#Pw [:!Sw :!Si :!Sp :!Ssemicolon :spacebar]]                                                ; 'WIP: '
-  ; [:!ER#Px [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]                                                ; 'FIX: '
-  ; ; [:!ER#Py [:!Ss :y :m :b :o :l]]                                                                  ; 'Symbol'
-  ; ; [:!ER#Pz []]                                                                                   ;
-  ; [:!ER#Pright_control [:!Ssemicolon :period :i :n :!Ssemicolon]]                                  ; ' .∈ '
+  ; [:!ER#Pu []]                                                                                   ;
+  ; [:!ER#Pv []]                                                                                   ;
+  [:!ER#Pw [:!Sw :!Si :!Sp :!Ssemicolon :spacebar]]                                                ; 'WIP: '
+  [:!ER#Px [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]                                                ; 'FIX: '
+  ; [:!ER#Py []]                                                                                   ;
+  ; [:!ER#Pz []]                                                                                   ;
+  [:!ER#Pright_control [:!Ssemicolon :period :i :n :!Ssemicolon]]                                  ; ' .∈ '
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
