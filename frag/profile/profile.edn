@@ -36,6 +36,7 @@
 :applications
 {;
  :browser ["company.thebrowser.Browser"]                                                           ;
+ :finder ["com.apple.finder"]                                                                      ;
  :mail ["com.apple.mail"]                                                                          ;
  :term ["org.alacritty"]                                                                           ;
  :skim ["net.sourceforge.skim-app.skim"]                                                           ;
