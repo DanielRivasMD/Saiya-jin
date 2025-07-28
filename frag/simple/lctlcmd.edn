@@ -1,102 +1,119 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; CTL-CMD
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; control - command
 {:des "Control - Command Mode"
- :rules
- [;
+ :rules [
+
   ; TODO: annotate for Babel compatibility
-  [:!TC#Pleft_arrow [:!Tb] [:term]]                        ; movement & helix                      ;
-  [:!TC#Pright_arrow [:!Tf] [:term]]                       ; movement & helix                      ;
-  [:!TC#Pup_arrow [:!Tn] [:term]]                          ; movement & helix                      ;
-  [:!TC#Pdown_arrow [:!Tp] [:term]]                        ; movement & helix                      ;
+  ^{:doc/actions [{:name "move-left"  :program "helix"}]}
+  [:!TC#Pleft_arrow [:!Tb] [:term]]
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ^{:doc/actions [{:name "move-right" :program "helix"}]}
+  [:!TC#Pright_arrow [:!Tf] [:term]]
 
-  ; [:!TC#Popen_bracket []]                                                                        ;
-  ; [:!TC#Pclose_bracket []]                                                                       ;
-  ; [:!TC#Psemicolon []]                                                                           ;
-  ; [:!TC#Pquote []]                                                                               ;
-  ; [:!TC#Pbackslash []]                                                                           ;
-  ; [:!TC#Pcomma []]                                                                               ;
-  ; [:!TC#Pperiod []]                                                                              ;
-  ; [:!TC#Pslash []]                                                                               ;
+  ^{:doc/actions [{:name "move-up"    :program "helix"}]}
+  [:!TC#Pup_arrow [:!Tn] [:term]]
+
+  ^{:doc/actions [{:name "move-down"  :program "helix"}]}
+  [:!TC#Pdown_arrow [:!Tp] [:term]]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; [:!TC#Popen_bracket []]
+  ; [:!TC#Pclose_bracket []]
+  ; [:!TC#Psemicolon []]
+  ; [:!TC#Pquote []]
+  ; [:!TC#Pbackslash []]
+  ; [:!TC#Pcomma []]
+  ; [:!TC#Pperiod []]
+  ; [:!TC#Pslash []]
 
   ; TODO: review bindings helix splits
-  [:!TC#Pdelete_or_backspace [:!Tl]]                       ; close & helix                         ;
-  [:!TC#Preturn_or_enter [:!Tg]]                           ; new & helix                           ;
-  [:!TC#Pright_shift [:!Tv]]                               ; split right & helix                   ;
-  [:!TC#Pright_option [:!Th]]                              ; split down & helix                    ;
-  [:!TC#Pright_command [:!Tj]]                             ; unsplit & helix                       ;
-  [:!TC#Pspacebar [:!To]]                                  ; jump back & helix                     ;
+  ^{:doc/actions [{:name "close"     :program "helix"}]}
+  [:!TC#Pdelete_or_backspace [:!Tl]]
 
-  ; [:!TCleft_command []]                                                           NOT AVAILABLE  ;
-  ; [:!TC#Pleft_option []]                                                          NOT USEFUL     ;
-  ; [:!TCleft_control []]                                                           NOT AVAILABLE  ;
-  ; [:!TC#Pleft_shift []]                                                           NOT USEFUL     ;
-  ; [:!TC#Pcaps_lock []]                                                            NOT USEFUL     ;
-  ; [:!TC#Ptab []]                                                                  NOT USEFUL     ;
-  ; [:!TC#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
-  ; [:!TC#Pescape []]                                                               NOT USEFUL     ;
+  ^{:doc/actions [{:name "new"       :program "helix"}]}
+  [:!TC#Preturn_or_enter [:!Tg]]
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ^{:doc/actions [{:name "split-right" :program "helix"}]}
+  [:!TC#Pright_shift [:!Tv]]
 
-  ; [:!TC#Pkeypad_1 []]                                                                            ;
-  ; [:!TC#Pkeypad_2 []]                                                                            ;
-  ; [:!TC#Pkeypad_3 []]                                                                            ;
-  ; [:!TC#Pkeypad_4 []]                                                                            ;
-  ; [:!TC#Pkeypad_5 []]                                                                            ;
-  ; [:!TC#Pkeypad_6 []]                                                                            ;
-  ; [:!TC#Pkeypad_7 []]                                                                            ;
-  ; [:!TC#Pkeypad_8 []]                                                                            ;
-  ; [:!TC#Pkeypad_9 []]                                                                            ;
-  ; [:!TC#Pkeypad_0 []]                                                                            ;
-  ; [:!TC#Pkeypad_slash []]                                                                        ;
-  ; [:!TC#Pkeypad_asterisk []]                                                                     ;
+  ^{:doc/actions [{:name "split-down"  :program "helix"}]}
+  [:!TC#Pright_option [:!Th]]
 
-  ; [:!TC#P1 []]                                                                                   ;
-  ; [:!TC#P2 []]                                                                                   ;
-  ; [:!TC#P3 []]                                                                                   ;
-  ; [:!TC#P4 []]                                                                                   ;
-  ; [:!TC#P5 []]                                                                                   ;
-  ; [:!TC#P6 []]                                                                                   ;
-  ; [:!TC#P7 []]                                                                                   ;
-  ; [:!TC#P8 []]                                                                                   ;
-  ; [:!TC#P9 []]                                                                                   ;
-  ; [:!TC#P0 []]                                                                                   ;
-  ; [:!TC#Phyphen []]                                                                              ;
-  ; [:!TC#Pequal_sign []]                                                                          ;
+  ^{:doc/actions [{:name "unsplit"   :program "helix"}]}
+  [:!TC#Pright_command [:!Tj]]
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ^{:doc/actions [{:name "jump-back"    :program "helix"}
+                  {:name "open-preview" :program "broot"}]}
+  [:!TC#Pspacebar [:!To]]
 
-  ; [:!TC#Pa []]                                                                                   ;
-  ; [:!TC#Pb []]                                                                                   ;
-  ; [:!TC#Pc []]                                                                                   ;
-  ; [:!TC#Pd []]                                                                                   ;
-  ; [:!TC#Pe []]                                                                                   ;
-  ; [:!TC#Pf []]                                                                                   ;
-  ; [:!TC#Pg []]                                                                                   ;
-  ; [:!TC#Ph []]                                                                                   ;
-  ; [:!TC#Pi []]                                                                                   ;
-  ; [:!TC#Pj []]                                                                                   ;
-  ; [:!TC#Pk []]                                                                                   ;
-  ; [:!TC#Pl []]                                                                                   ;
-  ; [:!TC#Pm []]                                                                                   ;
-  ; [:!TC#Pn []]                                                                                   ;
-  ; [:!TC#Po []]                                                                                   ;
-  ; [:!TC#Pp []]                                                                                   ;
-  ; [:!TC#Pq []]                                                                                   ;
-  ; [:!TC#Pr []]                                                                                   ;
-  ; [:!TC#Ps []]                                                                                   ;
-  ; [:!TC#Pt []]                                                                                   ;
-  ; [:!TC#Pu []]                                                                                   ;
-  ; [:!TC#Pv []]                                                                                   ;
-  ; [:!TC#Pw []]                                                                                   ;
-  ; [:!TC#Px []]                                                                                   ;
-  ; [:!TC#Py []]                                                                                   ;
-  ; [:!TC#Pz []]                                                                                   ;
-  ; [:!TC#Pright_control []]                                                                       ;
-  ]}
+  ; [:!TCleft_command []]                                                           NOT AVAILABLE
+  ; [:!TC#Pleft_option []]                                                          NOT USEFUL
+  ; [:!TCleft_control []]                                                           NOT AVAILABLE
+  ; [:!TC#Pleft_shift []]                                                           NOT USEFUL
+  ; [:!TC#Pcaps_lock []]                                                            NOT USEFUL
+  ; [:!TC#Ptab []]                                                                  NOT USEFUL
+  ; [:!TC#Pkeypad_num_lock []]                                                      NOT USEFUL
+  ; [:!TC#Pescape []]                                                               NOT USEFUL
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; [:!TC#Pkeypad_1 []]
+  ; [:!TC#Pkeypad_2 []]
+  ; [:!TC#Pkeypad_3 []]
+  ; [:!TC#Pkeypad_4 []]
+  ; [:!TC#Pkeypad_5 []]
+  ; [:!TC#Pkeypad_6 []]
+  ; [:!TC#Pkeypad_7 []]
+  ; [:!TC#Pkeypad_8 []]
+  ; [:!TC#Pkeypad_9 []]
+  ; [:!TC#Pkeypad_0 []]
+  ; [:!TC#Pkeypad_slash []]
+  ; [:!TC#Pkeypad_asterisk []]
+
+  ; [:!TC#P1 []]
+  ; [:!TC#P2 []]
+  ; [:!TC#P3 []]
+  ; [:!TC#P4 []]
+  ; [:!TC#P5 []]
+  ; [:!TC#P6 []]
+  ; [:!TC#P7 []]
+  ; [:!TC#P8 []]
+  ; [:!TC#P9 []]
+  ; [:!TC#P0 []]
+  ; [:!TC#Phyphen []]
+  ; [:!TC#Pequal_sign []]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; [:!TC#Pa []]
+  ; [:!TC#Pb []]
+  ; [:!TC#Pc []]
+  ; [:!TC#Pd []]
+  ; [:!TC#Pe []]
+  ; [:!TC#Pf []]
+  ; [:!TC#Pg []]
+  ; [:!TC#Ph []]
+  ; [:!TC#Pi []]
+  ; [:!TC#Pj []]
+  ; [:!TC#Pk []]
+  ; [:!TC#Pl []]
+  ; [:!TC#Pm []]
+  ; [:!TC#Pn []]
+  ; [:!TC#Po []]
+  ; [:!TC#Pp []]
+  ; [:!TC#Pq []]
+  ; [:!TC#Pr []]
+  ; [:!TC#Ps []]
+  ; [:!TC#Pt []]
+  ; [:!TC#Pu []]
+  ; [:!TC#Pv []]
+  ; [:!TC#Pw []]
+  ; [:!TC#Px []]
+  ; [:!TC#Py []]
+  ; [:!TC#Pz []]
+  ; [:!TC#Pright_control []]
+ ]}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
