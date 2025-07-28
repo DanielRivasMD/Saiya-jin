@@ -39,6 +39,7 @@
 :applications
 {;
  :browser ["company.thebrowser.Browser"]                                                           ;
+ :finder ["com.apple.finder"]                                                                      ;
  :mail ["com.apple.mail"]                                                                          ;
  :term ["org.alacritty"]                                                                           ;
  :skim ["net.sourceforge.skim-app.skim"]                                                           ;
@@ -77,7 +78,6 @@
 
 :main [
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; browser
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -142,6 +142,20 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; finder
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; finder
+{:des "Finder"
+ :rules
+ [;
+  [:!EWQ#Pleft_arrow [:!Copen_bracket] [:finder]]          ;                                       ;
+  [:!EWQ#Pright_arrow [:!Cclose_bracket] [:finder]]        ;                                       ;
+  [:!T#Pspacebar [:!TCs] [:finder]]                        ;                                       ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; TODO: update
 ; ; mail
@@ -167,208 +181,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; ZELLIJ
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; TODO: remap & autodoc alt-ctl & alt-cmd
-; TODO: check documentation for pop-up windows
-; Alacritty
-{:des "Terminal zellij bindings - alphabet"
- :rules
- [;
-  ; ; on demand window
-  ; [:#Pdelete_or_backspace :!EQright_shift  [:term] {:alone [:!Tv]}]                              ;
-
-  ; [:#Pleft_option :left_option [:term] {:alone [:!Oa]}]    ; alt               ;                   ;
-
-  ; [:!O#Pleft_arrow :!Ob [:term]]                           ; alt-left          ; cursor movement   ;
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ; [: :!Oc [:term]]                                                                COLLISION      ;
-  ; [: :!Od [:term]]                                                                COLLISION      ;
-  ; [: :!Oe [:term]]                                                                COLLISION      ;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ; [:!O#Pright_arrow :!Of [:term]]                          ; alt-right         ; cursor movement
-  ; [:#Pescape :!EWright_shift [:term] {:alone [:!Og]}]      ; esc               ; pop-up window
-  ; [:#Pright_shift :right_shift [:term] {:alone [:!Oh]}]    ; shift             ; history term
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ; [: :!Oi [:term]]                                                                COLLISION      ;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ; ; pane movement - alt-ctl
-  ; [:!OT#Pleft_arrow :!Oj [:term]]                          ; alt-ctl-left      ;                   ;
-  ; [:!OT#Pright_arrow :!Ok [:term]]                         ; alt-ctl-right     ;                   ;
-  ; [:!OT#Pup_arrow :!Ol [:term]]                            ; alt-ctl-up        ;                   ;
-  ; [:!OT#Pdown_arrow :!Om [:term]]                          ; alt-ctl-down      ;                   ;
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ; [: :!On [:term]]                                                                COLLISION      ;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ; ; pane control - alt-ctl
-  ; [:!OT#Pdelete_or_backspace :!Oo [:term]]                 ; alt-ctl-bspace    ; close             ;
-  ; [:!OT#Preturn_or_enter :!Op [:term]]                     ; alt-ctl-enter     ; focus             ;
-  ; [:!OT#Pright_shift :!Oq [:term]]                         ; alt-ctl-shift     ; spawn new right   ;
-  ; [:!OT#Pright_option :!Or [:term]]                        ; alt-ctl-alt       ; spawn new down    ;
-  ; [:!OT#Pright_command :!Os [:term]]                       ; alt-ctl-cmd       ; float             ;
-  ; [:!OT#Pspacebar :!Ot [:term]]                            ; alt-ctl-space     ; jump back         ;
-
-  ; [:!OT#Pright_shift :!Cj [:zed]]                  ; alt-ctl-shift     ; spawn new right   ;
-  ; [:!OT#Pright_option :!Cj [:zed]]                ; alt-ctl-alt       ; spawn new down    ;
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ; [: :!Ou [:term]]                                                                COLLISION      ;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ; ; tab movement - alt-cmd
-  ; [:!OC#Pperiod :!Ov [:term]]                              ; alt-cmd-,         ;                   ;
-  ; [:!OC#Pcomma :!Ow [:term]]                               ; alt-cmd-.         ;                   ;
-  ; [:!OC#Pleft_arrow :!Ox [:term]]                          ; alt-cmd-left      ;                   ;
-  ; [:!OC#Pright_arrow :!Oy [:term]]                         ; alt-cmd-right     ;                   ;
-  ; [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ;                   ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Terminal zellij bindings - alphabet"
- :rules
- [;
-  ; ; zellij controls - alt
-  ; [:!EQ#Pleft_command :!SOa [:term]]                       ; alt-cmd           ;                   ;
-  ; [:!EQ#Pspacebar :!SOb [:term]]                           ; alt-alt           ;                   ;
-  ; [:!EQ#Pleft_control :!SOc [:term]]                       ; alt-ctl           ;                   ;
-  ; [:!EQ#Pleft_shift :!SOd [:term]]                         ; alt-shift         ;                   ;
-  ; [:!EQ#Pcaps_lock :!SOe [:term]]                          ; alt-caps          ;                   ;
-  ; [:!EQ#Ptab :!SOf [:term]]                                ; alt-tab           ;                   ;
-  ; [:!EQ#Pkeypad_num_lock :!SOg [:term]]                    ; alt-fn            ;                   ;
-  ; [:!EQ#Pescape :!SOh [:term]]                             ; alt-esc           ;                   ;
-
-  ; ; tab control - alt-cmd
-  ; [:!OC#Pdelete_or_backspace :!SOi [:term]]                ; alt-cmd-bspace    ;                   ;
-  ; [:!OC#Preturn_or_enter :!SOj [:term]]                    ; alt-cmd-enter     ;                   ;
-  ; [:!OC#Pright_shift :!SOk [:term]]                        ; alt-cmd-shift     ;                   ;
-  ; [:!OC#Pright_option :!SOl [:term]]                       ; alt-cmd-alt       ;                   ;
-  ; [:!OC#Pright_command :!SOm [:term]]                      ; alt-cmd-cmd       ;                   ;
-  ; [:!OC#Pspacebar :!SOn [:term]]                           ; alt-cmd-space     ;                   ;
-
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ; [: :!SOo [:term]]                                                               COLLISION      ;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ; zellij controls - alt
-  ; [:!EQ#Pright_command :!SOp [:term]]                       ; alt-cmd           ;                   ;
-  ; [:!EQ#Pright_control :!SOq [:term]]                       ; alt-ctl           ;                   ;
-
-  ; ; tab control - alt-cmd
-  ; [:!OC#P1 :!SOr [:term]]                                  ; alt-cmd-1         ;                   ;
-  ; [:!OC#P2 :!SOs [:term]]                                  ; alt-cmd-2         ;                   ;
-  ; [:!OC#P3 :!SOt [:term]]                                  ; alt-cmd-3         ;                   ;
-  ; [:!OC#P4 :!SOu [:term]]                                  ; alt-cmd-4         ;                   ;
-  ; [:!OC#P5 :!SOv [:term]]                                  ; alt-cmd-5         ;                   ;
-  ; [:!OC#P6 :!SOw [:term]]                                  ; alt-cmd-6         ;                   ;
-  ; [:!OC#P7 :!SOx [:term]]                                  ; alt-cmd-7         ;                   ;
-  ; [:!OC#P8 :!SOy [:term]]                                  ; alt-cmd-8         ;                   ;
-  ; [:!OC#P9 :!SOz [:term]]                                  ; alt-cmd-9         ;                   ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Terminal zellij bindings - keypad"
- :rules
- [;
-  ; ; tab control - alt-cmd
-  ; [:!OC#Pkeypad_0 :!SOn [:term]]                           ; alt-cmd-0         ;                   ;
-  ; [:!OC#Pkeypad_1 :!SOr [:term]]                           ; alt-cmd-1         ;                   ;
-  ; [:!OC#Pkeypad_2 :!SOs [:term]]                           ; alt-cmd-2         ;                   ;
-  ; [:!OC#Pkeypad_3 :!SOt [:term]]                           ; alt-cmd-3         ;                   ;
-  ; [:!OC#Pkeypad_4 :!SOu [:term]]                           ; alt-cmd-4         ;                   ;
-  ; [:!OC#Pkeypad_5 :!SOv [:term]]                           ; alt-cmd-5         ;                   ;
-  ; [:!OC#Pkeypad_6 :!SOw [:term]]                           ; alt-cmd-6         ;                   ;
-  ; [:!OC#Pkeypad_7 :!SOx [:term]]                           ; alt-cmd-7         ;                   ;
-  ; [:!OC#Pkeypad_8 :!SOy [:term]]                           ; alt-cmd-8         ;                   ;
-  ; [:!OC#Pkeypad_9 :!SOz [:term]]                           ; alt-cmd-9         ;                   ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Terminal alt - alphabet"
- :rules
- [;
-  ; [:!O#Pa :!Of1 [:term]]                                                                           ;
-  ; [:!O#Pb :!Of2 [:term]]                                                                           ;
-  ; [:!O#Pc :!Of4 [:term]]                                                                           ;
-  ; [:!O#Pd :!Of5 [:term]]                                                                           ;
-  ; [:!O#Pe :!Of6 [:term]]                                                                           ;
-  ; [:!O#Pf :!Of7 [:term]]                                                                           ;
-  ; [:!O#Pg :!Of8 [:term]]                                                                           ;
-  ; [:!O#Ph :!Of9 [:term]]                                                                           ;
-  ; [:!O#Pi :!Of10 [:term]]                                                                          ;
-  ; [:!O#Pj :!Tf1 [:term]]                                                                           ;
-  ; [:!O#Pk :!Tf2 [:term]]                                                                           ;
-  ; [:!O#Pl :!Tf4 [:term]]                                                                           ;
-  ; [:!O#Pm :!Tf5 [:term]]                                                                           ;
-  ; [:!O#Pn :!Tf6 [:term]]                                                                           ;
-  ; [:!O#Po :!Tf7 [:term]]                                                                           ;
-  ; [:!O#Pp :!Tf8 [:term]]                                                                           ;
-  ; [:!O#Pq :!Tf9 [:term]]                                                                           ;
-  ; [:!O#Pr :!Tf10 [:term]]                                                                          ;
-  ; [:!O#Ps :!OTf1 [:term]]                                                                          ;
-  ; [:!O#Pt :!OTf2 [:term]]                                                                          ;
-  ; [:!O#Pu :!OTf4 [:term]]                                                                          ;
-  ; [:!O#Pv :!OTf5 [:term]]                                                                          ;
-  ; [:!O#Pw :!OTf6 [:term]]                                                                          ;
-  ; [:!O#Px :!OTf7 [:term]]                                                                          ;
-  ; [:!O#Py :!OTf8 [:term]]                                                                          ;
-  ; [:!O#Pz :!OTf9 [:term]]                                                                          ;
-  ; [:!O#Pright_control :!OTf10 [:term]]                                                             ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Alacritty
-{:des "Terminal alt - alphabet"
- :rules
- [;
-  ; [:!SO#Pa :!SOf1 [:term]]                                                                         ;
-  ; [:!SO#Pb :!SOf2 [:term]]                                                                         ;
-  ; [:!SO#Pc :!SOf4 [:term]]                                                                         ;
-  ; [:!SO#Pd :!SOf5 [:term]]                                                                         ;
-  ; [:!SO#Pe :!SOf6 [:term]]                                                                         ;
-  ; [:!SO#Pf :!SOf7 [:term]]                                                                         ;
-  ; [:!SO#Pg :!SOf8 [:term]]                                                                         ;
-  ; [:!SO#Ph :!SOf9 [:term]]                                                                         ;
-  ; [:!SO#Pi :!SOf10 [:term]]                                                                        ;
-  ; [:!SO#Pj :!STf1 [:term]]                                                                         ;
-  ; [:!SO#Pk :!STf2 [:term]]                                                                         ;
-  ; [:!SO#Pl :!STf4 [:term]]                                                                         ;
-  ; [:!SO#Pm :!STf5 [:term]]                                                                         ;
-  ; [:!SO#Pn :!STf6 [:term]]                                                                         ;
-  ; [:!SO#Po :!STf7 [:term]]                                                                         ;
-  ; [:!SO#Pp :!STf8 [:term]]                                                                         ;
-  ; [:!SO#Pq :!STf9 [:term]]                                                                         ;
-  ; [:!SO#Pr :!STf10 [:term]]                                                                        ;
-  ; [:!SO#Ps :!SOTf1 [:term]]                                                                        ;
-  ; [:!SO#Pt :!SOTf2 [:term]]                                                                        ;
-  ; [:!SO#Pu :!SOTf4 [:term]]                                                                        ;
-  ; [:!SO#Pv :!SOTf5 [:term]]                                                                        ;
-  ; [:!SO#Pw :!SOTf6 [:term]]                                                                        ;
-  ; [:!SO#Px :!SOTf7 [:term]]                                                                        ;
-  ; [:!SO#Py :!SOTf8 [:term]]                                                                        ;
-  ; [:!SO#Pz :!SOTf9 [:term]]                                                                        ;
-  ; [:!SO#Pright_control :!SOTf10 [:term]]                                                           ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; zoom
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: homogenize to format
 ; zoom
 {:des ""
  :rules
@@ -1394,6 +1210,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: update sync with saiya-jin
 ; option - command
 {:des "Option - Command Mode - symbols"
  :rules
@@ -1608,107 +1425,124 @@
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; CTL-CMD
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; control - command
 {:des "Control - Command Mode"
- :rules
- [;
+ :rules [
+
   ; TODO: annotate for Babel compatibility
-  [:!TC#Pleft_arrow [:!Tb] [:term]]                        ; movement & helix                      ;
-  [:!TC#Pright_arrow [:!Tf] [:term]]                       ; movement & helix                      ;
-  [:!TC#Pup_arrow [:!Tn] [:term]]                          ; movement & helix                      ;
-  [:!TC#Pdown_arrow [:!Tp] [:term]]                        ; movement & helix                      ;
+  ^{:doc/actions [{:name "move-left"  :program "helix"}]}
+  [:!TC#Pleft_arrow [:!Tb] [:term]]
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ^{:doc/actions [{:name "move-right" :program "helix"}]}
+  [:!TC#Pright_arrow [:!Tf] [:term]]
 
-  ; [:!TC#Popen_bracket []]                                                                        ;
-  ; [:!TC#Pclose_bracket []]                                                                       ;
-  ; [:!TC#Psemicolon []]                                                                           ;
-  ; [:!TC#Pquote []]                                                                               ;
-  ; [:!TC#Pbackslash []]                                                                           ;
-  ; [:!TC#Pcomma []]                                                                               ;
-  ; [:!TC#Pperiod []]                                                                              ;
-  ; [:!TC#Pslash []]                                                                               ;
+  ^{:doc/actions [{:name "move-up"    :program "helix"}]}
+  [:!TC#Pup_arrow [:!Tn] [:term]]
+
+  ^{:doc/actions [{:name "move-down"  :program "helix"}]}
+  [:!TC#Pdown_arrow [:!Tp] [:term]]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; [:!TC#Popen_bracket []]
+  ; [:!TC#Pclose_bracket []]
+  ; [:!TC#Psemicolon []]
+  ; [:!TC#Pquote []]
+  ; [:!TC#Pbackslash []]
+  ; [:!TC#Pcomma []]
+  ; [:!TC#Pperiod []]
+  ; [:!TC#Pslash []]
 
   ; TODO: review bindings helix splits
-  [:!TC#Pdelete_or_backspace [:!Tl]]                       ; close & helix                         ;
-  [:!TC#Preturn_or_enter [:!Tg]]                           ; new & helix                           ;
-  [:!TC#Pright_shift [:!Tv]]                               ; split right & helix                   ;
-  [:!TC#Pright_option [:!Th]]                              ; split down & helix                    ;
-  [:!TC#Pright_command [:!Tj]]                             ; unsplit & helix                       ;
-  [:!TC#Pspacebar [:!To]]                                  ; jump back & helix                     ;
+  ^{:doc/actions [{:name "close"     :program "helix"}]}
+  [:!TC#Pdelete_or_backspace [:!Tl]]
 
-  ; [:!TCleft_command []]                                                           NOT AVAILABLE  ;
-  ; [:!TC#Pleft_option []]                                                          NOT USEFUL     ;
-  ; [:!TCleft_control []]                                                           NOT AVAILABLE  ;
-  ; [:!TC#Pleft_shift []]                                                           NOT USEFUL     ;
-  ; [:!TC#Pcaps_lock []]                                                            NOT USEFUL     ;
-  ; [:!TC#Ptab []]                                                                  NOT USEFUL     ;
-  ; [:!TC#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
-  ; [:!TC#Pescape []]                                                               NOT USEFUL     ;
+  ^{:doc/actions [{:name "new"       :program "helix"}]}
+  [:!TC#Preturn_or_enter [:!Tg]]
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ^{:doc/actions [{:name "split-right" :program "helix"}]}
+  [:!TC#Pright_shift [:!Tv]]
 
-  ; [:!TC#Pkeypad_1 []]                                                                            ;
-  ; [:!TC#Pkeypad_2 []]                                                                            ;
-  ; [:!TC#Pkeypad_3 []]                                                                            ;
-  ; [:!TC#Pkeypad_4 []]                                                                            ;
-  ; [:!TC#Pkeypad_5 []]                                                                            ;
-  ; [:!TC#Pkeypad_6 []]                                                                            ;
-  ; [:!TC#Pkeypad_7 []]                                                                            ;
-  ; [:!TC#Pkeypad_8 []]                                                                            ;
-  ; [:!TC#Pkeypad_9 []]                                                                            ;
-  ; [:!TC#Pkeypad_0 []]                                                                            ;
-  ; [:!TC#Pkeypad_slash []]                                                                        ;
-  ; [:!TC#Pkeypad_asterisk []]                                                                     ;
+  ^{:doc/actions [{:name "split-down"  :program "helix"}]}
+  [:!TC#Pright_option [:!Th]]
 
-  ; [:!TC#P1 []]                                                                                   ;
-  ; [:!TC#P2 []]                                                                                   ;
-  ; [:!TC#P3 []]                                                                                   ;
-  ; [:!TC#P4 []]                                                                                   ;
-  ; [:!TC#P5 []]                                                                                   ;
-  ; [:!TC#P6 []]                                                                                   ;
-  ; [:!TC#P7 []]                                                                                   ;
-  ; [:!TC#P8 []]                                                                                   ;
-  ; [:!TC#P9 []]                                                                                   ;
-  ; [:!TC#P0 []]                                                                                   ;
-  ; [:!TC#Phyphen []]                                                                              ;
-  ; [:!TC#Pequal_sign []]                                                                          ;
+  ^{:doc/actions [{:name "unsplit"   :program "helix"}]}
+  [:!TC#Pright_command [:!Tj]]
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ^{:doc/actions [{:name "jump-back"    :program "helix"}
+                  {:name "open-preview" :program "broot"}]}
+  [:!TC#Pspacebar [:!To]]
 
-  ; [:!TC#Pa []]                                                                                   ;
-  ; [:!TC#Pb []]                                                                                   ;
-  ; [:!TC#Pc []]                                                                                   ;
-  ; [:!TC#Pd []]                                                                                   ;
-  ; [:!TC#Pe []]                                                                                   ;
-  ; [:!TC#Pf []]                                                                                   ;
-  ; [:!TC#Pg []]                                                                                   ;
-  ; [:!TC#Ph []]                                                                                   ;
-  ; [:!TC#Pi []]                                                                                   ;
-  ; [:!TC#Pj []]                                                                                   ;
-  ; [:!TC#Pk []]                                                                                   ;
-  ; [:!TC#Pl []]                                                                                   ;
-  ; [:!TC#Pm []]                                                                                   ;
-  ; [:!TC#Pn []]                                                                                   ;
-  ; [:!TC#Po []]                                                                                   ;
-  ; [:!TC#Pp []]                                                                                   ;
-  ; [:!TC#Pq []]                                                                                   ;
-  ; [:!TC#Pr []]                                                                                   ;
-  ; [:!TC#Ps []]                                                                                   ;
-  ; [:!TC#Pt []]                                                                                   ;
-  ; [:!TC#Pu []]                                                                                   ;
-  ; [:!TC#Pv []]                                                                                   ;
-  ; [:!TC#Pw []]                                                                                   ;
-  ; [:!TC#Px []]                                                                                   ;
-  ; [:!TC#Py []]                                                                                   ;
-  ; [:!TC#Pz []]                                                                                   ;
-  ; [:!TC#Pright_control []]                                                                       ;
-  ]}
+  ; [:!TCleft_command []]                                                           NOT AVAILABLE
+  ; [:!TC#Pleft_option []]                                                          NOT USEFUL
+  ; [:!TCleft_control []]                                                           NOT AVAILABLE
+  ; [:!TC#Pleft_shift []]                                                           NOT USEFUL
+  ; [:!TC#Pcaps_lock []]                                                            NOT USEFUL
+  ; [:!TC#Ptab []]                                                                  NOT USEFUL
+  ; [:!TC#Pkeypad_num_lock []]                                                      NOT USEFUL
+  ; [:!TC#Pescape []]                                                               NOT USEFUL
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; [:!TC#Pkeypad_1 []]
+  ; [:!TC#Pkeypad_2 []]
+  ; [:!TC#Pkeypad_3 []]
+  ; [:!TC#Pkeypad_4 []]
+  ; [:!TC#Pkeypad_5 []]
+  ; [:!TC#Pkeypad_6 []]
+  ; [:!TC#Pkeypad_7 []]
+  ; [:!TC#Pkeypad_8 []]
+  ; [:!TC#Pkeypad_9 []]
+  ; [:!TC#Pkeypad_0 []]
+  ; [:!TC#Pkeypad_slash []]
+  ; [:!TC#Pkeypad_asterisk []]
+
+  ; [:!TC#P1 []]
+  ; [:!TC#P2 []]
+  ; [:!TC#P3 []]
+  ; [:!TC#P4 []]
+  ; [:!TC#P5 []]
+  ; [:!TC#P6 []]
+  ; [:!TC#P7 []]
+  ; [:!TC#P8 []]
+  ; [:!TC#P9 []]
+  ; [:!TC#P0 []]
+  ; [:!TC#Phyphen []]
+  ; [:!TC#Pequal_sign []]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; [:!TC#Pa []]
+  ; [:!TC#Pb []]
+  ; [:!TC#Pc []]
+  ; [:!TC#Pd []]
+  ; [:!TC#Pe []]
+  ; [:!TC#Pf []]
+  ; [:!TC#Pg []]
+  ; [:!TC#Ph []]
+  ; [:!TC#Pi []]
+  ; [:!TC#Pj []]
+  ; [:!TC#Pk []]
+  ; [:!TC#Pl []]
+  ; [:!TC#Pm []]
+  ; [:!TC#Pn []]
+  ; [:!TC#Po []]
+  ; [:!TC#Pp []]
+  ; [:!TC#Pq []]
+  ; [:!TC#Pr []]
+  ; [:!TC#Ps []]
+  ; [:!TC#Pt []]
+  ; [:!TC#Pu []]
+  ; [:!TC#Pv []]
+  ; [:!TC#Pw []]
+  ; [:!TC#Px []]
+  ; [:!TC#Py []]
+  ; [:!TC#Pz []]
+  ; [:!TC#Pright_control []]
+ ]}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; CMD
@@ -2521,7 +2355,7 @@
  :rules
  [:pro
   [:#Pdelete_or_backspace [:grave_accent_and_tilde]]                                               ; '`'
-  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
+  [:!C#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
   [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
   ]}
 
@@ -2530,7 +2364,7 @@
  :rules
  [:air
   [:#Pdelete_or_backspace [:grave_accent_and_tilde]]                                               ; '`'
-  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
+  [:!C#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
   [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
   [:f1 :display_brightness_decrement]
   [:f2 :display_brightness_increment]
@@ -2803,6 +2637,7 @@
 {:des "Control Mode - arrows"
  :rules
  [;
+ ; TODO: update helix annotations homogeneous format
   [:!W#Pleft_arrow [:!Wpage_up] [:term]]                                       ; undo              ; helix
   [:!W#Pright_arrow [:!Wpage_down] [:term]]                                    ; redo              ; helix
   [:!W#Pup_arrow [:!Whome] [:term]]                                            ; prev change       ; helix
@@ -3223,33 +3058,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  ; [:!E#Pa [:a :w :a :i :t]]                                                                        ; 'await'
-  ; [:!E#Pb [:b :e :g :i :n]]                                                                        ; 'begin'
-  ; [:!E#Pc [:c :o :n :s :t]]                                                                        ; 'const'
-  ; [:!E#Pd [:u :p :d :a :t :e]]                                                                     ; 'update'
-  ; [:!E#Pe [:e :n :u :m]]                                                                           ; 'enum'
-  ; [:!E#Pf [:f :u :n :c :t :i :o :n]]                                                               ; 'function'
-  ; [:!E#Pg [:g :l :o :b :a :l]]                                                                     ; 'global'
-  ; ; [:!E#Ph [:i :f]]                                                                                 ; 'if'
-  ; [:!E#Pi [:w :h :i :c :h]]                                                                        ; 'which'
-  ; [:!E#Pj [:e :l :s :e]]                                                                           ; 'else'
-  ; [:!E#Pk [:l :o :c :a :l]]                                                                        ; 'local'
-  ; ; [:!E#Pl [:l :e :t]]                                                                              ; 'let'
-  ; [:!E#Pm [:m :u :t :a :b :l :e]]                                                                  ; 'mutable'
-  ; ; [:!E#Pn [:e :n :d]]                                                                              ; 'end'
-  ; [:!E#Po [:t :y :p :e]]                                                                           ; 'type'
-  ; ; [:!E#Pp [:p :u :b]]                                                                              ; 'pub'
-  ; [:!E#Pq [:d :e :p :r :e :c :a :t :e]]                                                            ; 'deprecate'
-  ; [:!E#Pr [:s :t :r :u :c :t]]                                                                     ; 'struct'
-  ; [:!E#Ps [:a :s :y :n :c]]                                                                        ; 'async'
-  ; [:!E#Pt [:t :e :s :t]]                                                                           ; 'test'
-  ; [:!E#Pu [:u :s :i :n :g]]                                                                        ; 'using'
-  ; [:!E#Pv [:w :h :i :l :e]]                                                                        ; 'while'
-  ; [:!E#Pw [:w :h :e :r :e]]                                                                        ; 'where'
-  ; [:!E#Px [:e :x :i :t]]                                                                           ; 'exit'
-  ; [:!E#Py [:s :t :r :i :n :g]]                                                                     ; 'string'
-  ; [:!E#Pz [:f :o :r]]                                                                              ; 'for'
-  ; [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]                                           ; ' ∈ '
+  ; [:!E#Pa []]                                                                                    ;
+  [:!E#Pb [:b :u :g :!Ssemicolon :spacebar]]                                                       ; 'bug: '
+  ; [:!E#Pc []]                                                                                    ;
+  [:!E#Pd [:d :o :c :!Ssemicolon :spacebar]]                                                       ; 'doc: '
+  ; [:!E#Pe []]                                                                                    ;
+  [:!E#Pf [:f :e :a :t :!Ssemicolon :spacebar]]                                                    ; 'feat: '
+  ; [:!E#Pg []]                                                                                    ;
+  ; [:!E#Ph []]                                                                                    ;
+  ; [:!E#Pi []]                                                                                    ;
+  ; [:!E#Pj []]                                                                                    ;
+  ; [:!E#Pk []]                                                                                    ;
+  ; [:!E#Pl []]                                                                                    ;
+  ; [:!E#Pm []]                                                                                    ;
+  ; [:!E#Pn []]                                                                                    ;
+  ; [:!E#Po []]                                                                                    ;
+  ; [:!E#Pp []]                                                                                    ;
+  ; [:!E#Pq []]                                                                                    ;
+  [:!E#Pr [:r :f :a :c :!Ssemicolon :spacebar]]                                                    ; 'rfac: '
+  ; [:!E#Ps []]                                                                                    ;
+  [:!E#Pt [:t :e :s :t :!Ssemicolon :spacebar]]                                                    ; 'test: '
+  ; [:!E#Pu []]                                                                                    ;
+  ; [:!E#Pv []]                                                                                    ;
+  [:!E#Pw [:w :i :p :!Ssemicolon :spacebar]]                                                       ; 'wip: '
+  [:!E#Px [:f :i :x :!Ssemicolon :spacebar]]                                                       ; 'fix: '
+  ; [:!E#Py []]                                                                                    ;
+  ; [:!E#Pz []]                                                                                    ;
+  [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]                                           ; ' ∈ '
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -3286,14 +3121,14 @@
   ; [:!ER#Pright_command []]                                                        NOT USEFUL     ;
   ; [:!ER#Pspacebar []]                                                                            ;
 
-  [:!ER#Pleft_command [:!Rf13]]                                                                    ;
-  [:!ER#Pleft_option [:!Rf14]]                                                                     ;
-  [:!ER#Pleft_control [:!Rf15]]                                                                    ;
-  [:!ER#Pleft_shift [:!Rf16]]                                                                      ;
-  [:!ER#Pcaps_lock [:!Rf17]]                                                                       ;
-  [:!ER#Ptab [:!Rf18]]                                                                             ;
-  [:!ER#Pkeypad_num_lock [:!Rf19]]                                                                 ;
-  [:!ER#Pescape [:!Rf20]]                                                                          ;
+  ; [:!ER#Pleft_command [:!Rf13]]                                                                    ;
+  ; [:!ER#Pleft_option [:!Rf14]]                                                                     ;
+  ; [:!ER#Pleft_control [:!Rf15]]                                                                    ;
+  ; [:!ER#Pleft_shift [:!Rf16]]                                                                      ;
+  ; [:!ER#Pcaps_lock [:!Rf17]]                                                                       ;
+  ; [:!ER#Ptab [:!Rf18]]                                                                             ;
+  ; [:!ER#Pkeypad_num_lock [:!Rf19]]                                                                 ;
+  ; [:!ER#Pescape [:!Rf20]]                                                                          ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -3335,33 +3170,33 @@
 {:des "Option Mode - alphabet"
  :rules
  [;
-  ; ; [:!ER#Pa [:!Sa :n :y]]                                                                           ; 'Any'
-  ; [:!ER#Pb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                                                ; 'BUG: '
-  ; ; [:!ER#Pc []]                                                                                   ;
-  ; [:!ER#Pd [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]                                                ; 'DOC: '
-  ; ; [:!ER#Pe []]                                                                                   ;
-  ; ; [:!ER#Pf [:!Sd :a :t :a :!Sf :r :a :m :e]]                                                       ; 'DataFrame'
-  ; ; [:!ER#Pg []]                                                                                   ;
-  ; ; [:!ER#Ph []]                                                                                   ;
-  ; [:!ER#Pi [:!Si :!Sd :!Se :!Sa :!Ssemicolon :spacebar]]                                           ; 'IDEA: '
-  ; ; [:!ER#Pj []]                                                                                   ;
-  ; [:!ER#Pk [:!Sk :!Se :!Sy :!Ssemicolon :spacebar]]                                                ; 'KEY: '
-  ; [:!ER#Pl [:!Sn :!Su :!Sl :!Sl]]                                                                  ; 'NULL'
-  ; ; [:!ER#Pm [:!Sf :l :o :a :t :6 :4]]                                                               ; 'Float64'
-  ; ; [:!ER#Pn [:!Si :n :t :6 :4]]                                                                     ; 'Int64'
-  ; ; [:!ER#Po []]                                                                                   ;
-  ; ; [:!ER#Pp []]                                                                                   ;
-  ; ; [:!ER#Pq []]                                                                                   ;
-  ; ; [:!ER#Pr []]                                                                                   ;
-  ; ; [:!ER#Ps [:!Ss :t :r :i :n :g]]                                                                  ; 'String'
+  ; [:!ER#Pa []]                                                                                   ;
+  [:!ER#Pb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                                                ; 'BUG: '
+  ; [:!ER#Pc []]                                                                                   ;
+  [:!ER#Pd [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]                                                ; 'DOC: '
+  ; [:!ER#Pe []]                                                                                   ;
+  [:!ER#Pf [:!Sf :!Se :!Sa :!St :!Ssemicolon :spacebar]]                                           ; 'FEAT: '
+  ; [:!ER#Pg []]                                                                                   ;
+  ; [:!ER#Ph []]                                                                                   ;
+  ; [:!ER#Pi []]                                                                                   ;
+  ; [:!ER#Pj []]                                                                                   ;
+  ; [:!ER#Pk []]                                                                                   ;
+  ; [:!ER#Pl []]                                                                                   ;
+  ; [:!ER#Pm []]                                                                                   ;
+  ; [:!ER#Pn []]                                                                                   ;
+  ; [:!ER#Po []]                                                                                   ;
+  ; [:!ER#Pp []]                                                                                   ;
+  ; [:!ER#Pq []]                                                                                   ;
+  [:!ER#Pr [:!Sr :!Sf :!Sa :!Sc :!Ssemicolon :spacebar]]                                           ; 'RFAC: '
+  ; [:!ER#Ps []]                                                                                   ;
   [:!ER#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                                           ; 'TODO: '
-  ; ; [:!ER#Pu []]                                                                                   ;
-  ; ; [:!ER#Pv [:!Sv :e :c :t :o :r]]                                                                  ; 'Vector'
-  ; [:!ER#Pw [:!Sw :!Si :!Sp :!Ssemicolon :spacebar]]                                                ; 'WIP: '
-  ; [:!ER#Px [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]                                                ; 'FIX: '
-  ; ; [:!ER#Py [:!Ss :y :m :b :o :l]]                                                                  ; 'Symbol'
-  ; ; [:!ER#Pz []]                                                                                   ;
-  ; [:!ER#Pright_control [:!Ssemicolon :period :i :n :!Ssemicolon]]                                  ; ' .∈ '
+  ; [:!ER#Pu []]                                                                                   ;
+  ; [:!ER#Pv []]                                                                                   ;
+  [:!ER#Pw [:!Sw :!Si :!Sp :!Ssemicolon :spacebar]]                                                ; 'WIP: '
+  [:!ER#Px [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]                                                ; 'FIX: '
+  ; [:!ER#Py []]                                                                                   ;
+  ; [:!ER#Pz []]                                                                                   ;
+  [:!ER#Pright_control [:!Ssemicolon :period :i :n :!Ssemicolon]]                                  ; ' .∈ '
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -3369,22 +3204,18 @@
 ; TAB => ROTC
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: annotate rectangle hotkeys
 ; tab
-{:des "Tab Mode - arrows"
+{:des "Tab Mode"
  :rules
  [;
   ; [:!ROTC#Pleft_arrow []]                                                    ; space             ; system
   ; [:!ROTC#Pright_arrow []]                                                   ; space             ; system
   ; [:!ROTC#Pup_arrow []]                                                      ; menu              ; system
   ; [:!ROTC#Pdown_arrow []]                                                    ; dock              ; system
-  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; tab
-{:des "Tab Mode - symbols"
- :rules
- [;
   ; [:!ROTC#Popen_bracket []]                                                                      ;
   ; [:!ROTC#Pclose_bracket []]                                                                     ;
   ; [:!ROTC#Psemicolon []]                                                                         ;
@@ -3394,12 +3225,12 @@
   ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
   ; [:!ROTC#Pslash []]                                                                             ;
 
-  [:!ROTC#Pdelete_or_backspace [:launch "Arc"]]                                                    ;
-  [:!ROTC#Preturn_or_enter [:launch "Alacritty"]]                                                  ;
-  [:!ROTC#Pright_shift [:launch "Mail"]]                                                           ;
-  [:!ROTC#Pright_option [:launch "Skim"]]                                                          ;
-  [:!ROTC#Pright_command [:launch "Calendar"]]                                                     ;
-  ; [:!ROTC#Pspacebar []]                                                      ; speak             ; system
+  [:!ROTC#Pdelete_or_backspace [:!ROTC#Pkeypad_num_lock]]                                              ;
+  ; [:!ROTC#Preturn_or_enter []]                                               ; speak             ; system
+  [:!ROTC#Pright_shift [:launch "Alacritty"]]                                                            ;
+  [:!ROTC#Pright_option [:launch "Arc"]]                                                          ;
+  [:!ROTC#Pright_command [:launch "Mail"]]                                                     ;
+  [:!ROTC#Pspacebar [:!W#Pnon_us_pound]]                                       ; spaces            ; arc
 
   ; [:!ROTC#Pleft_command []]                                                       NOT USEFUL     ;
   ; [:!ROTC#Pleft_option []]                                                        NOT USEFUL     ;
@@ -3409,14 +3240,9 @@
   ; [:!ROTC#Ptab []]                                                                NOT AVAILABLE  ;
   ; [:!ROTC#Pkeypad_num_lock []]                                                    NOT USEFUL     ;
   ; [:!ROTC#Pescape []]                                                             NOT USEFUL     ;
-  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; tab
-{:des "Tab Mode - numbers"
- :rules
- [;
   ; [:!ROTC#Pkeypad_1 []]                                                                          ;
   ; [:!ROTC#Pkeypad_2 []]                                                                          ;
   ; [:!ROTC#Pkeypad_3 []]                                                                          ;
@@ -3442,14 +3268,9 @@
   ; [:!ROTC#P0 []]                                                                                 ;
   ; [:!ROTC#PPhyphen []]                                                                           ;
   ; [:!ROTC#PPequal_sign []]                                                                       ;
-  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; tab
-{:des "Tab Mode - alphabet"
- :rules
- [;
   ; [:!ROTC#Pa []]                                                                                 ;
   ; [:!ROTC#Pb []]                                                                                 ;
   ; [:!ROTC#Pc []]                                                                                 ;
@@ -3608,7 +3429,7 @@
   [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ; esc, language server protocol
 
   ; grave
-  [:#Pright_control :right_control nil {:alone [:!W#Pnon_us_pound]}]                               ; arc bind
+  ; [:#Pright_control :right_control nil {:alone [:!W#Pnon_us_pound]}]                               ; arc bind
 
   ; lefts
   [:#Pleft_control :left_control nil {:alone [:!EWQ#Onon_us_pound]}]                               ; alfred window switcher
