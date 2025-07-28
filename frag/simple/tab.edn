@@ -2,22 +2,18 @@
 ; TAB => ROTC
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: annotate rectangle hotkeys
 ; tab
-{:des "Tab Mode - arrows"
+{:des "Tab Mode"
  :rules
  [;
   ; [:!ROTC#Pleft_arrow []]                                                    ; space             ; system
   ; [:!ROTC#Pright_arrow []]                                                   ; space             ; system
   ; [:!ROTC#Pup_arrow []]                                                      ; menu              ; system
   ; [:!ROTC#Pdown_arrow []]                                                    ; dock              ; system
-  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; tab
-{:des "Tab Mode - symbols"
- :rules
- [;
   ; [:!ROTC#Popen_bracket []]                                                                      ;
   ; [:!ROTC#Pclose_bracket []]                                                                     ;
   ; [:!ROTC#Psemicolon []]                                                                         ;
@@ -27,11 +23,11 @@
   ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
   ; [:!ROTC#Pslash []]                                                                             ;
 
-  [:!ROTC#Pdelete_or_backspace [:launch "Alacritty"]]                                              ;
+  [:!ROTC#Pdelete_or_backspace [:!ROTC#Pkeypad_num_lock]]                                              ;
   ; [:!ROTC#Preturn_or_enter []]                                               ; speak             ; system
-  [:!ROTC#Pright_shift [:launch "Arc"]]                                                            ;
-  [:!ROTC#Pright_option [:launch "Mail"]]                                                          ;
-  [:!ROTC#Pright_command [:launch "Calendar"]]                                                     ;
+  [:!ROTC#Pright_shift [:launch "Alacritty"]]                                                            ;
+  [:!ROTC#Pright_option [:launch "Arc"]]                                                          ;
+  [:!ROTC#Pright_command [:launch "Mail"]]                                                     ;
   [:!ROTC#Pspacebar [:!W#Pnon_us_pound]]                                       ; spaces            ; arc
 
   ; [:!ROTC#Pleft_command []]                                                       NOT USEFUL     ;
@@ -42,14 +38,9 @@
   ; [:!ROTC#Ptab []]                                                                NOT AVAILABLE  ;
   ; [:!ROTC#Pkeypad_num_lock []]                                                    NOT USEFUL     ;
   ; [:!ROTC#Pescape []]                                                             NOT USEFUL     ;
-  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; tab
-{:des "Tab Mode - numbers"
- :rules
- [;
   ; [:!ROTC#Pkeypad_1 []]                                                                          ;
   ; [:!ROTC#Pkeypad_2 []]                                                                          ;
   ; [:!ROTC#Pkeypad_3 []]                                                                          ;
@@ -75,14 +66,9 @@
   ; [:!ROTC#P0 []]                                                                                 ;
   ; [:!ROTC#PPhyphen []]                                                                           ;
   ; [:!ROTC#PPequal_sign []]                                                                       ;
-  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; tab
-{:des "Tab Mode - alphabet"
- :rules
- [;
   ; [:!ROTC#Pa []]                                                                                 ;
   ; [:!ROTC#Pb []]                                                                                 ;
   ; [:!ROTC#Pc []]                                                                                 ;
