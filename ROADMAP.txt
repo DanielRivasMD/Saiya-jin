@@ -2,3 +2,4 @@
 - coordinate Zellij / Helix
 - sync browser hotkeys
 - update format
+- review zellij bindings
