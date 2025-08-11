@@ -100,7 +100,7 @@
   ; [:!E#Po []]                                                                                    ;
   ; [:!E#Pp []]                                                                                    ;
   ; [:!E#Pq []]                                                                                    ;
-  [:!E#Pr [:r :f :a :c :!Ssemicolon :spacebar]]                                                    ; 'rfac: '
+  [:!E#Pr [:r :e :f :a :c :t :o :r :!Ssemicolon :spacebar]]                                        ; 'refactor: '
   ; [:!E#Ps []]                                                                                    ;
   [:!E#Pt [:t :e :s :t :!Ssemicolon :spacebar]]                                                    ; 'test: '
   ; [:!E#Pu []]                                                                                    ;
@@ -212,7 +212,7 @@
   ; [:!ER#Po []]                                                                                   ;
   ; [:!ER#Pp []]                                                                                   ;
   ; [:!ER#Pq []]                                                                                   ;
-  [:!ER#Pr [:!Sr :!Sf :!Sa :!Sc :!Ssemicolon :spacebar]]                                           ; 'RFAC: '
+  [:!ER#Pr [:!Sr :!Se :!Sf :!Sa :!Sc :!St :!So :!Sr :!Ssemicolon :spacebar]]                       ; 'REFACTOR: '
   ; [:!ER#Ps []]                                                                                   ;
   [:!ER#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                                           ; 'TODO: '
   ; [:!ER#Pu []]                                                                                   ;
