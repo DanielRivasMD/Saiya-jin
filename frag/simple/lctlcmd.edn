@@ -33,7 +33,7 @@
   ^{:doc/actions [{:name "close"     :program "helix"}]}
   [:!TC#Pdelete_or_backspace [:!Tl]]
 
-  ^{:doc/actions [{:name "new"       :program "helix"}]}
+  ^{:doc/actions [{:name "new" :description "create new window"       :program "helix"}]}
   [:!TC#Preturn_or_enter [:!Tg]]
 
   ^{:doc/actions [{:name "split-right" :program "helix"}]}
@@ -116,4 +116,5 @@
   ; [:!TC#Pz []]
   ; [:!TC#Pright_control []]
  ]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
