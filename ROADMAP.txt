@@ -1,5 +1,6 @@
-- work annotation homogenity for Babel compatibility
+- use simlayers & replace controllers, i.e., left-handed letter (most likely excluding vowels) => char injections; controllers => app cmds
+- work annotation homogenity for Babel compatibility. idea has evolved: use `edn` with metadata as master, and `babel` to semi-autogenerate app config
+- system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
 - coordinate Zellij / Helix
 - sync browser hotkeys
-- update format
 - review zellij bindings

@@ -23,12 +23,12 @@
   ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
   ; [:!ROTC#Pslash []]                                                                             ;
 
-  [:!ROTC#Pdelete_or_backspace [:!ROTC#Pkeypad_num_lock]]                                              ;
+  [:!ROTC#Pdelete_or_backspace [:!ROTC#Pkeypad_num_lock]]                                          ;
   ; [:!ROTC#Preturn_or_enter []]                                               ; speak             ; system
   [:!ROTC#Pright_shift [:launch "Alacritty"]]
   [:!ROTC#Pright_option [:launch "Arc"]]
   [:!ROTC#Pright_command [:launch "Canary Mail"]]
-  [:!ROTC#Pspacebar [:!W#Pnon_us_pound]]                                       ; spaces            ; arc
+  [:!ROTC#Pspacebar [:!W#Pnon_us_pound]]                                       ; dictation         ; system
 
   ; [:!ROTC#Pleft_command []]                                                       NOT USEFUL     ;
   ; [:!ROTC#Pleft_option []]                                                        NOT USEFUL     ;
