@@ -59,6 +59,8 @@
 {;
  :zero-mode {:key :keypad_num_lock}                                                                ;
 
+ :q-mode {:key :q}
+
  :obracket-mode {:key :open_bracket}                       ; '[' + letter = rust snippet           ;
  :cbracket-mode {:key :close_bracket}                      ; ']' + letter = go snippet             ;
 
