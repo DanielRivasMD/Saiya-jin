@@ -18,30 +18,30 @@
 {:des "Command Mode - symbols"
  :rules
  [;
-  [:!C#Popen_bracket [:!S3 :open_bracket]]                                                         ; '#['
-  [:!C#Pclose_bracket [:close_bracket :spacebar]]                                                  ; '] '
-  [:!C#Psemicolon [:semicolon :spacebar]]                                                          ; '; '
-  [:!C#Pquote [:quote :slash :quote]]                                                              ; ''/''
-  [:!C#Pbackslash [:spacebar :hyphen]]                                                             ; ' -'
-  [:!C#Pcomma [:comma :spacebar]]                                                                  ; ', '
-  [:!C#Pperiod [:period :spacebar]]                                                                ; '. '
-  [:!C#Pslash [:slash :slash :!S1 :spacebar]]                                                      ; '//! '
+  ; [:!C#Popen_bracket [:!S3 :open_bracket]]                                                         ; '#['
+  ; [:!C#Pclose_bracket [:close_bracket :spacebar]]                                                  ; '] '
+  ; [:!C#Psemicolon [:semicolon :spacebar]]                                                          ; '; '
+  ; [:!C#Pquote [:quote :slash :quote]]                                                              ; ''/''
+  ; [:!C#Pbackslash [:spacebar :hyphen]]                                                             ; ' -'
+  ; [:!C#Pcomma [:comma :spacebar]]                                                                  ; ', '
+  ; [:!C#Pperiod [:period :spacebar]]                                                                ; '. '
+  ; [:!C#Pslash [:slash :slash :!S1 :spacebar]]                                                      ; '//! '
 
-  ; [:!C#Pdelete_or_backspace []]                                                                  ;
-  ; [:!C#Preturn_or_enter []]                                                       COLLISION      ;
-  ; [:!C#Pright_shift []]                                                                          ;
-  [:!C#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                                       ; ' *= '
-  [:!C#Pright_command [:spacebar :slash :equal_sign :spacebar]]                                    ; ' /= '
-  ; [:!C#Pspacebar []]                                                                             ;
+  ; ; [:!C#Pdelete_or_backspace []]                                                                  ;
+  ; ; [:!C#Preturn_or_enter []]                                                       COLLISION      ;
+  ; ; [:!C#Pright_shift []]                                                                          ;
+  ; [:!C#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                                       ; ' *= '
+  ; [:!C#Pright_command [:spacebar :slash :equal_sign :spacebar]]                                    ; ' /= '
+  ; ; [:!C#Pspacebar []]                                                                             ;
 
-  ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
-  ; [:!C#Pleft_option []]                                                           NOT USEFUL     ;
-  ; [:!C#Pleft_control []]                                                          NOT USEFUL     ;
-  ; [:!C#Pleft_shift []]                                                            NOT USEFUL     ;
-  ; [:!C#Pcaps_lock []]                                                             NOT USEFUL     ;
-  ; [:!C#Ptab []]                                                                   NOT USEFUL     ;
-  ; [:!C#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
-  ; [:!C#Pescape []]                                                                NOT USEFUL     ;
+  ; ; [:!C#Pleft_command []]                                                          NOT AVAILABLE  ;
+  ; ; [:!C#Pleft_option []]                                                           NOT USEFUL     ;
+  ; ; [:!C#Pleft_control []]                                                          NOT USEFUL     ;
+  ; ; [:!C#Pleft_shift []]                                                            NOT USEFUL     ;
+  ; ; [:!C#Pcaps_lock []]                                                             NOT USEFUL     ;
+  ; ; [:!C#Ptab []]                                                                   NOT USEFUL     ;
+  ; ; [:!C#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
+  ; ; [:!C#Pescape []]                                                                NOT USEFUL     ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
