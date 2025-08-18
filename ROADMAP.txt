@@ -4,3 +4,19 @@
 - coordinate Zellij / Helix
 - sync browser hotkeys
 - review zellij bindings
+
+double rctl?
+lctl => z
+lopt => x
+lcmd => q
+rcmd => w
+
+f => file picker helix
+k => other pickers helix
+
+lctlcmd => helix buffers
+lctlopt => zellij panes
+loptcmd => zellij tabs
+hyper?
+joker?
+tab => system
