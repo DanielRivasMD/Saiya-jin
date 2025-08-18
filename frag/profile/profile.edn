@@ -60,6 +60,13 @@
  :zero-mode {:key :keypad_num_lock}                                                                ;
 
  :q-mode {:key :q}
+ :w-mode {:key :w}
+
+ :j-mode {:key :j}
+ :k-mode {:key :k}
+
+ :z-mode {:key :z}
+ :x-mode {:key :x}
 
  :obracket-mode {:key :open_bracket}                       ; '[' + letter = rust snippet           ;
  :cbracket-mode {:key :close_bracket}                      ; ']' + letter = go snippet             ;
