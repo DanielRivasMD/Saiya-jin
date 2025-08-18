@@ -1,0 +1,34 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; X
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; x
+{:des "X mode"
+ :rules
+ [;
+
+  ; [:#Popen_bracket [:spacebar :!Scomma :equal_sign :spacebar] [:x-mode]]                                   ; ' <= '
+  ; [:#Pclose_bracket [:spacebar :!Speriod :equal_sign :spacebar] [:x-mode]]                                 ; ' >= '
+  ; [:#Psemicolon [:spacebar :!Ssemicolon :spacebar] [:x-mode]]                                              ; ' : '
+  ; [:#Pquote [:vk_none] [:x-mode]]                                                      ;    EMPTY          ;
+  ; [:#Pbackslash [:spacebar :!Sbackslash :spacebar] [:x-mode]]                                              ; ' | '
+  [:#Pcomma [:spacebar :!Scomma :spacebar] [:x-mode]]                                                      ; ' < '
+  [:#Pperiod [:spacebar :!Speriod :spacebar] [:x-mode]]                                                    ; ' > '
+  ; [:#Pslash [:spacebar :!Sslash :spacebar] [:x-mode]]                                                      ; ' ? '
+
+  [:#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar] [:x-mode]]                       ; ' ~ '
+  [:#Preturn_or_enter [:spacebar :equal_sign :spacebar] [:x-mode]]                                         ; ' = '
+  [:#Pright_shift [:spacebar :!Sbackslash :!Speriod :spacebar] [:x-mode]]                                  ; ' |> '
+  [:#Pright_option [:spacebar :!S8 :spacebar] [:x-mode]]                                                   ; ' * '
+  [:#Pright_command [:spacebar :slash :spacebar] [:x-mode]]                                                ; ' / '
+  [:#Pspacebar [:!OCnon_us_pound] [:x-mode]]                                           ;    ALFRED         ;
+
+  ; [:#Pleft_command [] [:x-mode]]                                                          NOT USEFUL     ;
+  ; [:#Pleft_option [] [:x-mode]]                                                           NOT AVAILABLE  ;
+  ; [:#Pleft_control [] [:x-mode]]                                                          NOT USEFUL     ;
+  ; [:#Pleft_shift [] [:x-mode]]                                                            NOT USEFUL     ;
+  ; [:#Pcaps_lock [] [:x-mode]]                                                             NOT USEFUL     ;
+  ; [:#Ptab [] [:x-mode]]                                                                   NOT USEFUL     ;
+  ; [:#Pkeypad_num_lock [] [:x-mode]]                                                       NOT USEFUL     ;
+  ; [:#Pescape [] [:x-mode]]                                                                NOT USEFUL     ;
+  ]}
