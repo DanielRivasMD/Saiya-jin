@@ -1,0 +1,39 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Z
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; z
+{:des "Z mode"
+ :rules
+ [;
+  ; [:#Pleft_arrow [] [:z-mode]]                                                            DEFAULT        ;
+  ; [:#Pright_arrow [] [:z-mode]]                                                           DEFAULT        ;
+  ; [:#Pup_arrow [] [:z-mode]]                                                              DEFAULT        ;
+  ; [:#Pdown_arrow [] [:z-mode]]                                                            DEFAULT        ;
+
+  ; [:#Popen_bracket [:open_bracket :open_bracket] [:z-mode]]                                                ; '[['
+  ; [:#Pclose_bracket [:close_bracket :close_bracket] [:z-mode]]                                             ; ']]'
+  ; [:#Psemicolon [:!Ssemicolon :!Ssemicolon] [:z-mode]]                                                     ; '::'
+  ; [:#Pquote [:quote :quote :quote] [:z-mode]]                                                              ; '''''
+  ; [:#Pbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar] [:z-mode]]                                 ; ' || '
+  [:#Pcomma [:spacebar :!Scomma :!Scomma :spacebar] [:z-mode]]                                             ; ' << '
+  [:#Pperiod [:spacebar :!Speriod :!Speriod :spacebar] [:z-mode]]                                          ; ' >> '
+  ; [:#Pslash [:slash :slash :slash :spacebar] [:z-mode]]                                                    ; '/// '
+
+  [:#Pdelete_or_backspace [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde] [:z-mode]]  ; '```'
+  [:#Preturn_or_enter [:spacebar :equal_sign :equal_sign :spacebar] [:z-mode]]                             ; ' == '
+  [:#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar] [:z-mode]]                                   ; ' => '
+  [:#Pright_option [:spacebar :!S8 :!S8 :spacebar] [:z-mode]]                                              ; ' ** '
+  [:#Pright_command [:spacebar :slash :slash :spacebar] [:z-mode]]                                         ; ' // '
+  ; [:#Pspacebar [] [:z-mode]]                                                              DEFAULT        ;
+
+  ; [:#Pleft_command [] [:z-mode]]                                                          NOT USEFUL     ;
+  ; [:#Pleft_option [] [:z-mode]]                                                           NOT USEFUL     ;
+  ; [:#Pleft_control [] [:z-mode]]                                                          NOT AVAILABLE  ;
+  ; [:#Pleft_shift [] [:z-mode]]                                                            NOT USEFUL     ;
+  ; [:#Pcaps_lock [] [:z-mode]]                                                             NOT USEFUL     ;
+  ; [:#Ptab [] [:z-mode]]                                                                   NOT USEFUL     ;
+  ; [:#Pkeypad_num_lock [] [:z-mode]]                                                       NOT USEFUL     ;
+  ; [:#Pescape [] [:z-mode]]                                                                NOT USEFUL     ;
+  ]}
+
