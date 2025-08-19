@@ -6,14 +6,14 @@
 {:des "W mode"
  :rules
  [;
-  ; [:#Popen_bracket [:!S3 :open_bracket] [:w-mode]]                                                         ; '#['
-  ; [:#Pclose_bracket [:close_bracket :spacebar] [:w-mode]]                                                  ; '] '
-  ; [:#Psemicolon [:semicolon :spacebar] [:w-mode]]                                                          ; '; '
-  ; [:#Pquote [:quote :slash :quote] [:w-mode]]                                                              ; ''/''
-  ; [:#Pbackslash [:spacebar :hyphen] [:w-mode]]                                                             ; ' -'
+  [:#Popen_bracket [:!S3 :open_bracket] [:w-mode]]                                                         ; '#['
+  [:#Pclose_bracket [:close_bracket :spacebar] [:w-mode]]                                                  ; '] '
+  [:#Psemicolon [:semicolon :spacebar] [:w-mode]]                                                          ; '; '
+  [:#Pquote [:quote :slash :quote] [:w-mode]]                                                              ; ''/''
+  [:#Pbackslash [:spacebar :hyphen] [:w-mode]]                                                             ; ' -'
   [:#Pcomma [:spacebar :!Scomma :hyphen :spacebar] [:w-mode]]                                       ; ' <- '
   [:#Pperiod [:spacebar :hyphen :!Speriod :spacebar] [:w-mode]]                                      ; ' -> '
-  ; [:#Pslash [:slash :slash :!S1 :spacebar] [:w-mode]]                                                      ; '//! '
+  [:#Pslash [:slash :slash :!S1 :spacebar] [:w-mode]]                                                      ; '//! '
 
   [:#Pdelete_or_backspace [:spacebar :!S1 :equal_sign :spacebar] [:w-mode]]                                         ; ' != '
   [:#Preturn_or_enter [:spacebar :!Ssemicolon :equal_sign :spacebar] [:w-mode]]                                  ; ' := '
