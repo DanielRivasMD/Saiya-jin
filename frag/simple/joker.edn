@@ -18,6 +18,7 @@
 {:des "Joker Mode - symbols"
  :rules
  [;
+  ; TODO: relocate to simlayer?
   [:!EWQ#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]                     ; ' %<+% '
   [:!EWQ#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]                   ; ' %+>% '
   [:!EWQ#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                                          ; ' %$% '
@@ -84,14 +85,14 @@
  :rules
  [;
   ; [:!EWQ#Pa []]                                                                                  ;
-  ; [:!EWQ#Pb []]                                                                                  ;
+  [:!EWQ#Pb [:!Wt]]                                                                                  ;
   ; [:!EWQ#Pc []]                                                                                  ;
-  ; [:!EWQ#Pd []]                                                                                  ;
+  [:!EWQ#Pd [:!Tf17]]                                                                                  ;
   ; [:!EWQ#Pe []]                                                                                  ;
-  ; [:!EWQ#Pf []]                                                                                  ;
-  ; [:!EWQ#Pg []]                                                                                  ;
+  [:!EWQ#Pf [:!Ws]]                                                                                  ;
+  [:!EWQ#Pg [:!Wr]]                                                                                  ;
   ; [:!EWQ#Ph []]                                                                                  ;
-  ; [:!EWQ#Pi []]                                                                                  ;
+  [:!EWQ#Pi [:!TSf17]]                                                                                  ;
   ; [:!EWQ#Pj []]                                                                                  ;
   ; [:!EWQ#Pk []]                                                                                  ;
   ; [:!EWQ#Pl []]                                                                                  ;
@@ -100,9 +101,9 @@
   ; [:!EWQ#Po []]                                                                                  ;
   ; [:!EWQ#Pp []]                                                                                  ;
   ; [:!EWQ#Pq []]                                                                                  ;
-  ; [:!EWQ#Pr []]                                                                                  ;
+  [:!EWQ#Pr [:!Tf16]]                                                                                  ;
   ; [:!EWQ#Ps []]                                                                                  ;
-  ; [:!EWQ#Pt []]                                                                                  ;
+  [:!EWQ#Pt [:!TSf16]]                                                                                  ;
   ; [:!EWQ#Pu []]                                                                                  ;
   ; [:!EWQ#Pv []]                                                                                  ;
   ; [:!EWQ#Pw []]                                                                                  ;
