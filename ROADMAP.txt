@@ -11,12 +11,22 @@ lopt => x
 lcmd => q
 rcmd => w
 
-f => file picker helix
+j => other pickers helix
 k => other pickers helix
 
 lctlcmd => helix buffers
 lctlopt => zellij panes
 loptcmd => zellij tabs
-hyper?
+hyper => zellij float
 joker?
 tab => system
+
+helix:
+  - lsp (picker - enter, rename - n, ref - r, def - d, type - t, impl - i) => zero-mode
+  - undo / redo => z-mode
+  - git mod (prev / next) => z-mode
+  - movement (prev, next, repeat) => x-mode
+  - comment (prev / next) => x-mode
+  - jumplist (save, picker, prev, next) => w-mode
+  - file picker (general, buffer, modified) => rcmd
+  - diagnositcs (workspace picker - shift enter, picker - enter, next - down / prev - up) => rctl
