@@ -6,28 +6,34 @@
 {:des "X mode"
  :rules
  [;
-  [:#Popen_bracket [:spacebar :!Scomma :equal_sign :spacebar] [:x-mode]]                                   ; ' <= '
-  [:#Pclose_bracket [:spacebar :!Speriod :equal_sign :spacebar] [:x-mode]]                                 ; ' >= '
-  [:#Psemicolon [:spacebar :!Ssemicolon :spacebar] [:x-mode]]                                              ; ' : '
-  [:#Pquote [:vk_none] [:x-mode]]                                                      ;    EMPTY          ;
-  [:#Pbackslash [:spacebar :!Sbackslash :spacebar] [:x-mode]]                                              ; ' | '
-  [:#Pcomma [:spacebar :!Scomma :spacebar] [:x-mode]]                                                      ; ' < '
-  [:#Pperiod [:spacebar :!Speriod :spacebar] [:x-mode]]                                                    ; ' > '
-  [:#Pslash [:spacebar :!Sslash :spacebar] [:x-mode]]                                                      ; ' ? '
+  :x-mode
+  [:#Pleft_arrow [:f17] [:term]]                                                    ; '/// '
+  [:#Pright_arrow [:f16] [:term]]                                                    ; '/// '
+  ; [:#Pup_arrow [:!Thome] [:term]]                                                    ; '/// '
+  ; [:#Pdown_arrow [:!Tend] [:term]]                                                    ; '/// '
 
-  [:#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar] [:x-mode]]                       ; ' ~ '
-  [:#Preturn_or_enter [:spacebar :equal_sign :spacebar] [:x-mode]]                                         ; ' = '
-  [:#Pright_shift [:spacebar :!Sbackslash :!Speriod :spacebar] [:x-mode]]                                  ; ' |> '
-  [:#Pright_option [:spacebar :!S8 :spacebar] [:x-mode]]                                                   ; ' * '
-  [:#Pright_command [:spacebar :slash :spacebar] [:x-mode]]                                                ; ' / '
-  [:#Pspacebar [:!OCnon_us_pound] [:x-mode]]                                           ;    ALFRED         ;
+  [:#Popen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]                                   ; ' <= '
+  [:#Pclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]                                 ; ' >= '
+  [:#Psemicolon [:spacebar :!Ssemicolon :spacebar]]                                              ; ' : '
+  [:#Pquote [:vk_none]]                                                      ;    EMPTY          ;
+  [:#Pbackslash [:spacebar :!Sbackslash :spacebar]]                                              ; ' | '
+  [:#Pcomma [:spacebar :!Scomma :spacebar]]                                                      ; ' < '
+  [:#Pperiod [:spacebar :!Speriod :spacebar]]                                                    ; ' > '
+  [:#Pslash [:spacebar :!Sslash :spacebar]]                                                      ; ' ? '
 
-  ; [:#Pleft_command [] [:x-mode]]                                                          NOT USEFUL     ;
-  ; [:#Pleft_option [] [:x-mode]]                                                           NOT AVAILABLE  ;
-  ; [:#Pleft_control [] [:x-mode]]                                                          NOT USEFUL     ;
-  ; [:#Pleft_shift [] [:x-mode]]                                                            NOT USEFUL     ;
-  ; [:#Pcaps_lock [] [:x-mode]]                                                             NOT USEFUL     ;
-  ; [:#Ptab [] [:x-mode]]                                                                   NOT USEFUL     ;
-  ; [:#Pkeypad_num_lock [] [:x-mode]]                                                       NOT USEFUL     ;
-  ; [:#Pescape [] [:x-mode]]                                                                NOT USEFUL     ;
+  [:#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
+  [:#Preturn_or_enter [:spacebar :equal_sign :spacebar]]                                         ; ' = '
+  [:#Pright_shift [:spacebar :!Sbackslash :!Speriod :spacebar]]                                  ; ' |> '
+  [:#Pright_option [:spacebar :!S8 :spacebar]]                                                   ; ' * '
+  [:#Pright_command [:spacebar :slash :spacebar]]                                                ; ' / '
+  [:#Pspacebar [:f18]]                                           ;    ALFRED         ;
+
+  ; [:#Pleft_command []]                                                          NOT USEFUL     ;
+  ; [:#Pleft_option []]                                                           NOT AVAILABLE  ;
+  ; [:#Pleft_control []]                                                          NOT USEFUL     ;
+  ; [:#Pleft_shift []]                                                            NOT USEFUL     ;
+  ; [:#Pcaps_lock []]                                                             NOT USEFUL     ;
+  ; [:#Ptab []]                                                                   NOT USEFUL     ;
+  ; [:#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
+  ; [:#Pescape []]                                                                NOT USEFUL     ;
   ]}
