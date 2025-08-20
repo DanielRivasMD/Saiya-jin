@@ -3,37 +3,41 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; control
-{:des "Control Mode - arrows"
+{:des "Control Mode"
  :rules
  [;
  ; TODO: update helix annotations homogeneous format
-  [:!W#Pleft_arrow [:!Wpage_up] [:term]]                                       ; undo              ; helix
-  [:!W#Pright_arrow [:!Wpage_down] [:term]]                                    ; redo              ; helix
-  [:!W#Pup_arrow [:!Whome] [:term]]                                            ; prev change       ; helix
-  [:!W#Pdown_arrow [:!Wend] [:term]]                                           ; next change       ; helix
+  ;; Diagnostics: prev / picker / next
+  ^{:doc/actions [{:name "prev-diagnostic", :description "Go to previous diagnostic", :exec "goto_prev_diag", :program "helix"}]}
+   [:!W#Pup_arrow       [:!Thome]       [:term]]
+  ^{:doc/actions [{:name "next-diagnostic", :description "Go to next diagnostic", :exec "goto_next_diag", :program "helix"}]}
+   [:!W#Pdown_arrow       [:!Tend]       [:term]]
+  ^{:doc/actions [{:name "diagnostics-picker", :description "Open diagnostics picker", :exec "diagnostics_picker", :program "helix"}]}
+   [:!W#Preturn_or_enter       [:!Tf12]       [:term]]
+  ^{:doc/actions [{:name "workspace-diagnostics-picker", :description "Workspace diagnostics picker", :exec "workspace_diagnostics_picker", :program "helix"}]}
+   [:!WS#Preturn_or_enter  [:!Sf14]  [:term]]
   ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; control
 {:des "Control Mode - symbols"
  :rules
  [;
-  [:!W#Popen_bracket [:!Of11]]                                                                     ; helix
-  [:!W#Pclose_bracket [:!Of12]]                                                                    ; helix
-  [:!W#Psemicolon [:!Of13]]                                                                        ; helix
-  [:!W#Pquote [:!Of14]]                                                                            ; helix
-  [:!W#Pbackslash [:!Of15]]                                                                        ; helix
-  [:!W#Pcomma [:!Of18]]                                                        ; next test         ; helix
-  [:!W#Pperiod [:!Of19]]                                                       ; next class        ; helix
-  [:!W#Pslash [:!Of20]]                                                        ; next function     ; helix
+  ; [:!W#Popen_bracket [:!Of11]]                                                                     ; helix
+  ; [:!W#Pclose_bracket [:!Of12]]                                                                    ; helix
+  ; [:!W#Psemicolon [:!Of13]]                                                                        ; helix
+  ; [:!W#Pquote [:!Of14]]                                                                            ; helix
+  ; [:!W#Pbackslash [:!Of15]]                                                                        ; helix
+  ; [:!W#Pcomma [:!Of18]]                                                        ; next test         ; helix
+  ; [:!W#Pperiod [:!Of19]]                                                       ; next class        ; helix
+  ; [:!W#Pslash [:!Of20]]                                                        ; next function     ; helix
 
-  [:!W#Pdelete_or_backspace [:!Tf11]]                                          ; rename symbol     ; helix
-  [:!W#Preturn_or_enter [:!Tf12]]                                              ; symbol            ; helix
-  [:!W#Pright_shift [:!Tf13]]                                                  ; next parameter    ; helix
-  [:!W#Pright_option [:!Tf16]]                                                 ; reference         ; helix
-  [:!W#Pright_command [:!Tf17]]                                                ; definition        ; helix
-  [:!W#Pspacebar [:!Tf18]]                                                     ; last edit         ; helix
+  ; [:!W#Pdelete_or_backspace [:!Tf11]]                                          ; rename symbol     ; helix
+  ; [:!W#Preturn_or_enter [:!Tf12]]                                              ; symbol            ; helix
+  ; [:!W#Pright_shift [:!Tf13]]                                                  ; next parameter    ; helix
+  ; [:!W#Pright_option [:!Tf16]]                                                 ; reference         ; helix
+  ; [:!W#Pright_command [:!Tf17]]                                                ; definition        ; helix
+  ; [:!W#Pspacebar [:!Tf18]]                                                     ; last edit         ; helix
 
   ; [:!W#Pleft_command []]                                                          NOT USEFUL     ;
   ; [:!W#Pleft_option []]                                                           NOT USEFUL     ;
@@ -74,8 +78,8 @@
   ; [:!W#P8 []]                                                                                    ;
   ; [:!W#P9 []]                                                                                    ;
   ; [:!W#P0 []]                                                                                    ;
-  [:!W#Phyphen [:!Tf19]]                                                                           ; helix
-  [:!W#Pequal_sign [:!Tf20]]                                                                       ; helix
+  ; [:!W#Phyphen [:!Tf19]]                                                                           ; helix
+  ; [:!W#Pequal_sign [:!Tf20]]                                                                       ; helix
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -115,15 +119,15 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; control - shift
-{:des "Control Mode - arrows"
- :rules
- [;
-  [:!WS#Pleft_arrow [:!WSpage_up] [:term]]                                   ; prev jump         ; helix
-  [:!WS#Pright_arrow [:!WSpage_down] [:term]]                                ; next jump         ; helix
-  [:!WS#Pup_arrow [:!WShome] [:term]]                                        ; prev comment      ; helix
-  [:!WS#Pdown_arrow [:!WSend] [:term]]                                       ; next comment      ; helix
- ]}
+; ; control - shift
+; {:des "Control Mode - arrows"
+;  :rules
+;  [;
+;   [:!WS#Pleft_arrow [:!WSpage_up] [:term]]                                   ; prev jump         ; helix
+;   [:!WS#Pright_arrow [:!WSpage_down] [:term]]                                ; next jump         ; helix
+;   [:!WS#Pup_arrow [:!WShome] [:term]]                                        ; prev comment      ; helix
+;   [:!WS#Pdown_arrow [:!WSend] [:term]]                                       ; next comment      ; helix
+;  ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -131,21 +135,21 @@
 {:des "Control Mode - symbols"
  :rules
  [;
-  [:!WS#Popen_bracket [:!OSf11]]                                                                   ; helix
-  [:!WS#Pclose_bracket [:!OSf12]]                                                                  ; helix
-  [:!WS#Psemicolon [:!OSf13]]                                                                      ; helix
-  [:!WS#Pquote [:!OSf14]]                                                                          ; helix
-  [:!WS#Pbackslash [:!OSf15]]                                                                      ; helix
-  [:!WS#Pcomma [:!OSf18]]                                                      ; prev test         ; helix
-  [:!WS#Pperiod [:!OSf19]]                                                     ; prev class        ; helix
-  [:!WS#Pslash [:!OSf20]]                                                      ; prev function     ; helix
+  ; [:!WS#Popen_bracket [:!OSf11]]                                                                   ; helix
+  ; [:!WS#Pclose_bracket [:!OSf12]]                                                                  ; helix
+  ; [:!WS#Psemicolon [:!OSf13]]                                                                      ; helix
+  ; [:!WS#Pquote [:!OSf14]]                                                                          ; helix
+  ; [:!WS#Pbackslash [:!OSf15]]                                                                      ; helix
+  ; [:!WS#Pcomma [:!OSf18]]                                                      ; prev test         ; helix
+  ; [:!WS#Pperiod [:!OSf19]]                                                     ; prev class        ; helix
+  ; [:!WS#Pslash [:!OSf20]]                                                      ; prev function     ; helix
 
-  [:!WS#Pdelete_or_backspace [:!TSf11]]                                                            ; helix
-  [:!WS#Preturn_or_enter [:!TSf12]]                                            ; jump list         ; helix
-  [:!WS#Pright_shift [:!TSf13]]                                                ; prev parameter    ; helix
-  [:!WS#Pright_option [:!TSf16]]                                               ; implementation    ; helix
-  [:!WS#Pright_command [:!TSf17]]                                              ; type definition   ; helix
-  [:!WS#Pspacebar [:!TSf18]]                                                   ; jump save         ; helix
+  ; [:!WS#Pdelete_or_backspace [:!TSf11]]                                                            ; helix
+  ; [:!WS#Preturn_or_enter [:!TSf12]]                                            ; jump list         ; helix
+  ; [:!WS#Pright_shift [:!TSf13]]                                                ; prev parameter    ; helix
+  ; [:!WS#Pright_option [:!TSf16]]                                               ; implementation    ; helix
+  ; [:!WS#Pright_command [:!TSf17]]                                              ; type definition   ; helix
+  ; [:!WS#Pspacebar [:!TSf18]]                                                   ; jump save         ; helix
 
   ; [:!WS#Pleft_command []]                                                         NOT USEFUL     ;
   ; [:!WS#Pleft_option []]                                                          NOT USEFUL     ;
