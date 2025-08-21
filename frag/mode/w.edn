@@ -2,41 +2,14 @@
 ; W
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; w
 {:des "W mode"
  :rules
- [;
-  :w-mode
-  [:#Pleft_arrow [:!TShome] [:term]]                                                    ; '/// '
-  [:#Pright_arrow [:!TSend] [:term]]                                                    ; '/// '
-  ; [:#Pup_arrow [:!Ohome] [:term]]                                                    ; '/// '
-  ; [:#Pdown_arrow [:!Oend] [:term]]                                                    ; '/// '
-
-
-  [:#Popen_bracket [:!S3 :open_bracket]]                                                         ; '#['
-  [:#Pclose_bracket [:close_bracket :spacebar]]                                                  ; '] '
-  [:#Psemicolon [:semicolon :spacebar]]                                                          ; '; '
-  [:#Pquote [:quote :slash :quote]]                                                              ; ''/''
-  [:#Pbackslash [:spacebar :hyphen]]                                                             ; ' -'
-  [:#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                                       ; ' <- '
-  [:#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                                      ; ' -> '
-  [:#Pslash [:slash :slash :!S1 :spacebar]]                                                      ; '//! '
-
-  [:#Pdelete_or_backspace [:spacebar :!S1 :equal_sign :spacebar]]                                         ; ' != '
-  [:#Preturn_or_enter [:!TSf12]]
-  ; [:#Pright_shift [:spacebar :!Ssemicolon :equal_sign :spacebar]]                                  ; ' := '
-  [:#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                                       ; ' *= '
-  [:#Pright_command [:spacebar :slash :equal_sign :spacebar]]                                    ; ' /= '
-  [:#Pspacebar [:!TSf18]]                                                                             ;
-
-
-
-  ; [:#Pleft_command []]                                                          NOT AVAILABLE  ;
-  ; [:#Pleft_option []]                                                           NOT USEFUL     ;
-  ; [:#Pleft_control []]                                                          NOT USEFUL     ;
-  ; [:#Pleft_shift []]                                                            NOT USEFUL     ;
-  ; [:#Pcaps_lock []]                                                             NOT USEFUL     ;
-  ; [:#Ptab []]                                                                   NOT USEFUL     ;
-  ; [:#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
-  ; [:#Pescape []]                                                                NOT USEFUL     ;
+ [:w-mode
+  ;; Diagnostics: prev / picker / next
+  ^{:doc/actions [{:name "prev-diagnostic", :description "Go to previous diagnostic", :exec "goto_prev_diag", :program "helix"}]} [:!TC#PF13       [:!TF13]       [:term]]
+  ^{:doc/actions [{:name "diagnostics-picker", :description "Open diagnostics picker", :exec "diagnostics_picker", :program "helix"}]} [:!TC#PF14       [:!TF14]       [:term]]
+  ^{:doc/actions [{:name "next-diagnostic", :description "Go to next diagnostic", :exec "goto_next_diag", :program "helix"}]} [:!TC#PF15       [:!TF15]       [:term]]
+  ^{:doc/actions [{:name "workspace-diagnostics-picker", :description "Workspace diagnostics picker", :exec "workspace_diagnostics_picker", :program "helix"}]} [:!TC#PShiftF14  [:!TShiftF14]  [:term]]
   ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
