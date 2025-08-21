@@ -5,11 +5,10 @@
 {:des "X mode"
  :rules
  [:x-mode
-  ^{:doc/actions [{:name "find-till-char-forward", :description "Find till character forward", :exec "find_till_char", :program "helix"}]} [:#Pleft_arrow       [:!Tpage_up]       [:term]]
-  ^{:doc/actions [{:name "find-till-char-backward", :description "Find till character backward", :exec "till_prev_char", :program "helix"}]} [:#Pright_arrow       [:!Tpage_down]       [:term]]
+  ^{:doc/actions [{:name "find-till-char-forward", :description "Find till character forward", :exec "find_till_char", :program "helix"}]} [:#Pleft_arrow [:!Tpage_up] [:term]]
+  ^{:doc/actions [{:name "find-till-char-backward", :description "Find till character backward", :exec "till_prev_char", :program "helix"}]} [:#Pright_arrow [:!Tpage_down] [:term]]
   [:#Pup_arrow [:!Thome] [:term]]
   [:#Pdown_arrow [:!Tend] [:term]]
-
 
   [:#Popen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]                                   ; ' <= '
   [:#Pclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]                                 ; ' >= '
@@ -26,7 +25,7 @@
   [:#Pright_option [:spacebar :!S8 :spacebar]]                                                   ; ' * '
   [:#Pright_command [:spacebar :slash :spacebar]]                                                ; ' / '
   ; TODO: update temp mapping
-  ^{:doc/actions [{:name "repeat-last-motion", :description "Repeat last movement", :exec "repeat_last_motion", :program "helix"}]} [:#Pspacebar       [:f18]       [:term]]
+  ^{:doc/actions [{:name "repeat-last-motion", :description "Repeat last movement", :exec "repeat_last_motion", :program "helix"}]} [:#Pspacebar [:f18] [:term]]
 
   ; [:#Pleft_command []]                                                          NOT USEFUL     ;
   ; [:#Pleft_option []]                                                           NOT AVAILABLE  ;
@@ -87,7 +86,6 @@
   [:!S#P0 [:vk_none]]                                                         ;    EMPTY          ;
   [:!S#Phyphen [:spacebar :period :hyphen :spacebar]]                                             ; ' .- '
   [:!S#Pequal_sign [:spacebar :period :!Sequal_sign :spacebar]]                                   ; ' .+ '
-
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
