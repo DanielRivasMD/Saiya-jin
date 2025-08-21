@@ -6,12 +6,6 @@
  :rules
  [;
  ; TODO: update helix annotations homogeneous format
-  ;; Diagnostics: prev / picker / next
-  ^{:doc/actions [{:name "prev-diagnostic", :description "Go to previous diagnostic", :exec "goto_prev_diag", :program "helix"}]} [:!W#Pup_arrow       [:!Tf11]       [:term]]
-  ^{:doc/actions [{:name "next-diagnostic", :description "Go to next diagnostic", :exec "goto_next_diag", :program "helix"}]} [:!W#Pdown_arrow       [:!Tf12]       [:term]]
-  ^{:doc/actions [{:name "diagnostics-picker", :description "Open diagnostics picker", :exec "diagnostics_picker", :program "helix"}]} [:!W#Preturn_or_enter       [:!Tf13]       [:term]]
-  ^{:doc/actions [{:name "workspace-diagnostics-picker", :description "Workspace diagnostics picker", :exec "workspace_diagnostics_picker", :program "helix"}]} [:!WS#Preturn_or_enter  [:!Tf14]  [:term]]
-
   ; [:!W#Popen_bracket [:!Of11]]                                                                     ; helix
   ; [:!W#Pclose_bracket [:!Of12]]                                                                    ; helix
   ; [:!W#Psemicolon [:!Of13]]                                                                        ; helix
