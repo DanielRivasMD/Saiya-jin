@@ -2,43 +2,10 @@
 ; Q
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; q
 {:des "Q mode"
  :rules
- [;
-  [:#Pleft_arrow [:slash :slash :slash :spacebar] [:q-mode]]                                                    ; '/// '
-  [:#Pright_arrow [:slash :slash :slash :spacebar] [:q-mode]]                                                    ; '/// '
-  [:#Pup_arrow [:slash :slash :slash :spacebar] [:q-mode]]                                                    ; '/// '
-  [:#Pdown_arrow [:slash :slash :slash :spacebar] [:q-mode]]                                                    ; '/// '
-
-  [:#Popen_bracket [:open_bracket :open_bracket] [:q-mode]]                                                ; '[['
-  [:#Pclose_bracket [:close_bracket :close_bracket] [:q-mode]]                                             ; ']]'
-  [:#Psemicolon [:!Ssemicolon :!Ssemicolon] [:q-mode]]                                                     ; '::'
-  [:#Pquote [:quote :quote :quote] [:q-mode]]                                                              ; '''''
-  [:#Pbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar] [:q-mode]]                                 ; ' || '
-  [:#Pcomma [:spacebar :!Scomma :!Scomma :spacebar] [:q-mode]]                                             ; ' << '
-  [:#Pperiod [:spacebar :!Speriod :!Speriod :spacebar] [:q-mode]]                                          ; ' >> '
-  [:#Pslash [:slash :slash :slash :spacebar] [:q-mode]]                                                    ; '/// '
-
-  [:#Pdelete_or_backspace [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde] [:q-mode]]  ; '```'
-  [:#Preturn_or_enter [:spacebar :equal_sign :equal_sign :spacebar] [:q-mode]]                             ; ' == '
-  [:#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar] [:q-mode]]                                   ; ' => '
-  [:#Pright_option [:spacebar :!S8 :!S8 :spacebar] [:q-mode]]                                              ; ' ** '
-  [:#Pright_command [:spacebar :slash :slash :spacebar] [:q-mode]]                                         ; ' // '
-  [:#Pspacebar [:slash :slash :slash :spacebar] [:q-mode]]                                                    ; '/// '
-
-  ; [:!T#Pleft_command []]                                                          NOT USEFUL     ;
-  ; [:!T#Pleft_option []]                                                           NOT USEFUL     ;
-  ; [:!T#Pleft_control []]                                                          NOT AVAILABLE  ;
-  ; [:!T#Pleft_shift []]                                                            NOT USEFUL     ;
-  ; [:!T#Pcaps_lock []]                                                             NOT USEFUL     ;
-  ; [:!T#Ptab []]                                                                   NOT USEFUL     ;
-  ; [:!T#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
-  ; [:!T#Pescape []]                                                                NOT USEFUL     ;
-
-  [:#Phyphen [:spacebar :hyphen :hyphen :spacebar] [:q-mode]]                                              ; ' -- '
-  [:#Pequal_sign [:spacebar :!Sequal_sign :!Sequal_sign :spacebar] [:q-mode]]                              ; ' ++ '
-
+ [:q-mode
+  [
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
