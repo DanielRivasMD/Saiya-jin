@@ -86,7 +86,6 @@
   [:!S#P0 [:!S0 :!S0]]                                                                            ; '))'
   [:!S#Phyphen [:spacebar :period :hyphen :hyphen :spacebar]]                                     ; ' .-- '
   [:!S#Pequal_sign [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]                     ; ' .++ '
-
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
