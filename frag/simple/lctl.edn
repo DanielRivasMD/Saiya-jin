@@ -2,22 +2,14 @@
 ; CTL
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; control
-{:des "Control Mode - arrows"
+{:des "Control Mode"
  :rules
  [;
   ; [:!T#Pleft_arrow []]                                                            DEFAULT        ;
   ; [:!T#Pright_arrow []]                                                           DEFAULT        ;
   ; [:!T#Pup_arrow []]                                                              DEFAULT        ;
   ; [:!T#Pdown_arrow []]                                                            DEFAULT        ;
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control
-{:des "Control Mode - symbols"
- :rules
- [;
   ; [:!T#Popen_bracket [:open_bracket :open_bracket]]                                                ; '[['
   ; [:!T#Pclose_bracket [:close_bracket :close_bracket]]                                             ; ']]'
   ; [:!T#Psemicolon [:!Ssemicolon :!Ssemicolon]]                                                     ; '::'
@@ -42,14 +34,7 @@
   ; ; [:!T#Ptab []]                                                                   NOT USEFUL     ;
   ; ; [:!T#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
   ; ; [:!T#Pescape []]                                                                NOT USEFUL     ;
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control
-{:des "Control Mode - numbers"
- :rules
- [;
  ; ; TODO: improve annotations for empty bindings
  ;  [:!T#Pkeypad_1 [:vk_none]]                                                   ;    EMPTY          ;
  ;  [:!T#Pkeypad_2 [:vk_none]]                                                   ;    EMPTY          ;
@@ -76,15 +61,7 @@
  ;  [:!T#P0 [:vk_none]]                                                          ;    EMPTY          ;
  ;  [:!T#Phyphen [:spacebar :hyphen :hyphen :spacebar]]                                              ; ' -- '
  ;  [:!T#Pequal_sign [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]                              ; ' ++ '
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; TODO: move to switched mode?
-; control
-{:des "Control Mode - alphabet"
- :rules
- [;
   [:!T#Pa [:!Ssemicolon :g :d :l :!Ssemicolon]]                                                    ;
   ; [:!T#Pb []]                                                                                    ;
   ; [:!T#Pc []]                                                                                    ;
@@ -112,26 +89,12 @@
   ; [:!T#Py []]                                                                                    ;
   ; [:!T#Pz []]                                                                                    ;
   ; [:!T#Pright_control []]                                                                        ;
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control - shift
-{:des "Control Mode - arrows"
- :rules
- [;
   ; [:!TS#Pleft_arrow []]                                                                          ;
   ; [:!TS#Pright_arrow []]                                                                         ;
   ; [:!TS#Pup_arrow []]                                                                            ;
   ; [:!TS#Pdown_arrow []]                                                                          ;
- ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control - shift
-{:des "Control Mode - symbols"
- :rules
- [;
   [:!TS#Popen_bracket [:!Sopen_bracket :!Sopen_bracket]]                                           ; '{{'
   [:!TS#Pclose_bracket [:!Sclose_bracket :!Sclose_bracket]]                                        ; '}}'
   [:!TS#Psemicolon [:!Ssemicolon :!Ssemicolon :!Scomma]]                                           ; '::<'
@@ -156,14 +119,7 @@
   ; [:!TS#Ptab []]                                                                  NOT USEFUL     ;
   ; [:!TS#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
   ; [:!TS#Pescape []]                                                               NOT USEFUL     ;
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control
-{:des "Control Mode - numbers"
- :rules
- [;
   [:!TS#Pkeypad_1 [:vk_none]]                                                  ;    EMPTY          ;
   [:!TS#Pkeypad_2 [:vk_none]]                                                  ;    EMPTY          ;
   [:!TS#Pkeypad_3 [:vk_none]]                                                  ;    EMPTY          ;
@@ -189,15 +145,7 @@
   [:!TS#P0 [:!S0 :!S0]]                                                                            ; '))'
   [:!TS#Phyphen [:spacebar :period :hyphen :hyphen :spacebar]]                                     ; ' .-- '
   [:!TS#Pequal_sign [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]                     ; ' .++ '
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; TODO: move to switched mode
-; control
-{:des "Control Mode - alphabet"
- :rules
- [;
   ; [:!TS#Pa []]                                                                                   ;
   ; [:!TS#Pb []]                                                                                   ;
   ; [:!TS#Pc []]                                                                                   ;
