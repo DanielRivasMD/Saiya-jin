@@ -2,27 +2,16 @@
 ; CTL
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; control
 {:des "Control Mode"
  :rules
  [;
  ; TODO: update helix annotations homogeneous format
   ;; Diagnostics: prev / picker / next
-  ^{:doc/actions [{:name "prev-diagnostic", :description "Go to previous diagnostic", :exec "goto_prev_diag", :program "helix"}]}
-   [:!W#Pup_arrow       [:!Thome]       [:term]]
-  ^{:doc/actions [{:name "next-diagnostic", :description "Go to next diagnostic", :exec "goto_next_diag", :program "helix"}]}
-   [:!W#Pdown_arrow       [:!Tend]       [:term]]
-  ^{:doc/actions [{:name "diagnostics-picker", :description "Open diagnostics picker", :exec "diagnostics_picker", :program "helix"}]}
-   [:!W#Preturn_or_enter       [:!Tf12]       [:term]]
-  ^{:doc/actions [{:name "workspace-diagnostics-picker", :description "Workspace diagnostics picker", :exec "workspace_diagnostics_picker", :program "helix"}]}
-   [:!WS#Preturn_or_enter  [:!Sf14]  [:term]]
-  ]}
+  ^{:doc/actions [{:name "prev-diagnostic", :description "Go to previous diagnostic", :exec "goto_prev_diag", :program "helix"}]} [:!W#Pup_arrow       [:!Tf11]       [:term]]
+  ^{:doc/actions [{:name "next-diagnostic", :description "Go to next diagnostic", :exec "goto_next_diag", :program "helix"}]} [:!W#Pdown_arrow       [:!Tf12]       [:term]]
+  ^{:doc/actions [{:name "diagnostics-picker", :description "Open diagnostics picker", :exec "diagnostics_picker", :program "helix"}]} [:!W#Preturn_or_enter       [:!Tf13]       [:term]]
+  ^{:doc/actions [{:name "workspace-diagnostics-picker", :description "Workspace diagnostics picker", :exec "workspace_diagnostics_picker", :program "helix"}]} [:!WS#Preturn_or_enter  [:!Tf14]  [:term]]
 
-
-; control
-{:des "Control Mode - symbols"
- :rules
- [;
   ; [:!W#Popen_bracket [:!Of11]]                                                                     ; helix
   ; [:!W#Pclose_bracket [:!Of12]]                                                                    ; helix
   ; [:!W#Psemicolon [:!Of13]]                                                                        ; helix
@@ -47,14 +36,7 @@
   ; [:!W#Ptab []]                                                                   NOT USEFUL     ;
   ; [:!W#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
   ; [:!W#Pescape []]                                                                NOT USEFUL     ;
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control
-{:des "Control Mode - numbers"
- :rules
- [;
   ; [:!W#Pkeypad_1 []]                                                                             ;
   ; [:!W#Pkeypad_2 []]                                                                             ;
   ; [:!W#Pkeypad_3 []]                                                                             ;
@@ -80,14 +62,7 @@
   ; [:!W#P0 []]                                                                                    ;
   ; [:!W#Phyphen [:!Tf19]]                                                                           ; helix
   ; [:!W#Pequal_sign [:!Tf20]]                                                                       ; helix
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control
-{:des "Control Mode - alphabet"
- :rules
- [;
   ; [:!W#Pa []]                                                                                    ;
   ; [:!W#Pb []]                                                                                    ;
   ; [:!W#Pc []]                                                                                    ;
@@ -115,26 +90,12 @@
   ; [:!W#Py []]                                                                                    ;
   ; [:!W#Pz []]                                                                                    ;
   ; [:!W#Pright_control []]                                                         NOT AVAILABLE  ;
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; ; control - shift
-; {:des "Control Mode - arrows"
-;  :rules
-;  [;
 ;   [:!WS#Pleft_arrow [:!WSpage_up] [:term]]                                   ; prev jump         ; helix
 ;   [:!WS#Pright_arrow [:!WSpage_down] [:term]]                                ; next jump         ; helix
 ;   [:!WS#Pup_arrow [:!WShome] [:term]]                                        ; prev comment      ; helix
 ;   [:!WS#Pdown_arrow [:!WSend] [:term]]                                       ; next comment      ; helix
-;  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control - shift
-{:des "Control Mode - symbols"
- :rules
- [;
   ; [:!WS#Popen_bracket [:!OSf11]]                                                                   ; helix
   ; [:!WS#Pclose_bracket [:!OSf12]]                                                                  ; helix
   ; [:!WS#Psemicolon [:!OSf13]]                                                                      ; helix
@@ -159,14 +120,7 @@
   ; [:!WS#Ptab []]                                                                  NOT USEFUL     ;
   ; [:!WS#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
   ; [:!WS#Pescape []]                                                               NOT USEFUL     ;
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control
-{:des "Control Mode - numbers"
- :rules
- [;
   ; [:!WS#Pkeypad_1 []]                                                                            ;
   ; [:!WS#Pkeypad_2 []]                                                                            ;
   ; [:!WS#Pkeypad_3 []]                                                                            ;
@@ -192,14 +146,7 @@
   ; [:!WS#P0 []]                                                                                   ;
   [:!WS#Phyphen [:!TSf19]]                                                                         ; helix
   [:!WS#Pequal_sign [:!TSf20]]                                                                     ; helix
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; control
-{:des "Control Mode - alphabet"
- :rules
- [;
   ; [:!WS#Pa []]                                                                                   ;
   ; [:!WS#Pb []]                                                                                   ;
   ; [:!WS#Pc []]                                                                                   ;
