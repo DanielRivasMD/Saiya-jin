@@ -2,7 +2,6 @@
 ; CMD
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; command
 {:des "Command Mode - arrows"
  :rules
  [;
@@ -10,14 +9,7 @@
   [:!C#Pright_arrow :!Te [:term]]                                                                  ; alacritty
   [:!C#Pup_arrow [:home] [:term]]                                                                  ; alacritty
   [:!C#Pdown_arrow [:end] [:term]]                                                                 ; alacritty
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - symbols"
- :rules
- [;
   ; [:!C#Popen_bracket [:!S3 :open_bracket]]                                                         ; '#['
   ; [:!C#Pclose_bracket [:close_bracket :spacebar]]                                                  ; '] '
   ; [:!C#Psemicolon [:semicolon :spacebar]]                                                          ; '; '
@@ -42,14 +34,7 @@
   ; ; [:!C#Ptab []]                                                                   NOT USEFUL     ;
   ; ; [:!C#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
   ; ; [:!C#Pescape []]                                                                NOT USEFUL     ;
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - numbers"
- :rules
- [;
   [:!C#Pkeypad_1 [:vk_none]]                                                   ;    EMPTY          ;
   [:!C#Pkeypad_2 [:vk_none]]                                                   ;    EMPTY          ;
   [:!C#Pkeypad_3 [:vk_none]]                                                   ;    EMPTY          ;
@@ -75,14 +60,7 @@
   [:!C#P0 [:!S0 :spacebar]]                                                                        ; ') '
   [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                                          ; ' -= '
   [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]                                ; ' += '
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - alphabet"
- :rules
- [;
   ; [:!C#Pa []]                                                                                    ;
   ; [:!C#Pb []]                                                                                    ;
   ; [:!C#Pc []]                                                                                    ;
@@ -110,26 +88,12 @@
   ; [:!C#Py []]                                                                                    ;
   ; [:!C#Pz []]                                                                                    ;
   ; [:!C#Pright_control []]                                                                        ;
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - arrows"
- :rules
- [;
   [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]                                                       ; alacritty
   [:!CS#Pright_arrow [:!Oright_arrow] [:term]]                                                     ; alacritty
   [:!CS#Pup_arrow [:!Oup_arrow] [:term]]                                                           ; alacritty
   [:!CS#Pdown_arrow [:!Odown_arrow] [:term]]                                                       ; alacritty
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - symbols"
- :rules
- [;
   [:!CS#Popen_bracket [:!S4 :!Sopen_bracket]]                                                      ; '${'
   [:!CS#Pclose_bracket [:!Sclose_bracket :spacebar]]                                               ; '} '
   [:!CS#Psemicolon [:!Ssemicolon :spacebar]]                                                       ; ': '
@@ -154,14 +118,7 @@
   ; [:!CS#Ptab []]                                                                  NOT USEFUL     ;
   ; [:!CS#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
   ; [:!CS#Pescape []]                                                               NOT USEFUL     ;
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - numbers"
- :rules
- [;
   [:!CS#Pkeypad_1 [:vk_none]]                                                  ;    EMPTY          ;
   [:!CS#Pkeypad_2 [:vk_none]]                                                  ;    EMPTY          ;
   [:!CS#Pkeypad_3 [:vk_none]]                                                  ;    EMPTY          ;
@@ -187,14 +144,7 @@
   [:!CS#P0 [:vk_none]]                                                         ;    EMPTY          ;
   [:!CS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]                                 ; ' .-= '
   [:!CS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]                       ; ' .+= '
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - alphabet"
- :rules
- [;
   ; [:!CS#Pa []]                                                                                   ;
   ; [:!CS#Pb []]                                                                                   ;
   ; [:!CS#Pc []]                                                                                   ;
