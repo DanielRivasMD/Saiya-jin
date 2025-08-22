@@ -2,114 +2,32 @@
 ; SHIFT
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; shift
-{:des "Shift Mode - symbols"
+{:des "Shift Mode"
  :rules
  [;
-  ; [:!S#Pleft_arrow []]                                                            NOT USEFUL     ;
-  ; [:!S#Pright_arrow []]                                                           NOT USEFUL     ;
-  ; [:!S#Pup_arrow []]                                                              NOT USEFUL     ;
-  ; [:!S#Pdown_arrow []]                                                            NOT USEFUL     ;
- ]}
+  ; ;; Selection & word-wise navigation
+  ; ^{:doc/actions [{:name "extend-char-left", :description "Extend selection left", :exec "extend_char_left", :program "helix"}]}
+  ; ^{:doc/actions [{:name "extend-char-right", :description "Extend selection right", :exec "extend_char_right", :program "helix"}]}
+  ; ^{:doc/actions [{:name "extend-line-up", :description "Extend selection up", :exec "extend_line_up", :program "helix"}]}
+  ; ^{:doc/actions [{:name "extend-line-down", :description "Extend selection down", :exec "extend_line_down", :program "helix"}]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ; ^{:doc/actions [{:name "word-prev-start", :description "Move to previous word start", :exec "move_prev_word_start", :program "helix"}]}
+  ; ^{:doc/actions [{:name "word-next-end", :description "Move to next word end", :exec "move_next_word_end", :program "helix"}]}
+  ; ^{:doc/actions [{:name "prev-paragraph", :description "Move to previous paragraph", :exec "goto_prev_paragraph", :program "helix"}]}
+  ; ^{:doc/actions [{:name "next-paragraph", :description "Move to next paragraph", :exec "goto_next_paragraph", :program "helix"}]}
+  ; ^{:doc/actions [{:name "select-prev-word", :description "Extend to previous word start", :exec "extend_prev_word_start", :program "helix"}]}
+  ; ^{:doc/actions [{:name "select-next-word", :description "Extend to next word end", :exec "extend_next_word_end", :program "helix"}]}
 
-; shift
-{:des "Shift Mode - symbols"
- :rules
- [;
-  ; [:!S#Popen_bracket []]                                                          NOT USEFUL     ;
-  ; [:!S#Pclose_bracket []]                                                         NOT USEFUL     ;
-  ; [:!S#Psemicolon []]                                                             NOT USEFUL     ;
-  ; [:!S#Pquote []]                                                                 NOT USEFUL     ;
-  ; [:!S#Pbackslash []]                                                             NOT USEFUL     ;
-  ; [:!S#Pcomma []]                                                                 NOT USEFUL     ;
-  ; [:!S#Pperiod []]                                                                NOT USEFUL     ;
-  ; [:!S#Pslash []]                                                                 NOT USEFUL     ;
+  ; [:!S#Pleft_arrow []]
+  ; [:!S#Pright_arrow []]
+  ; [:!S#Pup_arrow []]
+  ; [:!S#Pdown_arrow []]
 
-  [:!S#Pdelete_or_backspace [:!Wr]]                                                                ;
-  [:!S#Preturn_or_enter [:!Ws]]                                                                    ;
+; [:!S#Pdelete_or_backspace []]
+  ; [:!S#Preturn_or_enter []]
   [:!S#Pright_shift [:delete_forward]]                                                             ;
   [:!S#Pright_option [:!Ed]]                                                                       ;
   [:!S#Pright_command [:!Wk]]                                                                      ;
-  [:!S#Pspacebar [:!Wt]]                                                                           ;
-
-  ; [:!S#Pleft_command []]                                                          NOT USEFUL     ;
-  ; [:!S#Pleft_option []]                                                           NOT USEFUL     ;
-  ; [:!S#Pleft_control []]                                                          NOT USEFUL     ;
-  ; [:!S#Pleft_shift []]                                                            NOT AVAILABLE  ;
-  ; [:!S#Pcaps_lock []]                                                             NOT USEFUL     ;
-  ; [:!S#Ptab []]                                                                   NOT USEFUL     ;
-  ; [:!S#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
-  ; [:!S#Pescape []]                                                                NOT USEFUL     ;
+  ; [:!S#Pspacebar []]
   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; shift
-{:des "Shift Mode - numbers"
- :rules
- [;
-  ; [:!S#Pkeypad_1 []]                                                              NOT USEFUL     ;
-  ; [:!S#Pkeypad_2 []]                                                              NOT USEFUL     ;
-  ; [:!S#Pkeypad_3 []]                                                              NOT USEFUL     ;
-  ; [:!S#Pkeypad_4 []]                                                              NOT USEFUL     ;
-  ; [:!S#Pkeypad_5 []]                                                              NOT USEFUL     ;
-  ; [:!S#Pkeypad_6 []]                                                              NOT USEFUL     ;
-  ; [:!S#Pkeypad_7 []]                                                              NOT USEFUL     ;
-  ; [:!S#Pkeypad_8 []]                                                              NOT USEFUL     ;
-  ; [:!S#Pkeypad_9 []]                                                              NOT USEFUL     ;
-  ; [:!S#Pkeypad_0 []]                                                              NOT USEFUL     ;
-  ; [:!S#Pkeypad_slash []]                                                          NOT USEFUL     ;
-  ; [:!S#Pkeypad_asterisk []]                                                       NOT USEFUL     ;
-
-  ; [:!S#P1 []]                                                                     NOT USEFUL     ;
-  ; [:!S#P2 []]                                                                     NOT USEFUL     ;
-  ; [:!S#P3 []]                                                                     NOT USEFUL     ;
-  ; [:!S#P4 []]                                                                     NOT USEFUL     ;
-  ; [:!S#P5 []]                                                                     NOT USEFUL     ;
-  ; [:!S#P6 []]                                                                     NOT USEFUL     ;
-  ; [:!S#P7 []]                                                                     NOT USEFUL     ;
-  ; [:!S#P8 []]                                                                     NOT USEFUL     ;
-  ; [:!S#P9 []]                                                                     NOT USEFUL     ;
-  ; [:!S#P0 []]                                                                     NOT USEFUL     ;
-  ; [:!S#Phyphen []]                                                                NOT USEFUL     ;
-  ; [:!S#Pequal_sign []]                                                            NOT USEFUL     ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; bspace
-{:des "BSpace Mode - alphabet"
- :rules
- [;
-  ; [:!S#Pa []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pb []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pc []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pd []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pe []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pf []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pg []]                                                                     NOT USEFUL     ;
-  ; [:!S#Ph []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pi []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pj []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pk []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pl []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pm []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pn []]                                                                     NOT USEFUL     ;
-  ; [:!S#Po []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pp []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pq []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pr []]                                                                     NOT USEFUL     ;
-  ; [:!S#Ps []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pt []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pu []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pv []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pw []]                                                                     NOT USEFUL     ;
-  ; [:!S#Px []]                                                                     NOT USEFUL     ;
-  ; [:!S#Py []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pz []]                                                                     NOT USEFUL     ;
-  ; [:!S#Pright_control []]                                                         NOT USEFUL     ;
-  ]}
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
