@@ -2,23 +2,14 @@
 ; OPT-CMD
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; option - command
-{:des "Option - Command Mode - arrows"
+{:des "Option - Command Mode"
  :rules
  [;
-  [:!OC#Pleft_arrow :!SOj [:term]]                                             ; tab motion        ; zellij
-  [:!OC#Pright_arrow :!SOk [:term]]                                            ; tab motion        ; zellij
-  [:!OC#Pup_arrow :!Tx [:term]]                                                ; screen motion     ; zellij
-  [:!OC#Pdown_arrow :!Ty [:term]]                                              ; screen motion     ; zellij
-  ]}
+  ^{:doc/actions [{:name "prev-buffer", :description "Previous buffer", :exec "goto_previous_buffer", :program "helix"}]} [:!OC#Pleft_arrow :!SOj [:term]]
+  ^{:doc/actions [{:name "next-buffer", :description "Next buffer", :exec "goto_next_buffer", :program "helix"}]} [:!OC#Pright_arrow :!SOk [:term]]
+  ^{:doc/actions [{:name "scroll-up", :description "Scroll up", :exec "scroll_up", :program "helix"}]} [:!OC#Pup_arrow :!Tx [:term]]
+  ^{:doc/actions [{:name "scroll-down", :description "Scroll down", :exec "scroll_down", :program "helix"}]} [:!OC#Pdown_arrow :!Ty [:term]]
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; TODO: update sync with saiya-jin
-; option - command
-{:des "Option - Command Mode - symbols"
- :rules
- [;
   [:!OC#Popen_bracket :!SOv [:term]]                                           ; plugin room       ; zellij
   [:!OC#Pclose_bracket :!SOw [:term]]                                          ; plugin jump-list  ; zellij
   [:!OC#Psemicolon :!SOx [:term]]                                              ; plugin monocle    ; zellij
@@ -30,27 +21,11 @@
 
   [:!OC#Pdelete_or_backspace :!SOu [:term]]                                    ; tab close         ; zellij
   [:!OC#Preturn_or_enter :!SOp [:term]]                                        ; tab sync          ; zellij
-  [:!OC#Pright_shift :!SOq]                                            ; tab new           ; zellij
+  [:!OC#Pright_shift :!SOq]                                                    ; tab new           ; zellij
   [:!OC#Pright_option :!SOr [:term]]                                           ; tab break pane    ; zellij
   [:!OC#Pright_command :!SOs [:term]]                                          ; tab rename        ; zellij
   [:!OC#Pspacebar :!SOt [:term]]                                               ; tab jump back     ; zellij
 
-  ; [:!OCleft_command []]                                                           NOT AVAILABLE  ;
-  ; [:!OC#Pleft_option []]                                                          NOT AVAILABLE  ;
-  ; [:!OCleft_control []]                                                           NOT USEFUL     ;
-  ; [:!OC#Pleft_shift []]                                                           NOT USEFUL     ;
-  ; [:!OC#Pcaps_lock []]                                                            NOT USEFUL     ;
-  ; [:!OC#Ptab []]                                                                  NOT USEFUL     ;
-  ; [:!OC#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
-  ; [:!OC#Pescape []]                                                               NOT USEFUL     ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option - command
-{:des "Option - Command Mode - numbers"
- :rules
- [;
   [:!OC#Pkeypad_1 :!SOa [:term]]                           ; alt-cmd-1         ;                   ; zellij
   [:!OC#Pkeypad_2 :!SOb [:term]]                           ; alt-cmd-2         ;                   ; zellij
   [:!OC#Pkeypad_3 :!SOc [:term]]                           ; alt-cmd-3         ;                   ; zellij
@@ -77,40 +52,4 @@
   ; [:!OC#Phyphen []]                                                                              ;
   ; [:!OC#Pequal_sign []]                                                                          ;
   ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option - command
-{:des "Option - Command Mode - alphabet"
- :rules
- [;
-  ; [:!OC#Pa []]                                                                                   ;
-  ; [:!OC#Pb []]                                                                                   ;
-  ; [:!OC#Pc []]                                                                                   ;
-  ; [:!OC#Pd []]                                                                                   ;
-  ; [:!OC#Pe []]                                                                                   ;
-  ; [:!OC#Pf []]                                                                                   ;
-  ; [:!OC#Pg []]                                                                                   ;
-  ; [:!OC#Ph []]                                                                                   ;
-  ; [:!OC#Pi []]                                                                                   ;
-  ; [:!OC#Pj []]                                                                                   ;
-  ; [:!OC#Pk []]                                                                                   ;
-  ; [:!OC#Pl []]                                                                                   ;
-  ; [:!OC#Pm []]                                                                                   ;
-  ; [:!OC#Pn []]                                                                                   ;
-  ; [:!OC#Po []]                                                                                   ;
-  ; [:!OC#Pp []]                                                                                   ;
-  ; [:!OC#Pq []]                                                                                   ;
-  ; [:!OC#Pr []]                                                                                   ;
-  ; [:!OC#Ps []]                                                                                   ;
-  ; [:!OC#Pt []]                                                                                   ;
-  ; [:!OC#Pu []]                                                                                   ;
-  ; [:!OC#Pv []]                                                                                   ;
-  ; [:!OC#Pw []]                                                                                   ;
-  ; [:!OC#Px []]                                                                                   ;
-  ; [:!OC#Py []]                                                                                   ;
-  ; [:!OC#Pz []]                                                                                   ;
-  ; [:!OC#Pright_control []]                                                                       ;
-  ]}
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
