@@ -12,8 +12,6 @@
   ; [:!ROTC#Pup_arrow []]                                                      ; menu              ; system
   ; [:!ROTC#Pdown_arrow []]                                                    ; dock              ; system
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
   ; [:!ROTC#Popen_bracket []]                                                                      ;
   ; [:!ROTC#Pclose_bracket []]                                                                     ;
   ; [:!ROTC#Psemicolon []]                                                                         ;
@@ -23,25 +21,14 @@
   ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
   ; [:!ROTC#Pslash []]                                                                             ;
 
-  [:!ROTC#Pdelete_or_backspace [:!ROTC#Pkeypad_num_lock]]                                          ;
+  [:!ROTC#Pdelete_or_backspace [:!ROTC#Pkeypad_num_lock]]                      ; control center    ; system
   ; [:!ROTC#Preturn_or_enter []]                                               ; speak             ; system
   [:!ROTC#Pright_shift [:launch "Alacritty"]]
   [:!ROTC#Pright_option [:launch "Arc"]]
   [:!ROTC#Pright_command [:launch "Canary Mail"]]
   [:!ROTC#Pspacebar [:!W#Pnon_us_pound]]                                       ; dictation         ; system
 
-  ; [:!ROTC#Pleft_command []]                                                       NOT USEFUL     ;
-  ; [:!ROTC#Pleft_option []]                                                        NOT USEFUL     ;
-  ; [:!ROTC#Pleft_control []]                                                       NOT USEFUL     ;
-  ; [:!ROTC#Pleft_shift []]                                                         NOT USEFUL     ;
-  ; [:!ROTC#Pcaps_lock []]                                                          NOT USEFUL     ;
-  ; [:!ROTC#Ptab []]                                                                NOT AVAILABLE  ;
-  ; [:!ROTC#Pkeypad_num_lock []]                                                    NOT USEFUL     ;
-  ; [:!ROTC#Pescape []]                                                             NOT USEFUL     ;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ; [:!ROTC#Pkeypad_1 []]                                                                          ;
+; [:!ROTC#Pkeypad_1 []]                                                                          ;
   ; [:!ROTC#Pkeypad_2 []]                                                                          ;
   ; [:!ROTC#Pkeypad_3 []]                                                                          ;
   ; [:!ROTC#Pkeypad_4 []]                                                                          ;
@@ -66,36 +53,5 @@
   ; [:!ROTC#P0 []]                                                                                 ;
   ; [:!ROTC#Phyphen []]                                                                            ;
   ; [:!ROTC#Pequal_sign []]                                                                        ;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ; [:!ROTC#Pa []]                                                                                 ;
-  ; [:!ROTC#Pb []]                                                                                 ;
-  ; [:!ROTC#Pc []]                                                                                 ;
-  ; [:!ROTC#Pd []]                                                                                 ;
-  ; [:!ROTC#Pe []]                                                                                 ;
-  ; [:!ROTC#Pf []]                                                                                 ;
-  ; [:!ROTC#Pg []]                                                                                 ;
-  ; [:!ROTC#Ph []]                                                                                 ;
-  ; [:!ROTC#Pi []]                                                                                 ;
-  ; [:!ROTC#Pj []]                                                                                 ;
-  ; [:!ROTC#Pk []]                                                                                 ;
-  ; [:!ROTC#Pl []]                                                                                 ;
-  ; [:!ROTC#Pm []]                                                                                 ;
-  ; [:!ROTC#Pn []]                                                                                 ;
-  ; [:!ROTC#Po []]                                                                                 ;
-  ; [:!ROTC#Pp []]                                                                                 ;
-  ; [:!ROTC#Pq []]                                                                                 ;
-  ; [:!ROTC#Pr []]                                                                                 ;
-  ; [:!ROTC#Ps []]                                                                                 ;
-  ; [:!ROTC#Pt []]                                                                                 ;
-  ; [:!ROTC#Pu []]                                                                                 ;
-  ; [:!ROTC#Pv []]                                                                                 ;
-  ; [:!ROTC#Pw []]                                                                                 ;
-  ; [:!ROTC#Px []]                                                                                 ;
-  ; [:!ROTC#Py []]                                                                                 ;
-  ; [:!ROTC#Pz []]                                                                                 ;
-  ; [:!ROTC#Pright_control []]                                                                     ;
   ]}
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
