@@ -2,87 +2,34 @@
 ; OPT
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; option
-{:des "Option Mode - arrows"
+{:des "Option Mode"
  :rules
  [;
-  ; [:!E#Pleft_arrow []]                                                                           ;
-  ; [:!E#Pright_arrow []]                                                                          ;
-  ; [:!E#Pup_arrow []]                                                                             ;
-  ; [:!E#Pdown_arrow []]                                                                           ;
-  ]}
+  [:!E#Pcaps_lock [:caps_lock]]
+  
+  [:!E#P9 [:!Scomma :!S9]]                                                                         ; '<('
+  [:!E#P0 [:!S0 :spacebar]]                                                                        ; ') '
+ 
+  [:!E#Popen_bracket [:!S3 :open_bracket]]                                                         ; '#['
+  [:!E#Pclose_bracket [:close_bracket :spacebar]]                                                  ; '] '
+  [:!E#Psemicolon [:semicolon :spacebar]]                                                          ; '; '
+  [:!E#Pquote [:quote :slash :quote]]                                                              ; ''/''
+  ; [:!E#Pbackslash []]
+  [:!E#Pcomma [:comma :spacebar]]                                                                  ; ', '
+  [:!E#Pperiod [:period :spacebar]]                                                                ; '. '
+  [:!E#Pslash [:spacebar :hyphen]]                                                                 ; ' -'
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  [:!ER#P9 [:!S4 :!S9]]                                                                            ; '$('
 
-; option
-{:des "Option Mode - symbols"
- :rules
- [;
-  ; [:!E#Popen_bracket []]                                                                         ;
-  ; [:!E#Pclose_bracket []]                                                                        ;
-  ; [:!E#Psemicolon []]                                                                            ;
-  ; [:!E#Pquote []]                                                                                ;
-  ; [:!E#Pbackslash []]                                                                            ;
-  ; [:!E#Pcomma []]                                                                                ;
-  ; [:!E#Pperiod []]                                                                               ;
-  ; [:!E#Pslash []]                                                                                ;
+  [:!ER#Popen_bracket [:!S4 :!Sopen_bracket]]                                                      ; '${'
+  [:!ER#Pclose_bracket [:!Sclose_bracket :spacebar]]                                               ; '} '
+  [:!ER#Psemicolon [:!Ssemicolon :spacebar]]                                                       ; ': '
+  [:!ER#Pquote [:!Squote :slash :!Squote]]                                                         ; '"/"'
+  ; [:!ER#Pbackslash []]                                                                           ;
+  [:!ER#Pcomma [:!Scomma :!Ssemicolon]]                                                            ; '<:'
+  [:!ER#Pperiod [:!Speriod :!Ssemicolon]]                                                          ; '>:'
+  [:!ER#Pslash [:spacebar :hyphen :hyphen]]                                                        ; ' --'
 
-  ; [:!E#Pdelete_or_backspace []]                                                                  ;
-  ; [:!E#Preturn_or_enter []]                                                                      ;
-  ; [:!E#Pright_shift []]                                                           NOT USEFUL     ;
-  ; [:!E#Pright_option []]                                                          NOT AVAILABLE  ;
-  ; [:!E#Pright_command []]                                                         NOT USEFUL     ;
-  ; [:!E#Pspacebar []]                                                                             ;
-
-  ; [:!E#Pleft_command [:f13]]                                                   ; move forward      ; helix
-  ; [:!E#Pleft_option [:f14]]                                                    ; repeat motion     ; helix
-  ; [:!E#Pleft_control [:f15]]                                                   ; move backward     ; helix
-  ; [:!E#Pleft_shift [:f16]]                                                     ; next diag         ; helix
-  ; [:!E#Pcaps_lock [:f17]]                                                      ; diag              ; helix
-  ; [:!E#Ptab [:f18]]                                                            ; prev diag         ; helix
-  ; [:!E#Pkeypad_num_lock [:f19]]                                                                    ;
-  ; [:!E#Pescape [:f20]]                                                                             ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option
-{:des "Option Mode - numbers"
- :rules
- [;
-  [:!E#Pkeypad_1 [:f1]]                                                                            ;
-  [:!E#Pkeypad_2 [:f2]]                                                                            ;
-  [:!E#Pkeypad_3 [:f3]]                                                                            ;
-  [:!E#Pkeypad_4 [:f4]]                                                                            ;
-  [:!E#Pkeypad_5 [:f5]]                                                                            ;
-  [:!E#Pkeypad_6 [:f6]]                                                                            ;
-  [:!E#Pkeypad_7 [:f7]]                                                                            ;
-  [:!E#Pkeypad_8 [:f8]]                                                                            ;
-  [:!E#Pkeypad_9 [:f9]]                                                                            ;
-  [:!E#Pkeypad_0 [:f10]]                                                                           ;
-  [:!E#Pkeypad_slash [:f11]]                                                                       ;
-  [:!E#Pkeypad_asterisk [:f12]]                                                                    ;
-
-  [:!E#P1 [:f1]]                                                                                   ;
-  [:!E#P2 [:f2]]                                                                                   ;
-  [:!E#P3 [:f3]]                                                                                   ;
-  [:!E#P4 [:f4]]                                                                                   ;
-  [:!E#P5 [:f5]]                                                                                   ;
-  [:!E#P6 [:f6]]                                                                                   ;
-  [:!E#P7 [:f7]]                                                                                   ;
-  [:!E#P8 [:f8]]                                                                                   ;
-  [:!E#P9 [:f9]]                                                                                   ;
-  [:!E#P0 [:f10]]                                                                                  ;
-  [:!E#Phyphen [:f11]]                                                                             ;
-  [:!E#Pequal_sign [:f12]]                                                                         ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option
-{:des "Option Mode - alphabet"
- :rules
- [;
   ; [:!E#Pa []]                                                                                    ;
   [:!E#Pb [:b :u :g :!Ssemicolon :spacebar]]                                                       ; 'bug: '
   ; [:!E#Pc []]                                                                                    ;
@@ -110,91 +57,7 @@
   ; [:!E#Py []]                                                                                    ;
   ; [:!E#Pz []]                                                                                    ;
   [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]                                           ; ' ∈ '
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option - shift
-{:des "Option Mode - arrows"
- :rules
- [;
-  ; [:!ER#Pleft_arrow []]                                                                           ;
-  ; [:!ER#Pright_arrow []]                                                                          ;
-  ; [:!ER#Pup_arrow []]                                                                             ;
-  ; [:!ER#Pdown_arrow []]                                                                           ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option - shift
-{:des "Option Mode - symbols"
- :rules
- [;
-  ; [:!ER#Popen_bracket []]                                                                        ;
-  ; [:!ER#Pclose_bracket []]                                                                       ;
-  ; [:!ER#Psemicolon []]                                                                           ;
-  ; [:!ER#Pquote []]                                                                               ;
-  ; [:!ER#Pbackslash []]                                                                           ;
-  ; [:!ER#Pcomma []]                                                                               ;
-  ; [:!ER#Pperiod []]                                                                              ;
-  ; [:!ER#Pslash []]                                                                               ;
-
-  ; [:!ER#Pdelete_or_backspace []]                                                                 ;
-  ; [:!ER#Preturn_or_enter []]                                                                     ;
-  ; [:!ER#Pright_shift []]                                                          NOT AVAILABLE  ;
-  ; [:!ER#Pright_option []]                                                         NOT AVAILABLE  ;
-  ; [:!ER#Pright_command []]                                                        NOT USEFUL     ;
-  ; [:!ER#Pspacebar []]                                                                            ;
-
-  ; [:!ER#Pleft_command [:!Rf13]]                                                                    ;
-  ; [:!ER#Pleft_option [:!Rf14]]                                                                     ;
-  ; [:!ER#Pleft_control [:!Rf15]]                                                                    ;
-  ; [:!ER#Pleft_shift [:!Rf16]]                                                                      ;
-  ; [:!ER#Pcaps_lock [:!Rf17]]                                                                       ;
-  ; [:!ER#Ptab [:!Rf18]]                                                                             ;
-  ; [:!ER#Pkeypad_num_lock [:!Rf19]]                                                                 ;
-  ; [:!ER#Pescape [:!Rf20]]                                                                          ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option - shift
-{:des "Option Mode - numbers"
- :rules
- [;
-  [:!ER#Pkeypad_1 [:!Rf1]]                                                                         ;
-  [:!ER#Pkeypad_2 [:!Rf2]]                                                                         ;
-  [:!ER#Pkeypad_3 [:!Rf3]]                                                                         ;
-  [:!ER#Pkeypad_4 [:!Rf4]]                                                                         ;
-  [:!ER#Pkeypad_5 [:!Rf5]]                                                                         ;
-  [:!ER#Pkeypad_6 [:!Rf6]]                                                                         ;
-  [:!ER#Pkeypad_7 [:!Rf7]]                                                                         ;
-  [:!ER#Pkeypad_8 [:!Rf8]]                                                                         ;
-  [:!ER#Pkeypad_9 [:!Rf9]]                                                                         ;
-  [:!ER#Pkeypad_0 [:!Rf10]]                                                                        ;
-  [:!ER#Pkeypad_slash [:!Rf11]]                                                                    ;
-  [:!ER#Pkeypad_asterisk [:!Rf12]]                                                                 ;
-
-  [:!ER#P1 [:!Rf1]]                                                                                ;
-  [:!ER#P2 [:!Rf2]]                                                                                ;
-  [:!ER#P3 [:!Rf3]]                                                                                ;
-  [:!ER#P4 [:!Rf4]]                                                                                ;
-  [:!ER#P5 [:!Rf5]]                                                                                ;
-  [:!ER#P6 [:!Rf6]]                                                                                ;
-  [:!ER#P7 [:!Rf7]]                                                                                ;
-  [:!ER#P8 [:!Rf8]]                                                                                ;
-  [:!ER#P9 [:!Rf9]]                                                                                ;
-  [:!ER#P0 [:!Rf10]]                                                                               ;
-  [:!ER#Phyphen [:!Rf11]]                                                                          ;
-  [:!ER#Pequal_sign [:!Rf12]]                                                                      ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; option - shift
-{:des "Option Mode - alphabet"
- :rules
- [;
   ; [:!ER#Pa []]                                                                                   ;
   [:!ER#Pb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                                                ; 'BUG: '
   ; [:!ER#Pc []]                                                                                   ;
