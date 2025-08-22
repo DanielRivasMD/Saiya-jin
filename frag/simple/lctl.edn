@@ -5,174 +5,73 @@
 {:des "Control Mode"
  :rules
  [;
-  ; [:!T#Pleft_arrow []]                                                            DEFAULT        ;
-  ; [:!T#Pright_arrow []]                                                           DEFAULT        ;
-  ; [:!T#Pup_arrow []]                                                              DEFAULT        ;
-  ; [:!T#Pdown_arrow []]                                                            DEFAULT        ;
+  ; ;; Split-view jumps & line navigation
+  ; ^{:doc/actions [{:name "jump-view-left", :description "Jump view left", :exec "jump_view_left", :program "helix"}]}
+  ; ^{:doc/actions [{:name "jump-view-right", :description "Jump view right", :exec "jump_view_right", :program "helix"}]}
+  ; ^{:doc/actions [{:name "jump-view-up", :description "Jump view up", :exec "jump_view_up", :program "helix"}]}
+  ; ^{:doc/actions [{:name "jump-view-down", :description "Jump view down", :exec "jump_view_down", :program "helix"}]}
 
-  ; [:!T#Popen_bracket [:open_bracket :open_bracket]]                                                ; '[['
-  ; [:!T#Pclose_bracket [:close_bracket :close_bracket]]                                             ; ']]'
-  ; [:!T#Psemicolon [:!Ssemicolon :!Ssemicolon]]                                                     ; '::'
-  ; [:!T#Pquote [:quote :quote :quote]]                                                              ; '''''
-  ; [:!T#Pbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]                                 ; ' || '
-  ; [:!T#Pcomma [:spacebar :!Scomma :!Scomma :spacebar]]                                             ; ' << '
-  ; [:!T#Pperiod [:spacebar :!Speriod :!Speriod :spacebar]]                                          ; ' >> '
-  ; [:!T#Pslash [:slash :slash :slash :spacebar]]                                                    ; '/// '
+  ; [:!T#Pleft_arrow []]
+  ; [:!T#Pright_arrow []]
+  ; [:!T#Pup_arrow []]
+  ; [:!T#Pdown_arrow []]
 
-  ; [:!T#Pdelete_or_backspace [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]  ; '```'
-  ; [:!T#Preturn_or_enter [:spacebar :equal_sign :equal_sign :spacebar]]                             ; ' == '
-  ; [:!T#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]                                   ; ' => '
-  ; [:!T#Pright_option [:spacebar :!S8 :!S8 :spacebar]]                                              ; ' ** '
-  ; [:!T#Pright_command [:spacebar :slash :slash :spacebar]]                                         ; ' // '
-  ; ; [:!T#Pspacebar []]                                                              DEFAULT        ;
+  [:!T#Popen_bracket [:open_bracket :open_bracket]]                                                ; '[['
+  [:!T#Pclose_bracket [:close_bracket :close_bracket]]                                             ; ']]'
+  ; [:!T#Psemicolon []]
+  [:!T#Pquote [:quote :quote :quote]]                                                              ; '''''
+  [:!T#Pbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]                                 ; ' || '
+  [:!T#Pcomma [:spacebar :!Scomma :!Scomma :spacebar]]                                             ; ' << '
+  [:!T#Pperiod [:spacebar :!Speriod :!Speriod :spacebar]]                                          ; ' >> '
+  [:!T#Pslash [:slash :slash :slash :spacebar]]                                                    ; '/// '
 
-  ; ; [:!T#Pleft_command []]                                                          NOT USEFUL     ;
-  ; ; [:!T#Pleft_option []]                                                           NOT USEFUL     ;
-  ; ; [:!T#Pleft_control []]                                                          NOT AVAILABLE  ;
-  ; ; [:!T#Pleft_shift []]                                                            NOT USEFUL     ;
-  ; ; [:!T#Pcaps_lock []]                                                             NOT USEFUL     ;
-  ; ; [:!T#Ptab []]                                                                   NOT USEFUL     ;
-  ; ; [:!T#Pkeypad_num_lock []]                                                       NOT USEFUL     ;
-  ; ; [:!T#Pescape []]                                                                NOT USEFUL     ;
+  [:!T#Pdelete_or_backspace [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]  ; '```'
+  [:!T#Preturn_or_enter [:spacebar :equal_sign :equal_sign :spacebar]]                             ; ' == '
+  [:!T#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]                                   ; ' => '
+  [:!T#Pright_option [:spacebar :!S8 :!S8 :spacebar]]                                              ; ' ** '
+  [:!T#Pright_command [:spacebar :slash :slash :spacebar]]                                         ; ' // '
+  ; [:!T#Pspacebar []]
 
- ; ; TODO: improve annotations for empty bindings
- ;  [:!T#Pkeypad_1 [:vk_none]]                                                   ;    EMPTY          ;
- ;  [:!T#Pkeypad_2 [:vk_none]]                                                   ;    EMPTY          ;
- ;  [:!T#Pkeypad_3 [:vk_none]]                                                   ;    EMPTY          ;
- ;  [:!T#Pkeypad_4 [:vk_none]]                                                   ;    EMPTY          ;
- ;  [:!T#Pkeypad_5 [:vk_none]]                                                   ;    EMPTY          ;
- ;  [:!T#Pkeypad_6 [:vk_none]]                                                   ;    EMPTY          ;
- ;  [:!T#Pkeypad_7 [:vk_none]]                                                   ;    EMPTY          ;
- ;  [:!T#Pkeypad_8 [:vk_none]]                                                   ;    EMPTY          ;
- ;  [:!T#Pkeypad_9 [:vk_none]]                                                   ;    EMPTY          ;
- ;  [:!T#Pkeypad_0 [:vk_none]]                                                   ;    EMPTY          ;
- ;  [:!T#Pkeypad_slash [:vk_none]]                                               ;    EMPTY          ;
- ;  [:!T#Pkeypad_asterisk [:vk_none]]                                            ;    EMPTY          ;
-
- ;  [:!T#P1 [:vk_none]]                                                          ;    EMPTY          ;
- ;  [:!T#P2 [:vk_none]]                                                          ;    EMPTY          ;
- ;  [:!T#P3 [:vk_none]]                                                          ;    EMPTY          ;
- ;  [:!T#P4 [:vk_none]]                                                          ;    EMPTY          ;
- ;  [:!T#P5 [:spacebar :!S5 :!S5 :spacebar]]                                                         ; ' %% '
- ;  [:!T#P6 [:vk_none]]                                                          ;    EMPTY          ;
- ;  [:!T#P7 [:spacebar :!S7 :!S7 :spacebar]]                                                         ; ' && '
- ;  [:!T#P8 [:vk_none]]                                                          ;    EMPTY          ;
- ;  [:!T#P9 [:vk_none]]                                                          ;    EMPTY          ;
- ;  [:!T#P0 [:vk_none]]                                                          ;    EMPTY          ;
- ;  [:!T#Phyphen [:spacebar :hyphen :hyphen :spacebar]]                                              ; ' -- '
- ;  [:!T#Pequal_sign [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]                              ; ' ++ '
-
-  [:!T#Pa [:!Ssemicolon :g :d :l :!Ssemicolon]]                                                    ;
-  ; [:!T#Pb []]                                                                                    ;
-  ; [:!T#Pc []]                                                                                    ;
-  ; [:!T#Pd []]                                                                                    ;
-  ; [:!T#Pe []]                                                                                    ;
-  ; [:!T#Pf []]                                                                                    ;
-  ; [:!T#Pg []]                                                                                    ;
-  ; [:!T#Ph []]                                                                                    ;
-  [:!T#Pi [:!Ssemicolon :i :d :!Ssemicolon]]                                                       ;
-  ; [:!T#Pj []]                                                                                    ;
-  ; [:!T#Pk []]                                                                                    ;
-  ; [:!T#Pl []]                                                                                    ;
-  [:!T#Pm [:!Ssemicolon :m :a :i :l :!Ssemicolon]]                                                 ;
-  [:!T#Pn [:!Ssemicolon :n :a :m :e :!Ssemicolon]]                                                 ;
-  ; [:!T#Po []]                                                                                    ;
-  [:!T#Pp [:!Ssemicolon :p :h :o :n :e :!Ssemicolon]]                                              ;
-  ; [:!T#Pq []]                                                                                    ;
-  ; [:!T#Pr []]                                                                                    ;
-  [:!T#Ps [:!Ssemicolon :s :i :g :!Ssemicolon]]                                                    ;
-  ; [:!T#Pt []]                                                                                    ;
-  ; [:!T#Pu []]                                                                                    ;
-  ; [:!T#Pv []]                                                                                    ;
-  ; [:!T#Pw []]                                                                                    ;
-  ; [:!T#Px []]                                                                                    ;
-  ; [:!T#Py []]                                                                                    ;
-  ; [:!T#Pz []]                                                                                    ;
-  ; [:!T#Pright_control []]                                                                        ;
-
-  ; [:!TS#Pleft_arrow []]                                                                          ;
-  ; [:!TS#Pright_arrow []]                                                                         ;
-  ; [:!TS#Pup_arrow []]                                                                            ;
-  ; [:!TS#Pdown_arrow []]                                                                          ;
+  ; [:!T#P1 []]
+  ; [:!T#P2 []]
+  ; [:!T#P3 []]
+  ; [:!T#P4 []]
+  [:!T#P5 [:spacebar :!S5 :!S5 :spacebar]]                                                         ; ' %% '
+  ; [:!T#P6 []]
+  [:!T#P7 [:spacebar :!S7 :!S7 :spacebar]]                                                         ; ' && '
+  ; [:!T#P8 []]
+  ; [:!T#P9 []]
+  ; [:!T#P0 []]
+  [:!T#Phyphen [:spacebar :hyphen :hyphen :spacebar]]                                              ; ' -- '
+  [:!T#Pequal_sign [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]                              ; ' ++ '
 
   [:!TS#Popen_bracket [:!Sopen_bracket :!Sopen_bracket]]                                           ; '{{'
   [:!TS#Pclose_bracket [:!Sclose_bracket :!Sclose_bracket]]                                        ; '}}'
-  [:!TS#Psemicolon [:!Ssemicolon :!Ssemicolon :!Scomma]]                                           ; '::<'
+  ; [:!TS#Psemicolon []]
   [:!TS#Pquote [:!Squote :!Squote :!Squote]]                                                       ; '"""'
   [:!TS#Pbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]                        ; ' .|| '
   [:!TS#Pcomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]                                   ; ' <<< '
   [:!TS#Pperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]                               ; ' >>> '
   [:!TS#Pslash [:slash :slash :slash :spacebar]]                                                   ; '/// '
 
-  ; [:!TS#Pdelete_or_backspace []]                                                                 ;
+  ; [:!TS#Pdelete_or_backspace []]
   [:!TS#Preturn_or_enter [:spacebar :period :equal_sign :equal_sign :spacebar]]                    ; ' .== '
   [:!TS#Pright_shift [:spacebar :period :equal_sign :!Speriod :spacebar]]                          ; ' .=> '
   [:!TS#Pright_option [:spacebar :period :!S8 :!S8 :spacebar]]                                     ; ' .** '
   [:!TS#Pright_command [:spacebar :period :slash :slash :spacebar]]                                ; ' .// '
   ; [:!TS#Pspacebar []]                                                                            ;
 
-  ; [:!TS#Pleft_command []]                                                         NOT USEFUL     ;
-  ; [:!TS#Pleft_option []]                                                          NOT USEFUL     ;
-  ; [:!TS#Pleft_control []]                                                         NOT AVAILABLE  ;
-  ; [:!TS#Pleft_shift []]                                                           NOT AVAILABLE  ;
-  ; [:!TS#Pcaps_lock []]                                                            NOT USEFUL     ;
-  ; [:!TS#Ptab []]                                                                  NOT USEFUL     ;
-  ; [:!TS#Pkeypad_num_lock []]                                                      NOT USEFUL     ;
-  ; [:!TS#Pescape []]                                                               NOT USEFUL     ;
-
-  [:!TS#Pkeypad_1 [:vk_none]]                                                  ;    EMPTY          ;
-  [:!TS#Pkeypad_2 [:vk_none]]                                                  ;    EMPTY          ;
-  [:!TS#Pkeypad_3 [:vk_none]]                                                  ;    EMPTY          ;
-  [:!TS#Pkeypad_4 [:vk_none]]                                                  ;    EMPTY          ;
-  [:!TS#Pkeypad_5 [:vk_none]]                                                  ;    EMPTY          ;
-  [:!TS#Pkeypad_6 [:vk_none]]                                                  ;    EMPTY          ;
-  [:!TS#Pkeypad_7 [:vk_none]]                                                  ;    EMPTY          ;
-  [:!TS#Pkeypad_8 [:vk_none]]                                                  ;    EMPTY          ;
-  [:!TS#Pkeypad_9 [:vk_none]]                                                  ;    EMPTY          ;
-  [:!TS#Pkeypad_0 [:vk_none]]                                                  ;    EMPTY          ;
-  [:!TS#Pkeypad_slash [:vk_none]]                                              ;    EMPTY          ;
-  [:!TS#Pkeypad_asterisk [:vk_none]]                                           ;    EMPTY          ;
-
-  [:!TS#P1 [:vk_none]]                                                         ;    EMPTY          ;
-  [:!TS#P2 [:vk_none]]                                                         ;    EMPTY          ;
-  [:!TS#P3 [:vk_none]]                                                         ;    EMPTY          ;
-  [:!TS#P4 [:vk_none]]                                                         ;    EMPTY          ;
+  ; [:!TS#P1 []]
+  ; [:!TS#P2 []]
+  ; [:!TS#P3 []]
+  ; [:!TS#P4 []]
   [:!TS#P5 [:spacebar :period :!S5 :!S5 :spacebar]]                                                ; ' .%% '
-  [:!TS#P6 [:vk_none]]                                                         ;    EMPTY          ;
+  ; [:!TS#P6 []]
   [:!TS#P7 [:spacebar :period :!S7 :!S7 :spacebar]]                                                ; ' .&& '
-  [:!TS#P8 [:vk_none]]                                                         ;    EMPTY          ;
+  ; [:!TS#P8 []]
   [:!TS#P9 [:!S9 :!S9]]                                                                            ; '(('
   [:!TS#P0 [:!S0 :!S0]]                                                                            ; '))'
   [:!TS#Phyphen [:spacebar :period :hyphen :hyphen :spacebar]]                                     ; ' .-- '
   [:!TS#Pequal_sign [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]                     ; ' .++ '
-
-  ; [:!TS#Pa []]                                                                                   ;
-  ; [:!TS#Pb []]                                                                                   ;
-  ; [:!TS#Pc []]                                                                                   ;
-  ; [:!TS#Pd []]                                                                                   ;
-  ; [:!TS#Pe []]                                                                                   ;
-  ; [:!TS#Pf []]                                                                                   ;
-  ; [:!TS#Pg []]                                                                                   ;
-  ; [:!TS#Ph []]                                                                                   ;
-  ; [:!TS#Pi []]                                                                                   ;
-  ; [:!TS#Pj []]                                                                                   ;
-  ; [:!TS#Pk []]                                                                                   ;
-  ; [:!TS#Pl []]                                                                                   ;
-  [:!TS#Pm [:!Ssemicolon :g :m :a :i :l :!Ssemicolon]]                                             ;
-  [:!TS#Pn [:!Ssemicolon :d :r :!Ssemicolon]]                                                      ;
-  ; [:!TS#Po []]                                                                                   ;
-  ; [:!TS#Pp []]                                                                                   ;
-  ; [:!TS#Pq []]                                                                                   ;
-  ; [:!TS#Pr []]                                                                                   ;
-  ; [:!TS#Ps []]                                                                                   ;
-  ; [:!TS#Pt []]                                                                                   ;
-  ; [:!TS#Pu []]                                                                                   ;
-  ; [:!TS#Pv []]                                                                                   ;
-  ; [:!TS#Pw []]                                                                                   ;
-  ; [:!TS#Px []]                                                                                   ;
-  ; [:!TS#Py []]                                                                                   ;
-  ; [:!TS#Pz []]                                                                                   ;
-  ; [:!TS#Pright_control []]                                                                       ;
   ]}
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
