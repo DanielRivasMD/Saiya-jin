@@ -138,8 +138,8 @@
   ; [:!WS#P8 []]                                                                                   ;
   ; [:!WS#P9 []]                                                                                   ;
   ; [:!WS#P0 []]                                                                                   ;
-  [:!WS#Phyphen [:!TSf19]]                                                                         ; helix
-  [:!WS#Pequal_sign [:!TSf20]]                                                                     ; helix
+  ; [:!WS#Phyphen [:!TSf19]]                                                                         ; helix
+  ; [:!WS#Pequal_sign [:!TSf20]]                                                                     ; helix
 
   ; [:!WS#Pa []]                                                                                   ;
   ; [:!WS#Pb []]                                                                                   ;
