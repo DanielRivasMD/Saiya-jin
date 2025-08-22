@@ -2,87 +2,29 @@
 ; CMD
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; command
-{:des "Command Mode - arrows"
+{:des "Command Mode"
  :rules
  [;
-  ; [:!Q#Pleft_arrow []]                                                                           ;
-  ; [:!Q#Pright_arrow []]                                                                          ;
-  ; [:!Q#Pup_arrow []]                                                                             ;
-  ; [:!Q#Pdown_arrow []]                                                                           ;
-  ]}
+  ;; code navigation
+  ^{:doc/actions [{:name "jumplist-picker", :description "Open jumplist picker", :exec "jumplist_picker", :program "helix"}]} [:!Q#Pcaps_lock [:!TSf12] [:term]]
+  ^{:doc/actions [{:name "save-selection", :description "Save current selection", :exec "save_selection", :program "helix"}]} [:!Q#Pspacebar [:!TSf18] [:term]]
+  ^{:doc/actions [{:name "jump-backward", :description "Jump backward in history", :exec "jump_backward", :program "helix"}]} [:!Q#Ptab [:!TSf16] [:term]]
+  ^{:doc/actions [{:name "jump-forward", :description "Jump forward in history", :exec "jump_forward", :program "helix"}]} [:!Q#Pleft_shift [:!TSf17] [:term]]
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; pickers
+  ^{:doc/actions [{:name "changed-file-picker", :description "Show changed files", :exec "changed_file_picker", :program "helix"}]} [:!Q#Pleft_control [:!Tr] [:term]]
+  ^{:doc/actions [{:name "file-picker", :description "Open file picker", :exec "file_picker", :program "helix"}]} [:!Q#Pleft_option [:!Ts] [:term]]
+  ^{:doc/actions [{:name "buffer-picker", :description "Open buffer picker", :exec "buffer_picker", :program "helix"}]} [:!Q#Pleft_command [:!Tt] [:term]]
 
-; command
-{:des "Command Mode - symbols"
- :rules
- [;
-  ; [:!Q#Popen_bracket []]                                                                         ;
-  ; [:!Q#Pclose_bracket []]                                                                        ;
-  ; [:!Q#Psemicolon []]                                                                            ;
-  ; [:!Q#Pquote []]                                                                                ;
-  ; [:!Q#Pbackslash []]                                                                            ;
-  ; [:!Q#Pcomma []]                                                                                ;
-  ; [:!Q#Pperiod []]                                                                               ;
-  ; [:!Q#Pslash []]                                                                                ;
+  [:!Q#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]                       ; ' %<+% '
+  [:!Q#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]                     ; ' %+>% '
+  [:!Q#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                                            ; ' %$% '
+  [:!Q#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                                      ; ' %T>% '
+  [:!Q#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]                              ; ' %<>% '
+  [:!Q#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                                            ; ' %<% '
+  [:!Q#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                                          ; ' %>% '
+  [:!Q#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                                      ; ' %!>% '
 
-  ; [:!Q#Pdelete_or_backspace []]                                                                  ;
-  [:!Q#Preturn_or_enter [:spacebar :equal_sign :equal_sign :equal_sign :spacebar]]                 ; ' === '
-  ; [:!Q#Pright_shift []]                                                           NOT USEFUL     ;
-  ; [:!Q#Pright_option []]                                                          NOT USEFUL     ;
-  ; [:!Q#Pright_command []]                                                         NOT AVAILABLE  ;
-  ; [:!Q#Pspacebar []]                                                                             ;
-
-  [:!Q#Pleft_command [:spacebar :hyphen :!Speriod :spacebar]]                                      ; ' -> '
-  [:!Q#Pleft_option [:period :period]]                                                             ; '..'
-  [:!Q#Pleft_control [:spacebar :!Scomma :hyphen :spacebar]]                                       ; ' <- '
-  [:!Q#Pleft_shift [:spacebar :!S1 :equal_sign :spacebar]]                                         ; ' != '
-  [:!Q#Pcaps_lock [:spacebar :!Ssemicolon :equal_sign :spacebar]]                                  ; ' := ';
-  ; [:!Q#Ptab []]                                                                                  ;
-  ; [:!Q#Pkeypad_num_lock []]                                                                      ;
-  ; [:!Q#Pescape []]                                                                               ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - numbers"
- :rules
- [;
-  ; [:!Q#Pkeypad_1 []]                                                                             ;
-  ; [:!Q#Pkeypad_2 []]                                                                             ;
-  ; [:!Q#Pkeypad_3 []]                                                                             ;
-  ; [:!Q#Pkeypad_4 []]                                                                             ;
-  ; [:!Q#Pkeypad_5 []]                                                                             ;
-  ; [:!Q#Pkeypad_6 []]                                                                             ;
-  ; [:!Q#Pkeypad_7 []]                                                                             ;
-  ; [:!Q#Pkeypad_8 []]                                                                             ;
-  ; [:!Q#Pkeypad_9 []]                                                                             ;
-  ; [:!Q#Pkeypad_0 []]                                                                             ;
-  ; [:!Q#Pkeypad_slash []]                                                                         ;
-  ; [:!Q#Pkeypad_asterisk []]                                                                      ;
-
-  ; [:!Q#P1 []]                                                                                    ;
-  ; [:!Q#P2 []]                                                                                    ;
-  ; [:!Q#P3 []]                                                                                    ;
-  ; [:!Q#P4 []]                                                                                    ;
-  ; [:!Q#P5 []]                                                                                    ;
-  ; [:!Q#P6 []]                                                                                    ;
-  ; [:!Q#P7 []]                                                                                    ;
-  ; [:!Q#P8 []]                                                                                    ;
-  ; [:!Q#P9 []]                                                                                    ;
-  ; [:!Q#P0 []]                                                                                    ;
-  ; [:!Q#Phyphen []]                                                                               ;
-  ; [:!Q#Pequal_sign []]                                                                           ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command
-{:des "Command Mode - alphabet"
- :rules
- [;
   [:!Q#Pa [:!Ssemicolon :semicolon :a :!Ssemicolon]]                           ; αλφα              ; 'α'
   [:!Q#Pb [:!Ssemicolon :semicolon :b :!Ssemicolon]]                           ; βητα              ; 'β'
   [:!Q#Pc [:!Ssemicolon :semicolon :c :!Ssemicolon]]                           ; σιγμα             ; 'ς'
@@ -110,91 +52,7 @@
   [:!Q#Py [:!Ssemicolon :semicolon :y :!Ssemicolon]]                           ; υψιλον            ; 'υ'
   [:!Q#Pz [:!Ssemicolon :semicolon :z :!Ssemicolon]]                           ; ζητα              ; 'ζ'
   [:!Q#Pright_control [:!Ssemicolon :semicolon :q :!Ssemicolon]]               ; κοππα             ; 'ϙ'
-  ]}
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command - shift
-{:des "Command Mode - arrows"
- :rules
- [;
-  ; [:!QR#Pleft_arrow []]                                                                          ;
-  ; [:!QR#Pright_arrow []]                                                                         ;
-  ; [:!QR#Pup_arrow []]                                                                            ;
-  ; [:!QR#Pdown_arrow []]                                                                          ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command - shift
-{:des "Command Mode - symbols"
- :rules
- [;
-  ; [:!QR#Popen_bracket []]                                                                        ;
-  ; [:!QR#Pclose_bracket []]                                                                       ;
-  ; [:!QR#Psemicolon []]                                                                           ;
-  ; [:!QR#Pquote []]                                                                               ;
-  ; [:!QR#Pbackslash []]                                                                           ;
-  ; [:!QR#Pcomma []]                                                                               ;
-  ; [:!QR#Pperiod []]                                                                              ;
-  ; [:!QR#Pslash []]                                                                               ;
-
-  ; [:!QR#Pdelete_or_backspace []]                                                                 ;
-  [:!QR#Preturn_or_enter [:spacebar :period :equal_sign :equal_sign :equal_sign :spacebar]]        ; ' .=== '
-  ; [:!QR#Pright_shift []]                                                          NOT AVAILABLE  ;
-  ; [:!QR#Pright_option []]                                                         NOT USEFUL     ;
-  ; [:!QR#Pright_command []]                                                        NOT AVAILABLE  ;
-  ; [:!QR#Pspacebar []]                                                                            ;
-
-  [:!QR#Pleft_command [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]                           ; ' ->> '
-  [:!QR#Pleft_option [:period :period :period]]                                                    ; '...'
-  [:!QR#Pleft_control [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]                             ; ' <<- '
-  [:!QR#Pleft_shift [:spacebar :period :!S1 :equal_sign :spacebar]]                                ; ' .!= '
-  [:!QR#Pcaps_lock [:!S1 :!S1]]                                                                    ; '!!'
-  ; [:!QR#Ptab []]                                                                                 ;
-  ; [:!QR#Pkeypad_num_lock []]                                                                     ;
-  ; [:!QR#Pescape []]                                                                              ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command - shift
-{:des "Command Mode - numbers"
- :rules
- [;
-  ; [:!QR#Pkeypad_1 []]                                                                            ;
-  ; [:!QR#Pkeypad_2 []]                                                                            ;
-  ; [:!QR#Pkeypad_3 []]                                                                            ;
-  ; [:!QR#Pkeypad_4 []]                                                                            ;
-  ; [:!QR#Pkeypad_5 []]                                                                            ;
-  ; [:!QR#Pkeypad_6 []]                                                                            ;
-  ; [:!QR#Pkeypad_7 []]                                                                            ;
-  ; [:!QR#Pkeypad_8 []]                                                                            ;
-  ; [:!QR#Pkeypad_9 []]                                                                            ;
-  ; [:!QR#Pkeypad_0 []]                                                                            ;
-  ; [:!QR#Pkeypad_slash []]                                                                        ;
-  ; [:!QR#Pkeypad_asterisk []]                                                                     ;
-
-  ; [:!QR#P1 []]                                                                                   ;
-  ; [:!QR#P2 []]                                                                                   ;
-  ; [:!QR#P3 []]                                                                                   ;
-  ; [:!QR#P4 []]                                                                                   ;
-  ; [:!QR#P5 []]                                                                                   ;
-  ; [:!QR#P6 []]                                                                                   ;
-  ; [:!QR#P7 []]                                                                                   ;
-  ; [:!QR#P8 []]                                                                                   ;
-  ; [:!QR#P9 []]                                                                                   ;
-  ; [:!QR#P0 []]                                                                                   ;
-  ; [:!QR#Phyphen []]                                                                              ;
-  ; [:!QR#Pequal_sign []]                                                                          ;
-  ]}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; command - shift
-{:des "Command Mode - alphabet"
- :rules
- [;
   [:!QR#Pa [:!Ssemicolon :comma :a :!Ssemicolon]]                              ; a ogonek          ; 'ą'
   [:!QR#Pb [:!Ssemicolon :comma :b :!Ssemicolon]]                              ; eszett            ; 'ß'
   [:!QR#Pc [:!Ssemicolon :comma :c :!Ssemicolon]]                              ; c cedille         ; 'ç'
