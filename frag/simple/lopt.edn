@@ -24,7 +24,7 @@
   [:!O#Pperiod [:spacebar :!Speriod :spacebar]]                                                    ; ' > '
   [:!O#Pslash [:spacebar :!Sslash :spacebar]]                                                      ; ' ? '
 
-  [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
+  ; [:!O#Pdelete_or_backspace []]
   [:!O#Preturn_or_enter [:spacebar :equal_sign :spacebar]]                                         ; ' = '
   [:!O#Pright_shift [:spacebar :!Sbackslash :!Speriod :spacebar]]                                  ; ' |> '
   [:!O#Pright_option [:spacebar :!S8 :spacebar]]                                                   ; ' * '
@@ -53,7 +53,7 @@
   [:!OS#Pperiod [:spacebar :period :!Speriod :spacebar]]                                           ; ' .> '
   ; [:!OS#Pslash []]
 
-  [:!OS#Pdelete_or_backspace [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]          ; ' =~ '
+  ; [:!OS#Pdelete_or_backspace []]
   [:!OS#Preturn_or_enter [:spacebar :period :equal_sign :spacebar]]                                ; ' .= '
   [:!OS#Pright_shift [:spacebar :period :!Sbackslash :!Speriod :spacebar]]                         ; ' .|> '
   [:!OS#Pright_option [:spacebar :period :!S8 :spacebar]]                                          ; ' .* '

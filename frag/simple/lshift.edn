@@ -23,7 +23,7 @@
   ; [:!S#Pup_arrow []]
   ; [:!S#Pdown_arrow []]
 
-; [:!S#Pdelete_or_backspace []]
+  ; [:!S#Pdelete_or_backspace []]
   ; [:!S#Preturn_or_enter []]
   [:!S#Pright_shift [:delete_forward]]                                                             ;
   [:!S#Pright_option [:!Ed]]                                                                       ;
