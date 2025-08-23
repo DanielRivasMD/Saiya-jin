@@ -11,11 +11,6 @@
   ^{:doc/actions [{:name "jump-backward", :description "Jump backward in history", :exec "jump_backward", :program "helix"}]} [:!Q#Ptab [:!TSf16] [:term]]
   ^{:doc/actions [{:name "jump-forward", :description "Jump forward in history", :exec "jump_forward", :program "helix"}]} [:!Q#Pleft_shift [:!TSf17] [:term]]
 
-  ;; pickers
-  ^{:doc/actions [{:name "changed-file-picker", :description "Show changed files", :exec "changed_file_picker", :program "helix"}]} [:!Q#Pleft_control [:!Tr] [:term]]
-  ^{:doc/actions [{:name "file-picker", :description "Open file picker", :exec "file_picker", :program "helix"}]} [:!Q#Pleft_option [:!Ts] [:term]]
-  ^{:doc/actions [{:name "buffer-picker", :description "Open buffer picker", :exec "buffer_picker", :program "helix"}]} [:!Q#Pleft_command [:!Tt] [:term]]
-
   [:!Q#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]                       ; ' %<+% '
   [:!Q#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]                     ; ' %+>% '
   [:!Q#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                                            ; ' %$% '
