@@ -48,6 +48,19 @@
   [:!C#Pright_command [:spacebar :slash :equal_sign :spacebar]]                                    ; ' /= '
   ; [:!C#Pspacebar []]
 
+  ; [:!C#P1 []]
+  ; [:!C#P2 []]
+  ; [:!C#P3 []]
+  ; [:!C#P4 []]
+  ; [:!C#P5 []]
+  ; [:!C#P6 []]
+  ; [:!C#P7 []]
+  ; [:!C#P8 []]
+  [:!C#P9 [:period :!S9]]                                                                          ; '.('
+  ; [:!C#P0 []]
+  ; [:!C#Phyphen []]
+  ; [:!C#Pequal_sign []]
+
   ; [:!CS#Popen_bracket []]
   ; [:!CS#Pclose_bracket []]
   ; [:!CS#Psemicolon []]
@@ -63,5 +76,18 @@
   [:!CS#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]                              ; ' .*= '
   [:!CS#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]                           ; ' ./= '
   ; [:!CS#Pspacebar []]
+  ; [:!C#P1 []]
+  ; [:!C#P2 []]
+  ; [:!C#P3 []]
+  ; [:!C#P4 []]
+  ; [:!C#P5 []]
+  ; [:!C#P6 []]
+  ; [:!C#P7 []]
+  ; [:!C#P8 []]
+  [:!CS#P9 [:!Ssemicolon :!S9]]                                                                    ; ':('
+  ; [:!C#P0 []]
+  ; [:!C#Phyphen []]
+  ; [:!C#Pequal_sign []]
   ]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
