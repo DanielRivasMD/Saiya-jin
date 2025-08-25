@@ -16,9 +16,9 @@
   ; [:!W#Pslash [:!Of20]]                                                        ; next function     ; helix
 
   ;; pickers
-  ^{:doc/actions [{:name "changed-file-picker", :description "Show changed files", :exec "changed_file_picker", :program "helix"}]} [:!W#Pdelete_or_backspace [:!Tr] [:term]]
-  ^{:doc/actions [{:name "file-picker", :description "Open file picker", :exec "file_picker", :program "helix"}]} [:!W#Preturn_or_enter [:!Ts] [:term]]
-  ^{:doc/actions [{:name "buffer-picker", :description "Open buffer picker", :exec "buffer_picker", :program "helix"}]} [:!W#Pright_shift [:!Tt] [:term]]
+  ^{:doc/actions [{:name "changed-file-picker", :description "Show changed files", :exec ["changed_file_picker"], :program "helix"}]} [:!W#Pdelete_or_backspace [:!Tr] [:term]]
+  ^{:doc/actions [{:name "file-picker", :description "Open file picker", :exec ["file_picker"], :program "helix"}]} [:!W#Preturn_or_enter [:!Ts] [:term]]
+  ^{:doc/actions [{:name "buffer-picker", :description "Open buffer picker", :exec ["buffer_picker"], :program "helix"}]} [:!W#Pright_shift [:!Tt] [:term]]
 
   ; [:!W#Pdelete_or_backspace [:!Tf11]]                                          ; rename symbol     ; helix
   ; [:!W#Preturn_or_enter [:!Tf12]]                                              ; symbol            ; helix
