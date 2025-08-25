@@ -75,47 +75,75 @@
 
   ^{:doc/actions [{:name "format", :exec [":format"], :program "helix-common"}]} [:!O#Pa :!Of1 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pb :!Of2 [:term]]
-  ^{:doc/actions [{:name "copy", :exec ["yank_to_clipboard"], :program "helix-common"}]} [:!O#Pc :!Of4 [:term]]
-  ^{:doc/actions [{:name "spawn multi", :exec ["search_selection", "extend_search_next"], :program "helix-common"}]} [:!O#Pd :!Of5 [:term]]
-  ^{:doc/actions [{:name "toggle comments", :exec ["toggle_comments"], :program "helix-common"}]} [:!O#Pe :!Of6 [:term]]
-  ^{:doc/actions [{:name "search", :exec ["search"], :program "helix-common"}]} [:!O#Pf :!Of7 [:term]]
+  ^{:doc/actions [{:name "copy", :exec ["yank_to_clipboard"], :program "helix-common"}
+                  {:name "copy", :exec ["Copy"], :program "micro"}]} [:!O#Pc :!Of4 [:term]]
+  ^{:doc/actions [{:name "spawn multi", :exec ["search_selection", "extend_search_next"], :program "helix-common"}
+                  {:name "spawn multi", :exec ["SpawnMultiCursor"], :program "micro"}]} [:!O#Pd :!Of5 [:term]]
+  ^{:doc/actions [{:name "toggle comments", :exec ["toggle_comments"], :program "helix-common"}
+                  {:name "toggle comments", :exec ["lua:comment.comment"], :program "micro"}]} [:!O#Pe :!Of6 [:term]]
+  ^{:doc/actions [{:name "search", :exec ["search"], :program "helix-common"}
+                  {:name "search", :exec ["FindLiteral"], :program "micro"}]} [:!O#Pf :!Of7 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pg :!Of8 [:term]]
-  ^{:doc/actions [{:name "find prev", :exec ["search_prev"], :program "helix-common"}]} [:!O#Ph :!Of9 [:term]]
+  ^{:doc/actions [{:name "find prev", :exec ["search_prev"], :program "helix-common"}
+                  {:name "find prev", :exec ["FindPrevious"], :program "micro"}]} [:!O#Ph :!Of9 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pi :!Of10 [:term]]
-  ^{:doc/actions [{:name "spawn multi down", :exec ["normal_mode", "copy_selection_on_next_line", "MODE"], :program "helix-common"}]} [:!O#Pj :!Tf1 [:term]]
-  ^{:doc/actions [{:name "spawn multi up", :exec ["normal_mode", "copy_selection_on_prev_line", "MODE"], :program "helix-common"}]} [:!O#Pk :!Tf2 [:term]]
-  ^{:doc/actions [{:name "find next", :exec ["search_next"], :program "helix-common"}]} [:!O#Pl :!Tf4 [:term]]
-  ^{:doc/actions [{:name "toggle macro", :exec ["record_macro"], :program "helix-common"}]} [:!O#Pm :!Tf5 [:term]]
-  ^{:doc/actions [{:name "new buffer", :exec [":new"], :program "helix-common"}]} [:!O#Pn :!Tf6 [:term]]
+  ^{:doc/actions [{:name "spawn multi down", :exec ["normal_mode", "copy_selection_on_next_line", "MODE"], :program "helix-common"}
+                  {:name "spawn multi down", :exec ["SpawnMultiCursorDown"], :program "micro"}]} [:!O#Pj :!Tf1 [:term]]
+  ^{:doc/actions [{:name "spawn multi up", :exec ["normal_mode", "copy_selection_on_prev_line", "MODE"], :program "helix-common"}
+                  {:name "spawn multi up", :exec ["SpawnMultiCursorUp"], :program "micro"}]} [:!O#Pk :!Tf2 [:term]]
+  ^{:doc/actions [{:name "find next", :exec ["search_next"], :program "helix-common"}
+                  {:name "find next", :exec ["FindNext"], :program "micro"}]} [:!O#Pl :!Tf4 [:term]]
+  ^{:doc/actions [{:name "toggle macro", :exec ["record_macro"], :program "helix-common"}
+                  {:name "toggle macro", :exec ["ToggleMacro"], :program "micro"}]} [:!O#Pm :!Tf5 [:term]]
+  ^{:doc/actions [{:name "new buffer", :exec [":new"], :program "helix-common"}
+                  {:name "new buffer", :exec ["AddTab"], :program "micro"}]} [:!O#Pn :!Tf6 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Po :!Tf7 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pp :!Tf8 [:term]]
-  ^{:doc/actions [{:name "quit", :exec ["normal_mode", ":quit-all"], :program "helix-common"}]} [:!O#Pq :!Tf9 [:term]]
+  ^{:doc/actions [{:name "quit", :exec ["normal_mode", ":quit-all"], :program "helix-common"}
+                  {:name "quit", :exec ["QuitAll"], :program "micro"}]} [:!O#Pq :!Tf9 [:term]]
   ^{:doc/actions [{:name "reload buffers", :exec ["normal_mode", ":reload-all", "MODE"], :program "helix-common"}]} [:!O#Pr :!Tf10 [:term]]
-  ^{:doc/actions [{:name "save & quit", :exec ["normal_mode", ":write-quit-all"], :program "helix-common"}]} [:!O#Ps :!OTf1 [:term]]
+  ^{:doc/actions [{:name "save & quit", :exec ["normal_mode", ":write-quit-all"], :program "helix-common"}
+                  {:name "save & quit", :exec ["Save,Quit"], :program "micro"}]} [:!O#Ps :!OTf1 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pt :!OTf2 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pu :!OTf4 [:term]]
-  ^{:doc/actions [{:name "paste", :exec ["paste_clipboard_after"], :program "helix-common"}]} [:!O#Pv :!OTf5 [:term]]
-  ^{:doc/actions [{:name "save", :exec ["normal_mode"], :program "helix-common"}]} [:!O#Pw :!OTf6 [:term]]
-  ^{:doc/actions [{:name "cut", :exec ["yank_to_clipboard", "delete_selection_noyank"], :program "helix-common"}]} [:!O#Px :!OTf7 [:term]]
-  ^{:doc/actions [{:name "skip multi", :exec ["search_selection", "search_next"], :program "helix-common"}]} [:!O#Py :!OTf8 [:term]]
-  ^{:doc/actions [{:name "remove multi", :exec ["search_selection", "search_prev"], :program "helix-common"}]} [:!O#Pz :!OTf9 [:term]]
-  ^{:doc/actions [{:name "command mode", :exec ["command_mode"], :program "helix-common"}]} [:!O#Pright_control :!OTf10 [:term]]
+  ^{:doc/actions [{:name "paste", :exec ["paste_clipboard_after"], :program "helix-common"}
+                  {:name "paste", :exec ["Paste"], :program "micro"}]} [:!O#Pv :!OTf5 [:term]]
+  ^{:doc/actions [{:name "save", :exec ["normal_mode", ":write"], :program "helix-common"}
+                  {:name "save", :exec ["Save"], :program "micro"}]} [:!O#Pw :!OTf6 [:term]]
+  ^{:doc/actions [{:name "cut", :exec ["yank_to_clipboard", "delete_selection_noyank"], :program "helix-common"}
+                  {:name "cut", :exec ["Cut"], :program "micro"}]} [:!O#Px :!OTf7 [:term]]
+  ^{:doc/actions [{:name "skip multi", :exec ["search_selection", "search_next"], :program "helix-common"}
+                  {:name "skip multi", :exec ["SkipMultiCursor"], :program "micro"}]} [:!O#Py :!OTf8 [:term]]
+  ^{:doc/actions [{:name "remove multi", :exec ["search_selection", "search_prev"], :program "helix-common"}
+                  {:name "remove multi", :exec ["RemoveMultiCursor"], :program "micro"}]} [:!O#Pz :!OTf9 [:term]]
+  ^{:doc/actions [{:name "command mode", :exec ["command_mode"], :program "helix-common"}
+                  {:name "command mode", :exec ["CommandMode"], :program "micro"}]} [:!O#Pright_control :!OTf10 [:term]]
 
-  ^{:doc/actions [{:name "select all", :exec ["select_all"], :program "helix-common"}]} [:!OS#Pa :!SOf1 [:term]]
+  ^{:doc/actions [{:name "select all", :exec ["select_all"], :program "helix-common"}
+                  {:name "select all", :exec ["SelectAll"], :program "micro"}]} [:!OS#Pa :!SOf1 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pb :!SOf2 [:term]]
-  ^{:doc/actions [{:name "copy line", :exec ["extend_to_line_bounds", "yank_to_clipboard"], :program "helix-common"}]} [:!OS#Pc :!SOf4 [:term]]
-  ^{:doc/actions [{:name "duplicate line", :exec ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"], :program "helix-common"}]} [:!OS#Pd :!SOf5 [:term]]
+  ^{:doc/actions [{:name "copy line", :exec ["extend_to_line_bounds", "yank_to_clipboard"], :program "helix-common"}
+                  {:name "copy line", :exec ["CopyLine"], :program "micro"}]} [:!OS#Pc :!SOf4 [:term]]
+  ^{:doc/actions [{:name "duplicate line", :exec ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"], :program "helix-common"}
+                  {:name "duplicate line", :exec ["DuplicateLine"], :program "helix-common"}]} [:!OS#Pd :!SOf5 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pe :!SOf6 [:term]]
-  ^{:doc/actions [{:name "global search", :exec ["global_search"], :program "helix-common"}]} [:!OS#Pf :!SOf7 [:term]]
+  ^{:doc/actions [{:name "global search", :exec ["global_search"], :program "helix-common"}
+                  {:name "global search", :exec ["Find"], :program "helix-common"}]} [:!OS#Pf :!SOf7 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pg :!SOf8 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Ph :!SOf9 [:term]]
-  ^{:doc/actions [{:name "indent", :exec ["indent"], :program "helix-common"}]} [:!OS#Pi :!SOf10 [:term]]
-  ^{:doc/actions [{:name "move down", :exec ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"], :program "helix-common"}]} [:!OS#Pj :!STf1 [:term]]
-  ^{:doc/actions [{:name "move up", :exec ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"], :program "helix-common"}]} [:!OS#Pk :!STf2 [:term]]
-  ^{:doc/actions [{:name "select line", :exec ["goto_line_end", "select_mode", "goto_line_start", "MODE"], :program "helix-common"}]} [:!OS#Pl :!STf4 [:term]]
-  ^{:doc/actions [{:name "play macro", :exec ["replay_macro"], :program "helix-common"}]} [:!OS#Pm :!STf5 [:term]]
+  ^{:doc/actions [{:name "indent", :exec ["indent"], :program "helix-common"}
+                  {:name "indent", :exec ["IndentSelection"], :program "helix-common"}]} [:!OS#Pi :!SOf10 [:term]]
+  ^{:doc/actions [{:name "move down", :exec ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"], :program "helix-common"}
+                  {:name "move down", :exec ["MoveLinesDown"], :program "micro"}]} [:!OS#Pj :!STf1 [:term]]
+  ^{:doc/actions [{:name "move up", :exec ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"], :program "helix-common"}
+                  {:name "move up", :exec ["MoveLinesUp"], :program "micro"}]} [:!OS#Pk :!STf2 [:term]]
+  ^{:doc/actions [{:name "select line", :exec ["goto_line_end", "select_mode", "goto_line_start", "MODE"], :program "helix-common"}
+                  {:name "select line", :exec ["SelectLine"], :program "micro"}]} [:!OS#Pl :!STf4 [:term]]
+  ^{:doc/actions [{:name "play macro", :exec ["replay_macro"], :program "helix-common"}
+                  {:name "play macro", :exec ["PlayMacro"], :program "micro"}]} [:!OS#Pm :!STf5 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pn :!STf6 [:term]]
-  ^{:doc/actions [{:name "unindent", :exec ["unindent"], :program "helix-common"}]} [:!OS#Po :!STf7 [:term]]
+  ^{:doc/actions [{:name "unindent", :exec ["unindent"], :program "helix-common"}
+                  {:name "unindent", :exec ["OutdentSelection"], :program "micro"}]} [:!OS#Po :!STf7 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pp :!STf8 [:term]]
   ^{:doc/actions [{:name "launch lazygit", :exec [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"], :program "helix-common"}]} [:!OS#Pq :!STf9 [:term]]
   ^{:doc/actions [{:name "launch serpl", :exec [":sh zellij run --name serpl --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- serpl"], :program "helix-common"}]} [:!OS#Pr :!STf10 [:term]]
@@ -124,7 +152,8 @@
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pu :!SOTf4 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pv :!SOTf5 [:term]]
   ^{:doc/actions [{:name "launch watch", :exec [":sh zellij run --name canvas --close-on-exit --floating --pinned true --height 20 --width 40 --x 100 --y 0 -- just watch"], :program "helix-common"}]} [:!OS#Pw :!SOTf6 [:term]]
-  ^{:doc/actions [{:name "cut line", :exec ["extend_to_line_bounds", "delete_selection_noyank"], :program "helix-common"}]} [:!OS#Px :!SOTf7 [:term]]
+  ^{:doc/actions [{:name "cut line", :exec ["extend_to_line_bounds", "delete_selection_noyank"], :program "helix-common"}
+                  {:name "cut line", :exec ["CutLine"], :program "micro"}]} [:!OS#Px :!SOTf7 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Py :!SOTf8 [:term]]
   ^{:doc/actions [{:name "yank diagnostic", :exec [":yank-diagnostic"], :program "helix-common"}]} [:!OS#Py :!SOTf9 [:term]]
   ^{:doc/actions [{:name "launch shell", :exec [":sh zellij run --name canvas --close-on-exit --floating --height 100 --width 140 --x 0 --y 0 -- zsh"], :program "helix-common"}]} [:!OS#Pright_control :!SOTf10 [:term]]]}
