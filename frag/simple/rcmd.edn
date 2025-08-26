@@ -6,18 +6,18 @@
  :rules
  [;
   ;; code navigation
-  ^{:doc/actions [{:name "save-selection", :description "Save current selection", :exec ["save_selection"], :program "helix"}]} [:!Q#Pspacebar [:!TSf18] [:term]]
-  ^{:doc/actions [{:name "jump-backward", :description "Jump backward in history", :exec ["jump_backward"], :program "helix"}]} [:!Q#Pleft_control [:!TShome] [:term]]
-  ^{:doc/actions [{:name "jumplist-picker", :description "Open jumplist picker", :exec ["jumplist_picker"], :program "helix"}]} [:!Q#Pleft_option [:!TSf12] [:term]]
-  ^{:doc/actions [{:name "jump-forward", :description "Jump forward in history", :exec ["jump_forward"], :program "helix"}]} [:!Q#Pleft_command [:!TSend] [:term]]
+  ^{:doc/actions [{:name "save-selection", :exec ["save_selection"], :program "helix"}]} [:!Q#Pspacebar [:!TSf18] [:term]]
+  ^{:doc/actions [{:name "jump-backward", :exec ["jump_backward"], :program "helix"}]} [:!Q#Pleft_control [:!TShome] [:term]]
+  ^{:doc/actions [{:name "jumplist-picker", :exec ["jumplist_picker"], :program "helix"}]} [:!Q#Pleft_option [:!TSf12] [:term]]
+  ^{:doc/actions [{:name "jump-forward", :exec ["jump_forward"], :program "helix"}]} [:!Q#Pleft_command [:!TSend] [:term]]
 
-  [:!Q#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]                       ; ' %<+% '
-  [:!Q#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]                     ; ' %+>% '
-  [:!Q#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]                                            ; ' %$% '
-  [:!Q#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]                                      ; ' %T>% '
-  [:!Q#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]                              ; ' %<>% '
-  [:!Q#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]                                            ; ' %<% '
-  [:!Q#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]                                          ; ' %>% '
-  [:!Q#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]                                      ; ' %!>% '
-  ]}
+  ;; tidyverse
+  ^{:doc/actions [{:name "tidyverse", :binding "' %<+% '", :program "R"}]} [:!Q#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
+  ^{:doc/actions [{:name "tidyverse", :binding "' %+>% '", :program "R"}]} [:!Q#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
+  ^{:doc/actions [{:name "tidyverse", :binding "' %$% '", :program "R"}]} [:!Q#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]
+  ^{:doc/actions [{:name "tidyverse", :binding "' %T>% '", :program "R"}]} [:!Q#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]
+  ^{:doc/actions [{:name "tidyverse", :binding "' %<>% '", :program "R"}]} [:!Q#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]
+  ^{:doc/actions [{:name "tidyverse", :binding "' %<% '", :program "R"}]} [:!Q#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
+  ^{:doc/actions [{:name "tidyverse", :binding "' %>% '", :program "R"}]} [:!Q#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
+  ^{:doc/actions [{:name "tidyverse", :binding "' %!>% '", :program "R"}]} [:!Q#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]]}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
