@@ -5,16 +5,11 @@
 {:des "Control Mode"
  :rules
  [;
-  ; ;; Split-view jumps & line navigation
-  ; ^{:doc/actions [{:name "jump-view-left", :description "Jump view left", :exec "jump_view_left", :program "helix"}]}
-  ; ^{:doc/actions [{:name "jump-view-right", :description "Jump view right", :exec "jump_view_right", :program "helix"}]}
-  ; ^{:doc/actions [{:name "jump-view-up", :description "Jump view up", :exec "jump_view_up", :program "helix"}]}
-  ; ^{:doc/actions [{:name "jump-view-down", :description "Jump view down", :exec "jump_view_down", :program "helix"}]}
-
-  ; [:!T#Pleft_arrow []]
-  ; [:!T#Pright_arrow []]
-  ; [:!T#Pup_arrow []]
-  ; [:!T#Pdown_arrow []]
+  ;; Split-view jumps & line navigation
+  ^{:doc/actions [{:name "jump-split-left", :exec "jump_view_left", :program "helix"}]} [:!T#Pleft_arrow [:!Tleft_arrow] [:term]]
+  ^{:doc/actions [{:name "jump-split-right", :exec "jump_view_right", :program "helix"}]} [:!T#Pright_arrow [:!Tright_arrow] [:term]]
+  ^{:doc/actions [{:name "jump-split-up", :exec "jump_view_up", :program "helix"}]} [:!T#Pup_arrow [:!Tup_arrow] [:term]]
+  ^{:doc/actions [{:name "jump-split-down", :exec "jump_view_down", :program "helix"}]} [:!T#Pdown_arrow [:!Tdown_arrow] [:term]]
 
   [:!T#Popen_bracket [:open_bracket :open_bracket]]                                                ; '[['
   [:!T#Pclose_bracket [:close_bracket :close_bracket]]                                             ; ']]'
