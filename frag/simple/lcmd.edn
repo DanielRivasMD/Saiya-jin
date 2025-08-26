@@ -6,25 +6,15 @@
  :rules
  [;
 
-  ; ^{:doc/actions [{:name "goto-line-start", :description "Go to line start", :exec "goto_line_start", :program "helix"}]}
-  ; ^{:doc/actions [{:name "goto-line-end", :description "Go to line end", :exec "goto_line_end", :program "helix"}]}
-  ; ^{:doc/actions [{:name "goto-file-start", :description "Go to file start", :exec "goto_file_start", :program "helix"}]}
-  ; ^{:doc/actions [{:name "goto-file-end", :description "Go to file end", :exec "goto_last_line", :program "helix"}]}
+  ^{:doc/actions [{:name "goto-line-start", :exec "goto_line_start", :program "helix"}]} [:!C#Pleft_arrow :!Ta [:term]]
+  ^{:doc/actions [{:name "goto-line-end", :exec "goto_line_end", :program "helix"}]} [:!C#Pright_arrow :!Te [:term]]
+  ^{:doc/actions [{:name "goto-file-start", :exec "goto_file_start", :program "helix"}]} [:!C#Pup_arrow [:home] [:term]]
+  ^{:doc/actions [{:name "goto-file-end", :exec "goto_last_line", :program "helix"}]} [:!C#Pdown_arrow [:end] [:term]]
 
-  ; ^{:doc/actions [{:name "select-mode-start-line", :description "Select to start of line", :exec "select_mode", :program "helix"}]}
-  ; ^{:doc/actions [{:name "select-mode-end-line", :description "Select to end of line", :exec "select_mode", :program "helix"}]}
-  ; ^{:doc/actions [{:name "extend-to-file-start", :description "Extend to file start", :exec "extend_to_file_start", :program "helix"}]}
-  ; ^{:doc/actions [{:name "extend-to-file-end", :description "Extend to file end", :exec "extend_to_file_end", :program "helix"}]}
-
-  [:!C#Pleft_arrow :!Ta [:term]]
-  [:!C#Pright_arrow :!Te [:term]]
-  [:!C#Pup_arrow [:home] [:term]]
-  [:!C#Pdown_arrow [:end] [:term]]
-
-  [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]
-  [:!CS#Pright_arrow [:!Oright_arrow] [:term]]
-  [:!CS#Pup_arrow [:!Oup_arrow] [:term]]
-  [:!CS#Pdown_arrow [:!Odown_arrow] [:term]]
+  ^{:doc/actions [{:name "select-mode-start-line",:exec "select_mode", :program "helix"}]} [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]
+  ^{:doc/actions [{:name "select-mode-end-line",:exec "select_mode", :program "helix"}]} [:!CS#Pright_arrow [:!Oright_arrow] [:term]]
+  ^{:doc/actions [{:name "extend-to-file-start",:exec "extend_to_file_start", :program "helix"}]} [:!CS#Pup_arrow [:!Oup_arrow] [:term]]
+  ^{:doc/actions [{:name "extend-to-file-end",:exec "extend_to_file_end", :program "helix"}]} [:!CS#Pdown_arrow [:!Odown_arrow] [:term]]
 
   [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                                          ; ' -= '
   [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]                                ; ' += '
