@@ -6,10 +6,10 @@
  :rules
  [;
   ;; code navigation
-  ^{:doc/actions [{:name "jumplist-picker", :description "Open jumplist picker", :exec ["jumplist_picker"], :program "helix"}]} [:!Q#Pcaps_lock [:!TSf12] [:term]]
   ^{:doc/actions [{:name "save-selection", :description "Save current selection", :exec ["save_selection"], :program "helix"}]} [:!Q#Pspacebar [:!TSf18] [:term]]
-  ^{:doc/actions [{:name "jump-backward", :description "Jump backward in history", :exec ["jump_backward"], :program "helix"}]} [:!Q#Ptab [:!TSf16] [:term]]
-  ^{:doc/actions [{:name "jump-forward", :description "Jump forward in history", :exec ["jump_forward"], :program "helix"}]} [:!Q#Pleft_shift [:!TSf17] [:term]]
+  ^{:doc/actions [{:name "jump-backward", :description "Jump backward in history", :exec ["jump_backward"], :program "helix"}]} [:!Q#Pleft_control [:!TShome] [:term]]
+  ^{:doc/actions [{:name "jumplist-picker", :description "Open jumplist picker", :exec ["jumplist_picker"], :program "helix"}]} [:!Q#Pleft_option [:!TSf12] [:term]]
+  ^{:doc/actions [{:name "jump-forward", :description "Jump forward in history", :exec ["jump_forward"], :program "helix"}]} [:!Q#Pleft_command [:!TSend] [:term]]
 
   [:!Q#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]                       ; ' %<+% '
   [:!Q#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]                     ; ' %+>% '
