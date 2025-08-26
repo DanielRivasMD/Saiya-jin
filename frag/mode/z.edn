@@ -5,20 +5,20 @@
 {:des "Z mode"
  :rules
  [:z-mode
-  ; ^{:doc/actions [{:name "goto-last-modification", :description "Jump to last modification", :exec "goto_last_modification", :program "helix"}]}
+  ; ^{:doc/actions [{:name "goto-last-modification", :exec "goto_last_modification", :program "helix"}]}
 
   ;; undo / redo
-  ^{:doc/actions [{:name "undo", :description "Undo last change", :program "helix"}]}   [:#Pleft_arrow [:!Opage_up] [:term]]
-  ^{:doc/actions [{:name "redo", :description "Redo last undo", :program "helix"}]}   [:#Pright_arrow [:!Opage_down] [:term]]
+  ^{:doc/actions [{:name "undo", :program "helix"}]} [:#Pleft_arrow [:!Opage_up] [:term]]
+  ^{:doc/actions [{:name "redo", :program "helix"}]} [:#Pright_arrow [:!Opage_down] [:term]]
 
   ;; change navigation
-  ^{:doc/actions [{:name "prev-change", :description "Go to previous change", :exec "goto_prev_change", :program "helix"}]}   [:#Pup_arrow [:!Ohome] [:term]]
-  ^{:doc/actions [{:name "next-change", :description "Go to next change", :exec "goto_next_change", :program "helix"}]}   [:#Pdown_arrow [:!Oend] [:term]]
+  ^{:doc/actions [{:name "prev-change", :exec "goto_prev_change", :program "helix"}]} [:#Pup_arrow [:!Ohome] [:term]]
+  ^{:doc/actions [{:name "next-change", :exec "goto_next_change", :program "helix"}]} [:#Pdown_arrow [:!Oend] [:term]]
 
   ;; diagnostics: prev / next / picker
-  ^{:doc/actions [{:name "prev-diagnostic", :description "Go to previous diagnostic", :exec "goto_prev_diag", :program "helix"}]} [:#Pdelete_or_backspace [:!Tf11] [:term]]
-  ^{:doc/actions [{:name "next-diagnostic", :description "Go to next diagnostic", :exec "goto_next_diag", :program "helix"}]} [:#Pright_shift [:!Tf12] [:term]]
-  ^{:doc/actions [{:name "diagnostics-picker", :description "Open diagnostics picker", :exec "diagnostics_picker", :program "helix"}]} [:#Preturn_or_enter [:!Tf13] [:term]]
-  ^{:doc/actions [{:name "workspace-diagnostics-picker", :description "Workspace diagnostics picker", :exec "workspace_diagnostics_picker", :program "helix"}]} [:!S#Preturn_or_enter [:!Tf14] [:term]]]}
+  ^{:doc/actions [{:name "prev-diagnostic", :exec "goto_prev_diag", :program "helix"}]} [:#Pdelete_or_backspace [:!Tf11] [:term]]
+  ^{:doc/actions [{:name "next-diagnostic", :exec "goto_next_diag", :program "helix"}]} [:#Pright_shift [:!Tf12] [:term]]
+  ^{:doc/actions [{:name "diagnostics-picker", :exec "diagnostics_picker", :program "helix"}]} [:#Preturn_or_enter [:!Tf13] [:term]]
+  ^{:doc/actions [{:name "workspace-diagnostics-picker", :exec "workspace_diagnostics_picker", :program "helix"}]} [:!S#Preturn_or_enter [:!Tf14] [:term]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
