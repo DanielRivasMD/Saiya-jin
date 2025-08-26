@@ -5,7 +5,7 @@
 {:des "Z mode"
  :rules
  [:z-mode
-  ; ^{:doc/actions [{:name "goto-last-modification", :description "Jump to last modification", :exec "goto_last_modification", :program "helix"}]} []
+  ; ^{:doc/actions [{:name "goto-last-modification", :description "Jump to last modification", :exec "goto_last_modification", :program "helix"}]}
 
   ;; undo / redo
   ^{:doc/actions [{:name "undo", :description "Undo last change", :program "helix"}]}   [:#Pleft_arrow [:!Opage_up] [:term]]
