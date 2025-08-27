@@ -1,20 +1,10 @@
-- work annotation homogenity for Babel compatibility. idea has evolved: use `edn` with metadata as master, and `babel` to semi-autogenerate app config
+- babel is almost ready! update annotations
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
 - mark helix as common, insert, normal & select
 - develop template for helix headers
 - coordinate Zellij / Helix
 - sync browser hotkeys
 - review zellij bindings
-
-helix:
-  - movement (prev, next, repeat) => q-mode
-  - comment (prev / next) => q-mode
-  - lsp (picker - enter, rename - n, ref - r, def - d, type - t, impl - i) => q-mode
-  - undo / redo => z-mode
-  - git mod (prev / next) => z-mode
-  - diagnositcs (workspace picker - shift enter, picker - enter, next - down / prev - up) => z-mode
-  - jumplist (save, picker, prev, next) => rcmd
-  - file picker (general, buffer, modified) => rcmd
 
 ==================================================
 ==================================================

@@ -1,4 +1,4 @@
-# PROJECT_NAME
+# Saiya-jin
 
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 
