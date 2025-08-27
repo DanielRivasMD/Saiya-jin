@@ -125,14 +125,14 @@
   ^{:doc/actions [{:name "copy line", :exec ["extend_to_line_bounds", "yank_to_clipboard"], :program "helix-common"}
                   {:name "copy line", :exec ["CopyLine"], :program "micro"}]} [:!OS#Pc :!SOf4 [:term]]
   ^{:doc/actions [{:name "duplicate line", :exec ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"], :program "helix-common"}
-                  {:name "duplicate line", :exec ["DuplicateLine"], :program "helix-common"}]} [:!OS#Pd :!SOf5 [:term]]
+                  {:name "duplicate line", :exec ["DuplicateLine"], :program "micro"}]} [:!OS#Pd :!SOf5 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pe :!SOf6 [:term]]
   ^{:doc/actions [{:name "global search", :exec ["global_search"], :program "helix-common"}
-                  {:name "global search", :exec ["Find"], :program "helix-common"}]} [:!OS#Pf :!SOf7 [:term]]
+                  {:name "global search", :exec ["Find"], :program "micro"}]} [:!OS#Pf :!SOf7 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pg :!SOf8 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Ph :!SOf9 [:term]]
   ^{:doc/actions [{:name "indent", :exec ["indent"], :program "helix-common"}
-                  {:name "indent", :exec ["IndentSelection"], :program "helix-common"}]} [:!OS#Pi :!SOf10 [:term]]
+                  {:name "indent", :exec ["IndentSelection"], :program "micro"}]} [:!OS#Pi :!SOf10 [:term]]
   ^{:doc/actions [{:name "move down", :exec ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"], :program "helix-common"}
                   {:name "move down", :exec ["MoveLinesDown"], :program "micro"}]} [:!OS#Pj :!STf1 [:term]]
   ^{:doc/actions [{:name "move up", :exec ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"], :program "helix-common"}
