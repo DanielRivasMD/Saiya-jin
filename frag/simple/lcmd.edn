@@ -6,36 +6,44 @@
  :rules
  [;
 
-  ^{:doc/actions [{:name "goto-line-start", :exec "goto_line_start", :program "helix"}]} [:!C#Pleft_arrow :!Ta [:term]]
-  ^{:doc/actions [{:name "goto-line-end", :exec "goto_line_end", :program "helix"}]} [:!C#Pright_arrow :!Te [:term]]
-  ^{:doc/actions [{:name "goto-file-start", :exec "goto_file_start", :program "helix"}]} [:!C#Pup_arrow [:home] [:term]]
-  ^{:doc/actions [{:name "goto-file-end", :exec "goto_last_line", :program "helix"}]} [:!C#Pdown_arrow [:end] [:term]]
+  ^{:doc/actions [{:name "goto-line-start", :exec ["goto_line_start"], :program "helix-common"}
+                  {:name "goto-line-start", :exec ["StartOfLine"], :program "micro"}]} [:!C#Pleft_arrow :!Ta [:term]]
+  ^{:doc/actions [{:name "goto-line-end", :exec ["goto_line_end"], :program "helix-common"}
+                  {:name "goto-line-end", :exec ["EndOfLine"], :program "micro"}]} [:!C#Pright_arrow :!Te [:term]]
+  ^{:doc/actions [{:name "goto-file-start", :exec ["goto_file_start"], :program "helix-common"}
+                  {:name "goto-file-start", :exec ["CursorStart"], :program "micro"}]} [:!C#Pup_arrow [:home] [:term]]
+  ^{:doc/actions [{:name "goto-file-end", :exec ["goto_last_line"], :program "helix-common"}
+                  {:name "goto-file-end", :exec ["CursorEnd"], :program "micro"}]} [:!C#Pdown_arrow [:end] [:term]]
 
-  ^{:doc/actions [{:name "select-mode-start-line",:exec "select_mode", :program "helix"}]} [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]
-  ^{:doc/actions [{:name "select-mode-end-line",:exec "select_mode", :program "helix"}]} [:!CS#Pright_arrow [:!Oright_arrow] [:term]]
-  ^{:doc/actions [{:name "extend-to-file-start",:exec "extend_to_file_start", :program "helix"}]} [:!CS#Pup_arrow [:!Oup_arrow] [:term]]
-  ^{:doc/actions [{:name "extend-to-file-end",:exec "extend_to_file_end", :program "helix"}]} [:!CS#Pdown_arrow [:!Odown_arrow] [:term]]
+  ^{:doc/actions [{:name "select-mode-start-line", :exec ["select_mode", "goto_line_start", "MODE"], :program "helix-common"}
+                  {:name "select-mode-start-line", :exec ["SelectToStartOfLine"], :program "micro"}]} [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]
+  ^{:doc/actions [{:name "select-mode-end-line", :exec ["select_mode", "goto_line_end", "MODE"], :program "helix-common"}
+                  {:name "select-mode-end-line", :exec ["SelectToEndOfLine"], :program "micro"}]} [:!CS#Pright_arrow [:!Oright_arrow] [:term]]
+  ^{:doc/actions [{:name "extend-to-file-start", :exec ["extend_to_file_start"], :program "helix-common"}
+                  {:name "extend-to-file-start", :exec ["SelectToStart"], :program "micro"}]} [:!CS#Pup_arrow [:!Oup_arrow] [:term]]
+  ^{:doc/actions [{:name "extend-to-file-end", :exec ["extend_to_file_end"], :program "helix-common"}
+                  {:name "extend-to-file-end", :exec ["SelectToEnd"], :program "micro"}]} [:!CS#Pdown_arrow [:!Odown_arrow] [:term]]
 
-  [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]                                          ; ' -= '
-  [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]                                ; ' += '
+  ^{:doc/actions [{:name "", :sequence "` -= `", :program ""}]} [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` += `", :program ""}]} [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]
 
-  [:!CS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]                                 ; ' .-= '
-  [:!CS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]                       ; ' .+= '
+  ^{:doc/actions [{:name "", :sequence "` .-= `", :program ""}]} [:!CS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` .+= `", :program ""}]} [:!CS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]
 
   ; [:!C#Popen_bracket []]
   ; [:!C#Pclose_bracket []]
   ; [:!C#Psemicolon []]
-  [:!C#Pquote [:!Ssemicolon :!Ssemicolon :!Scomma]]                                                ; '::<'
+  ^{:doc/actions [{:name "", :sequence "`::<`", :program ""}]} [:!C#Pquote [:!Ssemicolon :!Ssemicolon :!Scomma]]
   ; [:!C#Pbackslash []]
-  [:!C#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]                                              ; ' <- '
-  [:!C#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]                                            ; ' -> '
-  [:!C#Pslash [:slash :slash :!S1 :spacebar]]                                                      ; '//! '
+  ^{:doc/actions [{:name "", :sequence "' <- '", :program ""}]} [:!C#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` -> `", :program ""}]} [:!C#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "`//! `", :program ""}]} [:!C#Pslash [:slash :slash :!S1 :spacebar]]
 
   ; [:!C#Pdelete_or_backspace []]
   ; [:!C#Preturn_or_enter []]
-  [:!C#Pright_shift [:spacebar :!S1 :equal_sign :spacebar]]                                        ; ' != '
-  [:!C#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]                                       ; ' *= '
-  [:!C#Pright_command [:spacebar :slash :equal_sign :spacebar]]                                    ; ' /= '
+  ^{:doc/actions [{:name "", :sequence "` != `", :program ""}]} [:!C#Pright_shift [:spacebar :!S1 :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` *= `", :program ""}]} [:!C#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` /= `", :program ""}]} [:!C#Pright_command [:spacebar :slash :equal_sign :spacebar]]
   ; [:!C#Pspacebar []]
 
   ; [:!C#P1 []]
@@ -46,7 +54,7 @@
   ; [:!C#P6 []]
   ; [:!C#P7 []]
   ; [:!C#P8 []]
-  [:!C#P9 [:period :!S9]]                                                                          ; '.('
+  ^{:doc/actions [{:name "", :sequence ".(", :program ""}]} [:!C#P9 [:period :!S9]]
   ; [:!C#P0 []]
   ; [:!C#Phyphen []]
   ; [:!C#Pequal_sign []]
@@ -54,30 +62,31 @@
   ; [:!CS#Popen_bracket []]
   ; [:!CS#Pclose_bracket []]
   ; [:!CS#Psemicolon []]
-  [:!CS#Pquote []]
+  ; [:!CS#Pquote []]
   ; [:!CS#Pbackslash []]
-  [:!CS#Pcomma [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]                                    ; ' <<- '
-  [:!CS#Pperiod [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]                                 ; ' ->> '
-  [:!CS#Pslash [:!S3 :!S1 :slash]]                                                                 ; '#!/'
+  ^{:doc/actions [{:name "", :sequence "` <<- `", :program ""}]} [:!CS#Pcomma [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` ->> `", :program ""}]} [:!CS#Pperiod [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "`#!/`", :program ""}]} [:!CS#Pslash [:!S3 :!S1 :slash]]
 
   ; [:!CS#Pdelete_or_backspace []]
-  [:!CS#Preturn_or_enter [:spacebar :!Ssemicolon :equal_sign :spacebar]]                           ; ' := ';
-  [:!CS#Pright_shift [:spacebar :period :!S1 :equal_sign :spacebar]]                               ; ' .!= '
-  [:!CS#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]                              ; ' .*= '
-  [:!CS#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]                           ; ' ./= '
+  ^{:doc/actions [{:name "", :sequence "`; `", :program ""}]} [:!CS#Preturn_or_enter [:spacebar :!Ssemicolon :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` .!= `", :program ""}]} [:!CS#Pright_shift [:spacebar :period :!S1 :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` .*= `", :program ""}]} [:!CS#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` ./= `", :program ""}]} [:!CS#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]
   ; [:!CS#Pspacebar []]
-  ; [:!C#P1 []]
-  ; [:!C#P2 []]
-  ; [:!C#P3 []]
-  ; [:!C#P4 []]
-  ; [:!C#P5 []]
-  ; [:!C#P6 []]
-  ; [:!C#P7 []]
-  ; [:!C#P8 []]
-  [:!CS#P9 [:!Ssemicolon :!S9]]                                                                    ; ':('
-  ; [:!C#P0 []]
-  ; [:!C#Phyphen []]
-  ; [:!C#Pequal_sign []]
+
+  ; [:!CS#P1 []]
+  ; [:!CS#P2 []]
+  ; [:!CS#P3 []]
+  ; [:!CS#P4 []]
+  ; [:!CS#P5 []]
+  ; [:!CS#P6 []]
+  ; [:!CS#P7 []]
+  ; [:!CS#P8 []]
+  ^{:doc/actions [{:name "", :sequence "`:(`", :program ""}]} [:!CS#P9 [:!Ssemicolon :!S9]]
+  ; [:!CS#P0 []]
+  ; [:!CS#Phyphen []]
+  ; [:!CS#Pequal_sign []]
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
