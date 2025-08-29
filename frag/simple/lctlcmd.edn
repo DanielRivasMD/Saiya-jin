@@ -5,19 +5,24 @@
 {:des "Control - Command Mode"
  :rules
  [;
-  ; TODO: annotate for Babel compatibility
-  ^{:doc/actions [{:name "prev-buffer", :exec "goto_previous_buffer", :program "helix"}]} [:!TC#Pleft_arrow [:!Tb] [:term]]
-  ^{:doc/actions [{:name "next-buffer", :exec "goto_next_buffer", :program "helix"}]} [:!TC#Pright_arrow [:!Tf] [:term]]
-  ^{:doc/actions [{:name "increment-number", :exec "increment", :program "helix"}]} [:!TC#Pup_arrow [:!Tn] [:term]]
-  ^{:doc/actions [{:name "decrement-number", :exec "decrement", :program "helix"}]} [:!TC#Pdown_arrow [:!Tp] [:term]]
+  ^{:doc/actions [{:name "prev-buffer", :exec ["goto_previous_buffer"], :program "helix-common"}
+                  {:name "prev-buffer", :exec ["PreviousTab"], :program "micro"}]} [:!TC#Pleft_arrow [:!Tb] [:term]]
+  ^{:doc/actions [{:name "next-buffer", :exec ["goto_next_buffer"], :program "helix-common"}
+                  {:name "next-buffer", :exec ["NextTab"], :program "micro"}]} [:!TC#Pright_arrow [:!Tf] [:term]]
+  ^{:doc/actions [{:name "increment-number", :exec ["increment"], :program "helix-common"}]} [:!TC#Pup_arrow [:!Tn] [:term]]
+  ^{:doc/actions [{:name "decrement-number", :exec ["decrement"], :program "helix-common"}]} [:!TC#Pdown_arrow [:!Tp] [:term]]
 
-  ; TODO: review bindings helix splits
-  ^{:doc/actions [{:name "close-tab", :exec "buffer-close", :program "helix"}]} [:!TC#Pdelete_or_backspace [:!Tl]]
-  ^{:doc/actions [{:name "close-others", :exec "wonly", :program "helix"}]} [:!TC#Preturn_or_enter [:!Tg]]
-  ^{:doc/actions [{:name "vsplit", :exec "vsplit", :program "helix"}]} [:!TC#Pright_shift [:!Tv]]
-  ^{:doc/actions [{:name "hsplit", :exec "hsplit", :program "helix"}]} [:!TC#Pright_option [:!Th]]
-  ^{:doc/actions [{:name "close-window", :exec "unsplit", :program "helix"}]} [:!TC#Pright_command [:!Tj]]
-  ^{:doc/actions [{:name "last-file", :exec "goto_last_accessed_file", :program "helix"}
+  ^{:doc/actions [{:name "close-tab", :exec ["buffer-close"], :program "helix-common"}
+                  {:name "close-tab", :exec ["Quit"], :program "micro"}]} [:!TC#Pdelete_or_backspace [:!Tl]]
+  ^{:doc/actions [{:name "close-others", :exec ["wonly"], :program "helix-common"}
+                  {:name "close-others", :exec ["Unsplit"], :program "micro"}]} [:!TC#Preturn_or_enter [:!Tg]]
+  ^{:doc/actions [{:name "vsplit", :exec ["vsplit"], :program "helix-common"}
+                  {:name "vsplit", :exec ["VSplit"], :program "micro"}]} [:!TC#Pright_shift [:!Tv]]
+  ^{:doc/actions [{:name "hsplit", :exec ["hsplit"], :program "helix-common"}
+                  {:name "hsplit", :exec ["HSplit"], :program "micro"}]} [:!TC#Pright_option [:!Th]]
+  ^{:doc/actions [{:name "close-window", :exec ["unsplit"], :program "helix-common"}
+                  {:name "close-window", :exec ["Unsplit"], :program "micro"}]} [:!TC#Pright_command [:!Tj]]
+  ^{:doc/actions [{:name "last-file", :exec ["goto_last_accessed_file"], :program "helix-common"}
                   {:name "open-preview" :program "broot"}]} [:!TC#Pspacebar [:!To]]                ;
   ]}
 
