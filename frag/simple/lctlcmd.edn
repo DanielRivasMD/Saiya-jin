@@ -6,11 +6,15 @@
  :rules
  [;
   ^{:doc/actions [{:name "prev-buffer", :exec ["goto_previous_buffer"], :program "helix-common"}
+                  {:name "prev-tab", :exec ["prevTab"], :program "lazygit"}
                   {:name "prev-buffer", :exec ["PreviousTab"], :program "micro"}]} [:!TC#Pleft_arrow [:!Tb] [:term]]
   ^{:doc/actions [{:name "next-buffer", :exec ["goto_next_buffer"], :program "helix-common"}
+                  {:name "next-tab", :exec ["nextTab"], :program "lazygit"}
                   {:name "next-buffer", :exec ["NextTab"], :program "micro"}]} [:!TC#Pright_arrow [:!Tf] [:term]]
-  ^{:doc/actions [{:name "increment-number", :exec ["increment"], :program "helix-common"}]} [:!TC#Pup_arrow [:!Tn] [:term]]
-  ^{:doc/actions [{:name "decrement-number", :exec ["decrement"], :program "helix-common"}]} [:!TC#Pdown_arrow [:!Tp] [:term]]
+  ^{:doc/actions [{:name "increment-number", :exec ["increment"], :program "helix-common"}
+                  {:name "prev-block", :exec ["prevBlock-alt2"], :program "lazygit"}]} [:!TC#Pup_arrow [:!Tn] [:term]]
+  ^{:doc/actions [{:name "decrement-number", :exec ["decrement"], :program "helix-common"}
+                  {:name "next-block", :exec ["nextBlock-alt2"], :program "lazygit"}]} [:!TC#Pdown_arrow [:!Tp] [:term]]
 
   ^{:doc/actions [{:name "close-tab", :exec ["buffer-close"], :program "helix-common"}
                   {:name "close-tab", :exec ["Quit"], :program "micro"}]} [:!TC#Pdelete_or_backspace [:!Tl]]
