@@ -6,21 +6,21 @@
  :rules
  [:q-mode
   ;; find-till-char / repeat
-  ^{:doc/actions [{:name "find-till-char-forward", :exec ["find_till_char"], :program "helix"}]} [:#Pleft_arrow [:!Tpage_up] [:term]]
-  ^{:doc/actions [{:name "find-till-char-backward", :exec ["till_prev_char"], :program "helix"}]} [:#Pright_arrow [:!Tpage_down] [:term]]
+  ^{:doc/actions [{:name "find-till-char-forward", :exec ["find_till_char"], :program "helix-common"}]} [:#Pleft_arrow [:!Tpage_up] [:term]]
+  ^{:doc/actions [{:name "find-till-char-backward", :exec ["till_prev_char"], :program "helix-common"}]} [:#Pright_arrow [:!Tpage_down] [:term]]
  ; TODO: update temp mapping
-  ^{:doc/actions [{:name "repeat-last-motion", :exec ["repeat_last_motion"], :program "helix"}]} [:#Pspacebar [:f18] [:term]]
+  ^{:doc/actions [{:name "repeat-last-motion", :exec ["repeat_last_motion"], :program "helix-common"}]} [:#Pspacebar [:f18] [:term]]
 
   ;; comment navigation
-  ^{:doc/actions [{:name "prev-comment", :exec ["goto_prev_comment"], :program "helix"}]} [:#Pup_arrow [:!Thome] [:term]]
-  ^{:doc/actions [{:name "next-comment", :exec ["goto_next_comment"], :program "helix"}]} [:#Pdown_arrow [:!Tend] [:term]]
+  ^{:doc/actions [{:name "prev-comment", :exec ["goto_prev_comment"], :program "helix-common"}]} [:#Pup_arrow [:!Thome] [:term]]
+  ^{:doc/actions [{:name "next-comment", :exec ["goto_next_comment"], :program "helix-common"}]} [:#Pdown_arrow [:!Tend] [:term]]
 
   ; language server
-  ^{:doc/actions [{:name "rename-symbol", :exec ["rename_symbol"], :program "helix"}]} [:#Pn [:!TSf11] [:term]]
-  ^{:doc/actions [{:name "symbol-picker", :exec ["symbol_picker"], :program "helix"}]} [:#Preturn_or_enter [:!TSf13] [:term]]
-  ^{:doc/actions [{:name "goto-references", :exec ["goto_reference"], :program "helix"}]} [:#Pr [:!Tf16] [:term]]
-  ^{:doc/actions [{:name "goto-definition", :exec ["goto_definition"], :program "helix"}]} [:#Pd [:!Tf17] [:term]]
-  ^{:doc/actions [{:name "goto-implementation", :exec ["goto_implementation"], :program "helix"}]} [:#Pi [:!TSf16] [:term]]
-  ^{:doc/actions [{:name "goto-type-definition", :exec ["goto_type_definition"], :program "helix"}]} [:#Pt [:!TSf17] [:term]]]}
+  ^{:doc/actions [{:name "rename-symbol", :exec ["rename_symbol"], :program "helix-common"}]} [:#Pn [:!TSf11] [:term]]
+  ^{:doc/actions [{:name "symbol-picker", :exec ["symbol_picker"], :program "helix-common"}]} [:#Preturn_or_enter [:!TSf13] [:term]]
+  ^{:doc/actions [{:name "goto-references", :exec ["goto_reference"], :program "helix-common"}]} [:#Pr [:!Tf16] [:term]]
+  ^{:doc/actions [{:name "goto-definition", :exec ["goto_definition"], :program "helix-common"}]} [:#Pd [:!Tf17] [:term]]
+  ^{:doc/actions [{:name "goto-implementation", :exec ["goto_implementation"], :program "helix-common"}]} [:#Pi [:!TSf16] [:term]]
+  ^{:doc/actions [{:name "goto-type-definition", :exec ["goto_type_definition"], :program "helix-common"}]} [:#Pt [:!TSf17] [:term]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
