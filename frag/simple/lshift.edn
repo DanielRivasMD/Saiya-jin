@@ -27,6 +27,7 @@
   ; [:!S#Preturn_or_enter []]
   [:!S#Pright_shift [:delete_forward]]                                                             ;
   [:!S#Pright_option [:!Ed]]                                                                       ;
+  ; TODO: micro => SelectToEndOfLine,Delete
   [:!S#Pright_command [:!Wk]]                                                                      ;
   ; [:!S#Pspacebar []]
   ]}

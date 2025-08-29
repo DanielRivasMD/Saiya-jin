@@ -11,7 +11,8 @@
   [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
 
   ; esc
-  [:#Pescape :!EWright_shift nil {:alone [:!EW#Pnon_us_pound]}]                                    ; menu search. TODO: CHANGE `term` pop-up new
+  ; TODO: CHANGE `term` pop-up new
+  [:#Pescape :!EWright_shift nil {:alone [:!EW#Pnon_us_pound]}]                                    ; menu search.
 
   ; zero
   [:#Pkeypad_num_lock :!EQright_shift nil {:alone [:keypad_num_lock]}]                             ; mouse control

@@ -72,4 +72,5 @@
   ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#P0 [:!TS#P0]]
   ^{:doc/actions [{:name "terminal", :sequence "` .-- `", :program "terminal"}]} [:!TS#Phyphen [:spacebar :period :hyphen :hyphen :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` .++ `", :program "terminal"}]} [:!TS#Pequal_sign [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

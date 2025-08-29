@@ -11,8 +11,10 @@
   ; [:!R#Pup_arrow []]
   ; [:!R#Pdown_arrow []]
 
+  ; TODO: micro => SelectToStartOfLine,Delete
   [:!R#Pleft_command [:!Wu]]                                                                       ;
   ; [:!Rleft_option []]
+  ; TODO: micro => DeleteWordLeft
   [:!R#Pleft_control [:!Ww]]                                                                       ;
   [:!R#Pleft_shift [:delete_or_backspace]]                                                         ;
   ; [:!R#Pcaps_lock []]

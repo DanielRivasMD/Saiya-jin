@@ -26,4 +26,5 @@
   [:!OT#Pright_command :!Os [:term]]                                           ; pane rename       ; zellij
   [:!OT#Pspacebar :!Ot [:term]]                                                ; pane jump back    ; zellij
   ]}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -5,7 +5,6 @@
 {:des "Command Mode - arrows"
  :rules
  [;
-
   ^{:doc/actions [{:name "goto-line-start", :exec ["goto_line_start"], :program "helix-common"}
                   {:name "goto-line-start", :exec ["StartOfLine"], :program "micro"}]} [:!C#Pleft_arrow :!Ta [:term]]
   ^{:doc/actions [{:name "goto-line-end", :exec ["goto_line_end"], :program "helix-common"}

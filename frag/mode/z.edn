@@ -5,6 +5,7 @@
 {:des "Z mode"
  :rules
  [:z-mode
+ ; TODO: add binding
   ; ^{:doc/actions [{:name "goto-last-modification", :exec "goto_last_modification", :program "helix-common"}]}
 
   ;; undo / redo
