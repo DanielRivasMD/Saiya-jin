@@ -165,7 +165,7 @@
   ^{:doc/actions [{:name "cut line", :exec ["extend_to_line_bounds", "delete_selection_noyank"], :program "helix-common"}
                   {:name "cut line", :exec ["CutLine"], :program "micro"}]} [:!OS#Px :!OTSf7 [:term]]
   ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Py :!OTSf8 [:term]]
-  ^{:doc/actions [{:name "yank diagnostic", :exec [":yank-diagnostic"], :program "helix-common"}]} [:!OS#Py :!OTSf9 [:term]]
+  ^{:doc/actions [{:name "yank diagnostic", :exec [":yank-diagnostic"], :program "helix-common"}]} [:!OS#Pz :!OTSf9 [:term]]
   ^{:doc/actions [{:name "launch shell", :exec [":sh zellij run --name canvas --close-on-exit --floating --height 100 --width 140 --x 0 --y 0 -- zsh"], :program "helix-common"}]} [:!OS#Pright_control :!OTSf10 [:term]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
