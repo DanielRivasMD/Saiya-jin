@@ -21,6 +21,9 @@
   ^{:doc/actions [{:name "goto-references", :exec ["goto_reference"], :program "helix-common"}]} [:#Pr [:!Tf16] [:term]]
   ^{:doc/actions [{:name "goto-definition", :exec ["goto_definition"], :program "helix-common"}]} [:#Pd [:!Tf17] [:term]]
   ^{:doc/actions [{:name "goto-implementation", :exec ["goto_implementation"], :program "helix-common"}]} [:#Pi [:!TSf16] [:term]]
-  ^{:doc/actions [{:name "goto-type-definition", :exec ["goto_type_definition"], :program "helix-common"}]} [:#Pt [:!TSf17] [:term]]]}
+  ^{:doc/actions [{:name "goto-type-definition", :exec ["goto_type_definition"], :program "helix-common"}]} [:#Pt [:!TSf17] [:term]]
+
+  ^{:doc/actions [{:name "goto-definition", :exec ["vsplit", "goto_definition"], :program "helix-common"}]} [:#Pright_shift [:!Tf18] [:term]]
+  ^{:doc/actions [{:name "goto-definition", :exec ["vsplit", "goto_type_definition"], :program "helix-common"}]} [:#Pright_option [:!Tf19] [:term]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
