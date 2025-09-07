@@ -1,6 +1,5 @@
 - babel is almost ready! update annotations
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
-- mark helix as common, insert, normal & select
 - develop template for helix headers
 - coordinate Zellij / Helix
 - sync browser hotkeys
@@ -10,15 +9,15 @@
 frag/apps/browser.edn:; TODO: update config
 frag/apps/mail.edn:; TODO: update
 frag/apps/zoom.edn:; TODO: homogenize to format
-frag/double/lctl.edn:; TODO: relocate
+frag/mode/q.edn: ; TODO: update temp mapping
 frag/profile/keys.edn:; TODO: update
 frag/profile/keys.edn:  ; TODO: CHANGE `term` pop-up new
 frag/simple/patch.edn:; TODO: update
+frag/double/lctl.edn:; TODO: relocate
 frag/simple/lshift.edn:  ; TODO: micro => SelectToEndOfLine,Delete
+frag/mode/z.edn: ; TODO: add binding
+frag/simple/tab.edn:; TODO: annotate rectangle hotkeys
+frag/simple/hyper.edn:  ; TODO: review hyper - zellij bindings
 frag/simple/rshift.edn:  ; TODO: micro => SelectToStartOfLine,Delete
 frag/simple/rshift.edn:  ; TODO: micro => DeleteWordLeft
-frag/simple/hyper.edn:  ; TODO: review hyper - zellij bindings
-frag/simple/tab.edn:; TODO: annotate rectangle hotkeys
-frag/mode/q.edn: ; TODO: update temp mapping
-frag/mode/z.edn: ; TODO: add binding
 ==================================================
