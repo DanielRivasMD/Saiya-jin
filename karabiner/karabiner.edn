@@ -380,22 +380,25 @@
  :rules
  [:q-mode
   ;; find-till-char / repeat
-  ^{:doc/actions [{:name "find-till-char-forward", :description "Find till character forward", :exec "find_till_char", :program "helix"}]} [:#Pleft_arrow [:!Tpage_up] [:term]]
-  ^{:doc/actions [{:name "find-till-char-backward", :description "Find till character backward", :exec "till_prev_char", :program "helix"}]} [:#Pright_arrow [:!Tpage_down] [:term]]
+  ^{:doc/actions [{:name "find-till-char-forward", :exec ["find_till_char"], :program "helix-common"}]} [:#Pleft_arrow [:!Tpage_up] [:term]]
+  ^{:doc/actions [{:name "find-till-char-backward", :exec ["till_prev_char"], :program "helix-common"}]} [:#Pright_arrow [:!Tpage_down] [:term]]
  ; TODO: update temp mapping
-  ^{:doc/actions [{:name "repeat-last-motion", :description "Repeat last movement", :exec "repeat_last_motion", :program "helix"}]} [:#Pspacebar [:f18] [:term]]
+  ^{:doc/actions [{:name "repeat-last-motion", :exec ["repeat_last_motion"], :program "helix-common"}]} [:#Pspacebar [:f18] [:term]]
 
   ;; comment navigation
-  ^{:doc/actions [{:name "prev-comment", :description "Go to previous comment", :exec "goto_prev_comment", :program "helix"}]} [:#Pup_arrow [:!Thome] [:term]]
-  ^{:doc/actions [{:name "next-comment", :description "Go to next comment", :exec "goto_next_comment", :program "helix"}]} [:#Pdown_arrow [:!Tend] [:term]]
+  ^{:doc/actions [{:name "prev-comment", :exec ["goto_prev_comment"], :program "helix-common"}]} [:#Pup_arrow [:!Thome] [:term]]
+  ^{:doc/actions [{:name "next-comment", :exec ["goto_next_comment"], :program "helix-common"}]} [:#Pdown_arrow [:!Tend] [:term]]
 
   ; language server
-  ^{:doc/actions [{:name "rename-symbol", :description "Rename symbol", :exec "rename_symbol", :program "helix"}]} [:#Pn [:!TSf11] [:term]]
-  ^{:doc/actions [{:name "symbol-picker", :description "Show symbol list", :exec "symbol_picker", :program "helix"}]} [:#Preturn_or_enter [:!TSf13] [:term]]
-  ^{:doc/actions [{:name "goto-references", :description "Go to references", :exec "goto_reference", :program "helix"}]} [:#Pr [:!Tf16] [:term]]
-  ^{:doc/actions [{:name "goto-definition", :description "Go to definition", :exec "goto_definition", :program "helix"}]} [:#Pd [:!Tf17] [:term]]
-  ^{:doc/actions [{:name "goto-implementation", :description "Go to implementation", :exec "goto_implementation", :program "helix"}]} [:#Pi [:!TSf16] [:term]]
-  ^{:doc/actions [{:name "goto-type-definition", :description "Go to type definition", :exec "goto_type_definition", :program "helix"}]} [:#Pt [:!TSf17] [:term]]]}
+  ^{:doc/actions [{:name "rename-symbol", :exec ["rename_symbol"], :program "helix-common"}]} [:#Pn [:!TSf11] [:term]]
+  ^{:doc/actions [{:name "symbol-picker", :exec ["symbol_picker"], :program "helix-common"}]} [:#Preturn_or_enter [:!TSf13] [:term]]
+  ^{:doc/actions [{:name "goto-references", :exec ["goto_reference"], :program "helix-common"}]} [:#Pr [:!Tf16] [:term]]
+  ^{:doc/actions [{:name "goto-definition", :exec ["goto_definition"], :program "helix-common"}]} [:#Pd [:!Tf17] [:term]]
+  ^{:doc/actions [{:name "goto-implementation", :exec ["goto_implementation"], :program "helix-common"}]} [:#Pi [:!TSf16] [:term]]
+  ^{:doc/actions [{:name "goto-type-definition", :exec ["goto_type_definition"], :program "helix-common"}]} [:#Pt [:!TSf17] [:term]]
+
+  ^{:doc/actions [{:name "goto-definition", :exec ["vsplit", "goto_definition"], :program "helix-common"}]} [:#Pright_shift [:!Tf18] [:term]]
+  ^{:doc/actions [{:name "goto-definition", :exec ["vsplit", "goto_type_definition"], :program "helix-common"}]} [:#Pright_option [:!Tf19] [:term]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -405,21 +408,22 @@
 {:des "Z mode"
  :rules
  [:z-mode
-  ; ^{:doc/actions [{:name "goto-last-modification", :description "Jump to last modification", :exec "goto_last_modification", :program "helix"}]} []
+ ; TODO: add binding
+  ; ^{:doc/actions [{:name "goto-last-modification", :exec "goto_last_modification", :program "helix-common"}]}
 
   ;; undo / redo
-  ^{:doc/actions [{:name "undo", :description "Undo last change", :program "helix"}]}   [:#Pleft_arrow [:!Opage_up] [:term]]
-  ^{:doc/actions [{:name "redo", :description "Redo last undo", :program "helix"}]}   [:#Pright_arrow [:!Opage_down] [:term]]
+  ^{:doc/actions [{:name "undo", :program "helix-common"}]} [:#Pleft_arrow [:!Opage_up] [:term]]
+  ^{:doc/actions [{:name "redo", :program "helix-common"}]} [:#Pright_arrow [:!Opage_down] [:term]]
 
   ;; change navigation
-  ^{:doc/actions [{:name "prev-change", :description "Go to previous change", :exec "goto_prev_change", :program "helix"}]}   [:#Pup_arrow [:!Ohome] [:term]]
-  ^{:doc/actions [{:name "next-change", :description "Go to next change", :exec "goto_next_change", :program "helix"}]}   [:#Pdown_arrow [:!Oend] [:term]]
+  ^{:doc/actions [{:name "prev-change", :exec "goto_prev_change", :program "helix-common"}]} [:#Pup_arrow [:!Ohome] [:term]]
+  ^{:doc/actions [{:name "next-change", :exec "goto_next_change", :program "helix-common"}]} [:#Pdown_arrow [:!Oend] [:term]]
 
   ;; diagnostics: prev / next / picker
-  ^{:doc/actions [{:name "prev-diagnostic", :description "Go to previous diagnostic", :exec "goto_prev_diag", :program "helix"}]} [:#Pdelete_or_backspace [:!Tf11] [:term]]
-  ^{:doc/actions [{:name "next-diagnostic", :description "Go to next diagnostic", :exec "goto_next_diag", :program "helix"}]} [:#Pright_shift [:!Tf12] [:term]]
-  ^{:doc/actions [{:name "diagnostics-picker", :description "Open diagnostics picker", :exec "diagnostics_picker", :program "helix"}]} [:#Preturn_or_enter [:!Tf13] [:term]]
-  ^{:doc/actions [{:name "workspace-diagnostics-picker", :description "Workspace diagnostics picker", :exec "workspace_diagnostics_picker", :program "helix"}]} [:!S#Preturn_or_enter [:!Tf14] [:term]]]}
+  ^{:doc/actions [{:name "prev-diagnostic", :exec "goto_prev_diag", :program "helix-common"}]} [:#Pdelete_or_backspace [:!Tf11] [:term]]
+  ^{:doc/actions [{:name "next-diagnostic", :exec "goto_next_diag", :program "helix-common"}]} [:#Pright_shift [:!Tf12] [:term]]
+  ^{:doc/actions [{:name "diagnostics-picker", :exec "diagnostics_picker", :program "helix-common"}]} [:#Preturn_or_enter [:!Tf13] [:term]]
+  ^{:doc/actions [{:name "workspace-diagnostics-picker", :exec "workspace_diagnostics_picker", :program "helix-common"}]} [:!S#Preturn_or_enter [:!Tf14] [:term]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -556,3 +560,896 @@
 ;   ]}
 
 ; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; OPT-CMD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Option - Command Mode - arrows"
+ :rules
+ []}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; HYPER => OTC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Hyper Mode - arrows"
+ :rules
+ [;
+  [:!OTC#Pleft_arrow [:!Spage_up] [:term]]
+  [:!OTC#Pright_arrow [:!Spage_down] [:term]]
+  [:!OTC#Pup_arrow [:!Shome] [:term]]
+  [:!OTC#Pdown_arrow [:!Send] [:term]]
+
+  ; TODO: review hyper - zellij bindings
+  ; [:!OTC#Popen_bracket []]
+  ; [:!OTC#Pclose_bracket []]
+  ; [:!OTC#Psemicolon []]
+  ; [:!OTC#Pquote []]
+  ; [:!OTC#Pbackslash []]
+  ; [:!OTC#Pcomma []]
+  ; [:!OTC#Pperiod []]
+  ; [:!OTC#Pslash []]
+
+  [:!OTC#Pdelete_or_backspace :!SOm [:term]]                                   ; pane float pin    ; zellij
+  [:!OTC#Preturn_or_enter :!SOn [:term]]                                       ; pane float toggle ; zellij
+  [:!OTC#Pright_shift :!Oh [:term]]                                            ; mode search       ; zellij
+  [:!OTC#Pright_option :!SOl [:term]]                                          ; pane float pop    ; zellij
+  ; [:!OTC#Pright_command []]
+  [:!OTC#Pspacebar :!Og [:term]]                                               ; mode lock         ; zellij
+  ]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; JOKER => EWQ
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Joker Mode"
+ :rules
+ [;
+  ; [:!EWQ#Pleft_arrow [:!Opage_up] [:term]]
+  ; [:!EWQ#Pright_arrow [:!Opage_down] [:term]]
+  ; [:!EWQ#Pup_arrow [:!Ohome] [:term]]
+  ; [:!EWQ#Pdown_arrow [:!Oend] [:term]]
+
+  ; [:!EWQS#Pleft_arrow [:!OSpage_up] [:term]]
+  ; [:!EWQS#Pright_arrow [:!OSpage_down] [:term]]
+  ; [:!EWQS#Pup_arrow [:!OShome] [:term]]
+  ; [:!EWQS#Pdown_arrow [:!OSend] [:term]]
+
+  [:!EWQ#Phyphen [:hyphen :hyphen]]                                                                ; '--'
+  [:!EWQ#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                                                ; '++'
+
+  [:!EWQ#Popen_bracket [:!Scomma :!Scomma]]                                                        ; '<<'
+  [:!EWQ#Pclose_bracket [:!Speriod :!Speriod]]                                                     ; '>>'
+  ; [:!EWQ#Psemicolon []]
+  [:!EWQ#Pquote [:!Ssemicolon :!Ssemicolon]]                                                       ; '::'
+  [:!EWQ#Pbackslash [:!Sbackslash :!Sbackslash]]                                                   ; '||'
+  [:!EWQ#Pcomma [:period :period]]                                                                 ; '..'
+  [:!EWQ#Pperiod [:period :period :period]]                                                        ; '...'
+  [:!EWQ#Pslash [:!S1 :!S1]]                                                                       ; '!!'
+
+  ; [:!EWQ#Pdelete_or_backspace []]
+  [:!EWQ#Preturn_or_enter [:equal_sign :equal_sign]]                                               ; '=='
+  ; [:!EWQ#Pright_shift []]
+  [:!EWQ#Pright_option [:!S8 :!S8]]                                                                ; '**'
+  [:!EWQ#Pright_command [:slash :slash]]                                                           ; '//'
+  ; [:!EWQ#Pspacebar []]
+  ]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; OPT-CMD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Option - Command Mode"
+ :rules
+ [;
+  ^{:doc/actions [{:name "prev-buffer", :program "zellij"}]} [:!OC#Pleft_arrow :!SOj [:term]]
+  ^{:doc/actions [{:name "next-buffer", :program "zellij"}]} [:!OC#Pright_arrow :!SOk [:term]]
+  ^{:doc/actions [{:name "scroll-up", :exec ["scroll_up"], :program "helix-common"}
+                  {:name "scroll-up", :exec ["scrollUpMain-alt2"], :program "lazygit"}]} [:!OC#Pup_arrow :!Tx [:term]]
+  ^{:doc/actions [{:name "scroll-down", :exec ["scroll_down"], :program "helix-common"}
+                  {:name "scroll-down", :exec ["scrollDownMain-alt2"], :program "lazygit"}]} [:!OC#Pdown_arrow :!Ty [:term]]
+
+  [:!OC#Popen_bracket :!SOv [:term]]                                           ; plugin room       ; zellij
+  [:!OC#Pclose_bracket :!SOw [:term]]                                          ; plugin jump-list  ; zellij
+  [:!OC#Psemicolon :!SOx [:term]]                                              ; plugin monocle    ; zellij
+  [:!OC#Pquote :!SOy [:term]]                                                  ; plugin            ; zellij
+  [:!OC#Pbackslash :!SOz [:term]]                                              ; plugin            ; zellij
+  [:!OC#Pcomma :!Ox [:term]]                               ; alt-cmd-.         ; nushell motion    ; alacritty
+  [:!OC#Pperiod :!Oy [:term]]                              ; alt-cmd-,         ; nushell motion    ; alacritty
+  [:!OC#Pslash :!Oz [:term]]                               ; alt-cmd-/         ; nushell motion    ; alacritty
+
+  [:!OC#Pdelete_or_backspace :!SOu [:term]]                                    ; tab close         ; zellij
+  [:!OC#Preturn_or_enter :!SOp [:term]]                                        ; tab sync          ; zellij
+  [:!OC#Pright_shift :!SOq]                                                    ; tab new           ; zellij
+  [:!OC#Pright_option :!SOr [:term]]                                           ; tab break pane    ; zellij
+  [:!OC#Pright_command :!SOs [:term]]                                          ; tab rename        ; zellij
+  [:!OC#Pspacebar :!SOt [:term]]                                               ; tab jump back     ; zellij
+
+  [:!OC#Pkeypad_1 :!SOa [:term]]                           ; alt-cmd-1         ;                   ; zellij
+  [:!OC#Pkeypad_2 :!SOb [:term]]                           ; alt-cmd-2         ;                   ; zellij
+  [:!OC#Pkeypad_3 :!SOc [:term]]                           ; alt-cmd-3         ;                   ; zellij
+  [:!OC#Pkeypad_4 :!SOd [:term]]                           ; alt-cmd-4         ;                   ; zellij
+  [:!OC#Pkeypad_5 :!SOe [:term]]                           ; alt-cmd-5         ;                   ; zellij
+  [:!OC#Pkeypad_6 :!SOf [:term]]                           ; alt-cmd-6         ;                   ; zellij
+  [:!OC#Pkeypad_7 :!SOg [:term]]                           ; alt-cmd-7         ;                   ; zellij
+  [:!OC#Pkeypad_8 :!SOh [:term]]                           ; alt-cmd-8         ;                   ; zellij
+  [:!OC#Pkeypad_9 :!SOi [:term]]                           ; alt-cmd-9         ;                   ; zellij
+  [:!OC#Pkeypad_0 :!SOj [:term]]                           ; alt-cmd-0         ;                   ; zellij
+  ; [:!OC#Pkeypad_slash []]                                                                        ;
+  ; [:!OC#Pkeypad_asterisk []]                                                                     ;
+
+  [:!OC#P1 :!SOa [:term]]                                  ; alt-cmd-1         ;                   ; zellij
+  [:!OC#P2 :!SOb [:term]]                                  ; alt-cmd-2         ;                   ; zellij
+  [:!OC#P3 :!SOc [:term]]                                  ; alt-cmd-3         ;                   ; zellij
+  [:!OC#P4 :!SOd [:term]]                                  ; alt-cmd-4         ;                   ; zellij
+  [:!OC#P5 :!SOe [:term]]                                  ; alt-cmd-5         ;                   ; zellij
+  [:!OC#P6 :!SOf [:term]]                                  ; alt-cmd-6         ;                   ; zellij
+  [:!OC#P7 :!SOg [:term]]                                  ; alt-cmd-7         ;                   ; zellij
+  [:!OC#P8 :!SOh [:term]]                                  ; alt-cmd-8         ;                   ; zellij
+  [:!OC#P9 :!SOi [:term]]                                  ; alt-cmd-9         ;                   ; zellij
+  ; [:!OC#P0 []]                                                                                   ;
+  ; [:!OC#Phyphen []]                                                                              ;
+  ; [:!OC#Pequal_sign []]                                                                          ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; OPT-CTL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Option - Control Mode"
+ :rules
+ [;
+  [:!OT#Pleft_arrow :!Oj [:term]]                                              ; pane left         ; zellij
+  [:!OT#Pright_arrow :!Ok [:term]]                                             ; pane right        ; zellij
+  [:!OT#Pup_arrow :!Ol [:term]]                                                ; pane up           ; zellij
+  [:!OT#Pdown_arrow :!Om [:term]]                                              ; pane down         ; zellij
+
+  ; [:!OT#Popen_bracket []]
+  ; [:!OT#Pclose_bracket []]
+  ; [:!OT#Psemicolon []]
+  ; [:!OT#Pquote []]
+  ; [:!OT#Pbackslash []]
+  ; [:!OT#Pcomma []]
+  ; [:!OT#Pperiod []]
+  ; [:!OT#Pslash []]
+
+  [:!OT#Pdelete_or_backspace :!Oo [:term]]                                     ; pane close        ; zellij
+  [:!OT#Preturn_or_enter :!Op [:term]]                                         ; pane focus        ; zellij
+  [:!OT#Pright_shift :!Oq [:term]]                                             ; pane split right  ; zellij
+  [:!OT#Pright_option :!Or [:term]]                                            ; pane split down   ; zellij
+  [:!OT#Pright_command :!Os [:term]]                                           ; pane rename       ; zellij
+  [:!OT#Pspacebar :!Ot [:term]]                                                ; pane jump back    ; zellij
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CTL-CMD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Control - Command Mode"
+ :rules
+ [;
+  ^{:doc/actions [{:name "prev-buffer", :exec ["goto_previous_buffer"], :program "helix-common"}
+                  {:name "prev-tab", :exec ["prevTab"], :program "lazygit"}
+                  {:name "prev-buffer", :exec ["PreviousTab"], :program "micro"}]} [:!TC#Pleft_arrow [:!Tb] [:term]]
+  ^{:doc/actions [{:name "next-buffer", :exec ["goto_next_buffer"], :program "helix-common"}
+                  {:name "next-tab", :exec ["nextTab"], :program "lazygit"}
+                  {:name "next-buffer", :exec ["NextTab"], :program "micro"}]} [:!TC#Pright_arrow [:!Tf] [:term]]
+  ^{:doc/actions [{:name "increment-number", :exec ["increment"], :program "helix-common"}
+                  {:name "prev-block", :exec ["prevBlock-alt2"], :program "lazygit"}]} [:!TC#Pup_arrow [:!Tn] [:term]]
+  ^{:doc/actions [{:name "decrement-number", :exec ["decrement"], :program "helix-common"}
+                  {:name "next-block", :exec ["nextBlock-alt2"], :program "lazygit"}]} [:!TC#Pdown_arrow [:!Tp] [:term]]
+
+  ^{:doc/actions [{:name "close-tab", :exec ["buffer-close"], :program "helix-common"}
+                  {:name "close-tab", :exec ["Quit"], :program "micro"}]} [:!TC#Pdelete_or_backspace [:!Tl]]
+  ^{:doc/actions [{:name "close-others", :exec ["wonly"], :program "helix-common"}
+                  {:name "close-others", :exec ["Unsplit"], :program "micro"}]} [:!TC#Preturn_or_enter [:!Tg]]
+  ^{:doc/actions [{:name "vsplit", :exec ["vsplit"], :program "helix-common"}
+                  {:name "vsplit", :exec ["VSplit"], :program "micro"}]} [:!TC#Pright_shift [:!Tv]]
+  ^{:doc/actions [{:name "hsplit", :exec ["hsplit"], :program "helix-common"}
+                  {:name "hsplit", :exec ["HSplit"], :program "micro"}]} [:!TC#Pright_option [:!Th]]
+  ^{:doc/actions [{:name "close-window", :exec ["unsplit"], :program "helix-common"}
+                  {:name "close-window", :exec ["Unsplit"], :program "micro"}]} [:!TC#Pright_command [:!Tj]]
+  ^{:doc/actions [{:name "last-file", :exec ["goto_last_accessed_file"], :program "helix-common"}
+                  {:name "open-preview" :program "broot"}]} [:!TC#Pspacebar [:!To]]                ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CMD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Command Mode - arrows"
+ :rules
+ [;
+  ^{:doc/actions [{:name "goto-line-start", :exec ["goto_line_start"], :program "helix-common"}
+                  {:name "goto-line-start", :exec ["StartOfLine"], :program "micro"}]} [:!C#Pleft_arrow :!Ta [:term]]
+  ^{:doc/actions [{:name "goto-line-end", :exec ["goto_line_end"], :program "helix-common"}
+                  {:name "goto-line-end", :exec ["EndOfLine"], :program "micro"}]} [:!C#Pright_arrow :!Te [:term]]
+  ^{:doc/actions [{:name "goto-file-start", :exec ["goto_file_start"], :program "helix-common"}
+                  {:name "goto-file-start", :exec ["CursorStart"], :program "micro"}]} [:!C#Pup_arrow [:home] [:term]]
+  ^{:doc/actions [{:name "goto-file-end", :exec ["goto_last_line"], :program "helix-common"}
+                  {:name "goto-file-end", :exec ["CursorEnd"], :program "micro"}]} [:!C#Pdown_arrow [:end] [:term]]
+
+  ^{:doc/actions [{:name "select-mode-start-line", :exec ["select_mode", "goto_line_start", "MODE"], :program "helix-common"}
+                  {:name "select-mode-start-line", :exec ["SelectToStartOfLine"], :program "micro"}]} [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]
+  ^{:doc/actions [{:name "select-mode-end-line", :exec ["select_mode", "goto_line_end", "MODE"], :program "helix-common"}
+                  {:name "select-mode-end-line", :exec ["SelectToEndOfLine"], :program "micro"}]} [:!CS#Pright_arrow [:!Oright_arrow] [:term]]
+  ^{:doc/actions [{:name "extend-to-file-start", :exec ["extend_to_file_start"], :program "helix-common"}
+                  {:name "extend-to-file-start", :exec ["SelectToStart"], :program "micro"}]} [:!CS#Pup_arrow [:!Oup_arrow] [:term]]
+  ^{:doc/actions [{:name "extend-to-file-end", :exec ["extend_to_file_end"], :program "helix-common"}
+                  {:name "extend-to-file-end", :exec ["SelectToEnd"], :program "micro"}]} [:!CS#Pdown_arrow [:!Odown_arrow] [:term]]
+
+  ^{:doc/actions [{:name "", :sequence "` -= `", :program ""}]} [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` += `", :program ""}]} [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]
+
+  ^{:doc/actions [{:name "", :sequence "` .-= `", :program ""}]} [:!CS#Phyphen [:spacebar :period :hyphen :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` .+= `", :program ""}]} [:!CS#Pequal_sign [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]
+
+  ; [:!C#Popen_bracket []]
+  ; [:!C#Pclose_bracket []]
+  ; [:!C#Psemicolon []]
+  ^{:doc/actions [{:name "", :sequence "`::<`", :program ""}]} [:!C#Pquote [:!Ssemicolon :!Ssemicolon :!Scomma]]
+  ; [:!C#Pbackslash []]
+  ^{:doc/actions [{:name "", :sequence "' <- '", :program ""}]} [:!C#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` -> `", :program ""}]} [:!C#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "`//! `", :program ""}]} [:!C#Pslash [:slash :slash :!S1 :spacebar]]
+
+  ; [:!C#Pdelete_or_backspace []]
+  ; [:!C#Preturn_or_enter []]
+  ^{:doc/actions [{:name "", :sequence "` != `", :program ""}]} [:!C#Pright_shift [:spacebar :!S1 :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` *= `", :program ""}]} [:!C#Pright_option [:spacebar :!S8 :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` /= `", :program ""}]} [:!C#Pright_command [:spacebar :slash :equal_sign :spacebar]]
+  ; [:!C#Pspacebar []]
+
+  ; [:!C#P1 []]
+  ; [:!C#P2 []]
+  ; [:!C#P3 []]
+  ; [:!C#P4 []]
+  ; [:!C#P5 []]
+  ; [:!C#P6 []]
+  ; [:!C#P7 []]
+  ; [:!C#P8 []]
+  ^{:doc/actions [{:name "", :sequence ".(", :program ""}]} [:!C#P9 [:period :!S9]]
+  ; [:!C#P0 []]
+  ; [:!C#Phyphen []]
+  ; [:!C#Pequal_sign []]
+
+  ; [:!CS#Popen_bracket []]
+  ; [:!CS#Pclose_bracket []]
+  ; [:!CS#Psemicolon []]
+  ; [:!CS#Pquote []]
+  ; [:!CS#Pbackslash []]
+  ^{:doc/actions [{:name "", :sequence "` <<- `", :program ""}]} [:!CS#Pcomma [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` ->> `", :program ""}]} [:!CS#Pperiod [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "`#!/`", :program ""}]} [:!CS#Pslash [:!S3 :!S1 :slash]]
+
+  ; [:!CS#Pdelete_or_backspace []]
+  ^{:doc/actions [{:name "", :sequence "`; `", :program ""}]} [:!CS#Preturn_or_enter [:spacebar :!Ssemicolon :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` .!= `", :program ""}]} [:!CS#Pright_shift [:spacebar :period :!S1 :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` .*= `", :program ""}]} [:!CS#Pright_option [:spacebar :period :!S8 :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "` ./= `", :program ""}]} [:!CS#Pright_command [:spacebar :period :slash :equal_sign :spacebar]]
+  ; [:!CS#Pspacebar []]
+
+  ; [:!CS#P1 []]
+  ; [:!CS#P2 []]
+  ; [:!CS#P3 []]
+  ; [:!CS#P4 []]
+  ; [:!CS#P5 []]
+  ; [:!CS#P6 []]
+  ; [:!CS#P7 []]
+  ; [:!CS#P8 []]
+  ^{:doc/actions [{:name "", :sequence "`:(`", :program ""}]} [:!CS#P9 [:!Ssemicolon :!S9]]
+  ; [:!CS#P0 []]
+  ; [:!CS#Phyphen []]
+  ; [:!CS#Pequal_sign []]
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CTL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Control Mode"
+ :rules
+ [;
+  ;; Split-view jumps & line navigation
+  ^{:doc/actions [{:name "jump-split-left", :exec ["jump_view_left"], :program "helix-common"}
+                  {:name "jump-split-left", :exec ["PreviousSplit"], :program "micro"}]} [:!T#Pleft_arrow [:!Tleft_arrow] [:term]]
+  ^{:doc/actions [{:name "jump-split-right", :exec ["jump_view_right"], :program "helix-common"}
+                  {:name "jump-split-right", :exec ["NextSplit"], :program "micro"}]} [:!T#Pright_arrow [:!Tright_arrow] [:term]]
+  ^{:doc/actions [{:name "jump-split-up", :exec ["jump_view_up"], :program "helix-common"}
+                  {:name "jump-split-up", :exec ["PreviousSplit"], :program "micro"}]} [:!T#Pup_arrow [:!Tup_arrow] [:term]]
+  ^{:doc/actions [{:name "jump-split-down", :exec ["jump_view_down"], :program "helix-common"}
+                  {:name "jump-split-down", :exec ["NextSplit"], :program "micro"}]} [:!T#Pdown_arrow [:!Tdown_arrow] [:term]]
+
+  ^{:doc/actions [{:name "terminal", :sequence "`[[`", :program "terminal"}]} [:!T#Popen_bracket [:open_bracket :open_bracket]]
+  ^{:doc/actions [{:name "terminal", :sequence "`]]`", :program "terminal"}]} [:!T#Pclose_bracket [:close_bracket :close_bracket]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!T#Psemicolon [:!T#Psemicolon]]
+  ^{:doc/actions [{:name "terminal", :sequence "`'''`", :program "terminal"}]} [:!T#Pquote [:quote :quote :quote]]
+  ^{:doc/actions [{:name "terminal", :sequence "` || `", :program "terminal"}]} [:!T#Pbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` << `", :program "terminal"}]} [:!T#Pcomma [:spacebar :!Scomma :!Scomma :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` >> `", :program "terminal"}]} [:!T#Pperiod [:spacebar :!Speriod :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "`/// `", :program "terminal"}]} [:!T#Pslash [:slash :slash :slash :spacebar]]
+
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!T#Pdelete_or_backspace [:!T#Pdelete_or_backspace]]
+  ^{:doc/actions [{:name "terminal", :sequence "` == `", :program "terminal"}]} [:!T#Preturn_or_enter [:spacebar :equal_sign :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` => `", :program "terminal"}]} [:!T#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` ** `", :program "terminal"}]} [:!T#Pright_option [:spacebar :!S8 :!S8 :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` // `", :program "terminal"}]} [:!T#Pright_command [:spacebar :slash :slash :spacebar]]
+  ^{:doc/actions [{:name "", :exec ["goto_word"], :program "helix-common"}]} [:!T#Pspacebar [:!T#Pspacebar]]
+
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!T#P1 [:!T#P1]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!T#P2 [:!T#P2]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!T#P3 [:!T#P3]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!T#P4 [:!T#P4]]
+  ^{:doc/actions [{:name "terminal", :sequence "` %% `", :program "terminal"}]} [:!T#P5 [:spacebar :!S5 :!S5 :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!T#P6 [:!T#P6]]
+  ^{:doc/actions [{:name "terminal", :sequence "` && `", :program "terminal"}]} [:!T#P7 [:spacebar :!S7 :!S7 :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!T#P8 [:!T#P8]]
+  ^{:doc/actions [{:name "terminal", :sequence "`((`", :program "terminal"}]} [:!T#P9 [:!S9 :!S9]]
+  ^{:doc/actions [{:name "terminal", :sequence "`))`", :program "terminal"}]} [:!T#P0 [:!S0 :!S0]]
+  ^{:doc/actions [{:name "terminal", :sequence "` -- `", :program "terminal"}]} [:!T#Phyphen [:spacebar :hyphen :hyphen :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` ++ `", :program "terminal"}]} [:!T#Pequal_sign [:spacebar :!Sequal_sign :!Sequal_sign :spacebar]]
+
+  ^{:doc/actions [{:name "terminal", :sequence "`{{`", :program "terminal"}]} [:!TS#Popen_bracket [:!Sopen_bracket :!Sopen_bracket]]
+  ^{:doc/actions [{:name "terminal", :sequence "`}}`", :program "terminal"}]} [:!TS#Pclose_bracket [:!Sclose_bracket :!Sclose_bracket]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#Psemicolon [:!TS#Psemicolon]]
+  ^{:doc/actions [{:name "terminal", :sequence "`\"\"\"`", :program "terminal"}]} [:!TS#Pquote [:!Squote :!Squote :!Squote]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .|| `", :program "terminal"}]} [:!TS#Pbackslash [:spacebar :period :!Sbackslash :!Sbackslash :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` <<< `", :program "terminal"}]} [:!TS#Pcomma [:spacebar :!Scomma :!Scomma :!Scomma :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` >>> `", :program "terminal"}]} [:!TS#Pperiod [:spacebar :!Speriod :!Speriod :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` /// `", :program "terminal"}]} [:!TS#Pslash [:slash :slash :slash :spacebar]]
+
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#Pdelete_or_backspace [:!TS#Pdelete_or_backspace]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .== `", :program "terminal"}]} [:!TS#Preturn_or_enter [:spacebar :period :equal_sign :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .=> `", :program "terminal"}]} [:!TS#Pright_shift [:spacebar :period :equal_sign :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .** `", :program "terminal"}]} [:!TS#Pright_option [:spacebar :period :!S8 :!S8 :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .// `", :program "terminal"}]} [:!TS#Pright_command [:spacebar :period :slash :slash :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#Pspacebar [:!TS#Pspacebar]]
+
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#P1 [:!TS#P1]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#P2 [:!TS#P2]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#P3 [:!TS#P3]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#P4 [:!TS#P4]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .%% `", :program "terminal"}]} [:!TS#P5 [:spacebar :period :!S5 :!S5 :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#P6 [:!TS#P6]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .&& `", :program "terminal"}]} [:!TS#P7 [:spacebar :period :!S7 :!S7 :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#P8 [:!TS#P8]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#P9 [:!TS#P9]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!TS#P0 [:!TS#P0]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .-- `", :program "terminal"}]} [:!TS#Phyphen [:spacebar :period :hyphen :hyphen :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .++ `", :program "terminal"}]} [:!TS#Pequal_sign [:spacebar :period :!Sequal_sign :!Sequal_sign :spacebar]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; OPT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Option Mode"
+ :rules
+ [;
+  ^{:doc/actions [{:name "", :exec ["move_prev_word_start", "collapse_selection"], :program "helix-common"}
+                  {:name "", :exec "", :program "micro"}]} [:!O#Pleft_arrow :!Ob [:term]]
+  ^{:doc/actions [{:name "", :exec ["move_next_word_end", "collapse_selection"], :program "helix-common"}
+                  {:name "", :exec "", :program "micro"}]} [:!O#Pright_arrow :!Of [:term]]
+  ^{:doc/actions [{:name "", :exec ["goto_prev_paragraph", "collapse_selection"], :program "helix-common"}
+                  {:name "", :exec "ParagraphPrevious", :program "micro"}]} [:!O#Pup_arrow [:page_up] [:term]]
+  ^{:doc/actions [{:name "", :exec ["goto_next_paragraph", "collapse_selection"], :program "helix-common"}
+                  {:name "", :exec "ParagraphNext", :program "micro"}]} [:!O#Pdown_arrow [:page_down] [:term]]
+
+  ^{:doc/actions [{:name "terminal", :sequence "` <= `", :program "terminal"}]} [:!O#Popen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` >= `", :program "terminal"}]} [:!O#Pclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#Psemicolon [:!O#Psemicolon]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#Pquote [:!O#Pquote]]
+  ^{:doc/actions [{:name "terminal", :sequence "` | `", :program "terminal"}]} [:!O#Pbackslash [:spacebar :!Sbackslash :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` < `", :program "terminal"}]} [:!O#Pcomma [:spacebar :!Scomma :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` > `", :program "terminal"}]} [:!O#Pperiod [:spacebar :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` ? `", :program "terminal"}]} [:!O#Pslash [:spacebar :!Sslash :spacebar]]
+
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#Pdelete_or_backspace [:!O#Pdelete_or_backspace]]
+  ^{:doc/actions [{:name "terminal", :sequence "` = `", :program "terminal"}]} [:!O#Preturn_or_enter [:spacebar :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` |> `", :program "terminal"}]} [:!O#Pright_shift [:spacebar :!Sbackslash :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` * `", :program "terminal"}]} [:!O#Pright_option [:spacebar :!S8 :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` / `", :program "terminal"}]} [:!O#Pright_command [:spacebar :slash :spacebar]]
+  ^{:doc/actions [{:name "prompt", :program "Alfred"}]} [:!O#Pspacebar [:!OCnon_us_pound]]
+
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P1 [:!O#P1]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P2 [:!O#P2]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P3 [:!O#P3]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P4 [:!O#P4]]
+  ^{:doc/actions [{:name "terminal", :sequence "` % `", :program "terminal"}]} [:!O#P5 [:spacebar :!S5 :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` ^ `", :program "terminal"}]} [:!O#P6 [:spacebar :!S6 :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` & `", :program "terminal"}]} [:!O#P7 [:spacebar :!S7 :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P8 [:!O#P8]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P9 [:!O#P9]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P0 [:!O#P0]]
+  ^{:doc/actions [{:name "terminal", :sequence "` - `", :program "terminal"}]} [:!O#Phyphen [:spacebar :hyphen :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` + `", :program "terminal"}]} [:!O#Pequal_sign [:spacebar :!Sequal_sign :spacebar]]
+
+  ^{:doc/actions [{:name "format", :exec [":format"], :program "helix-common"}]} [:!O#Pa :!Of1 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pb :!Of2 [:term]]
+  ^{:doc/actions [{:name "copy", :exec ["yank_to_clipboard"], :program "helix-common"}
+                  {:name "copy", :exec ["Copy"], :program "micro"}]} [:!O#Pc :!Of4 [:term]]
+  ^{:doc/actions [{:name "spawn multi", :exec ["search_selection", "extend_search_next"], :program "helix-common"}
+                  {:name "spawn multi", :exec ["SpawnMultiCursor"], :program "micro"}]} [:!O#Pd :!Of5 [:term]]
+  ^{:doc/actions [{:name "toggle comments", :exec ["toggle_comments"], :program "helix-common"}
+                  {:name "toggle comments", :exec ["lua:comment.comment"], :program "micro"}]} [:!O#Pe :!Of6 [:term]]
+  ^{:doc/actions [{:name "search", :exec ["search"], :program "helix-common"}
+                  {:name "search", :exec ["FindLiteral"], :program "micro"}]} [:!O#Pf :!Of7 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pg :!Of8 [:term]]
+  ^{:doc/actions [{:name "find prev", :exec ["search_prev"], :program "helix-common"}
+                  {:name "find prev", :exec ["FindPrevious"], :program "micro"}]} [:!O#Ph :!Of9 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pi :!Of10 [:term]]
+  ^{:doc/actions [{:name "spawn multi down", :exec ["normal_mode", "copy_selection_on_next_line", "MODE"], :program "helix-common"}
+                  {:name "spawn multi down", :exec ["SpawnMultiCursorDown"], :program "micro"}]} [:!O#Pj :!Tf1 [:term]]
+  ^{:doc/actions [{:name "spawn multi up", :exec ["normal_mode", "copy_selection_on_prev_line", "MODE"], :program "helix-common"}
+                  {:name "spawn multi up", :exec ["SpawnMultiCursorUp"], :program "micro"}]} [:!O#Pk :!Tf2 [:term]]
+  ^{:doc/actions [{:name "find next", :exec ["search_next"], :program "helix-common"}
+                  {:name "find next", :exec ["FindNext"], :program "micro"}]} [:!O#Pl :!Tf4 [:term]]
+  ^{:doc/actions [{:name "toggle macro", :exec ["record_macro"], :program "helix-common"}
+                  {:name "toggle macro", :exec ["ToggleMacro"], :program "micro"}]} [:!O#Pm :!Tf5 [:term]]
+  ^{:doc/actions [{:name "new buffer", :exec [":new"], :program "helix-common"}
+                  {:name "new buffer", :exec ["AddTab"], :program "micro"}]} [:!O#Pn :!Tf6 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Po :!Tf7 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pp :!Tf8 [:term]]
+  ^{:doc/actions [{:name "quit", :exec ["normal_mode", ":quit-all"], :program "helix-common"}
+                  {:name "quit", :exec ["QuitAll"], :program "micro"}]} [:!O#Pq :!Tf9 [:term]]
+  ^{:doc/actions [{:name "reload buffers", :exec ["normal_mode", ":reload-all", "MODE"], :program "helix-common"}]} [:!O#Pr :!Tf10 [:term]]
+  ^{:doc/actions [{:name "save & quit", :exec ["normal_mode", ":write-quit-all"], :program "helix-common"}
+                  {:name "save & quit", :exec ["Save,QuitAll"], :program "micro"}]} [:!O#Ps :!OTf1 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pt :!OTf2 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pu :!OTf4 [:term]]
+  ^{:doc/actions [{:name "paste", :exec ["paste_clipboard_after"], :program "helix-common"}
+                  {:name "paste", :exec ["Paste"], :program "micro"}]} [:!O#Pv :!OTf5 [:term]]
+  ^{:doc/actions [{:name "save", :exec ["normal_mode", ":write"], :program "helix-common"}
+                  {:name "save", :exec ["Save"], :program "micro"}]} [:!O#Pw :!OTf6 [:term]]
+  ^{:doc/actions [{:name "cut", :exec ["yank_to_clipboard", "delete_selection_noyank"], :program "helix-common"}
+                  {:name "cut", :exec ["Cut"], :program "micro"}]} [:!O#Px :!OTf7 [:term]]
+  ^{:doc/actions [{:name "skip multi", :exec ["search_selection", "search_next"], :program "helix-common"}
+                  {:name "skip multi", :exec ["SkipMultiCursor"], :program "micro"}]} [:!O#Py :!OTf8 [:term]]
+  ^{:doc/actions [{:name "remove multi", :exec ["search_selection", "search_prev"], :program "helix-common"}
+                  {:name "remove multi", :exec ["RemoveMultiCursor"], :program "micro"}]} [:!O#Pz :!OTf9 [:term]]
+  ^{:doc/actions [{:name "command mode", :exec ["command_mode"], :program "helix-common"}
+                  {:name "command mode", :exec ["ShellMode"], :program "micro"}]} [:!O#Pright_control :!OTf10 [:term]]
+
+  ^{:doc/actions [{:name "", :exec ["extend_prev_word_start"], :program "helix-common"}]} [:!OS#Pleft_arrow [:!OSleft_arrow] [:term]]
+  ^{:doc/actions [{:name "", :exec ["extend_next_word_end"], :program "helix-common"}]} [:!OS#Pright_arrow [:!OSright_arrow] [:term]]
+  ^{:doc/actions [{:name "", :exec ["select_mode", "goto_prev_paragraph", "insert_mode"], :program "helix-insert"}
+                  {:name "", :exec ["select_mode", "goto_prev_paragraph", "normal_mode"], :program "helix-normal"}
+                  {:name "", :exec ["select_mode", "goto_prev_paragraph", "select_mode"], :program "helix-select"}
+                  {:name "", :exec ["SelectWordLeft"], :program "micro"}]} [:!OS#Pup_arrow [:!OSup_arrow] [:term]]
+  ^{:doc/actions [{:name "", :exec ["select_mode", "goto_next_paragraph", "append_mode"], :program "helix-insert"}
+                  {:name "", :exec ["select_mode", "goto_next_paragraph", "normal_mode"], :program "helix-normal"}
+                  {:name "", :exec ["select_mode", "goto_next_paragraph", "select_mode"], :program "helix-select"}
+                  {:name "", :exec ["SelectWordRight"], :program "micro"}]} [:!OS#Pdown_arrow [:!OSdown_arrow] [:term]]
+
+  ^{:doc/actions [{:name "terminal", :sequence "` .<= `", :program "terminal"}]} [:!OS#Popen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .>= `", :program "terminal"}]} [:!OS#Pclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#Psemicolon [:!OS#Psemicolon]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#Pquote [:!OS#Pquote]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .| `", :program "terminal"}]} [:!OS#Pbackslash [:spacebar :period :!Sbackslash :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .< `", :program "terminal"}]} [:!OS#Pcomma [:spacebar :period :!Scomma :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .> `", :program "terminal"}]} [:!OS#Pperiod [:spacebar :period :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#Pslash [:!OS#Pslash]]
+
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#Pdelete_or_backspace [:!OS#Pdelete_or_backspace]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .= `", :program "terminal"}]} [:!OS#Preturn_or_enter [:spacebar :period :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .|> `", :program "terminal"}]} [:!OS#Pright_shift [:spacebar :period :!Sbackslash :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .* `", :program "terminal"}]} [:!OS#Pright_option [:spacebar :period :!S8 :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` ./ `", :program "terminal"}]} [:!OS#Pright_command [:spacebar :period :slash :spacebar]]
+  ^{:doc/actions [{:name "file prompt", :program "Alfred"}]} [:!OS#Pspacebar [:!OCSnon_us_pound]]
+
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P1 [:!OS#P1]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P2 [:!OS#P2]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P3 [:!OS#P3]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P4 [:!OS#P4]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .% `", :program "terminal"}]} [:!OS#P5 [:spacebar :period :!S5 :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .^ `", :program "terminal"}]} [:!OS#P6 [:spacebar :period :!S6 :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .& `", :program "terminal"}]} [:!OS#P7 [:spacebar :period :!S7 :spacebar]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P8 [:!OS#P8]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P9 [:!OS#P9]]
+  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P0 [:!OS#P0]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .- `", :program "terminal"}]} [:!OS#Phyphen [:spacebar :period :hyphen :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .+ `", :program "terminal"}]} [:!OS#Pequal_sign [:spacebar :period :!Sequal_sign :spacebar]]
+
+  ^{:doc/actions [{:name "select all", :exec ["select_all"], :program "helix-common"}
+                  {:name "select all", :exec ["SelectAll"], :program "micro"}]} [:!OS#Pa :!OSf1 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pb :!OSf2 [:term]]
+  ^{:doc/actions [{:name "copy line", :exec ["extend_to_line_bounds", "yank_to_clipboard"], :program "helix-common"}
+                  {:name "copy line", :exec ["CopyLine"], :program "micro"}]} [:!OS#Pc :!OSf4 [:term]]
+  ^{:doc/actions [{:name "duplicate line", :exec ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"], :program "helix-common"}
+                  {:name "duplicate line", :exec ["DuplicateLine"], :program "micro"}]} [:!OS#Pd :!OSf5 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pe :!OSf6 [:term]]
+  ^{:doc/actions [{:name "global search", :exec ["global_search"], :program "helix-common"}
+                  {:name "global search", :exec ["Find"], :program "micro"}]} [:!OS#Pf :!OSf7 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pg :!OSf8 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Ph :!OSf9 [:term]]
+  ^{:doc/actions [{:name "indent", :exec ["indent"], :program "helix-common"}
+                  {:name "indent", :exec ["IndentSelection"], :program "micro"}]} [:!OS#Pi :!OSf10 [:term]]
+  ^{:doc/actions [{:name "move down", :exec ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"], :program "helix-common"}
+                  {:name "move down", :exec ["MoveLinesDown"], :program "micro"}]} [:!OS#Pj :!TSf1 [:term]]
+  ^{:doc/actions [{:name "move up", :exec ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"], :program "helix-common"}
+                  {:name "move up", :exec ["MoveLinesUp"], :program "micro"}]} [:!OS#Pk :!TSf2 [:term]]
+  ^{:doc/actions [{:name "select line", :exec ["goto_line_end", "select_mode", "goto_line_start", "MODE"], :program "helix-common"}
+                  {:name "select line", :exec ["SelectLine"], :program "micro"}]} [:!OS#Pl :!TSf4 [:term]]
+  ^{:doc/actions [{:name "play macro", :exec ["replay_macro"], :program "helix-common"}
+                  {:name "play macro", :exec ["PlayMacro"], :program "micro"}]} [:!OS#Pm :!TSf5 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pn :!TSf6 [:term]]
+  ^{:doc/actions [{:name "unindent", :exec ["unindent"], :program "helix-common"}
+                  {:name "unindent", :exec ["OutdentSelection"], :program "micro"}]} [:!OS#Po :!TSf7 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pp :!TSf8 [:term]]
+  ^{:doc/actions [{:name "launch lazygit", :exec [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"], :program "helix-common"}]} [:!OS#Pq :!TSf9 [:term]]
+  ^{:doc/actions [{:name "launch serpl", :exec [":sh zellij run --name serpl --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- serpl"], :program "helix-common"}]} [:!OS#Pr :!TSf10 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Ps :!OTSf1 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pt :!OTSf2 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pu :!OTSf4 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pv :!OTSf5 [:term]]
+  ^{:doc/actions [{:name "launch watch", :exec [":sh zellij run --name canvas --close-on-exit --floating --pinned true --height 20 --width 40 --x 100 --y 0 -- just watch"], :program "helix-common"}]} [:!OS#Pw :!OTSf6 [:term]]
+  ^{:doc/actions [{:name "cut line", :exec ["extend_to_line_bounds", "delete_selection_noyank"], :program "helix-common"}
+                  {:name "cut line", :exec ["CutLine"], :program "micro"}]} [:!OS#Px :!OTSf7 [:term]]
+  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Py :!OTSf8 [:term]]
+  ^{:doc/actions [{:name "yank diagnostic", :exec [":yank-diagnostic"], :program "helix-common"}]} [:!OS#Pz :!OTSf9 [:term]]
+  ^{:doc/actions [{:name "launch shell", :exec [":sh zellij run --name canvas --close-on-exit --floating --height 100 --width 140 --x 0 --y 0 -- zsh"], :program "helix-common"}]} [:!OS#Pright_control :!OTSf10 [:term]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SHIFT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Shift Mode"
+ :rules
+ [;
+  ; ;; Selection & word-wise navigation
+  ; ^{:doc/actions [{:name "extend-char-left", :description "Extend selection left", :exec "extend_char_left", :program "helix"}]}
+  ; ^{:doc/actions [{:name "extend-char-right", :description "Extend selection right", :exec "extend_char_right", :program "helix"}]}
+  ; ^{:doc/actions [{:name "extend-line-up", :description "Extend selection up", :exec "extend_line_up", :program "helix"}]}
+  ; ^{:doc/actions [{:name "extend-line-down", :description "Extend selection down", :exec "extend_line_down", :program "helix"}]}
+
+  ; ^{:doc/actions [{:name "word-prev-start", :description "Move to previous word start", :exec "move_prev_word_start", :program "helix"}]}
+  ; ^{:doc/actions [{:name "word-next-end", :description "Move to next word end", :exec "move_next_word_end", :program "helix"}]}
+  ; ^{:doc/actions [{:name "prev-paragraph", :description "Move to previous paragraph", :exec "goto_prev_paragraph", :program "helix"}]}
+  ; ^{:doc/actions [{:name "next-paragraph", :description "Move to next paragraph", :exec "goto_next_paragraph", :program "helix"}]}
+  ; ^{:doc/actions [{:name "select-prev-word", :description "Extend to previous word start", :exec "extend_prev_word_start", :program "helix"}]}
+  ; ^{:doc/actions [{:name "select-next-word", :description "Extend to next word end", :exec "extend_next_word_end", :program "helix"}]}
+
+  ; [:!S#Pleft_arrow []]
+  ; [:!S#Pright_arrow []]
+  ; [:!S#Pup_arrow []]
+  ; [:!S#Pdown_arrow []]
+
+  ; [:!S#Pdelete_or_backspace []]
+  ; [:!S#Preturn_or_enter []]
+  [:!S#Pright_shift [:delete_forward]]                                                             ;
+  [:!S#Pright_option [:!Ed]]                                                                       ;
+  ; TODO: micro => SelectToEndOfLine,Delete
+  [:!S#Pright_command [:!Wk]]                                                                      ;
+  ; [:!S#Pspacebar []]
+  ]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; PATCH
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; TODO: update
+; additional
+{:des "Additional keys - MacPro"
+ :rules
+ [:pro
+  [:#Pdelete_or_backspace [:grave_accent_and_tilde]]                                               ; '`'
+  [:!C#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
+  [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
+  ]}
+
+; additional
+{:des "Additional keys - MacAir"
+ :rules
+ [:air
+  [:#Pdelete_or_backspace [:grave_accent_and_tilde]]                                               ; '`'
+  [:!T#Pdelete_or_backspace [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]  ; '```'
+  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
+  [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
+  [:!C#Pdelete_or_backspace [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]          ; ' =~ '
+  [:f1 :display_brightness_decrement]
+  [:f2 :display_brightness_increment]
+  [:f3 :illumination_decrement]
+  [:f4 :illumination_increment]
+  [:f10 :mute]
+  [:f11 :volume_decrement]
+  [:f12 :volume_increment]
+ ]}
+
+; additional
+{:des "Additional keys - Master"
+ :rules
+ [:master
+  [:#Pdelete_or_backspace [:grave_accent_and_tilde]]                                               ; '`'
+  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
+  [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; keypad
+{:des "Keypad modifications"
+ :rules
+ [;
+  [:#Pkeypad_hyphen :mute]                                                                         ;
+  [:#Pkeypad_plus :volume_increment]                                                               ;
+  [:#Pkeypad_enter :volume_decrement]                                                              ;
+
+  [:!S#Pkeypad_hyphen :keypad_hyphen]                                                              ;
+  [:!S#Pkeypad_plus :keypad_plus]                                                                  ;
+  [:!S#Pkeypad_enter :equal_sign]                                                                  ;
+  [:!Sf18 :keypad_slash]                                                                           ;
+  [:!Sf19 :keypad_asterisk]                                                                        ;
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CMD
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Command Mode"
+ :rules
+ [;
+  ;; code navigation
+  ^{:doc/actions [{:name "save-selection", :exec ["save_selection"], :program "helix-common"}]} [:!Q#Pspacebar [:!TSf18] [:term]];
+  ^{:doc/actions [{:name "jump-backward", :exec ["jump_backward"], :program "helix-common"}]} [:!Q#Pleft_control [:!TShome] [:term]];
+  ^{:doc/actions [{:name "jumplist-picker", :exec ["jumplist_picker"], :program "helix-common"}]} [:!Q#Pleft_option [:!TSf12] [:term]];
+  ^{:doc/actions [{:name "jump-forward", :exec ["jump_forward"], :program "helix-common"}]} [:!Q#Pleft_command [:!TSend] [:term]]
+
+  ;; tidyverse
+  ^{:doc/actions [{:name "tidyverse", :sequence "' %<+% '", :program "R"}]} [:!Q#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]];
+  ^{:doc/actions [{:name "tidyverse", :sequence "' %+>% '", :program "R"}]} [:!Q#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]];
+  ^{:doc/actions [{:name "tidyverse", :sequence "' %$% '", :program "R"}]} [:!Q#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]];
+  ^{:doc/actions [{:name "tidyverse", :sequence "' %T>% '", :program "R"}]} [:!Q#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]];
+  ^{:doc/actions [{:name "tidyverse", :sequence "' %<>% '", :program "R"}]} [:!Q#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]];
+  ^{:doc/actions [{:name "tidyverse", :sequence "' %<% '", :program "R"}]} [:!Q#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]];
+  ^{:doc/actions [{:name "tidyverse", :sequence "' %>% '", :program "R"}]} [:!Q#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]];
+  ^{:doc/actions [{:name "tidyverse", :sequence "' %!>% '", :program "R"}]} [:!Q#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]];
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CTL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Control Mode"
+ :rules
+ [;
+  ;; pickers
+  ^{:doc/actions [{:name "changed-file-picker", :exec ["changed_file_picker"], :program "helix-common"}
+                  {:name "changed-file-picker", :exec ["OpenFile"], :program "micro"}]} [:!W#Pdelete_or_backspace [:!Tr] [:term]]
+  ^{:doc/actions [{:name "file-picker", :exec ["file_picker"], :program "helix-common"}
+                  {:name "file-picker", :exec ["AddTab,OpenFile"], :program "micro"}]} [:!W#Preturn_or_enter [:!Ts] [:term]]
+  ^{:doc/actions [{:name "buffer-picker", :exec ["buffer_picker"], :program "helix-common"}
+                  {:name "buffer-picker", :exec ["CommandMode"], :program "micro"}]} [:!W#Pright_shift [:!Tt] [:term]]]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SHIFT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Shift Mode"
+ :rules
+ [;
+  [:#Pright_shift :right_shift [:term] {:alone [:!Oa]}]                                            ; history term
+  ; [:!R#Pleft_arrow []]
+  ; [:!R#Pright_arrow []]
+  ; [:!R#Pup_arrow []]
+  ; [:!R#Pdown_arrow []]
+
+  ; TODO: micro => SelectToStartOfLine,Delete
+  [:!R#Pleft_command [:!Wu]]                                                                       ;
+  ; [:!Rleft_option []]
+  ; TODO: micro => DeleteWordLeft
+  [:!R#Pleft_control [:!Ww]]                                                                       ;
+  [:!R#Pleft_shift [:delete_or_backspace]]                                                         ;
+  ; [:!R#Pcaps_lock []]
+  ; [:!R#Ptab []]
+  ; [:!R#Pkeypad_num_lock []]
+  ; [:!R#Pescape []]
+  ]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; OPT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Option Mode"
+ :rules
+ [;
+  [:!E#Pcaps_lock [:caps_lock]]
+  
+  [:!E#P9 [:!Scomma :!S9]]                                                                         ; '<('
+  [:!E#P0 [:!S0 :spacebar]]                                                                        ; ') '
+ 
+  [:!E#Popen_bracket [:!S3 :open_bracket]]                                                         ; '#['
+  [:!E#Pclose_bracket [:close_bracket :spacebar]]                                                  ; '] '
+  [:!E#Psemicolon [:semicolon :spacebar]]                                                          ; '; '
+  [:!E#Pquote [:quote :slash :quote]]                                                              ; ''/''
+  ; [:!E#Pbackslash []]
+  [:!E#Pcomma [:comma :spacebar]]                                                                  ; ', '
+  [:!E#Pperiod [:period :spacebar]]                                                                ; '. '
+  [:!E#Pslash [:spacebar :hyphen]]                                                                 ; ' -'
+
+  [:!ER#P9 [:!S4 :!S9]]                                                                            ; '$('
+
+  [:!ER#Popen_bracket [:!S4 :!Sopen_bracket]]                                                      ; '${'
+  [:!ER#Pclose_bracket [:!Sclose_bracket :spacebar]]                                               ; '} '
+  [:!ER#Psemicolon [:!Ssemicolon :spacebar]]                                                       ; ': '
+  [:!ER#Pquote [:!Squote :slash :!Squote]]                                                         ; '"/"'
+  ; [:!ER#Pbackslash []]                                                                           ;
+  [:!ER#Pcomma [:!Scomma :!Ssemicolon]]                                                            ; '<:'
+  [:!ER#Pperiod [:!Speriod :!Ssemicolon]]                                                          ; '>:'
+  [:!ER#Pslash [:spacebar :hyphen :hyphen]]                                                        ; ' --'
+
+  ; [:!E#Pa []]                                                                                    ;
+  [:!E#Pb [:b :u :g :!Ssemicolon :spacebar]]                                                       ; 'bug: '
+  ; [:!E#Pc []]                                                                                    ;
+  [:!E#Pd [:d :o :c :!Ssemicolon :spacebar]]                                                       ; 'doc: '
+  ; [:!E#Pe []]                                                                                    ;
+  [:!E#Pf [:f :e :a :t :!Ssemicolon :spacebar]]                                                    ; 'feat: '
+  ; [:!E#Pg []]                                                                                    ;
+  ; [:!E#Ph []]                                                                                    ;
+  ; [:!E#Pi []]                                                                                    ;
+  ; [:!E#Pj []]                                                                                    ;
+  ; [:!E#Pk []]                                                                                    ;
+  ; [:!E#Pl []]                                                                                    ;
+  ; [:!E#Pm []]                                                                                    ;
+  ; [:!E#Pn []]                                                                                    ;
+  ; [:!E#Po []]                                                                                    ;
+  ; [:!E#Pp []]                                                                                    ;
+  ; [:!E#Pq []]                                                                                    ;
+  [:!E#Pr [:r :e :f :a :c :t :o :r :!Ssemicolon :spacebar]]                                        ; 'refactor: '
+  ; [:!E#Ps []]                                                                                    ;
+  [:!E#Pt [:t :e :s :t :!Ssemicolon :spacebar]]                                                    ; 'test: '
+  ; [:!E#Pu []]                                                                                    ;
+  ; [:!E#Pv []]                                                                                    ;
+  [:!E#Pw [:w :i :p :!Ssemicolon :spacebar]]                                                       ; 'wip: '
+  [:!E#Px [:f :i :x :!Ssemicolon :spacebar]]                                                       ; 'fix: '
+  ; [:!E#Py []]                                                                                    ;
+  ; [:!E#Pz []]                                                                                    ;
+  [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]                                           ; ' ∈ '
+
+  ; [:!ER#Pa []]                                                                                   ;
+  [:!ER#Pb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                                                ; 'BUG: '
+  ; [:!ER#Pc []]                                                                                   ;
+  [:!ER#Pd [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]                                                ; 'DOC: '
+  ; [:!ER#Pe []]                                                                                   ;
+  [:!ER#Pf [:!Sf :!Se :!Sa :!St :!Ssemicolon :spacebar]]                                           ; 'FEAT: '
+  ; [:!ER#Pg []]                                                                                   ;
+  ; [:!ER#Ph []]                                                                                   ;
+  ; [:!ER#Pi []]                                                                                   ;
+  ; [:!ER#Pj []]                                                                                   ;
+  ; [:!ER#Pk []]                                                                                   ;
+  ; [:!ER#Pl []]                                                                                   ;
+  ; [:!ER#Pm []]                                                                                   ;
+  ; [:!ER#Pn []]                                                                                   ;
+  ; [:!ER#Po []]                                                                                   ;
+  ; [:!ER#Pp []]                                                                                   ;
+  ; [:!ER#Pq []]                                                                                   ;
+  [:!ER#Pr [:!Sr :!Se :!Sf :!Sa :!Sc :!St :!So :!Sr :!Ssemicolon :spacebar]]                       ; 'REFACTOR: '
+  ; [:!ER#Ps []]                                                                                   ;
+  [:!ER#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                                           ; 'TODO: '
+  ; [:!ER#Pu []]                                                                                   ;
+  ; [:!ER#Pv []]                                                                                   ;
+  [:!ER#Pw [:!Sw :!Si :!Sp :!Ssemicolon :spacebar]]                                                ; 'WIP: '
+  [:!ER#Px [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]                                                ; 'FIX: '
+  ; [:!ER#Py []]                                                                                   ;
+  ; [:!ER#Pz []]                                                                                   ;
+  [:!ER#Pright_control [:!Ssemicolon :period :i :n :!Ssemicolon]]                                  ; ' .∈ '
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; TAB => ROTC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; TODO: annotate rectangle hotkeys
+; tab
+{:des "Tab Mode"
+ :rules
+ [;
+  ; [:!ROTC#Pleft_arrow []]                                                    ; space             ; system
+  ; [:!ROTC#Pright_arrow []]                                                   ; space             ; system
+  ; [:!ROTC#Pup_arrow []]                                                      ; menu              ; system
+  ; [:!ROTC#Pdown_arrow []]                                                    ; dock              ; system
+
+  ; [:!ROTC#Popen_bracket []]                                                                      ;
+  ; [:!ROTC#Pclose_bracket []]                                                                     ;
+  ; [:!ROTC#Psemicolon []]                                                                         ;
+  ; [:!ROTC#Pquote []]                                                                             ;
+  ; [:!ROTC#Pbackslash []]                                                                         ;
+  ; [:!ROTC#Pcomma []]                                                              COLLISION      ;
+  ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
+  ; [:!ROTC#Pslash []]                                                                             ;
+
+  [:!ROTC#Pdelete_or_backspace [:!ROTC#Pkeypad_num_lock]]                      ; control center    ; system
+  ; [:!ROTC#Preturn_or_enter []]                                               ; speak             ; system
+  [:!ROTC#Pright_shift [:launch "Alacritty"]]
+  [:!ROTC#Pright_option [:launch "Arc"]]
+  [:!ROTC#Pright_command [:launch "Canary Mail"]]
+  [:!ROTC#Pspacebar [:!W#Pnon_us_pound]]                                       ; dictation         ; system
+
+; [:!ROTC#Pkeypad_1 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_2 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_3 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_4 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_5 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_6 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_7 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_8 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_9 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_0 []]                                                                          ;
+  ; [:!ROTC#Pkeypad_slash []]                                                                      ;
+  ; [:!ROTC#Pkeypad_asterisk []]                                                                   ;
+
+  ; [:!ROTC#P1 []]                                                                                 ;
+  ; [:!ROTC#P2 []]                                                                                 ;
+  ; [:!ROTC#P3 []]                                                                                 ;
+  ; [:!ROTC#P4 []]                                                                                 ;
+  ; [:!ROTC#P5 []]                                                                                 ;
+  ; [:!ROTC#P6 []]                                                                                 ;
+  ; [:!ROTC#P7 []]                                                                                 ;
+  ; [:!ROTC#P8 []]                                                                                 ;
+  ; [:!ROTC#P9 []]                                                                                 ;
+  ; [:!ROTC#P0 []]                                                                                 ;
+  ; [:!ROTC#Phyphen []]                                                                            ;
+  ; [:!ROTC#Pequal_sign []]                                                                        ;
+  ]}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; ZERO => EQR
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+{:des "Zero Mode"
+ :rules
+ []}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; KEYS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; TODO: update
+; key modifiers
+{:des "Modifier key remappings"
+ :rules
+ [; quit
+  [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]                                                  ;
+  [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]      ;
+
+  ; esc
+  ; TODO: CHANGE `term` pop-up new
+  [:#Pescape :!EWright_shift nil {:alone [:!EW#Pnon_us_pound]}]                                    ; menu search.
+
+  ; zero
+  [:#Pkeypad_num_lock :!EQright_shift nil {:alone [:keypad_num_lock]}]                             ; mouse control
+
+  ; launcher
+  [:#Ptab :!OTCright_shift nil {:alone :tab}]                                                      ; spectacle control, speak & app launcher
+
+  ; joker
+  [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ; esc, language server protocol
+
+  ; grave
+  ; [:#Pright_control :right_control nil {:alone [:!W#Pnon_us_pound]}]                               ; arc bind
+
+  ; lefts
+  [:#Pleft_control :left_control nil {:alone [:!EWQ#Onon_us_pound]}]                               ; alfred window switcher
+  [:#Pleft_option :left_option nil {:alone [:!Otab]}]                                              ; global in-app window cycler.
+  [:#Pleft_command :left_command nil {:alone [:!Ctab]}]                                            ; switch most recent app
+
+  ; rights
+  [:#Pright_shift :right_shift nil {:alone [:!R#Pnon_us_pound]}]                                   ; `browser` input. `term` history edit
+  [:#Pright_option :right_option nil {:alone [:!E#Pnon_us_pound]}]                                 ; alfred paste
+  [:#Pright_command :right_command nil {:alone [:!Q#Pnon_us_pound]}]                               ; alfred clipboard select
+  ]}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ]}]}
+
