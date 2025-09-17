@@ -25,10 +25,12 @@
 
   ; [:!S#Pdelete_or_backspace []]
   ; [:!S#Preturn_or_enter []]
-  [:!S#Pright_shift [:delete_forward]]                                                             ;
-  [:!S#Pright_option [:!Ed]]                                                                       ;
-  ; TODO: micro => SelectToEndOfLine,Delete
-  [:!S#Pright_command [:!Wk]]                                                                      ;
+
+    ^{:doc/actions [{}]} [:!S#Pright_shift [:delete_forward]]
+  ^{:doc/actions [{}
+                  {:name "delete next word", :exec ["DeleteWordRight"], :program "micro"}]} [:!S#Pright_option [:!Ed]]
+  ^{:doc/actions [{}
+                  {:name "delete line start", :exec ["SelectToEndOfLine,Delete"], :program "micro"}]} [:!S#Pright_command [:!Wk]]
   ; [:!S#Pspacebar []]
   ]}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
