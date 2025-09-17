@@ -5,25 +5,23 @@
 {:des "Option Mode"
  :rules
  [;
-  ^{:doc/actions [{:name "", :exec ["move_prev_word_start", "collapse_selection"], :program "helix-common"}
-                  {:name "", :exec "", :program "micro"}]} [:!O#Pleft_arrow :!Ob [:term]]
-  ^{:doc/actions [{:name "", :exec ["move_next_word_end", "collapse_selection"], :program "helix-common"}
-                  {:name "", :exec "", :program "micro"}]} [:!O#Pright_arrow :!Of [:term]]
-  ^{:doc/actions [{:name "", :exec ["goto_prev_paragraph", "collapse_selection"], :program "helix-common"}
-                  {:name "", :exec "ParagraphPrevious", :program "micro"}]} [:!O#Pup_arrow [:page_up] [:term]]
-  ^{:doc/actions [{:name "", :exec ["goto_next_paragraph", "collapse_selection"], :program "helix-common"}
-                  {:name "", :exec "ParagraphNext", :program "micro"}]} [:!O#Pdown_arrow [:page_down] [:term]]
+  ^{:doc/actions [{:name "goto prev word", :exec ["move_prev_word_start", "collapse_selection"], :program "helix-common"}]} [:!O#Pleft_arrow :!Ob [:term]]
+  ^{:doc/actions [{:name "goto next word", :exec ["move_next_word_end", "collapse_selection"], :program "helix-common"}]} [:!O#Pright_arrow :!Of [:term]]
+  ^{:doc/actions [{:name "goto prev paragraph", :exec ["goto_prev_paragraph", "collapse_selection"], :program "helix-common"}
+                  {:name "goto prev paragraph", :exec ["ParagraphPrevious"], :program "micro"}]} [:!O#Pup_arrow [:page_up] [:term]]
+  ^{:doc/actions [{:name "goto next paragraph", :exec ["goto_next_paragraph", "collapse_selection"], :program "helix-common"}
+                  {:name "goto next paragraph", :exec ["ParagraphNext"], :program "micro"}]} [:!O#Pdown_arrow [:page_down] [:term]]
 
   ^{:doc/actions [{:name "terminal", :sequence "` <= `", :program "terminal"}]} [:!O#Popen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` >= `", :program "terminal"}]} [:!O#Pclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#Psemicolon [:!O#Psemicolon]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#Pquote [:!O#Pquote]]
+  ^{:doc/actions [{}]} [:!O#Psemicolon [:!O#Psemicolon]]
+  ^{:doc/actions [{}]} [:!O#Pquote [:!O#Pquote]]
   ^{:doc/actions [{:name "terminal", :sequence "` | `", :program "terminal"}]} [:!O#Pbackslash [:spacebar :!Sbackslash :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` < `", :program "terminal"}]} [:!O#Pcomma [:spacebar :!Scomma :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` > `", :program "terminal"}]} [:!O#Pperiod [:spacebar :!Speriod :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` ? `", :program "terminal"}]} [:!O#Pslash [:spacebar :!Sslash :spacebar]]
 
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#Pdelete_or_backspace [:!O#Pdelete_or_backspace]]
+  ^{:doc/actions [{}]} [:!O#Pdelete_or_backspace [:!O#Pdelete_or_backspace]]
   ^{:doc/actions [{:name "terminal", :sequence "` = `", :program "terminal"}]} [:!O#Preturn_or_enter [:spacebar :equal_sign :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` |> `", :program "terminal"}]} [:!O#Pright_shift [:spacebar :!Sbackslash :!Speriod :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` * `", :program "terminal"}]} [:!O#Pright_option [:spacebar :!S8 :spacebar]]
@@ -44,7 +42,7 @@
   ^{:doc/actions [{:name "terminal", :sequence "` + `", :program "terminal"}]} [:!O#Pequal_sign [:spacebar :!Sequal_sign :spacebar]]
 
   ^{:doc/actions [{:name "format", :exec [":format"], :program "helix-common"}]} [:!O#Pa :!Of1 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pb :!Of2 [:term]]
+  ^{:doc/actions [{}]} [:!O#Pb :!Of2 [:term]]
   ^{:doc/actions [{:name "copy", :exec ["yank_to_clipboard"], :program "helix-common"}
                   {:name "copy", :exec ["Copy"], :program "micro"}]} [:!O#Pc :!Of4 [:term]]
   ^{:doc/actions [{:name "spawn multi", :exec ["search_selection", "extend_search_next"], :program "helix-common"}
@@ -53,10 +51,10 @@
                   {:name "toggle comments", :exec ["lua:comment.comment"], :program "micro"}]} [:!O#Pe :!Of6 [:term]]
   ^{:doc/actions [{:name "search", :exec ["search"], :program "helix-common"}
                   {:name "search", :exec ["FindLiteral"], :program "micro"}]} [:!O#Pf :!Of7 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pg :!Of8 [:term]]
+  ^{:doc/actions [{}]} [:!O#Pg :!Of8 [:term]]
   ^{:doc/actions [{:name "find prev", :exec ["search_prev"], :program "helix-common"}
                   {:name "find prev", :exec ["FindPrevious"], :program "micro"}]} [:!O#Ph :!Of9 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pi :!Of10 [:term]]
+  ^{:doc/actions [{}]} [:!O#Pi :!Of10 [:term]]
   ^{:doc/actions [{:name "spawn multi down", :exec ["normal_mode", "copy_selection_on_next_line", "MODE"], :program "helix-common"}
                   {:name "spawn multi down", :exec ["SpawnMultiCursorDown"], :program "micro"}]} [:!O#Pj :!Tf1 [:term]]
   ^{:doc/actions [{:name "spawn multi up", :exec ["normal_mode", "copy_selection_on_prev_line", "MODE"], :program "helix-common"}
@@ -67,15 +65,15 @@
                   {:name "toggle macro", :exec ["ToggleMacro"], :program "micro"}]} [:!O#Pm :!Tf5 [:term]]
   ^{:doc/actions [{:name "new buffer", :exec [":new"], :program "helix-common"}
                   {:name "new buffer", :exec ["AddTab"], :program "micro"}]} [:!O#Pn :!Tf6 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Po :!Tf7 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pp :!Tf8 [:term]]
+  ^{:doc/actions [{}]} [:!O#Po :!Tf7 [:term]]
+  ^{:doc/actions [{}]} [:!O#Pp :!Tf8 [:term]]
   ^{:doc/actions [{:name "quit", :exec ["normal_mode", ":quit-all"], :program "helix-common"}
                   {:name "quit", :exec ["QuitAll"], :program "micro"}]} [:!O#Pq :!Tf9 [:term]]
   ^{:doc/actions [{:name "reload buffers", :exec ["normal_mode", ":reload-all", "MODE"], :program "helix-common"}]} [:!O#Pr :!Tf10 [:term]]
   ^{:doc/actions [{:name "save & quit", :exec ["normal_mode", ":write-quit-all"], :program "helix-common"}
                   {:name "save & quit", :exec ["Save,QuitAll"], :program "micro"}]} [:!O#Ps :!OTf1 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pt :!OTf2 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!O#Pu :!OTf4 [:term]]
+  ^{:doc/actions [{}]} [:!O#Pt :!OTf2 [:term]]
+  ^{:doc/actions [{}]} [:!O#Pu :!OTf4 [:term]]
   ^{:doc/actions [{:name "paste", :exec ["paste_clipboard_after"], :program "helix-common"}
                   {:name "paste", :exec ["Paste"], :program "micro"}]} [:!O#Pv :!OTf5 [:term]]
   ^{:doc/actions [{:name "save", :exec ["normal_mode", ":write"], :program "helix-common"}
@@ -89,16 +87,18 @@
   ^{:doc/actions [{:name "command mode", :exec ["command_mode"], :program "helix-common"}
                   {:name "command mode", :exec ["ShellMode"], :program "micro"}]} [:!O#Pright_control :!OTf10 [:term]]
 
-  ^{:doc/actions [{:name "", :exec ["extend_prev_word_start"], :program "helix-common"}]} [:!OS#Pleft_arrow [:!OSleft_arrow] [:term]]
-  ^{:doc/actions [{:name "", :exec ["extend_next_word_end"], :program "helix-common"}]} [:!OS#Pright_arrow [:!OSright_arrow] [:term]]
-  ^{:doc/actions [{:name "", :exec ["select_mode", "goto_prev_paragraph", "insert_mode"], :program "helix-insert"}
-                  {:name "", :exec ["select_mode", "goto_prev_paragraph", "normal_mode"], :program "helix-normal"}
-                  {:name "", :exec ["select_mode", "goto_prev_paragraph", "select_mode"], :program "helix-select"}
-                  {:name "", :exec ["SelectWordLeft"], :program "micro"}]} [:!OS#Pup_arrow [:!OSup_arrow] [:term]]
-  ^{:doc/actions [{:name "", :exec ["select_mode", "goto_next_paragraph", "append_mode"], :program "helix-insert"}
-                  {:name "", :exec ["select_mode", "goto_next_paragraph", "normal_mode"], :program "helix-normal"}
-                  {:name "", :exec ["select_mode", "goto_next_paragraph", "select_mode"], :program "helix-select"}
-                  {:name "", :exec ["SelectWordRight"], :program "micro"}]} [:!OS#Pdown_arrow [:!OSdown_arrow] [:term]]
+  ^{:doc/actions [{:name "select prev word", :exec ["extend_prev_word_start"], :program "helix-common"}
+                  {:name "select prev word", :exec ["SelectWordLeft"], :program "micro"}]} [:!OS#Pleft_arrow [:!OSleft_arrow] [:term]]
+  ^{:doc/actions [{:name "select next word", :exec ["extend_next_word_end"], :program "helix-common"}
+                  {:name "select next word", :exec ["SelectWordRight"], :program "micro"}]} [:!OS#Pright_arrow [:!OSright_arrow] [:term]]
+  ^{:doc/actions [{:name "select prev paragraph", :exec ["select_mode", "goto_prev_paragraph", "insert_mode"], :program "helix-insert"}
+                  {:name "select prev paragraph", :exec ["select_mode", "goto_prev_paragraph", "normal_mode"], :program "helix-normal"}
+                  {:name "select prev paragraph", :exec ["select_mode", "goto_prev_paragraph", "select_mode"], :program "helix-select"}
+                  {:name "select prev paragraph", :exec ["StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight"], :program "micro"}]} [:!OS#Pup_arrow [:!OSup_arrow] [:term]]
+  ^{:doc/actions [{:name "select next paragraph", :exec ["select_mode", "goto_next_paragraph", "append_mode"], :program "helix-insert"}
+                  {:name "select next paragraph", :exec ["select_mode", "goto_next_paragraph", "normal_mode"], :program "helix-normal"}
+                  {:name "select next paragraph", :exec ["select_mode", "goto_next_paragraph", "select_mode"], :program "helix-select"}
+                  {:name "select next paragraph", :exec ["StartOfLine,SelectLine,ParagraphNext,SelectWordRight"], :program "micro"}]} [:!OS#Pdown_arrow [:!OSdown_arrow] [:term]]
 
   ^{:doc/actions [{:name "terminal", :sequence "` .<= `", :program "terminal"}]} [:!OS#Popen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` .>= `", :program "terminal"}]} [:!OS#Pclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]
@@ -164,7 +164,7 @@
   ^{:doc/actions [{:name "launch watch", :exec [":sh zellij run --name canvas --close-on-exit --floating --pinned true --height 20 --width 40 --x 100 --y 0 -- just watch"], :program "helix-common"}]} [:!OS#Pw :!OTSf6 [:term]]
   ^{:doc/actions [{:name "cut line", :exec ["extend_to_line_bounds", "delete_selection_noyank"], :program "helix-common"}
                   {:name "cut line", :exec ["CutLine"], :program "micro"}]} [:!OS#Px :!OTSf7 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Py :!OTSf8 [:term]]
+  ^{:doc/actions [{}]} [:!OS#Py :!OTSf8 [:term]]
   ^{:doc/actions [{:name "yank diagnostic", :exec [":yank-diagnostic"], :program "helix-common"}]} [:!OS#Pz :!OTSf9 [:term]]
   ^{:doc/actions [{:name "launch shell", :exec [":sh zellij run --name canvas --close-on-exit --floating --height 100 --width 140 --x 0 --y 0 -- zsh"], :program "helix-common"}]} [:!OS#Pright_control :!OTSf10 [:term]]]}
 
