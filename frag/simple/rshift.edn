@@ -11,11 +11,11 @@
   ; [:!R#Pup_arrow []]
   ; [:!R#Pdown_arrow []]
 
-  ; TODO: micro => SelectToStartOfLine,Delete
-  [:!R#Pleft_command [:!Wu]]                                                                       ;
+  ^{:doc/actions [{}
+                  {:name "delete line start", :exec ["SelectToStartOfLine,Delete"], :program "micro"}]}   [:!R#Pleft_command [:!Wu]]                                                                       ;
   ; [:!Rleft_option []]
-  ; TODO: micro => DeleteWordLeft
-  [:!R#Pleft_control [:!Ww]]                                                                       ;
+  ^{:doc/actions  [{}
+                   {:name "delete prev word", :exec ["DeleteWordLeft"], :program "micro"}]} [:!R#Pleft_control [:!Ww]]                                                                       ;
   [:!R#Pleft_shift [:delete_or_backspace]]                                                         ;
   ; [:!R#Pcaps_lock []]
   ; [:!R#Ptab []]
