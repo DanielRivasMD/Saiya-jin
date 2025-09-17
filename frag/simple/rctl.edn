@@ -6,11 +6,11 @@
  :rules
  [;
   ;; pickers
-  ^{:doc/actions [{:name "changed-file-picker", :exec ["changed_file_picker"], :program "helix-common"}
-                  {:name "changed-file-picker", :exec ["OpenFile"], :program "micro"}]} [:!W#Pdelete_or_backspace [:!Tr] [:term]]
-  ^{:doc/actions [{:name "file-picker", :exec ["file_picker"], :program "helix-common"}
-                  {:name "file-picker", :exec ["AddTab,OpenFile"], :program "micro"}]} [:!W#Preturn_or_enter [:!Ts] [:term]]
-  ^{:doc/actions [{:name "buffer-picker", :exec ["buffer_picker"], :program "helix-common"}
-                  {:name "buffer-picker", :exec ["CommandMode"], :program "micro"}]} [:!W#Pright_shift [:!Tt] [:term]]]}
+  ^{:doc/actions [{:name "changed file picker", :exec ["changed_file_picker"], :program "helix-common"}
+                  {:name "changed file picker", :exec ["OpenFile"], :program "micro"}]} [:!W#Pdelete_or_backspace [:!Tr] [:term]]
+  ^{:doc/actions [{:name "file picker", :exec ["file_picker"], :program "helix-common"}
+                  {:name "file picker", :exec ["AddTab,OpenFile"], :program "micro"}]} [:!W#Preturn_or_enter [:!Ts] [:term]]
+  ^{:doc/actions [{:name "buffer picker", :exec ["buffer_picker"], :program "helix-common"}
+                  {:name "buffer picker", :exec ["CommandMode"], :program "micro"}]} [:!W#Pright_shift [:!Tt] [:term]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
