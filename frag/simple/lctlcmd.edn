@@ -5,29 +5,29 @@
 {:des "Control - Command Mode"
  :rules
  [;
-  ^{:doc/actions [{:name "prev-buffer", :exec ["goto_previous_buffer"], :program "helix-common"}
-                  {:name "prev-tab", :exec ["prevTab"], :program "lazygit"}
-                  {:name "prev-buffer", :exec ["PreviousTab"], :program "micro"}]} [:!TC#Pleft_arrow [:!Tb] [:term]]
-  ^{:doc/actions [{:name "next-buffer", :exec ["goto_next_buffer"], :program "helix-common"}
-                  {:name "next-tab", :exec ["nextTab"], :program "lazygit"}
-                  {:name "next-buffer", :exec ["NextTab"], :program "micro"}]} [:!TC#Pright_arrow [:!Tf] [:term]]
-  ^{:doc/actions [{:name "increment-number", :exec ["increment"], :program "helix-common"}
-                  {:name "prev-block", :exec ["prevBlock-alt2"], :program "lazygit"}]} [:!TC#Pup_arrow [:!Tn] [:term]]
-  ^{:doc/actions [{:name "decrement-number", :exec ["decrement"], :program "helix-common"}
-                  {:name "next-block", :exec ["nextBlock-alt2"], :program "lazygit"}]} [:!TC#Pdown_arrow [:!Tp] [:term]]
+  ^{:doc/actions [{:name "jump prev buffer", :exec ["goto_previous_buffer"], :program "helix-common"}
+                  {:name "jump prev tab", :exec ["prevTab"], :program "lazygit"}
+                  {:name "jump prev buffer", :exec ["PreviousTab"], :program "micro"}]} [:!TC#Pleft_arrow [:!Tb] [:term]]
+  ^{:doc/actions [{:name "jump next buffer", :exec ["goto_next_buffer"], :program "helix-common"}
+                  {:name "jump next tab", :exec ["nextTab"], :program "lazygit"}
+                  {:name "jump next buffer", :exec ["NextTab"], :program "micro"}]} [:!TC#Pright_arrow [:!Tf] [:term]]
+  ^{:doc/actions [{:name "increment number", :exec ["increment"], :program "helix-common"}
+                  {:name "jump prev block", :exec ["prevBlock-alt2"], :program "lazygit"}]} [:!TC#Pup_arrow [:!Tn] [:term]]
+  ^{:doc/actions [{:name "decrement number", :exec ["decrement"], :program "helix-common"}
+                  {:name "jump next block", :exec ["nextBlock-alt2"], :program "lazygit"}]} [:!TC#Pdown_arrow [:!Tp] [:term]]
 
-  ^{:doc/actions [{:name "close-tab", :exec ["buffer-close"], :program "helix-common"}
-                  {:name "close-tab", :exec ["Quit"], :program "micro"}]} [:!TC#Pdelete_or_backspace [:!Tl]]
-  ^{:doc/actions [{:name "close-others", :exec ["wonly"], :program "helix-common"}
-                  {:name "close-others", :exec ["Unsplit"], :program "micro"}]} [:!TC#Preturn_or_enter [:!Tg]]
-  ^{:doc/actions [{:name "vsplit", :exec ["vsplit"], :program "helix-common"}
-                  {:name "vsplit", :exec ["VSplit"], :program "micro"}]} [:!TC#Pright_shift [:!Tv]]
-  ^{:doc/actions [{:name "hsplit", :exec ["hsplit"], :program "helix-common"}
-                  {:name "hsplit", :exec ["HSplit"], :program "micro"}]} [:!TC#Pright_option [:!Th]]
-  ^{:doc/actions [{:name "close-window", :exec ["unsplit"], :program "helix-common"}
-                  {:name "close-window", :exec ["Unsplit"], :program "micro"}]} [:!TC#Pright_command [:!Tj]]
-  ^{:doc/actions [{:name "last-file", :exec ["goto_last_accessed_file"], :program "helix-common"}
-                  {:name "open-preview" :program "broot"}]} [:!TC#Pspacebar [:!To]]                ;
+  ^{:doc/actions [{:name "close tab", :exec ["buffer-close"], :program "helix-common"}
+                  {:name "close tab", :exec ["Quit"], :program "micro"}]} [:!TC#Pdelete_or_backspace [:!Tl]]
+  ^{:doc/actions [{:name "close others", :exec ["wonly"], :program "helix-common"}
+                  {:name "close others", :exec ["Unsplit"], :program "micro"}]} [:!TC#Preturn_or_enter [:!Tg]]
+  ^{:doc/actions [{:name "split right", :exec ["vsplit"], :program "helix-common"}
+                  {:name "split right", :exec ["VSplit"], :program "micro"}]} [:!TC#Pright_shift [:!Tv]]
+  ^{:doc/actions [{:name "split down", :exec ["hsplit"], :program "helix-common"}
+                  {:name "split down", :exec ["HSplit"], :program "micro"}]} [:!TC#Pright_option [:!Th]]
+  ^{:doc/actions [{:name "close window", :exec ["unsplit"], :program "helix-common"}
+                  {:name "close window", :exec ["Unsplit"], :program "micro"}]} [:!TC#Pright_command [:!Tj]]
+  ^{:doc/actions [{:name "last file", :exec ["goto_last_accessed_file"], :program "helix-common"}
+                  {:name "open preview" :program "broot"}]} [:!TC#Pspacebar [:!To]]                ;
   ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
