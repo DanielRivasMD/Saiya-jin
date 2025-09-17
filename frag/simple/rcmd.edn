@@ -6,10 +6,10 @@
  :rules
  [;
   ;; code navigation
-  ^{:doc/actions [{:name "save-selection", :exec ["save_selection"], :program "helix-common"}]} [:!Q#Pspacebar [:!TSf18] [:term]];
-  ^{:doc/actions [{:name "jump-backward", :exec ["jump_backward"], :program "helix-common"}]} [:!Q#Pleft_control [:!TShome] [:term]];
-  ^{:doc/actions [{:name "jumplist-picker", :exec ["jumplist_picker"], :program "helix-common"}]} [:!Q#Pleft_option [:!TSf12] [:term]];
-  ^{:doc/actions [{:name "jump-forward", :exec ["jump_forward"], :program "helix-common"}]} [:!Q#Pleft_command [:!TSend] [:term]]
+  ^{:doc/actions [{:name "save selection", :exec ["save_selection"], :program "helix-common"}]} [:!Q#Pspacebar [:!TSf18] [:term]];
+  ^{:doc/actions [{:name "jump backward", :exec ["jump_backward"], :program "helix-common"}]} [:!Q#Pleft_control [:!TShome] [:term]];
+  ^{:doc/actions [{:name "jumplist picker", :exec ["jumplist_picker"], :program "helix-common"}]} [:!Q#Pleft_option [:!TSf12] [:term]];
+  ^{:doc/actions [{:name "jump forward", :exec ["jump_forward"], :program "helix-common"}]} [:!Q#Pleft_command [:!TSend] [:term]]
 
   ;; tidyverse
   ^{:doc/actions [{:name "tidyverse", :sequence "' %<+% '", :program "R"}]} [:!Q#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]];
