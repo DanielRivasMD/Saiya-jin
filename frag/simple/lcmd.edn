@@ -5,23 +5,23 @@
 {:des "Command Mode - arrows"
  :rules
  [;
-  ^{:doc/actions [{:name "goto-line-start", :exec ["goto_line_start"], :program "helix-common"}
-                  {:name "goto-line-start", :exec ["StartOfLine"], :program "micro"}]} [:!C#Pleft_arrow :!Ta [:term]]
-  ^{:doc/actions [{:name "goto-line-end", :exec ["goto_line_end"], :program "helix-common"}
-                  {:name "goto-line-end", :exec ["EndOfLine"], :program "micro"}]} [:!C#Pright_arrow :!Te [:term]]
-  ^{:doc/actions [{:name "goto-file-start", :exec ["goto_file_start"], :program "helix-common"}
-                  {:name "goto-file-start", :exec ["CursorStart"], :program "micro"}]} [:!C#Pup_arrow [:home] [:term]]
-  ^{:doc/actions [{:name "goto-file-end", :exec ["goto_last_line"], :program "helix-common"}
-                  {:name "goto-file-end", :exec ["CursorEnd"], :program "micro"}]} [:!C#Pdown_arrow [:end] [:term]]
+  ^{:doc/actions [{:name "goto line start", :exec ["goto_line_start"], :program "helix-common"}
+                  {:name "goto line start", :exec ["StartOfLine"], :program "micro"}]} [:!C#Pleft_arrow :!Ta [:term]]
+  ^{:doc/actions [{:name "goto line end", :exec ["goto_line_end"], :program "helix-common"}
+                  {:name "goto line end", :exec ["EndOfLine"], :program "micro"}]} [:!C#Pright_arrow :!Te [:term]]
+  ^{:doc/actions [{:name "goto file start", :exec ["goto_file_start"], :program "helix-common"}
+                  {:name "goto file start", :exec ["CursorStart"], :program "micro"}]} [:!C#Pup_arrow [:home] [:term]]
+  ^{:doc/actions [{:name "goto file end", :exec ["goto_last_line"], :program "helix-common"}
+                  {:name "goto file end", :exec ["CursorEnd"], :program "micro"}]} [:!C#Pdown_arrow [:end] [:term]]
 
-  ^{:doc/actions [{:name "select-mode-start-line", :exec ["select_mode", "goto_line_start", "MODE"], :program "helix-common"}
-                  {:name "select-mode-start-line", :exec ["SelectToStartOfLine"], :program "micro"}]} [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]
-  ^{:doc/actions [{:name "select-mode-end-line", :exec ["select_mode", "goto_line_end", "MODE"], :program "helix-common"}
-                  {:name "select-mode-end-line", :exec ["SelectToEndOfLine"], :program "micro"}]} [:!CS#Pright_arrow [:!Oright_arrow] [:term]]
-  ^{:doc/actions [{:name "extend-to-file-start", :exec ["extend_to_file_start"], :program "helix-common"}
-                  {:name "extend-to-file-start", :exec ["SelectToStart"], :program "micro"}]} [:!CS#Pup_arrow [:!Oup_arrow] [:term]]
-  ^{:doc/actions [{:name "extend-to-file-end", :exec ["extend_to_file_end"], :program "helix-common"}
-                  {:name "extend-to-file-end", :exec ["SelectToEnd"], :program "micro"}]} [:!CS#Pdown_arrow [:!Odown_arrow] [:term]]
+  ^{:doc/actions [{:name "select line start", :exec ["select_mode", "goto_line_start", "MODE"], :program "helix-common"}
+                  {:name "select line start", :exec ["SelectToStartOfLine"], :program "micro"}]} [:!CS#Pleft_arrow [:!Oleft_arrow] [:term]]
+  ^{:doc/actions [{:name "select line end", :exec ["select_mode", "goto_line_end", "MODE"], :program "helix-common"}
+                  {:name "select line end", :exec ["SelectToEndOfLine"], :program "micro"}]} [:!CS#Pright_arrow [:!Oright_arrow] [:term]]
+  ^{:doc/actions [{:name "select file start", :exec ["extend_to_file_start"], :program "helix-common"}
+                  {:name "select file start", :exec ["SelectToStart"], :program "micro"}]} [:!CS#Pup_arrow [:!Oup_arrow] [:term]]
+  ^{:doc/actions [{:name "select file end", :exec ["extend_to_file_end"], :program "helix-common"}
+                  {:name "select file end", :exec ["SelectToEnd"], :program "micro"}]} [:!CS#Pdown_arrow [:!Odown_arrow] [:term]]
 
   ^{:doc/actions [{:name "", :sequence "` -= `", :program ""}]} [:!C#Phyphen [:spacebar :hyphen :equal_sign :spacebar]]
   ^{:doc/actions [{:name "", :sequence "` += `", :program ""}]} [:!C#Pequal_sign [:spacebar :!Sequal_sign :equal_sign :spacebar]]
