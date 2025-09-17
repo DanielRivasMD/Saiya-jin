@@ -7,17 +7,14 @@
 
 ==================================================
 frag/apps/browser.edn:; TODO: update config
-frag/apps/mail.edn:; TODO: update
+frag/double/lctl.edn:; TODO: relocate
 frag/apps/zoom.edn:; TODO: homogenize to format
+frag/apps/mail.edn:; TODO: update
 frag/mode/q.edn: ; TODO: update temp mapping
+frag/simple/hyper.edn:  ; TODO: review hyper - zellij bindings
 frag/profile/keys.edn:; TODO: update
 frag/profile/keys.edn:  ; TODO: CHANGE `term` pop-up new
-frag/simple/patch.edn:; TODO: update
-frag/double/lctl.edn:; TODO: relocate
-frag/simple/lshift.edn:  ; TODO: micro => SelectToEndOfLine,Delete
-frag/mode/z.edn: ; TODO: add binding
 frag/simple/tab.edn:; TODO: annotate rectangle hotkeys
-frag/simple/hyper.edn:  ; TODO: review hyper - zellij bindings
-frag/simple/rshift.edn:  ; TODO: micro => SelectToStartOfLine,Delete
-frag/simple/rshift.edn:  ; TODO: micro => DeleteWordLeft
+frag/mode/z.edn: ; TODO: add binding
+frag/simple/patch.edn:; TODO: update
 ==================================================
