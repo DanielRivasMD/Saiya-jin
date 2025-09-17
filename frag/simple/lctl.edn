@@ -6,14 +6,14 @@
  :rules
  [;
   ;; Split-view jumps & line navigation
-  ^{:doc/actions [{:name "jump-split-left", :exec ["jump_view_left"], :program "helix-common"}
-                  {:name "jump-split-left", :exec ["PreviousSplit"], :program "micro"}]} [:!T#Pleft_arrow [:!Tleft_arrow] [:term]]
-  ^{:doc/actions [{:name "jump-split-right", :exec ["jump_view_right"], :program "helix-common"}
-                  {:name "jump-split-right", :exec ["NextSplit"], :program "micro"}]} [:!T#Pright_arrow [:!Tright_arrow] [:term]]
-  ^{:doc/actions [{:name "jump-split-up", :exec ["jump_view_up"], :program "helix-common"}
-                  {:name "jump-split-up", :exec ["PreviousSplit"], :program "micro"}]} [:!T#Pup_arrow [:!Tup_arrow] [:term]]
-  ^{:doc/actions [{:name "jump-split-down", :exec ["jump_view_down"], :program "helix-common"}
-                  {:name "jump-split-down", :exec ["NextSplit"], :program "micro"}]} [:!T#Pdown_arrow [:!Tdown_arrow] [:term]]
+  ^{:doc/actions [{:name "jump split left", :exec ["jump_view_left"], :program "helix-common"}
+                  {:name "jump split left", :exec ["PreviousSplit"], :program "micro"}]} [:!T#Pleft_arrow [:!Tleft_arrow] [:term]]
+  ^{:doc/actions [{:name "jump split right", :exec ["jump_view_right"], :program "helix-common"}
+                  {:name "jump split right", :exec ["NextSplit"], :program "micro"}]} [:!T#Pright_arrow [:!Tright_arrow] [:term]]
+  ^{:doc/actions [{:name "jump split up", :exec ["jump_view_up"], :program "helix-common"}
+                  {:name "jump split up", :exec ["PreviousSplit"], :program "micro"}]} [:!T#Pup_arrow [:!Tup_arrow] [:term]]
+  ^{:doc/actions [{:name "jump split down", :exec ["jump_view_down"], :program "helix-common"}
+                  {:name "jump split down", :exec ["NextSplit"], :program "micro"}]} [:!T#Pdown_arrow [:!Tdown_arrow] [:term]]
 
   ^{:doc/actions [{:name "terminal", :sequence "`[[`", :program "terminal"}]} [:!T#Popen_bracket [:open_bracket :open_bracket]]
   ^{:doc/actions [{:name "terminal", :sequence "`]]`", :program "terminal"}]} [:!T#Pclose_bracket [:close_bracket :close_bracket]]
