@@ -6,7 +6,7 @@
  :rules
  [;
   ;; code navigation
-  ^{:doc/actions [{:name "save selection", :exec ["save_selection"], :program "helix-common"}]} [:!Q#Pspacebar [:!TSf18] [:term]];
+  ^{:doc/actions [{:name "save jump", :exec ["save_selection"], :program "helix-common"}]} [:!Q#Pspacebar [:!TSf18] [:term]];
   ^{:doc/actions [{:name "jump backward", :exec ["jump_backward"], :program "helix-common"}]} [:!Q#Pleft_control [:!TShome] [:term]];
   ^{:doc/actions [{:name "jumplist picker", :exec ["jumplist_picker"], :program "helix-common"}]} [:!Q#Pleft_option [:!TSf12] [:term]];
   ^{:doc/actions [{:name "jump forward", :exec ["jump_forward"], :program "helix-common"}]} [:!Q#Pleft_command [:!TSend] [:term]]
