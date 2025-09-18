@@ -5,18 +5,18 @@
 {:des "Shift Mode"
  :rules
  [;
-  ; ;; Selection & word-wise navigation
-  ; ^{:doc/actions [{:name "extend-char-left", :description "Extend selection left", :exec "extend_char_left", :program "helix"}]}
-  ; ^{:doc/actions [{:name "extend-char-right", :description "Extend selection right", :exec "extend_char_right", :program "helix"}]}
-  ; ^{:doc/actions [{:name "extend-line-up", :description "Extend selection up", :exec "extend_line_up", :program "helix"}]}
-  ; ^{:doc/actions [{:name "extend-line-down", :description "Extend selection down", :exec "extend_line_down", :program "helix"}]}
+  ;; Selection & word-wise navigation
+  ^{:doc/actions [{:name "select prev char", :exec "extend_char_left", :program "helix-common"}]} [:!S#Pleft_arrow [:!Sleft_arrow]]
+  ^{:doc/actions [{:name "select next char", :exec "extend_char_right", :program "helix-common"}]} [:!S#Pright_arrow [:!Sright_arrow]]
+  ^{:doc/actions [{:name "select line up", :exec "extend_line_up", :program "helix-common"}]} [:!S#Pup_arrow [:!Sup_arrow]]
+  ^{:doc/actions [{:name "select line down", :exec "extend_line_down", :program "helix-common"}]} [:!S#Pdown_arrow [:!Sdown_arrow]]
 
-  ; ^{:doc/actions [{:name "word-prev-start", :description "Move to previous word start", :exec "move_prev_word_start", :program "helix"}]}
-  ; ^{:doc/actions [{:name "word-next-end", :description "Move to next word end", :exec "move_next_word_end", :program "helix"}]}
-  ; ^{:doc/actions [{:name "prev-paragraph", :description "Move to previous paragraph", :exec "goto_prev_paragraph", :program "helix"}]}
-  ; ^{:doc/actions [{:name "next-paragraph", :description "Move to next paragraph", :exec "goto_next_paragraph", :program "helix"}]}
-  ; ^{:doc/actions [{:name "select-prev-word", :description "Extend to previous word start", :exec "extend_prev_word_start", :program "helix"}]}
-  ; ^{:doc/actions [{:name "select-next-word", :description "Extend to next word end", :exec "extend_next_word_end", :program "helix"}]}
+  ; ^{:doc/actions [{:name "word-prev-start", :exec "move_prev_word_start", :program "helix"}]}
+  ; ^{:doc/actions [{:name "word-next-end", :exec "move_next_word_end", :program "helix"}]}
+  ; ^{:doc/actions [{:name "prev-paragraph", :exec "goto_prev_paragraph", :program "helix"}]}
+  ; ^{:doc/actions [{:name "next-paragraph", :exec "goto_next_paragraph", :program "helix"}]}
+  ; ^{:doc/actions [{:name "select-prev-word", :exec "extend_prev_word_start", :program "helix"}]}
+  ; ^{:doc/actions [{:name "select-next-word", :exec "extend_next_word_end", :program "helix"}]}
 
   ; [:!S#Pleft_arrow []]
   ; [:!S#Pright_arrow []]
@@ -26,10 +26,10 @@
   ; [:!S#Pdelete_or_backspace []]
   ; [:!S#Preturn_or_enter []]
 
-    ^{:doc/actions [{}]} [:!S#Pright_shift [:delete_forward]]
-  ^{:doc/actions [{}
+  ^{:doc/actions [{:name "delete next char", :exec ["delete_selection_noyank"], :program "helix-common"}]} [:!S#Pright_shift [:delete_forward]]
+  ^{:doc/actions [{:name "delete next word", :exec ["delete_word_forward"], :program "helix-common"}
                   {:name "delete next word", :exec ["DeleteWordRight"], :program "micro"}]} [:!S#Pright_option [:!Ed]]
-  ^{:doc/actions [{}
+  ^{:doc/actions [{:name "delete line start", :exec ["kill_to_line_end"], :program "helix-common"}
                   {:name "delete line start", :exec ["SelectToEndOfLine,Delete"], :program "micro"}]} [:!S#Pright_command [:!Wk]]
   ; [:!S#Pspacebar []]
   ]}
