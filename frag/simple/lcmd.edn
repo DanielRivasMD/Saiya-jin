@@ -2,12 +2,14 @@
 ; CMD
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-{:des "Command Mode - arrows"
+; TODO: potential order arrows, right keys, alphabet?
+; TODO: annotated not bound keys
+{:des "Command Mode"
  :rules
  [;
   ^{:doc/actions [{:name "goto line start", :exec ["goto_line_start"], :program "helix-common"}
                   {:name "goto line start", :exec ["StartOfLine"], :program "micro"}]} [:!C#Pleft_arrow :!Ta [:term]]
-  ^{:doc/actions [{:name "goto line end", :exec ["goto_line_end"], :program "helix-common"}
+  ^{:doc/actions [{:name "goto line end", :exec ["goto_line_end", "move_char_right"], :program "helix-common"}
                   {:name "goto line end", :exec ["EndOfLine"], :program "micro"}]} [:!C#Pright_arrow :!Te [:term]]
   ^{:doc/actions [{:name "goto file start", :exec ["goto_file_start"], :program "helix-common"}
                   {:name "goto file start", :exec ["CursorStart"], :program "micro"}]} [:!C#Pup_arrow [:home] [:term]]
