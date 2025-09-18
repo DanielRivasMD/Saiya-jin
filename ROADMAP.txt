@@ -1,20 +1,23 @@
-- babel is almost ready! update annotations
+- babel micro & helix fully functional; work on broot, lazygit, zellij
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
-- develop template for helix headers
 - coordinate Zellij / Helix
 - sync browser hotkeys
 - review zellij bindings
+- document terminal sequences
 
 ==================================================
 frag/apps/browser.edn:; TODO: update config
-frag/double/lctl.edn:; TODO: relocate
-frag/apps/zoom.edn:; TODO: homogenize to format
 frag/apps/mail.edn:; TODO: update
-frag/mode/q.edn: ; TODO: update temp mapping
-frag/simple/hyper.edn:  ; TODO: review hyper - zellij bindings
+frag/apps/zoom.edn:; TODO: homogenize to format
 frag/profile/keys.edn:; TODO: update
 frag/profile/keys.edn:  ; TODO: CHANGE `term` pop-up new
-frag/simple/tab.edn:; TODO: annotate rectangle hotkeys
-frag/mode/z.edn: ; TODO: add binding
+frag/mode/q.edn: ; TODO: update temp mapping
+frag/double/lctl.edn:; TODO: relocate
 frag/simple/patch.edn:; TODO: update
+frag/mode/z.edn: ; TODO: add binding
+frag/simple/loptcmd.edn:  ; TODO: annotate zellij binds
+frag/simple/hyper.edn:  ; TODO: review hyper - zellij bindings
+frag/simple/tab.edn:; TODO: annotate rectangle hotkeys
+frag/simple/lcmd.edn:; TODO: potential order arrows, right keys, alphabet?
+frag/simple/lcmd.edn:; TODO: annotated not bound keys
 ==================================================
