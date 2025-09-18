@@ -6,8 +6,8 @@
  :rules
  [:q-mode
   ;; find-till-char / repeat
-  ^{:doc/actions [{:name "find char forward", :exec ["find_till_char"], :program "helix-common"}]} [:#Pleft_arrow [:!Tpage_up] [:term]]
-  ^{:doc/actions [{:name "find char backward", :exec ["till_prev_char"], :program "helix-common"}]} [:#Pright_arrow [:!Tpage_down] [:term]]
+  ^{:doc/actions [{:name "find char forward", :exec ["normal_mode", "till_prev_char", "MODE"], :program "helix-common"}]} [:#Pleft_arrow [:!Tpage_up] [:term]]
+  ^{:doc/actions [{:name "find char backward", :exec ["normal_mode", "find_till_char", "MODE"], :program "helix-common"}]} [:#Pright_arrow [:!Tpage_down] [:term]]
  ; TODO: update temp mapping
   ^{:doc/actions [{:name "repeat last motion", :exec ["repeat_last_motion"], :program "helix-common"}]} [:#Pspacebar [:f18] [:term]]
 
