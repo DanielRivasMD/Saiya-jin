@@ -12,6 +12,7 @@
   ^{:doc/actions [{:name "scroll down", :exec ["scroll_down"], :program "helix-common"}
                   {:name "scroll down", :exec ["scrollDownMain-alt2"], :program "lazygit"}]} [:!OC#Pdown_arrow :!Ty [:term]]
 
+  ; TODO: annotate zellij binds
   [:!OC#Popen_bracket :!SOv [:term]]                                           ; plugin room       ; zellij
   [:!OC#Pclose_bracket :!SOw [:term]]                                          ; plugin jump-list  ; zellij
   [:!OC#Psemicolon :!SOx [:term]]                                              ; plugin monocle    ; zellij
