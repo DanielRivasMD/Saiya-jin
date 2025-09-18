@@ -5,6 +5,7 @@
 {:des "Option Mode"
  :rules
  [;
+  ; arrow glyphs
   ^{:doc/actions [{:name "goto prev word", :exec ["move_prev_word_start", "collapse_selection"], :program "helix-common"}]} [:!O#Pleft_arrow :!Ob [:term]]
   ^{:doc/actions [{:name "goto next word", :exec ["move_next_word_end", "collapse_selection"], :program "helix-common"}]} [:!O#Pright_arrow :!Of [:term]]
   ^{:doc/actions [{:name "goto prev paragraph", :exec ["goto_prev_paragraph", "collapse_selection"], :program "helix-common"}
@@ -12,6 +13,20 @@
   ^{:doc/actions [{:name "goto next paragraph", :exec ["goto_next_paragraph", "collapse_selection"], :program "helix-common"}
                   {:name "goto next paragraph", :exec ["ParagraphNext"], :program "micro"}]} [:!O#Pdown_arrow [:page_down] [:term]]
 
+  ^{:doc/actions [{:name "select prev word", :exec ["extend_prev_word_start"], :program "helix-common"}
+                  {:name "select prev word", :exec ["SelectWordLeft"], :program "micro"}]} [:!OS#Pleft_arrow [:!OSleft_arrow] [:term]]
+  ^{:doc/actions [{:name "select next word", :exec ["extend_next_word_end"], :program "helix-common"}
+                  {:name "select next word", :exec ["SelectWordRight"], :program "micro"}]} [:!OS#Pright_arrow [:!OSright_arrow] [:term]]
+  ^{:doc/actions [{:name "select prev paragraph", :exec ["select_mode", "goto_prev_paragraph", "insert_mode"], :program "helix-insert"}
+                  {:name "select prev paragraph", :exec ["select_mode", "goto_prev_paragraph", "normal_mode"], :program "helix-normal"}
+                  {:name "select prev paragraph", :exec ["select_mode", "goto_prev_paragraph", "select_mode"], :program "helix-select"}
+                  {:name "select prev paragraph", :exec ["StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight"], :program "micro"}]} [:!OS#Pup_arrow [:!OSup_arrow] [:term]]
+  ^{:doc/actions [{:name "select next paragraph", :exec ["select_mode", "goto_next_paragraph", "append_mode"], :program "helix-insert"}
+                  {:name "select next paragraph", :exec ["select_mode", "goto_next_paragraph", "normal_mode"], :program "helix-normal"}
+                  {:name "select next paragraph", :exec ["select_mode", "goto_next_paragraph", "select_mode"], :program "helix-select"}
+                  {:name "select next paragraph", :exec ["StartOfLine,SelectLine,ParagraphNext,SelectWordRight"], :program "micro"}]} [:!OS#Pdown_arrow [:!OSdown_arrow] [:term]]
+
+  ; right glyphs
   ^{:doc/actions [{:name "terminal", :sequence "` <= `", :program "terminal"}]} [:!O#Popen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` >= `", :program "terminal"}]} [:!O#Pclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]
   ^{:doc/actions [{}]} [:!O#Psemicolon [:!O#Psemicolon]]
@@ -21,6 +36,16 @@
   ^{:doc/actions [{:name "terminal", :sequence "` > `", :program "terminal"}]} [:!O#Pperiod [:spacebar :!Speriod :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` ? `", :program "terminal"}]} [:!O#Pslash [:spacebar :!Sslash :spacebar]]
 
+  ^{:doc/actions [{:name "terminal", :sequence "` .<= `", :program "terminal"}]} [:!OS#Popen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .>= `", :program "terminal"}]} [:!OS#Pclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]
+  ^{:doc/actions [{}]} [:!OS#Psemicolon [:!OS#Psemicolon]]
+  ^{:doc/actions [{}]} [:!OS#Pquote [:!OS#Pquote]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .| `", :program "terminal"}]} [:!OS#Pbackslash [:spacebar :period :!Sbackslash :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .< `", :program "terminal"}]} [:!OS#Pcomma [:spacebar :period :!Scomma :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .> `", :program "terminal"}]} [:!OS#Pperiod [:spacebar :period :!Speriod :spacebar]]
+  ^{:doc/actions [{}]} [:!OS#Pslash [:!OS#Pslash]]
+
+  ; action glyphs
   ^{:doc/actions [{}]} [:!O#Pdelete_or_backspace [:!O#Pdelete_or_backspace]]
   ^{:doc/actions [{:name "terminal", :sequence "` = `", :program "terminal"}]} [:!O#Preturn_or_enter [:spacebar :equal_sign :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` |> `", :program "terminal"}]} [:!O#Pright_shift [:spacebar :!Sbackslash :!Speriod :spacebar]]
@@ -28,19 +53,41 @@
   ^{:doc/actions [{:name "terminal", :sequence "` / `", :program "terminal"}]} [:!O#Pright_command [:spacebar :slash :spacebar]]
   ^{:doc/actions [{:name "prompt", :program "Alfred"}]} [:!O#Pspacebar [:!OCnon_us_pound]]
 
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P1 [:!O#P1]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P2 [:!O#P2]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P3 [:!O#P3]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P4 [:!O#P4]]
+  ^{:doc/actions [{}]} [:!OS#Pdelete_or_backspace [:!OS#Pdelete_or_backspace]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .= `", :program "terminal"}]} [:!OS#Preturn_or_enter [:spacebar :period :equal_sign :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .|> `", :program "terminal"}]} [:!OS#Pright_shift [:spacebar :period :!Sbackslash :!Speriod :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .* `", :program "terminal"}]} [:!OS#Pright_option [:spacebar :period :!S8 :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` ./ `", :program "terminal"}]} [:!OS#Pright_command [:spacebar :period :slash :spacebar]]
+  ^{:doc/actions [{:name "file prompt", :program "Alfred"}]} [:!OS#Pspacebar [:!OCSnon_us_pound]]
+
+  ; upper glyphs
+  ^{:doc/actions [{}]} [:!O#P1 [:!O#P1]]
+  ^{:doc/actions [{}]} [:!O#P2 [:!O#P2]]
+  ^{:doc/actions [{}]} [:!O#P3 [:!O#P3]]
+  ^{:doc/actions [{}]} [:!O#P4 [:!O#P4]]
   ^{:doc/actions [{:name "terminal", :sequence "` % `", :program "terminal"}]} [:!O#P5 [:spacebar :!S5 :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` ^ `", :program "terminal"}]} [:!O#P6 [:spacebar :!S6 :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` & `", :program "terminal"}]} [:!O#P7 [:spacebar :!S7 :spacebar]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P8 [:!O#P8]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P9 [:!O#P9]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!O#P0 [:!O#P0]]
+  ^{:doc/actions [{}]} [:!O#P8 [:!O#P8]]
+  ^{:doc/actions [{}]} [:!O#P9 [:!O#P9]]
+  ^{:doc/actions [{}]} [:!O#P0 [:!O#P0]]
   ^{:doc/actions [{:name "terminal", :sequence "` - `", :program "terminal"}]} [:!O#Phyphen [:spacebar :hyphen :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` + `", :program "terminal"}]} [:!O#Pequal_sign [:spacebar :!Sequal_sign :spacebar]]
 
+  ^{:doc/actions [{}]} [:!OS#P1 [:!OS#P1]]
+  ^{:doc/actions [{}]} [:!OS#P2 [:!OS#P2]]
+  ^{:doc/actions [{}]} [:!OS#P3 [:!OS#P3]]
+  ^{:doc/actions [{}]} [:!OS#P4 [:!OS#P4]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .% `", :program "terminal"}]} [:!OS#P5 [:spacebar :period :!S5 :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .^ `", :program "terminal"}]} [:!OS#P6 [:spacebar :period :!S6 :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .& `", :program "terminal"}]} [:!OS#P7 [:spacebar :period :!S7 :spacebar]]
+  ^{:doc/actions [{}]} [:!OS#P8 [:!OS#P8]]
+  ^{:doc/actions [{}]} [:!OS#P9 [:!OS#P9]]
+  ^{:doc/actions [{}]} [:!OS#P0 [:!OS#P0]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .- `", :program "terminal"}]} [:!OS#Phyphen [:spacebar :period :hyphen :spacebar]]
+  ^{:doc/actions [{:name "terminal", :sequence "` .+ `", :program "terminal"}]} [:!OS#Pequal_sign [:spacebar :period :!Sequal_sign :spacebar]]
+
+  ; alphabet
   ^{:doc/actions [{:name "format", :exec [":format"], :program "helix-common"}]} [:!O#Pa :!Of1 [:term]]
   ^{:doc/actions [{}]} [:!O#Pb :!Of2 [:term]]
   ^{:doc/actions [{:name "copy", :exec ["yank_to_clipboard"], :program "helix-common"}
@@ -85,62 +132,20 @@
   ^{:doc/actions [{:name "remove multi", :exec ["search_selection", "search_prev"], :program "helix-common"}
                   {:name "remove multi", :exec ["RemoveMultiCursor"], :program "micro"}]} [:!O#Pz :!OTf9 [:term]]
   ^{:doc/actions [{:name "command mode", :exec ["command_mode"], :program "helix-common"}
-                  {:name "command mode", :exec ["ShellMode"], :program "micro"}]} [:!O#Pright_control :!OTf10 [:term]]
-
-  ^{:doc/actions [{:name "select prev word", :exec ["extend_prev_word_start"], :program "helix-common"}
-                  {:name "select prev word", :exec ["SelectWordLeft"], :program "micro"}]} [:!OS#Pleft_arrow [:!OSleft_arrow] [:term]]
-  ^{:doc/actions [{:name "select next word", :exec ["extend_next_word_end"], :program "helix-common"}
-                  {:name "select next word", :exec ["SelectWordRight"], :program "micro"}]} [:!OS#Pright_arrow [:!OSright_arrow] [:term]]
-  ^{:doc/actions [{:name "select prev paragraph", :exec ["select_mode", "goto_prev_paragraph", "insert_mode"], :program "helix-insert"}
-                  {:name "select prev paragraph", :exec ["select_mode", "goto_prev_paragraph", "normal_mode"], :program "helix-normal"}
-                  {:name "select prev paragraph", :exec ["select_mode", "goto_prev_paragraph", "select_mode"], :program "helix-select"}
-                  {:name "select prev paragraph", :exec ["StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight"], :program "micro"}]} [:!OS#Pup_arrow [:!OSup_arrow] [:term]]
-  ^{:doc/actions [{:name "select next paragraph", :exec ["select_mode", "goto_next_paragraph", "append_mode"], :program "helix-insert"}
-                  {:name "select next paragraph", :exec ["select_mode", "goto_next_paragraph", "normal_mode"], :program "helix-normal"}
-                  {:name "select next paragraph", :exec ["select_mode", "goto_next_paragraph", "select_mode"], :program "helix-select"}
-                  {:name "select next paragraph", :exec ["StartOfLine,SelectLine,ParagraphNext,SelectWordRight"], :program "micro"}]} [:!OS#Pdown_arrow [:!OSdown_arrow] [:term]]
-
-  ^{:doc/actions [{:name "terminal", :sequence "` .<= `", :program "terminal"}]} [:!OS#Popen_bracket [:spacebar :period :!Scomma :equal_sign :spacebar]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .>= `", :program "terminal"}]} [:!OS#Pclose_bracket [:spacebar :period :!Speriod :equal_sign :spacebar]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#Psemicolon [:!OS#Psemicolon]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#Pquote [:!OS#Pquote]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .| `", :program "terminal"}]} [:!OS#Pbackslash [:spacebar :period :!Sbackslash :spacebar]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .< `", :program "terminal"}]} [:!OS#Pcomma [:spacebar :period :!Scomma :spacebar]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .> `", :program "terminal"}]} [:!OS#Pperiod [:spacebar :period :!Speriod :spacebar]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#Pslash [:!OS#Pslash]]
-
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#Pdelete_or_backspace [:!OS#Pdelete_or_backspace]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .= `", :program "terminal"}]} [:!OS#Preturn_or_enter [:spacebar :period :equal_sign :spacebar]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .|> `", :program "terminal"}]} [:!OS#Pright_shift [:spacebar :period :!Sbackslash :!Speriod :spacebar]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .* `", :program "terminal"}]} [:!OS#Pright_option [:spacebar :period :!S8 :spacebar]]
-  ^{:doc/actions [{:name "terminal", :sequence "` ./ `", :program "terminal"}]} [:!OS#Pright_command [:spacebar :period :slash :spacebar]]
-  ^{:doc/actions [{:name "file prompt", :program "Alfred"}]} [:!OS#Pspacebar [:!OCSnon_us_pound]]
-
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P1 [:!OS#P1]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P2 [:!OS#P2]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P3 [:!OS#P3]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P4 [:!OS#P4]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .% `", :program "terminal"}]} [:!OS#P5 [:spacebar :period :!S5 :spacebar]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .^ `", :program "terminal"}]} [:!OS#P6 [:spacebar :period :!S6 :spacebar]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .& `", :program "terminal"}]} [:!OS#P7 [:spacebar :period :!S7 :spacebar]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P8 [:!OS#P8]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P9 [:!OS#P9]]
-  ^{:doc/actions [{:name "", :sequence "", :program ""}]} [:!OS#P0 [:!OS#P0]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .- `", :program "terminal"}]} [:!OS#Phyphen [:spacebar :period :hyphen :spacebar]]
-  ^{:doc/actions [{:name "terminal", :sequence "` .+ `", :program "terminal"}]} [:!OS#Pequal_sign [:spacebar :period :!Sequal_sign :spacebar]]
+                  {:name "command mode", :exec ["CommandMode"], :program "micro"}]} [:!O#Pright_control :!OTf10 [:term]]
 
   ^{:doc/actions [{:name "select all", :exec ["select_all"], :program "helix-common"}
                   {:name "select all", :exec ["SelectAll"], :program "micro"}]} [:!OS#Pa :!OSf1 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pb :!OSf2 [:term]]
+  ^{:doc/actions [{}]} [:!OS#Pb :!OSf2 [:term]]
   ^{:doc/actions [{:name "copy line", :exec ["extend_to_line_bounds", "yank_to_clipboard"], :program "helix-common"}
                   {:name "copy line", :exec ["CopyLine"], :program "micro"}]} [:!OS#Pc :!OSf4 [:term]]
   ^{:doc/actions [{:name "duplicate line", :exec ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"], :program "helix-common"}
                   {:name "duplicate line", :exec ["DuplicateLine"], :program "micro"}]} [:!OS#Pd :!OSf5 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pe :!OSf6 [:term]]
+  ^{:doc/actions [{}]} [:!OS#Pe :!OSf6 [:term]]
   ^{:doc/actions [{:name "global search", :exec ["global_search"], :program "helix-common"}
                   {:name "global search", :exec ["Find"], :program "micro"}]} [:!OS#Pf :!OSf7 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pg :!OSf8 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Ph :!OSf9 [:term]]
+  ^{:doc/actions [{}]} [:!OS#Pg :!OSf8 [:term]]
+  ^{:doc/actions [{}]} [:!OS#Ph :!OSf9 [:term]]
   ^{:doc/actions [{:name "indent", :exec ["indent"], :program "helix-common"}
                   {:name "indent", :exec ["IndentSelection"], :program "micro"}]} [:!OS#Pi :!OSf10 [:term]]
   ^{:doc/actions [{:name "move down", :exec ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"], :program "helix-common"}
@@ -151,21 +156,22 @@
                   {:name "select line", :exec ["SelectLine"], :program "micro"}]} [:!OS#Pl :!TSf4 [:term]]
   ^{:doc/actions [{:name "play macro", :exec ["replay_macro"], :program "helix-common"}
                   {:name "play macro", :exec ["PlayMacro"], :program "micro"}]} [:!OS#Pm :!TSf5 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pn :!TSf6 [:term]]
+  ^{:doc/actions [{}]} [:!OS#Pn :!TSf6 [:term]]
   ^{:doc/actions [{:name "unindent", :exec ["unindent"], :program "helix-common"}
                   {:name "unindent", :exec ["OutdentSelection"], :program "micro"}]} [:!OS#Po :!TSf7 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pp :!TSf8 [:term]]
+  ^{:doc/actions [{}]} [:!OS#Pp :!TSf8 [:term]]
   ^{:doc/actions [{:name "launch lazygit", :exec [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"], :program "helix-common"}]} [:!OS#Pq :!TSf9 [:term]]
   ^{:doc/actions [{:name "launch serpl", :exec [":sh zellij run --name serpl --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- serpl"], :program "helix-common"}]} [:!OS#Pr :!TSf10 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Ps :!OTSf1 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pt :!OTSf2 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pu :!OTSf4 [:term]]
-  ^{:doc/actions [{:name "", :exec [""], :program ""}]} [:!OS#Pv :!OTSf5 [:term]]
+  ^{:doc/actions [{}]} [:!OS#Ps :!OTSf1 [:term]]
+  ^{:doc/actions [{:name "compile todo", :exec [":sh just todor"], :program "helix-common"}]} [:!OS#Pt :!OTSf2 [:term]]
+  ^{:doc/actions [{}]} [:!OS#Pu :!OTSf4 [:term]]
+  ^{:doc/actions [{}]} [:!OS#Pv :!OTSf5 [:term]]
   ^{:doc/actions [{:name "launch watch", :exec [":sh zellij run --name canvas --close-on-exit --floating --pinned true --height 20 --width 40 --x 100 --y 0 -- just watch"], :program "helix-common"}]} [:!OS#Pw :!OTSf6 [:term]]
   ^{:doc/actions [{:name "cut line", :exec ["extend_to_line_bounds", "delete_selection_noyank"], :program "helix-common"}
                   {:name "cut line", :exec ["CutLine"], :program "micro"}]} [:!OS#Px :!OTSf7 [:term]]
   ^{:doc/actions [{}]} [:!OS#Py :!OTSf8 [:term]]
   ^{:doc/actions [{:name "yank diagnostic", :exec [":yank-diagnostic"], :program "helix-common"}]} [:!OS#Pz :!OTSf9 [:term]]
-  ^{:doc/actions [{:name "launch shell", :exec [":sh zellij run --name canvas --close-on-exit --floating --height 100 --width 140 --x 0 --y 0 -- zsh"], :program "helix-common"}]} [:!OS#Pright_control :!OTSf10 [:term]]]}
+  ^{:doc/actions [{:name "launch shell", :exec [":sh zellij run --name canvas --close-on-exit --floating --height 100 --width 140 --x 0 --y 0 -- zsh"], :program "helix-common"}
+                  {:name "shell mode", :exec ["ShellMode"], :program "micro"}]} [:!OS#Pright_control :!OTSf10 [:term]]]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
