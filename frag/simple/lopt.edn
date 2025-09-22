@@ -9,8 +9,10 @@
   ^{:doc/actions [{:name "goto prev word", :exec ["move_prev_word_start", "collapse_selection"], :program "helix-common"}]} [:!O#Pleft_arrow :!Ob [:term]]
   ^{:doc/actions [{:name "goto next word", :exec ["move_next_word_end", "collapse_selection"], :program "helix-common"}]} [:!O#Pright_arrow :!Of [:term]]
   ^{:doc/actions [{:name "goto prev paragraph", :exec ["goto_prev_paragraph", "collapse_selection"], :program "helix-common"}
+                  {:name "goto prev page", :exec ["prevPage"], :program "lazygit"}
                   {:name "goto prev paragraph", :exec ["ParagraphPrevious"], :program "micro"}]} [:!O#Pup_arrow [:page_up] [:term]]
   ^{:doc/actions [{:name "goto next paragraph", :exec ["goto_next_paragraph", "collapse_selection"], :program "helix-common"}
+                  {:name "goto next page", :exec ["nextPage"], :program "lazygit"}
                   {:name "goto next paragraph", :exec ["ParagraphNext"], :program "micro"}]} [:!O#Pdown_arrow [:page_down] [:term]]
 
   ^{:doc/actions [{:name "select prev word", :exec ["extend_prev_word_start"], :program "helix-common"}
@@ -26,7 +28,7 @@
                   {:name "select next paragraph", :exec ["select_mode", "goto_next_paragraph", "select_mode"], :program "helix-select"}
                   {:name "select next paragraph", :exec ["StartOfLine,SelectLine,ParagraphNext,SelectWordRight"], :program "micro"}]} [:!OS#Pdown_arrow [:!OSdown_arrow] [:term]]
 
-  ; right glyphs
+  ; technical glyphs
   ^{:doc/actions [{:name "terminal", :sequence "` <= `", :program "terminal"}]} [:!O#Popen_bracket [:spacebar :!Scomma :equal_sign :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` >= `", :program "terminal"}]} [:!O#Pclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]
   ^{:doc/actions [{}]} [:!O#Psemicolon [:!O#Psemicolon]]
@@ -60,7 +62,7 @@
   ^{:doc/actions [{:name "terminal", :sequence "` ./ `", :program "terminal"}]} [:!OS#Pright_command [:spacebar :period :slash :spacebar]]
   ^{:doc/actions [{:name "file prompt", :program "Alfred"}]} [:!OS#Pspacebar [:!OCSnon_us_pound]]
 
-  ; upper glyphs
+  ; numeric glyphs
   ^{:doc/actions [{}]} [:!O#P1 [:!O#P1]]
   ^{:doc/actions [{}]} [:!O#P2 [:!O#P2]]
   ^{:doc/actions [{}]} [:!O#P3 [:!O#P3]]
@@ -87,7 +89,7 @@
   ^{:doc/actions [{:name "terminal", :sequence "` .- `", :program "terminal"}]} [:!OS#Phyphen [:spacebar :period :hyphen :spacebar]]
   ^{:doc/actions [{:name "terminal", :sequence "` .+ `", :program "terminal"}]} [:!OS#Pequal_sign [:spacebar :period :!Sequal_sign :spacebar]]
 
-  ; alphabet
+  ; alphabetic glyphs
   ^{:doc/actions [{:name "format", :exec [":format"], :program "helix-common"}]} [:!O#Pa :!Of1 [:term]]
   ^{:doc/actions [{}]} [:!O#Pb :!Of2 [:term]]
   ^{:doc/actions [{:name "copy", :exec ["yank_to_clipboard"], :program "helix-common"}
