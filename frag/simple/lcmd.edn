@@ -12,8 +12,10 @@
   ^{:doc/actions [{:name "goto line end", :exec ["goto_line_end", "move_char_right"], :program "helix-common"}
                   {:name "goto line end", :exec ["EndOfLine"], :program "micro"}]} [:!C#Pright_arrow :!Te [:term]]
   ^{:doc/actions [{:name "goto file start", :exec ["goto_file_start"], :program "helix-common"}
+                  {:name "goto top", :exec ["gotoTop"], :program "lazygit"}
                   {:name "goto file start", :exec ["CursorStart"], :program "micro"}]} [:!C#Pup_arrow [:home] [:term]]
   ^{:doc/actions [{:name "goto file end", :exec ["goto_last_line"], :program "helix-common"}
+                  {:name "goto bottom", :exec ["gotoBottom"], :program "lazygit"}
                   {:name "goto file end", :exec ["CursorEnd"], :program "micro"}]} [:!C#Pdown_arrow [:end] [:term]]
 
   ^{:doc/actions [{:name "select line start", :exec ["select_mode", "goto_line_start", "MODE"], :program "helix-common"}
