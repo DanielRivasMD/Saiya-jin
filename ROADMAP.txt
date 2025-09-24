@@ -1,23 +1,22 @@
-- babel micro & helix fully functional; work on broot, lazygit, zellij
+- babel micro & helix fully functional, lazygit, zellij; next broot
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
 - coordinate Zellij / Helix
 - sync browser hotkeys
 - review zellij bindings
 - document terminal sequences
+- update clojure generators
+- document properly massive overhall
+- bugged tab mode
+- karabiner files, worth tracking?
 
 ==================================================
-frag/apps/browser.edn:; TODO: update config
-frag/apps/mail.edn:; TODO: update
-frag/apps/zoom.edn:; TODO: homogenize to format
-frag/profile/keys.edn:; TODO: update
-frag/profile/keys.edn:  ; TODO: CHANGE `term` pop-up new
-frag/mode/q.edn: ; TODO: update temp mapping
-frag/double/lctl.edn:; TODO: relocate
-frag/simple/patch.edn:; TODO: update
-frag/mode/z.edn: ; TODO: add binding
-frag/simple/loptcmd.edn:  ; TODO: annotate zellij binds
-frag/simple/hyper.edn:  ; TODO: review hyper - zellij bindings
-frag/simple/tab.edn:; TODO: annotate rectangle hotkeys
-frag/simple/lcmd.edn:; TODO: potential order arrows, right keys, alphabet?
-frag/simple/lcmd.edn:; TODO: annotated not bound keys
+src/apps/zoom.clj:; TODO: homogenize to format
+src/apps/browser.clj:; TODO: update config
+src/double/lctl.edn:; TODO: relocate
+src/profile/keymod.clj:; TODO: update
+src/profile/keymod.clj:  ; TODO: CHANGE `term` pop-up new
+src/simple/tab.clj:; TODO: annotate rectangle hotkeys
+src/simple/lopt.clj:; TODO: finish sequences
+src/mode/z.clj: ; TODO: add binding
+src/mode/q.clj: ; TODO: update temp mapping
 ==================================================
