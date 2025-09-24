@@ -1,0 +1,68 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; PATCH
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(ns simple.patch
+  (:require [clojure.java.io :as io]
+            [clojure.pprint :as pp]
+            [config :as c]))
+
+(def out-file "patch.edn")
+
+(defn patch []
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  {:des "Additional keys - MacPro"
+   :rules
+   [:pro
+    [:#Pdelete_or_backspace [:grave_accent_and_tilde]]                                               ; '`'
+    [:!C#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
+    [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
+    ]
+
+  ; keys - MacAir
+   [:air
+    [:#Pdelete_or_backspace [:grave_accent_and_tilde]]                                               ; '`'
+    [:!T#Pdelete_or_backspace [:grave_accent_and_tilde :grave_accent_and_tilde :grave_accent_and_tilde]]  ; '```'
+    [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
+    [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
+    [:!C#Pdelete_or_backspace [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]          ; ' =~ '
+    [:f1 :display_brightness_decrement]
+    [:f2 :display_brightness_increment]
+    [:f3 :illumination_decrement]
+    [:f4 :illumination_increment]
+    [:f10 :mute]
+    [:f11 :volume_decrement]
+    [:f12 :volume_increment]]
+
+  ; keys - Master
+   [:master
+    [:#Pdelete_or_backspace [:grave_accent_and_tilde]]                                               ; '`'
+    [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]                                           ; '~'
+    [:!O#Pdelete_or_backspace [:spacebar :!Sgrave_accent_and_tilde :spacebar]]                       ; ' ~ '
+    ]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ; keypad
+   [:#Pkeypad_hyphen :mute]
+   [:#Pkeypad_plus :volume_increment]
+   [:#Pkeypad_enter :volume_decrement]
+
+   [:!S#Pkeypad_hyphen :keypad_hyphen]
+   [:!S#Pkeypad_plus :keypad_plus]
+   [:!S#Pkeypad_enter :equal_sign]
+   [:!Sf18 :keypad_slash]
+   [:!Sf19 :keypad_asterisk]})
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn -main []
+  (with-open [w (io/writer (str c/edn-path out-file))]
+    (binding [*out* w
+              *print-meta* true
+              *print-namespace-maps* false]
+      (pp/pprint (patch)))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
