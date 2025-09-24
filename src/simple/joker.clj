@@ -1,0 +1,58 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; JOKER => EWQ
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(ns simple.joker
+  (:require [clojure.java.io :as io]
+            [clojure.pprint :as pp]
+            [config :as c]))
+
+(def out-file "joker.edn")
+
+(defn joker []
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  {:des "Joker Mode"
+   :rules
+   [;
+  ; [:!EWQ#Pleft_arrow [:!Opage_up] [:term]]
+  ; [:!EWQ#Pright_arrow [:!Opage_down] [:term]]
+  ; [:!EWQ#Pup_arrow [:!Ohome] [:term]]
+  ; [:!EWQ#Pdown_arrow [:!Oend] [:term]]
+
+  ; [:!EWQS#Pleft_arrow [:!OSpage_up] [:term]]
+  ; [:!EWQS#Pright_arrow [:!OSpage_down] [:term]]
+  ; [:!EWQS#Pup_arrow [:!OShome] [:term]]
+  ; [:!EWQS#Pdown_arrow [:!OSend] [:term]]
+
+    [:!EWQ#Phyphen [:hyphen :hyphen]]                                                                ; '--'
+    [:!EWQ#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                                                ; '++'
+
+    [:!EWQ#Popen_bracket [:!Scomma :!Scomma]]                                                        ; '<<'
+    [:!EWQ#Pclose_bracket [:!Speriod :!Speriod]]                                                     ; '>>'
+  ; [:!EWQ#Psemicolon []]
+    [:!EWQ#Pquote [:!Ssemicolon :!Ssemicolon]]                                                       ; '::'
+    [:!EWQ#Pbackslash [:!Sbackslash :!Sbackslash]]                                                   ; '||'
+    [:!EWQ#Pcomma [:period :period]]                                                                 ; '..'
+    [:!EWQ#Pperiod [:period :period :period]]                                                        ; '...'
+    [:!EWQ#Pslash [:!S1 :!S1]]                                                                       ; '!!'
+
+  ; [:!EWQ#Pdelete_or_backspace []]
+    [:!EWQ#Preturn_or_enter [:equal_sign :equal_sign]]                                               ; '=='
+  ; [:!EWQ#Pright_shift []]
+    [:!EWQ#Pright_option [:!S8 :!S8]]                                                                ; '**'
+    [:!EWQ#Pright_command [:slash :slash]]                                                           ; '//'
+  ; [:!EWQ#Pspacebar []]
+    ]})
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn -main []
+  (with-open [w (io/writer (str c/edn-path out-file))]
+    (binding [*out* w
+              *print-meta* true
+              *print-namespace-maps* false]
+      (pp/pprint (joker)))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
