@@ -2,12 +2,12 @@
 ####################################################################################################
 
 # config
-source ".config/config.sh"
+source ".just/config.sh"
 
 ####################################################################################################
 
 # link
-ln -sf "${karabiner}" "${HOME}/.config/"         && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}karabiner${NC}"
-ln -sf "${karabiner}/karabiner.edn" "${config}/" && echo "Linked ${BIYELLOW}=>${NC} ${BBLUE}karabiner${NC}"
+ln -svf "${karabiner}" "${HOME}/.config/"
+ln -svf "${karabiner}/karabiner.edn" "${config}/"
 
 ####################################################################################################
