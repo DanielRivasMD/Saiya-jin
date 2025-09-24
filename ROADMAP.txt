@@ -6,17 +6,17 @@
 - document terminal sequences
 - update clojure generators
 - document properly massive overhall
-- bugged tab mode
+- bugged tab mode => potentially resolve when patching header profile
 - karabiner files, worth tracking?
 
 ==================================================
-src/apps/zoom.clj:; TODO: homogenize to format
-src/apps/browser.clj:; TODO: update config
-src/double/lctl.edn:; TODO: relocate
-src/profile/keymod.clj:; TODO: update
-src/profile/keymod.clj:  ; TODO: CHANGE `term` pop-up new
-src/simple/tab.clj:; TODO: annotate rectangle hotkeys
-src/simple/lopt.clj:; TODO: finish sequences
 src/mode/z.clj: ; TODO: add binding
 src/mode/q.clj: ; TODO: update temp mapping
+src/apps/zoom.clj:; TODO: homogenize to format
+src/profile/keymod.clj:; TODO: update
+src/profile/keymod.clj:  ; TODO: CHANGE `term` pop-up new
+src/apps/browser.clj:; TODO: update config
+src/simple/tab.clj:; TODO: annotate rectangle hotkeys
+src/double/lctl.edn:; TODO: relocate
+src/simple/lopt.clj:; TODO: finish sequences
 ==================================================
