@@ -62,10 +62,35 @@
 (def hm "home")
 (def ed "end")
 
+(def kpu (mk "page_up"))
+(def kpd (mk "page_down"))
+(def khm (mk "home"))
+(def ked (mk "end"))
+
 (def au "up_arrow")
 (def ad "down_arrow")
 (def al "left_arrow")
 (def ar "right_arrow")
+
+(def kau (mk "up_arrow"))
+(def kad (mk "down_arrow"))
+(def kal (mk "left_arrow"))
+(def kar (mk "right_arrow"))
+
+(def ksau (mk b s "up_arrow"))
+(def ksad (mk b s "down_arrow"))
+(def ksal (mk b s "left_arrow"))
+(def ksar (mk b s "right_arrow"))
+
+(def koau (mk b o "up_arrow"))
+(def koad (mk b o "down_arrow"))
+(def koal (mk b o "left_arrow"))
+(def koar (mk b o "right_arrow"))
+
+(def kosau (mk b o s "up_arrow"))
+(def kosad (mk b o s "down_arrow"))
+(def kosal (mk b o s "left_arrow"))
+(def kosar (mk b o s "right_arrow"))
 
 (def ob "open_bracket")
 (def cb "close_bracket")
