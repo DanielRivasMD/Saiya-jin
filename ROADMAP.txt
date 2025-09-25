@@ -7,15 +7,16 @@
 - update clojure generators
 - document properly massive overhall
 - karabiner files, worth tracking?
+- bug: double Tq
 
 ==================================================
+src/apps/zoom.clj:; TODO: homogenize to format
+src/apps/browser.clj:; TODO: update config
 src/mode/z.clj: ; TODO: add binding
-src/mode/q.clj: ; TODO: update temp mapping
 src/profile/keymod.clj:; TODO: update
 src/profile/keymod.clj:  ; TODO: CHANGE `term` pop-up new
-src/apps/zoom.clj:; TODO: homogenize to format
-src/simple/tab.clj:; TODO: annotate rectangle hotkeys
+src/mode/q.clj: ; TODO: update temp mapping
 src/double/lctl.edn:; TODO: relocate
-src/apps/browser.clj:; TODO: update config
-src/simple/lopt.clj:; TODO: finish sequences
+src/simple/lopt.clj:; TODO: patch float coors for font size 14
+src/simple/tab.clj:; TODO: annotate rectangle hotkeys
 ==================================================
