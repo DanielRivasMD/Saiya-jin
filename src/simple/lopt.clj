@@ -71,6 +71,7 @@
 (def hc-cmd              ["command_mode"])
 (def mc-cmd              ["CommandMode"])
 
+; TODO: patch float coors for font size 14
 (def hc-select-all       ["select_all"])
 (def mc-select-all       ["SelectAll"])
 (def hc-copy-line        ["extend_to_line_bounds", "yank_to_clipboard"])
@@ -193,91 +194,91 @@
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .+ `"}]}         [(c/mk c/ilopts c/eq) [:spacebar :period :!Sequal_sign :spacebar]]
 
     ; alphabetic glyphs
-    ^{:doc/actions [{:program c/hc,    :action "format",             :exec hc-format}]}            [(c/mk c/ilopt "a") [:!Of1] :term]
+    ^{:doc/actions [{:program c/hc,    :action "format",             :exec hc-format}]}            [(c/mk c/ilopt "a")   [:!Of1] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "b")     [:!Of2] :term]
     ^{:doc/actions [{:program c/hc,    :action "copy",               :exec hc-copy}
-                    {:program c/mc,    :action "copy",               :exec mc-copy}]}              [(c/mk c/ilopt "c") [:!Of4] :term]
+                    {:program c/mc,    :action "copy",               :exec mc-copy}]}              [(c/mk c/ilopt "c")   [:!Of4] :term]
     ^{:doc/actions [{:program c/hc,    :action "spawn multi",        :exec hc-spawn-multi}
-                    {:program c/mc,    :action "spawn multi",        :exec mc-spawn-multi}]}       [(c/mk c/ilopt "d") [:!Of5] :term]
+                    {:program c/mc,    :action "spawn multi",        :exec mc-spawn-multi}]}       [(c/mk c/ilopt "d")   [:!Of5] :term]
     ^{:doc/actions [{:program c/hc,    :action "toggle comments",    :exec hc-toggle-com}
-                    {:program c/mc,    :action "toggle comments",    :exec mc-toggle-com}]}        [(c/mk c/ilopt "e") [:!Of6] :term]
+                    {:program c/mc,    :action "toggle comments",    :exec mc-toggle-com}]}        [(c/mk c/ilopt "e")   [:!Of6] :term]
     ^{:doc/actions [{:program c/hc,    :action "search",             :exec hc-search}
-                    {:program c/mc,    :action "search",             :exec mc-search}]}            [(c/mk c/ilopt "f") [:!Of7] :term]
+                    {:program c/mc,    :action "search",             :exec mc-search}]}            [(c/mk c/ilopt "f")   [:!Of7] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "g")     [:!Of8] :term]
     ^{:doc/actions [{:program c/hc,    :action "find prev",          :exec hc-find-prev}
-                    {:program c/mc,    :action "find prev",          :exec mc-find-prev}]}         [(c/mk c/ilopt "h") [:!Of9] :term]
+                    {:program c/mc,    :action "find prev",          :exec mc-find-prev}]}         [(c/mk c/ilopt "h")   [:!Of9] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "i")     [:!Of10] :term]
     ^{:doc/actions [{:program c/hc,    :action "spawn multi down",   :exec hc-spawn-down}
-                    {:program c/mc,    :action "spawn multi down",   :exec mc-spawn-down}]}        [(c/mk c/ilopt "j") [:!Tf1] :term]
+                    {:program c/mc,    :action "spawn multi down",   :exec mc-spawn-down}]}        [(c/mk c/ilopt "j")   [:!Tf1] :term]
     ^{:doc/actions [{:program c/hc,    :action "spawn multi up",     :exec hc-spawn-up}
-                    {:program c/mc,    :action "spawn multi up",     :exec mc-spawn-up}]}          [(c/mk c/ilopt "k") [:!Tf2] :term]
+                    {:program c/mc,    :action "spawn multi up",     :exec mc-spawn-up}]}          [(c/mk c/ilopt "k")   [:!Tf2] :term]
     ^{:doc/actions [{:program c/hc,    :action "find next",          :exec hc-find-next}
-                    {:program c/mc,    :action "find next",          :exec mc-find-next}]}         [(c/mk c/ilopt "l") [:!Tf4] :term]
+                    {:program c/mc,    :action "find next",          :exec mc-find-next}]}         [(c/mk c/ilopt "l")   [:!Tf4] :term]
     ^{:doc/actions [{:program c/hc,    :action "toggle macro",       :exec hc-record}
-                    {:program c/mc,    :action "toggle macro",       :exec mc-record}]}            [(c/mk c/ilopt "m") [:!Tf5] :term]
+                    {:program c/mc,    :action "toggle macro",       :exec mc-record}]}            [(c/mk c/ilopt "m")   [:!Tf5] :term]
     ^{:doc/actions [{:program c/hc,    :action "new buffer",         :exec hc-new}
-                    {:program c/mc,    :action "new buffer",         :exec mc-new}]}               [(c/mk c/ilopt "n") [:!Tf6] :term]
+                    {:program c/mc,    :action "new buffer",         :exec mc-new}]}               [(c/mk c/ilopt "n")   [:!Tf6] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "o")     [:!Tf7] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "p")     [:!Tf8] :term]
     ^{:doc/actions [{:program c/hc,    :action "quit",               :exec hc-quit}
-                    {:program c/mc,    :action "quit",               :exec mc-quit}]}              [(c/mk c/ilopt "q") [:!Tf9] :term]
-    ^{:doc/actions [{:program c/hc,    :action "reload buffers",     :exec hc-reload}]}            [(c/mk c/ilopt "r") [:!Tf10] :term]
+                    {:program c/mc,    :action "quit",               :exec mc-quit}]}              [(c/mk c/ilopt "q")   [:!Tf9] :term]
+    ^{:doc/actions [{:program c/hc,    :action "reload buffers",     :exec hc-reload}]}            [(c/mk c/ilopt "r")   [:!Tf10] :term]
     ^{:doc/actions [{:program c/hc,    :action "save & quit",        :exec hc-write-quit}
-                    {:program c/mc,    :action "save & quit",        :exec mc-write-quit}]}        [(c/mk c/ilopt "s") [:!OTf1] :term]
+                    {:program c/mc,    :action "save & quit",        :exec mc-write-quit}]}        [(c/mk c/ilopt "s")   [:!OTf1] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "t")     [:!OTf2] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "u")     [:!OTf4] :term]
     ^{:doc/actions [{:program c/hc,    :action "paste",              :exec hc-paste}
-                    {:program c/mc,    :action "paste",              :exec mc-paste}]}             [(c/mk c/ilopt "v") [:!OTf5] :term]
+                    {:program c/mc,    :action "paste",              :exec mc-paste}]}             [(c/mk c/ilopt "v")   [:!OTf5] :term]
     ^{:doc/actions [{:program c/hc,    :action "save",               :exec hc-write}
-                    {:program c/mc,    :action "save",               :exec mc-write}]}             [(c/mk c/ilopt "w") [:!OTf6] :term]
+                    {:program c/mc,    :action "save",               :exec mc-write}]}             [(c/mk c/ilopt "w")   [:!OTf6] :term]
     ^{:doc/actions [{:program c/hc,    :action "cut",                :exec hc-cut}
-                    {:program c/mc,    :action "cut",                :exec mc-cut}]}               [(c/mk c/ilopt "x") [:!OTf7] :term]
+                    {:program c/mc,    :action "cut",                :exec mc-cut}]}               [(c/mk c/ilopt "x")   [:!OTf7] :term]
     ^{:doc/actions [{:program c/hc,    :action "skip multi",         :exec hc-skip-multi}
-                    {:program c/mc,    :action "skip multi",         :exec mc-skip-multi}]}        [(c/mk c/ilopt "y") [:!OTf8] :term]
+                    {:program c/mc,    :action "skip multi",         :exec mc-skip-multi}]}        [(c/mk c/ilopt "y")   [:!OTf8] :term]
     ^{:doc/actions [{:program c/hc,    :action "remove multi",       :exec hc-rm-multi}
-                    {:program c/mc,    :action "remove multi",       :exec mc-rm-multi}]}          [(c/mk c/ilopt "z") [:!OTf9] :term]
+                    {:program c/mc,    :action "remove multi",       :exec mc-rm-multi}]}          [(c/mk c/ilopt "z")   [:!OTf9] :term]
     ^{:doc/actions [{:program c/hc,    :action "command mode",       :exec hc-cmd}
-                    {:program c/mc,    :action "command mode",       :exec mc-cmd}]}               [(c/mk c/ilopt c/rt) [:!OTf10] :term]
+                    {:program c/mc,    :action "command mode",       :exec mc-cmd}]}               [(c/mk c/ilopt c/rt)  [:!OTf10] :term]
 
     ^{:doc/actions [{:program c/hc,    :action "select all",         :exec hc-select-all}
-                    {:program c/mc,    :action "select all",         :exec mc-select-all}]}        [(c/mk c/ilopts "a") [:!OSf1] :term]
+                    {:program c/mc,    :action "select all",         :exec mc-select-all}]}        [(c/mk c/ilopts "a")  [:!OSf1] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "b")    [:!OSf2] :term]
     ^{:doc/actions [{:program c/hc,    :action "copy line",          :exec hc-copy-line}
-                    {:program c/mc,    :action "copy line",          :exec mc-copy-line}]}         [(c/mk c/ilopts "c") [:!OSf4] :term]
+                    {:program c/mc,    :action "copy line",          :exec mc-copy-line}]}         [(c/mk c/ilopts "c")  [:!OSf4] :term]
     ^{:doc/actions [{:program c/hc,    :action "duplicate line",     :exec hc-dup-line}
-                    {:program c/mc,    :action "duplicate line",     :exec mc-dup-line}]}          [(c/mk c/ilopts "d") [:!OSf5] :term]
+                    {:program c/mc,    :action "duplicate line",     :exec mc-dup-line}]}          [(c/mk c/ilopts "d")  [:!OSf5] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "e")    [:!OSf6] :term]
     ^{:doc/actions [{:program c/hc,    :action "global search",      :exec hc-global-search}
-                    {:program c/mc,    :action "global search",      :exec mc-global-search}]}     [(c/mk c/ilopts "f") [:!OSf7] :term]
+                    {:program c/mc,    :action "global search",      :exec mc-global-search}]}     [(c/mk c/ilopts "f")  [:!OSf7] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "g")    [:!OSf8] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "h")    [:!OSf9] :term]
     ^{:doc/actions [{:program c/hc,    :action "indent",             :exec hc-indent}
-                    {:program c/mc,    :action "indent",             :exec mc-indent}]}            [(c/mk c/ilopts "i") [:!OSf10] :term]
+                    {:program c/mc,    :action "indent",             :exec mc-indent}]}            [(c/mk c/ilopts "i")  [:!OSf10] :term]
     ^{:doc/actions [{:program c/hc,    :action "move down",          :exec hc-line-down}
-                    {:program c/mc,    :action "move down",          :exec mc-line-down}]}         [(c/mk c/ilopts "j") :!TSf1 :term]
+                    {:program c/mc,    :action "move down",          :exec mc-line-down}]}         [(c/mk c/ilopts "j")  [:!TSf1] :term]
     ^{:doc/actions [{:program c/hc,    :action "move up",            :exec hc-line-up}
-                    {:program c/mc,    :action "move up",            :exec mc-line-up}]}           [(c/mk c/ilopts "k") :!TSf2 :term]
+                    {:program c/mc,    :action "move up",            :exec mc-line-up}]}           [(c/mk c/ilopts "k")  [:!TSf2] :term]
     ^{:doc/actions [{:program c/hc,    :action "select line",        :exec hc-select-line}
-                    {:program c/mc,    :action "select line",        :exec mc-select-line}]}       [(c/mk c/ilopts "l") :!TSf4 :term]
+                    {:program c/mc,    :action "select line",        :exec mc-select-line}]}       [(c/mk c/ilopts "l")  [:!TSf4] :term]
     ^{:doc/actions [{:program c/hc,    :action "play macro",         :exec hc-play}
-                    {:program c/mc,    :action "play macro",         :exec mc-play}]}              [(c/mk c/ilopts "m") :!TSf5 :term]
+                    {:program c/mc,    :action "play macro",         :exec mc-play}]}              [(c/mk c/ilopts "m")  [:!TSf5] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "n")     [:!TSf6] :term]
     ^{:doc/actions [{:program c/hc,    :action "unindent",           :exec hc-unindent}
-                    {:program c/mc,    :action "unindent",           :exec mc-unindent}]}          [(c/mk c/ilopts "o") :!TSf7 :term]
+                    {:program c/mc,    :action "unindent",           :exec mc-unindent}]}          [(c/mk c/ilopts "o")  [:!TSf7] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "p")     [:!TSf8] :term]
-    ^{:doc/actions [{:program c/hc,    :action "launch lazygit",     :exec hc-lazygit}]}           [(c/mk c/ilopts "q") :!TSf9 :term]
-    ^{:doc/actions [{:program c/hc,    :action "launch serpl",       :exec hc-serpl}]}             [(c/mk c/ilopts "r") :!TSf10 :term]
+    ^{:doc/actions [{:program c/hc,    :action "launch lazygit",     :exec hc-lazygit}]}           [(c/mk c/ilopts "q")  [:!TSf9] :term]
+    ^{:doc/actions [{:program c/hc,    :action "launch serpl",       :exec hc-serpl}]}             [(c/mk c/ilopts "r")  [:!TSf10] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "s")     [:!OTSf1] :term]
-    ^{:doc/actions [{:program c/hc,    :action "compile todo",       :exec hc-todor}]}             [(c/mk c/ilopts "t") :!OTSf2 :term]
+    ^{:doc/actions [{:program c/hc,    :action "compile todo",       :exec hc-todor}]}             [(c/mk c/ilopts "t")  [:!OTSf2] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "u")     [:!OTSf4] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "v")     [:!OTSf5] :term]
-    ^{:doc/actions [{:program c/hc,    :action "launch watch",       :exec hc-watch}]}             [(c/mk c/ilopts "w") :!OTSf6 :term]
+    ^{:doc/actions [{:program c/hc,    :action "launch watch",       :exec hc-watch}]}             [(c/mk c/ilopts "w")  [:!OTSf6] :term]
     ^{:doc/actions [{:program c/hc,    :action "cut line",           :exec hc-cut-line}
-                    {:program c/mc,    :action "cut line",           :exec mc-cut-line}]}          [(c/mk c/ilopts "x") :!OTSf7 :term]
+                    {:program c/mc,    :action "cut line",           :exec mc-cut-line}]}          [(c/mk c/ilopts "x")  [:!OTSf7] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "y")     [:!OTSf8] :term]
-    ^{:doc/actions [{:program c/hc,    :action "yank diagnostic",    :exec hc-copy-diag}]}         [(c/mk c/ilopts "z") :!OTSf9 :term]
+    ^{:doc/actions [{:program c/hc,    :action "yank diagnostic",    :exec hc-copy-diag}]}         [(c/mk c/ilopts "z")  [:!OTSf9] :term]
     ^{:doc/actions [{:program c/hc,    :action "launch shell",       :exec hc-shell}
-                    {:program c/mc,    :action "shell mode",         :exec mc-shell}]}             [(c/mk c/ilopts c/rt) :!OTSf10 :term]]})
+                    {:program c/mc,    :action "shell mode",         :exec mc-shell}]}             [(c/mk c/ilopts c/rt) [:!OTSf10] :term]]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
