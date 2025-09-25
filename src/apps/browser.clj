@@ -16,7 +16,8 @@
 
 ; TODO: update config
 ; browser
-  {:des "Browser vimium mappings"
+  {:des "Browser overwrite Arc"
+
    :rules
    [;
     [:#Pright_shift :right_shift [:browser] {:alone [:!Of1]}]                    ; focus             ;
@@ -38,14 +39,10 @@
 
     [:!EWQ#Pup_arrow :!Of11 [:browser]]                                   ;
     [:!EWQ#Pdown_arrow :!Of12 [:browser]]                                   ;
-    ]}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; browser
-  {:des "Browser overwrite Arc"
-   :rules
-   [;
     [:!T#Pspacebar [:!Cs] [:browser]]                                            ; sidebar
     [:!C#Preturn_or_enter [:!Co] [:browser]]                                     ; fuse
 
