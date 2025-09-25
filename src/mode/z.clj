@@ -15,7 +15,7 @@
 
   {:des "Z mode"
    :rules
-   [:z
+   [:z-mode
  ; TODO: add binding
   ; ^{:doc/actions [{:action "goto-last-modification", :exec "goto_last_modification", :program "helix-common"}]}
 
@@ -47,4 +47,3 @@
       (pp/pprint (z)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
