@@ -67,6 +67,11 @@
 (def khm (mk "home"))
 (def ked (mk "end"))
 
+(def kspu (mk b s "page_up"))
+(def kspd (mk b s "page_down"))
+(def kshm (mk b s "home"))
+(def ksed (mk b s "end"))
+
 (def au "up_arrow")
 (def ad "down_arrow")
 (def al "left_arrow")
