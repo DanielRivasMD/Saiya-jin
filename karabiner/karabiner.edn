@@ -1,41 +1,34 @@
-
 {:profiles
 
+{:Default {:default true, :sim 50, :delay 300, :alone 300, :held 500}}
 
-{:Default {:default true, :sim 50, :delay 300, :alone 300, :held 500},
- :applications
- {:browser ["company.thebrowser.Browser"],
-  :finder ["com.apple.finder"],
-  :mail ["io.canarymail.mac"],
-  :skim ["net.sourceforge.skim-app.skim"],
-  :term ["org.alacritty"],
-  :zoom ["us.zoom.xos"]},
- :devices
- {:pro [{:vendor_id 1452, :product_id 832}],
-  :air [{:vendor_id 1452, :product_id 641}],
-  :master [{:vendor_id 1133, :product_id 45915}]},
- :templates
- {:launch "osascript -e 'tell application \"%s\" to activate'"},
- :layers
- {:period-mode {:key :period},
-  :backslash-mode {:key :backslash},
-  :w-mode {:key :w},
-  :comma-mode {:key :comma},
-  :k-mode {:key :k},
-  :zero-mode {:key :keypad_num_lock},
-  :cbracket-mode {:key :close_bracket},
-  :q-mode {:key :q},
-  :obracket-mode {:key :open_bracket},
-  :semicolon-mode {:key :semicolon},
-  :slash-mode {:key :slash},
-  :z-mode {:key :z},
-  :quote-mode {:key :quote},
-  :j-mode {:key :j},
-  :x-mode {:key :x}}}
 
+:applications
+
+{:browser ["company.thebrowser.Browser"],
+ :finder ["com.apple.finder"],
+ :mail ["io.canarymail.mac"],
+ :skim ["net.sourceforge.skim-app.skim"],
+ :term ["org.alacritty"],
+ :zoom ["us.zoom.xos"]}
+
+:devices
+
+{:pro [{:vendor_id 1452, :product_id 832}],
+ :air [{:vendor_id 1452, :product_id 641}],
+ :master [{:vendor_id 1133, :product_id 45915}]}
+
+:templates
+
+{:launch "osascript -e 'tell application \"%s\" to activate'"}
+
+:layers
+
+{:zero-mode {:key :keypad_num_lock},
+ :q-mode {:key :q},
+ :z-mode {:key :z}}
 
 :main [
-
 
 {:des "Browser overwrite Arc",
  :rules
@@ -736,7 +729,7 @@
 
 {:des "Z mode",
  :rules
- [:z
+ [:z-mode
   ^{:doc/actions
     [{:action "undo", :exec ["undo"], :program "helix-common"}
      {:action "undo", :exec ["Undo"], :program "micro"}]}
@@ -2977,39 +2970,44 @@
 
 {:des "Additional keys - MacPro",
  :rules
- [:pro
-  [:#Pdelete_or_backspace [:grave_accent_and_tilde]]
-  [:!C#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]
+ [[:#Pdelete_or_backspace [:grave_accent_and_tilde] :pro]
+  [:!C#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :pro]
   [:!O#Pdelete_or_backspace
-   [:spacebar :!Sgrave_accent_and_tilde :spacebar]]],
- [:air
-  [:#Pdelete_or_backspace [:grave_accent_and_tilde]]
+   [:spacebar :!Sgrave_accent_and_tilde :spacebar]
+   :pro]
+  [:#Pdelete_or_backspace [:grave_accent_and_tilde] :air]
   [:!T#Pdelete_or_backspace
    [:grave_accent_and_tilde
     :grave_accent_and_tilde
-    :grave_accent_and_tilde]]
-  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]
+    :grave_accent_and_tilde]
+   :air]
+  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :air]
   [:!O#Pdelete_or_backspace
-   [:spacebar :!Sgrave_accent_and_tilde :spacebar]]
+   [:spacebar :!Sgrave_accent_and_tilde :spacebar]
+   :air]
   [:!C#Pdelete_or_backspace
-   [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]]
-  [:f1 :display_brightness_decrement]
-  [:f2 :display_brightness_increment]
-  [:f3 :illumination_decrement]
-  [:f4 :illumination_increment]
-  [:f10 :mute]
-  [:f11 :volume_decrement]
-  [:f12 :volume_increment]]
- [:master
-  [:#Pdelete_or_backspace [:grave_accent_and_tilde]]
-  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde]]
+   [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]
+   :air]
+  [:f1 :display_brightness_decrement :air]
+  [:f2 :display_brightness_increment :air]
+  [:f3 :illumination_decrement :air]
+  [:f4 :illumination_increment :air]
+  [:f10 :mute :air]
+  [:f11 :volume_decrement :air]
+  [:f12 :volume_increment :air]
+  [:#Pdelete_or_backspace [:grave_accent_and_tilde] :master]
+  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :master]
   [:!O#Pdelete_or_backspace
-   [:spacebar :!Sgrave_accent_and_tilde :spacebar]]],
- [:#Pkeypad_hyphen :mute] [:#Pkeypad_plus :volume_increment],
- [:#Pkeypad_enter :volume_decrement]
- [:!S#Pkeypad_hyphen :keypad_hyphen],
- [:!S#Pkeypad_plus :keypad_plus] [:!S#Pkeypad_enter :equal_sign],
- [:!Sf18 :keypad_slash] [:!Sf19 :keypad_asterisk]}
+   [:spacebar :!Sgrave_accent_and_tilde :spacebar]
+   :master]
+  [:#Pkeypad_hyphen :mute]
+  [:#Pkeypad_plus :volume_increment]
+  [:#Pkeypad_enter :volume_decrement]
+  [:!S#Pkeypad_hyphen :keypad_hyphen]
+  [:!S#Pkeypad_plus :keypad_plus]
+  [:!S#Pkeypad_enter :equal_sign]
+  [:!Sf18 :keypad_slash]
+  [:!Sf19 :keypad_asterisk]]}
 
 {:des "Command Mode",
  :rules
@@ -3371,6 +3369,9 @@
 {:des "Tab Mode",
  :rules
  [[:!ROTC#Pdelete_or_backspace [:!ROTC#Pkeypad_num_lock]]
+  [:!ROTC#Pright_shift [:launch "Alacritty"]]
+  [:!ROTC#Pright_option [:launch "Arc"]]
+  [:!ROTC#Pright_command [:launch "Canary Mail"]]
   [:!ROTC#Pspacebar [:!W#Pnon_us_pound]]]}
 
 {:des "Modifier key remappings",
@@ -3391,7 +3392,5 @@
   [:#Pright_option :right_option nil {:alone [:!E#Pnon_us_pound]}]
   [:#Pright_command :right_command nil {:alone [:!Q#Pnon_us_pound]}]]}
 
-
   ]}]}
-
 
