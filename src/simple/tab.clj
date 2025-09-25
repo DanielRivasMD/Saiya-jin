@@ -32,12 +32,11 @@
   ; [:!ROTC#Pperiod []]                                                             COLLISION      ;
   ; [:!ROTC#Pslash []]                                                                             ;
 
- ; BUG: not functioning => probably not finding `:launch`
     [:!ROTC#Pdelete_or_backspace [:!ROTC#Pkeypad_num_lock]]                      ; control center    ; system
   ; [:!ROTC#Preturn_or_enter []]                                               ; speak             ; system
-    ; [:!ROTC#Pright_shift [:launch "Alacritty"]]
-    ; [:!ROTC#Pright_option [:launch "Arc"]]
-    ; [:!ROTC#Pright_command [:launch "Canary Mail"]]
+    [:!ROTC#Pright_shift [:launch "Alacritty"]]
+    [:!ROTC#Pright_option [:launch "Arc"]]
+    [:!ROTC#Pright_command [:launch "Canary Mail"]]
     [:!ROTC#Pspacebar [:!W#Pnon_us_pound]]                                       ; dictation         ; system
 
 ; [:!ROTC#Pkeypad_1 []]                                                                          ;
