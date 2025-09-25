@@ -9,36 +9,127 @@
 
 (def out-file "lopt.edn")
 
+(def hc-prev-word        ["move_prev_word_start", "collapse_selection"])
+(def hc-next-word        ["move_next_word_end", "collapse_selection"])
+
+(def hc-prev-para        ["goto_prev_paragraph"  "collapse_selection"])
+(def mc-prev-para        ["ParagraphPrevious"])
+(def hc-next-para        ["goto_next_paragraph"  "collapse_selection"])
+(def mc-next-para        ["ParagraphNext"])
+
+(def hc-select-prev-word ["extend_prev_word_start"])
+(def mc-select-prev-word ["SelectWordLeft"])
+(def hc-select-next-word ["extend_next_word_end"])
+(def mc-select-next-word ["SelectWordRight"])
+
+(def hi-select-prev-para ["select_mode" "goto_prev_paragraph" "insert_mode"])
+(def hn-select-prev-para ["select_mode" "goto_prev_paragraph" "normal_mode"])
+(def hs-select-prev-para ["select_mode" "goto_prev_paragraph" "select_mode"])
+(def mc-select-prev-para ["StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight"])
+
+(def hi-select-next-para ["select_mode" "goto_next_paragraph" "append_mode"])
+(def hn-select-next-para ["select_mode" "goto_next_paragraph" "normal_mode"])
+(def hs-select-next-para ["select_mode" "goto_next_paragraph" "select_mode"])
+(def mc-select-next-para ["StartOfLine,SelectLine,ParagraphNext,SelectWordRight"])
+
+(def hc-format           [":format"])
+(def hc-copy             ["yank_to_clipboard"])
+(def mc-copy             ["Copy"])
+(def hc-spawn-multi      ["search_selection", "extend_search_next"])
+(def mc-spawn-multi      ["SpawnMultiCursor"])
+(def hc-toggle-com       ["toggle_comments"])
+(def mc-toggle-com       ["lua:comment.comment"])
+(def hc-search           ["search"])
+(def mc-search           ["FindLiteral"])
+(def hc-find-prev        ["search_prev"])
+(def mc-find-prev        ["FindPrevious"])
+(def hc-spawn-down       ["normal_mode", "copy_selection_on_next_line", "MODE"])
+(def mc-spawn-down       ["SpawnMultiCursorDown"])
+(def hc-spawn-up         ["normal_mode", "copy_selection_on_prev_line", "MODE"])
+(def mc-spawn-up         ["SpawnMultiCursorUp"])
+(def hc-find-next        ["search_next"])
+(def mc-find-next        ["FindNext"])
+(def hc-record           ["record_macro"])
+(def mc-record           ["ToggleMacro"])
+(def hc-new              [":new"])
+(def mc-new              ["AddTab"])
+(def hc-quit             ["normal_mode", ":quit-all"])
+(def mc-quit             ["QuitAll"])
+(def hc-reload           ["normal_mode", ":reload-all", "MODE"])
+(def hc-write-quit       ["normal_mode", ":write-quit-all"])
+(def mc-write-quit       ["Save,QuitAll"])
+(def hc-paste            ["paste_clipboard_after"])
+(def mc-paste            ["Paste"])
+(def hc-write            ["normal_mode", ":write"])
+(def mc-write            ["Save"])
+(def hc-cut              ["yank_to_clipboard", "delete_selection_noyank"])
+(def mc-cut              ["Cut"])
+(def hc-skip-multi       ["search_selection", "search_next"])
+(def mc-skip-multi       ["SkipMultiCursor"])
+(def hc-rm-multi         ["search_selection", "search_prev"])
+(def mc-rm-multi         ["RemoveMultiCursor"])
+(def hc-cmd              ["command_mode"])
+(def mc-cmd              ["CommandMode"])
+
+(def hc-select-all       ["select_all"])
+(def mc-select-all       ["SelectAll"])
+(def hc-copy-line        ["extend_to_line_bounds", "yank_to_clipboard"])
+(def mc-copy-line        ["CopyLine"])
+(def hc-dup-line         ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"])
+(def mc-dup-line         ["DuplicateLine"])
+(def hc-global-search    ["global_search"])
+(def mc-global-search    ["Find"])
+(def hc-indent           ["indent"])
+(def mc-indent           ["IndentSelection"])
+(def hc-line-down        ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"])
+(def mc-line-down        ["MoveLinesDown"])
+(def hc-line-up          ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"])
+(def mc-line-up          ["MoveLinesUp"])
+(def hc-select-line      ["goto_line_end", "select_mode", "goto_line_start", "MODE"])
+(def mc-select-line      ["SelectLine"])
+(def hc-play             ["replay_macro"])
+(def mc-play             ["PlayMacro"])
+(def hc-unindent         ["unindent"])
+(def mc-unindent         ["OutdentSelection"])
+(def hc-lazygit          [":sh zellij run --name lazygit --pinned true  --close-on-exit --floating --height 100 --width 140 --x   0 --y   0 -- lazygit"])
+(def hc-serpl            [":sh zellij run --name serpl   --pinned true  --close-on-exit --floating --height 100 --width 140 --x   0 --y   0 -- serpl"])
+(def hc-todor            [":sh just todor"])
+(def hc-watch            [":sh zellij run --name canvas  --pinned true  --close-on-exit --floating --height  20 --width  40 --x 100 --y   0 -- just watch"])
+(def hc-cut-line         ["extend_to_line_bounds", "delete_selection_noyank"])
+(def mc-cut-line         ["CutLine"])
+(def hc-copy-diag        [":yank-diagnostic"])
+(def hc-shell            [":sh zellij run --name canvas  --pinned false --close-on-exit --floating --height 100 --width 140 --x   0 --y   0 -- zsh"])
+(def mc-shell            ["ShellMode"])
+
 (defn lopt []
 
-; TODO: finish sequences
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   {:des "Option Mode"
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/hc,    :action "goto prev word",     :exec ["move_prev_word_start", "collapse_selection"]}]}               [(c/mk c/ilopt c/al)   [:!Ob]            :term]
-    ^{:doc/actions [{:program c/hc,    :action "goto next word",     :exec ["move_next_word_end", "collapse_selection"]}]}                 [(c/mk c/ilopt c/ar)  [:!Of]            :term]
-    ^{:doc/actions [{:program c/hc,    :action "goto prev para",     :exec ["goto_prev_paragraph", "collapse_selection"]}
+    ^{:doc/actions [{:program c/hc,    :action "goto prev word",     :exec hc-prev-word}]}         [(c/mk c/ilopt c/al) [:!Ob] :term]
+    ^{:doc/actions [{:program c/hc,    :action "goto next word",     :exec hc-next-word}]}         [(c/mk c/ilopt c/ar) [:!Of] :term]
+    ^{:doc/actions [{:program c/hc,    :action "goto prev para",     :exec hc-prev-para}
                     {:program c/lg,    :action "goto prev page",     :exec ["prevPage"]}
-                    {:program c/mc,    :action "goto prev para",     :exec ["ParagraphPrevious"]}]}                                        [(c/mk c/ilopt c/au)     [:page_up]        :term]
-    ^{:doc/actions [{:program c/hc,    :action "goto next para",     :exec ["goto_next_paragraph", "collapse_selection"]}
+                    {:program c/mc,    :action "goto prev para",     :exec mc-prev-para}]}         [(c/mk c/ilopt c/au) [c/kpu] :term]
+    ^{:doc/actions [{:program c/hc,    :action "goto next para",     :exec hc-next-para}
                     {:program c/lg,    :action "goto next page",     :exec ["nextPage"]}
-                    {:program c/mc,    :action "goto next para",     :exec ["ParagraphNext"]}]}                                            [(c/mk c/ilopt c/ad)   [:page_down]      :term]
+                    {:program c/mc,    :action "goto next para",     :exec mc-next-para}]}         [(c/mk c/ilopt c/ad) [c/kpd] :term]
 
-    ^{:doc/actions [{:program c/hc,    :action "select prev word",   :exec ["extend_prev_word_start"]}
-                    {:program c/mc,    :action "select prev word",   :exec ["SelectWordLeft"]}]}                                           [(c/mk c/ilopts c/al)  [:!OSleft_arrow]  :term]
-    ^{:doc/actions [{:program c/hc,    :action "select next word",   :exec ["extend_next_word_end"]}
-                    {:program c/mc,    :action "select next word",   :exec ["SelectWordRight"]}]}                                          [(c/mk c/ilopts c/ar) [:!OSright_arrow] :term]
-    ^{:doc/actions [{:program c/hi,    :action "select prev para",   :exec ["select_mode", "goto_prev_paragraph", "insert_mode"]}
-                    {:program c/hn,    :action "select prev para",   :exec ["select_mode", "goto_prev_paragraph", "normal_mode"]}
-                    {:program c/hs,    :action "select prev para",   :exec ["select_mode", "goto_prev_paragraph", "select_mode"]}
-                    {:program c/mc,    :action "select prev para",   :exec ["StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight"]}]} [(c/mk c/ilopts c/au)    [:!OSup_arrow]    :term]
-    ^{:doc/actions [{:program c/hi,    :action "select next para",   :exec ["select_mode", "goto_next_paragraph", "append_mode"]}
-                    {:program c/hn,    :action "select next para",   :exec ["select_mode", "goto_next_paragraph", "normal_mode"]}
-                    {:program c/hs,    :action "select next para",   :exec ["select_mode", "goto_next_paragraph", "select_mode"]}
-                    {:program c/mc,    :action "select next para",   :exec ["StartOfLine,SelectLine,ParagraphNext,SelectWordRight"]}]}     [(c/mk c/ilopts c/ad)  [:!OSdown_arrow]  :term]
+    ^{:doc/actions [{:program c/hc,    :action "select prev word",   :exec hc-select-prev-word}
+                    {:program c/mc,    :action "select prev word",   :exec mc-select-prev-word}]}  [(c/mk c/ilopts c/al) [c/kosal] :term]
+    ^{:doc/actions [{:program c/hc,    :action "select next word",   :exec hc-select-next-word}
+                    {:program c/mc,    :action "select next word",   :exec mc-select-next-word}]}  [(c/mk c/ilopts c/ar) [c/kosar] :term]
+    ^{:doc/actions [{:program c/hi,    :action "select prev para",   :exec hi-select-prev-para}
+                    {:program c/hn,    :action "select prev para",   :exec hn-select-prev-para}
+                    {:program c/hs,    :action "select prev para",   :exec hs-select-prev-para}
+                    {:program c/mc,    :action "select prev para",   :exec mc-select-prev-para}]}  [(c/mk c/ilopts c/au) [c/kosau] :term]
+    ^{:doc/actions [{:program c/hi,    :action "select next para",   :exec hi-select-next-para}
+                    {:program c/hn,    :action "select next para",   :exec hn-select-next-para}
+                    {:program c/hs,    :action "select next para",   :exec hs-select-next-para}
+                    {:program c/mc,    :action "select next para",   :exec mc-select-next-para}]}  [(c/mk c/ilopts c/ad) [c/kosad] :term]
 
     ; technical glyphs
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` <= `"}]}         [(c/mk c/ilopt c/ob)  [:spacebar :!Scomma :equal_sign :spacebar]]
@@ -102,91 +193,91 @@
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .+ `"}]}         [(c/mk c/ilopts c/eq) [:spacebar :period :!Sequal_sign :spacebar]]
 
     ; alphabetic glyphs
-    ^{:doc/actions [{:program c/hc,    :action "format",             :exec [":format"]}]}          [(c/mk c/ilopt "a") [:!Of1] :term]
+    ^{:doc/actions [{:program c/hc,    :action "format",             :exec hc-format}]}            [(c/mk c/ilopt "a") [:!Of1] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "b")     [:!Of2] :term]
-    ^{:doc/actions [{:program c/hc,    :action "copy",               :exec ["yank_to_clipboard"]}
-                    {:program c/mc,    :action "copy",               :exec ["Copy"]}]}             [(c/mk c/ilopt "c") [:!Of4] :term]
-    ^{:doc/actions [{:program c/hc,    :action "spawn multi",        :exec ["search_selection", "extend_search_next"]}
-                    {:program c/mc,    :action "spawn multi",        :exec ["SpawnMultiCursor"]}]} [(c/mk c/ilopt "d") [:!Of5] :term]
-    ^{:doc/actions [{:program c/hc,    :action "toggle comments",    :exec ["toggle_comments"]}
-                    {:program c/mc,    :action "toggle comments",    :exec ["lua:comment.comment"]}]} [(c/mk c/ilopt "e") [:!Of6] :term]
-    ^{:doc/actions [{:program c/hc,    :action "search",             :exec ["search"]}
-                    {:program c/mc,    :action "search",             :exec ["FindLiteral"]}]}      [(c/mk c/ilopt "f") [:!Of7] :term]
+    ^{:doc/actions [{:program c/hc,    :action "copy",               :exec hc-copy}
+                    {:program c/mc,    :action "copy",               :exec mc-copy}]}              [(c/mk c/ilopt "c") [:!Of4] :term]
+    ^{:doc/actions [{:program c/hc,    :action "spawn multi",        :exec hc-spawn-multi}
+                    {:program c/mc,    :action "spawn multi",        :exec mc-spawn-multi}]}       [(c/mk c/ilopt "d") [:!Of5] :term]
+    ^{:doc/actions [{:program c/hc,    :action "toggle comments",    :exec hc-toggle-com}
+                    {:program c/mc,    :action "toggle comments",    :exec mc-toggle-com}]}        [(c/mk c/ilopt "e") [:!Of6] :term]
+    ^{:doc/actions [{:program c/hc,    :action "search",             :exec hc-search}
+                    {:program c/mc,    :action "search",             :exec mc-search}]}            [(c/mk c/ilopt "f") [:!Of7] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "g")     [:!Of8] :term]
-    ^{:doc/actions [{:program c/hc,    :action "find prev",          :exec ["search_prev"]}
-                    {:program c/mc,    :action "find prev",          :exec ["FindPrevious"]}]}     [(c/mk c/ilopt "h") [:!Of9] :term]
+    ^{:doc/actions [{:program c/hc,    :action "find prev",          :exec hc-find-prev}
+                    {:program c/mc,    :action "find prev",          :exec mc-find-prev}]}         [(c/mk c/ilopt "h") [:!Of9] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "i")     [:!Of10] :term]
-    ^{:doc/actions [{:program c/hc,    :action "spawn multi down",   :exec ["normal_mode", "copy_selection_on_next_line", "MODE"]}
-                    {:program c/mc,    :action "spawn multi down",   :exec ["SpawnMultiCursorDown"]}]} [(c/mk c/ilopt "j") [:!Tf1] :term]
-    ^{:doc/actions [{:program c/hc,    :action "spawn multi up",     :exec ["normal_mode", "copy_selection_on_prev_line", "MODE"]}
-                    {:program c/mc,    :action "spawn multi up",     :exec ["SpawnMultiCursorUp"]}]} [(c/mk c/ilopt "k") [:!Tf2] :term]
-    ^{:doc/actions [{:program c/hc,    :action "find next",          :exec ["search_next"]}
-                    {:program c/mc,    :action "find next",          :exec ["FindNext"]}]}         [(c/mk c/ilopt "l") [:!Tf4] :term]
-    ^{:doc/actions [{:program c/hc,    :action "toggle macro",       :exec ["record_macro"]}
-                    {:program c/mc,    :action "toggle macro",       :exec ["ToggleMacro"]}]}      [(c/mk c/ilopt "m") [:!Tf5] :term]
-    ^{:doc/actions [{:program c/hc,    :action "new buffer",         :exec [":new"]}
-                    {:program c/mc,    :action "new buffer",         :exec ["AddTab"]}]}           [(c/mk c/ilopt "n") [:!Tf6] :term]
+    ^{:doc/actions [{:program c/hc,    :action "spawn multi down",   :exec hc-spawn-down}
+                    {:program c/mc,    :action "spawn multi down",   :exec mc-spawn-down}]}        [(c/mk c/ilopt "j") [:!Tf1] :term]
+    ^{:doc/actions [{:program c/hc,    :action "spawn multi up",     :exec hc-spawn-up}
+                    {:program c/mc,    :action "spawn multi up",     :exec mc-spawn-up}]}          [(c/mk c/ilopt "k") [:!Tf2] :term]
+    ^{:doc/actions [{:program c/hc,    :action "find next",          :exec hc-find-next}
+                    {:program c/mc,    :action "find next",          :exec mc-find-next}]}         [(c/mk c/ilopt "l") [:!Tf4] :term]
+    ^{:doc/actions [{:program c/hc,    :action "toggle macro",       :exec hc-record}
+                    {:program c/mc,    :action "toggle macro",       :exec mc-record}]}            [(c/mk c/ilopt "m") [:!Tf5] :term]
+    ^{:doc/actions [{:program c/hc,    :action "new buffer",         :exec hc-new}
+                    {:program c/mc,    :action "new buffer",         :exec mc-new}]}               [(c/mk c/ilopt "n") [:!Tf6] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "o")     [:!Tf7] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "p")     [:!Tf8] :term]
-    ^{:doc/actions [{:program c/hc,    :action "quit",               :exec ["normal_mode", ":quit-all"]}
-                    {:program c/mc,    :action "quit",               :exec ["QuitAll"]}]}          [(c/mk c/ilopt "q") [:!Tf9] :term]
-    ^{:doc/actions [{:program c/hc,    :action "reload buffers",     :exec ["normal_mode", ":reload-all", "MODE"]}]} [(c/mk c/ilopt "r") [:!Tf10] :term]
-    ^{:doc/actions [{:program c/hc,    :action "save & quit",        :exec ["normal_mode", ":write-quit-all"]}
-                    {:program c/mc,    :action "save & quit",        :exec ["Save,QuitAll"]}]}     [(c/mk c/ilopt "s") [:!OTf1] :term]
+    ^{:doc/actions [{:program c/hc,    :action "quit",               :exec hc-quit}
+                    {:program c/mc,    :action "quit",               :exec mc-quit}]}              [(c/mk c/ilopt "q") [:!Tf9] :term]
+    ^{:doc/actions [{:program c/hc,    :action "reload buffers",     :exec hc-reload}]}            [(c/mk c/ilopt "r") [:!Tf10] :term]
+    ^{:doc/actions [{:program c/hc,    :action "save & quit",        :exec hc-write-quit}
+                    {:program c/mc,    :action "save & quit",        :exec mc-write-quit}]}        [(c/mk c/ilopt "s") [:!OTf1] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "t")     [:!OTf2] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "u")     [:!OTf4] :term]
-    ^{:doc/actions [{:program c/hc,    :action "paste",              :exec ["paste_clipboard_after"]}
-                    {:program c/mc,    :action "paste",              :exec ["Paste"]}]}            [(c/mk c/ilopt "v") [:!OTf5] :term]
-    ^{:doc/actions [{:program c/hc,    :action "save",               :exec ["normal_mode", ":write"]}
-                    {:program c/mc,    :action "save",               :exec ["Save"]}]}             [(c/mk c/ilopt "w") [:!OTf6] :term]
-    ^{:doc/actions [{:program c/hc,    :action "cut",                :exec ["yank_to_clipboard", "delete_selection_noyank"]}
-                    {:program c/mc,    :action "cut",                :exec ["Cut"]}]}              [(c/mk c/ilopt "x") [:!OTf7] :term]
-    ^{:doc/actions [{:program c/hc,    :action "skip multi",         :exec ["search_selection", "search_next"]}
-                    {:program c/mc,    :action "skip multi",         :exec ["SkipMultiCursor"]}]}  [(c/mk c/ilopt "y") [:!OTf8] :term]
-    ^{:doc/actions [{:program c/hc,    :action "remove multi",       :exec ["search_selection", "search_prev"]}
-                    {:program c/mc,    :action "remove multi",       :exec ["RemoveMultiCursor"]}]} [(c/mk c/ilopt "z") [:!OTf9] :term]
-    ^{:doc/actions [{:program c/hc,    :action "command mode",       :exec ["command_mode"]}
-                    {:program c/mc,    :action "command mode",       :exec ["CommandMode"]}]}      [(c/mk c/ilopt c/rt) [:!OTf10] :term]
+    ^{:doc/actions [{:program c/hc,    :action "paste",              :exec hc-paste}
+                    {:program c/mc,    :action "paste",              :exec mc-paste}]}             [(c/mk c/ilopt "v") [:!OTf5] :term]
+    ^{:doc/actions [{:program c/hc,    :action "save",               :exec hc-write}
+                    {:program c/mc,    :action "save",               :exec mc-write}]}             [(c/mk c/ilopt "w") [:!OTf6] :term]
+    ^{:doc/actions [{:program c/hc,    :action "cut",                :exec hc-cut}
+                    {:program c/mc,    :action "cut",                :exec mc-cut}]}               [(c/mk c/ilopt "x") [:!OTf7] :term]
+    ^{:doc/actions [{:program c/hc,    :action "skip multi",         :exec hc-skip-multi}
+                    {:program c/mc,    :action "skip multi",         :exec mc-skip-multi}]}        [(c/mk c/ilopt "y") [:!OTf8] :term]
+    ^{:doc/actions [{:program c/hc,    :action "remove multi",       :exec hc-rm-multi}
+                    {:program c/mc,    :action "remove multi",       :exec mc-rm-multi}]}          [(c/mk c/ilopt "z") [:!OTf9] :term]
+    ^{:doc/actions [{:program c/hc,    :action "command mode",       :exec hc-cmd}
+                    {:program c/mc,    :action "command mode",       :exec mc-cmd}]}               [(c/mk c/ilopt c/rt) [:!OTf10] :term]
 
-    ^{:doc/actions [{:program c/hc,    :action "select all",         :exec ["select_all"]}
-                    {:program c/mc,    :action "select all",         :exec ["SelectAll"]}]}        [(c/mk c/ilopts "a") [:!OSf1] :term]
+    ^{:doc/actions [{:program c/hc,    :action "select all",         :exec hc-select-all}
+                    {:program c/mc,    :action "select all",         :exec mc-select-all}]}        [(c/mk c/ilopts "a") [:!OSf1] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "b")    [:!OSf2] :term]
-    ^{:doc/actions [{:program c/hc,    :action "copy line",          :exec ["extend_to_line_bounds", "yank_to_clipboard"]}
-                    {:program c/mc,    :action "copy line",          :exec ["CopyLine"]}]}         [(c/mk c/ilopts "c") [:!OSf4] :term]
-    ^{:doc/actions [{:program c/hc,    :action "duplicate line",     :exec ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"]}
-                    {:program c/mc,    :action "duplicate line",     :exec ["DuplicateLine"]}]}    [(c/mk c/ilopts "d") [:!OSf5] :term]
+    ^{:doc/actions [{:program c/hc,    :action "copy line",          :exec hc-copy-line}
+                    {:program c/mc,    :action "copy line",          :exec mc-copy-line}]}         [(c/mk c/ilopts "c") [:!OSf4] :term]
+    ^{:doc/actions [{:program c/hc,    :action "duplicate line",     :exec hc-dup-line}
+                    {:program c/mc,    :action "duplicate line",     :exec mc-dup-line}]}          [(c/mk c/ilopts "d") [:!OSf5] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "e")    [:!OSf6] :term]
-    ^{:doc/actions [{:program c/hc,    :action "global search",      :exec ["global_search"]}
-                    {:program c/mc,    :action "global search",      :exec ["Find"]}]}             [(c/mk c/ilopts "f") [:!OSf7] :term]
+    ^{:doc/actions [{:program c/hc,    :action "global search",      :exec hc-global-search}
+                    {:program c/mc,    :action "global search",      :exec mc-global-search}]}     [(c/mk c/ilopts "f") [:!OSf7] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "g")    [:!OSf8] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopts "h")    [:!OSf9] :term]
-    ^{:doc/actions [{:program c/hc,    :action "indent",             :exec ["indent"]}
-                    {:program c/mc,    :action "indent",             :exec ["IndentSelection"]}]}  [(c/mk c/ilopts "i") [:!OSf10] :term]
-    ^{:doc/actions [{:program c/hc,    :action "move down",          :exec ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"]}
-                    {:program c/mc,    :action "move down",          :exec ["MoveLinesDown"]}]}    [(c/mk c/ilopts "j") :!TSf1 :term]
-    ^{:doc/actions [{:program c/hc,    :action "move up",            :exec ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"]}
-                    {:program c/mc,    :action "move up",            :exec ["MoveLinesUp"]}]}      [(c/mk c/olopt "k") :!TSf2 :term]
-    ^{:doc/actions [{:program c/hc,    :action "select line",        :exec ["goto_line_end", "select_mode", "goto_line_start", "MODE"]}
-                    {:program c/mc,    :action "select line",        :exec ["SelectLine"]}]}       [(c/mk c/olopt "l") :!TSf4 :term]
-    ^{:doc/actions [{:program c/hc,    :action "play macro",         :exec ["replay_macro"]}
-                    {:program c/mc,    :action "play macro",         :exec ["PlayMacro"]}]}        [(c/mk c/olopt "m") :!TSf5 :term]
-    ^{:doc/actions [{}]} [(c/mk c/olopt "n")     [:!TSf6] :term]
-    ^{:doc/actions [{:program c/hc,    :action "unindent",           :exec ["unindent"]}
-                    {:program c/mc,    :action "unindent",           :exec ["OutdentSelection"]}]} [(c/mk c/ilopts "o") :!TSf7 :term]
-    ^{:doc/actions [{}]} [(c/mk c/olopt "p")     [:!TSf8] :term]
-    ^{:doc/actions [{:program c/hc,    :action "launch lazygit",     :exec [":sh zellij run --name lazygit --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- lazygit"]}]} [(c/mk c/ilopts "q") :!TSf9 :term]
-    ^{:doc/actions [{:program c/hc,    :action "launch serpl",       :exec [":sh zellij run --name serpl --close-on-exit --floating --pinned true --height 100 --width 140 --x 0 --y 0 -- serpl"]}]} [(c/mk c/ilopts "r") :!TSf10 :term]
-    ^{:doc/actions [{}]} [(c/mk c/olopt "s")     [:!OTSf1] :term]
-    ^{:doc/actions [{:program c/hc,    :action "compile todo",       :exec [":sh just todor"]}]}   [(c/mk c/ilopts "t") :!OTSf2 :term]
-    ^{:doc/actions [{}]} [(c/mk c/olopt "u")     [:!OTSf4] :term]
-    ^{:doc/actions [{}]} [(c/mk c/olopt "v")     [:!OTSf5] :term]
-    ^{:doc/actions [{:program c/hc,    :action "launch watch",       :exec [":sh zellij run --name canvas --close-on-exit --floating --pinned true --height 20 --width 40 --x 100 --y 0 -- just watch"]}]} [(c/mk c/ilopts "w") :!OTSf6 :term]
-    ^{:doc/actions [{:program c/hc,    :action "cut line",           :exec ["extend_to_line_bounds", "delete_selection_noyank"]}
-                    {:program c/mc,    :action "cut line",           :exec ["CutLine"]}]}          [(c/mk c/ilopts "x") :!OTSf7 :term]
-    ^{:doc/actions [{}]} [(c/mk c/olopt "y")     [:!OTSf8] :term]
-    ^{:doc/actions [{:program c/hc,    :action "yank diagnostic",    :exec [":yank-diagnostic"]}]} [(c/mk c/ilopts "z") :!OTSf9 :term]
-    ^{:doc/actions [{:program c/hc,    :action "launch shell",       :exec [":sh zellij run --name canvas --close-on-exit --floating --height 100 --width 140 --x 0 --y 0 -- zsh"]}
-                    {:program c/mc,    :action "shell mode",         :exec ["ShellMode"]}]}        [(c/mk c/ilopts c/rt) :!OTSf10 :term]]})
+    ^{:doc/actions [{:program c/hc,    :action "indent",             :exec hc-indent}
+                    {:program c/mc,    :action "indent",             :exec mc-indent}]}            [(c/mk c/ilopts "i") [:!OSf10] :term]
+    ^{:doc/actions [{:program c/hc,    :action "move down",          :exec hc-line-down}
+                    {:program c/mc,    :action "move down",          :exec mc-line-down}]}         [(c/mk c/ilopts "j") :!TSf1 :term]
+    ^{:doc/actions [{:program c/hc,    :action "move up",            :exec hc-line-up}
+                    {:program c/mc,    :action "move up",            :exec mc-line-up}]}           [(c/mk c/ilopts "k") :!TSf2 :term]
+    ^{:doc/actions [{:program c/hc,    :action "select line",        :exec hc-select-line}
+                    {:program c/mc,    :action "select line",        :exec mc-select-line}]}       [(c/mk c/ilopts "l") :!TSf4 :term]
+    ^{:doc/actions [{:program c/hc,    :action "play macro",         :exec hc-play}
+                    {:program c/mc,    :action "play macro",         :exec mc-play}]}              [(c/mk c/ilopts "m") :!TSf5 :term]
+    ^{:doc/actions [{}]} [(c/mk c/ilopts "n")     [:!TSf6] :term]
+    ^{:doc/actions [{:program c/hc,    :action "unindent",           :exec hc-unindent}
+                    {:program c/mc,    :action "unindent",           :exec mc-unindent}]}          [(c/mk c/ilopts "o") :!TSf7 :term]
+    ^{:doc/actions [{}]} [(c/mk c/ilopts "p")     [:!TSf8] :term]
+    ^{:doc/actions [{:program c/hc,    :action "launch lazygit",     :exec hc-lazygit}]}           [(c/mk c/ilopts "q") :!TSf9 :term]
+    ^{:doc/actions [{:program c/hc,    :action "launch serpl",       :exec hc-serpl}]}             [(c/mk c/ilopts "r") :!TSf10 :term]
+    ^{:doc/actions [{}]} [(c/mk c/ilopts "s")     [:!OTSf1] :term]
+    ^{:doc/actions [{:program c/hc,    :action "compile todo",       :exec hc-todor}]}             [(c/mk c/ilopts "t") :!OTSf2 :term]
+    ^{:doc/actions [{}]} [(c/mk c/ilopts "u")     [:!OTSf4] :term]
+    ^{:doc/actions [{}]} [(c/mk c/ilopts "v")     [:!OTSf5] :term]
+    ^{:doc/actions [{:program c/hc,    :action "launch watch",       :exec hc-watch}]}             [(c/mk c/ilopts "w") :!OTSf6 :term]
+    ^{:doc/actions [{:program c/hc,    :action "cut line",           :exec hc-cut-line}
+                    {:program c/mc,    :action "cut line",           :exec mc-cut-line}]}          [(c/mk c/ilopts "x") :!OTSf7 :term]
+    ^{:doc/actions [{}]} [(c/mk c/ilopts "y")     [:!OTSf8] :term]
+    ^{:doc/actions [{:program c/hc,    :action "yank diagnostic",    :exec hc-copy-diag}]}         [(c/mk c/ilopts "z") :!OTSf9 :term]
+    ^{:doc/actions [{:program c/hc,    :action "launch shell",       :exec hc-shell}
+                    {:program c/mc,    :action "shell mode",         :exec mc-shell}]}             [(c/mk c/ilopts c/rt) :!OTSf10 :term]]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
