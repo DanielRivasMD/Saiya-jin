@@ -9,6 +9,17 @@
 
 (def out-file "hyper.edn")
 
+(def zj-swap-tab-left ["MoveTab \"Left\";"])
+(def zj-swap-tab-right ["MoveTab \"Right\";"])
+(def zj-size-inc ["Resize \"Increase\";"])
+(def zj-size-dec ["Resize \"Decrease\";"])
+(def zj-toggle-pin ["TogglePanePinned;"])
+(def zj-toggle-float ["ToggleFloatingPanes;"])
+(def zj-entersearch ["SwitchToMode \"EnterSearch\"; SearchInput 0;"])
+(def zj-toggle-embed ["TogglePaneEmbedOrFloating;"])
+(def zj-locked ["SwitchToMode \"Locked\";"])
+(def zj-normal ["SwitchToMode \"Normal\";"])
+
 (defn hyper []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -17,10 +28,10 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/zj,    :action "page up",            :exec ["MoveTab \"Left\";"]}]}    [(c/mk c/ihyper c/al) [(c/mk c/b c/s c/pu)] :term]
-    ^{:doc/actions [{:program c/zj,    :action "page down",          :exec ["MoveTab \"Right\";"]}]}   [(c/mk c/ihyper c/ar) [(c/mk c/b c/s c/pd)] :term]
-    ^{:doc/actions [{:program c/zj,    :action "home",               :exec ["Resize \"Increase\";"]}]} [(c/mk c/ihyper c/au) [(c/mk c/b c/s c/hm)] :term]
-    ^{:doc/actions [{:program c/zj,    :action "end",                :exec ["Resize \"Decrease\";"]}]} [(c/mk c/ihyper c/ad) [(c/mk c/b c/s c/ed)] :term]
+    ^{:doc/actions [{:program c/zj,    :action "page up",            :exec zj-swap-tab-left}]}     [(c/mk c/ihyper c/al) [(c/mk c/kspu)] :term]
+    ^{:doc/actions [{:program c/zj,    :action "page down",          :exec zj-swap-tab-right}]}    [(c/mk c/ihyper c/ar) [(c/mk c/kspd)] :term]
+    ^{:doc/actions [{:program c/zj,    :action "home",               :exec zj-size-inc}]}          [(c/mk c/ihyper c/au) [(c/mk c/kshm)] :term]
+    ^{:doc/actions [{:program c/zj,    :action "end",                :exec zj-size-dec}]}          [(c/mk c/ihyper c/ad) [(c/mk c/ksed)] :term]
 
     ^{:doc/actions [{}]} [(c/mk c/ihypers c/al)  [(c/mk c/ohypers c/al)]]
     ^{:doc/actions [{}]} [(c/mk c/ihypers c/ar)  [(c/mk c/ohypers c/ar)]]
@@ -47,13 +58,13 @@
     ^{:doc/actions [{}]} [(c/mk c/ihypers c/sl)  [(c/mk c/ohypers c/sl)]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/zj, :action "pane float pin",    :exec ["TogglePanePinned;"]}]}                            [(c/mk c/ihyper c/db) [:!SOm] :term]
-    ^{:doc/actions [{:program c/zj, :action "pane float toggle", :exec ["ToggleFloatingPanes;"]}]}                         [(c/mk c/ihyper c/re) [:!SOn] :term]
-    ^{:doc/actions [{:program c/zj, :action "mode search",       :exec ["SwitchToMode \"EnterSearch\"; SearchInput 0;"]}]} [(c/mk c/ihyper c/rs) [:!Oh]  :term]
-    ^{:doc/actions [{:program c/zj, :action "pane float pop",    :exec ["TogglePaneEmbedOrFloating;"]}]}                   [(c/mk c/ihyper c/ro) [:!SOl] :term]
+    ^{:doc/actions [{:program c/zj, :action "pane float pin",    :exec zj-toggle-pin}]}            [(c/mk c/ihyper c/db) [:!SOm] :term]
+    ^{:doc/actions [{:program c/zj, :action "pane float toggle", :exec zj-toggle-float}]}          [(c/mk c/ihyper c/re) [:!SOn] :term]
+    ^{:doc/actions [{:program c/zj, :action "mode search",       :exec zj-entersearch}]}           [(c/mk c/ihyper c/rs) [:!Oh]  :term]
+    ^{:doc/actions [{:program c/zj, :action "pane float pop",    :exec zj-toggle-embed}]}          [(c/mk c/ihyper c/ro) [:!SOl] :term]
     ^{:doc/actions [{}]} [(c/mk c/ihyper c/rc)   [(c/mk c/ohyper c/rc)]]
-    ^{:doc/actions [{:program c/zj, :action "mode lock",         :exec ["SwitchToMode \"Locked\";"]}
-                    {:program c/zj, :action "mode normal",       :exec ["SwitchToMode \"Normal\";"]}]}                     [(c/mk c/ihyper c/sp) [:!Og]  :term]
+    ^{:doc/actions [{:program c/zj, :action "mode lock",         :exec zj-locked}
+                    {:program c/zj, :action "mode normal",       :exec zj-normal}]}                [(c/mk c/ihyper c/sp) [:!Og]  :term]
 
     ^{:doc/actions [{}]} [(c/mk c/ihypers c/db)  [(c/mk c/ohypers c/db)]]
     ^{:doc/actions [{}]} [(c/mk c/ihypers c/re)  [(c/mk c/ohypers c/re)]]
