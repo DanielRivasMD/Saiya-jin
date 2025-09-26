@@ -20,8 +20,13 @@
 (def hn "helix-normal")
 (def hs "helix-select")
 (def lg "lazygit")
-(def tm "terminal")
-(def zj  "zellij")
+(def tm "term")
+(def ze  "zellij-enter")
+(def zl  "zellij-lock")
+(def zt  "zellij-rtab")
+(def zp  "zellij-rpane")
+(def zs  "zellij-view")
+(def zj  "zellij-share")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -32,6 +37,8 @@
 (def e "E")
 (def t "T")
 (def w "W")
+(def c "C")
+(def q "Q")
 (def s "S")
 (def r "R")
 
@@ -40,15 +47,20 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(def ilopt (str b o cap))
+(def ilopts (str b o s cap))
+(def olopt (str b o))
+(def olopts (str b o s))
+
 (def ilctl (str b t cap))
 (def ilctls (str b t s cap))
 (def olctl (str b t))
 (def olctls (str b t s))
 
-(def ilopt (str b o cap))
-(def ilopts (str b o s cap))
-(def olopt (str b o))
-(def olopts (str b o s))
+(def ilcmd (str b c cap))
+(def ilcmds (str b c s cap))
+(def olcmd (str b c))
+(def olcmds (str b c s))
 
 (def ihyper (str b hyp cap))
 (def ihypers (str b hyp s cap))
