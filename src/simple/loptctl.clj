@@ -9,6 +9,9 @@
 
 (def out-file "loptctl.edn")
 
+(def zj-rename-pane-mode ["SwitchToMode \"RenamePane\"; PaneNameInput 0;"])
+(def zp-abort-rename ["UndoRenamePane; SwitchToMode \"Normal\";"])
+
 (defn loptctl []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -16,25 +19,18 @@
   {:des "Option - Control Mode"
    :rules
    [;
-  ; arrow glyphs
-    ^{:doc/actions [{:action "pane left",  :exec ["MoveFocus \"Left\";"], :program "zellij"}]}
-    [:!OT#Pleft_arrow  [:!Oj] [:term]]
-
-    ^{:doc/actions [{:action "pane right", :exec ["MoveFocus \"Right\";"], :program "zellij"}]}
-    [:!OT#Pright_arrow [:!Ok] [:term]]
-
-    ^{:doc/actions [{:action "pane up",    :exec ["MoveFocus \"Up\";"], :program "zellij"}]}
-    [:!OT#Pup_arrow    [:!Ol] [:term]]
-
-    ^{:doc/actions [{:action "pane down",  :exec ["MoveFocus \"Down\";"], :program "zellij"}]}
-    [:!OT#Pdown_arrow  [:!Om] [:term]]
+    ; arrow glyphs
+    ^{:doc/actions [{:action "pane left",  :exec ["MoveFocus \"Left\";"], :program "zellij"}]}    [:!OT#Pleft_arrow  [:!Oj] [:term]]
+    ^{:doc/actions [{:action "pane right", :exec ["MoveFocus \"Right\";"], :program "zellij"}]}    [:!OT#Pright_arrow [:!Ok] [:term]]
+    ^{:doc/actions [{:action "pane up",    :exec ["MoveFocus \"Up\";"], :program "zellij"}]}    [:!OT#Pup_arrow    [:!Ol] [:term]]
+    ^{:doc/actions [{:action "pane down",  :exec ["MoveFocus \"Down\";"], :program "zellij"}]}    [:!OT#Pdown_arrow  [:!Om] [:term]]
 
     ^{:doc/actions [{}]} [:!OTS#Pleft_arrow  [:!OTSleft_arrow]  [:term]]
     ^{:doc/actions [{}]} [:!OTS#Pright_arrow [:!OTSright_arrow] [:term]]
     ^{:doc/actions [{}]} [:!OTS#Pup_arrow    [:!OTSup_arrow]    [:term]]
     ^{:doc/actions [{}]} [:!OTS#Pdown_arrow  [:!OTSdown_arrow]  [:term]]
 
-  ; technical glyphs
+    ; technical glyphs
     ^{:doc/actions [{}]} [:!OT#Popen_bracket   [:!OTopen_bracket]]
     ^{:doc/actions [{}]} [:!OT#Pclose_bracket  [:!OTclose_bracket]]
     ^{:doc/actions [{}]} [:!OT#Psemicolon      [:!OTsemicolon]]
@@ -53,24 +49,14 @@
     ^{:doc/actions [{}]} [:!OTS#Pperiod        [:!OTSperiod]]
     ^{:doc/actions [{}]} [:!OTS#Pslash         [:!OTSslash]]
 
-  ; action glyphs
-    ^{:doc/actions [{:action "pane close",       :exec ["CloseFocus;"], :program "zellij"}]}
-    [:!OT#Pdelete_or_backspace :!Oo [:term]]
-
-    ^{:doc/actions [{:action "pane focus",       :exec ["ToggleFocusFullscreen;"], :program "zellij"}]}
-    [:!OT#Preturn_or_enter     :!Op [:term]]
-
-    ^{:doc/actions [{:action "pane split right", :exec ["NewPane \"Right\";"], :program "zellij"}]}
-    [:!OT#Pright_shift         :!Oq [:term]]
-
-    ^{:doc/actions [{:action "pane split down",  :exec ["NewPane \"Down\";"], :program "zellij"}]}
-    [:!OT#Pright_option        :!Or [:term]]
-
-    ^{:doc/actions [{:action "pane rename",      :exec ["SwitchToMode \"RenamePane\"; PaneNameInput 0;"], :program "zellij"}]}
-    [:!OT#Pright_command       :!Os [:term]]
-
-    ^{:doc/actions [{:action "pane jump back",   :exec ["SwitchFocus;"], :program "zellij"}]}
-    [:!OT#Pspacebar            :!Ot [:term]]
+    ; action glyphs
+    ^{:doc/actions [{:action "pane close",       :exec ["CloseFocus;"], :program "zellij"}]}    [:!OT#Pdelete_or_backspace :!Oo [:term]]
+    ^{:doc/actions [{:action "pane focus",       :exec ["ToggleFocusFullscreen;"], :program "zellij"}]}    [:!OT#Preturn_or_enter     :!Op [:term]]
+    ^{:doc/actions [{:action "pane split right", :exec ["NewPane \"Right\";"], :program "zellij"}]}    [:!OT#Pright_shift         :!Oq [:term]]
+    ^{:doc/actions [{:action "pane split down",  :exec ["NewPane \"Down\";"], :program "zellij"}]}    [:!OT#Pright_option        :!Or [:term]]
+    ^{:doc/actions [{:program c/zj,    :action "mode pane rename",   :exec zj-rename-pane-mode}
+                    {:program c/zp,    :action "abort pane rename",  :exec zp-abort-rename}]}    [:!OT#Pright_command  [:!Os] :term]
+    ^{:doc/actions [{:action "pane jump back",   :exec ["SwitchFocus;"], :program "zellij"}]}    [:!OT#Pspacebar            :!Ot [:term]]
 
     ^{:doc/actions [{}]} [:!OTS#Pdelete_or_backspace [:!OTSdelete_or_backspace]]
     ^{:doc/actions [{}]} [:!OTS#Preturn_or_enter     [:!OTSreturn_or_enter]]
@@ -79,7 +65,7 @@
     ^{:doc/actions [{}]} [:!OTS#Pright_command       [:!OTSright_command]]
     ^{:doc/actions [{}]} [:!OTS#Pspacebar            [:!OTSspacebar]]
 
-  ; numeric glyphs
+    ; numeric glyphs
     ^{:doc/actions [{}]} [:!OT#P1 [:!OT1]]
     ^{:doc/actions [{}]} [:!OT#P2 [:!OT2]]
     ^{:doc/actions [{}]} [:!OT#P3 [:!OT3]]
@@ -106,7 +92,7 @@
     ^{:doc/actions [{}]} [:!OTS#Phyphen [:!OTShyphen]]
     ^{:doc/actions [{}]} [:!OTS#Pequal_sign [:!OTSequal_sign]]
 
-  ; alphabetic glyphs
+    ; alphabetic glyphs
     ^{:doc/actions [{}]} [:!OT#Pa [:!OTa]]
     ^{:doc/actions [{}]} [:!OT#Pb [:!OTb]]
     ^{:doc/actions [{}]} [:!OT#Pc [:!OTc]]
