@@ -199,6 +199,7 @@
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .- `"}]}         [(c/mk c/ilopts c/hy) [:spacebar :period :hyphen :spacebar]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .+ `"}]}         [(c/mk c/ilopts c/eq) [:spacebar :period :!Sequal_sign :spacebar]]
 
+    ; TODO: launch float pane with editor (hx / mc); independent, or with reference
     ; alphabetic glyphs
     ^{:doc/actions [{:program c/hc,    :action "format",             :exec hc-format}]}            [(c/mk c/ilopt "a")   [:!Of1] :term]
     ^{:doc/actions [{}]} [(c/mk c/ilopt "b")     [:!Of2] :term]

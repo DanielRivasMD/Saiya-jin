@@ -31,6 +31,7 @@
   ; launcher
     [:#Ptab :!OTCright_shift nil {:alone :tab}]                                                      ; spectacle control, speak & app launcher
 
+; TODO: annotate escape zellij
   ; joker
     [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ; esc, language server protocol
 

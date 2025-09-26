@@ -8,15 +8,18 @@
 - document properly massive overhall
 - karabiner files, worth tracking?
 - bug: double Tq
+- doc simple sequences
 
 ==================================================
 src/apps/zoom.clj:; TODO: homogenize to format
-src/apps/browser.clj:; TODO: update config
-src/mode/z.clj: ; TODO: add binding
 src/profile/keymod.clj:; TODO: update
 src/profile/keymod.clj:  ; TODO: CHANGE `term` pop-up new
+src/profile/keymod.clj:; TODO: annotate escape zellij
+src/mode/z.clj: ; TODO: add binding
+src/apps/browser.clj:; TODO: update config
 src/mode/q.clj: ; TODO: update temp mapping
+src/simple/tab.clj:; TODO: annotate rectangle hotkeys
 src/double/lctl.edn:; TODO: relocate
 src/simple/lopt.clj:; TODO: patch float coors for font size 14
-src/simple/tab.clj:; TODO: annotate rectangle hotkeys
+src/simple/lopt.clj:    ; TODO: launch float pane with editor (hx / mc); independent, or with reference
 ==================================================
