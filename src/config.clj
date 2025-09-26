@@ -13,6 +13,7 @@
 
 (def edn-path "edn/")
 
+(def ay "alacritty")
 (def br "broot")
 (def mc "micro")
 (def hc "helix-common")
@@ -31,7 +32,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def b "!")
-(def cap "#P")
+(def p "#P")
 
 (def o "O")
 (def e "E")
@@ -43,29 +44,46 @@
 (def r "R")
 
 (def bs (str b s))
-(def hyp "OTC")
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(def bo (str b o))
+(def bos (str b o s))
+(def bop (str bo p))
+(def bosp (str bos p))
 
-(def ilopt (str b o cap))
-(def ilopts (str b o s cap))
-(def olopt (str b o))
-(def olopts (str b o s))
+(def bt (str b t))
+(def bts (str b t s))
+(def btp (str bt p))
+(def btsp (str bts p))
 
-(def ilctl (str b t cap))
-(def ilctls (str b t s cap))
-(def olctl (str b t))
-(def olctls (str b t s))
+(def bw (str b w))
+(def bws (str b w s))
+(def bwp (str bw p))
+(def bwsp (str bws p))
 
-(def ilcmd (str b c cap))
-(def ilcmds (str b c s cap))
-(def olcmd (str b c))
-(def olcmds (str b c s))
+(def bc (str b c))
+(def bcs (str b c s))
+(def bcp (str bc p))
+(def bcsp (str bcs p))
 
-(def ihyper (str b hyp cap))
-(def ihypers (str b hyp s cap))
-(def ohyper (str b hyp))
-(def ohypers (str b hyp s))
+(def boc (str b o c))
+(def bocs (str b o c s))
+(def bocp (str b o c p))
+(def bocsp (str b o c s p))
+
+(def bot (str b o t))
+(def bots (str b o t s))
+(def botp (str b o t p))
+(def botsp (str b o t s p))
+
+(def btc (str b t c))
+(def btcs (str b t c s))
+(def btcp (str b t c p))
+(def btcsp (str b t c s p))
+
+(def botcp (str b o t c p))
+(def botcsp (str b o t c s p))
+(def botc (str b o t c))
+(def botcs (str b o t c s))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -79,10 +97,10 @@
 (def khm (mk "home"))
 (def ked (mk "end"))
 
-(def kspu (mk b s "page_up"))
-(def kspd (mk b s "page_down"))
-(def kshm (mk b s "home"))
-(def ksed (mk b s "end"))
+(def kspu (mk bs "page_up"))
+(def kspd (mk bs "page_down"))
+(def kshm (mk bs "home"))
+(def ksed (mk bs "end"))
 
 (def au "up_arrow")
 (def ad "down_arrow")
@@ -94,20 +112,20 @@
 (def kal (mk "left_arrow"))
 (def kar (mk "right_arrow"))
 
-(def ksau (mk b s "up_arrow"))
-(def ksad (mk b s "down_arrow"))
-(def ksal (mk b s "left_arrow"))
-(def ksar (mk b s "right_arrow"))
+(def ksau (mk bs "up_arrow"))
+(def ksad (mk bs "down_arrow"))
+(def ksal (mk bs "left_arrow"))
+(def ksar (mk bs "right_arrow"))
 
-(def koau (mk b o "up_arrow"))
-(def koad (mk b o "down_arrow"))
-(def koal (mk b o "left_arrow"))
-(def koar (mk b o "right_arrow"))
+(def koau (mk bo "up_arrow"))
+(def koad (mk bo "down_arrow"))
+(def koal (mk bo "left_arrow"))
+(def koar (mk bo "right_arrow"))
 
-(def kosau (mk b o s "up_arrow"))
-(def kosad (mk b o s "down_arrow"))
-(def kosal (mk b o s "left_arrow"))
-(def kosar (mk b o s "right_arrow"))
+(def kosau (mk bos "up_arrow"))
+(def kosad (mk bos "down_arrow"))
+(def kosal (mk bos "left_arrow"))
+(def kosar (mk bos "right_arrow"))
 
 (def ob "open_bracket")
 (def cb "close_bracket")
