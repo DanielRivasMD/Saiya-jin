@@ -13,9 +13,13 @@
 (def hc-next-word        ["move_next_word_end", "collapse_selection"])
 
 (def hc-prev-para        ["goto_prev_paragraph"  "collapse_selection"])
+(def lg-prev-page        ["prevPage"])
 (def mc-prev-para        ["ParagraphPrevious"])
+(def ze-half-up          ["HalfPageScrollUp"])
 (def hc-next-para        ["goto_next_paragraph"  "collapse_selection"])
+(def lg-next-page        ["nextPage"])
 (def mc-next-para        ["ParagraphNext"])
+(def ze-half-down        ["HalfPageScrollDown"])
 
 (def hc-select-prev-word ["extend_prev_word_start"])
 (def mc-select-prev-word ["SelectWordLeft"])
@@ -92,14 +96,14 @@
 (def mc-play             ["PlayMacro"])
 (def hc-unindent         ["unindent"])
 (def mc-unindent         ["OutdentSelection"])
-(def hc-lazygit          [":sh zellij run --name lazygit --pinned true  --close-on-exit --floating --height 100 --width 140 --x   0 --y   0 -- lazygit"])
-(def hc-serpl            [":sh zellij run --name serpl   --pinned true  --close-on-exit --floating --height 100 --width 140 --x   0 --y   0 -- serpl"])
+(def hc-lazygit          [":sh zellij run --name lazygit --pinned true  --close-on-exit --floating  --width 180 --height  90 --x   0 --y   0 -- lazygit"])
+(def hc-serpl            [":sh zellij run --name serpl   --pinned true  --close-on-exit --floating  --width 180 --height  90 --x   0 --y   0 -- serpl"])
 (def hc-todor            [":sh just todor"])
-(def hc-watch            [":sh zellij run --name canvas  --pinned true  --close-on-exit --floating --height  20 --width  40 --x 100 --y   0 -- just watch"])
+(def hc-watch            [":sh zellij run --name canvas  --pinned true  --close-on-exit --floating  --width  45 --height  20 --x 135 --y   0 -- just watch"])
 (def hc-cut-line         ["extend_to_line_bounds", "delete_selection_noyank"])
 (def mc-cut-line         ["CutLine"])
 (def hc-copy-diag        [":yank-diagnostic"])
-(def hc-shell            [":sh zellij run --name canvas  --pinned false --close-on-exit --floating --height 100 --width 140 --x   0 --y   0 -- zsh"])
+(def hc-shell            [":sh zellij run --name canvas  --pinned false --close-on-exit --floating  --width 180 --height  90 --x   0 --y   0 -- zsh"])
 (def mc-shell            ["ShellMode"])
 
 (defn lopt []
@@ -110,14 +114,16 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/hc,    :action "goto prev word",     :exec hc-prev-word}]}         [(c/mk c/ilopt c/al) [:!Ob] :term]
-    ^{:doc/actions [{:program c/hc,    :action "goto next word",     :exec hc-next-word}]}         [(c/mk c/ilopt c/ar) [:!Of] :term]
+    ^{:doc/actions [{:program c/hc,    :action "goto prev word",     :exec hc-prev-word}]}         [(c/mk c/ilopt c/al)  [:!Ob] :term]
+    ^{:doc/actions [{:program c/hc,    :action "goto next word",     :exec hc-next-word}]}         [(c/mk c/ilopt c/ar)  [:!Of] :term]
     ^{:doc/actions [{:program c/hc,    :action "goto prev para",     :exec hc-prev-para}
-                    {:program c/lg,    :action "goto prev page",     :exec ["prevPage"]}
-                    {:program c/mc,    :action "goto prev para",     :exec mc-prev-para}]}         [(c/mk c/ilopt c/au) [c/kpu] :term]
+                    {:program c/lg,    :action "goto prev page",     :exec lg-prev-page}
+                    {:program c/mc,    :action "goto prev para",     :exec mc-prev-para}
+                    {:program c/ze,    :action "half page up",       :exec ze-half-up}]}           [(c/mk c/ilopt c/au)  [c/kpu] :term]
     ^{:doc/actions [{:program c/hc,    :action "goto next para",     :exec hc-next-para}
-                    {:program c/lg,    :action "goto next page",     :exec ["nextPage"]}
-                    {:program c/mc,    :action "goto next para",     :exec mc-next-para}]}         [(c/mk c/ilopt c/ad) [c/kpd] :term]
+                    {:program c/lg,    :action "goto next page",     :exec lg-next-page}
+                    {:program c/mc,    :action "goto next para",     :exec mc-next-para}
+                    {:program c/ze,    :action "half page down",     :exec ze-half-down}]}         [(c/mk c/ilopt c/ad)  [c/kpd] :term]
 
     ^{:doc/actions [{:program c/hc,    :action "select prev word",   :exec hc-select-prev-word}
                     {:program c/mc,    :action "select prev word",   :exec mc-select-prev-word}]}  [(c/mk c/ilopts c/al) [c/kosal] :term]
