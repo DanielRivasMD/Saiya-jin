@@ -9,6 +9,33 @@
 
 (def out-file "lctlcmd.edn")
 
+(def hc-prev-tab ["goto_previous_buffer"])
+(def lg-prev-tab ["prevTab"])
+(def mc-prev-tab ["PreviousTab"])
+(def ze-move-left ["MovePane \"Left\";"])
+(def hc-next-tab ["goto_next_buffer"])
+(def lg-next-tab ["nextTab"])
+(def mc-next-tab ["NextTab"])
+(def ze-move-rigth ["MovePane \"Right\";"])
+(def hc-inc ["increment"])
+(def lg-prev-block ["prevBlock-alt2"])
+(def ze-move-up ["MovePane \"Up\";"])
+(def hc-dec ["decrement"])
+(def lg-next-block ["nextBlock-alt2"])
+(def ze-move-down ["MovePane \"Down\";"])
+(def hc-close-tab [":buffer-close"])
+(def mc-close-tab ["Quit"])
+(def hc-unsplit ["wonly"])
+(def mc-unsplit ["Unsplit"])
+(def hc-vsplit ["vsplit"])
+(def mc-vsplit ["VSplit"])
+(def hc-hsplit ["hsplit"])
+(def mc-hsplit ["HSplit"])
+(def hc-close-split ["wclose"])
+(def mc-close-split ["Unsplit"])
+(def hc-last-tab ["goto_last_accessed_file"])
+(def br-toggle-preview [])
+
 (defn lctlcmd []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -16,24 +43,28 @@
   {:des "Control - Command Mode"
    :rules
    [;
-  ; arrow glyphs
-    ^{:doc/actions [{:action "jump prev buffer", :exec ["goto_previous_buffer"], :program "helix-common"}
-                    {:action "jump prev tab",    :exec ["prevTab"],              :program "lazygit"}
-                    {:action "jump prev buffer", :exec ["PreviousTab"],          :program "micro"}]}   [:!TC#Pleft_arrow  [:!Tb] [:term]]
-    ^{:doc/actions [{:action "jump next buffer", :exec ["goto_next_buffer"],     :program "helix-common"}
-                    {:action "jump next tab",    :exec ["nextTab"],              :program "lazygit"}
-                    {:action "jump next buffer", :exec ["NextTab"],              :program "micro"}]}   [:!TC#Pright_arrow [:!Tf] [:term]]
-    ^{:doc/actions [{:action "increment number", :exec ["increment"],            :program "helix-common"}
-                    {:action "jump prev block",  :exec ["prevBlock-alt2"],       :program "lazygit"}]} [:!TC#Pup_arrow    [:!Tn] [:term]]
-    ^{:doc/actions [{:action "decrement number", :exec ["decrement"],            :program "helix-common"}
-                    {:action "jump next block",  :exec ["nextBlock-alt2"],       :program "lazygit"}]} [:!TC#Pdown_arrow  [:!Tp] [:term]]
+    ; arrow glyphs
+    ^{:doc/actions [{:program c/hc,    :action "jump prev buffer",   :exec hc-prev-tab}
+                    {:program c/lg,    :action "jump prev tab",      :exec lg-prev-tab}
+                    {:program c/mc,    :action "jump prev buffer",   :exec mc-prev-tab}
+                    {:program c/ze,    :action "move left",          :exec ze-move-left}]}         [:!TC#Pleft_arrow  [:!Tb] [:term]]
+    ^{:doc/actions [{:program c/hc,    :action "jump next buffer",   :exec hc-next-tab}
+                    {:program c/lg,    :action "jump next tab",      :exec lg-next-tab}
+                    {:program c/mc,    :action "jump next buffer",   :exec mc-next-tab}
+                    {:program c/ze,    :action "move right",         :exec ze-move-rigth}]}        [:!TC#Pright_arrow [:!Tf] [:term]]
+    ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hc-inc}
+                    {:program c/lg,    :action "jump prev block",    :exec lg-prev-block}
+                    {:program c/ze,    :action "move up",            :exec ze-move-up}]}           [:!TC#Pup_arrow    [:!Tn] [:term]]
+    ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hc-dec}
+                    {:program c/lg,    :action "jump next block",    :exec lg-next-block}
+                    {:program c/ze,    :action "move down",          :exec ze-move-down}]}       [:!TC#Pdown_arrow  [:!Tp] [:term]]
 
     ^{:doc/actions [{}]} [:!TCS#Pleft_arrow  [:!TCSleft_arrow]]
     ^{:doc/actions [{}]} [:!TCS#Pright_arrow [:!TCSright_arrow]]
     ^{:doc/actions [{}]} [:!TCS#Pup_arrow    [:!TCSup_arrow]]
     ^{:doc/actions [{}]} [:!TCS#Pdown_arrow  [:!TCSdown_arrow]]
 
-  ; technical glyphs
+    ; technical glyphs
     ^{:doc/actions [{}]} [:!TC#Popen_bracket   [:!TCopen_bracket]]
     ^{:doc/actions [{}]} [:!TC#Pclose_bracket  [:!TCclose_bracket]]
     ^{:doc/actions [{}]} [:!TC#Psemicolon      [:!TCsemicolon]]
@@ -52,19 +83,19 @@
     ^{:doc/actions [{}]} [:!TCS#Pperiod        [:!TCSperiod]]
     ^{:doc/actions [{}]} [:!TCS#Pslash         [:!TCSslash]]
 
-  ; action glyphs
-    ^{:doc/actions [{:action "close tab",    :exec [":buffer-close"],           :program "helix-common"}
-                    {:action "close tab",    :exec ["Quit"],                    :program "micro"}]} [:!TC#Pdelete_or_backspace [:!Tl] [:term]]
-    ^{:doc/actions [{:action "close others", :exec ["wonly"],                   :program "helix-common"}
-                    {:action "close others", :exec ["Unsplit"],                 :program "micro"}]} [:!TC#Preturn_or_enter     [:!Tg] [:term]]
-    ^{:doc/actions [{:action "split right",  :exec ["vsplit"],                  :program "helix-common"}
-                    {:action "split right",  :exec ["VSplit"],                  :program "micro"}]} [:!TC#Pright_shift         [:!Tv] [:term]]
-    ^{:doc/actions [{:action "split down",   :exec ["hsplit"],                  :program "helix-common"}
-                    {:action "split down",   :exec ["HSplit"],                  :program "micro"}]} [:!TC#Pright_option        [:!Th] [:term]]
-    ^{:doc/actions [{:action "close window", :exec ["wclose"],                  :program "helix-common"}
-                    {:action "close window", :exec ["Unsplit"],                 :program "micro"}]} [:!TC#Pright_command       [:!Tj] [:term]]
-    ^{:doc/actions [{:action "last file",    :exec ["goto_last_accessed_file"], :program "helix-common"}
-                    {:action "open preview"  :exec []                           :program "broot"}]} [:!TC#Pspacebar            [:!To] [:term]]
+    ; action glyphs
+    ^{:doc/actions [{:program c/hc,    :action "close tab",          :exec hc-close-tab}
+                    {:program c/mc,    :action "close tab",          :exec mc-close-tab}]}         [:!TC#Pdelete_or_backspace [:!Tl] [:term]]
+    ^{:doc/actions [{:program c/hc,    :action "close others",       :exec hc-unsplit}
+                    {:program c/mc,    :action "close others",       :exec mc-unsplit}]}           [:!TC#Preturn_or_enter     [:!Tg] [:term]]
+    ^{:doc/actions [{:program c/hc,    :action "split right",        :exec hc-vsplit}
+                    {:program c/mc,    :action "split right",        :exec mc-vsplit}]}            [:!TC#Pright_shift         [:!Tv] [:term]]
+    ^{:doc/actions [{:program c/hc,    :action "split down",         :exec hc-hsplit}
+                    {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [:!TC#Pright_option        [:!Th] [:term]]
+    ^{:doc/actions [{:program c/hc,    :action "close window",       :exec hc-close-split}
+                    {:program c/mc,    :action "close window",       :exec mc-close-split}]}       [:!TC#Pright_command       [:!Tj] [:term]]
+    ^{:doc/actions [{:program c/hc,    :action "last file",          :exec hc-last-tab}
+                    {:program c/br,    :action "open preview"        :exec br-toggle-preview}]}    [:!TC#Pspacebar            [:!To] [:term]]
 
     ^{:doc/actions [{}]} [:!TCS#Pdelete_or_backspace [:!TCSdelete_or_backspace]]
     ^{:doc/actions [{}]} [:!TCS#Preturn_or_enter     [:!TCSreturn_or_enter]]
@@ -73,7 +104,7 @@
     ^{:doc/actions [{}]} [:!TCS#Pright_command       [:!TCSright_command]]
     ^{:doc/actions [{}]} [:!TCS#Pspacebar            [:!TCSspacebar]]
 
-  ; numeric glyphs
+    ; numeric glyphs
     ^{:doc/actions [{}]} [:!TC#P1 [:!TC1]]
     ^{:doc/actions [{}]} [:!TC#P2 [:!TC2]]
     ^{:doc/actions [{}]} [:!TC#P3 [:!TC3]]
@@ -100,7 +131,7 @@
     ^{:doc/actions [{}]} [:!TCS#Phyphen [:!TCShyphen]]
     ^{:doc/actions [{}]} [:!TCS#Pequal_sign [:!TCSequal_sign]]
 
-  ; alphabetic glyphs
+    ; alphabetic glyphs
     ^{:doc/actions [{}]} [:!TC#Pa [:!TCa]]
     ^{:doc/actions [{}]} [:!TC#Pb [:!TCb]]
     ^{:doc/actions [{}]} [:!TC#Pc [:!TCc]]
