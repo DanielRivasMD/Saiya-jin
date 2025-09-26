@@ -9,6 +9,16 @@
 
 (def out-file "lctl.edn")
 
+
+(def hc-split-left ["jump_view_left"])
+(def mc-prev-split ["PreviousSplit"])
+(def hc-split-right ["jump_view_right"])
+(def mc-next-split ["NextSplit"])
+(def hc-split-up ["jump_view_up"])
+(def hc-split-down ["jump_view_down"])
+(def hc-jump ["goto_word"])
+(def mc-jump ["JumpLine"])
+
 (defn lctl []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -17,14 +27,14 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/hc,    :action "jump split left",    :exec ["jump_view_left"]}
-                    {:program c/mc,    :action "jump split left",    :exec ["PreviousSplit"]}]}    [(c/mk c/ilctl c/al) [(c/mk c/olctl c/al)] :term]
-    ^{:doc/actions [{:program c/hc,    :action "jump split right",   :exec ["jump_view_right"]}
-                    {:program c/mc,    :action "jump split right",   :exec ["NextSplit"]}]}        [(c/mk c/ilctl c/ar) [(c/mk c/olctl c/ar)] :term]
-    ^{:doc/actions [{:program c/hc,    :action "jump split up",      :exec ["jump_view_up"]}
-                    {:program c/mc,    :action "jump split up",      :exec ["PreviousSplit"]}]}    [(c/mk c/ilctl c/au) [(c/mk c/olctl c/au)] :term]
-    ^{:doc/actions [{:program c/hc,    :action "jump split down",    :exec ["jump_view_down"]}
-                    {:program c/mc,    :action "jump split down",    :exec ["NextSplit"]}]}        [(c/mk c/ilctl c/ad) [(c/mk c/olctl c/ad)] :term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split left",    :exec hc-split-left}
+                    {:program c/mc,    :action "jump split left",    :exec mc-prev-split}]}        [(c/mk c/ilctl c/al) [(c/mk c/olctl c/al)] :term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split right",   :exec hc-split-right}
+                    {:program c/mc,    :action "jump split right",   :exec mc-next-split}]}        [(c/mk c/ilctl c/ar) [(c/mk c/olctl c/ar)] :term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split up",      :exec hc-split-up}
+                    {:program c/mc,    :action "jump split up",      :exec mc-prev-split}]}        [(c/mk c/ilctl c/au) [(c/mk c/olctl c/au)] :term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split down",    :exec hc-split-down}
+                    {:program c/mc,    :action "jump split down",    :exec mc-next-split}]}        [(c/mk c/ilctl c/ad) [(c/mk c/olctl c/ad)] :term]
 
     ^{:doc/actions [{}]} [(c/mk c/ilctls c/al)   [(c/mk c/olctls c/al)]]
     ^{:doc/actions [{}]} [(c/mk c/ilctls c/ar)   [(c/mk c/olctls c/ar)]]
@@ -51,45 +61,45 @@
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` /// `"}]}        [(c/mk c/ilctls c/sl) [c/ksl c/ksl c/ksl c/ksp]]
 
     ; action glyphs
-    ^{:doc/actions [{}]} [(c/mk c/ilctl c/db)    [(c/mk c/ilctl c/db)]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctl c/db)    [(c/mk c/olctl c/db)]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` == `"}]}         [(c/mk c/ilctl c/re) [c/ksp c/keq c/keq c/ksp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` => `"}]}         [(c/mk c/ilctl c/rs) [c/ksp c/keq c/kspe c/ksp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` ** `"}]}         [(c/mk c/ilctl c/ro) [c/ksp (c/mk c/bs "8") (c/mk c/bs "8") c/ksp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` // `"}]}         [(c/mk c/ilctl c/rc) [c/ksp c/ksl c/ksl c/ksp]]
-    ^{:doc/actions [{:program c/hc     :action "jumper"              :exec ["goto_word"]}
-                    {:program c/mc     :action "jumper"              :exec ["JumpLine"]}]}         [(c/mk c/ilctl c/sp) [(c/mk c/olctl c/sp)]]
+    ^{:doc/actions [{:program c/hc     :action "jumper"              :exec hc-jump}
+                    {:program c/mc     :action "jumper"              :exec mc-jump}]}              [(c/mk c/ilctl c/sp) [(c/mk c/olctl c/sp)]]
 
-    ^{:doc/actions [{}]} [(c/mk c/ilctls c/db)   [(c/mk c/ilctls c/db)]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctls c/db)   [(c/mk c/olctls c/db)]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .== `"}]}        [(c/mk c/ilctls c/re) [c/ksp c/kpe c/keq c/keq c/ksp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .=> `"}]}        [(c/mk c/ilctls c/rs) [c/ksp c/kpe c/keq c/kspe c/ksp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .** `"}]}        [(c/mk c/ilctls c/ro) [c/ksp c/kpe (c/mk c/bs "8") (c/mk c/bs "8") c/ksp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .// `"}]}        [(c/mk c/ilctls c/rc) [c/ksp c/kpe c/ksl c/ksl c/ksp]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctls c/sp)   [(c/mk c/ilctls c/sp)]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctls c/sp)   [(c/mk c/olctls c/sp)]]
 
     ; numeric glyphs
-    ^{:doc/actions [{}]} [(c/mk c/ilctl "1")     [(c/mk c/ilctl "1")]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctl "2")     [(c/mk c/ilctl "2")]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctl "3")     [(c/mk c/ilctl "3")]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctl "4")     [(c/mk c/ilctl "4")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctl "1")     [(c/mk c/olctl "1")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctl "2")     [(c/mk c/olctl "2")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctl "3")     [(c/mk c/olctl "3")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctl "4")     [(c/mk c/olctl "4")]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` %% `"}]}         [(c/mk c/ilctl "5") [c/ksp (c/mk c/bs "5") (c/mk c/bs "5") c/ksp]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctl "6")     [(c/mk c/ilctl "6")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctl "6")     [(c/mk c/olctl "6")]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` && `"}]}         [(c/mk c/ilctl "7") [c/ksp (c/mk c/bs "7") (c/mk c/bs "7") c/ksp]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctl "8")     [(c/mk c/ilctl "8")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctl "8")     [(c/mk c/olctl "8")]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`((`"}]}           [(c/mk c/ilctl "9") [(c/mk c/bs "9") (c/mk c/bs "9")]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`))`"}]}           [(c/mk c/ilctl "0") [(c/mk c/bs "0") (c/mk c/bs "0")]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` -- `"}]}         [(c/mk c/ilctl c/hy) [c/ksp c/khy c/khy c/ksp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` ++ `"}]}         [(c/mk c/ilctl c/eq) [c/ksp c/kseq c/kseq c/ksp]]
 
-    ^{:doc/actions [{}]} [(c/mk c/ilctls "1")    [(c/mk c/ilctls "1")]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctls "2")    [(c/mk c/ilctls "2")]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctls "3")    [(c/mk c/ilctls "3")]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctls "4")    [(c/mk c/ilctls "4")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctls "1")    [(c/mk c/olctls "1")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctls "2")    [(c/mk c/olctls "2")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctls "3")    [(c/mk c/olctls "3")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctls "4")    [(c/mk c/olctls "4")]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .%% `"}]}        [(c/mk c/ilctls "5") [c/ksp c/pe (c/mk c/olctls "5") (c/mk c/olctls "5") c/ksp]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctls "6")    [(c/mk c/ilctls "6")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctls "6")    [(c/mk c/olctls "6")]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .&& `"}]}        [(c/mk c/ilctls "7") [c/ksp c/pe (c/mk c/olctls "7") (c/mk c/olctls "7") c/ksp]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctls "8")    [(c/mk c/ilctls "8")]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctls "9")    [(c/mk c/ilctls "9")]]
-    ^{:doc/actions [{}]} [(c/mk c/ilctls "0")    [(c/mk c/ilctls "0")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctls "8")    [(c/mk c/olctls "8")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctls "9")    [(c/mk c/olctls "9")]]
+    ^{:doc/actions [{}]} [(c/mk c/ilctls "0")    [(c/mk c/olctls "0")]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .-- `"}]}        [(c/mk c/ilctls c/hy) [c/ksp c/pe c/hy c/hy c/ksp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .++ `"}]}        [(c/mk c/ilctls c/eq) [c/ksp c/pe (c/mk c/olctls c/eq) (c/mk c/olctls c/eq) c/ksp]]
 
