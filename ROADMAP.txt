@@ -9,17 +9,19 @@
 - karabiner files, worth tracking?
 - bug: double Tq
 - doc simple sequences
+- add `term` as k_term => config & replace
+- DOC: if all combinations are declare in the config file, the lsp will aid detecting which variables are unused on real time, and going to their references
 
 ==================================================
-src/apps/zoom.clj:; TODO: homogenize to format
 src/profile/keymod.clj:; TODO: update
 src/profile/keymod.clj:  ; TODO: CHANGE `term` pop-up new
 src/profile/keymod.clj:; TODO: annotate escape zellij
-src/mode/z.clj: ; TODO: add binding
+src/apps/zoom.clj:; TODO: homogenize to format
 src/apps/browser.clj:; TODO: update config
-src/mode/q.clj: ; TODO: update temp mapping
+src/mode/z.clj: ; TODO: add binding
+src/simple/rctl.clj:    ; TODO: annotate command line keys => history picker, etc
+src/simple/lopt.clj:    ; TODO: launch float pane with editor (hx / mc); independent, or with reference
 src/simple/tab.clj:; TODO: annotate rectangle hotkeys
 src/double/lctl.edn:; TODO: relocate
-src/simple/lopt.clj:; TODO: patch float coors for font size 14
-src/simple/lopt.clj:    ; TODO: launch float pane with editor (hx / mc); independent, or with reference
+src/mode/q.clj: ; TODO: update temp mapping
 ==================================================
