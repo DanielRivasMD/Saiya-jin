@@ -38,12 +38,12 @@
      }}
 
    :applications
-   {:browser ["company.thebrowser.Browser"]
-    :finder  ["com.apple.finder"]
-    :mail    ["io.canarymail.mac"]
-    :skim    ["net.sourceforge.skim-app.skim"]
-    :term    ["org.alacritty"]
-    :zoom    ["us.zoom.xos"]}
+   {c/browser ["company.thebrowser.Browser"]
+    c/finder  ["com.apple.finder"]
+    c/mail    ["io.canarymail.mac"]
+    c/skim    ["net.sourceforge.skim-app.skim"]
+    c/term    ["org.alacritty"]
+    c/zoom    ["us.zoom.xos"]}
 
    :devices
    {:pro    [{:vendor_id 1452 :product_id 832}]
