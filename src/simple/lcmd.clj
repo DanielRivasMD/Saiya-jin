@@ -40,9 +40,9 @@
    [;
     ; arrow glyphs
     ^{:doc/actions [{:program c/hc,    :action "goto line start",    :exec hc-line-start}
-                    {:program c/mc,    :action "goto line start",    :exec mc-line-start}]}        [c/_al     [:!Ta]     :term]
+                    {:program c/mc,    :action "goto line start",    :exec mc-line-start}]}        [c/_al     [c/kt_a]   :term]
     ^{:doc/actions [{:program c/hc,    :action "goto line end",      :exec hc-line-end}
-                    {:program c/mc,    :action "goto line end",      :exec mc-line-end}]}          [c/_ar     [:!Te]     :term]
+                    {:program c/mc,    :action "goto line end",      :exec mc-line-end}]}          [c/_ar     [c/kt_e]   :term]
     ^{:doc/actions [{:program c/hc,    :action "goto file start",    :exec hc-file-start}
                     {:program c/lg,    :action "goto top",           :exec lg-top}
                     {:program c/mc,    :action "goto file start",    :exec mc-file-start}

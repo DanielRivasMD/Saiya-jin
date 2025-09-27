@@ -109,8 +109,8 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/hc,    :action "goto prev word",     :exec hc-prev-word}]}         [c/kop_al  [:!Ob]     :term]
-    ^{:doc/actions [{:program c/hc,    :action "goto next word",     :exec hc-next-word}]}         [c/kop_ar  [:!Of]     :term]
+    ^{:doc/actions [{:program c/hc,    :action "goto prev word",     :exec hc-prev-word}]}         [c/kop_al  [c/ko_b]   :term]
+    ^{:doc/actions [{:program c/hc,    :action "goto next word",     :exec hc-next-word}]}         [c/kop_ar  [c/ko_f]   :term]
     ^{:doc/actions [{:program c/hc,    :action "goto prev para",     :exec hc-prev-para}
                     {:program c/lg,    :action "goto prev page",     :exec lg-prev-page}
                     {:program c/mc,    :action "goto prev para",     :exec mc-prev-para}
