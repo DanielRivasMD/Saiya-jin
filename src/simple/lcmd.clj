@@ -40,88 +40,87 @@
    [;
     ; arrow glyphs
     ^{:doc/actions [{:program c/hc,    :action "goto line start",    :exec hc-line-start}
-                    {:program c/mc,    :action "goto line start",    :exec mc-line-start}]}        [(c/mk c/bcp c/al)  [:!Ta]    :term]
+                    {:program c/mc,    :action "goto line start",    :exec mc-line-start}]}        [(c/mk c/bcp c/_al)  [:!Ta]    :term]
     ^{:doc/actions [{:program c/hc,    :action "goto line end",      :exec hc-line-end}
-                    {:program c/mc,    :action "goto line end",      :exec mc-line-end}]}          [(c/mk c/bcp c/ar)  [:!Te]    :term]
+                    {:program c/mc,    :action "goto line end",      :exec mc-line-end}]}          [(c/mk c/bcp c/_ar)  [:!Te]    :term]
     ^{:doc/actions [{:program c/hc,    :action "goto file start",    :exec hc-file-start}
                     {:program c/lg,    :action "goto top",           :exec lg-top}
                     {:program c/mc,    :action "goto file start",    :exec mc-file-start}
-                    {:program c/ze,    :action "page up",            :exec ze-page-up}]}           [(c/mk c/bcp c/au)  [c/khm]   :term]
+                    {:program c/ze,    :action "page up",            :exec ze-page-up}]}           [(c/mk c/bcp c/_au)  [c/k_hm]   :term]
     ^{:doc/actions [{:program c/hc,    :action "goto file end",      :exec hc-file-end}
                     {:program c/lg,    :action "goto bottom",        :exec lg-bottom}
                     {:program c/mc,    :action "goto file end",      :exec mc-file-end}
-                    {:program c/ze,    :action "page down",          :exec ze-page-down}]}         [(c/mk c/bcp c/ad)  [c/ked]   :term]
+                    {:program c/ze,    :action "page down",          :exec ze-page-down}]}         [(c/mk c/bcp c/_ad)  [c/k_ed]   :term]
 
     ^{:doc/actions [{:program c/hc,    :action "select line start",  :exec hc-select-line-start}
-                    {:program c/mc,    :action "select line start",  :exec mc-select-line-start}]} [(c/mk c/bcsp c/al) [c/koal]  :term]
+                    {:program c/mc,    :action "select line start",  :exec mc-select-line-start}]} [(c/mk c/bcsp c/_al) [c/ko_al]  :term]
     ^{:doc/actions [{:program c/hc,    :action "select line end",    :exec hc-select-line-end}
-                    {:program c/mc,    :action "select line end",    :exec mc-select-line-end}]}   [(c/mk c/bcsp c/ar) [c/koar]  :term]
+                    {:program c/mc,    :action "select line end",    :exec mc-select-line-end}]}   [(c/mk c/bcsp c/_ar) [c/ko_ar]  :term]
     ^{:doc/actions [{:program c/hc,    :action "select file start",  :exec hc-select-file-start}
-                    {:program c/mc,    :action "select file start",  :exec mc-select-file-start}]} [(c/mk c/bcsp c/au) [c/koau]  :term]
+                    {:program c/mc,    :action "select file start",  :exec mc-select-file-start}]} [(c/mk c/bcsp c/_au) [c/ko_au]  :term]
     ^{:doc/actions [{:program c/hc,    :action "select file end",    :exec hc-select-file-end}
-                    {:program c/mc,    :action "select file end",    :exec mc-select-file-end}]}   [(c/mk c/bcsp c/ad) [c/koad]  :term]
+                    {:program c/mc,    :action "select file end",    :exec mc-select-file-end}]}   [(c/mk c/bcsp c/_ad) [c/ko_ad]  :term]
 
-    ; TODO: annotate sequences
     ; technical glyphs
-    ^{:doc/actions [{}]} [(c/mk c/bcp c/ob)      [(c/mk c/bc c/ob)]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp c/cb)      [(c/mk c/bc c/cb)]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp c/sc)      [(c/mk c/bc c/sc)]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "`::<`"}]}          [(c/mk c/bcp c/qu)  [:!Ssemicolon :!Ssemicolon :!Scomma]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp c/bl)      [(c/mk c/bc c/bl)]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "' <- '"}]}         [(c/mk c/bcp c/cm)  [:spacebar :!Scomma :hyphen :spacebar]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` -> `"}]}         [(c/mk c/bcp c/pe)  [:spacebar :hyphen :!Speriod :spacebar]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "`//! `"}]}         [(c/mk c/bcp c/sl)  [:slash :slash :!S1 :spacebar]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_ob)     [(c/mk c/bc c/_ob)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_cb)     [(c/mk c/bc c/_cb)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_sc)     [(c/mk c/bc c/_sc)]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "`::<`"}]}          [(c/mk c/bcp c/_qu)  [c/ks_sc c/ks_sc c/ks_cm]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_bl)     [(c/mk c/bc c/_bl)]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "' <- '"}]}         [(c/mk c/bcp c/_cm)  [c/k_sp c/ks_cm c/k_hy c/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` -> `"}]}         [(c/mk c/bcp c/_pe)  [c/k_sp c/k_hy c/ks_pe c/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "`//! `"}]}         [(c/mk c/bcp c/_sl)  [c/k_sl c/k_sl c/ks_1 c/k_sp]]
 
-    ^{:doc/actions [{}]} [(c/mk c/bcsp c/ob)     [(c/mk c/bcs c/ob)]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp c/cb)     [(c/mk c/bcs c/cb)]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp c/sc)     [(c/mk c/bcs c/sc)]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp c/qu)     [(c/mk c/bcs c/qu)]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp c/bl)     [(c/mk c/bcs c/bl)]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` <<- `"}]}        [(c/mk c/bcsp c/cm) [:spacebar :!Scomma :!Scomma :hyphen :spacebar]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` ->> `"}]}        [(c/mk c/bcsp c/pe) [:spacebar :hyphen :!Speriod :!Speriod :spacebar]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "`#!/`"}]}          [(c/mk c/bcsp c/sl) [:!S3 :!S1 :slash]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_ob)    [(c/mk c/bcs c/_ob)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_cb)    [(c/mk c/bcs c/_cb)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_sc)    [(c/mk c/bcs c/_sc)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_qu)    [(c/mk c/bcs c/_qu)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_bl)    [(c/mk c/bcs c/_bl)]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` <<- `"}]}        [(c/mk c/bcsp c/_cm) [c/k_sp c/ks_cm c/ks_cm c/k_hy c/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` ->> `"}]}        [(c/mk c/bcsp c/_pe) [c/k_sp c/k_hy c/ks_pe c/ks_pe c/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "`#!/`"}]}          [(c/mk c/bcsp c/_sl) [c/ks_3 c/ks_1 c/k_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{}]} [(c/mk c/bcp c/db)      [(c/mk c/bc c/db)]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp c/re)      [(c/mk c/bc c/re)]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` != `"}]}        [(c/mk c/bcp c/rs)  [:spacebar :!S1 :equal_sign :spacebar]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` *= `"}]}        [(c/mk c/bcp c/ro)  [:spacebar :!S8 :equal_sign :spacebar]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` /= `"}]}        [(c/mk c/bcp c/rc)  [:spacebar :slash :equal_sign :spacebar]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp c/sp)      [(c/mk c/bc c/sp)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_db)     [(c/mk c/bc c/_db)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_re)     [(c/mk c/bc c/_re)]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` != `"}]}        [(c/mk c/bcp c/_rs)  [c/k_sp c/ks_1 c/k_eq c/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` *= `"}]}        [(c/mk c/bcp c/_ro)  [c/k_sp c/ks_8 c/k_eq c/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` /= `"}]}        [(c/mk c/bcp c/_rc)  [c/k_sp c/k_sl c/k_eq c/k_sp]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_sp)     [(c/mk c/bc c/_sp)]]
 
-    ^{:doc/actions [{}]} [(c/mk c/bcsp c/db)     [(c/mk c/bcs c/db)]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "`; `"}]}          [(c/mk c/bcsp c/re) [:spacebar :!Ssemicolon :equal_sign :spacebar]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` .!= `"}]}       [(c/mk c/bcsp c/rs) [:spacebar :period :!S1 :equal_sign :spacebar]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` .*= `"}]}       [(c/mk c/bcsp c/ro) [:spacebar :period :!S8 :equal_sign :spacebar]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` ./= `"}]}       [(c/mk c/bcsp c/rc) [:spacebar :period :slash :equal_sign :spacebar]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp c/sp)     [(c/mk c/bcs c/sp)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_db)    [(c/mk c/bcs c/_db)]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "`; `"}]}          [(c/mk c/bcsp c/_re) [c/k_sp c/ks_sc c/k_eq c/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` .!= `"}]}       [(c/mk c/bcsp c/_rs) [c/k_sp c/k_pe c/ks_1 c/k_eq c/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` .*= `"}]}       [(c/mk c/bcsp c/_ro) [c/k_sp c/k_pe c/ks_8 c/k_eq c/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",            :sequence "` ./= `"}]}       [(c/mk c/bcsp c/_rc) [c/k_sp c/k_pe c/k_sl c/k_eq c/k_sp]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_sp)    [(c/mk c/bcs c/_sp)]]
 
     ; numeric glyphs
-    ^{:doc/actions [{}]} [(c/mk c/bcp "1")       [(c/mk c/bc "1")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp "2")       [(c/mk c/bc "2")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp "3")       [(c/mk c/bc "3")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp "4")       [(c/mk c/bc "4")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp "5")       [(c/mk c/bc "5")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp "6")       [(c/mk c/bc "6")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp "7")       [(c/mk c/bc "7")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp "8")       [(c/mk c/bc "8")]]
-    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence ".("}]}                [(c/mk c/bcp "9")   [:period :!S9]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp "0")       [(c/mk c/bc "0")]]
-    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence "` -= `"}]}            [(c/mk c/bcp c/hy)  [:spacebar :hyphen :equal_sign :spacebar]]
-    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence "` += `"}]}            [(c/mk c/bcp c/eq)  [:spacebar :!Sequal_sign :equal_sign :spacebar]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_1)      [(c/mk c/bc c/_1)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_2)      [(c/mk c/bc c/_2)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_3)      [(c/mk c/bc c/_3)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_4)      [(c/mk c/bc c/_4)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_5)      [(c/mk c/bc c/_5)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_6)      [(c/mk c/bc c/_6)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_7)      [(c/mk c/bc c/_7)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_8)      [(c/mk c/bc c/_8)]]
+    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence ".("}]}                [(c/mk c/bcp c/_9)   [c/k_pe c/ks_9]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_0)      [(c/mk c/bc c/_0)]]
+    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence "` -= `"}]}            [(c/mk c/bcp c/_hy)  [c/k_sp c/k_hy c/k_eq c/k_sp]]
+    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence "` += `"}]}            [(c/mk c/bcp c/_eq)  [c/k_sp c/ks_eq c/k_eq c/k_sp]]
 
-    ^{:doc/actions [{}]} [(c/mk c/bcsp "1")      [(c/mk c/bcs "1")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp "2")      [(c/mk c/bcs "2")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp "3")      [(c/mk c/bcs "3")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp "4")      [(c/mk c/bcs "4")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp "5")      [(c/mk c/bcs "5")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp "6")      [(c/mk c/bcs "6")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp "7")      [(c/mk c/bcs "7")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp "8")      [(c/mk c/bcs "8")]]
-    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence "`:(`"}]}              [(c/mk c/bcsp "9")  [:!Ssemicolon :!S9]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp "0")      [(c/mk c/bcs "0")]]
-    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence "` .-= `"}]}           [(c/mk c/bcsp c/hy) [:spacebar :period :hyphen :equal_sign :spacebar]]
-    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence "` .+= `"}]}           [(c/mk c/bcsp c/eq) [:spacebar :period :!Sequal_sign :equal_sign :spacebar]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_1)     [(c/mk c/bcs c/_1)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_2)     [(c/mk c/bcs c/_2)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_3)     [(c/mk c/bcs c/_3)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_4)     [(c/mk c/bcs c/_4)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_5)     [(c/mk c/bcs c/_5)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_6)     [(c/mk c/bcs c/_6)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_7)     [(c/mk c/bcs c/_7)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_8)     [(c/mk c/bcs c/_8)]]
+    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence "`:(`"}]}              [(c/mk c/bcsp c/_9)  [c/ks_sc c/ks_9]]
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_0)     [(c/mk c/bcs c/_0)]]
+    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence "` .-= `"}]}           [(c/mk c/bcsp c/_hy) [c/k_sp c/k_pe c/k_hy c/k_eq c/k_sp]]
+    ^{:doc/actions [{:program c/tm,   :action "terminal",         :sequence "` .+= `"}]}           [(c/mk c/bcsp c/_eq) [c/k_sp c/k_pe c/ks_eq c/k_eq c/k_sp]]
 
     ; alphabetic glyphs
     ^{:doc/actions [{}]} [(c/mk c/bcp "a")       [(c/mk c/bc "a")]]
@@ -150,7 +149,7 @@
     ^{:doc/actions [{}]} [(c/mk c/bcp "x")       [(c/mk c/bc "x")]]
     ^{:doc/actions [{}]} [(c/mk c/bcp "y")       [(c/mk c/bc "y")]]
     ^{:doc/actions [{}]} [(c/mk c/bcp "z")       [(c/mk c/bc "z")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcp c/rt)      [(c/mk c/bc c/rt)]]
+    ^{:doc/actions [{}]} [(c/mk c/bcp c/_rt)      [(c/mk c/bc c/_rt)]]
 
     ^{:doc/actions [{}]} [(c/mk c/bcsp "a")      [(c/mk c/bcs "a")]]
     ^{:doc/actions [{}]} [(c/mk c/bcsp "b")      [(c/mk c/bcs "b")]]
@@ -178,7 +177,7 @@
     ^{:doc/actions [{}]} [(c/mk c/bcsp "x")      [(c/mk c/bcs "x")]]
     ^{:doc/actions [{}]} [(c/mk c/bcsp "y")      [(c/mk c/bcs "y")]]
     ^{:doc/actions [{}]} [(c/mk c/bcsp "z")      [(c/mk c/bcs "z")]]
-    ^{:doc/actions [{}]} [(c/mk c/bcsp c/rt)     [(c/mk c/bcs c/rt)]]]})
+    ^{:doc/actions [{}]} [(c/mk c/bcsp c/_rt)     [(c/mk c/bcs c/_rt)]]]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
