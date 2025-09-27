@@ -9,17 +9,17 @@
 
 (def out-file "loptctl.edn")
 
-(def zj-pane-left ["MoveFocus \"Left\";"])
-(def zj-pane-right ["MoveFocus \"Right\";"])
-(def zj-pane-up ["MoveFocus \"Up\";"])
-(def zj-pane-down ["MoveFocus \"Down\";"])
-(def zj-pane-close ["CloseFocus;"])
-(def zj-pane-focus ["ToggleFocusFullscreen;"])
-(def zj-pane-new-right ["NewPane \"Right\";"])
-(def zj-pane-new-down ["NewPane \"Down\";"])
-(def zj-rename-pane-mode ["SwitchToMode \"RenamePane\"; PaneNameInput 0;"])
-(def zp-abort-rename ["UndoRenamePane; SwitchToMode \"Normal\";"])
-(def zj-last-pane ["SwitchFocus;"])
+(def zj-pane-left            ["MoveFocus \"Left\";"])
+(def zj-pane-right           ["MoveFocus \"Right\";"])
+(def zj-pane-up              ["MoveFocus \"Up\";"])
+(def zj-pane-down            ["MoveFocus \"Down\";"])
+(def zj-pane-close           ["CloseFocus;"])
+(def zj-pane-focus           ["ToggleFocusFullscreen;"])
+(def zj-pane-new-right       ["NewPane \"Right\";"])
+(def zj-pane-new-down        ["NewPane \"Down\";"])
+(def zj-rename-pane-mode     ["SwitchToMode \"RenamePane\"; PaneNameInput 0;"])
+(def zp-abort-rename         ["UndoRenamePane; SwitchToMode \"Normal\";"])
+(def zj-last-pane            ["SwitchFocus;"])
 
 (defn loptctl []
 
