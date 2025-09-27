@@ -9,14 +9,14 @@
 
 (def out-file "lctl.edn")
 
-(def hc-split-left ["jump_view_left"])
-(def mc-prev-split ["PreviousSplit"])
-(def hc-split-right ["jump_view_right"])
-(def mc-next-split ["NextSplit"])
-(def hc-split-up ["jump_view_up"])
-(def hc-split-down ["jump_view_down"])
-(def hc-jump ["goto_word"])
-(def mc-jump ["JumpLine"])
+(def hc-split-left           ["jump_view_left"])
+(def mc-prev-split           ["PreviousSplit"])
+(def hc-split-right          ["jump_view_right"])
+(def mc-next-split           ["NextSplit"])
+(def hc-split-up             ["jump_view_up"])
+(def hc-split-down           ["jump_view_down"])
+(def hc-jump                 ["goto_word"])
+(def mc-jump                 ["JumpLine"])
 
 (defn lctl []
 
