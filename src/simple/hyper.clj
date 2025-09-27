@@ -9,16 +9,16 @@
 
 (def out-file "hyper.edn")
 
-(def zj-swap-tab-left ["MoveTab \"Left\";"])
-(def zj-swap-tab-right ["MoveTab \"Right\";"])
-(def ze-size-inc ["Resize \"Increase\";"])
-(def ze-size-dec ["Resize \"Decrease\";"])
-(def zj-toggle-pin ["TogglePanePinned;"])
-(def zj-toggle-float ["ToggleFloatingPanes;"])
-(def zj-entersearch-mode ["SwitchToMode \"EnterSearch\"; SearchInput 0;"])
-(def zj-toggle-embed ["TogglePaneEmbedOrFloating;"])
-(def zj-locked-mode ["SwitchToMode \"Locked\";"])
-(def z-normal-mode ["SwitchToMode \"Normal\";"])
+(def zj-swap-tab-left        ["MoveTab \"Left\";"])
+(def zj-swap-tab-right       ["MoveTab \"Right\";"])
+(def ze-size-inc             ["Resize \"Increase\";"])
+(def ze-size-dec             ["Resize \"Decrease\";"])
+(def zj-toggle-pin           ["TogglePanePinned;"])
+(def zj-toggle-float         ["ToggleFloatingPanes;"])
+(def zj-entersearch-mode     ["SwitchToMode \"EnterSearch\"; SearchInput 0;"])
+(def zj-toggle-embed         ["TogglePaneEmbedOrFloating;"])
+(def zj-locked-mode          ["SwitchToMode \"Locked\";"])
+(def z-normal-mode           ["SwitchToMode \"Normal\";"])
 
 (defn hyper []
 
