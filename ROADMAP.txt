@@ -10,13 +10,14 @@
 - doc simple sequences
 
 ==================================================
-src/double/lctl.edn:; TODO: relocate
-src/simple/rctl.clj:    ; TODO: annotate command line keys => history picker, etc
 src/profile/keymod.clj:; TODO: update
 src/profile/keymod.clj:  ; TODO: CHANGE `term` pop-up new
 src/profile/keymod.clj:; TODO: annotate escape zellij
+src/profile/keymod.clj:; TODO: write an alone-key detector in babel interpret
 src/apps/zoom.clj:; TODO: homogenize to format
-src/simple/lopt.clj:    ; TODO: launch float pane with editor (hx / mc); independent, or with reference
+src/double/lctl.edn:; TODO: relocate
 src/apps/browser.clj:; TODO: update config
+src/simple/rctl.clj:    ; TODO: annotate command line keys => history picker, etc
+src/simple/lopt.clj:    ; TODO: launch float pane with editor (hx / mc); independent, or with reference
 src/simple/tab.clj:; TODO: annotate rectangle hotkeys
 ==================================================

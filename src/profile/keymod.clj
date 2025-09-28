@@ -9,6 +9,10 @@
 
 (def out-file "keymod.edn")
 
+(def hi-normal ["normal_mode"])
+(def hn-insert ["insert_mode"])
+(def hs-normal ["normal_mode"])
+
 (defn keymod []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -35,8 +39,13 @@
   ; joker
     [:##caps_lock :!EWright_command nil {:alone :escape}]                                            ; esc, language server protocol
 
+; TODO: write an alone-key detector in babel interpret
   ; grave
-  ; [:#Pright_control :right_control nil {:alone [:!W#Pnon_us_pound]}]                               ; arc bind
+    ; ^{:doc/actions [{:program c/hi, :action "mode normal", :exec hi-normal}
+    ;                 {:program c/hn, :action "mode insert", :exec hn-insert}
+    ;                 {:program c/hs, :action "mode normal", :exec hs-normal}]} [:#Pright_control :right_control nil {:alone [:f13]}]
+
+    [:#Pright_control :right_control nil {:alone [:f13]}]
 
   ; lefts
     [:#Pleft_control :left_control nil {:alone [:!EWQ#Onon_us_pound]}]                               ; alfred window switcher
