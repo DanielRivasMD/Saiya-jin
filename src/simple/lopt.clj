@@ -58,7 +58,7 @@
 (def hc-reload               ["normal_mode", ":reload-all", "MODE"])
 (def hc-write-quit           ["normal_mode", ":write-quit-all"])
 (def mc-write-quit           ["Save,QuitAll"])
-(def hc-paste                ["paste_clipboard_after"])
+(def hc-paste                ["paste_clipboard_before"])
 (def mc-paste                ["Paste"])
 (def hc-write                ["normal_mode", ":write"])
 (def mc-write                ["Save"])
