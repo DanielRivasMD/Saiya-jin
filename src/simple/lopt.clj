@@ -62,6 +62,7 @@
 (def mc-paste                ["Paste"])
 (def hc-write                ["normal_mode", ":write"])
 (def mc-write                ["Save"])
+(def hc-todor-compile        [":sh just todor"])
 (def hc-cut                  ["yank_to_clipboard", "delete_selection_noyank"])
 (def mc-cut                  ["Cut"])
 (def hc-skip-multi           ["search_selection", "search_next"])
@@ -91,9 +92,9 @@
 (def mc-play                 ["PlayMacro"])
 (def hc-unindent             ["unindent"])
 (def mc-unindent             ["OutdentSelection"])
-(def hc-lazygit              [":sh zellij run --name lazygit --pinned true  --close-on-exit --floating  --width 180 --height  90 --x   0 --y   0 -- lazygit"])
-(def hc-serpl                [":sh zellij run --name serpl   --pinned true  --close-on-exit --floating  --width 180 --height  90 --x   0 --y   0 -- serpl"])
-(def hc-todor                [":sh just todor"])
+(def hc-lazygit              [":sh zellij run --name lazygit --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- lazygit"])
+(def hc-serpl                [":sh zellij run --name serpl   --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- serpl"])
+(def hc-todor-interactive    [":sh zellij run --name todor   --pinned true  --close-on-exit --floating  --width  90 --height  30 --x  90 --y   0 -- todor --delete"])
 (def hc-watch                [":sh zellij run --name canvas  --pinned true  --close-on-exit --floating  --width  45 --height  20 --x 135 --y   0 -- just watch"])
 (def hc-cut-line             ["extend_to_line_bounds", "delete_selection_noyank"])
 (def mc-cut-line             ["CutLine"])
@@ -227,7 +228,7 @@
     ^{:doc/actions [{:program c/hc,    :action "reload buffers",     :exec hc-reload}]}            [c/kop_r       [:!Tf10]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "save & quit",        :exec hc-write-quit}
                     {:program c/mc,    :action "save & quit",        :exec mc-write-quit}]}        [c/kop_s       [:!OTf1]       c/term]
-    ^{:doc/actions [{}]}                                                                           [c/kop_t       [:!OTf2]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "compile todo",       :exec hc-todor-compile}]}     [c/kop_t       [:!OTf2]       c/term]
     ^{:doc/actions [{}]}                                                                           [c/kop_u       [:!OTf4]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "paste",              :exec hc-paste}
                     {:program c/mc,    :action "paste",              :exec mc-paste}]}             [c/kop_v       [:!OTf5]       c/term]
@@ -271,7 +272,7 @@
     ^{:doc/actions [{:program c/hc,    :action "launch lazygit",     :exec hc-lazygit}]}           [c/kosp_q      [:!TSf9]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch serpl",       :exec hc-serpl}]}             [c/kosp_r      [:!TSf10]      c/term]
     ^{:doc/actions [{}]}                                                                           [c/kosp_s      [:!OTSf1]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "compile todo",       :exec hc-todor}]}             [c/kosp_t      [:!OTSf2]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "interactive todo",   :exec hc-todor-interactive}]} [c/kosp_t      [:!OTSf2]      c/term]
     ^{:doc/actions [{}]}                                                                           [c/kosp_u      [:!OTSf4]      c/term]
     ^{:doc/actions [{}]}                                                                           [c/kosp_v      [:!OTSf5]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch watch",       :exec hc-watch}]}             [c/kosp_w      [:!OTSf6]      c/term]
