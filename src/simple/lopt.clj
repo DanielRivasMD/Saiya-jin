@@ -26,11 +26,11 @@
 (def hi-select-prev-para     ["select_mode" "goto_prev_paragraph" "insert_mode"])
 (def hn-select-prev-para     ["select_mode" "goto_prev_paragraph" "normal_mode"])
 (def hs-select-prev-para     ["select_mode" "goto_prev_paragraph" "select_mode"])
-(def mc-select-prev-para     ["StartOfLine,SelectLine,ParagraphPrevious,SelectWordRight"])
+(def mc-select-prev-para     ["SelectToParagraphPrevious"])
 (def hi-select-next-para     ["select_mode" "goto_next_paragraph" "append_mode"])
 (def hn-select-next-para     ["select_mode" "goto_next_paragraph" "normal_mode"])
 (def hs-select-next-para     ["select_mode" "goto_next_paragraph" "select_mode"])
-(def mc-select-next-para     ["StartOfLine,SelectLine,ParagraphNext,SelectWordRight"])
+(def mc-select-next-para     ["SelectToParagraphNext"])
 
 (def hc-format               [":format"])
 (def hc-copy                 ["yank_to_clipboard"])
