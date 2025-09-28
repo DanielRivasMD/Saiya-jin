@@ -13,23 +13,23 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; mouse
+  ; mouse
   {:des "Zero Mode - mouse"
    :rules
    [:zero-mode
-    [:down_arrow {:mkey {:y 1500}}]                                                                  ;
-    [:up_arrow {:mkey {:y -1500}}]                                                                   ;
-    [:left_arrow {:mkey {:x -1500}}]                                                                 ;
-    [:right_arrow {:mkey {:x 1500}}]                                                                 ;
-    [:right_shift {:pkey :button1}]                                                              ;
+    [c/k_ad {:mkey {:y 1500}}]
+    [c/k_au {:mkey {:y -1500}}]
+    [c/k_al {:mkey {:x -1500}}]
+    [c/k_ar {:mkey {:x 1500}}]
+    [c/k_rs {:pkey :button1}]
 
-    [:!Tdown_arrow {:mkey {:y 500}}]                                                                 ;
-    [:!Tup_arrow {:mkey {:y -500}}]                                                                  ;
-    [:!Tleft_arrow {:mkey {:x -500}}]                                                                ;
-    [:!Tright_arrow {:mkey {:x 500}}]                                                                ;
-    [:!Tright_shift {:pkey :button2}]                                                            ;
+    ; BUG: slow imple mouse
+    ; [:!Tdown_arrow {:mkey {:y 500}}]
+    ; [:!Tup_arrow {:mkey {:y -500}}]
+    ; [:!Tleft_arrow {:mkey {:x -500}}]
+    ; [:!Tright_arrow {:mkey {:x 500}}]
+    ; [:!Tright_shift {:pkey :button2}]
     ]})
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn -main []
