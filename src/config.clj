@@ -18,21 +18,24 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; programs
-(def ay "alacritty")
-(def br "broot")
-(def mc "micro")
-(def hc "helix-common")
-(def hi "helix-insert")
-(def hn "helix-normal")
-(def hs "helix-select")
-(def lg "lazygit")
-(def tm "term")
+(def alf "Alfred")
+(def sys "System")
+(def ay  "alacritty")
+(def br  "broot")
+(def mc  "micro")
+(def hc  "helix-common")
+(def hi  "helix-insert")
+(def hn  "helix-normal")
+(def hs  "helix-select")
+(def lg  "lazygit")
+(def tm  "term")
 (def ze  "zellij-enter")
 (def zl  "zellij-lock")
 (def zt  "zellij-rtab")
 (def zp  "zellij-rpane")
 (def zs  "zellij-view")
 (def zj  "zellij-share")
+(def zx  "zellij-except")
 
 (def browser (mk "browser"))
 (def finder  (mk "finder"))
@@ -682,6 +685,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; action glyphs
+(def k_lc (mk K _lc))
+(def k_lo (mk K _lo))
+(def k_lt (mk K _lc))
+(def k_ls (mk K _ls))
+
+(def kp_lc (mk K P _lc))
+(def kp_lo (mk K P _lo))
+(def kp_lt (mk K P _lc))
+(def kp_ls (mk K P _ls))
+
 (def k_db (mk _db))
 (def k_re (mk _re))
 (def k_rs (mk _rs))
