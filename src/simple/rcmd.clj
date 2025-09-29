@@ -24,14 +24,14 @@
     ^{:doc/actions [{:program c/hc,    :action "jump forward",       :exec ["jump_forward"]}]}     [:!Q#Pleft_command [:!TSend] :term]
 
   ; technical glyphs
-    ^{:doc/actions [{:program c/r,     :action "tidyverse",          :sequence "' %<+% '"}]}       [:!Q#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
-    ^{:doc/actions [{:program c/r,     :action "tidyverse",          :sequence "' %+>% '"}]}       [:!Q#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
-    ^{:doc/actions [{:program c/r,     :action "tidyverse",          :sequence "' %$% '"}]}        [:!Q#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]
-    ^{:doc/actions [{:program c/r,     :action "tidyverse",          :sequence "' %T>% '"}]}       [:!Q#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]
-    ^{:doc/actions [{:program c/r,     :action "tidyverse",          :sequence "' %<>% '"}]}       [:!Q#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]
-    ^{:doc/actions [{:program c/r,     :action "tidyverse",          :sequence "' %<% '"}]}        [:!Q#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
-    ^{:doc/actions [{:program c/r,     :action "tidyverse",          :sequence "' %>% '"}]}        [:!Q#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
-    ^{:doc/actions [{:program c/r,     :action "tidyverse",          :sequence "' %!>% '"}]}       [:!Q#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]]})
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "' %<+% '"}]}       [:!Q#Popen_bracket [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "' %+>% '"}]}       [:!Q#Pclose_bracket [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "' %$% '"}]}        [:!Q#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "' %T>% '"}]}       [:!Q#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "' %<>% '"}]}       [:!Q#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "' %<% '"}]}        [:!Q#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "' %>% '"}]}        [:!Q#Pperiod [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "' %!>% '"}]}       [:!Q#Pslash [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
