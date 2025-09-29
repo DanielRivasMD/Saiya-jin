@@ -57,8 +57,40 @@
 (def R "R")
 
 (def K "!")
-(def P "#P")
-(def KS (str K S))
+(def H "#")
+(def P (str H "P"))
+
+(def _lock "keypad_num_lock")
+(def _caps "caps_lock")
+(def _esc "escape")
+(def _tab "tab")
+(def _us "non_us_pound")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(def k_lock (mk _lock))
+(def k_esc (mk _esc))
+(def k_tab (mk _tab))
+(def ko_tab (mk K O _tab))
+(def kc_tab (mk K C _tab))
+
+(def kp_lock (mk P _lock))
+(def kh_caps (mk H H _caps))
+(def kp_esc (mk P _esc))
+(def kp_tab (mk P _tab))
+
+(def krotcp_lock (mk K R O T C P _lock))
+
+(def koc_us (mk K O C _us))
+(def kocs_us (mk K O C S _us))
+
+(def kwp_us (mk K W P _us))
+
+(def kewp_us (mk K E W P _us))
+(def kewqp_us (mk K E W Q P _us))
+(def krp_us (mk K R P _us))
+(def kep_us (mk K E P _us))
+(def kqp_us (mk K Q P _us))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; primitive glyphs
@@ -330,10 +362,10 @@
 (def k_hm (mk _hm))
 (def k_ed (mk _ed))
 
-(def ks_pu (mk KS _pu))
-(def ks_pd (mk KS _pd))
-(def ks_hm (mk KS _hm))
-(def ks_ed (mk KS _ed))
+(def ks_pu (mk K S _pu))
+(def ks_pd (mk K S _pd))
+(def ks_hm (mk K S _hm))
+(def ks_ed (mk K S _ed))
 
 (def ko_pu (mk K O _pu))
 (def ko_pd (mk K O _pd))
@@ -685,15 +717,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; action glyphs
-(def k_lc (mk K _lc))
-(def k_lo (mk K _lo))
-(def k_lt (mk K _lc))
-(def k_ls (mk K _ls))
+(def k_lc (mk _lc))
+(def k_lo (mk _lo))
+(def k_lt (mk _lt))
+(def k_ls (mk _ls))
 
-(def kp_lc (mk K P _lc))
-(def kp_lo (mk K P _lo))
-(def kp_lt (mk K P _lc))
-(def kp_ls (mk K P _ls))
+(def kp_lc (mk P _lc))
+(def kp_lo (mk P _lo))
+(def kp_lt (mk P _lt))
+(def kp_ls (mk P _ls))
 
 (def k_db (mk _db))
 (def k_re (mk _re))
@@ -2428,5 +2460,15 @@
 (def kwsp_y (mk K W S P _y))
 (def kwsp_z (mk K W S P _z))
 (def kwsp_rt (mk K W S P _rt))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(def kew_rs (mk K E W _rs))
+(def keq_rs (mk K E Q _rs))
+(def kewq_rs (mk K E W Q _rs))
+
+(def kwq_ro (mk K W Q _ro))
+
+(def kew_rc (mk K E W _rc))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
