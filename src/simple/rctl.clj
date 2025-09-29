@@ -9,12 +9,12 @@
 
 (def out-file "rctl.edn")
 
-(def hc-change-picker ["changed_file_picker"])
-(def mc-open-file ["OpenFile"])
-(def hc-file-picker ["file_picker"])
-(def mc-new-open-file ["AddTab,OpenFile"])
-(def hc-buffer-picker ["buffer_picker"])
-(def mc-cmd ["CommandMode"])
+(def hc-change-picker        ["changed_file_picker"])
+(def mc-open-file            ["OpenFile"])
+(def hc-file-picker          ["file_picker"])
+(def mc-new-open-file        ["AddTab,OpenFile"])
+(def hc-buffer-picker        ["buffer_picker"])
+(def mc-cmd                  ["CommandMode"])
 
 (defn rctl []
 
