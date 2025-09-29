@@ -159,14 +159,14 @@
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` |> `"}]}         [c/kop_rs      [c/k_sp c/ks_bl c/ks_pe c/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` * `"}]}          [c/kop_ro      [c/k_sp c/ks_8 c/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` / `"}]}          [c/kop_rc      [c/k_sp c/k_sl c/k_sp]]
-    ^{:doc/actions [{:program "Alfred",      :action "prompt"}]}                                   [c/kop_sp      [:!OCnon_us_pound]]
+    ^{:doc/actions [{:program c/alf,   :action "prompt"}]}                                         [c/kop_sp      [:!OCnon_us_pound]]
 
     ^{:doc/actions [{}]}                                                                           [c/kosp_db     [c/kosp_db]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .= `"}]}         [c/kosp_re     [c/k_sp c/k_pe c/k_eq c/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .|> `"}]}        [c/kosp_rs     [c/k_sp c/k_pe c/ks_bl c/ks_pe c/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .* `"}]}         [c/kosp_ro     [c/k_sp c/k_pe c/ks_8 c/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` ./ `"}]}         [c/kosp_rc     [c/k_sp c/k_pe c/k_sl c/k_sp]]
-    ^{:doc/actions [{:program "Alfred",      :action "file prompt"}]}                              [c/kosp_sp     [:!OCSnon_us_pound]]
+    ^{:doc/actions [{:program c/alf,   :action "file prompt"}]}                                    [c/kosp_sp     [:!OCSnon_us_pound]]
 
     ; numeric glyphs
     ^{:doc/actions [{}]}                                                                           [c/kop_1       [c/ko_1]]
