@@ -100,7 +100,7 @@
     ^{:doc/actions [{}]}                                                                           [c/ktsp_9      [c/kts_9]]
     ^{:doc/actions [{}]}                                                                           [c/ktsp_0      [c/kts_0]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .-- `"}]}        [c/ktsp_hy     [c/k_sp c/k_pe c/k_hy c/k_hy c/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .++ `"}]}        [c/ktsp_eq     [c/k_sp c/k_pe c/KS c/_eq c/KS c/_eq c/k_sp]]
+    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .++ `"}]}        [c/ktsp_eq     [c/k_sp c/k_pe c/ks_eq c/ks_eq c/k_sp]]
 
     ; alphabetic-glyphs
     ^{:doc/actions [{}]}                                                                           [c/ktp_a       [c/kt_a]]
