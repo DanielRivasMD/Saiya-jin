@@ -16,7 +16,6 @@
   {:des "Shift Mode"
    :rules
    [;
-    [:#Pright_shift :right_shift [:term] {:alone [:!Oa]}]                                            ; history term
   ; [:!R#Pleft_arrow []]
   ; [:!R#Pright_arrow []]
   ; [:!R#Pup_arrow []]
