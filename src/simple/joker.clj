@@ -16,35 +16,134 @@
   {:des "Joker Mode"
    :rules
    [;
-  ; [:!EWQ#Pleft_arrow [:!Opage_up] [:term]]
-  ; [:!EWQ#Pright_arrow [:!Opage_down] [:term]]
-  ; [:!EWQ#Pup_arrow [:!Ohome] [:term]]
-  ; [:!EWQ#Pdown_arrow [:!Oend] [:term]]
+    ; arrow glyphs
+    ^{:doc/actions [{}]}                                                                           [c/kewq_al     [c/kewq_al]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_ar     [c/kewq_ar]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_au     [c/kewq_au]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_ad     [c/kewq_ad]]
 
-  ; [:!EWQS#Pleft_arrow [:!OSpage_up] [:term]]
-  ; [:!EWQS#Pright_arrow [:!OSpage_down] [:term]]
-  ; [:!EWQS#Pup_arrow [:!OShome] [:term]]
-  ; [:!EWQS#Pdown_arrow [:!OSend] [:term]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_al   [c/kewqs_al]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_ar   [c/kewqs_ar]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_au   [c/kewqs_au]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_ad   [c/kewqs_ad]]
 
-    [:!EWQ#Phyphen [:hyphen :hyphen]]                                                                ; '--'
-    [:!EWQ#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                                                ; '++'
+    ; technical glyphs
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_ob    [c/ks_cm c/ks_cm]]                                                        ; '<<'
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_cb    [c/ks_pe c/ks_pe]]                                                     ; '>>'
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_sc    [c/kewq_sc]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_qu    [c/ks_sc c/ks_sc]]                                                       ; '::'
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_bl    [c/ks_bl c/ks_bl]]                                                   ; '||'
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_cm    [c/k_pe c/k_pe]]                                                                 ; '..'
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_pe    [c/k_pe c/k_pe c/k_pe]]                                                        ; '...'
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_sl    [c/ks_1 c/ks_1]]                                                                       ; '!!'
 
-    [:!EWQ#Popen_bracket [:!Scomma :!Scomma]]                                                        ; '<<'
-    [:!EWQ#Pclose_bracket [:!Speriod :!Speriod]]                                                     ; '>>'
-  ; [:!EWQ#Psemicolon []]
-    [:!EWQ#Pquote [:!Ssemicolon :!Ssemicolon]]                                                       ; '::'
-    [:!EWQ#Pbackslash [:!Sbackslash :!Sbackslash]]                                                   ; '||'
-    [:!EWQ#Pcomma [:period :period]]                                                                 ; '..'
-    [:!EWQ#Pperiod [:period :period :period]]                                                        ; '...'
-    [:!EWQ#Pslash [:!S1 :!S1]]                                                                       ; '!!'
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_ob   [c/kewqs_ob]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_cb   [c/kewqs_cb]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_sc   [c/kewqs_sc]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_qu   [c/kewqs_qu]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_bl   [c/kewqs_bl]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_cm   [c/kewqs_cm]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_pe   [c/kewqs_pe]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_sl   [c/kewqs_sl]]
 
-  ; [:!EWQ#Pdelete_or_backspace []]
-    [:!EWQ#Preturn_or_enter [:equal_sign :equal_sign]]                                               ; '=='
-  ; [:!EWQ#Pright_shift []]
-    [:!EWQ#Pright_option [:!S8 :!S8]]                                                                ; '**'
-    [:!EWQ#Pright_command [:slash :slash]]                                                           ; '//'
-  ; [:!EWQ#Pspacebar []]
-    ]})
+    ; action glyphs
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_db    []]
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_re    [c/k_eq c/k_eq]]                                               ; '=='
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_rs    []]
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_ro    [c/ks_8 c/ks_8]]                                                                ; '**'
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_rc    [c/k_sl c/k_sl]]                                                           ; '//'
+    ^{:doc/actions [{}]}                                                                           [c/kewqp_sp    []]
+
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_db   [c/kewqs_db]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_re   [c/kewqs_re]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_rs   [c/kewqs_rs]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_ro   [c/kewqs_ro]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_rc   [c/kewqs_rc]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_sp   [c/kewqs_sp]]
+
+    ; numeric-glyphs
+    ^{:doc/actions [{}]}                                                                           [c/kewq_1      [c/kewq_1]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_2      [c/kewq_2]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_3      [c/kewq_3]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_4      [c/kewq_4]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_5      [c/kewq_5]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_6      [c/kewq_6]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_7      [c/kewq_7]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_8      [c/kewq_8]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_9      [c/kewq_9]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_0      [c/kewq_0]]
+    ^{:doc/actions [{}]}                                                                           [:!EWQ#Phyphen [:hyphen :hyphen]]                                                                ; '--'
+    ^{:doc/actions [{}]}                                                                           [:!EWQ#Pequal_sign [:!Sequal_sign :!Sequal_sign]]                                                ; '++'
+
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_1    [c/kewqs_1]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_2    [c/kewqs_2]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_3    [c/kewqs_3]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_4    [c/kewqs_4]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_5    [c/kewqs_5]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_6    [c/kewqs_6]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_7    [c/kewqs_7]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_8    [c/kewqs_8]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_9    [c/kewqs_9]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_0    [c/kewqs_0]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_hy   [c/kewqs_hy]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_eq   [c/kewqs_eq]]
+
+    ; alphabetic-glyphs
+    ^{:doc/actions [{}]}                                                                           [c/kewq_a      [c/kewq_a]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_b      [c/kewq_b]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_c      [c/kewq_c]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_d      [c/kewq_d]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_e      [c/kewq_e]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_f      [c/kewq_f]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_g      [c/kewq_g]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_h      [c/kewq_h]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_i      [c/kewq_i]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_j      [c/kewq_j]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_k      [c/kewq_k]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_l      [c/kewq_l]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_m      [c/kewq_m]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_n      [c/kewq_n]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_o      [c/kewq_o]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_p      [c/kewq_p]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_q      [c/kewq_q]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_r      [c/kewq_r]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_s      [c/kewq_s]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_t      [c/kewq_t]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_u      [c/kewq_u]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_v      [c/kewq_v]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_w      [c/kewq_w]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_x      [c/kewq_x]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_y      [c/kewq_y]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_z      [c/kewq_z]]
+    ^{:doc/actions [{}]}                                                                           [c/kewq_rt     [c/kewq_rt]]
+
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_a    [c/kewqs_a]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_b    [c/kewqs_b]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_c    [c/kewqs_c]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_d    [c/kewqs_d]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_e    [c/kewqs_e]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_f    [c/kewqs_f]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_g    [c/kewqs_g]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_h    [c/kewqs_h]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_i    [c/kewqs_i]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_j    [c/kewqs_j]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_k    [c/kewqs_k]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_l    [c/kewqs_l]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_m    [c/kewqs_m]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_n    [c/kewqs_n]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_o    [c/kewqs_o]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_p    [c/kewqs_p]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_q    [c/kewqs_q]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_r    [c/kewqs_r]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_s    [c/kewqs_s]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_t    [c/kewqs_t]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_u    [c/kewqs_u]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_v    [c/kewqs_v]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_w    [c/kewqs_w]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_x    [c/kewqs_x]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_y    [c/kewqs_y]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_z    [c/kewqs_z]]
+    ^{:doc/actions [{}]}                                                                           [c/kewqsp_rt   [c/kewqs_rt]]]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
