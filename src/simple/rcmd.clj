@@ -11,7 +11,7 @@
 (def out-file "rcmd.edn")
 
 (def hc-jump-save            ["save_selection"])
-(def hc-jump-backqard        ["jump_backqard"])
+(def hc-jump-backqard        ["jump_backward"])
 (def hc-jump-picker          ["jumplist_picker"])
 (def hc-jump-forward         ["jump_forward"])
 
