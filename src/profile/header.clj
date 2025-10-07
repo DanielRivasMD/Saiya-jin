@@ -55,6 +55,7 @@
 
    :layers
    {:zero-mode      {:key :keypad_num_lock}
+    :space-mode     {:key :spacebar}
     :q-mode         {:key :q}
     :z-mode         {:key :z}}])
 
