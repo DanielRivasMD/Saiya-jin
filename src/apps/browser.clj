@@ -2,11 +2,10 @@
 ; browser
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
 (ns apps.browser
   (:require [clojure.java.io :as io]
             [clojure.pprint :as pp]
-            [config :as c]))
+            [config.config :as c]))
 
 (def out-file "browser.edn")
 
