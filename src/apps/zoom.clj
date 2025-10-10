@@ -5,7 +5,7 @@
 (ns apps.zoom
   (:require [clojure.java.io :as io]
             [clojure.pprint :as pp]
-            [config :as c]))
+            [config.config :as c]))
 
 (def out-file "zoom.edn")
 
