@@ -5,7 +5,13 @@
 (ns simple.ropt
   (:require [clojure.java.io :as io]
             [clojure.pprint :as pp]
-            [config :as c]))
+            [config.config :as c]
+            [config.arrows :as r]
+            [config.technical :as t]
+            [config.action :as a]
+            [config.numeric :as n]
+            [config.alphabetic :as b]
+						))
 
 (def out-file "ropt.edn")
 
