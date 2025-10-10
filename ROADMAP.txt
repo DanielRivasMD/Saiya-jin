@@ -12,8 +12,9 @@
 
 ==================================================
 src/apps/zoom.clj:; TODO: homogenize to format
-src/simple/lopt.clj:    ; TODO: launch float pane with editor (hx / mc); independent, or with reference
-src/simple/rctl.clj:    ; TODO: annotate command line keys => history picker, etc
-src/double/lctl.edn:; TODO: relocate
 src/apps/browser.clj:; TODO: update config
+src/double/lctl.edn:; TODO: relocate
+src/simple/rctl.clj:    ; TODO: annotate command line keys => history picker, etc
+src/profile/header.clj:  ; TODO: consider add tab-mode
+src/simple/lopt.clj:    ; TODO: launch float pane with editor (hx / mc); independent, or with reference
 ==================================================
