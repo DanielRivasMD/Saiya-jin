@@ -5,7 +5,14 @@
 (ns mode.mouse
   (:require [clojure.java.io :as io]
             [clojure.pprint :as pp]
-            [config :as c]))
+            [config.config :as c]
+            [config.arrows :as r]
+            [config.technical :as t]
+            [config.action :as a]
+            [config.numeric :as n]
+            [config.alphabetic :as b]
+						))
+
 
 (def out-file "mouse.edn")
 
@@ -17,11 +24,11 @@
   {:des "Zero Mode - mouse"
    :rules
    [:zero-mode
-    [c/k_ad {:mkey {:y 1500}}]
-    [c/k_au {:mkey {:y -1500}}]
-    [c/k_al {:mkey {:x -1500}}]
-    [c/k_ar {:mkey {:x 1500}}]
-    [c/k_rs {:pkey :button1}]
+    [r/k_ad {:mkey {:y 1500}}]
+    [r/k_au {:mkey {:y -1500}}]
+    [r/k_al {:mkey {:x -1500}}]
+    [r/k_ar {:mkey {:x 1500}}]
+    [a/k_rs {:pkey :button1}]
 
     ; BUG: slow imple mouse
     ; [:!Tdown_arrow {:mkey {:y 500}}]
