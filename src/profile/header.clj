@@ -22,7 +22,7 @@
 (ns profile.header
   (:require [clojure.java.io :as io]
             [clojure.pprint :as pp]
-            [config :as c]))
+            [config.config :as c]))
 
 (def out-file "header.edn")
 
@@ -54,6 +54,7 @@
    {:launch "osascript -e 'tell application \"%s\" to activate'"}
 
    :layers
+  ; TODO: consider add tab-mode
    {:zero-mode      {:key :keypad_num_lock}
     :space-mode     {:key :spacebar}
     :q-mode         {:key :q}
