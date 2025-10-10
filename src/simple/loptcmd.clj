@@ -53,9 +53,9 @@
     ; arrow glyphs
     ^{:doc/actions [{:program c/zj,    :action "jump prev buffer",   :exec zj-prev-tab}]}          [r/kocp_al     [b/kos_j]      c/term]
     ^{:doc/actions [{:program c/zj,    :action "jump next buffer",   :exec zj-next-tab}]}          [r/kocp_ar     [b/kos_k]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "scroll up",          :exec hc-scroll-up}
+    ^{:doc/actions [{:program c/xhc,   :action "scroll up",          :exec hc-scroll-up}
                     {:program c/lg,    :action "scroll up",          :exec lg-scroll-up}]}         [r/kocp_au     [b/kt_x]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "scroll down",        :exec hc-scroll-down}
+    ^{:doc/actions [{:program c/xhc,   :action "scroll down",        :exec hc-scroll-down}
                     {:program c/lg,    :action "scroll down",        :exec lg-scroll-down}]}       [r/kocp_ad     [b/kt_y]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [r/kocsp_al    [r/kocs_al]]
@@ -69,9 +69,9 @@
     ^{:doc/actions [{:program c/zj,    :action "plugin monocle",     :exec zj-plug-monocle}]}      [t/kocp_sc     [b/kos_x]      c/term]
     ^{:doc/actions [{}]}                                                                           [t/kocp_qu     [b/kos_y]      c/term]
     ^{:doc/actions [{}]}                                                                           [t/kocp_bl     [b/kos_z]      c/term]
-    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kocp_pe     [b/ko_x]       c/term]
-    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kocp_cm     [b/ko_y]       c/term]
-    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kocp_sl     [b/ko_z]       c/term]
+    ^{:doc/actions [{:program c/xay,   :action "nushell motion",     :exec nu}]}                   [t/kocp_pe     [b/ko_x]       c/term]
+    ^{:doc/actions [{:program c/xay,   :action "nushell motion",     :exec nu}]}                   [t/kocp_cm     [b/ko_y]       c/term]
+    ^{:doc/actions [{:program c/xay,   :action "nushell motion",     :exec nu}]}                   [t/kocp_sl     [b/ko_z]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [t/kocsp_ob    [t/kocs_ob]]
     ^{:doc/actions [{}]}                                                                           [t/kocsp_cb    [t/kocs_cb]]

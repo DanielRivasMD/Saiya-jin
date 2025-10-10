@@ -45,27 +45,27 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/hc,    :action "goto line start",    :exec hc-line-start}
-                    {:program c/mc,    :action "goto line start",    :exec mc-line-start}]}        [r/kc_al       [b/kt_a]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "goto line end",      :exec hc-line-end}
-                    {:program c/mc,    :action "goto line end",      :exec mc-line-end}]}          [r/kc_ar       [b/kt_e]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "goto file start",    :exec hc-file-start}
+    ^{:doc/actions [{:program c/xhc,   :action "goto line start",    :exec hc-line-start}
+                    {:program c/xmc,   :action "goto line start",    :exec mc-line-start}]}        [r/kc_al       [b/kt_a]       c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "goto line end",      :exec hc-line-end}
+                    {:program c/xmc,   :action "goto line end",      :exec mc-line-end}]}          [r/kc_ar       [b/kt_e]       c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "goto file start",    :exec hc-file-start}
                     {:program c/lg,    :action "goto top",           :exec lg-top}
-                    {:program c/mc,    :action "goto file start",    :exec mc-file-start}
+                    {:program c/xmc,   :action "goto file start",    :exec mc-file-start}
                     {:program c/ze,    :action "page up",            :exec ze-page-up}]}           [r/kc_au       [r/k_hm]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "goto file end",      :exec hc-file-end}
+    ^{:doc/actions [{:program c/xhc,   :action "goto file end",      :exec hc-file-end}
                     {:program c/lg,    :action "goto bottom",        :exec lg-bottom}
-                    {:program c/mc,    :action "goto file end",      :exec mc-file-end}
+                    {:program c/xmc,   :action "goto file end",      :exec mc-file-end}
                     {:program c/ze,    :action "page down",          :exec ze-page-down}]}         [r/kc_ad       [r/k_ed]       c/term]
 
-    ^{:doc/actions [{:program c/hc,    :action "select line start",  :exec hc-select-line-start}
-                    {:program c/mc,    :action "select line start",  :exec mc-select-line-start}]} [r/kcs_al      [r/ko_al]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "select line end",    :exec hc-select-line-end}
-                    {:program c/mc,    :action "select line end",    :exec mc-select-line-end}]}   [r/kcs_ar      [r/ko_ar]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "select file start",  :exec hc-select-file-start}
-                    {:program c/mc,    :action "select file start",  :exec mc-select-file-start}]} [r/kcs_au      [r/ko_au]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "select file end",    :exec hc-select-file-end}
-                    {:program c/mc,    :action "select file end",    :exec mc-select-file-end}]}   [r/kcs_ad      [r/ko_ad]      c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "select line start",  :exec hc-select-line-start}
+                    {:program c/xmc,   :action "select line start",  :exec mc-select-line-start}]} [r/kcs_al      [r/ko_al]      c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "select line end",    :exec hc-select-line-end}
+                    {:program c/xmc,   :action "select line end",    :exec mc-select-line-end}]}   [r/kcs_ar      [r/ko_ar]      c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "select file start",  :exec hc-select-file-start}
+                    {:program c/xmc,   :action "select file start",  :exec mc-select-file-start}]} [r/kcs_au      [r/ko_au]      c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "select file end",    :exec hc-select-file-end}
+                    {:program c/xmc,   :action "select file end",    :exec mc-select-file-end}]}   [r/kcs_ad      [r/ko_ad]      c/term]
 
     ; technical glyphs
     ^{:doc/actions [{}]}                                                                           [t/kcp_ob      [t/kc_ob]]

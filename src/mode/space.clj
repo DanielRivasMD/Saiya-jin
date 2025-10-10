@@ -37,11 +37,11 @@
    :rules
    [:space-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program, c/hc    :action "find char forward",  :exec hc-prev-move}]}         [r/kp_al       [r/kt_pu]      c/term]
-    ^{:doc/actions [{:program, c/hc    :action "find char backward", :exec hc-next-move}]}         [r/kp_ar       [r/kt_pd]      c/term]
+    ^{:doc/actions [{:program, c/xhc   :action "find char forward",  :exec hc-prev-move}]}         [r/kp_al       [r/kt_pu]      c/term]
+    ^{:doc/actions [{:program, c/xhc   :action "find char backward", :exec hc-next-move}]}         [r/kp_ar       [r/kt_pd]      c/term]
     ; ^{:doc/actions [{:program, c/hc    :action "repeat last motion", :exec hc-last-move}]}         [r/kp_sp       [:f18]         c/term]
-    ^{:doc/actions [{:program, c/hc    :action "goto prev comment",  :exec hc-prev-comm}]}         [r/kp_au       [r/kt_hm]      c/term]
-    ^{:doc/actions [{:program, c/hc    :action "goto next comment",  :exec hc-next-comm}]}         [r/kp_ad       [r/kt_ed]      c/term]
+    ^{:doc/actions [{:program, c/xhc   :action "goto prev comment",  :exec hc-prev-comm}]}         [r/kp_au       [r/kt_hm]      c/term]
+    ^{:doc/actions [{:program, c/xhc   :action "goto next comment",  :exec hc-next-comm}]}         [r/kp_ad       [r/kt_ed]      c/term]
 
     ^{:doc/actions [{}]}                                                                           [r/ksp_al      [r/ks_al]]
     ^{:doc/actions [{}]}                                                                           [r/ksp_ar      [r/ks_ar]]
