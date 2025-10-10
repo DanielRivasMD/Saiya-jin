@@ -51,11 +51,11 @@
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
-    ^{:doc/actions [{:program c/xhc,   :action "delete next char", :exec hc-delete}]}              [a/ksp_rs      [:delete_forward]]
-    ^{:doc/actions [{:program c/xhc,   :action "delete next word", :exec hc-delete-word-right}
-                    {:program c/xmc,   :action "delete next word", :exec mc-delete-word-right}]}   [a/ksp_ro      [b/ko_d]]
-    ^{:doc/actions [{:program c/xhc,   :action "delete line start", :exec hc-delete-line-end}
-                    {:program c/xmc,   :action "delete line start", :exec mc-delete-line-end}]}    [a/ksp_rc      [b/kt_k]]
+    ^{:doc/actions [{:program c/xhc,   :action "delete next char",   :exec hc-delete}]}            [a/ksp_rs      [:delete_forward]]
+    ^{:doc/actions [{:program c/xhc,   :action "delete next word",   :exec hc-delete-word-right}
+                    {:program c/xmc,   :action "delete next word",   :exec mc-delete-word-right}]} [a/ksp_ro      [b/ko_d]]
+    ^{:doc/actions [{:program c/xhc,   :action "delete line start",  :exec hc-delete-line-end}
+                    {:program c/xmc,   :action "delete line start",  :exec mc-delete-line-end}]}   [a/ksp_rc      [b/kt_k]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_sp]]
 
     ; numeric-glyphs
