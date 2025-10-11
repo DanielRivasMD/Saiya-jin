@@ -11,6 +11,7 @@
             [config.action :as a]
             [config.numeric :as n]
             [config.alphabetic :as b]
+            [config.function :as f]
 						))
 
 (def out-file "lcmd.edn")
@@ -22,11 +23,11 @@
 (def hc-file-start           ["goto_file_start"])
 (def lg-top                  ["gotoTop"])
 (def mc-file-start           ["CursorStart"])
-(def ze-page-up              ["PageScrollUp"])
+(def ze-page-up              ["PageScrollUp;"])
 (def hc-file-end             ["goto_last_line"])
 (def lg-bottom               ["gotoBottom"])
 (def mc-file-end             ["CursorEnd"])
-(def ze-page-down            ["PageScrollDown"])
+(def ze-page-down            ["PageScrollDown;"])
 
 (def hc-select-line-start    ["select_mode", "goto_line_start", "MODE"])
 (def mc-select-line-start    ["SelectToStartOfLine"])
