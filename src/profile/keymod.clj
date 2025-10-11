@@ -11,6 +11,7 @@
             [config.action :as a]
             [config.numeric :as n]
             [config.alphabetic :as b]
+            [config.function :as f]
 						))
 
 (def out-file "keymod.edn")
@@ -22,6 +23,7 @@
 (def zp-escape               ["UndoRenamePane; SwitchToMode \"Normal\";"])
 (def zt-escape               ["UndoRenameTab; SwitchToMode \"Normal\";"])
 (def zx-escape               ["SwitchToMode \"Normal\";"])
+(def zj-history              ["EditScrollback; SwitchToMode \"Normal\";"])
 
 (defn keymod []
 
@@ -60,7 +62,7 @@
     ^{:doc/actions [{:program c/sys,   :action "switch most recent app"}]}                         [a/kp_lc   [a/k_lc]    nil    {:alone [c/kc_tab]}]
 
     ; rights
-    ^{:doc/actions [{:program c/zj,    :action "history edit"}]}                                   [a/kp_rs   [a/k_rs]    c/term {:alone [b/ko_a]}]
+    ^{:doc/actions [{:program c/zj,    :action "history edit",       :exec zj-history}]}           [a/kp_rs   [a/k_rs]    c/term {:alone [f/ks_f12]}]
     ^{:doc/actions [{:program c/sys,   :action "browser input / term edit"}]}                      [a/kp_rs   [a/k_rs]    nil    {:alone [c/krp_us]}]
     ^{:doc/actions [{:program c/alf,   :action "paste"}]}                                          [a/kp_ro   [a/k_ro]    nil    {:alone [c/kep_us]}]
     ^{:doc/actions [{:program c/alf,   :action "clipboard select"}]}                               [a/kp_rc   [a/k_rc]    nil    {:alone [c/kqp_us]}]]})
