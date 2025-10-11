@@ -1,3 +1,4 @@
+- create a function that autogenerates corresponding bindings
 - babel micro & helix fully functional, lazygit, zellij; next broot
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
 - coordinate Zellij / Helix
@@ -13,8 +14,8 @@
 ==================================================
 src/apps/zoom.clj:; TODO: homogenize to format
 src/apps/browser.clj:; TODO: update config
-src/double/lctl.edn:; TODO: relocate
-src/simple/rctl.clj:    ; TODO: annotate command line keys => history picker, etc
-src/profile/header.clj:  ; TODO: consider add tab-mode
 src/simple/lopt.clj:    ; TODO: launch float pane with editor (hx / mc); independent, or with reference
+src/profile/header.clj:  ; TODO: consider add tab-mode
+src/simple/rctl.clj:    ; TODO: annotate command line keys => history picker, etc
+src/double/lctl.edn:; TODO: relocate
 ==================================================
