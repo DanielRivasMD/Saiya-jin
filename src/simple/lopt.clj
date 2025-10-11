@@ -11,7 +11,8 @@
             [config.action :as a]
             [config.numeric :as n]
             [config.alphabetic :as b]
-						))
+            [config.function :as f]
+))
 
 (def out-file "lopt.edn")
 
@@ -20,11 +21,11 @@
 (def hc-prev-para            ["goto_prev_paragraph"  "collapse_selection"])
 (def lg-prev-page            ["prevPage"])
 (def mc-prev-para            ["ParagraphPrevious"])
-(def ze-half-up              ["HalfPageScrollUp"])
+(def ze-half-up              ["HalfPageScrollUp;"])
 (def hc-next-para            ["goto_next_paragraph"  "collapse_selection"])
 (def lg-next-page            ["nextPage"])
 (def mc-next-para            ["ParagraphNext"])
-(def ze-half-down            ["HalfPageScrollDown"])
+(def ze-half-down            ["HalfPageScrollDown;"])
 (def hc-select-prev-word     ["extend_prev_word_start"])
 (def mc-select-prev-word     ["SelectWordLeft"])
 (def hc-select-next-word     ["extend_next_word_end"])
@@ -203,89 +204,89 @@
 
     ; TODO: launch float pane with editor (hx / mc); independent, or with reference
     ; alphabetic glyphs
-    ^{:doc/actions [{:program c/xhc,   :action "format",             :exec hc-format}]}            [b/kop_a       [:!Of1]        c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kop_b       [:!Of2]        c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "format",             :exec hc-format}]}            [b/kop_a       [b/ko_a]        c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kop_b       [b/ko_b]        c/term]
     ^{:doc/actions [{:program c/xhc,   :action "copy",               :exec hc-copy}
-                    {:program c/xmc,   :action "copy",               :exec mc-copy}]}              [b/kop_c       [:!Of4]        c/term]
+                    {:program c/xmc,   :action "copy",               :exec mc-copy}]}              [b/kop_c       [b/ko_c]        c/term]
     ^{:doc/actions [{:program c/xhc,   :action "spawn multi",        :exec hc-spawn-multi}
-                    {:program c/xmc,   :action "spawn multi",        :exec mc-spawn-multi}]}       [b/kop_d       [:!Of5]        c/term]
+                    {:program c/xmc,   :action "spawn multi",        :exec mc-spawn-multi}]}       [b/kop_d       [b/ko_d]        c/term]
     ^{:doc/actions [{:program c/xhc,   :action "toggle comments",    :exec hc-toggle-com}
-                    {:program c/xmc,   :action "toggle comments",    :exec mc-toggle-com}]}        [b/kop_e       [:!Of6]        c/term]
+                    {:program c/xmc,   :action "toggle comments",    :exec mc-toggle-com}]}        [b/kop_e       [b/ko_e]        c/term]
     ^{:doc/actions [{:program c/xhc,   :action "search",             :exec hc-search}
-                    {:program c/xmc,   :action "search",             :exec mc-search}]}            [b/kop_f       [:!Of7]        c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kop_g       [:!Of8]        c/term]
+                    {:program c/xmc,   :action "search",             :exec mc-search}]}            [b/kop_f       [b/ko_f]        c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kop_g       [b/ko_g]        c/term]
     ^{:doc/actions [{:program c/xhc,   :action "find prev",          :exec hc-find-prev}
-                    {:program c/xmc,   :action "find prev",          :exec mc-find-prev}]}         [b/kop_h       [:!Of9]        c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kop_i       [:!Of10]       c/term]
+                    {:program c/xmc,   :action "find prev",          :exec mc-find-prev}]}         [b/kop_h       [b/ko_h]        c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kop_i       [b/ko_i]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "spawn multi down",   :exec hc-spawn-down}
-                    {:program c/xmc,   :action "spawn multi down",   :exec mc-spawn-down}]}        [b/kop_j       [:!Tf1]        c/term]
+                    {:program c/xmc,   :action "spawn multi down",   :exec mc-spawn-down}]}        [b/kop_j       [b/ko_j]        c/term]
     ^{:doc/actions [{:program c/xhc,   :action "spawn multi up",     :exec hc-spawn-up}
-                    {:program c/xmc,   :action "spawn multi up",     :exec mc-spawn-up}]}          [b/kop_k       [:!Tf2]        c/term]
+                    {:program c/xmc,   :action "spawn multi up",     :exec mc-spawn-up}]}          [b/kop_k       [b/ko_k]        c/term]
     ^{:doc/actions [{:program c/xhc,   :action "find next",          :exec hc-find-next}
-                    {:program c/xmc,   :action "find next",          :exec mc-find-next}]}         [b/kop_l       [:!Tf4]        c/term]
+                    {:program c/xmc,   :action "find next",          :exec mc-find-next}]}         [b/kop_l       [b/ko_l]        c/term]
     ^{:doc/actions [{:program c/xhc,   :action "toggle macro",       :exec hc-record}
-                    {:program c/xmc,   :action "toggle macro",       :exec mc-record}]}            [b/kop_m       [:!Tf5]        c/term]
+                    {:program c/xmc,   :action "toggle macro",       :exec mc-record}]}            [b/kop_m       [b/ko_m]        c/term]
     ^{:doc/actions [{:program c/xhc,   :action "new buffer",         :exec hc-new}
-                    {:program c/xmc,   :action "new buffer",         :exec mc-new}]}               [b/kop_n       [:!Tf6]        c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kop_o       [:!Tf7]        c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kop_p       [:!Tf8]        c/term]
+                    {:program c/xmc,   :action "new buffer",         :exec mc-new}]}               [b/kop_n       [b/ko_n]        c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kop_o       [b/ko_o]        c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kop_p       [b/ko_p]        c/term]
     ^{:doc/actions [{:program c/xhc,   :action "quit",               :exec hc-quit}
-                    {:program c/xmc,   :action "quit",               :exec mc-quit}]}              [b/kop_q       [:!Tf9]        c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "reload buffers",     :exec hc-reload}]}            [b/kop_r       [:!Tf10]       c/term]
+                    {:program c/xmc,   :action "quit",               :exec mc-quit}]}              [b/kop_q       [b/ko_q]        c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "reload buffers",     :exec hc-reload}]}            [b/kop_r       [b/ko_r]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "save & quit",        :exec hc-write-quit}
-                    {:program c/xmc,   :action "save & quit",        :exec mc-write-quit}]}        [b/kop_s       [:!OTf1]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "compile todo",       :exec hc-todor-compile}]}     [b/kop_t       [:!OTf2]       c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kop_u       [:!OTf4]       c/term]
+                    {:program c/xmc,   :action "save & quit",        :exec mc-write-quit}]}        [b/kop_s       [b/ko_s]       c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "compile todo",       :exec hc-todor-compile}]}     [b/kop_t       [b/ko_t]       c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kop_u       [b/ko_u]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "paste",              :exec hc-paste}
-                    {:program c/xmc,   :action "paste",              :exec mc-paste}]}             [b/kop_v       [:!OTf5]       c/term]
+                    {:program c/xmc,   :action "paste",              :exec mc-paste}]}             [b/kop_v       [b/ko_v]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "save",               :exec hc-write}
-                    {:program c/xmc,   :action "save",               :exec mc-write}]}             [b/kop_w       [:!OTf6]       c/term]
+                    {:program c/xmc,   :action "save",               :exec mc-write}]}             [b/kop_w       [b/ko_w]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "cut",                :exec hc-cut}
-                    {:program c/xmc,   :action "cut",                :exec mc-cut}]}               [b/kop_x       [:!OTf7]       c/term]
+                    {:program c/xmc,   :action "cut",                :exec mc-cut}]}               [b/kop_x       [b/ko_x]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "skip multi",         :exec hc-skip-multi}
-                    {:program c/xmc,   :action "skip multi",         :exec mc-skip-multi}]}        [b/kop_y       [:!OTf8]       c/term]
+                    {:program c/xmc,   :action "skip multi",         :exec mc-skip-multi}]}        [b/kop_y       [b/ko_y]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "remove multi",       :exec hc-rm-multi}
-                    {:program c/xmc,   :action "remove multi",       :exec mc-rm-multi}]}          [b/kop_z       [:!OTf9]       c/term]
+                    {:program c/xmc,   :action "remove multi",       :exec mc-rm-multi}]}          [b/kop_z       [b/ko_z]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "command mode",       :exec hc-cmd}
                     {:program c/xmc,   :action "command mode",       :exec mc-cmd}]}               [b/kop_rt      [:!OTf10]      c/term]
 
     ^{:doc/actions [{:program c/xhc,   :action "select all",         :exec hc-select-all}
-                    {:program c/xmc,   :action "select all",         :exec mc-select-all}]}        [b/kosp_a      [:!OSf1]       c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_b      [:!OSf2]       c/term]
+                    {:program c/xmc,   :action "select all",         :exec mc-select-all}]}        [b/kosp_a      [b/kos_a]       c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kosp_b      [b/kos_b]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "copy line",          :exec hc-copy-line}
-                    {:program c/xmc,   :action "copy line",          :exec mc-copy-line}]}         [b/kosp_c      [:!OSf4]       c/term]
+                    {:program c/xmc,   :action "copy line",          :exec mc-copy-line}]}         [b/kosp_c      [b/kos_c]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "duplicate line",     :exec hc-dup-line}
-                    {:program c/xmc,   :action "duplicate line",     :exec mc-dup-line}]}          [b/kosp_d      [:!OSf5]       c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_e      [:!OSf6]       c/term]
+                    {:program c/xmc,   :action "duplicate line",     :exec mc-dup-line}]}          [b/kosp_d      [b/kos_d]       c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kosp_e      [b/kos_e]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "global search",      :exec hc-global-search}
-                    {:program c/xmc,   :action "global search",      :exec mc-global-search}]}     [b/kosp_f      [:!OSf7]       c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_g      [:!OSf8]       c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_h      [:!OSf9]       c/term]
+                    {:program c/xmc,   :action "global search",      :exec mc-global-search}]}     [b/kosp_f      [b/kos_f]       c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kosp_g      [b/kos_g]       c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kosp_h      [b/kos_h]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "indent",             :exec hc-indent}
-                    {:program c/xmc,   :action "indent",             :exec mc-indent}]}            [b/kosp_i      [:!OSf10]      c/term]
+                    {:program c/xmc,   :action "indent",             :exec mc-indent}]}            [b/kosp_i      [b/kos_i]      c/term]
     ^{:doc/actions [{:program c/xhc,   :action "move down",          :exec hc-line-down}
-                    {:program c/xmc,   :action "move down",          :exec mc-line-down}]}         [b/kosp_j      [:!TSf1]       c/term]
+                    {:program c/xmc,   :action "move down",          :exec mc-line-down}]}         [b/kosp_j      [b/kos_j]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "move up",            :exec hc-line-up}
-                    {:program c/xmc,   :action "move up",            :exec mc-line-up}]}           [b/kosp_k      [:!TSf2]       c/term]
+                    {:program c/xmc,   :action "move up",            :exec mc-line-up}]}           [b/kosp_k      [b/kos_k]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "select line",        :exec hc-select-line}
-                    {:program c/xmc,   :action "select line",        :exec mc-select-line}]}       [b/kosp_l      [:!TSf4]       c/term]
+                    {:program c/xmc,   :action "select line",        :exec mc-select-line}]}       [b/kosp_l      [b/kos_l]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "play macro",         :exec hc-play}
-                    {:program c/xmc,   :action "play macro",         :exec mc-play}]}              [b/kosp_m      [:!TSf5]       c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_n      [:!TSf6]       c/term]
+                    {:program c/xmc,   :action "play macro",         :exec mc-play}]}              [b/kosp_m      [b/kos_m]       c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kosp_n      [b/kos_n]       c/term]
     ^{:doc/actions [{:program c/xhc,   :action "unindent",           :exec hc-unindent}
-                    {:program c/xmc,   :action "unindent",           :exec mc-unindent}]}          [b/kosp_o      [:!TSf7]       c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_p      [:!TSf8]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "launch lazygit",     :exec hc-lazygit}]}           [b/kosp_q      [:!TSf9]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "launch serpl",       :exec hc-serpl}]}             [b/kosp_r      [:!TSf10]      c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_s      [:!OTSf1]      c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "interactive todo",   :exec hc-todor-interactive}]} [b/kosp_t      [:!OTSf2]      c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_u      [:!OTSf4]      c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_v      [:!OTSf5]      c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "launch watch",       :exec hc-watch}]}             [b/kosp_w      [:!OTSf6]      c/term]
+                    {:program c/xmc,   :action "unindent",           :exec mc-unindent}]}          [b/kosp_o      [b/kos_o]       c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kosp_p      [b/kos_p]       c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "launch lazygit",     :exec hc-lazygit}]}           [b/kosp_q      [b/kos_q]       c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "launch serpl",       :exec hc-serpl}]}             [b/kosp_r      [b/kos_r]      c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kosp_s      [b/kos_s]      c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "interactive todo",   :exec hc-todor-interactive}]} [b/kosp_t      [b/kos_t]      c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kosp_u      [b/kos_u]      c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kosp_v      [b/kos_v]      c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "launch watch",       :exec hc-watch}]}             [b/kosp_w      [b/kos_w]      c/term]
     ^{:doc/actions [{:program c/xhc,   :action "cut line",           :exec hc-cut-line}
-                    {:program c/xmc,   :action "cut line",           :exec mc-cut-line}]}          [b/kosp_x      [:!OTSf7]      c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_y      [:!OTSf8]      c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "yank diagnostic",    :exec hc-copy-diag}]}         [b/kosp_z      [:!OTSf9]      c/term]
+                    {:program c/xmc,   :action "cut line",           :exec mc-cut-line}]}          [b/kosp_x      [b/kos_x]      c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kosp_y      [b/kos_y]      c/term]
+    ^{:doc/actions [{:program c/xhc,   :action "yank diagnostic",    :exec hc-copy-diag}]}         [b/kosp_z      [b/kos_z]      c/term]
     ^{:doc/actions [{:program c/xhc,   :action "launch shell",       :exec hc-shell}
                     {:program c/xmc,   :action "shell mode",         :exec mc-shell}]}             [b/kosp_rt     [:!OTSf10]     c/term]]})
 
