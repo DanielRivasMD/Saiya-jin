@@ -36,13 +36,13 @@
 (def xhs  "macosx-helix-select")
 (def lg  "lazygit")
 (def tm  "term")
+(def zj  "zellij-shared")
 (def ze  "zellij-enter")
-(def zl  "zellij-lock")
-(def zt  "zellij-rtab")
-(def zp  "zellij-rpane")
-(def zs  "zellij-view")
-(def zj  "zellij-share")
 (def zx  "zellij-except")
+(def zl  "zellij-lock")
+(def zp  "zellij-rpane")
+(def zt  "zellij-rtab")
+; (def zs  "zellij-view")
 
 (def browser (mk "browser"))
 (def finder  (mk "finder"))
@@ -178,6 +178,20 @@
 (def _x "x")
 (def _y "y")
 (def _z "z")
+
+; function
+(def _f1 "f1")
+(def _f2 "f2")
+(def _f3 "f3")
+(def _f4 "f4")
+(def _f5 "f5")
+(def _f6 "f6")
+(def _f7 "f7")
+(def _f8 "f8")
+(def _f9 "f9")
+(def _f10 "f10")
+(def _f11 "f11")
+(def _f12 "f12")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; compound glyphs
