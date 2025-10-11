@@ -11,6 +11,7 @@
             [config.action :as a]
             [config.numeric :as n]
             [config.alphabetic :as b]
+            [config.function :as f]
 						))
 
 (def out-file "loptctl.edn")
@@ -35,10 +36,10 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/zj,    :action "pane left",          :exec zj-pane-left}]}         [r/kotp_al     [b/ko_j]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane right",         :exec zj-pane-right}]}        [r/kotp_ar     [b/ko_k]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane up",            :exec zj-pane-up}]}           [r/kotp_au     [b/ko_l]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane down",          :exec zj-pane-down}]}         [r/kotp_ad     [b/ko_m]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane left",          :exec zj-pane-left}]}         [r/kotp_al     [f/kt_f1]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane right",         :exec zj-pane-right}]}        [r/kotp_ar     [f/kt_f2]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane up",            :exec zj-pane-up}]}           [r/kotp_au     [f/kt_f4]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane down",          :exec zj-pane-down}]}         [r/kotp_ad     [f/kt_f5]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [r/kotsp_al    [r/kots_al]]
     ^{:doc/actions [{}]}                                                                           [r/kotsp_ar    [r/kots_ar]]
@@ -65,13 +66,13 @@
     ^{:doc/actions [{}]}                                                                           [t/kotsp_sl    [t/kots_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/zj,    :action "pane close",         :exec zj-pane-close}]}        [a/kotp_db     [b/ko_o]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane focus",         :exec zj-pane-focus}]}        [a/kotp_re     [b/ko_p]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane split right",   :exec zj-pane-new-right}]}    [a/kotp_rs     [b/ko_q]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane split down",    :exec zj-pane-new-down}]}     [a/kotp_ro     [b/ko_r]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane close",         :exec zj-pane-close}]}        [a/kotp_db     [f/kt_f6]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane focus",         :exec zj-pane-focus}]}        [a/kotp_re     [f/kt_f7]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane split right",   :exec zj-pane-new-right}]}    [a/kotp_rs     [f/kt_f8]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane split down",    :exec zj-pane-new-down}]}     [a/kotp_ro     [f/kt_f9]       c/term]
     ^{:doc/actions [{:program c/zj,    :action "mode pane rename",   :exec zj-rename-pane-mode}
-                    {:program c/zp,    :action "abort pane rename",  :exec zp-abort-rename}]}      [a/kotp_rc     [b/ko_s]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane jump back",     :exec zj-last-pane}]}         [a/kotp_sp     [b/ko_t]       c/term]
+                    {:program c/zp,    :action "abort pane rename",  :exec zp-abort-rename}]}      [a/kotp_rc     [f/kt_f10]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane jump back",     :exec zj-last-pane}]}         [a/kotp_sp     [f/kt_f11]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/kotsp_db    [a/kots_db]]
     ^{:doc/actions [{}]}                                                                           [a/kotsp_re    [a/kots_re]]
