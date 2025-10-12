@@ -35,10 +35,10 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/zj,    :action "page up",            :exec zj-swap-tab-left}]}     [r/kotcp_al    [f/ks_f1]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "page down",          :exec zj-swap-tab-right}]}    [r/kotcp_ar    [f/ks_f2]      c/term]
-    ^{:doc/actions [{:program c/ze,    :action "home",               :exec ze-size-inc}]}          [r/kotcp_au    [f/ks_f4]      c/term]
-    ^{:doc/actions [{:program c/ze,    :action "end",                :exec ze-size-dec}]}          [r/kotcp_ad    [f/ks_f5]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "page up",            :exec zj-swap-tab-left}]}     [r/kotcp_al    [f/kts_f1]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "page down",          :exec zj-swap-tab-right}]}    [r/kotcp_ar    [f/kts_f2]     c/term]
+    ^{:doc/actions [{:program c/ze,    :action "home",               :exec ze-size-inc}]}          [r/kotcp_au    [f/kts_f4]     c/term]
+    ^{:doc/actions [{:program c/ze,    :action "end",                :exec ze-size-dec}]}          [r/kotcp_ad    [f/kts_f5]     c/term]
 
     ; technical glyphs
     ^{:doc/actions [{}]}                                                                           [t/kotcp_ob    [t/kotc_ob]]
@@ -51,14 +51,14 @@
     ^{:doc/actions [{}]}                                                                           [t/kotcp_sl    [t/kotc_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/zj, :action "pane float pin",    :exec zj-toggle-pin}]}            [a/kotcp_db    [f/ks_f6]      c/term]
-    ^{:doc/actions [{:program c/zj, :action "pane float toggle", :exec zj-toggle-float}]}          [a/kotcp_re    [f/ks_f7]      c/term]
+    ^{:doc/actions [{:program c/zj, :action "pane float pin",    :exec zj-toggle-pin}]}            [a/kotcp_db    [f/kts_f6]     c/term]
+    ^{:doc/actions [{:program c/zj, :action "pane float toggle", :exec zj-toggle-float}]}          [a/kotcp_re    [f/kts_f7]     c/term]
     ^{:doc/actions [{:program c/zj, :action "mode search",       :exec zj-entersearch-mode}
-                    {:program c/ze, :action "mode normal",       :exec z-normal-mode}]}            [a/kotcp_rs    [f/ks_f8]       c/term]
-    ^{:doc/actions [{:program c/zj, :action "pane float pop",    :exec zj-toggle-embed}]}          [a/kotcp_ro    [f/ks_f9]      c/term]
-    ^{:doc/actions [{}]}                                                                           [a/kotcp_rc    [f/ks_f10]]
+                    {:program c/ze, :action "mode normal",       :exec z-normal-mode}]}            [a/kotcp_rs    [f/kts_f8]     c/term]
+    ^{:doc/actions [{:program c/zj, :action "pane float pop",    :exec zj-toggle-embed}]}          [a/kotcp_ro    [f/kts_f9]     c/term]
+    ^{:doc/actions [{}]}                                                                           [a/kotcp_rc    [f/kts_f10]]
     ^{:doc/actions [{:program c/zj, :action "mode lock",         :exec zj-locked-mode}
-                    {:program c/zl, :action "mode normal",       :exec z-normal-mode}]}            [a/kotcp_sp    [f/ks_f11]       c/term]
+                    {:program c/zl, :action "mode normal",       :exec z-normal-mode}]}            [a/kotcp_sp    [f/kts_f11]    c/term]
 
     ; numeric-glyphs
     ^{:doc/actions [{}]}                                                                           [n/kotcp_1     [n/kotc_1]]
