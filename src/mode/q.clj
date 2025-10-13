@@ -11,6 +11,7 @@
             [config.action :as a]
             [config.numeric :as n]
             [config.alphabetic :as b]
+            [config.function :as f]
 						))
 
 (def out-file "q.edn")
@@ -37,10 +38,10 @@
    :rules
    [:q-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program, c/xhc   :action "find char forward",  :exec hc-prev-move}]}         [r/kp_al       [r/kt_pu]      c/term]
-    ^{:doc/actions [{:program, c/xhc   :action "find char backward", :exec hc-next-move}]}         [r/kp_ar       [r/kt_pd]      c/term]
-    ^{:doc/actions [{:program, c/xhc   :action "goto prev comment",  :exec hc-prev-comm}]}         [r/kp_au       [r/kt_hm]      c/term]
-    ^{:doc/actions [{:program, c/xhc   :action "goto next comment",  :exec hc-next-comm}]}         [r/kp_ad       [r/kt_ed]      c/term]
+    ^{:doc/actions [{:program, c/hc    :action "find char forward",  :exec hc-prev-move}]}         [r/kp_al       [r/kt_pu]      c/term]
+    ^{:doc/actions [{:program, c/hc    :action "find char backward", :exec hc-next-move}]}         [r/kp_ar       [r/kt_pd]      c/term]
+    ^{:doc/actions [{:program, c/hc    :action "goto prev comment",  :exec hc-prev-comm}]}         [r/kp_au       [r/kt_hm]      c/term]
+    ^{:doc/actions [{:program, c/hc    :action "goto next comment",  :exec hc-next-comm}]}         [r/kp_ad       [r/kt_ed]      c/term]
 
     ^{:doc/actions [{}]}                                                                           [r/ksp_al      [r/ks_al]]
     ^{:doc/actions [{}]}                                                                           [r/ksp_ar      [r/ks_ar]]
@@ -68,11 +69,11 @@
 
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/kp_db       [a/k_db]]
-    ^{:doc/actions [{:program, c/xhc   :action "symbol picker",      :exec hc-symbol-picker}]}     [a/kp_re       [:!TSf13]      c/term]
-    ^{:doc/actions [{:program, c/xhc   :action "goto def",           :exec hc-split-def}]}         [a/kp_rs       [:!Tf18]       c/term]
-    ^{:doc/actions [{:program, c/xhc   :action "goto type def",      :exec hc-split-type-def}]}    [a/kp_ro       [:!Tf19]       c/term]
+    ^{:doc/actions [{:program, c/hc    :action "symbol picker",      :exec hc-symbol-picker}]}     [a/kp_re       [f/ko_f13]     c/term]
+    ^{:doc/actions [{:program, c/hc    :action "goto def",           :exec hc-split-def}]}         [a/kp_rs       [f/ko_f14]     c/term]
+    ^{:doc/actions [{:program, c/hc    :action "goto type def",      :exec hc-split-type-def}]}    [a/kp_ro       [f/ko_f15]     c/term]
     ^{:doc/actions [{}]}                                                                           [a/kp_rc       [a/k_rc]]
-    ^{:doc/actions [{:program, c/xhc   :action "repeat last motion", :exec hc-last-move}]}         [a/kp_sp       [:f18]         c/term]
+    ^{:doc/actions [{:program, c/hc    :action "repeat last motion", :exec hc-last-move}]}         [a/kp_sp       [f/ko_f16]     c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
@@ -112,23 +113,23 @@
     ^{:doc/actions [{}]}                                                                           [b/kp_a        [b/k_a]]
     ^{:doc/actions [{}]}                                                                           [b/kp_b        [b/k_b]]
     ^{:doc/actions [{}]}                                                                           [b/kp_c        [b/k_c]]
-    ^{:doc/actions [{:program, c/xhc   :action "goto def",           :exec hc-go-def}]}            [b/kp_d        [:!Tf17]       c/term]
+    ^{:doc/actions [{:program, c/hc    :action "goto def",           :exec hc-go-def}]}            [b/kp_d        [f/kos_f13]    c/term]
     ^{:doc/actions [{}]}                                                                           [b/kp_e        [b/k_e]]
     ^{:doc/actions [{}]}                                                                           [b/kp_f        [b/k_f]]
     ^{:doc/actions [{}]}                                                                           [b/kp_g        [b/k_g]]
     ^{:doc/actions [{}]}                                                                           [b/kp_h        [b/k_h]]
-    ^{:doc/actions [{:program, c/xhc   :action "goto impl",          :exec hc-go-impl}]}           [b/kp_i        [:!TSf16]      c/term]
+    ^{:doc/actions [{:program, c/hc    :action "goto impl",          :exec hc-go-impl}]}           [b/kp_i        [f/kos_f14]    c/term]
     ^{:doc/actions [{}]}                                                                           [b/kp_j        [b/k_j]]
     ^{:doc/actions [{}]}                                                                           [b/kp_k        [b/k_k]]
     ^{:doc/actions [{}]}                                                                           [b/kp_l        [b/k_l]]
     ^{:doc/actions [{}]}                                                                           [b/kp_m        [b/k_m]]
-    ^{:doc/actions [{:program, c/xhc   :action "rename symbol",      :exec hc-rn-symbol}]}         [b/kp_n        [:!TSf11]      c/term]
+    ^{:doc/actions [{:program, c/hc    :action "rename symbol",      :exec hc-rn-symbol}]}         [b/kp_n        [f/kos_f15]    c/term]
     ^{:doc/actions [{}]}                                                                           [b/kp_o        [b/k_o]]
     ^{:doc/actions [{}]}                                                                           [b/kp_p        [b/k_p]]
     ^{:doc/actions [{}]}                                                                           [b/kp_q        [b/k_q]]
-    ^{:doc/actions [{:program, c/xhc   :action "goto ref",           :exec hc-go-ref}]}            [b/kp_r        [:!Tf16]       c/term]
+    ^{:doc/actions [{:program, c/hc    :action "goto ref",           :exec hc-go-ref}]}            [b/kp_r        [f/kos_f16]    c/term]
     ^{:doc/actions [{}]}                                                                           [b/kp_s        [b/k_s]]
-    ^{:doc/actions [{:program, c/xhc   :action "goto type def",      :exec hc-go-type-def}]}       [b/kp_t        [:!TSf17]      c/term]
+    ^{:doc/actions [{:program, c/hc    :action "goto type def",      :exec hc-go-type-def}]}       [b/kp_t        [f/kos_f17]    c/term]
     ^{:doc/actions [{}]}                                                                           [b/kp_u        [b/k_u]]
     ^{:doc/actions [{}]}                                                                           [b/kp_v        [b/k_v]]
     ^{:doc/actions [{}]}                                                                           [b/kp_w        [b/k_w]]
