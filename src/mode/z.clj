@@ -11,6 +11,7 @@
             [config.action :as a]
             [config.numeric :as n]
             [config.alphabetic :as b]
+            [config.function :as f]
 						))
 
 (def out-file "z.edn")
@@ -37,14 +38,14 @@
    :rules
    [:z-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program c/xhc,   :action "undo",               :exec hc-undo}
-                    {:program c/xmc,   :action "undo",               :exec mc-undo}]}              [r/kp_al       [r/ko_pu]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "redo",               :exec hc-redo}
-                    {:program c/xmc,   :action "redo",               :exec mc-redo}]}              [r/kp_ar       [r/ko_pd]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "prev change",        :exec hc-prev-diff}
-                    {:program c/xmc,   :action "prev change",        :exec mc-prev-diff}]}         [r/kp_au       [r/ko_hm]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "next change",        :exec hc-next-diff}
-                    {:program c/xmc,   :action "next change",        :exec mc-next-diff}]}         [r/kp_ad       [r/ko_ed]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "undo",               :exec hc-undo}
+                    {:program c/mc,    :action "undo",               :exec mc-undo}]}              [r/kp_al       [r/ko_pu]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "redo",               :exec hc-redo}
+                    {:program c/mc,    :action "redo",               :exec mc-redo}]}              [r/kp_ar       [r/ko_pd]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "prev change",        :exec hc-prev-diff}
+                    {:program c/mc,    :action "prev change",        :exec mc-prev-diff}]}         [r/kp_au       [r/ko_hm]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "next change",        :exec hc-next-diff}
+                    {:program c/mc,    :action "next change",        :exec mc-next-diff}]}         [r/kp_ad       [r/ko_ed]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [r/ksp_al      [r/ks_al]]
     ^{:doc/actions [{}]}                                                                           [r/ksp_ar      [r/ks_ar]]
@@ -71,15 +72,15 @@
     ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/xhc,   :action "goto prev diag",     :exec hc-prev-diag}]}         [a/kp_db       [:!Tf11]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "diag picker",        :exec hc-diag-picker}]}       [a/kp_re       [:!Tf13]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "goto next diag",     :exec hc-next-diag}]}         [a/kp_rs       [:!Tf12]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "goto prev diag",     :exec hc-prev-diag}]}         [a/kp_db       [f/kt_f11]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "diag picker",        :exec hc-diag-picker}]}       [a/kp_re       [f/kt_f13]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "goto next diag",     :exec hc-next-diag}]}         [a/kp_rs       [f/kt_f12]     c/term]
     ^{:doc/actions [{}]}                                                                           [a/kp_ro       [a/k_ro]]
     ^{:doc/actions [{}]}                                                                           [a/kp_rc       [a/k_rc]]
-    ^{:doc/actions [{:program c/xhc,   :action "goto last change",   :exec hc-last-mod}]}          [a/kp_sp       [:!Tf15]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "goto last change",   :exec hc-last-mod}]}          [a/kp_sp       [f/kt_f15]     c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
-    ^{:doc/actions [{:program c/xhc,   :action "wspace diag picker", :exec hc-diag-picker-ws}]}    [a/ksp_re      [:!Tf14]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "wspace diag picker", :exec hc-diag-picker-ws}]}    [a/ksp_re      [f/kt_f14]     c/term]
     ^{:doc/actions [{}]}                                                                           [a/ksp_rs      [a/ks_rs]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_ro      [a/ks_ro]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_rc      [a/ks_rc]]
