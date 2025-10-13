@@ -46,15 +46,15 @@
     ^{:doc/actions [{:program c/sys,   :action "tab"}]}                                            [c/kp_tab  [a/kotc_rs] nil    {:alone [c/k_tab]}]
 
     ; joker
-    ^{:doc/actions [{:program c/xhc,   :action "collapse selection", :exec hc-collapse}
+    ^{:doc/actions [{:program c/hc,    :action "collapse selection", :exec hc-collapse}
                     {:program c/zp,    :action "zellij escape",      :exec zp-escape}
                     {:program c/zt,    :action "zellij escape",      :exec zt-escape}
                     {:program c/zx,    :action "zellij escape",      :exec zx-escape}]}            [c/kh_caps [c/kew_rc]  nil    {:alone [c/k_esc]}]
 
     ; grave
-    ^{:doc/actions [{:program c/xhi,   :action "mode normal",        :exec hi-normal}
-                    {:program c/xhn,   :action "mode insert",        :exec hn-insert}
-                    {:program c/xhs,   :action "mode normal",        :exec hs-normal}]}            [b/kp_rt   [b/k_rt]    nil    {:alone [:f13]}]
+    ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hi-normal}
+                    {:program c/hn,    :action "mode insert",        :exec hn-insert}
+                    {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [b/kp_rt   [b/k_rt]    nil    {:alone [:f13]}]
 
     ; lefts
     ^{:doc/actions [{:program c/alf,   :action "window switcher"}]}                                [a/kp_lt   [a/k_lt]    nil    {:alone [c/kewqp_us]}]
