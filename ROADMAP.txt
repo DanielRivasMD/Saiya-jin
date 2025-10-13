@@ -1,15 +1,11 @@
 - create a function that autogenerates corresponding bindings
 - babel micro & helix fully functional, lazygit, zellij; next broot
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
-- coordinate Zellij / Helix
 - sync browser hotkeys
-- review zellij bindings
 - document terminal sequences
 - document properly massive overhall
-- karabiner files, worth tracking?
 - bug: double Tq
 - doc simple sequences
-- easier to declare modifiers as mods?
 
 ==================================================
 src/apps/zoom.clj:; TODO: homogenize to format
