@@ -32,14 +32,14 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/xhc,   :action "jump split left",    :exec hc-split-left}
-                    {:program c/xmc,   :action "jump split left",    :exec mc-prev-split}]}        [r/ktp_al      [r/kt_al]      c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "jump split right",   :exec hc-split-right}
-                    {:program c/xmc,   :action "jump split right",   :exec mc-next-split}]}        [r/ktp_ar      [r/kt_ar]      c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "jump split up",      :exec hc-split-up}
-                    {:program c/xmc,   :action "jump split up",      :exec mc-prev-split}]}        [r/ktp_au      [r/kt_au]      c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "jump split down",    :exec hc-split-down}
-                    {:program c/xmc,   :action "jump split down",    :exec mc-next-split}]}        [r/ktp_ad      [r/kt_ad]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split left",    :exec hc-split-left}
+                    {:program c/mc,    :action "jump split left",    :exec mc-prev-split}]}        [r/ktp_al      [r/kt_al]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split right",   :exec hc-split-right}
+                    {:program c/mc,    :action "jump split right",   :exec mc-next-split}]}        [r/ktp_ar      [r/kt_ar]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split up",      :exec hc-split-up}
+                    {:program c/mc,    :action "jump split up",      :exec mc-prev-split}]}        [r/ktp_au      [r/kt_au]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split down",    :exec hc-split-down}
+                    {:program c/mc,    :action "jump split down",    :exec mc-next-split}]}        [r/ktp_ad      [r/kt_ad]      c/term]
 
     ^{:doc/actions [{}]}                                                                           [r/ktsp_al     [r/kts_al]]
     ^{:doc/actions [{}]}                                                                           [r/ktsp_ar     [r/kts_ar]]
@@ -71,8 +71,8 @@
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` => `"}]}         [a/ktp_rs      [a/k_sp n/k_eq t/ks_pe a/k_sp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` ** `"}]}         [a/ktp_ro      [a/k_sp n/ks_8 n/ks_8 a/k_sp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` // `"}]}         [a/ktp_rc      [a/k_sp t/k_sl t/k_sl a/k_sp]]
-    ^{:doc/actions [{:program c/xhc    :action "jumper"              :exec hc-jump}
-                    {:program c/xmc    :action "jumper"              :exec mc-jump}]}              [a/ktp_sp      [a/kt_sp]]
+    ^{:doc/actions [{:program c/hc     :action "jumper"              :exec hc-jump}
+                    {:program c/mc     :action "jumper"              :exec mc-jump}]}              [a/ktp_sp      [a/kt_sp]]
 
     ^{:doc/actions [{}]}                                                                           [a/ktsp_db     [a/kts_db]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .== `"}]}        [a/ktsp_re     [a/k_sp t/k_pe n/k_eq n/k_eq a/k_sp]]
