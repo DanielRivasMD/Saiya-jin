@@ -11,6 +11,7 @@
             [config.action :as a]
             [config.numeric :as n]
             [config.alphabetic :as b]
+            [config.function :as f]
 						))
 
 (def out-file "rcmd.edn")
@@ -60,10 +61,10 @@
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/kqp_db      [a/kq_db]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_re      [a/kq_re]]
-    ^{:doc/actions [{:program c/xhc,   :action "save jump",          :exec hc-jump-save}]}         [a/kqp_sp      [:!TSf18]      c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "jump forward",       :exec hc-jump-forward}]}      [a/kqp_lc      [:!TSend]      c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "jumplist picker",    :exec hc-jump-picker}]}       [a/kqp_lo      [:!TSf12]      c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "jump backqard",      :exec hc-jump-backqard}]}     [a/kqp_lt      [:!TShome]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "save jump",          :exec hc-jump-save}]}         [a/kqp_sp      [f/ks_f13]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump forward",       :exec hc-jump-forward}]}      [a/kqp_lc      [f/ks_f14]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jumplist picker",    :exec hc-jump-picker}]}       [a/kqp_lo      [f/ks_f15]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump backqard",      :exec hc-jump-backqard}]}     [a/kqp_lt      [f/ks_f16]     c/term]
     ^{:doc/actions [{}]}                                                                           [b/kqp_rt      [b/kq_rt]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_ls      [a/kq_ls]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_esc     [a/kq_esc]]
