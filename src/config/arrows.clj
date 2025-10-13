@@ -249,30 +249,32 @@
 (def kewqsp_al (c/mk c/K c/E c/W c/Q c/S c/P c/_al))
 (def kewqsp_ar (c/mk c/K c/E c/W c/Q c/S c/P c/_ar))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (def k_pu (c/mk c/_pu))
 (def k_pd (c/mk c/_pd))
 (def k_hm (c/mk c/_hm))
 (def k_ed (c/mk c/_ed))
-
-(def ks_pu (c/mk c/K c/S c/_pu))
-(def ks_pd (c/mk c/K c/S c/_pd))
-(def ks_hm (c/mk c/K c/S c/_hm))
-(def ks_ed (c/mk c/K c/S c/_ed))
 
 (def ko_pu (c/mk c/K c/O c/_pu))
 (def ko_pd (c/mk c/K c/O c/_pd))
 (def ko_hm (c/mk c/K c/O c/_hm))
 (def ko_ed (c/mk c/K c/O c/_ed))
 
-(def kos_pu (c/mk c/K c/O c/S c/_pu))
-(def kos_pd (c/mk c/K c/O c/S c/_pd))
-(def kos_hm (c/mk c/K c/O c/S c/_hm))
-(def kos_ed (c/mk c/K c/O c/S c/_ed))
-
 (def kt_pu (c/mk c/K c/T c/_pu))
 (def kt_pd (c/mk c/K c/T c/_pd))
 (def kt_hm (c/mk c/K c/T c/_hm))
 (def kt_ed (c/mk c/K c/T c/_ed))
+
+(def ks_pu (c/mk c/K c/S c/_pu))
+(def ks_pd (c/mk c/K c/S c/_pd))
+(def ks_hm (c/mk c/K c/S c/_hm))
+(def ks_ed (c/mk c/K c/S c/_ed))
+
+(def kos_pu (c/mk c/K c/O c/S c/_pu))
+(def kos_pd (c/mk c/K c/O c/S c/_pd))
+(def kos_hm (c/mk c/K c/O c/S c/_hm))
+(def kos_ed (c/mk c/K c/O c/S c/_ed))
 
 (def kts_pu (c/mk c/K c/T c/S c/_pu))
 (def kts_pd (c/mk c/K c/T c/S c/_pd))
