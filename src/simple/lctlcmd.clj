@@ -51,18 +51,18 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/xhc,   :action "jump prev buffer",   :exec hc-prev-tab}
+    ^{:doc/actions [{:program c/hc,    :action "jump prev buffer",   :exec hc-prev-tab}
                     {:program c/lg,    :action "jump prev tab",      :exec lg-prev-tab}
-                    {:program c/xmc,   :action "jump prev buffer",   :exec mc-prev-tab}
+                    {:program c/mc,    :action "jump prev buffer",   :exec mc-prev-tab}
                     {:program c/ze,    :action "move left",          :exec ze-move-left}]}         [r/ktcp_al     [b/kt_b]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "jump next buffer",   :exec hc-next-tab}
+    ^{:doc/actions [{:program c/hc,    :action "jump next buffer",   :exec hc-next-tab}
                     {:program c/lg,    :action "jump next tab",      :exec lg-next-tab}
-                    {:program c/xmc,   :action "jump next buffer",   :exec mc-next-tab}
+                    {:program c/mc,    :action "jump next buffer",   :exec mc-next-tab}
                     {:program c/ze,    :action "move right",         :exec ze-move-rigth}]}        [r/ktcp_ar     [b/kt_f]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "increment number",   :exec hc-inc}
+    ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hc-inc}
                     {:program c/lg,    :action "jump prev block",    :exec lg-prev-block}
                     {:program c/ze,    :action "move up",            :exec ze-move-up}]}           [r/ktcp_au     [b/kt_n]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "decrement number",   :exec hc-dec}
+    ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hc-dec}
                     {:program c/lg,    :action "jump next block",    :exec lg-next-block}
                     {:program c/ze,    :action "move down",          :exec ze-move-down}]}         [r/ktcp_ad     [b/kt_p]       c/term]
 
@@ -91,18 +91,18 @@
     ^{:doc/actions [{}]}                                                                           [t/ktcsp_sl    [t/ktcs_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/xhc,   :action "close tab",          :exec hc-close-tab}
-                    {:program c/xmc,   :action "close tab",          :exec mc-close-tab}]}         [a/ktcp_db     [b/kt_l]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "close others",       :exec hc-unsplit}
-                    {:program c/xmc,   :action "close others",       :exec mc-unsplit}]}           [a/ktcp_re     [b/kt_g]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "split right",        :exec hc-vsplit}
-                    {:program c/xmc,   :action "split right",        :exec mc-vsplit}]}            [a/ktcp_rs     [b/kt_v]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "split down",         :exec hc-hsplit}
-                    {:program c/xmc,   :action "split down",         :exec mc-hsplit}]}            [a/ktcp_ro     [b/kt_h]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "close window",       :exec hc-close-split}
-                    {:program c/xmc,   :action "close window",       :exec mc-close-split}]}       [a/ktcp_rc     [b/kt_j]       c/term]
-    ^{:doc/actions [{:program c/xhc,   :action "last file",          :exec hc-last-tab}
-                    {:program c/xbr,   :action "open preview"        :exec br-toggle-preview}]}    [a/ktcp_sp     [b/kt_o]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "close tab",          :exec hc-close-tab}
+                    {:program c/mc,    :action "close tab",          :exec mc-close-tab}]}         [a/ktcp_db     [b/kt_l]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "close others",       :exec hc-unsplit}
+                    {:program c/mc,    :action "close others",       :exec mc-unsplit}]}           [a/ktcp_re     [b/kt_g]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "split right",        :exec hc-vsplit}
+                    {:program c/mc,    :action "split right",        :exec mc-vsplit}]}            [a/ktcp_rs     [b/kt_v]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "split down",         :exec hc-hsplit}
+                    {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/ktcp_ro     [b/kt_h]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "close window",       :exec hc-close-split}
+                    {:program c/mc,    :action "close window",       :exec mc-close-split}]}       [a/ktcp_rc     [b/kt_j]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "last file",          :exec hc-last-tab}
+                    {:program c/br,    :action "open preview"        :exec br-toggle-preview}]}    [a/ktcp_sp     [b/kt_o]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/ktcsp_db    [a/ktcs_db]]
     ^{:doc/actions [{}]}                                                                           [a/ktcsp_re    [a/ktcs_re]]
