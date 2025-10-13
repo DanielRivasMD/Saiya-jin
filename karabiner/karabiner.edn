@@ -101,27 +101,25 @@
 {:des "Command Mode",
  :rules
  [^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto line start",
       :exec ["goto_line_start"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "goto line start",
       :exec ["StartOfLine"]}]}
   [:!Cleft_arrow [:!Ta] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto line end",
       :exec ["goto_line_end" "move_char_right"]}
-     {:program "macosx-micro",
-      :action "goto line end",
-      :exec ["EndOfLine"]}]}
+     {:program "micro", :action "goto line end", :exec ["EndOfLine"]}]}
   [:!Cright_arrow [:!Te] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto file start",
       :exec ["goto_file_start"]}
      {:program "lazygit", :action "goto top", :exec ["gotoTop"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "goto file start",
       :exec ["CursorStart"]}
      {:program "zellij-enter",
@@ -129,46 +127,44 @@
       :exec ["PageScrollUp;"]}]}
   [:!Cup_arrow [:home] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto file end",
       :exec ["goto_last_line"]}
      {:program "lazygit", :action "goto bottom", :exec ["gotoBottom"]}
-     {:program "macosx-micro",
-      :action "goto file end",
-      :exec ["CursorEnd"]}
+     {:program "micro", :action "goto file end", :exec ["CursorEnd"]}
      {:program "zellij-enter",
       :action "page down",
       :exec ["PageScrollDown;"]}]}
   [:!Cdown_arrow [:end] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select line start",
       :exec ["select_mode" "goto_line_start" "MODE"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select line start",
       :exec ["SelectToStartOfLine"]}]}
   [:!CSleft_arrow [:!Oleft_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select line end",
       :exec ["select_mode" "goto_line_end" "MODE"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select line end",
       :exec ["SelectToEndOfLine"]}]}
   [:!CSright_arrow [:!Oright_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select file start",
       :exec ["extend_to_file_start"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select file start",
       :exec ["SelectToStart"]}]}
   [:!CSup_arrow [:!Oup_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select file end",
       :exec ["extend_to_file_end"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select file end",
       :exec ["SelectToEnd"]}]}
   [:!CSdown_arrow [:!Odown_arrow] :term]
@@ -411,34 +407,34 @@
 {:des "Control Mode",
  :rules
  [^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump split left",
       :exec ["jump_view_left"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "jump split left",
       :exec ["PreviousSplit"]}]}
   [:!T#Pleft_arrow [:!Tleft_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump split right",
       :exec ["jump_view_right"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "jump split right",
       :exec ["NextSplit"]}]}
   [:!T#Pright_arrow [:!Tright_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump split up",
       :exec ["jump_view_up"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "jump split up",
       :exec ["PreviousSplit"]}]}
   [:!T#Pup_arrow [:!Tup_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump split down",
       :exec ["jump_view_down"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "jump split down",
       :exec ["NextSplit"]}]}
   [:!T#Pdown_arrow [:!Tdown_arrow] :term]
@@ -512,10 +508,8 @@
     [{:program "term", :action "terminal", :sequence "` // `"}]}
   [:!T#Pright_command [:spacebar :slash :slash :spacebar]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
-      :action "jumper",
-      :exec ["goto_word"]}
-     {:program "macosx-micro", :action "jumper", :exec ["JumpLine"]}]}
+    [{:program "helix-common", :action "jumper", :exec ["goto_word"]}
+     {:program "micro", :action "jumper", :exec ["JumpLine"]}]}
   [:!T#Pspacebar [:!Tspacebar]]
   ^{:doc/actions [{}]}
   [:!TS#Pdelete_or_backspace [:!TSdelete_or_backspace]]
@@ -707,22 +701,22 @@
  :rules
  [:q-mode
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "find char forward",
       :exec ["normal_mode" "till_prev_char" "MODE"]}]}
   [:#Pleft_arrow [:!Tpage_up] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "find char backward",
       :exec ["normal_mode" "find_till_char" "MODE"]}]}
   [:#Pright_arrow [:!Tpage_down] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto prev comment",
       :exec ["goto_prev_comment"]}]}
   [:#Pup_arrow [:!Thome] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto next comment",
       :exec ["goto_next_comment"]}]}
   [:#Pdown_arrow [:!Tend] :term]
@@ -769,27 +763,27 @@
   ^{:doc/actions [{}]}
   [:#Pdelete_or_backspace [:delete_or_backspace]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "symbol picker",
       :exec ["symbol_picker"]}]}
-  [:#Preturn_or_enter [:!TSf13] :term]
+  [:#Preturn_or_enter [:!Of13] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto def",
       :exec ["vsplit" "goto_definition"]}]}
-  [:#Pright_shift [:!Tf18] :term]
+  [:#Pright_shift [:!Of14] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto type def",
       :exec ["vsplit" "goto_type_definition"]}]}
-  [:#Pright_option [:!Tf19] :term]
+  [:#Pright_option [:!Of15] :term]
   ^{:doc/actions [{}]}
   [:#Pright_command [:right_command]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "repeat last motion",
       :exec ["repeat_last_motion"]}]}
-  [:#Pspacebar [:f18] :term]
+  [:#Pspacebar [:!Of16] :term]
   ^{:doc/actions [{}]}
   [:!S#Pdelete_or_backspace [:!Sdelete_or_backspace]]
   ^{:doc/actions [{}]}
@@ -857,10 +851,10 @@
   ^{:doc/actions [{}]}
   [:#Pc [:c]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto def",
       :exec ["goto_definition"]}]}
-  [:#Pd [:!Tf17] :term]
+  [:#Pd [:!OSf13] :term]
   ^{:doc/actions [{}]}
   [:#Pe [:e]]
   ^{:doc/actions [{}]}
@@ -870,10 +864,10 @@
   ^{:doc/actions [{}]}
   [:#Ph [:h]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto impl",
       :exec ["goto_implementation"]}]}
-  [:#Pi [:!TSf16] :term]
+  [:#Pi [:!OSf14] :term]
   ^{:doc/actions [{}]}
   [:#Pj [:j]]
   ^{:doc/actions [{}]}
@@ -883,10 +877,10 @@
   ^{:doc/actions [{}]}
   [:#Pm [:m]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "rename symbol",
       :exec ["rename_symbol"]}]}
-  [:#Pn [:!TSf11] :term]
+  [:#Pn [:!OSf15] :term]
   ^{:doc/actions [{}]}
   [:#Po [:o]]
   ^{:doc/actions [{}]}
@@ -894,17 +888,17 @@
   ^{:doc/actions [{}]}
   [:#Pq [:q]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto ref",
       :exec ["goto_reference"]}]}
-  [:#Pr [:!Tf16] :term]
+  [:#Pr [:!OSf16] :term]
   ^{:doc/actions [{}]}
   [:#Ps [:s]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto type def",
       :exec ["goto_type_definition"]}]}
-  [:#Pt [:!TSf17] :term]
+  [:#Pt [:!OSf17] :term]
   ^{:doc/actions [{}]}
   [:#Pu [:u]]
   ^{:doc/actions [{}]}
@@ -978,28 +972,26 @@
  :rules
  [:z-mode
   ^{:doc/actions
-    [{:program "macosx-helix-common", :action "undo", :exec ["undo"]}
-     {:program "macosx-micro", :action "undo", :exec ["Undo"]}]}
+    [{:program "helix-common", :action "undo", :exec ["undo"]}
+     {:program "micro", :action "undo", :exec ["Undo"]}]}
   [:#Pleft_arrow [:!Opage_up] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common", :action "redo", :exec ["redo"]}
-     {:program "macosx-micro", :action "redo", :exec ["Redo"]}]}
+    [{:program "helix-common", :action "redo", :exec ["redo"]}
+     {:program "micro", :action "redo", :exec ["Redo"]}]}
   [:#Pright_arrow [:!Opage_down] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "prev change",
       :exec ["goto_prev_change"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "prev change",
       :exec ["DiffPrevious"]}]}
   [:#Pup_arrow [:!Ohome] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "next change",
       :exec ["goto_next_change"]}
-     {:program "macosx-micro",
-      :action "next change",
-      :exec ["DiffNext"]}]}
+     {:program "micro", :action "next change", :exec ["DiffNext"]}]}
   [:#Pdown_arrow [:!Oend] :term]
   ^{:doc/actions [{}]}
   [:!S#Pleft_arrow [:!Sleft_arrow]]
@@ -1042,17 +1034,17 @@
   ^{:doc/actions [{}]}
   [:!S#Pslash [:!Sslash]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto prev diag",
       :exec ["goto_prev_diag"]}]}
   [:#Pdelete_or_backspace [:!Tf11] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "diag picker",
       :exec ["diagnostics_picker"]}]}
   [:#Preturn_or_enter [:!Tf13] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto next diag",
       :exec ["goto_next_diag"]}]}
   [:#Pright_shift [:!Tf12] :term]
@@ -1061,14 +1053,14 @@
   ^{:doc/actions [{}]}
   [:#Pright_command [:right_command]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto last change",
       :exec ["goto_last_modification"]}]}
   [:#Pspacebar [:!Tf15] :term]
   ^{:doc/actions [{}]}
   [:!S#Pdelete_or_backspace [:!Sdelete_or_backspace]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "wspace diag picker",
       :exec ["workspace_diagnostics_picker"]}]}
   [:!S#Preturn_or_enter [:!Tf14] :term]
@@ -1252,22 +1244,22 @@
     [{:program "zellij-shared",
       :action "page up",
       :exec ["MoveTab \"Left\";"]}]}
-  [:!OTC#Pleft_arrow [:!Sf1] :term]
+  [:!OTC#Pleft_arrow [:!TSf1] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "page down",
       :exec ["MoveTab \"Right\";"]}]}
-  [:!OTC#Pright_arrow [:!Sf2] :term]
+  [:!OTC#Pright_arrow [:!TSf2] :term]
   ^{:doc/actions
     [{:program "zellij-enter",
       :action "home",
       :exec ["Resize \"Increase\";"]}]}
-  [:!OTC#Pup_arrow [:!Sf4] :term]
+  [:!OTC#Pup_arrow [:!TSf4] :term]
   ^{:doc/actions
     [{:program "zellij-enter",
       :action "end",
       :exec ["Resize \"Decrease\";"]}]}
-  [:!OTC#Pdown_arrow [:!Sf5] :term]
+  [:!OTC#Pdown_arrow [:!TSf5] :term]
   ^{:doc/actions [{}]}
   [:!OTC#Popen_bracket [:!OTCopen_bracket]]
   ^{:doc/actions [{}]}
@@ -1288,12 +1280,12 @@
     [{:program "zellij-shared",
       :action "pane float pin",
       :exec ["TogglePanePinned;"]}]}
-  [:!OTC#Pdelete_or_backspace [:!Sf6] :term]
+  [:!OTC#Pdelete_or_backspace [:!TSf6] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "pane float toggle",
       :exec ["ToggleFloatingPanes;"]}]}
-  [:!OTC#Preturn_or_enter [:!Sf7] :term]
+  [:!OTC#Preturn_or_enter [:!TSf7] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "mode search",
@@ -1301,14 +1293,14 @@
      {:program "zellij-enter",
       :action "mode normal",
       :exec ["SwitchToMode \"Normal\";"]}]}
-  [:!OTC#Pright_shift [:!Sf8] :term]
+  [:!OTC#Pright_shift [:!TSf8] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "pane float pop",
       :exec ["TogglePaneEmbedOrFloating;"]}]}
-  [:!OTC#Pright_option [:!Sf9] :term]
+  [:!OTC#Pright_option [:!TSf9] :term]
   ^{:doc/actions [{}]}
-  [:!OTC#Pright_command [:!Sf10]]
+  [:!OTC#Pright_command [:!TSf10]]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "mode lock",
@@ -1316,7 +1308,7 @@
      {:program "zellij-lock",
       :action "mode normal",
       :exec ["SwitchToMode \"Normal\";"]}]}
-  [:!OTC#Pspacebar [:!Sf11] :term]
+  [:!OTC#Pspacebar [:!TSf11] :term]
   ^{:doc/actions [{}]}
   [:!OTC#P1 [:!OTC1]]
   ^{:doc/actions [{}]}
@@ -1640,7 +1632,7 @@
       :exec ["GoToNextTab;"]}]}
   [:!OC#Pright_arrow [:!Of2] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "scroll up",
       :exec ["scroll_up"]}
      {:program "lazygit",
@@ -1648,7 +1640,7 @@
       :exec ["scrollUpMain-alt2"]}]}
   [:!OC#Pup_arrow [:!Tx] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "scroll down",
       :exec ["scroll_down"]}
      {:program "lazygit",
@@ -1685,19 +1677,13 @@
   ^{:doc/actions [{}]}
   [:!OC#Pbackslash [:!OSz] :term]
   ^{:doc/actions
-    [{:program "macosx-alacritty",
-      :action "nushell motion",
-      :exec []}]}
+    [{:program "alacritty", :action "nushell motion", :exec []}]}
   [:!OC#Pperiod [:!Ox] :term]
   ^{:doc/actions
-    [{:program "macosx-alacritty",
-      :action "nushell motion",
-      :exec []}]}
+    [{:program "alacritty", :action "nushell motion", :exec []}]}
   [:!OC#Pcomma [:!Oy] :term]
   ^{:doc/actions
-    [{:program "macosx-alacritty",
-      :action "nushell motion",
-      :exec []}]}
+    [{:program "alacritty", :action "nushell motion", :exec []}]}
   [:!OC#Pslash [:!Oz] :term]
   ^{:doc/actions [{}]}
   [:!OCS#Popen_bracket [:!OCSopen_bracket]]
@@ -2223,11 +2209,11 @@
 {:des "Control - Command Mode",
  :rules
  [^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump prev buffer",
       :exec ["goto_previous_buffer"]}
      {:program "lazygit", :action "jump prev tab", :exec ["prevTab"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "jump prev buffer",
       :exec ["PreviousTab"]}
      {:program "zellij-enter",
@@ -2235,19 +2221,17 @@
       :exec ["MovePane \"Left\";"]}]}
   [:!TC#Pleft_arrow [:!Tb] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump next buffer",
       :exec ["goto_next_buffer"]}
      {:program "lazygit", :action "jump next tab", :exec ["nextTab"]}
-     {:program "macosx-micro",
-      :action "jump next buffer",
-      :exec ["NextTab"]}
+     {:program "micro", :action "jump next buffer", :exec ["NextTab"]}
      {:program "zellij-enter",
       :action "move right",
       :exec ["MovePane \"Right\";"]}]}
   [:!TC#Pright_arrow [:!Tf] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "increment number",
       :exec ["increment"]}
      {:program "lazygit",
@@ -2258,7 +2242,7 @@
       :exec ["MovePane \"Up\";"]}]}
   [:!TC#Pup_arrow [:!Tn] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "decrement number",
       :exec ["decrement"]}
      {:program "lazygit",
@@ -2309,48 +2293,34 @@
   ^{:doc/actions [{}]}
   [:!TCS#Pslash [:!TCSslash]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "close tab",
       :exec [":buffer-close"]}
-     {:program "macosx-micro", :action "close tab", :exec ["Quit"]}]}
+     {:program "micro", :action "close tab", :exec ["Quit"]}]}
   [:!TC#Pdelete_or_backspace [:!Tl] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
-      :action "close others",
-      :exec ["wonly"]}
-     {:program "macosx-micro",
-      :action "close others",
-      :exec ["Unsplit"]}]}
+    [{:program "helix-common", :action "close others", :exec ["wonly"]}
+     {:program "micro", :action "close others", :exec ["Unsplit"]}]}
   [:!TC#Preturn_or_enter [:!Tg] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
-      :action "split right",
-      :exec ["vsplit"]}
-     {:program "macosx-micro",
-      :action "split right",
-      :exec ["VSplit"]}]}
+    [{:program "helix-common", :action "split right", :exec ["vsplit"]}
+     {:program "micro", :action "split right", :exec ["VSplit"]}]}
   [:!TC#Pright_shift [:!Tv] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
-      :action "split down",
-      :exec ["hsplit"]}
-     {:program "macosx-micro",
-      :action "split down",
-      :exec ["HSplit"]}]}
+    [{:program "helix-common", :action "split down", :exec ["hsplit"]}
+     {:program "micro", :action "split down", :exec ["HSplit"]}]}
   [:!TC#Pright_option [:!Th] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "close window",
       :exec ["wclose"]}
-     {:program "macosx-micro",
-      :action "close window",
-      :exec ["Unsplit"]}]}
+     {:program "micro", :action "close window", :exec ["Unsplit"]}]}
   [:!TC#Pright_command [:!Tj] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "last file",
       :exec ["goto_last_accessed_file"]}
-     {:program "macosx-broot", :action "open preview", :exec []}]}
+     {:program "broot", :action "open preview", :exec []}]}
   [:!TC#Pspacebar [:!To] :term]
   ^{:doc/actions [{}]}
   [:!TCS#Pdelete_or_backspace [:!TCSdelete_or_backspace]]
@@ -2524,27 +2494,25 @@
 {:des "Command Mode",
  :rules
  [^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto line start",
       :exec ["goto_line_start"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "goto line start",
       :exec ["StartOfLine"]}]}
   [:!Cleft_arrow [:!Ta] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto line end",
       :exec ["goto_line_end" "move_char_right"]}
-     {:program "macosx-micro",
-      :action "goto line end",
-      :exec ["EndOfLine"]}]}
+     {:program "micro", :action "goto line end", :exec ["EndOfLine"]}]}
   [:!Cright_arrow [:!Te] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto file start",
       :exec ["goto_file_start"]}
      {:program "lazygit", :action "goto top", :exec ["gotoTop"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "goto file start",
       :exec ["CursorStart"]}
      {:program "zellij-enter",
@@ -2552,46 +2520,44 @@
       :exec ["PageScrollUp;"]}]}
   [:!Cup_arrow [:home] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto file end",
       :exec ["goto_last_line"]}
      {:program "lazygit", :action "goto bottom", :exec ["gotoBottom"]}
-     {:program "macosx-micro",
-      :action "goto file end",
-      :exec ["CursorEnd"]}
+     {:program "micro", :action "goto file end", :exec ["CursorEnd"]}
      {:program "zellij-enter",
       :action "page down",
       :exec ["PageScrollDown;"]}]}
   [:!Cdown_arrow [:end] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select line start",
       :exec ["select_mode" "goto_line_start" "MODE"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select line start",
       :exec ["SelectToStartOfLine"]}]}
   [:!CSleft_arrow [:!Oleft_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select line end",
       :exec ["select_mode" "goto_line_end" "MODE"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select line end",
       :exec ["SelectToEndOfLine"]}]}
   [:!CSright_arrow [:!Oright_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select file start",
       :exec ["extend_to_file_start"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select file start",
       :exec ["SelectToStart"]}]}
   [:!CSup_arrow [:!Oup_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select file end",
       :exec ["extend_to_file_end"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select file end",
       :exec ["SelectToEnd"]}]}
   [:!CSdown_arrow [:!Odown_arrow] :term]
@@ -2834,34 +2800,34 @@
 {:des "Control Mode",
  :rules
  [^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump split left",
       :exec ["jump_view_left"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "jump split left",
       :exec ["PreviousSplit"]}]}
   [:!T#Pleft_arrow [:!Tleft_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump split right",
       :exec ["jump_view_right"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "jump split right",
       :exec ["NextSplit"]}]}
   [:!T#Pright_arrow [:!Tright_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump split up",
       :exec ["jump_view_up"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "jump split up",
       :exec ["PreviousSplit"]}]}
   [:!T#Pup_arrow [:!Tup_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump split down",
       :exec ["jump_view_down"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "jump split down",
       :exec ["NextSplit"]}]}
   [:!T#Pdown_arrow [:!Tdown_arrow] :term]
@@ -2935,10 +2901,8 @@
     [{:program "term", :action "terminal", :sequence "` // `"}]}
   [:!T#Pright_command [:spacebar :slash :slash :spacebar]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
-      :action "jumper",
-      :exec ["goto_word"]}
-     {:program "macosx-micro", :action "jumper", :exec ["JumpLine"]}]}
+    [{:program "helix-common", :action "jumper", :exec ["goto_word"]}
+     {:program "micro", :action "jumper", :exec ["JumpLine"]}]}
   [:!T#Pspacebar [:!Tspacebar]]
   ^{:doc/actions [{}]}
   [:!TS#Pdelete_or_backspace [:!TSdelete_or_backspace]]
@@ -3129,21 +3093,21 @@
 {:des "Option Mode",
  :rules
  [^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto prev word",
       :exec ["move_prev_word_start" "collapse_selection"]}]}
   [:!O#Pleft_arrow [:!Ob] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto next word",
       :exec ["move_next_word_end" "collapse_selection"]}]}
   [:!O#Pright_arrow [:!Of] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto prev para",
       :exec ["goto_prev_paragraph" "collapse_selection"]}
      {:program "lazygit", :action "goto prev page", :exec ["prevPage"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "goto prev para",
       :exec ["ParagraphPrevious"]}
      {:program "zellij-enter",
@@ -3151,11 +3115,11 @@
       :exec ["HalfPageScrollUp;"]}]}
   [:!O#Pup_arrow [:page_up] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto next para",
       :exec ["goto_next_paragraph" "collapse_selection"]}
      {:program "lazygit", :action "goto next page", :exec ["nextPage"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "goto next para",
       :exec ["ParagraphNext"]}
      {:program "zellij-enter",
@@ -3163,46 +3127,46 @@
       :exec ["HalfPageScrollDown;"]}]}
   [:!O#Pdown_arrow [:page_down] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select prev word",
       :exec ["extend_prev_word_start"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select prev word",
       :exec ["SelectWordLeft"]}]}
   [:!OS#Pleft_arrow [:!OSleft_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select next word",
       :exec ["extend_next_word_end"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select next word",
       :exec ["SelectWordRight"]}]}
   [:!OS#Pright_arrow [:!OSright_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-insert",
+    [{:program "helix-insert",
       :action "select prev para",
       :exec ["select_mode" "goto_prev_paragraph" "insert_mode"]}
-     {:program "macosx-helix-normal",
+     {:program "helix-normal",
       :action "select prev para",
       :exec ["select_mode" "goto_prev_paragraph" "normal_mode"]}
-     {:program "macosx-helix-select",
+     {:program "helix-select",
       :action "select prev para",
       :exec ["select_mode" "goto_prev_paragraph" "select_mode"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select prev para",
       :exec ["SelectToParagraphPrevious"]}]}
   [:!OS#Pup_arrow [:!OSup_arrow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-insert",
+    [{:program "helix-insert",
       :action "select next para",
       :exec ["select_mode" "goto_next_paragraph" "append_mode"]}
-     {:program "macosx-helix-normal",
+     {:program "helix-normal",
       :action "select next para",
       :exec ["select_mode" "goto_next_paragraph" "normal_mode"]}
-     {:program "macosx-helix-select",
+     {:program "helix-select",
       :action "select next para",
       :exec ["select_mode" "goto_next_paragraph" "select_mode"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "select next para",
       :exec ["SelectToParagraphNext"]}]}
   [:!OS#Pdown_arrow [:!OSdown_arrow] :term]
@@ -3343,217 +3307,193 @@
     [{:program "term", :action "terminal", :sequence "` .+ `"}]}
   [:!OS#Pequal_sign [:spacebar :period :!Sequal_sign :spacebar]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
-      :action "format",
-      :exec [":format"]}]}
+    [{:program "helix-common", :action "format", :exec [":format"]}]}
   [:!O#Pa [:!Oa] :term]
   ^{:doc/actions [{}]}
-  [:!O#Pb [:!Ob] :term]
+  [:!O#Pb [:!Sf1] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "copy",
       :exec ["yank_to_clipboard"]}
-     {:program "macosx-micro", :action "copy", :exec ["Copy"]}]}
-  [:!O#Pc [:!Oc] :term]
+     {:program "micro", :action "copy", :exec ["Copy"]}]}
+  [:!O#Pc [:!Sf2] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "spawn multi",
       :exec ["search_selection" "extend_search_next"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "spawn multi",
       :exec ["SpawnMultiCursor"]}]}
-  [:!O#Pd [:!Od] :term]
+  [:!O#Pd [:!Sf4] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "toggle comments",
       :exec ["toggle_comments"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "toggle comments",
       :exec ["lua:comment.comment"]}]}
-  [:!O#Pe [:!Oe] :term]
+  [:!O#Pe [:!Sf5] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
-      :action "search",
-      :exec ["search"]}
-     {:program "macosx-micro",
-      :action "search",
-      :exec ["FindLiteral"]}]}
-  [:!O#Pf [:!Of] :term]
+    [{:program "helix-common", :action "search", :exec ["search"]}
+     {:program "micro", :action "search", :exec ["FindLiteral"]}]}
+  [:!O#Pf [:!Sf6] :term]
   ^{:doc/actions [{}]}
   [:!O#Pg [:!Og] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "find prev",
       :exec ["search_prev"]}
-     {:program "macosx-micro",
-      :action "find prev",
-      :exec ["FindPrevious"]}]}
+     {:program "micro", :action "find prev", :exec ["FindPrevious"]}]}
   [:!O#Ph [:!Oh] :term]
   ^{:doc/actions [{}]}
-  [:!O#Pi [:!Oi] :term]
+  [:!O#Pi [:!Sf7] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "spawn multi down",
       :exec ["normal_mode" "copy_selection_on_next_line" "MODE"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "spawn multi down",
       :exec ["SpawnMultiCursorDown"]}]}
   [:!O#Pj [:!Oj] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "spawn multi up",
       :exec ["normal_mode" "copy_selection_on_prev_line" "MODE"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "spawn multi up",
       :exec ["SpawnMultiCursorUp"]}]}
   [:!O#Pk [:!Ok] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "find next",
       :exec ["search_next"]}
-     {:program "macosx-micro",
-      :action "find next",
-      :exec ["FindNext"]}]}
+     {:program "micro", :action "find next", :exec ["FindNext"]}]}
   [:!O#Pl [:!Ol] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "toggle macro",
       :exec ["record_macro"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "toggle macro",
       :exec ["ToggleMacro"]}]}
   [:!O#Pm [:!Om] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
-      :action "new buffer",
-      :exec [":new"]}
-     {:program "macosx-micro",
-      :action "new buffer",
-      :exec ["AddTab"]}]}
-  [:!O#Pn [:!On] :term]
+    [{:program "helix-common", :action "new buffer", :exec [":new"]}
+     {:program "micro", :action "new buffer", :exec ["AddTab"]}]}
+  [:!O#Pn [:!Sf8] :term]
   ^{:doc/actions [{}]}
   [:!O#Po [:!Oo] :term]
   ^{:doc/actions [{}]}
   [:!O#Pp [:!Op] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "quit",
       :exec ["normal_mode" ":quit-all"]}
-     {:program "macosx-micro", :action "quit", :exec ["QuitAll"]}]}
+     {:program "micro", :action "quit", :exec ["QuitAll"]}]}
   [:!O#Pq [:!Oq] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "reload buffers",
       :exec ["normal_mode" ":reload-all" "MODE"]}]}
   [:!O#Pr [:!Or] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "save & quit",
       :exec ["normal_mode" ":write-quit-all"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "save & quit",
       :exec ["Save,QuitAll"]}]}
   [:!O#Ps [:!Os] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "compile todo",
       :exec [":sh just todor"]}]}
   [:!O#Pt [:!Ot] :term]
   ^{:doc/actions [{}]}
-  [:!O#Pu [:!Ou] :term]
+  [:!O#Pu [:!Sf9] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "paste",
       :exec ["paste_clipboard_before"]}
-     {:program "macosx-micro", :action "paste", :exec ["Paste"]}]}
+     {:program "micro", :action "paste", :exec ["Paste"]}]}
   [:!O#Pv [:!Ov] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "save",
       :exec ["normal_mode" ":write"]}
-     {:program "macosx-micro", :action "save", :exec ["Save"]}]}
+     {:program "micro", :action "save", :exec ["Save"]}]}
   [:!O#Pw [:!Ow] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "cut",
       :exec ["yank_to_clipboard" "delete_selection_noyank"]}
-     {:program "macosx-micro", :action "cut", :exec ["Cut"]}]}
+     {:program "micro", :action "cut", :exec ["Cut"]}]}
   [:!O#Px [:!Ox] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "skip multi",
       :exec ["search_selection" "search_next"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "skip multi",
       :exec ["SkipMultiCursor"]}]}
   [:!O#Py [:!Oy] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "remove multi",
       :exec ["search_selection" "search_prev"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "remove multi",
       :exec ["RemoveMultiCursor"]}]}
   [:!O#Pz [:!Oz] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "command mode",
       :exec ["command_mode"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "command mode",
       :exec ["CommandMode"]}]}
-  [:!O#Pright_control [:!OTf10] :term]
+  [:!O#Pright_control [:!Sf11] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select all",
       :exec ["select_all"]}
-     {:program "macosx-micro",
-      :action "select all",
-      :exec ["SelectAll"]}]}
+     {:program "micro", :action "select all", :exec ["SelectAll"]}]}
   [:!OS#Pa [:!OSa] :term]
   ^{:doc/actions [{}]}
   [:!OS#Pb [:!OSb] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "copy line",
       :exec ["extend_to_line_bounds" "yank_to_clipboard"]}
-     {:program "macosx-micro",
-      :action "copy line",
-      :exec ["CopyLine"]}]}
+     {:program "micro", :action "copy line", :exec ["CopyLine"]}]}
   [:!OS#Pc [:!OSc] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "duplicate line",
       :exec
       ["extend_to_line_bounds" "yank" "paste_after" "goto_line_start"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "duplicate line",
       :exec ["DuplicateLine"]}]}
   [:!OS#Pd [:!OSd] :term]
   ^{:doc/actions [{}]}
   [:!OS#Pe [:!OSe] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "global search",
       :exec ["global_search"]}
-     {:program "macosx-micro",
-      :action "global search",
-      :exec ["Find"]}]}
+     {:program "micro", :action "global search", :exec ["Find"]}]}
   [:!OS#Pf [:!OSf] :term]
   ^{:doc/actions [{}]}
   [:!OS#Pg [:!OSg] :term]
   ^{:doc/actions [{}]}
   [:!OS#Ph [:!OSh] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
-      :action "indent",
-      :exec ["indent"]}
-     {:program "macosx-micro",
-      :action "indent",
-      :exec ["IndentSelection"]}]}
+    [{:program "helix-common", :action "indent", :exec ["indent"]}
+     {:program "micro", :action "indent", :exec ["IndentSelection"]}]}
   [:!OS#Pi [:!OSi] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "move down",
       :exec
       ["normal_mode"
@@ -3561,12 +3501,10 @@
        "delete_selection"
        "paste_after"
        "MODE"]}
-     {:program "macosx-micro",
-      :action "move down",
-      :exec ["MoveLinesDown"]}]}
+     {:program "micro", :action "move down", :exec ["MoveLinesDown"]}]}
   [:!OS#Pj [:!OSj] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "move up",
       :exec
       ["normal_mode"
@@ -3575,46 +3513,38 @@
        "move_line_up"
        "paste_before"
        "MODE"]}
-     {:program "macosx-micro",
-      :action "move up",
-      :exec ["MoveLinesUp"]}]}
+     {:program "micro", :action "move up", :exec ["MoveLinesUp"]}]}
   [:!OS#Pk [:!OSk] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select line",
       :exec ["goto_line_end" "select_mode" "goto_line_start" "MODE"]}
-     {:program "macosx-micro",
-      :action "select line",
-      :exec ["SelectLine"]}]}
+     {:program "micro", :action "select line", :exec ["SelectLine"]}]}
   [:!OS#Pl [:!OSl] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "play macro",
       :exec ["replay_macro"]}
-     {:program "macosx-micro",
-      :action "play macro",
-      :exec ["PlayMacro"]}]}
+     {:program "micro", :action "play macro", :exec ["PlayMacro"]}]}
   [:!OS#Pm [:!OSm] :term]
   ^{:doc/actions [{}]}
   [:!OS#Pn [:!OSn] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
-      :action "unindent",
-      :exec ["unindent"]}
-     {:program "macosx-micro",
+    [{:program "helix-common", :action "unindent", :exec ["unindent"]}
+     {:program "micro",
       :action "unindent",
       :exec ["OutdentSelection"]}]}
-  [:!OS#Po [:!OSo] :term]
+  [:!OS#Po [:!Sf10] :term]
   ^{:doc/actions [{}]}
   [:!OS#Pp [:!OSp] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "launch lazygit",
       :exec
       [":sh zellij run --name lazygit --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- lazygit"]}]}
   [:!OS#Pq [:!OSq] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "launch serpl",
       :exec
       [":sh zellij run --name serpl   --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- serpl"]}]}
@@ -3622,7 +3552,7 @@
   ^{:doc/actions [{}]}
   [:!OS#Ps [:!OSs] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "interactive todo",
       :exec
       [":sh zellij run --name todor   --pinned true  --close-on-exit --floating  --width  90 --height  30 --x  90 --y   0 -- todor --delete"]}]}
@@ -3632,53 +3562,51 @@
   ^{:doc/actions [{}]}
   [:!OS#Pv [:!OSv] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "launch watch",
       :exec
       [":sh zellij run --name canvas  --pinned true  --close-on-exit --floating  --width  45 --height  20 --x 135 --y   0 -- just watch"]}]}
   [:!OS#Pw [:!OSw] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "cut line",
       :exec ["extend_to_line_bounds" "delete_selection_noyank"]}
-     {:program "macosx-micro", :action "cut line", :exec ["CutLine"]}]}
+     {:program "micro", :action "cut line", :exec ["CutLine"]}]}
   [:!OS#Px [:!OSx] :term]
   ^{:doc/actions [{}]}
   [:!OS#Py [:!OSy] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "yank diagnostic",
       :exec [":yank-diagnostic"]}]}
   [:!OS#Pz [:!OSz] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "launch shell",
       :exec
       [":sh zellij run --name canvas  --pinned false --close-on-exit --floating  --width 180 --height  90 --x   0 --y   0 -- zsh"]}
-     {:program "macosx-micro",
-      :action "shell mode",
-      :exec ["ShellMode"]}]}
-  [:!OS#Pright_control [:!OTSf10] :term]]}
+     {:program "micro", :action "shell mode", :exec ["ShellMode"]}]}
+  [:!OS#Pright_control [:!Sf12] :term]]}
 
 {:des "Shift Mode",
  :rules
  [^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select prev char",
       :exec ["extend_char_left"]}]}
   [:!S#Pleft_arrow [:!Sleft_arrow]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select next char",
       :exec ["extend_char_right"]}]}
   [:!S#Pright_arrow [:!Sright_arrow]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select line up",
       :exec ["extend_line_up"]}]}
   [:!S#Pup_arrow [:!Sup_arrow]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "select line down",
       :exec ["extend_line_down"]}]}
   [:!S#Pdown_arrow [:!Sdown_arrow]]
@@ -3703,23 +3631,23 @@
   ^{:doc/actions [{}]}
   [:!S#Preturn_or_enter [:!Sreturn_or_enter]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "delete next char",
       :exec ["delete_selection_noyank"]}]}
   [:!S#Pright_shift [:delete_forward]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "delete next word",
       :exec ["delete_word_forward"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "delete next word",
       :exec ["DeleteWordRight"]}]}
   [:!S#Pright_option [:!Od]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "delete line start",
       :exec ["kill_to_line_end"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "delete line start",
       :exec ["SelectToEndOfLine,Delete"]}]}
   [:!S#Pright_command [:!Tk]]
@@ -3910,25 +3838,25 @@
   ^{:doc/actions [{}]}
   [:!Q#Preturn_or_enter [:!Qreturn_or_enter]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "save jump",
       :exec ["save_selection"]}]}
-  [:!Q#Pspacebar [:!TSf18] :term]
+  [:!Q#Pspacebar [:!Sf13] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump forward",
       :exec ["jump_forward"]}]}
-  [:!Q#Pleft_command [:!TSend] :term]
+  [:!Q#Pleft_command [:!Sf14] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jumplist picker",
       :exec ["jumplist_picker"]}]}
-  [:!Q#Pleft_option [:!TSf12] :term]
+  [:!Q#Pleft_option [:!Sf15] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "jump backqard",
       :exec ["jump_backward"]}]}
-  [:!Q#Pleft_control [:!TShome] :term]
+  [:!Q#Pleft_control [:!Sf16] :term]
   ^{:doc/actions [{}]}
   [:!Q#Pright_control [:!Qright_control]]
   ^{:doc/actions [{}]}
@@ -4165,26 +4093,24 @@
   ^{:doc/actions [{}]}
   [:!WS#Pslash [:!WSslash]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "changed file picker",
       :exec ["changed_file_picker"]}
-     {:program "macosx-micro",
-      :action "open file",
-      :exec ["OpenFile"]}]}
+     {:program "micro", :action "open file", :exec ["OpenFile"]}]}
   [:!W#Pdelete_or_backspace [:!Tr] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "file picker",
       :exec ["file_picker"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "open new file",
       :exec ["AddTab,OpenFile"]}]}
   [:!W#Preturn_or_enter [:!Ts] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "buffer picker",
       :exec ["buffer_picker"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "command mode",
       :exec ["CommandMode"]}]}
   [:!W#Pright_shift [:!Tt] :term]
@@ -4362,37 +4288,51 @@
 {:des "Shift Mode",
  :rules
  [^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "delete line start",
       :exec ["kill_to_line_start"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "delete line start",
       :exec ["SelectToStartOfLine,Delete"]}]}
   [:!R#Pleft_command [:!Wu]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "delete prev word",
       :exec ["delete_word_backward"]}
-     {:program "macosx-micro",
+     {:program "micro",
       :action "delete prev word",
       :exec ["DeleteWordLeft"]}]}
   [:!R#Pleft_control [:!Ww]]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "delete prev char",
       :exec ["delete_char_backward"]}]}
   [:!R#Pleft_shift [:delete_or_backspace]]]}
 
 {:des "Option Mode",
  :rules
- [[:!E#Pcaps_lock [:caps_lock]]
-  [:!E#P9 [:!Scomma :!S9]]
-  [:!E#P0 [:!S0 :spacebar]]
-  [:!ER#P9 [:!S4 :!S9]]
+ [^{:doc/actions [{}]}
+  [:!E#Pleft_arrow [:!Eleft_arrow]]
+  ^{:doc/actions [{}]}
+  [:!E#Pright_arrow [:!Eright_arrow]]
+  ^{:doc/actions [{}]}
+  [:!E#Pup_arrow [:!Eup_arrow]]
+  ^{:doc/actions [{}]}
+  [:!E#Pdown_arrow [:!Edown_arrow]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_arrow [:!ERleft_arrow]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pright_arrow [:!ERright_arrow]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pup_arrow [:!ERup_arrow]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pdown_arrow [:!ERdown_arrow]]
   [:!E#Popen_bracket [:!S3 :open_bracket]]
   [:!E#Pclose_bracket [:close_bracket :spacebar]]
   [:!E#Psemicolon [:semicolon :spacebar]]
   [:!E#Pquote [:quote :slash :quote]]
+  ^{:doc/actions [{}]}
+  [:!E#Pbackslash [:!Ebackslash]]
   [:!E#Pcomma [:comma :spacebar]]
   [:!E#Pperiod [:period :spacebar]]
   [:!E#Pslash [:spacebar :hyphen]]
@@ -4400,47 +4340,212 @@
   [:!ER#Pclose_bracket [:!Sclose_bracket :spacebar]]
   [:!ER#Psemicolon [:!Ssemicolon :spacebar]]
   [:!ER#Pquote [:!Squote :slash :!Squote]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pbackslash [:!ERbackslash]]
   [:!ER#Pcomma [:!Scomma :!Ssemicolon]]
   [:!ER#Pperiod [:!Speriod :!Ssemicolon]]
   [:!ER#Pslash [:spacebar :hyphen :hyphen]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pdelete_or_backspace [:!ERdelete_or_backspace]]
+  ^{:doc/actions [{}]}
+  [:!ER#Preturn_or_enter [:!ERreturn_or_enter]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pspacebar [:!ERspacebar]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_command [:!ERleft_command]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_option [:!ERleft_option]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_control [:!ERleft_control]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pright_control [:!ERright_control]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_shift [:!ERleft_shift]]
+  [:!E#Pcaps_lock [:caps_lock]]
+  ^{:doc/actions [{}]}
+  [:!ER#Ptab [:!ERtab]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pdelete_or_backspace [:!ERdelete_or_backspace]]
+  ^{:doc/actions [{}]}
+  [:!ER#Preturn_or_enter [:!ERreturn_or_enter]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pspacebar [:!ERspacebar]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_command [:!ERleft_command]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_option [:!ERleft_option]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_control [:!ERleft_control]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pright_control [:!ERright_control]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_shift [:!ERleft_shift]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pescape [:!ERescape]]
+  ^{:doc/actions [{}]}
+  [:!ER#Ptab [:!ERtab]]
+  ^{:doc/actions [{}]}
+  [:!E#P1 [:!E1]]
+  ^{:doc/actions [{}]}
+  [:!E#P2 [:!E2]]
+  ^{:doc/actions [{}]}
+  [:!E#P3 [:!E3]]
+  ^{:doc/actions [{}]}
+  [:!E#P4 [:!E4]]
+  ^{:doc/actions [{}]}
+  [:!E#P5 [:!E5]]
+  ^{:doc/actions [{}]}
+  [:!E#P6 [:!E6]]
+  ^{:doc/actions [{}]}
+  [:!E#P7 [:!E7]]
+  ^{:doc/actions [{}]}
+  [:!E#P8 [:!E8]]
+  [:!E#P9 [:!Scomma :!S9]]
+  [:!E#P0 [:!S0 :spacebar]]
+  ^{:doc/actions [{}]}
+  [:!E#Phyphen [:!Ehyphen]]
+  ^{:doc/actions [{}]}
+  [:!E#Pequal_sign [:!Eequal_sign]]
+  ^{:doc/actions [{}]}
+  [:!ER#P1 [:!ER1]]
+  ^{:doc/actions [{}]}
+  [:!ER#P2 [:!ER2]]
+  ^{:doc/actions [{}]}
+  [:!ER#P3 [:!ER3]]
+  ^{:doc/actions [{}]}
+  [:!ER#P4 [:!ER4]]
+  ^{:doc/actions [{}]}
+  [:!ER#P5 [:!ER5]]
+  ^{:doc/actions [{}]}
+  [:!ER#P6 [:!ER6]]
+  ^{:doc/actions [{}]}
+  [:!ER#P7 [:!ER7]]
+  ^{:doc/actions [{}]}
+  [:!ER#P8 [:!ER8]]
+  [:!ER#P9 [:!S4 :!S9]]
+  ^{:doc/actions [{}]}
+  [:!ER#P0 [:!ER0]]
+  ^{:doc/actions [{}]}
+  [:!ER#Phyphen [:!ERhyphen]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pequal_sign [:!ERequal_sign]]
+  ^{:doc/actions [{}]}
+  [:!E#Pa [:!Ea]]
   [:!E#Pb [:b :u :g :!Ssemicolon :spacebar]]
+  ^{:doc/actions [{}]}
+  [:!E#Pc [:!Ec]]
   [:!E#Pd [:d :o :c :!Ssemicolon :spacebar]]
-  [:!E#Pf [:f :e :a :t :!Ssemicolon :spacebar]]
-  [:!E#Pr [:r :e :f :a :c :t :o :r :!Ssemicolon :spacebar]]
+  ^{:doc/actions [{}]}
+  [:!E#Pe [:!Ee]]
+  ^{:doc/actions [{}]}
+  [:!E#Pf [:!Ef]]
+  ^{:doc/actions [{}]}
+  [:!E#Pg [:!Eg]]
+  ^{:doc/actions [{}]}
+  [:!E#Ph [:!Eh]]
+  ^{:doc/actions [{}]}
+  [:!E#Pi [:!Ei]]
+  ^{:doc/actions [{}]}
+  [:!E#Pj [:!Ej]]
+  ^{:doc/actions [{}]}
+  [:!E#Pk [:!Ek]]
+  ^{:doc/actions [{}]}
+  [:!E#Pl [:!El]]
+  ^{:doc/actions [{}]}
+  [:!E#Pm [:!Em]]
+  ^{:doc/actions [{}]}
+  [:!E#Pn [:!En]]
+  ^{:doc/actions [{}]}
+  [:!E#Po [:!Eo]]
+  ^{:doc/actions [{}]}
+  [:!E#Pp [:!Ep]]
+  ^{:doc/actions [{}]}
+  [:!E#Pq [:!Eq]]
+  ^{:doc/actions [{}]}
+  [:!E#Pr [:!Er]]
+  ^{:doc/actions [{}]}
+  [:!E#Ps [:!Es]]
   [:!E#Pt [:t :e :s :t :!Ssemicolon :spacebar]]
+  ^{:doc/actions [{}]}
+  [:!E#Pu [:!Eu]]
+  ^{:doc/actions [{}]}
+  [:!E#Pv [:!Ev]]
   [:!E#Pw [:w :i :p :!Ssemicolon :spacebar]]
   [:!E#Px [:f :i :x :!Ssemicolon :spacebar]]
+  ^{:doc/actions [{}]}
+  [:!E#Py [:!Ey]]
+  ^{:doc/actions [{}]}
+  [:!E#Pz [:!Ez]]
   [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pa [:!ERa]]
   [:!ER#Pb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pc [:!ERc]]
   [:!ER#Pd [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]
-  [:!ER#Pf [:!Sf :!Se :!Sa :!St :!Ssemicolon :spacebar]]
-  [:!ER#Pr
-   [:!Sr :!Se :!Sf :!Sa :!Sc :!St :!So :!Sr :!Ssemicolon :spacebar]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pe [:!ERe]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pf [:!ERf]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pg [:!ERg]]
+  ^{:doc/actions [{}]}
+  [:!ER#Ph [:!ERh]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pi [:!ERi]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pj [:!ERj]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pk [:!ERk]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pl [:!ERl]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pm [:!ERm]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pn [:!ERn]]
+  ^{:doc/actions [{}]}
+  [:!ER#Po [:!ERo]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pp [:!ERp]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pq [:!ERq]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pr [:!ERr]]
+  ^{:doc/actions [{}]}
+  [:!ER#Ps [:!ERs]]
   [:!ER#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pu [:!ERu]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pv [:!ERv]]
   [:!ER#Pw [:!Sw :!Si :!Sp :!Ssemicolon :spacebar]]
   [:!ER#Px [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]
+  ^{:doc/actions [{}]}
+  [:!ER#Py [:!ERy]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pz [:!ERz]]
   [:!ER#Pright_control [:!Ssemicolon :period :i :n :!Ssemicolon]]]}
 
 {:des "Space mode",
  :rules
  [:space-mode
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "find char forward",
       :exec ["normal_mode" "till_prev_char" "MODE"]}]}
   [:#Pleft_arrow [:!Tpage_up] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "find char backward",
       :exec ["normal_mode" "find_till_char" "MODE"]}]}
   [:#Pright_arrow [:!Tpage_down] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto prev comment",
       :exec ["goto_prev_comment"]}]}
   [:#Pup_arrow [:!Thome] :term]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "goto next comment",
       :exec ["goto_next_comment"]}]}
   [:#Pdown_arrow [:!Tend] :term]
@@ -4781,7 +4886,7 @@
   ^{:doc/actions [{:program "System", :action "tab"}]}
   [:#Ptab [:!OTCright_shift] nil {:alone [:tab]}]
   ^{:doc/actions
-    [{:program "macosx-helix-common",
+    [{:program "helix-common",
       :action "collapse selection",
       :exec ["collapse_selection" "keep_primary_selection"]}
      {:program "zellij-rpane",
@@ -4795,13 +4900,13 @@
       :exec ["SwitchToMode \"Normal\";"]}]}
   [:##caps_lock [:!EWright_command] nil {:alone [:escape]}]
   ^{:doc/actions
-    [{:program "macosx-helix-insert",
+    [{:program "helix-insert",
       :action "mode normal",
       :exec ["normal_mode"]}
-     {:program "macosx-helix-normal",
+     {:program "helix-normal",
       :action "mode insert",
       :exec ["insert_mode"]}
-     {:program "macosx-helix-select",
+     {:program "helix-select",
       :action "mode normal",
       :exec ["normal_mode"]}]}
   [:#Pright_control [:right_control] nil {:alone [:f13]}]
@@ -4817,7 +4922,7 @@
     [{:program "zellij-shared",
       :action "history edit",
       :exec ["EditScrollback; SwitchToMode \"Normal\";"]}]}
-  [:#Pright_shift [:right_shift] :term {:alone [:!Sf12]}]
+  [:#Pright_shift [:right_shift] :term {:alone [:!TSf12]}]
   ^{:doc/actions
     [{:program "System", :action "browser input / term edit"}]}
   [:#Pright_shift [:right_shift] nil {:alone [:!R#Pnon_us_pound]}]
