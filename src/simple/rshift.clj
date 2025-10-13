@@ -21,12 +21,12 @@
   ; [:!R#Pup_arrow []]
   ; [:!R#Pdown_arrow []]
 
-    ^{:doc/actions [{:program c/xhc, :action "delete line start", :exec ["kill_to_line_start"]}
-                    {:program c/xmc, :action "delete line start", :exec ["SelectToStartOfLine,Delete"]}]} [:!R#Pleft_command [:!Wu]]
+    ^{:doc/actions [{:program c/hc,    :action "delete line start", :exec ["kill_to_line_start"]}
+                    {:program c/mc,    :action "delete line start", :exec ["SelectToStartOfLine,Delete"]}]} [:!R#Pleft_command [:!Wu]]
   ; [:!Rleft_option []]
-    ^{:doc/actions  [{:program c/xhc, :action "delete prev word", :exec ["delete_word_backward"]}
-                     {:program c/xmc, :action "delete prev word", :exec ["DeleteWordLeft"]}]} [:!R#Pleft_control [:!Ww]]
-    ^{:doc/actions [{:program c/xhc, :action "delete prev char", :exec ["delete_char_backward"]}]} [:!R#Pleft_shift [:delete_or_backspace]]                                                         ;
+    ^{:doc/actions  [{:program c/hc,   :action "delete prev word", :exec ["delete_word_backward"]}
+                     {:program c/mc,   :action "delete prev word", :exec ["DeleteWordLeft"]}]} [:!R#Pleft_control [:!Ww]]
+    ^{:doc/actions [{:program c/hc,    :action "delete prev char", :exec ["delete_char_backward"]}]} [:!R#Pleft_shift [:delete_or_backspace]]                                                         ;
   ; [:!R#Pcaps_lock []]
   ; [:!R#Ptab []]
   ; [:!R#Pkeypad_num_lock []]
