@@ -75,3 +75,50 @@
 (def kos_f12 (c/mk c/K c/O c/S c/_f12))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(def ks_f13 (c/mk c/K c/S c/_f13))
+(def ks_f14 (c/mk c/K c/S c/_f14))
+(def ks_f15 (c/mk c/K c/S c/_f15))
+(def ks_f16 (c/mk c/K c/S c/_f16))
+(def ks_f17 (c/mk c/K c/S c/_f17))
+(def ks_f18 (c/mk c/K c/S c/_f18))
+(def ks_f19 (c/mk c/K c/S c/_f19))
+(def ks_f20 (c/mk c/K c/S c/_f20))
+
+(def ko_f13 (c/mk c/K c/O c/_f13))
+(def ko_f14 (c/mk c/K c/O c/_f14))
+(def ko_f15 (c/mk c/K c/O c/_f15))
+(def ko_f16 (c/mk c/K c/O c/_f16))
+(def ko_f17 (c/mk c/K c/O c/_f17))
+(def ko_f18 (c/mk c/K c/O c/_f18))
+(def ko_f19 (c/mk c/K c/O c/_f19))
+(def ko_f20 (c/mk c/K c/O c/_f20))
+
+(def kt_f13 (c/mk c/K c/T c/_f13))
+(def kt_f14 (c/mk c/K c/T c/_f14))
+(def kt_f15 (c/mk c/K c/T c/_f15))
+(def kt_f16 (c/mk c/K c/T c/_f16))
+(def kt_f17 (c/mk c/K c/T c/_f17))
+(def kt_f18 (c/mk c/K c/T c/_f18))
+(def kt_f19 (c/mk c/K c/T c/_f19))
+(def kt_f20 (c/mk c/K c/T c/_f20))
+
+(def kts_f13 (c/mk c/K c/T c/S c/_f13))
+(def kts_f14 (c/mk c/K c/T c/S c/_f14))
+(def kts_f15 (c/mk c/K c/T c/S c/_f15))
+(def kts_f16 (c/mk c/K c/T c/S c/_f16))
+(def kts_f17 (c/mk c/K c/T c/S c/_f17))
+(def kts_f18 (c/mk c/K c/T c/S c/_f18))
+(def kts_f19 (c/mk c/K c/T c/S c/_f19))
+(def kts_f20 (c/mk c/K c/T c/S c/_f20))
+
+(def kos_f13 (c/mk c/K c/O c/S c/_f13))
+(def kos_f14 (c/mk c/K c/O c/S c/_f14))
+(def kos_f15 (c/mk c/K c/O c/S c/_f15))
+(def kos_f16 (c/mk c/K c/O c/S c/_f16))
+(def kos_f17 (c/mk c/K c/O c/S c/_f17))
+(def kos_f18 (c/mk c/K c/O c/S c/_f18))
+(def kos_f19 (c/mk c/K c/O c/S c/_f19))
+(def kos_f20 (c/mk c/K c/O c/S c/_f20))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
