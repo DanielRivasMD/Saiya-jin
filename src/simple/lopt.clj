@@ -205,19 +205,19 @@
     ; TODO: launch float pane with editor (hx / mc); independent, or with reference
     ; alphabetic glyphs
     ^{:doc/actions [{:program c/hc,    :action "format",             :exec hc-format}]}            [b/kop_a       [b/ko_a]       c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kop_b       [f/ks_f1]      c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kop_b       [f/ko_f1]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "copy",               :exec hc-copy}
-                    {:program c/mc,    :action "copy",               :exec mc-copy}]}              [b/kop_c       [f/ks_f2]      c/term]
+                    {:program c/mc,    :action "copy",               :exec mc-copy}]}              [b/kop_c       [f/ko_f2]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "spawn multi",        :exec hc-spawn-multi}
-                    {:program c/mc,    :action "spawn multi",        :exec mc-spawn-multi}]}       [b/kop_d       [f/ks_f4]      c/term]
+                    {:program c/mc,    :action "spawn multi",        :exec mc-spawn-multi}]}       [b/kop_d       [f/ko_f4]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "toggle comments",    :exec hc-toggle-com}
-                    {:program c/mc,    :action "toggle comments",    :exec mc-toggle-com}]}        [b/kop_e       [f/ks_f5]      c/term]
+                    {:program c/mc,    :action "toggle comments",    :exec mc-toggle-com}]}        [b/kop_e       [b/ko_e]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "search",             :exec hc-search}
-                    {:program c/mc,    :action "search",             :exec mc-search}]}            [b/kop_f       [f/ks_f6]      c/term]
+                    {:program c/mc,    :action "search",             :exec mc-search}]}            [b/kop_f       [f/ko_f5]      c/term]
     ^{:doc/actions [{}]}                                                                           [b/kop_g       [b/ko_g]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "find prev",          :exec hc-find-prev}
                     {:program c/mc,    :action "find prev",          :exec mc-find-prev}]}         [b/kop_h       [b/ko_h]       c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kop_i       [f/ks_f7]      c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kop_i       [b/ko_i]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "spawn multi down",   :exec hc-spawn-down}
                     {:program c/mc,    :action "spawn multi down",   :exec mc-spawn-down}]}        [b/kop_j       [b/ko_j]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "spawn multi up",     :exec hc-spawn-up}
@@ -227,8 +227,8 @@
     ^{:doc/actions [{:program c/hc,    :action "toggle macro",       :exec hc-record}
                     {:program c/mc,    :action "toggle macro",       :exec mc-record}]}            [b/kop_m       [b/ko_m]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "new buffer",         :exec hc-new}
-                    {:program c/mc,    :action "new buffer",         :exec mc-new}]}               [b/kop_n       [f/ks_f8]      c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kop_o       [b/ko_o]       c/term]
+                    {:program c/mc,    :action "new buffer",         :exec mc-new}]}               [b/kop_n       [b/ko_n]       c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kop_o       [f/ko_f6]      c/term]
     ^{:doc/actions [{}]}                                                                           [b/kop_p       [b/ko_p]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "quit",               :exec hc-quit}
                     {:program c/mc,    :action "quit",               :exec mc-quit}]}              [b/kop_q       [b/ko_q]       c/term]
@@ -236,7 +236,7 @@
     ^{:doc/actions [{:program c/hc,    :action "save & quit",        :exec hc-write-quit}
                     {:program c/mc,    :action "save & quit",        :exec mc-write-quit}]}        [b/kop_s       [b/ko_s]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "compile todo",       :exec hc-todor-compile}]}     [b/kop_t       [b/ko_t]       c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kop_u       [f/ks_f9]      c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kop_u       [b/ko_u]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "paste",              :exec hc-paste}
                     {:program c/mc,    :action "paste",              :exec mc-paste}]}             [b/kop_v       [b/ko_v]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "save",               :exec hc-write}
@@ -248,18 +248,18 @@
     ^{:doc/actions [{:program c/hc,    :action "remove multi",       :exec hc-rm-multi}
                     {:program c/mc,    :action "remove multi",       :exec mc-rm-multi}]}          [b/kop_z       [b/ko_z]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "command mode",       :exec hc-cmd}
-                    {:program c/mc,    :action "command mode",       :exec mc-cmd}]}               [b/kop_rt      [f/ks_f11]     c/term]
+                    {:program c/mc,    :action "command mode",       :exec mc-cmd}]}               [b/kop_rt      [f/ko_f10]     c/term]
 
     ^{:doc/actions [{:program c/hc,    :action "select all",         :exec hc-select-all}
                     {:program c/mc,    :action "select all",         :exec mc-select-all}]}        [b/kosp_a      [b/kos_a]      c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_b      [b/kos_b]      c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kosp_b      [f/kos_f1]     c/term]
     ^{:doc/actions [{:program c/hc,    :action "copy line",          :exec hc-copy-line}
-                    {:program c/mc,    :action "copy line",          :exec mc-copy-line}]}         [b/kosp_c      [b/kos_c]      c/term]
+                    {:program c/mc,    :action "copy line",          :exec mc-copy-line}]}         [b/kosp_c      [f/kos_f2]     c/term]
     ^{:doc/actions [{:program c/hc,    :action "duplicate line",     :exec hc-dup-line}
-                    {:program c/mc,    :action "duplicate line",     :exec mc-dup-line}]}          [b/kosp_d      [b/kos_d]      c/term]
+                    {:program c/mc,    :action "duplicate line",     :exec mc-dup-line}]}          [b/kosp_d      [f/kos_f4]     c/term]
     ^{:doc/actions [{}]}                                                                           [b/kosp_e      [b/kos_e]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "global search",      :exec hc-global-search}
-                    {:program c/mc,    :action "global search",      :exec mc-global-search}]}     [b/kosp_f      [b/kos_f]      c/term]
+                    {:program c/mc,    :action "global search",      :exec mc-global-search}]}     [b/kosp_f      [f/kos_f5]     c/term]
     ^{:doc/actions [{}]}                                                                           [b/kosp_g      [b/kos_g]      c/term]
     ^{:doc/actions [{}]}                                                                           [b/kosp_h      [b/kos_h]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "indent",             :exec hc-indent}
@@ -274,7 +274,7 @@
                     {:program c/mc,    :action "play macro",         :exec mc-play}]}              [b/kosp_m      [b/kos_m]      c/term]
     ^{:doc/actions [{}]}                                                                           [b/kosp_n      [b/kos_n]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "unindent",           :exec hc-unindent}
-                    {:program c/mc,    :action "unindent",           :exec mc-unindent}]}          [b/kosp_o      [f/ks_f10]     c/term]
+                    {:program c/mc,    :action "unindent",           :exec mc-unindent}]}          [b/kosp_o      [f/kos_f6]     c/term]
     ^{:doc/actions [{}]}                                                                           [b/kosp_p      [b/kos_p]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch lazygit",     :exec hc-lazygit}]}           [b/kosp_q      [b/kos_q]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch serpl",       :exec hc-serpl}]}             [b/kosp_r      [b/kos_r]      c/term]
@@ -288,7 +288,7 @@
     ^{:doc/actions [{}]}                                                                           [b/kosp_y      [b/kos_y]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "yank diagnostic",    :exec hc-copy-diag}]}         [b/kosp_z      [b/kos_z]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch shell",       :exec hc-shell}
-                    {:program c/mc,    :action "shell mode",         :exec mc-shell}]}             [b/kosp_rt     [f/ks_f12]     c/term]]})
+                    {:program c/mc,    :action "shell mode",         :exec mc-shell}]}             [b/kosp_rt     [f/kos_f10]     c/term]]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
