@@ -30,6 +30,34 @@
 (def hc-diag-picker     ["diagnostics_picker"])
 (def hc-diag-picker-ws  ["workspace_diagnostics_picker"])
 
+(def zj-plug-jump            ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/zellij-jump-list.wasm\" { floating true; move_to_focused_tab true; };"])
+(def zj-plug-monocle         ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/monocle.wasm\" { floating true; }; SwitchToMode \"Normal\";"])
+(def zj-plug-room            ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/room.wasm\" { floating true; ignore_case true; };"])
+
+(def zj-prev-tab             ["GoToPreviousTab;"])
+(def zj-next-tab             ["GoToNextTab;"])
+(def hc-scroll-up            ["scroll_up"])
+(def lg-scroll-up            ["scrollUpMain-alt2"])
+(def hc-scroll-down          ["scroll_down"])
+(def lg-scroll-down          ["scrollDownMain-alt2"])
+(def zj-toggle-sync          ["ToggleActiveSyncTab;"])
+(def nu                      [])
+(def zj-close-tab            ["CloseTab;"])
+(def zj-new-tab              ["NewTab;"])
+(def zj-break-pane           ["BreakPane;"])
+(def zj-rename-tab-mode      ["SwitchToMode \"RenameTab\"; TabNameInput 0;"])
+(def zt-abort-rename         ["UndoRenameTab; SwitchToMode \"Normal\";"])
+(def zj-last-tab             ["ToggleTab;"])
+(def zj-tab-1                ["SwitchToMode \"Tab\"; GoToTab 1; SwitchToMode \"Normal\";"])
+(def zj-tab-2                ["SwitchToMode \"Tab\"; GoToTab 2; SwitchToMode \"Normal\";"])
+(def zj-tab-3                ["SwitchToMode \"Tab\"; GoToTab 3; SwitchToMode \"Normal\";"])
+(def zj-tab-4                ["SwitchToMode \"Tab\"; GoToTab 4; SwitchToMode \"Normal\";"])
+(def zj-tab-5                ["SwitchToMode \"Tab\"; GoToTab 5; SwitchToMode \"Normal\";"])
+(def zj-tab-6                ["SwitchToMode \"Tab\"; GoToTab 6; SwitchToMode \"Normal\";"])
+(def zj-tab-7                ["SwitchToMode \"Tab\"; GoToTab 7; SwitchToMode \"Normal\";"])
+(def zj-tab-8                ["SwitchToMode \"Tab\"; GoToTab 8; SwitchToMode \"Normal\";"])
+(def zj-tab-9                ["SwitchToMode \"Tab\"; GoToTab 9; SwitchToMode \"Normal\";"])
+
 (defn z []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,14 +66,12 @@
    :rules
    [:z-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program c/hc,    :action "undo",               :exec hc-undo}
-                    {:program c/mc,    :action "undo",               :exec mc-undo}]}              [r/kp_al       [r/ko_pu]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "redo",               :exec hc-redo}
-                    {:program c/mc,    :action "redo",               :exec mc-redo}]}              [r/kp_ar       [r/ko_pd]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "prev change",        :exec hc-prev-diff}
-                    {:program c/mc,    :action "prev change",        :exec mc-prev-diff}]}         [r/kp_au       [r/ko_hm]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "next change",        :exec hc-next-diff}
-                    {:program c/mc,    :action "next change",        :exec mc-next-diff}]}         [r/kp_ad       [r/ko_ed]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "prev tab",           :exec zj-prev-tab}]}          [r/kp_al       [f/ks_f1]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "next tab",           :exec zj-next-tab}]}          [r/kp_ar       [f/ks_f2]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "scroll up",          :exec hc-scroll-up}
+                    {:program c/lg,    :action "scroll up",          :exec lg-scroll-up}]}         [r/kp_au       [b/kt_x]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "scroll down",        :exec hc-scroll-down}
+                    {:program c/lg,    :action "scroll down",        :exec lg-scroll-down}]}       [r/kp_ad       [b/kt_y]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [r/ksp_al      [r/ks_al]]
     ^{:doc/actions [{}]}                                                                           [r/ksp_ar      [r/ks_ar]]
@@ -53,14 +79,14 @@
     ^{:doc/actions [{}]}                                                                           [r/ksp_ad      [r/ks_ad]]
 
     ; technical glyphs
-    ^{:doc/actions [{}]}                                                                           [t/kp_ob       [t/k_ob]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_cb       [t/k_cb]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_sc       [t/k_sc]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_qu       [t/k_qu]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_bl       [t/k_bl]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_cm       [t/k_cm]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_pe       [t/k_pe]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_sl       [t/k_sl]]
+    ^{:doc/actions [{:program c/zj,    :action "tab sync",           :exec zj-toggle-sync}]}       [t/kp_ob       [f/ks_f4]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "plugin jump-list",   :exec zj-plug-jump}]}         [t/kp_cb       [f/ks_f5]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "plugin monocle",     :exec zj-plug-monocle}]}      [t/kp_sc       [f/ks_f6]      c/term]
+    ^{:doc/actions [{}]}                                                                           [t/kp_qu       [b/kos_y]      c/term]
+    ^{:doc/actions [{}]}                                                                           [t/kp_bl       [b/kos_z]      c/term]
+    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_pe       [b/ko_x]       c/term]
+    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_cm       [b/ko_y]       c/term]
+    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_sl       [b/ko_z]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [t/ksp_ob      [t/ks_ob]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_cb      [t/ks_cb]]
@@ -72,33 +98,34 @@
     ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/hc,    :action "goto prev diag",     :exec hc-prev-diag}]}         [a/kp_db       [f/kt_f11]     c/term]
-    ^{:doc/actions [{:program c/hc,    :action "diag picker",        :exec hc-diag-picker}]}       [a/kp_re       [f/kt_f13]     c/term]
-    ^{:doc/actions [{:program c/hc,    :action "goto next diag",     :exec hc-next-diag}]}         [a/kp_rs       [f/kt_f12]     c/term]
-    ^{:doc/actions [{}]}                                                                           [a/kp_ro       [a/k_ro]]
-    ^{:doc/actions [{}]}                                                                           [a/kp_rc       [a/k_rc]]
-    ^{:doc/actions [{:program c/hc,    :action "goto last change",   :exec hc-last-mod}]}          [a/kp_sp       [f/kt_f15]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab close",          :exec zj-close-tab}]}         [a/kp_db       [f/ks_f7]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "plugin room",        :exec zj-plug-room}]}         [a/kp_re       [f/ks_f8]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab new",            :exec zj-new-tab}]}           [a/kp_rs       [f/ks_f9]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab break pane",     :exec zj-break-pane}]}        [a/kp_ro       [f/ks_f10]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "mode tab rename",    :exec zj-rename-tab-mode}
+                    {:program c/zt,    :action "abort tab reanme",   :exec zt-abort-rename}]}      [a/kp_rc       [f/ks_f11]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab jump back",      :exec zj-last-tab}]}          [a/kp_sp       [f/ks_f12]     c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
-    ^{:doc/actions [{:program c/hc,    :action "wspace diag picker", :exec hc-diag-picker-ws}]}    [a/ksp_re      [f/kt_f14]     c/term]
+    ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_rs      [a/ks_rs]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_ro      [a/ks_ro]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_rc      [a/ks_rc]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_sp]]
 
     ; numeric glyphs
-    ^{:doc/actions [{}]}                                                                           [n/kp_1        [n/k_1]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_2        [n/k_2]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_3        [n/k_3]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_4        [n/k_4]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_5        [n/k_5]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_6        [n/k_6]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_7        [n/k_7]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_8        [n/k_8]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_9        [n/k_9]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_0        [n/k_0]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_hy       [n/k_hy]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_eq       [n/k_eq]]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-1",          :exec zj-tab-1}]}             [n/kp_1        [f/kos_f1]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-2",          :exec zj-tab-2}]}             [n/kp_2        [f/kos_f2]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-3",          :exec zj-tab-3}]}             [n/kp_3        [f/kos_f4]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-4",          :exec zj-tab-4}]}             [n/kp_4        [f/kos_f5]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-5",          :exec zj-tab-5}]}             [n/kp_5        [f/kos_f6]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-6",          :exec zj-tab-6}]}             [n/kp_6        [f/kos_f7]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-7",          :exec zj-tab-7}]}             [n/kp_7        [f/kos_f8]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-8",          :exec zj-tab-8}]}             [n/kp_8        [f/kos_f9]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-9",          :exec zj-tab-9}]}             [n/kp_9        [f/kos_f10]    c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-0",          :exec zj-tab-9}]}             [n/kp_0        [f/kos_f11]    c/term]
+    ^{:doc/actions [{}]}                                                                           [n/kp_hy       [n/kotc_hy]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_eq       [n/kotc_eq]]
 
     ^{:doc/actions [{}]}                                                                           [n/ksp_1       [n/ks_1]]
     ^{:doc/actions [{}]}                                                                           [n/ksp_2       [n/ks_2]]
