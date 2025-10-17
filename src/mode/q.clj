@@ -30,6 +30,33 @@
 (def hc-split-def       ["vsplit", "goto_definition"])
 (def hc-split-type-def  ["vsplit", "goto_type_definition"])
 
+(def hc-prev-tab             ["goto_previous_buffer"])
+(def lg-prev-tab             ["prevTab"])
+(def mc-prev-tab             ["PreviousTab"])
+(def ze-move-left            ["MovePane \"Left\";"])
+(def hc-next-tab             ["goto_next_buffer"])
+(def lg-next-tab             ["nextTab"])
+(def mc-next-tab             ["NextTab"])
+(def ze-move-rigth           ["MovePane \"Right\";"])
+(def hc-inc                  ["increment"])
+(def lg-prev-block           ["prevBlock-alt2"])
+(def ze-move-up              ["MovePane \"Up\";"])
+(def hc-dec                  ["decrement"])
+(def lg-next-block           ["nextBlock-alt2"])
+(def ze-move-down            ["MovePane \"Down\";"])
+(def hc-close-tab            [":buffer-close"])
+(def mc-close-tab            ["Quit"])
+(def hc-unsplit              ["wonly"])
+(def mc-unsplit              ["Unsplit"])
+(def hc-vsplit               ["vsplit"])
+(def mc-vsplit               ["VSplit"])
+(def hc-hsplit               ["hsplit"])
+(def mc-hsplit               ["HSplit"])
+(def hc-close-split          ["wclose"])
+(def mc-close-split          ["Unsplit"])
+(def hc-last-tab             ["goto_last_accessed_file"])
+(def br-toggle-preview       [])
+
 (defn q []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -38,10 +65,20 @@
    :rules
    [:q-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program, c/hc    :action "find char forward",  :exec hc-prev-move}]}         [r/kp_al       [r/kt_pu]      c/term]
-    ^{:doc/actions [{:program, c/hc    :action "find char backward", :exec hc-next-move}]}         [r/kp_ar       [r/kt_pd]      c/term]
-    ^{:doc/actions [{:program, c/hc    :action "goto prev comment",  :exec hc-prev-comm}]}         [r/kp_au       [r/kt_hm]      c/term]
-    ^{:doc/actions [{:program, c/hc    :action "goto next comment",  :exec hc-next-comm}]}         [r/kp_ad       [r/kt_ed]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump prev buffer",   :exec hc-prev-tab}
+                    {:program c/lg,    :action "jump prev tab",      :exec lg-prev-tab}
+                    {:program c/mc,    :action "jump prev buffer",   :exec mc-prev-tab}
+                    {:program c/ze,    :action "move left",          :exec ze-move-left}]}         [r/kp_al       [b/kt_b]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump next buffer",   :exec hc-next-tab}
+                    {:program c/lg,    :action "jump next tab",      :exec lg-next-tab}
+                    {:program c/mc,    :action "jump next buffer",   :exec mc-next-tab}
+                    {:program c/ze,    :action "move right",         :exec ze-move-rigth}]}        [r/kp_ar       [b/kt_f]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hc-inc}
+                    {:program c/lg,    :action "jump prev block",    :exec lg-prev-block}
+                    {:program c/ze,    :action "move up",            :exec ze-move-up}]}           [r/kp_au       [b/kt_n]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hc-dec}
+                    {:program c/lg,    :action "jump next block",    :exec lg-next-block}
+                    {:program c/ze,    :action "move down",          :exec ze-move-down}]}         [r/kp_ad       [b/kt_p]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [r/ksp_al      [r/ks_al]]
     ^{:doc/actions [{}]}                                                                           [r/ksp_ar      [r/ks_ar]]
@@ -68,12 +105,18 @@
     ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{}]}                                                                           [a/kp_db       [a/k_db]]
-    ^{:doc/actions [{:program, c/hc    :action "symbol picker",      :exec hc-symbol-picker}]}     [a/kp_re       [f/ko_f13]     c/term]
-    ^{:doc/actions [{:program, c/hc    :action "goto def",           :exec hc-split-def}]}         [a/kp_rs       [f/ko_f14]     c/term]
-    ^{:doc/actions [{:program, c/hc    :action "goto type def",      :exec hc-split-type-def}]}    [a/kp_ro       [f/ko_f15]     c/term]
-    ^{:doc/actions [{}]}                                                                           [a/kp_rc       [a/k_rc]]
-    ^{:doc/actions [{:program, c/hc    :action "repeat last motion", :exec hc-last-move}]}         [a/kp_sp       [f/ko_f16]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "close tab",          :exec hc-close-tab}
+                    {:program c/mc,    :action "close tab",          :exec mc-close-tab}]}         [a/kp_db       [b/kt_l]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "close others",       :exec hc-unsplit}
+                    {:program c/mc,    :action "close others",       :exec mc-unsplit}]}           [a/kp_re       [b/kt_g]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "split right",        :exec hc-vsplit}
+                    {:program c/mc,    :action "split right",        :exec mc-vsplit}]}            [a/kp_rs       [b/kt_v]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "split down",         :exec hc-hsplit}
+                    {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/kp_ro       [b/kt_h]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "close window",       :exec hc-close-split}
+                    {:program c/mc,    :action "close window",       :exec mc-close-split}]}       [a/kp_rc       [b/kt_j]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "last file",          :exec hc-last-tab}
+                    {:program c/br,    :action "open preview"        :exec br-toggle-preview}]}    [a/kp_sp       [b/kt_o]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
@@ -113,23 +156,23 @@
     ^{:doc/actions [{}]}                                                                           [b/kp_a        [b/k_a]]
     ^{:doc/actions [{}]}                                                                           [b/kp_b        [b/k_b]]
     ^{:doc/actions [{}]}                                                                           [b/kp_c        [b/k_c]]
-    ^{:doc/actions [{:program, c/hc    :action "goto def",           :exec hc-go-def}]}            [b/kp_d        [f/kos_f13]    c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kp_d        [b/k_d]]
     ^{:doc/actions [{}]}                                                                           [b/kp_e        [b/k_e]]
     ^{:doc/actions [{}]}                                                                           [b/kp_f        [b/k_f]]
     ^{:doc/actions [{}]}                                                                           [b/kp_g        [b/k_g]]
     ^{:doc/actions [{}]}                                                                           [b/kp_h        [b/k_h]]
-    ^{:doc/actions [{:program, c/hc    :action "goto impl",          :exec hc-go-impl}]}           [b/kp_i        [f/kos_f14]    c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kp_i        [b/k_i]]
     ^{:doc/actions [{}]}                                                                           [b/kp_j        [b/k_j]]
     ^{:doc/actions [{}]}                                                                           [b/kp_k        [b/k_k]]
     ^{:doc/actions [{}]}                                                                           [b/kp_l        [b/k_l]]
     ^{:doc/actions [{}]}                                                                           [b/kp_m        [b/k_m]]
-    ^{:doc/actions [{:program, c/hc    :action "rename symbol",      :exec hc-rn-symbol}]}         [b/kp_n        [f/kos_f15]    c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kp_n        [b/k_n]]
     ^{:doc/actions [{}]}                                                                           [b/kp_o        [b/k_o]]
     ^{:doc/actions [{}]}                                                                           [b/kp_p        [b/k_p]]
     ^{:doc/actions [{}]}                                                                           [b/kp_q        [b/k_q]]
-    ^{:doc/actions [{:program, c/hc    :action "goto ref",           :exec hc-go-ref}]}            [b/kp_r        [f/kos_f16]    c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kp_r        [b/k_r]]
     ^{:doc/actions [{}]}                                                                           [b/kp_s        [b/k_s]]
-    ^{:doc/actions [{:program, c/hc    :action "goto type def",      :exec hc-go-type-def}]}       [b/kp_t        [f/kos_f17]    c/term]
+    ^{:doc/actions [{}]}                                                                           [b/kp_t        [b/k_t]]
     ^{:doc/actions [{}]}                                                                           [b/kp_u        [b/k_u]]
     ^{:doc/actions [{}]}                                                                           [b/kp_v        [b/k_v]]
     ^{:doc/actions [{}]}                                                                           [b/kp_w        [b/k_w]]
