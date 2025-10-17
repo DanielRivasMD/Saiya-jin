@@ -54,10 +54,9 @@
    {:launch "osascript -e 'tell application \"%s\" to activate'"}
 
    :layers
-  ; TODO: consider add tab-mode
    {:zero-mode      {:key :keypad_num_lock}
-    :space-mode     {:key :spacebar}
     :q-mode         {:key :q}
+    :x-mode         {:key :x}
     :z-mode         {:key :z}}])
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
