@@ -53,7 +53,6 @@
     ^{:doc/actions [{}]}                                                                           [t/kwsp_pe     [t/kws_pe]]
     ^{:doc/actions [{}]}                                                                           [t/kwsp_sl     [t/kws_sl]]
 
-    ; TODO: annotate command line keys => history picker, etc
     ; action glyphs
     ; ^{:doc/actions [{:program c/hc,    :action "changed file picker",:exec hc-change-picker}
     ;                 {:program c/mc,    :action "open file",          :exec mc-open-file}]}         [a/kwp_db      [b/kt_r]       c/term]

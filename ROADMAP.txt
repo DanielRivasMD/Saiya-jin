@@ -17,21 +17,20 @@
 - doc simple sequences
 
 ==================================================
-src/apps/browser.clj:; TODO: update config
+src/apps/zoom.clj:; TODO: homogenize to format
 src/profile/keymod.clj:; TODO: relocate collapse selection => lopt layer
 src/profile/keymod.clj:    ; TODO: repurpose rctl alone
-src/simple/rctl.clj:    ; TODO: annotate command line keys => history picker, etc
-src/apps/zoom.clj:; TODO: homogenize to format
-src/simple/tab.clj:; TODO: use ctl alt function
-src/simple/tab.clj:; TODO: rebind also on zellij side since anchors have been deleted
-src/simple/tab.clj:	; TODO: use ctl function binds
-src/simple/tab.clj:		; TODO: tab shift swap tabs => import from hyper
-src/simple/tab.clj:    ; TODO: relocate z-mode, update empty
-src/simple/lopt.clj:  ; TODO: use alt function binds
-src/double/lctl.edn:; TODO: relocate
+src/apps/browser.clj:; TODO: update config
+src/mode/z.clj:    ; TODO: collisions detected
+src/mode/z.clj:    ; TODO: update mapping targets
+src/mode/z.clj:    ; TODO: update old mapping for nushell
+src/config/arrows.clj:; TODO: use these unasigned mappings for zellij?
+src/mode/tab.clj:; TODO: use ctl alt function
+src/mode/tab.clj:; TODO: rebind also on zellij side since anchors have been deleted
+src/mode/tab.clj:	; TODO: use ctl function binds
+src/mode/tab.clj:		; TODO: tab shift swap tabs => import from hyper
+src/mode/tab.clj:    ; TODO: relocate z-mode, update empty
 src/mode/q.clj:  ; TODO: use shift function binds => no shift binds
-src/mode/z.clj:; TODO: relocate to diagnositcs mini mode
-src/mode/z.clj:; TODO: relocate to language server mini mode
-src/simple/joker.clj:  ; TODO: deprecate double keys
-src/simple/joker.clj:  ; TODO: remap to macosx control
+src/simple/ropt.clj:    ; TODO: annotate command line keys => history picker, etc
+src/simple/lopt.clj:  ; TODO: use alt function binds
 ==================================================
