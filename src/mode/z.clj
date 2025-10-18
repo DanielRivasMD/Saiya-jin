@@ -12,9 +12,26 @@
             [config.numeric :as n]
             [config.alphabetic :as b]
             [config.function :as f]
-						))
+))
 
 (def out-file "z.edn")
+
+; TODO: relocate to diagnositcs mini mode
+(def hc-prev-diag       ["goto_prev_diag"])
+(def hc-next-diag       ["goto_next_diag"])
+(def hc-diag-picker     ["diagnostics_picker"])
+(def hc-diag-picker-ws  ["workspace_diagnostics_picker"])
+
+; TODO: relocate to language server mini mode
+(def hc-rn-symbol       ["rename_symbol"])
+(def hc-symbol-picker   ["symbol_picker"])
+(def hc-go-ref          ["goto_reference"])
+(def hc-go-def          ["goto_definition"])
+(def hc-go-impl         ["goto_implementation"])
+(def hc-go-type-def     ["goto_type_definition"])
+(def hc-split-def       ["vsplit", "goto_definition"])
+
+(def nu                      [])
 
 (def hc-last-mod        ["goto_last_modification"])
 (def hc-undo            ["undo"])
@@ -25,38 +42,39 @@
 (def mc-prev-diff       ["DiffPrevious"])
 (def hc-next-diff       ["goto_next_change"])
 (def mc-next-diff       ["DiffNext"])
-(def hc-prev-diag       ["goto_prev_diag"])
-(def hc-next-diag       ["goto_next_diag"])
-(def hc-diag-picker     ["diagnostics_picker"])
-(def hc-diag-picker-ws  ["workspace_diagnostics_picker"])
 
-(def zj-plug-jump            ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/zellij-jump-list.wasm\" { floating true; move_to_focused_tab true; };"])
-(def zj-plug-monocle         ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/monocle.wasm\" { floating true; }; SwitchToMode \"Normal\";"])
-(def zj-plug-room            ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/room.wasm\" { floating true; ignore_case true; };"])
+(def hc-prev-move       ["normal_mode", "till_prev_char", "MODE"])
+(def hc-next-move       ["normal_mode", "find_till_char", "MODE"])
+(def hc-last-move       ["repeat_last_motion"])
+(def hc-prev-comm       ["goto_prev_comment"])
+(def hc-next-comm       ["goto_next_comment"])
 
-(def zj-prev-tab             ["GoToPreviousTab;"])
-(def zj-next-tab             ["GoToNextTab;"])
-(def hc-scroll-up            ["scroll_up"])
-(def lg-scroll-up            ["scrollUpMain-alt2"])
-(def hc-scroll-down          ["scroll_down"])
-(def lg-scroll-down          ["scrollDownMain-alt2"])
-(def zj-toggle-sync          ["ToggleActiveSyncTab;"])
-(def nu                      [])
-(def zj-close-tab            ["CloseTab;"])
-(def zj-new-tab              ["NewTab;"])
-(def zj-break-pane           ["BreakPane;"])
-(def zj-rename-tab-mode      ["SwitchToMode \"RenameTab\"; TabNameInput 0;"])
-(def zt-abort-rename         ["UndoRenameTab; SwitchToMode \"Normal\";"])
-(def zj-last-tab             ["ToggleTab;"])
-(def zj-tab-1                ["SwitchToMode \"Tab\"; GoToTab 1; SwitchToMode \"Normal\";"])
-(def zj-tab-2                ["SwitchToMode \"Tab\"; GoToTab 2; SwitchToMode \"Normal\";"])
-(def zj-tab-3                ["SwitchToMode \"Tab\"; GoToTab 3; SwitchToMode \"Normal\";"])
-(def zj-tab-4                ["SwitchToMode \"Tab\"; GoToTab 4; SwitchToMode \"Normal\";"])
-(def zj-tab-5                ["SwitchToMode \"Tab\"; GoToTab 5; SwitchToMode \"Normal\";"])
-(def zj-tab-6                ["SwitchToMode \"Tab\"; GoToTab 6; SwitchToMode \"Normal\";"])
-(def zj-tab-7                ["SwitchToMode \"Tab\"; GoToTab 7; SwitchToMode \"Normal\";"])
-(def zj-tab-8                ["SwitchToMode \"Tab\"; GoToTab 8; SwitchToMode \"Normal\";"])
-(def zj-tab-9                ["SwitchToMode \"Tab\"; GoToTab 9; SwitchToMode \"Normal\";"])
+(def hc-prev-tab             ["goto_previous_buffer"])
+(def lg-prev-tab             ["prevTab"])
+(def mc-prev-tab             ["PreviousTab"])
+(def ze-move-left            ["MovePane \"Left\";"])
+(def hc-next-tab             ["goto_next_buffer"])
+(def lg-next-tab             ["nextTab"])
+(def mc-next-tab             ["NextTab"])
+(def ze-move-rigth           ["MovePane \"Right\";"])
+(def hc-inc                  ["increment"])
+(def lg-prev-block           ["prevBlock-alt2"])
+(def ze-move-up              ["MovePane \"Up\";"])
+(def hc-dec                  ["decrement"])
+(def lg-next-block           ["nextBlock-alt2"])
+(def ze-move-down            ["MovePane \"Down\";"])
+(def hc-close-tab            [":buffer-close"])
+(def mc-close-tab            ["Quit"])
+(def hc-file-picker          ["file_picker"])
+(def mc-open-file            ["OpenFile"])
+(def hc-vsplit               ["vsplit"])
+(def mc-vsplit               ["VSplit"])
+(def hc-hsplit               ["hsplit"])
+(def mc-hsplit               ["HSplit"])
+(def hc-unsplit              ["wonly"])
+(def mc-unsplit              ["Unsplit"])
+(def hc-last-tab             ["goto_last_accessed_file"])
+(def br-toggle-preview       [])
 
 (defn z []
 
@@ -66,66 +84,87 @@
    :rules
    [:z-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program c/zj,    :action "prev tab",           :exec zj-prev-tab}]}          [r/kp_al       [f/ks_f1]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "next tab",           :exec zj-next-tab}]}          [r/kp_ar       [f/ks_f2]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "scroll up",          :exec hc-scroll-up}
-                    {:program c/lg,    :action "scroll up",          :exec lg-scroll-up}]}         [r/kp_au       [b/kt_x]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "scroll down",        :exec hc-scroll-down}
-                    {:program c/lg,    :action "scroll down",        :exec lg-scroll-down}]}       [r/kp_ad       [b/kt_y]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump prev buffer",   :exec hc-prev-tab}
+                    {:program c/lg,    :action "jump prev tab",      :exec lg-prev-tab}
+                    {:program c/mc,    :action "jump prev buffer",   :exec mc-prev-tab}
+                    {:program c/ze,    :action "move left",          :exec ze-move-left}]}         [r/kp_al       [b/kt_b]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump next buffer",   :exec hc-next-tab}
+                    {:program c/lg,    :action "jump next tab",      :exec lg-next-tab}
+                    {:program c/mc,    :action "jump next buffer",   :exec mc-next-tab}
+                    {:program c/ze,    :action "move right",         :exec ze-move-rigth}]}        [r/kp_ar       [b/kt_f]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "prev comment",       :exec hc-prev-comm}
+                    {:program c/lg,    :action "jump prev block",    :exec lg-prev-block}
+                    {:program c/ze,    :action "move up",            :exec ze-move-up}]}           [r/kp_au       [b/kt_n]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "next comment",       :exec hc-next-comm}
+                    {:program c/lg,    :action "jump next block",    :exec lg-next-block}
+                    {:program c/ze,    :action "move down",          :exec ze-move-down}]}         [r/kp_ad       [b/kt_p]       c/term]
 
-    ^{:doc/actions [{}]}                                                                           [r/ksp_al      [r/ks_al]]
-    ^{:doc/actions [{}]}                                                                           [r/ksp_ar      [r/ks_ar]]
-    ^{:doc/actions [{}]}                                                                           [r/ksp_au      [r/ks_au]]
-    ^{:doc/actions [{}]}                                                                           [r/ksp_ad      [r/ks_ad]]
+    ^{:doc/actions [{:program c/hc,    :action "undo",               :exec hc-undo}
+                    {:program c/mc,    :action "undo",               :exec mc-undo}]}              [r/ksp_al      [r/ko_pu]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "redo",               :exec hc-redo}
+                    {:program c/mc,    :action "redo",               :exec mc-redo}]}              [r/ksp_ar      [r/ko_pd]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "prev-diff",          :exec hc-prev-diff}
+                    {:program c/mc,    :action "prev diff",          :exec mc-prev-diff}]}         [r/ksp_au      [r/ko_hm]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "next-diff",          :exec hc-next-diff}
+                    {:program c/mc,    :action "next diff",          :exec mc-next-diff}]}         [r/ksp_ad      [r/ko_ed]       c/term]
 
     ; technical glyphs
-    ^{:doc/actions [{:program c/zj,    :action "tab sync",           :exec zj-toggle-sync}]}       [t/kp_ob       [f/ks_f4]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "plugin jump-list",   :exec zj-plug-jump}]}         [t/kp_cb       [f/ks_f5]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "plugin monocle",     :exec zj-plug-monocle}]}      [t/kp_sc       [f/ks_f6]      c/term]
-    ^{:doc/actions [{}]}                                                                           [t/kp_qu       [b/kos_y]      c/term]
-    ^{:doc/actions [{}]}                                                                           [t/kp_bl       [b/kos_z]      c/term]
-    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_pe       [b/ko_x]       c/term]
-    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_cm       [b/ko_y]       c/term]
-    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_sl       [b/ko_z]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hc-inc}]}               [t/kp_ob       [r/kt_hm]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hc-dec}]}               [t/kp_cb       [r/kt_ed]      c/term]
+    ^{:doc/actions [{}]}                                                                           [t/kp_sc       [t/k_sc]]
+    ^{:doc/actions [{}]}                                                                           [t/kp_qu       [t/k_qu]]
+    ^{:doc/actions [{}]}                                                                           [t/kp_bl       [t/k_bl]]
+    ^{:doc/actions [{:program c/hc,    :action "move forward",       :exec hc-prev-move}]}         [t/kp_cm       [r/kt_pu]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "move backward",      :exec hc-next-move}]}         [t/kp_pe       [r/kt_pd]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "repeat last move",   :exec hc-last-move}]}         [t/kp_sl       [t/k_sl]]
 
     ^{:doc/actions [{}]}                                                                           [t/ksp_ob      [t/ks_ob]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_cb      [t/ks_cb]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_sc      [t/ks_sc]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_qu      [t/ks_qu]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_bl      [t/ks_bl]]
+    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_pe      [b/ko_x]       c/term]
+    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_cm      [b/ko_y]       c/term]
+    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_sl      [b/ko_z]       c/term]
+
     ^{:doc/actions [{}]}                                                                           [t/ksp_cm      [t/ks_cm]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_pe      [t/ks_pe]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/zj,    :action "tab close",          :exec zj-close-tab}]}         [a/kp_db       [f/ks_f7]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "plugin room",        :exec zj-plug-room}]}         [a/kp_re       [f/ks_f8]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "tab new",            :exec zj-new-tab}]}           [a/kp_rs       [f/ks_f9]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "tab break pane",     :exec zj-break-pane}]}        [a/kp_ro       [f/ks_f10]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "mode tab rename",    :exec zj-rename-tab-mode}
-                    {:program c/zt,    :action "abort tab reanme",   :exec zt-abort-rename}]}      [a/kp_rc       [f/ks_f11]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "tab jump back",      :exec zj-last-tab}]}          [a/kp_sp       [f/ks_f12]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "close tab",          :exec hc-close-tab}
+                    {:program c/mc,    :action "close tab",          :exec mc-close-tab}]}         [a/kp_db       [b/kt_l]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "file picker",        :exec hc-file-picker}
+                    {:program c/mc,    :action "open file",          :exec mc-open-file}]}         [a/kp_re       [b/kt_g]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "split right",        :exec hc-vsplit}
+                    {:program c/mc,    :action "split right",        :exec mc-vsplit}]}            [a/kp_rs       [b/kt_v]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "split down",         :exec hc-hsplit}
+                    {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/kp_ro       [b/kt_h]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "close window",       :exec hc-unsplit}
+                    {:program c/mc,    :action "close window",       :exec mc-unsplit}]}           [a/kp_rc       [b/kt_j]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "last file",          :exec hc-last-tab}
+                    {:program c/br,    :action "open preview"        :exec br-toggle-preview}]}    [a/kp_sp       [b/kt_o]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_rs      [a/ks_rs]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_ro      [a/ks_ro]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_rc      [a/ks_rc]]
-    ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_sp]]
+    ^{:doc/actions [{:program c/hc,    :action "last modification",  :exec hc-last-mod}]}          [a/ksp_sp      [a/ks_sp]]
 
     ; numeric glyphs
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-1",          :exec zj-tab-1}]}             [n/kp_1        [f/kos_f1]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-2",          :exec zj-tab-2}]}             [n/kp_2        [f/kos_f2]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-3",          :exec zj-tab-3}]}             [n/kp_3        [f/kos_f4]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-4",          :exec zj-tab-4}]}             [n/kp_4        [f/kos_f5]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-5",          :exec zj-tab-5}]}             [n/kp_5        [f/kos_f6]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-6",          :exec zj-tab-6}]}             [n/kp_6        [f/kos_f7]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-7",          :exec zj-tab-7}]}             [n/kp_7        [f/kos_f8]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-8",          :exec zj-tab-8}]}             [n/kp_8        [f/kos_f9]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-9",          :exec zj-tab-9}]}             [n/kp_9        [f/kos_f10]    c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-0",          :exec zj-tab-9}]}             [n/kp_0        [f/kos_f11]    c/term]
-    ^{:doc/actions [{}]}                                                                           [n/kp_hy       [n/kotc_hy]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_eq       [n/kotc_eq]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_1        [n/k_1]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_2        [n/k_2]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_3        [n/k_3]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_4        [n/k_4]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_5        [n/k_5]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_6        [n/k_6]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_7        [n/k_7]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_8        [n/k_8]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_9        [n/k_9]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_0        [n/k_0]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_hy       [n/k_hy]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_eq       [n/k_eq]]
 
     ^{:doc/actions [{}]}                                                                           [n/ksp_1       [n/ks_1]]
     ^{:doc/actions [{}]}                                                                           [n/ksp_2       [n/ks_2]]
