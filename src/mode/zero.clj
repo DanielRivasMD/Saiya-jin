@@ -16,8 +16,8 @@
 
 (def out-file "zero.edn")
 
-(def zj-swap-tab-left        ["MoveTab \"Left\";"])
-(def zj-swap-tab-right       ["MoveTab \"Right\";"])
+; (def zj-swap-tab-left        ["MoveTab \"Left\";"])
+; (def zj-swap-tab-right       ["MoveTab \"Right\";"])
 (def ze-size-inc             ["Resize \"Increase\";"])
 (def ze-size-dec             ["Resize \"Decrease\";"])
 (def zj-toggle-pin           ["TogglePanePinned;"])
@@ -35,8 +35,8 @@
    :rules
    [:zero-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program c/zj,    :action "page up",            :exec zj-swap-tab-left}]}     [r/kp_al       [f/kts_f1]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "page down",          :exec zj-swap-tab-right}]}    [r/kp_ar       [f/kts_f2]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "page up",            :exec zj-swap-tab-left}]}     [r/kp_al       [f/kts_f1]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "page down",          :exec zj-swap-tab-right}]}    [r/kp_ar       [f/kts_f2]     c/term]
     ^{:doc/actions [{:program c/ze,    :action "home",               :exec ze-size-inc}]}          [r/kp_au       [f/kts_f4]     c/term]
     ^{:doc/actions [{:program c/ze,    :action "end",                :exec ze-size-dec}]}          [r/kp_ad       [f/kts_f5]     c/term]
 
