@@ -2,7 +2,7 @@
 ; TAB
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(ns simple.tab
+(ns mode.tab
   (:require [clojure.java.io :as io]
             [clojure.pprint :as pp]
             [config.config :as c]
@@ -12,7 +12,7 @@
             [config.numeric :as n]
             [config.alphabetic :as b]
             [config.function :as f]
-						))
+))
 
 (def out-file "tab.edn")
 
