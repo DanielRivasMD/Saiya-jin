@@ -24,6 +24,9 @@
 (def hc-split-down           ["jump_view_down"])
 (def hc-jump                 ["goto_word"])
 (def mc-jump                 ["JumpLine"])
+(def hi-normal               ["normal_mode"])
+(def hn-insert               ["insert_mode"])
+(def hs-normal               ["normal_mode"])
 
 (defn lctl []
 
@@ -80,7 +83,9 @@
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .=> `"}]}        [a/ktsp_rs     [a/k_sp t/k_pe n/k_eq t/ks_pe a/k_sp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .** `"}]}        [a/ktsp_ro     [a/k_sp t/k_pe n/ks_8 n/ks_8 a/k_sp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .// `"}]}        [a/ktsp_rc     [a/k_sp t/k_pe t/k_sl t/k_sl a/k_sp]]
-    ^{:doc/actions [{}]}                                                                           [a/ktsp_sp     [a/kts_sp]]
+    ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hi-normal}
+                    {:program c/hn,    :action "mode insert",        :exec hn-insert}
+                    {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [a/ktsp_sp     [f/ks_f13]]
 
     ; numeric glyphs
     ^{:doc/actions [{}]}                                                                           [n/ktp_1       [n/kt_1]]
