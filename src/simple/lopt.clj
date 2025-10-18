@@ -99,6 +99,7 @@
 (def mc-play                 ["PlayMacro"])
 (def hc-unindent             ["unindent"])
 (def mc-unindent             ["OutdentSelection"])
+(def hc-paste-in-place       ["replace_selections_with_clipboard"])
 (def hc-lazygit              [":sh zellij run --name lazygit --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- lazygit"])
 (def hc-serpl                [":sh zellij run --name serpl   --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- serpl"])
 (def hc-todor-interactive    [":sh zellij run --name todor   --pinned true  --close-on-exit --floating  --width  90 --height  30 --x  90 --y   0 -- todor --delete"])
@@ -150,7 +151,7 @@
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` | `"}]}          [t/kop_bl      [a/k_sp t/ks_bl a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` < `"}]}          [t/kop_cm      [a/k_sp t/ks_cm a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` > `"}]}          [t/kop_pe      [a/k_sp t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` ? `"}]}          [t/kop_sl      [a/k_sp t/ks_sl a/k_sp]]
+    ; ^{:doc/actions [{:program c/hc,    :action "diagnostic mode",    :exec "` ? `"}]}          [t/kop_sl      [a/k_sp t/ks_sl a/k_sp]]
 
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .<= `"}]}        [t/kosp_ob     [a/k_sp t/k_pe t/ks_cm n/k_eq a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .>= `"}]}        [t/kosp_cb     [a/k_sp t/k_pe t/ks_pe n/k_eq a/k_sp]]
@@ -159,7 +160,7 @@
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .| `"}]}         [t/kosp_bl     [a/k_sp t/k_pe t/ks_bl a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .< `"}]}         [t/kosp_cm     [a/k_sp t/k_pe t/ks_cm a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .> `"}]}         [t/kosp_pe     [a/k_sp t/k_pe t/ks_pe a/k_sp]]
-    ^{:doc/actions [{}]}                                                                           [t/kosp_sl     [t/kos_sl]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` ? `"}]}          [t/kosp_sl     [a/k_sp t/ks_sl a/k_sp]]
 
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/kop_db      [a/ko_db]]
@@ -281,7 +282,7 @@
     ^{:doc/actions [{}]}                                                                           [b/kosp_s      [b/kos_s]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "interactive todo",   :exec hc-todor-interactive}]} [b/kosp_t      [b/kos_t]      c/term]
     ^{:doc/actions [{}]}                                                                           [b/kosp_u      [b/kos_u]      c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_v      [b/kos_v]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "paste in place",     :exec hc-paste-in-place}]}    [b/kosp_v      [b/kos_v]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch watch",       :exec hc-watch}]}             [b/kosp_w      [b/kos_w]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "cut line",           :exec hc-cut-line}
                     {:program c/mc,    :action "cut line",           :exec mc-cut-line}]}          [b/kosp_x      [b/kos_x]      c/term]
