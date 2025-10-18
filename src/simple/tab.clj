@@ -1,5 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; TAB => ROTC
+; TAB
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (ns simple.tab
@@ -11,84 +11,183 @@
             [config.action :as a]
             [config.numeric :as n]
             [config.alphabetic :as b]
+            [config.function :as f]
 						))
 
 (def out-file "tab.edn")
+
+(def zj-plug-jump            ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/zellij-jump-list.wasm\" { floating true; move_to_focused_tab true; };"])
+(def zj-plug-monocle         ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/monocle.wasm\" { floating true; }; SwitchToMode \"Normal\";"])
+(def zj-plug-room            ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/room.wasm\" { floating true; ignore_case true; };"])
+
+(def zj-prev-tab             ["GoToPreviousTab;"])
+(def zj-next-tab             ["GoToNextTab;"])
+(def hc-scroll-up            ["scroll_up"])
+(def lg-scroll-up            ["scrollUpMain-alt2"])
+(def hc-scroll-down          ["scroll_down"])
+(def lg-scroll-down          ["scrollDownMain-alt2"])
+(def zj-toggle-sync          ["ToggleActiveSyncTab;"])
+(def zj-close-tab            ["CloseTab;"])
+(def zj-new-tab              ["NewTab;"])
+(def zj-break-pane           ["BreakPane;"])
+(def zj-rename-tab-mode      ["SwitchToMode \"RenameTab\"; TabNameInput 0;"])
+(def zt-abort-rename         ["UndoRenameTab; SwitchToMode \"Normal\";"])
+(def zj-last-tab             ["ToggleTab;"])
+
+; TODO: use ctl alt function
+; TODO: rebind also on zellij side since anchors have been deleted
+(def zj-tab-1                ["SwitchToMode \"Tab\"; GoToTab 1; SwitchToMode \"Normal\";"])
+(def zj-tab-2                ["SwitchToMode \"Tab\"; GoToTab 2; SwitchToMode \"Normal\";"])
+(def zj-tab-3                ["SwitchToMode \"Tab\"; GoToTab 3; SwitchToMode \"Normal\";"])
+(def zj-tab-4                ["SwitchToMode \"Tab\"; GoToTab 4; SwitchToMode \"Normal\";"])
+(def zj-tab-5                ["SwitchToMode \"Tab\"; GoToTab 5; SwitchToMode \"Normal\";"])
+(def zj-tab-6                ["SwitchToMode \"Tab\"; GoToTab 6; SwitchToMode \"Normal\";"])
+(def zj-tab-7                ["SwitchToMode \"Tab\"; GoToTab 7; SwitchToMode \"Normal\";"])
+(def zj-tab-8                ["SwitchToMode \"Tab\"; GoToTab 8; SwitchToMode \"Normal\";"])
+(def zj-tab-9                ["SwitchToMode \"Tab\"; GoToTab 9; SwitchToMode \"Normal\";"])
 
 (defn tab []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ; tab
+	; TODO: use ctl function binds
   {:des "Tab Mode"
    :rules
-   [;
+   [:tab-mode
     ; arrow glyphs
-    ^{:doc/actions [{}]}                                                                           [r/kotcsp_al   [r/kotcs_al]]
-    ^{:doc/actions [{}]}                                                                           [r/kotcsp_ar   [r/kotcs_ar]]
-    ^{:doc/actions [{}]}                                                                           [r/kotcsp_au   [r/kotcs_au]]
-    ^{:doc/actions [{}]}                                                                           [r/kotcsp_ad   [r/kotcs_ad]]
+    ^{:doc/actions [{:program c/zj,    :action "prev tab",           :exec zj-prev-tab}]}          [r/kp_al       [f/ks_f1]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "next tab",           :exec zj-next-tab}]}          [r/kp_ar       [f/ks_f2]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "scroll up",          :exec hc-scroll-up}
+                    {:program c/lg,    :action "scroll up",          :exec lg-scroll-up}]}         [r/kp_au       [b/kt_x]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "scroll down",        :exec hc-scroll-down}
+                    {:program c/lg,    :action "scroll down",        :exec lg-scroll-down}]}       [r/kp_ad       [b/kt_y]       c/term]
+
+		; TODO: tab shift swap tabs => import from hyper
+    ^{:doc/actions [{}]}                                                                           [r/ksp_al      [r/ks_al]]
+    ^{:doc/actions [{}]}                                                                           [r/ksp_ar      [r/ks_ar]]
+    ^{:doc/actions [{}]}                                                                           [r/ksp_au      [r/ks_au]]
+    ^{:doc/actions [{}]}                                                                           [r/ksp_ad      [r/ks_ad]]
 
     ; technical glyphs
-    ^{:doc/actions [{}]}                                                                           [t/kotcsp_ob   [t/kotcs_ob]]
-    ^{:doc/actions [{}]}                                                                           [t/kotcsp_cb   [t/kotcs_cb]]
-    ^{:doc/actions [{}]}                                                                           [t/kotcsp_sc   [t/kotcs_sc]]
-    ^{:doc/actions [{}]}                                                                           [t/kotcsp_qu   [t/kotcs_qu]]
-    ^{:doc/actions [{}]}                                                                           [t/kotcsp_bl   [t/kotcs_bl]]
-    ^{:doc/actions [{}]}                                                                           [t/kotcsp_cm   [t/kotcs_cm]]
-    ^{:doc/actions [{}]}                                                                           [t/kotcsp_pe   [t/kotcs_pe]]
-    ^{:doc/actions [{}]}                                                                           [t/kotcsp_sl   [t/kotcs_sl]]
+    ^{:doc/actions [{:program c/zj,    :action "tab sync",           :exec zj-toggle-sync}]}       [t/kp_ob       [f/ks_f4]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "plugin jump-list",   :exec zj-plug-jump}]}         [t/kp_cb       [f/ks_f5]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "plugin monocle",     :exec zj-plug-monocle}]}      [t/kp_sc       [f/ks_f6]      c/term]
+    ^{:doc/actions [{}]}                                                                           [t/kp_qu       [t/k_qu]       c/term]
+    ^{:doc/actions [{}]}                                                                           [t/kp_bl       [t/k_bl]       c/term]
+    ; TODO: relocate z-mode, update empty
+    ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_pe       [b/ko_x]       c/term]
+    ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_cm       [b/ko_y]       c/term]
+    ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_sl       [b/ko_z]       c/term]
 
-   ; action glyphs
-    ^{:doc/actions [{:program c/sys,   :action "Control center"}]}                                 [a/kotcsp_db   [c/kotcsp_lock]]
-    ^{:doc/actions [{:program c/sys,   :action "Speak"}]}                                          [a/kotcsp_re   [a/kotcs_re]]
-    ^{:doc/actions [{:program c/sys,   :action "Launch Alacritty"}]}                               [a/kotcsp_rs   [:launch "Alacritty"]]
-    ^{:doc/actions [{:program c/sys,   :action "Launch Arc"}]}                                     [a/kotcsp_ro   [:launch "Arc"]]
-    ^{:doc/actions [{:program c/sys,   :action "Launch Mail"}]}                                    [a/kotcsp_rc   [:launch "Mail"]]
-    ^{:doc/actions [{:program c/sys,   :action "Listen"}]}                                         [a/kotcsp_sp   [c/kwp_us]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_ob      [t/ks_ob]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_cb      [t/ks_cb]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_sc      [t/ks_sc]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_qu      [t/ks_qu]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_bl      [t/ks_bl]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_cm      [t/ks_cm]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_pe      [t/ks_pe]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
 
-    ; numeric-glyphs
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_1    [n/kotcs_1]]
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_2    [n/kotcs_2]]
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_3    [n/kotcs_3]]
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_4    [n/kotcs_4]]
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_5    [n/kotcs_5]]
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_6    [n/kotcs_6]]
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_7    [n/kotcs_7]]
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_8    [n/kotcs_8]]
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_9    [n/kotcs_9]]
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_0    [n/kotcs_0]]
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_hy   [n/kotcs_hy]]
-    ^{:doc/actions [{}]}                                                                           [n/kotcsp_eq   [n/kotcs_eq]]
+    ; action glyphs
+    ^{:doc/actions [{:program c/zj,    :action "tab close",          :exec zj-close-tab}]}         [a/kp_db       [f/ks_f7]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "plugin room",        :exec zj-plug-room}]}         [a/kp_re       [f/ks_f8]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab new",            :exec zj-new-tab}]}           [a/kp_rs       [f/ks_f9]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab break pane",     :exec zj-break-pane}]}        [a/kp_ro       [f/ks_f10]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "mode tab rename",    :exec zj-rename-tab-mode}
+                    {:program c/zt,    :action "abort tab reanme",   :exec zt-abort-rename}]}      [a/kp_rc       [f/ks_f11]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab jump back",      :exec zj-last-tab}]}          [a/kp_sp       [f/ks_f12]     c/term]
 
-    ; alphabetic-glyphs
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_a    [b/kotcs_a]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_b    [b/kotcs_b]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_c    [b/kotcs_c]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_d    [b/kotcs_d]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_e    [b/kotcs_e]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_f    [b/kotcs_f]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_g    [b/kotcs_g]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_h    [b/kotcs_h]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_i    [b/kotcs_i]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_j    [b/kotcs_j]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_k    [b/kotcs_k]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_l    [b/kotcs_l]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_m    [b/kotcs_m]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_n    [b/kotcs_n]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_o    [b/kotcs_o]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_p    [b/kotcs_p]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_q    [b/kotcs_q]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_r    [b/kotcs_r]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_s    [b/kotcs_s]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_t    [b/kotcs_t]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_u    [b/kotcs_u]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_v    [b/kotcs_v]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_w    [b/kotcs_w]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_x    [b/kotcs_x]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_y    [b/kotcs_y]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_z    [b/kotcs_z]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcsp_rt   [b/kotcs_rt]]]})
+    ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
+    ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
+    ^{:doc/actions [{}]}                                                                           [a/ksp_rs      [a/ks_rs]]
+    ^{:doc/actions [{}]}                                                                           [a/ksp_ro      [a/ks_ro]]
+    ^{:doc/actions [{}]}                                                                           [a/ksp_rc      [a/ks_rc]]
+    ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_sp]]
+
+    ; numeric glyphs
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-1",          :exec zj-tab-1}]}             [n/kp_1        [f/kos_f1]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-2",          :exec zj-tab-2}]}             [n/kp_2        [f/kos_f2]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-3",          :exec zj-tab-3}]}             [n/kp_3        [f/kos_f4]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-4",          :exec zj-tab-4}]}             [n/kp_4        [f/kos_f5]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-5",          :exec zj-tab-5}]}             [n/kp_5        [f/kos_f6]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-6",          :exec zj-tab-6}]}             [n/kp_6        [f/kos_f7]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-7",          :exec zj-tab-7}]}             [n/kp_7        [f/kos_f8]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-8",          :exec zj-tab-8}]}             [n/kp_8        [f/kos_f9]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-9",          :exec zj-tab-9}]}             [n/kp_9        [f/kos_f10]    c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-0",          :exec zj-tab-9}]}             [n/kp_0        [f/kos_f11]    c/term]
+    ^{:doc/actions [{}]}                                                                           [n/kp_hy       [n/k_hy]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_eq       [n/k_eq]]
+
+    ^{:doc/actions [{}]}                                                                           [n/ksp_1       [n/ks_1]]
+    ^{:doc/actions [{}]}                                                                           [n/ksp_2       [n/ks_2]]
+    ^{:doc/actions [{}]}                                                                           [n/ksp_3       [n/ks_3]]
+    ^{:doc/actions [{}]}                                                                           [n/ksp_4       [n/ks_4]]
+    ^{:doc/actions [{}]}                                                                           [n/ksp_5       [n/ks_5]]
+    ^{:doc/actions [{}]}                                                                           [n/ksp_6       [n/ks_6]]
+    ^{:doc/actions [{}]}                                                                           [n/ksp_7       [n/ks_7]]
+    ^{:doc/actions [{}]}                                                                           [n/ksp_8       [n/ks_8]]
+    ^{:doc/actions [{}]}                                                                           [n/ksp_9       [n/ks_9]]
+    ^{:doc/actions [{}]}                                                                           [n/ksp_0       [n/ks_0]]
+    ^{:doc/actions [{}]}                                                                           [n/ksp_hy      [n/ks_hy]]
+    ^{:doc/actions [{}]}                                                                           [n/ksp_eq      [n/ks_eq]]
+
+    ; alphabetic glyphs
+    ^{:doc/actions [{}]}                                                                           [b/kp_a        [b/k_a]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_b        [b/k_b]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_c        [b/k_c]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_d        [b/k_d]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_e        [b/k_e]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_f        [b/k_f]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_g        [b/k_g]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_h        [b/k_h]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_i        [b/k_i]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_j        [b/k_j]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_k        [b/k_k]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_l        [b/k_l]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_m        [b/k_m]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_n        [b/k_n]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_o        [b/k_o]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_p        [b/k_p]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_q        [b/k_q]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_r        [b/k_r]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_s        [b/k_s]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_t        [b/k_t]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_u        [b/k_u]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_v        [b/k_v]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_w        [b/k_w]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_x        [b/k_x]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_y        [b/k_y]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_z        [b/k_z]]
+    ^{:doc/actions [{}]}                                                                           [b/kp_rt       [b/k_rt]]
+
+    ^{:doc/actions [{}]}                                                                           [b/ksp_a       [b/ks_a]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_b       [b/ks_b]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_c       [b/ks_c]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_d       [b/ks_d]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_e       [b/ks_e]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_f       [b/ks_f]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_g       [b/ks_g]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_h       [b/ks_h]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_i       [b/ks_i]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_j       [b/ks_j]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_k       [b/ks_k]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_l       [b/ks_l]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_m       [b/ks_m]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_n       [b/ks_n]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_o       [b/ks_o]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_p       [b/ks_p]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_q       [b/ks_q]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_r       [b/ks_r]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_s       [b/ks_s]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_t       [b/ks_t]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_u       [b/ks_u]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_v       [b/ks_v]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_w       [b/ks_w]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_x       [b/ks_x]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_y       [b/ks_y]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_z       [b/ks_z]]
+    ^{:doc/actions [{}]}                                                                           [b/ksp_rt      [b/ks_rt]]
+		]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
