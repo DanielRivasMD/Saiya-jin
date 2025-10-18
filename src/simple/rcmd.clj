@@ -61,14 +61,12 @@
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/kqp_db      [a/kq_db]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_re      [a/kq_re]]
-    ^{:doc/actions [{:program c/hc,    :action "save jump",          :exec hc-jump-save}]}         [a/kqp_sp      [f/ks_f13]     c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jump forward",       :exec hc-jump-forward}]}      [a/kqp_lc      [f/ks_f14]     c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jumplist picker",    :exec hc-jump-picker}]}       [a/kqp_lo      [f/ks_f15]     c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jump backqard",      :exec hc-jump-backqard}]}     [a/kqp_lt      [f/ks_f16]     c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kqp_rt      [b/kq_rt]]
+    ^{:doc/actions [{:program c/hc,    :action "save jump",          :exec hc-jump-save}]}         [a/kqp_sp      [f/ks_f14]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump forward",       :exec hc-jump-forward}]}      [a/kqp_lc      [f/ks_f15]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jumplist picker",    :exec hc-jump-picker}]}       [a/kqp_lo      [f/ks_f16]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump backqard",      :exec hc-jump-backqard}]}     [a/kqp_lt      [f/ks_f17]     c/term]
     ^{:doc/actions [{}]}                                                                           [a/kqp_ls      [a/kq_ls]]
-    ^{:doc/actions [{}]}                                                                           [a/kqp_esc     [a/kq_esc]]
-    ^{:doc/actions [{}]}                                                                           [a/kqp_tab     [a/kq_tab]]
+    ^{:doc/actions [{}]}                                                                           [b/kqp_rt      [b/kq_rt]]
 
     ^{:doc/actions [{}]}                                                                           [a/kqrp_db     [a/kqr_db]]
     ^{:doc/actions [{}]}                                                                           [a/kqrp_re     [a/kqr_re]]
@@ -76,10 +74,8 @@
     ^{:doc/actions [{}]}                                                                           [a/kqrp_lc     [a/kqr_lc]]
     ^{:doc/actions [{}]}                                                                           [a/kqrp_lo     [a/kqr_lo]]
     ^{:doc/actions [{}]}                                                                           [a/kqrp_lt     [a/kqr_lt]]
-    ^{:doc/actions [{}]}                                                                           [b/kqrp_rt     [b/kqr_rt]]
     ^{:doc/actions [{}]}                                                                           [a/kqrp_ls     [a/kqr_ls]]
-    ^{:doc/actions [{}]}                                                                           [a/kqrp_esc    [a/kqr_esc]]
-    ^{:doc/actions [{}]}                                                                           [a/kqrp_tab    [a/kqr_tab]]
+    ^{:doc/actions [{}]}                                                                           [b/kqrp_rt     [b/kqr_rt]]
 
     ; numeric-glyphs
     ^{:doc/actions [{}]}                                                                           [n/kqp_1       [n/kq_1]]
