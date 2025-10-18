@@ -18,9 +18,6 @@
 
 ; TODO: relocate collapse selection => lopt layer
 (def hc-collapse             ["collapse_selection", "keep_primary_selection"])
-(def hi-normal               ["normal_mode"])
-(def hn-insert               ["insert_mode"])
-(def hs-normal               ["normal_mode"])
 (def zp-escape               ["UndoRenamePane; SwitchToMode \"Normal\";"])
 (def zt-escape               ["UndoRenameTab; SwitchToMode \"Normal\";"])
 (def zx-escape               ["SwitchToMode \"Normal\";"])
@@ -51,9 +48,9 @@
 
     ; grave
     ; TODO: repurpose rctl alone
-    ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hi-normal}
-                    {:program c/hn,    :action "mode insert",        :exec hn-insert}
-                    {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [b/kp_rt   [b/k_rt]    nil    {:alone [:f13]}]
+    ; ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hi-normal}
+    ;                 {:program c/hn,    :action "mode insert",        :exec hn-insert}
+    ;                 {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [b/kp_rt   [b/k_rt]    nil    {:alone [:f13]}]
 
     ; lefts
     ^{:doc/actions [{:program c/alf,   :action "window switcher"}]}                                [a/kp_lt   [a/k_lt]    nil    {:alone [c/kewqp_us]}]
