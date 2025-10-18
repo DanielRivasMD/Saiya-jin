@@ -16,6 +16,10 @@
 
 (def out-file "ropt.edn")
 
+(def hc-change-picker        ["changed_file_picker"])
+(def hc-file-picker          ["file_explorer"])
+(def hc-buffer-picker        ["buffer_picker"])
+
 (defn ropt []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -54,16 +58,16 @@
     [:!ER#Pslash [:spacebar :hyphen :hyphen]]                                                        ; ' --'
 
     ; action glyphs
-    ^{:doc/actions [{}]}                                                                           [a/kerp_db     [a/ker_db]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_re     [a/ker_re]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_sp     [a/ker_sp]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_lc     [a/ker_lc]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_lo     [a/ker_lo]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_lt     [a/ker_lt]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_rt     [b/ker_rt]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_ls     [a/ker_ls]]
+    ; TODO: annotate command line keys => history picker, etc
+    ^{:doc/actions [{}]}                                                                           [a/kep_db      [a/ke_db]]
+    ^{:doc/actions [{}]}                                                                           [a/kep_re      [a/ke_re]]
+    ^{:doc/actions [{}]}                                                                           [a/kep_sp      [a/ke_sp]]
+    ^{:doc/actions [{:program c/hc,    :action "changed file picker",:exec hc-change-picker}]}     [a/kep_lc      [b/kt_r]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "file picker",        :exec hc-file-picker}]}       [a/kep_lo      [b/kt_s]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "buffer picker",      :exec hc-buffer-picker}]}     [a/kep_lt      [b/kt_t]       c/term]
+    ^{:doc/actions [{}]}                                                                           [a/kep_ls      [a/ke_ls]]
+    ^{:doc/actions [{}]}                                                                           [b/kep_rt      [b/ke_rt]]
     [:!E#Pcaps_lock [:caps_lock]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_tab    [a/ker_tab]]
 
     ^{:doc/actions [{}]}                                                                           [a/kerp_db     [a/ker_db]]
     ^{:doc/actions [{}]}                                                                           [a/kerp_re     [a/ker_re]]
@@ -71,10 +75,9 @@
     ^{:doc/actions [{}]}                                                                           [a/kerp_lc     [a/ker_lc]]
     ^{:doc/actions [{}]}                                                                           [a/kerp_lo     [a/ker_lo]]
     ^{:doc/actions [{}]}                                                                           [a/kerp_lt     [a/ker_lt]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_rt     [b/ker_rt]]
     ^{:doc/actions [{}]}                                                                           [a/kerp_ls     [a/ker_ls]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_esc    [a/ker_esc]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_tab    [a/ker_tab]]
+    ^{:doc/actions [{}]}                                                                           [b/kerp_rt     [b/ker_rt]]
+    ; [:!E#Pcaps_lock [:caps_lock]]
 
     ; numeric-glyphs
     ^{:doc/actions [{}]}                                                                           [n/kep_1       [n/ke_1]]
