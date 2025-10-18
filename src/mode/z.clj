@@ -16,21 +16,6 @@
 
 (def out-file "z.edn")
 
-; TODO: relocate to diagnositcs mini mode
-(def hc-prev-diag       ["goto_prev_diag"])
-(def hc-next-diag       ["goto_next_diag"])
-(def hc-diag-picker     ["diagnostics_picker"])
-(def hc-diag-picker-ws  ["workspace_diagnostics_picker"])
-
-; TODO: relocate to language server mini mode
-(def hc-rn-symbol       ["rename_symbol"])
-(def hc-symbol-picker   ["symbol_picker"])
-(def hc-go-ref          ["goto_reference"])
-(def hc-go-def          ["goto_definition"])
-(def hc-go-impl         ["goto_implementation"])
-(def hc-go-type-def     ["goto_type_definition"])
-(def hc-split-def       ["vsplit", "goto_definition"])
-
 (def nu                      [])
 
 (def hc-last-mod        ["goto_last_modification"])
@@ -48,6 +33,10 @@
 (def hc-last-move       ["repeat_last_motion"])
 (def hc-prev-comm       ["goto_prev_comment"])
 (def hc-next-comm       ["goto_next_comment"])
+
+(def hc-lower-case      ["switch_to_lowercase"])
+(def hc-upper-case      ["switch_to_uppercase"])
+(def hc-switch-case     ["switch_case"])
 
 (def hc-prev-tab             ["goto_previous_buffer"])
 (def lg-prev-tab             ["prevTab"])
@@ -109,11 +98,13 @@
                     {:program c/mc,    :action "next diff",          :exec mc-next-diff}]}         [r/ksp_ad      [r/ko_ed]       c/term]
 
     ; technical glyphs
-    ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hc-inc}]}               [t/kp_ob       [r/kt_hm]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hc-dec}]}               [t/kp_cb       [r/kt_ed]      c/term]
-    ^{:doc/actions [{}]}                                                                           [t/kp_sc       [t/k_sc]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_qu       [t/k_qu]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_bl       [t/k_bl]]
+    ; TODO: collisions detected
+    ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hc-dec}]}               [t/kp_ob       [r/kt_hm]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hc-inc}]}               [t/kp_cb       [r/kt_ed]      c/term]
+    ; TODO: update mapping targets
+    ; ^{:doc/actions [{:program c/hc,    :action "lower case",         :exec hc-lower-case}]}        [t/kp_sc       [t/k_sc]]
+    ; ^{:doc/actions [{:program c/hc,    :action "upper case",         :exec hc-upper-case}]}        [t/kp_qu       [t/k_qu]]
+    ; ^{:doc/actions [{:program c/hc,    :action "switch case",        :exec hc-switch-case}]}       [t/kp_bl       [t/k_bl]]
     ^{:doc/actions [{:program c/hc,    :action "move forward",       :exec hc-prev-move}]}         [t/kp_cm       [r/kt_pu]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "move backward",      :exec hc-next-move}]}         [t/kp_pe       [r/kt_pd]      c/term]
     ; ^{:doc/actions [{:program c/hc,    :action "repeat last move",   :exec hc-last-move}]}         [t/kp_sl       [t/k_sl]]
@@ -123,9 +114,10 @@
     ^{:doc/actions [{}]}                                                                           [t/ksp_sc      [t/ks_sc]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_qu      [t/ks_qu]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_bl      [t/ks_bl]]
-    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_pe      [b/ko_x]       c/term]
-    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_cm      [b/ko_y]       c/term]
-    ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_sl      [b/ko_z]       c/term]
+    ; TODO: update old mapping for nushell
+    ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_pe      [b/ko_x]       c/term]
+    ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_cm      [b/ko_y]       c/term]
+    ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_sl      [b/ko_z]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [t/ksp_cm      [t/ks_cm]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_pe      [t/ks_pe]]
@@ -150,7 +142,7 @@
     ^{:doc/actions [{}]}                                                                           [a/ksp_rs      [a/ks_rs]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_ro      [a/ks_ro]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_rc      [a/ks_rc]]
-    ^{:doc/actions [{:program c/hc,    :action "last modification",  :exec hc-last-mod}]}          [a/ksp_sp      [a/ks_sp]]
+    ; ^{:doc/actions [{:program c/hc,    :action "last modification",  :exec hc-last-mod}]}          [a/ksp_sp      [a/ks_sp]]
 
     ; numeric glyphs
     ^{:doc/actions [{}]}                                                                           [n/kp_1        [n/k_1]]
