@@ -16,6 +16,7 @@
 
 (def out-file "keymod.edn")
 
+; TODO: relocate collapse selection => lopt layer
 (def hc-collapse             ["collapse_selection", "keep_primary_selection"])
 (def hi-normal               ["normal_mode"])
 (def hn-insert               ["insert_mode"])
@@ -42,16 +43,14 @@
     ; zero
     ^{:doc/actions [{:program c/sys,   :action "mouse mode"}]}                                     [c/kp_lock [c/keq_rs]  nil    {:alone [c/k_lock]}]
 
-    ; launcher
-    ^{:doc/actions [{:program c/sys,   :action "tab"}]}                                            [c/kp_tab  [a/kotc_rs] nil    {:alone [c/k_tab]}]
-
     ; joker
     ^{:doc/actions [{:program c/hc,    :action "collapse selection", :exec hc-collapse}
                     {:program c/zp,    :action "zellij escape",      :exec zp-escape}
                     {:program c/zt,    :action "zellij escape",      :exec zt-escape}
-                    {:program c/zx,    :action "zellij escape",      :exec zx-escape}]}            [c/kh_caps [c/kew_rc]  nil    {:alone [c/k_esc]}]
+                    {:program c/zx,    :action "zellij escape",      :exec zx-escape}]}            [c/kh_caps [a/kotc_rs]  nil    {:alone [c/k_esc]}]
 
     ; grave
+    ; TODO: repurpose rctl alone
     ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hi-normal}
                     {:program c/hn,    :action "mode insert",        :exec hn-insert}
                     {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [b/kp_rt   [b/k_rt]    nil    {:alone [:f13]}]
