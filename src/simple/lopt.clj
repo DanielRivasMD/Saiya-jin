@@ -113,6 +113,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+  ; TODO: use alt function binds
   {:des "Option Mode"
    :rules
    [;
@@ -132,13 +133,13 @@
                     {:program c/mc,    :action "select prev word",   :exec mc-select-prev-word}]}  [r/kosp_al     [r/kos_al]     c/term]
     ^{:doc/actions [{:program c/hc,    :action "select next word",   :exec hc-select-next-word}
                     {:program c/mc,    :action "select next word",   :exec mc-select-next-word}]}  [r/kosp_ar     [r/kos_ar]     c/term]
-    ^{:doc/actions [{:program c/hi,   :action "select prev para",   :exec hi-select-prev-para}
-                    {:program c/hn,   :action "select prev para",   :exec hn-select-prev-para}
-                    {:program c/hs,   :action "select prev para",   :exec hs-select-prev-para}
+    ^{:doc/actions [{:program c/hi,    :action "select prev para",   :exec hi-select-prev-para}
+                    {:program c/hn,    :action "select prev para",   :exec hn-select-prev-para}
+                    {:program c/hs,    :action "select prev para",   :exec hs-select-prev-para}
                     {:program c/mc,    :action "select prev para",   :exec mc-select-prev-para}]}  [r/kosp_au     [r/kos_au]     c/term]
-    ^{:doc/actions [{:program c/hi,   :action "select next para",   :exec hi-select-next-para}
-                    {:program c/hn,   :action "select next para",   :exec hn-select-next-para}
-                    {:program c/hs,   :action "select next para",   :exec hs-select-next-para}
+    ^{:doc/actions [{:program c/hi,    :action "select next para",   :exec hi-select-next-para}
+                    {:program c/hn,    :action "select next para",   :exec hn-select-next-para}
+                    {:program c/hs,    :action "select next para",   :exec hs-select-next-para}
                     {:program c/mc,    :action "select next para",   :exec mc-select-next-para}]}  [r/kosp_ad     [r/kos_ad]     c/term]
 
     ; technical glyphs
@@ -202,7 +203,6 @@
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .- `"}]}         [n/kosp_hy     [a/k_sp t/k_pe n/k_hy a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .+ `"}]}         [n/kosp_eq     [a/k_sp t/k_pe n/ks_eq a/k_sp]]
 
-    ; TODO: launch float pane with editor (hx / mc); independent, or with reference
     ; alphabetic glyphs
     ^{:doc/actions [{:program c/hc,    :action "format",             :exec hc-format}]}            [b/kop_a       [b/ko_a]       c/term]
     ^{:doc/actions [{}]}                                                                           [b/kop_b       [f/ko_f1]      c/term]
