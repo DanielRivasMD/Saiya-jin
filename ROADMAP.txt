@@ -1,18 +1,13 @@
 - remap:
-	- use tab as primary zellij operator => tab control
-	{
-		- use zero as secondary zellij operator => pane & float control
-		OR
-		- use q as secondary zellij operator => pane control
-		- use w as terciary zellij operator => float control
-	}
-
-	- use z & x as terminal program operators => helix, micro, lazygit
-	- deprecate loptctl, loptcmd, lctlcmd
-	- repurpose hyper as macosx control
+	- use tab as primary zellij operator => tab & plugin
+	- use q as secondary zellij operator => pane & float 
+	- use z as terminal program operators => helix, micro, lazygit
+	- zero idle for now
+	- repurpose joker as macosx control
+	- deprecate loptctl, loptcmd, lctlcmd, hyper
 
 - autogenerate katana config from saiyajin source => clojure -> edn & kbd
-- create a function that autogenerates corresponding bindings
+- create a function that autogenerates self binds
 - babel micro & helix fully functional, lazygit, zellij; next broot
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
 - sync browser hotkeys
@@ -22,9 +17,21 @@
 - doc simple sequences
 
 ==================================================
-src/apps/zoom.clj:; TODO: homogenize to format
 src/apps/browser.clj:; TODO: update config
-src/double/lctl.edn:; TODO: relocate
+src/profile/keymod.clj:; TODO: relocate collapse selection => lopt layer
+src/profile/keymod.clj:    ; TODO: repurpose rctl alone
 src/simple/rctl.clj:    ; TODO: annotate command line keys => history picker, etc
-src/simple/lopt.clj:    ; TODO: launch float pane with editor (hx / mc); independent, or with reference
+src/apps/zoom.clj:; TODO: homogenize to format
+src/simple/tab.clj:; TODO: use ctl alt function
+src/simple/tab.clj:; TODO: rebind also on zellij side since anchors have been deleted
+src/simple/tab.clj:	; TODO: use ctl function binds
+src/simple/tab.clj:		; TODO: tab shift swap tabs => import from hyper
+src/simple/tab.clj:    ; TODO: relocate z-mode, update empty
+src/simple/lopt.clj:  ; TODO: use alt function binds
+src/double/lctl.edn:; TODO: relocate
+src/mode/q.clj:  ; TODO: use shift function binds => no shift binds
+src/mode/z.clj:; TODO: relocate to diagnositcs mini mode
+src/mode/z.clj:; TODO: relocate to language server mini mode
+src/simple/joker.clj:  ; TODO: deprecate double keys
+src/simple/joker.clj:  ; TODO: remap to macosx control
 ==================================================

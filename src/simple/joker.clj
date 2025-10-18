@@ -19,6 +19,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+  ; TODO: deprecate double keys
+  ; TODO: remap to macosx control
   {:des "Joker Mode"
    :rules
    [;
