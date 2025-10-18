@@ -15,13 +15,6 @@
 
 (def out-file "rctl.edn")
 
-(def hc-change-picker        ["changed_file_picker"])
-(def mc-open-file            ["OpenFile"])
-(def hc-file-picker          ["file_picker"])
-(def mc-new-open-file        ["AddTab,OpenFile"])
-(def hc-buffer-picker        ["buffer_picker"])
-(def mc-cmd                  ["CommandMode"])
-
 (defn rctl []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -61,15 +54,15 @@
 
     ; TODO: annotate command line keys => history picker, etc
     ; action glyphs
-    ^{:doc/actions [{:program c/hc,    :action "changed file picker",:exec hc-change-picker}
-                    {:program c/mc,    :action "open file",          :exec mc-open-file}]}         [a/kwp_db      [b/kt_r]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "file picker",        :exec hc-file-picker}
-                    {:program c/mc,    :action "open new file",      :exec mc-new-open-file}]}     [a/kwp_re      [b/kt_s]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "buffer picker",      :exec hc-buffer-picker}
-                    {:program c/mc,    :action "command mode",       :exec mc-cmd}]}               [a/kwp_rs      [b/kt_t]       c/term]
-    ^{:doc/actions [{}]}                                                                           [a/kwp_ro      [a/kw_ro]]
-    ^{:doc/actions [{}]}                                                                           [a/kwp_rc      [a/kw_rc]]
-    ^{:doc/actions [{}]}                                                                           [a/kwp_sp      [a/kw_sp]]
+    ; ^{:doc/actions [{:program c/hc,    :action "changed file picker",:exec hc-change-picker}
+    ;                 {:program c/mc,    :action "open file",          :exec mc-open-file}]}         [a/kwp_db      [b/kt_r]       c/term]
+    ; ^{:doc/actions [{:program c/hc,    :action "file picker",        :exec hc-file-picker}
+    ;                 {:program c/mc,    :action "open new file",      :exec mc-new-open-file}]}     [a/kwp_re      [b/kt_s]       c/term]
+    ; ^{:doc/actions [{:program c/hc,    :action "buffer picker",      :exec hc-buffer-picker}
+    ;                 {:program c/mc,    :action "command mode",       :exec mc-cmd}]}               [a/kwp_rs      [b/kt_t]       c/term]
+    ; ^{:doc/actions [{}]}                                                                           [a/kwp_ro      [a/kw_ro]]
+    ; ^{:doc/actions [{}]}                                                                           [a/kwp_rc      [a/kw_rc]]
+    ; ^{:doc/actions [{}]}                                                                           [a/kwp_sp      [a/kw_sp]]
 
     ^{:doc/actions [{}]}                                                                           [a/kwsp_db     [a/kws_db]]
     ^{:doc/actions [{}]}                                                                           [a/kwsp_re     [a/kws_re]]
