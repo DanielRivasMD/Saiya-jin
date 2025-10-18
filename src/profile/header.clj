@@ -31,10 +31,10 @@
 (def header
   [{:Default
     {:default true
-     :sim     50    ;; simultaneous_threshold_milliseconds (def: 50)
-     :delay   300   ;; to_delayed_action_delay_milliseconds (def: 500)
-     :alone   300   ;; to_if_alone_timeout_milliseconds (def: 1000)
-     :held    500  ;; to_if_held_down_threshold_milliseconds (def: 500)
+     :sim     50        ;; simultaneous_threshold_milliseconds (def: 50)
+     :delay   300       ;; to_delayed_action_delay_milliseconds (def: 500)
+     :alone   300       ;; to_if_alone_timeout_milliseconds (def: 1000)
+     :held    500       ;; to_if_held_down_threshold_milliseconds (def: 500)
      }}
 
    :applications
@@ -55,8 +55,8 @@
 
    :layers
    {:zero-mode      {:key :keypad_num_lock}
+    :tab-mode       {:key :tab}
     :q-mode         {:key :q}
-    :x-mode         {:key :x}
     :z-mode         {:key :z}}])
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
