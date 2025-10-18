@@ -116,7 +116,7 @@
     ^{:doc/actions [{}]}                                                                           [t/kp_bl       [t/k_bl]]
     ^{:doc/actions [{:program c/hc,    :action "move forward",       :exec hc-prev-move}]}         [t/kp_cm       [r/kt_pu]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "move backward",      :exec hc-next-move}]}         [t/kp_pe       [r/kt_pd]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "repeat last move",   :exec hc-last-move}]}         [t/kp_sl       [t/k_sl]]
+    ; ^{:doc/actions [{:program c/hc,    :action "repeat last move",   :exec hc-last-move}]}         [t/kp_sl       [t/k_sl]]
 
     ^{:doc/actions [{}]}                                                                           [t/ksp_ob      [t/ks_ob]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_cb      [t/ks_cb]]

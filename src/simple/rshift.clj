@@ -5,7 +5,14 @@
 (ns simple.rshift
   (:require [clojure.java.io :as io]
             [clojure.pprint :as pp]
-            [config.config :as c]))
+            [config.config :as c]
+            [config.arrows :as r]
+            [config.technical :as t]
+            [config.action :as a]
+            [config.numeric :as n]
+            [config.alphabetic :as b]
+            [config.function :as f]
+))
 
 (def out-file "rshift.edn")
 
