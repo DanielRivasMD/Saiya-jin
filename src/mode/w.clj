@@ -2,7 +2,7 @@
 ; ZERO
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(ns mode.zero
+(ns mode.w
   (:require [clojure.java.io :as io]
             [clojure.pprint :as pp]
             [config.config :as c]
@@ -14,7 +14,7 @@
             [config.function :as f]
 ))
 
-(def out-file "zero.edn")
+(def out-file "w.edn")
 
 ; (def zj-swap-tab-left        ["MoveTab \"Left\";"])
 ; (def zj-swap-tab-right       ["MoveTab \"Right\";"])
@@ -27,13 +27,13 @@
 (def zj-locked-mode          ["SwitchToMode \"Locked\";"])
 (def z-normal-mode           ["SwitchToMode \"Normal\";"])
 
-(defn zero []
+(defn w-mode []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  {:des "Zero Mode"
+  {:des "W Mode"
    :rules
-   [:zero-mode
+   [:w-mode
     ; arrow glyphs
     ; ^{:doc/actions [{:program c/zj,    :action "page up",            :exec zj-swap-tab-left}]}     [r/kp_al       [f/kts_f1]     c/term]
     ; ^{:doc/actions [{:program c/zj,    :action "page down",          :exec zj-swap-tab-right}]}    [r/kp_ar       [f/kts_f2]     c/term]
@@ -110,6 +110,6 @@
     (binding [*out* w
               *print-meta* true
               *print-namespace-maps* false]
-      (pp/pprint (zero)))))
+      (pp/pprint (w-mode)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

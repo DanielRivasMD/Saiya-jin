@@ -61,10 +61,11 @@
    {:launch "osascript -e 'tell application \"%s\" to activate'"}
 
    :layers
-   {:zero-mode      {:key :keypad_num_lock}
-    :tab-mode       {:key :tab}
-    :q-mode         {:key :q}
-    :z-mode         {:key :z}}])
+   {
+    :tab-mode           {:key :tab}
+    :q-mode             {:key :q}
+    :w-mode             {:key :w}
+    :z-mode             {:key :z}}])
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
