@@ -49,7 +49,7 @@
 (def zj-swap-tab-left        ["MoveTab \"Left\";"])
 (def zj-swap-tab-right       ["MoveTab \"Right\";"])
 
-(defn tab []
+(defn tab-mode []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -136,6 +136,6 @@
     (binding [*out* w
               *print-meta* true
               *print-namespace-maps* false]
-      (pp/pprint (tab)))))
+      (pp/pprint (tab-mode)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

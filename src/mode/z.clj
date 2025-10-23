@@ -65,7 +65,7 @@
 (def hc-last-tab             ["goto_last_accessed_file"])
 (def br-toggle-preview       [])
 
-(defn z []
+(defn z-mode []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -235,6 +235,6 @@
     (binding [*out* w
               *print-meta* true
               *print-namespace-maps* false]
-      (pp/pprint (z)))))
+      (pp/pprint (z-mode)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

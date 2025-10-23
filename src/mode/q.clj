@@ -28,7 +28,7 @@
 (def zp-abort-rename         ["UndoRenamePane; SwitchToMode \"Normal\";"])
 (def zj-last-pane            ["SwitchFocus;"])
 
-(defn q []
+(defn q-mode []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -112,6 +112,6 @@
     (binding [*out* w
               *print-meta* true
               *print-namespace-maps* false]
-      (pp/pprint (q)))))
+      (pp/pprint (q-mode)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
