@@ -114,7 +114,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ; TODO: use alt function binds
   {:des "Option Mode"
    :rules
    [;
@@ -151,7 +150,7 @@
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` | `"}]}          [t/kop_bl      [a/k_sp t/ks_bl a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` < `"}]}          [t/kop_cm      [a/k_sp t/ks_cm a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` > `"}]}          [t/kop_pe      [a/k_sp t/ks_pe a/k_sp]]
-    ; ^{:doc/actions [{:program c/hc,    :action "diagnostic mode",    :exec "` ? `"}]}          [t/kop_sl      [a/k_sp t/ks_sl a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` ? `"}]}          [t/kop_sl      [a/k_sp t/ks_sl a/k_sp]]
 
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .<= `"}]}        [t/kosp_ob     [a/k_sp t/k_pe t/ks_cm n/k_eq a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .>= `"}]}        [t/kosp_cb     [a/k_sp t/k_pe t/ks_pe n/k_eq a/k_sp]]
@@ -160,7 +159,7 @@
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .| `"}]}         [t/kosp_bl     [a/k_sp t/k_pe t/ks_bl a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .< `"}]}         [t/kosp_cm     [a/k_sp t/k_pe t/ks_cm a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .> `"}]}         [t/kosp_pe     [a/k_sp t/k_pe t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` ? `"}]}          [t/kosp_sl     [a/k_sp t/ks_sl a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [t/kosp_sl     [t/kos_sl]]
 
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/kop_db      [a/ko_db]]
