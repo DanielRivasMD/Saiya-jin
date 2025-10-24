@@ -1,11 +1,3 @@
-- remap:
-	- use tab as primary zellij operator => tab & plugin
-	- use q as secondary zellij operator => pane & float 
-	- use z as terminal program operators => helix, micro, lazygit
-	- zero idle for now
-	- repurpose joker as macosx control
-	- deprecate loptctl, loptcmd, lctlcmd, hyper
-
 - autogenerate katana config from saiyajin source => clojure -> edn & kbd
 - create a function that autogenerates self binds
 - babel micro & helix fully functional, lazygit, zellij; next broot
@@ -13,24 +5,13 @@
 - sync browser hotkeys
 - document terminal sequences
 - document properly massive overhall
-- bug: double Tq
 - doc simple sequences
 
 ==================================================
-src/apps/zoom.clj:; TODO: homogenize to format
-src/profile/keymod.clj:; TODO: relocate collapse selection => lopt layer
 src/profile/keymod.clj:    ; TODO: repurpose rctl alone
-src/apps/browser.clj:; TODO: update config
-src/mode/z.clj:    ; TODO: collisions detected
-src/mode/z.clj:    ; TODO: update mapping targets
-src/mode/z.clj:    ; TODO: update old mapping for nushell
-src/config/arrows.clj:; TODO: use these unasigned mappings for zellij?
-src/mode/tab.clj:; TODO: use ctl alt function
-src/mode/tab.clj:; TODO: rebind also on zellij side since anchors have been deleted
-src/mode/tab.clj:	; TODO: use ctl function binds
-src/mode/tab.clj:		; TODO: tab shift swap tabs => import from hyper
 src/mode/tab.clj:    ; TODO: relocate z-mode, update empty
-src/mode/q.clj:  ; TODO: use shift function binds => no shift binds
+src/apps/browser.clj:; TODO: update config
+src/apps/zoom.clj:; TODO: homogenize to format
+src/mode/z.clj:    ; TODO: update old mapping for nushell
 src/simple/ropt.clj:    ; TODO: annotate command line keys => history picker, etc
-src/simple/lopt.clj:  ; TODO: use alt function binds
 ==================================================

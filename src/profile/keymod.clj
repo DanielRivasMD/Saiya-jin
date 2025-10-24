@@ -16,7 +16,6 @@
 
 (def out-file "keymod.edn")
 
-; TODO: relocate collapse selection => lopt layer
 (def hc-collapse             ["collapse_selection", "keep_primary_selection"])
 (def zp-escape               ["UndoRenamePane; SwitchToMode \"Normal\";"])
 (def zt-escape               ["UndoRenameTab; SwitchToMode \"Normal\";"])
