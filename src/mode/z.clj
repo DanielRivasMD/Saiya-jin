@@ -18,48 +18,51 @@
 
 (def nu                      [])
 
-(def hc-last-mod        ["goto_last_modification"])
-(def hc-undo            ["undo"])
-(def mc-undo            ["Undo"])
-(def hc-redo            ["redo"])
-(def mc-redo            ["Redo"])
-(def hc-prev-diff       ["goto_prev_change"])
-(def mc-prev-diff       ["DiffPrevious"])
-(def hc-next-diff       ["goto_next_change"])
-(def mc-next-diff       ["DiffNext"])
-
-(def hc-prev-move       ["normal_mode", "till_prev_char", "MODE"])
-(def hc-next-move       ["normal_mode", "find_till_char", "MODE"])
-(def hc-last-move       ["repeat_last_motion"])
-(def hc-prev-comm       ["goto_prev_comment"])
-(def hc-next-comm       ["goto_next_comment"])
-
-(def hc-lower-case      ["switch_to_lowercase"])
-(def hc-upper-case      ["switch_to_uppercase"])
-(def hc-switch-case     ["switch_case"])
-
-(def hc-prev-tab             ["goto_previous_buffer"])
-(def lg-prev-tab             ["prevTab"])
-(def mc-prev-tab             ["PreviousTab"])
-(def hc-next-tab             ["goto_next_buffer"])
-(def lg-next-tab             ["nextTab"])
-(def mc-next-tab             ["NextTab"])
-(def hc-inc                  ["increment"])
-(def lg-prev-block           ["prevBlock-alt2"])
-(def hc-dec                  ["decrement"])
-(def lg-next-block           ["nextBlock-alt2"])
 (def hc-close-tab            [":buffer-close"])
-(def mc-close-tab            ["Quit"])
+(def hc-dec                  ["decrement"])
 (def hc-file-picker          ["file_picker"])
-(def mc-open-file            ["OpenFile"])
-(def hc-vsplit               ["vsplit"])
-(def mc-vsplit               ["VSplit"])
 (def hc-hsplit               ["hsplit"])
-(def mc-hsplit               ["HSplit"])
-(def hc-unsplit              ["wonly"])
-(def mc-unsplit              ["Unsplit"])
+(def hc-inc                  ["increment"])
+(def hc-last-mod             ["goto_last_modification"])
+(def hc-last-move            ["repeat_last_motion"])
 (def hc-last-tab             ["goto_last_accessed_file"])
-(def br-toggle-preview       [])
+(def hc-lower-case           ["switch_to_lowercase"])
+(def hc-next-comm            ["goto_next_comment"])
+(def hc-next-diff            ["goto_next_change"])
+(def hc-next-move            ["normal_mode", "find_till_char", "MODE"])
+(def hc-next-tab             ["goto_next_buffer"])
+(def hc-prev-comm            ["goto_prev_comment"])
+(def hc-prev-diff            ["goto_prev_change"])
+(def hc-prev-move            ["normal_mode", "till_prev_char", "MODE"])
+(def hc-prev-tab             ["goto_previous_buffer"])
+(def hc-redo                 ["redo"])
+(def hc-switch-case          ["switch_case"])
+(def hc-undo                 ["undo"])
+(def hc-unsplit              ["wonly"])
+(def hc-upper-case           ["switch_to_uppercase"])
+(def hc-vsplit               ["vsplit"])
+
+(def lg-filter               ["filteringMenu"])
+(def lg-recent               ["openRecentRepos"])
+(def lg-commit               ["commitChanges"])
+(def lg-inc-content          ["increaseContextInDiffView"])
+(def lg-dec-content          ["decreaseContextInDiffView"])
+(def lg-next-block           ["nextBlock-alt2"])
+(def lg-next-tab             ["nextTab"])
+(def lg-prev-block           ["prevBlock-alt2"])
+(def lg-prev-tab             ["prevTab"])
+
+(def mc-close-tab            ["Quit"])
+(def mc-hsplit               ["HSplit"])
+(def mc-next-diff            ["DiffNext"])
+(def mc-next-tab             ["NextTab"])
+(def mc-open-file            ["OpenFile"])
+(def mc-prev-diff            ["DiffPrevious"])
+(def mc-prev-tab             ["PreviousTab"])
+(def mc-redo                 ["Redo"])
+(def mc-undo                 ["Undo"])
+(def mc-unsplit              ["Unsplit"])
+(def mc-vsplit               ["VSplit"])
 
 (defn z-mode []
 
@@ -90,16 +93,14 @@
                     {:program c/mc,    :action "next diff",          :exec mc-next-diff}]}         [r/ksp_ad      [r/ko_ed]       c/term]
 
     ; technical glyphs
-    ; TODO: collisions detected
     ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hc-dec}]}               [t/kp_ob       [r/kt_hm]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hc-inc}]}               [t/kp_cb       [r/kt_ed]      c/term]
-    ; TODO: update mapping targets
-    ; ^{:doc/actions [{:program c/hc,    :action "lower case",         :exec hc-lower-case}]}        [t/kp_sc       [t/k_sc]]
-    ; ^{:doc/actions [{:program c/hc,    :action "upper case",         :exec hc-upper-case}]}        [t/kp_qu       [t/k_qu]]
-    ; ^{:doc/actions [{:program c/hc,    :action "switch case",        :exec hc-switch-case}]}       [t/kp_bl       [t/k_bl]]
+    ^{:doc/actions [{:program c/hc,    :action "lower case",         :exec hc-lower-case}]}        [t/kp_sc       [f/ko_f13]]
+    ^{:doc/actions [{:program c/hc,    :action "upper case",         :exec hc-upper-case}]}        [t/kp_qu       [f/ko_f14]]
+    ^{:doc/actions [{:program c/hc,    :action "switch case",        :exec hc-switch-case}]}       [t/kp_bl       [f/ko_f15]]
     ^{:doc/actions [{:program c/hc,    :action "move forward",       :exec hc-prev-move}]}         [t/kp_cm       [r/kt_pu]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "move backward",      :exec hc-next-move}]}         [t/kp_pe       [r/kt_pd]      c/term]
-    ; ^{:doc/actions [{:program c/hc,    :action "repeat last move",   :exec hc-last-move}]}         [t/kp_sl       [t/k_sl]]
+    ^{:doc/actions [{:program c/hc,    :action "repeat last move",   :exec hc-last-move}]}         [t/kp_sl       [f/ko_f16]]
 
     ^{:doc/actions [{}]}                                                                           [t/ksp_ob      [t/ks_ob]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_cb      [t/ks_cb]]
@@ -117,24 +118,28 @@
 
     ; action glyphs
     ^{:doc/actions [{:program c/hc,    :action "close tab",          :exec hc-close-tab}
-                    {:program c/mc,    :action "close tab",          :exec mc-close-tab}]}         [a/kp_db       [b/kt_l]       c/term]
+                    {:program c/lg,    :action "increase content",   :exec lg-inc-content}
+                    {:program c/mc,    :action "close tab",          :exec mc-close-tab}]}         [a/kp_db       [b/kt_g]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "file picker",        :exec hc-file-picker}
-                    {:program c/mc,    :action "open file",          :exec mc-open-file}]}         [a/kp_re       [b/kt_g]       c/term]
+                    {:program c/lg,    :action "commit",             :exec lg-commit}
+                    {:program c/mc,    :action "open file",          :exec mc-open-file}]}         [a/kp_re       [b/kt_l]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "split right",        :exec hc-vsplit}
+                    {:program c/lg,    :action "decrease content",   :exec lg-dec-content}
                     {:program c/mc,    :action "split right",        :exec mc-vsplit}]}            [a/kp_rs       [b/kt_v]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "split down",         :exec hc-hsplit}
                     {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/kp_ro       [b/kt_h]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "close window",       :exec hc-unsplit}
+                    {:program c/lg,    :action "filter menu",        :exec lg-filter}
                     {:program c/mc,    :action "close window",       :exec mc-unsplit}]}           [a/kp_rc       [b/kt_j]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "last file",          :exec hc-last-tab}
-                    {:program c/br,    :action "open preview"        :exec br-toggle-preview}]}    [a/kp_sp       [b/kt_o]       c/term]
+                    {:program c/lg,    :action "recent",             :exec lg-recent}]}            [a/kp_sp       [b/kt_o]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_rs      [a/ks_rs]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_ro      [a/ks_ro]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_rc      [a/ks_rc]]
-    ; ^{:doc/actions [{:program c/hc,    :action "last modification",  :exec hc-last-mod}]}          [a/ksp_sp      [a/ks_sp]]
+    ^{:doc/actions [{:program c/hc,    :action "last modification",  :exec hc-last-mod}]}          [a/ksp_sp      [f/ko_f17]]
 
     ; numeric glyphs
     ^{:doc/actions [{}]}                                                                           [n/kp_1        [n/k_1]]
