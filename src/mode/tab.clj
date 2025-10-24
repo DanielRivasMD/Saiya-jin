@@ -26,6 +26,8 @@
 (def lg-scroll-up            ["scrollUpMain-alt2"])
 (def hc-scroll-down          ["scroll_down"])
 (def lg-scroll-down          ["scrollDownMain-alt2"])
+(def zj-swap-tab-left        ["MoveTab \"Left\";"])
+(def zj-swap-tab-right       ["MoveTab \"Right\";"])
 (def zj-toggle-sync          ["ToggleActiveSyncTab;"])
 (def zj-close-tab            ["CloseTab;"])
 (def zj-new-tab              ["NewTab;"])
@@ -34,26 +36,10 @@
 (def zt-abort-rename         ["UndoRenameTab; SwitchToMode \"Normal\";"])
 (def zj-last-tab             ["ToggleTab;"])
 
-; TODO: use ctl alt function
-; TODO: rebind also on zellij side since anchors have been deleted
-(def zj-tab-1                ["SwitchToMode \"Tab\"; GoToTab 1; SwitchToMode \"Normal\";"])
-(def zj-tab-2                ["SwitchToMode \"Tab\"; GoToTab 2; SwitchToMode \"Normal\";"])
-(def zj-tab-3                ["SwitchToMode \"Tab\"; GoToTab 3; SwitchToMode \"Normal\";"])
-(def zj-tab-4                ["SwitchToMode \"Tab\"; GoToTab 4; SwitchToMode \"Normal\";"])
-(def zj-tab-5                ["SwitchToMode \"Tab\"; GoToTab 5; SwitchToMode \"Normal\";"])
-(def zj-tab-6                ["SwitchToMode \"Tab\"; GoToTab 6; SwitchToMode \"Normal\";"])
-(def zj-tab-7                ["SwitchToMode \"Tab\"; GoToTab 7; SwitchToMode \"Normal\";"])
-(def zj-tab-8                ["SwitchToMode \"Tab\"; GoToTab 8; SwitchToMode \"Normal\";"])
-(def zj-tab-9                ["SwitchToMode \"Tab\"; GoToTab 9; SwitchToMode \"Normal\";"])
-
-(def zj-swap-tab-left        ["MoveTab \"Left\";"])
-(def zj-swap-tab-right       ["MoveTab \"Right\";"])
-
 (defn tab-mode []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-	; TODO: use ctl function binds
   {:des "Tab Mode"
    :rules
    [:tab-mode
@@ -86,16 +72,16 @@
     ^{:doc/actions [{:program c/zj,    :action "tab jump back",      :exec zj-last-tab}]}          [a/kp_sp       [f/ks_f12]     c/term]
 
    ; numeric glyphs
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-1",          :exec zj-tab-1}]}             [n/kp_1        [f/kos_f1]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-2",          :exec zj-tab-2}]}             [n/kp_2        [f/kos_f2]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-3",          :exec zj-tab-3}]}             [n/kp_3        [f/kos_f4]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-4",          :exec zj-tab-4}]}             [n/kp_4        [f/kos_f5]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-5",          :exec zj-tab-5}]}             [n/kp_5        [f/kos_f6]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-6",          :exec zj-tab-6}]}             [n/kp_6        [f/kos_f7]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-7",          :exec zj-tab-7}]}             [n/kp_7        [f/kos_f8]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-8",          :exec zj-tab-8}]}             [n/kp_8        [f/kos_f9]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-9",          :exec zj-tab-9}]}             [n/kp_9        [f/kos_f10]    c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "alt-cmd-0",          :exec zj-tab-9}]}             [n/kp_0        [f/kos_f11]    c/term]
+    ^{:doc/actions [{}]}                                                                           [n/kp_1        [n/k_1]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_2        [n/k_2]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_3        [n/k_3]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_4        [n/k_4]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_5        [n/k_5]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_6        [n/k_6]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_7        [n/k_7]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_8        [n/k_8]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_9        [n/k_9]]
+    ^{:doc/actions [{}]}                                                                           [n/kp_0        [n/k_0]]
     ^{:doc/actions [{}]}                                                                           [n/kp_hy       [n/k_hy]]
     ^{:doc/actions [{}]}                                                                           [n/kp_eq       [n/k_eq]]
 
