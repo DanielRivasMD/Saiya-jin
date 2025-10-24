@@ -41,17 +41,13 @@
 (def hc-prev-tab             ["goto_previous_buffer"])
 (def lg-prev-tab             ["prevTab"])
 (def mc-prev-tab             ["PreviousTab"])
-(def ze-move-left            ["MovePane \"Left\";"])
 (def hc-next-tab             ["goto_next_buffer"])
 (def lg-next-tab             ["nextTab"])
 (def mc-next-tab             ["NextTab"])
-(def ze-move-rigth           ["MovePane \"Right\";"])
 (def hc-inc                  ["increment"])
 (def lg-prev-block           ["prevBlock-alt2"])
-(def ze-move-up              ["MovePane \"Up\";"])
 (def hc-dec                  ["decrement"])
 (def lg-next-block           ["nextBlock-alt2"])
-(def ze-move-down            ["MovePane \"Down\";"])
 (def hc-close-tab            [":buffer-close"])
 (def mc-close-tab            ["Quit"])
 (def hc-file-picker          ["file_picker"])
@@ -75,18 +71,14 @@
     ; arrow glyphs
     ^{:doc/actions [{:program c/hc,    :action "jump prev buffer",   :exec hc-prev-tab}
                     {:program c/lg,    :action "jump prev tab",      :exec lg-prev-tab}
-                    {:program c/mc,    :action "jump prev buffer",   :exec mc-prev-tab}
-                    {:program c/ze,    :action "move left",          :exec ze-move-left}]}         [r/kp_al       [b/kt_b]       c/term]
+                    {:program c/mc,    :action "jump prev buffer",   :exec mc-prev-tab}]}          [r/kp_al       [b/kt_b]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "jump next buffer",   :exec hc-next-tab}
                     {:program c/lg,    :action "jump next tab",      :exec lg-next-tab}
-                    {:program c/mc,    :action "jump next buffer",   :exec mc-next-tab}
-                    {:program c/ze,    :action "move right",         :exec ze-move-rigth}]}        [r/kp_ar       [b/kt_f]       c/term]
+                    {:program c/mc,    :action "jump next buffer",   :exec mc-next-tab}]}          [r/kp_ar       [b/kt_f]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "prev comment",       :exec hc-prev-comm}
-                    {:program c/lg,    :action "jump prev block",    :exec lg-prev-block}
-                    {:program c/ze,    :action "move up",            :exec ze-move-up}]}           [r/kp_au       [b/kt_n]       c/term]
+                    {:program c/lg,    :action "jump prev block",    :exec lg-prev-block}]}        [r/kp_au       [b/kt_n]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "next comment",       :exec hc-next-comm}
-                    {:program c/lg,    :action "jump next block",    :exec lg-next-block}
-                    {:program c/ze,    :action "move down",          :exec ze-move-down}]}         [r/kp_ad       [b/kt_p]       c/term]
+                    {:program c/lg,    :action "jump next block",    :exec lg-next-block}]}        [r/kp_ad       [b/kt_p]       c/term]
 
     ^{:doc/actions [{:program c/hc,    :action "undo",               :exec hc-undo}
                     {:program c/mc,    :action "undo",               :exec mc-undo}]}              [r/ksp_al      [r/ko_pu]       c/term]
