@@ -42,7 +42,6 @@
 (def hc-upper-case           ["switch_to_uppercase"])
 (def hc-vsplit               ["vsplit"])
 
-(def lg-filter               ["filteringMenu"])
 (def lg-recent               ["openRecentRepos"])
 (def lg-commit               ["commitChanges"])
 (def lg-inc-content          ["increaseContextInDiffView"])
@@ -51,6 +50,7 @@
 (def lg-next-tab             ["nextTab"])
 (def lg-prev-block           ["prevBlock-alt2"])
 (def lg-prev-tab             ["prevTab"])
+(def lg-zoom                 ["nextScreenMode"])
 
 (def mc-close-tab            ["Quit"])
 (def mc-hsplit               ["HSplit"])
@@ -129,7 +129,7 @@
     ^{:doc/actions [{:program c/hc,    :action "split down",         :exec hc-hsplit}
                     {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/kp_ro       [b/kt_h]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "close window",       :exec hc-unsplit}
-                    {:program c/lg,    :action "filter menu",        :exec lg-filter}
+                    {:program c/lg,    :action "zoom",               :exec lg-zoom}
                     {:program c/mc,    :action "close window",       :exec mc-unsplit}]}           [a/kp_rc       [b/kt_j]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "last file",          :exec hc-last-tab}
                     {:program c/lg,    :action "recent",             :exec lg-recent}]}            [a/kp_sp       [b/kt_o]       c/term]
