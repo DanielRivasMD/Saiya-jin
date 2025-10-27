@@ -100,14 +100,15 @@
 (def hc-unindent             ["unindent"])
 (def mc-unindent             ["OutdentSelection"])
 (def hc-paste-in-place       ["replace_selections_with_clipboard"])
-(def hc-lazygit              [":sh zellij run --name lazygit --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- lazygit"])
-(def hc-serpl                [":sh zellij run --name serpl   --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- serpl"])
-(def hc-todor-interactive    [":sh zellij run --name todor   --pinned true  --close-on-exit --floating  --width  90 --height  30 --x  90 --y   0 -- todor --delete"])
-(def hc-watch                [":sh zellij run --name canvas  --pinned true  --close-on-exit --floating  --width  45 --height  20 --x 135 --y   0 -- just watch"])
+(def hc-yazi                 [":sh zellij run --name explorer --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- yazi $(pwd)"])
+(def hc-lazygit              [":sh zellij run --name lazygit  --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- lazygit"])
+(def hc-serpl                [":sh zellij run --name serpl    --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- serpl"])
+(def hc-todor-interactive    [":sh zellij run --name todor    --pinned true  --close-on-exit --floating  --width  90 --height  30 --x  90 --y   0 -- todor --delete"])
+(def hc-watch                [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  45 --height  20 --x 135 --y   0 -- just watch"])
+(def hc-shell                [":sh zellij run --name canvas   --pinned false --close-on-exit --floating  --width 180 --height  90 --x   0 --y   0 -- zsh"])
 (def hc-cut-line             ["extend_to_line_bounds", "delete_selection_noyank"])
 (def mc-cut-line             ["CutLine"])
 (def hc-copy-diag            [":yank-diagnostic"])
-(def hc-shell                [":sh zellij run --name canvas  --pinned false --close-on-exit --floating  --width 180 --height  90 --x   0 --y   0 -- zsh"])
 (def mc-shell                ["ShellMode"])
 
 (defn lopt []
@@ -257,7 +258,7 @@
                     {:program c/mc,    :action "copy line",          :exec mc-copy-line}]}         [b/kosp_c      [f/kos_f2]     c/term]
     ^{:doc/actions [{:program c/hc,    :action "duplicate line",     :exec hc-dup-line}
                     {:program c/mc,    :action "duplicate line",     :exec mc-dup-line}]}          [b/kosp_d      [f/kos_f4]     c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_e      [b/kos_e]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "file explorer",      :exec hc-yazi}]}              [b/kosp_e      [b/kos_e]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "global search",      :exec hc-global-search}
                     {:program c/mc,    :action "global search",      :exec mc-global-search}]}     [b/kosp_f      [f/kos_f5]     c/term]
     ^{:doc/actions [{}]}                                                                           [b/kosp_g      [b/kos_g]      c/term]
