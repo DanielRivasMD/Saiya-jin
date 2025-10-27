@@ -49,7 +49,7 @@
     c/finder  ["com.apple.finder"]
     c/mail    ["io.canarymail.mac"]
     c/skim    ["net.sourceforge.skim-app.skim"]
-    c/term    ["org.alacritty"]
+    c/term    ["org.alacritty", "com.mitchellh.ghostty"]
     c/zoom    ["us.zoom.xos"]}
 
    :devices
