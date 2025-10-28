@@ -100,16 +100,17 @@
 (def hc-unindent             ["unindent"])
 (def mc-unindent             ["OutdentSelection"])
 (def hc-paste-in-place       ["replace_selections_with_clipboard"])
+(def hc-cut-line             ["extend_to_line_bounds", "delete_selection_noyank"])
+(def mc-cut-line             ["CutLine"])
+(def hc-copy-diag            [":yank-diagnostic"])
+(def mc-shell                ["ShellMode"])
 (def hc-yazi                 [":sh zellij run --name explorer --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- yazi $(pwd)"])
 (def hc-lazygit              [":sh zellij run --name lazygit  --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- lazygit"])
 (def hc-serpl                [":sh zellij run --name serpl    --pinned true  --close-on-exit --floating  --width 180 --height  60 --x   0 --y   0 -- serpl"])
 (def hc-todor-interactive    [":sh zellij run --name todor    --pinned true  --close-on-exit --floating  --width  90 --height  30 --x  90 --y   0 -- todor --delete"])
 (def hc-watch                [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  45 --height  20 --x 135 --y   0 -- just watch"])
+(def hc-btm                  [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  90 --height  30 --x  90 --y   0 -- btm"])
 (def hc-shell                [":sh zellij run --name canvas   --pinned false --close-on-exit --floating  --width 180 --height  90 --x   0 --y   0 -- zsh"])
-(def hc-cut-line             ["extend_to_line_bounds", "delete_selection_noyank"])
-(def mc-cut-line             ["CutLine"])
-(def hc-copy-diag            [":yank-diagnostic"])
-(def mc-shell                ["ShellMode"])
 
 (defn lopt []
 
@@ -253,7 +254,7 @@
 
     ^{:doc/actions [{:program c/hc,    :action "select all",         :exec hc-select-all}
                     {:program c/mc,    :action "select all",         :exec mc-select-all}]}        [b/kosp_a      [b/kos_a]      c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_b      [f/kos_f1]     c/term]
+    ^{:doc/actions [{:program c/hc,    :action "monitor system",     :exec hc-btm}]}               [b/kosp_b      [f/kos_f1]     c/term]
     ^{:doc/actions [{:program c/hc,    :action "copy line",          :exec hc-copy-line}
                     {:program c/mc,    :action "copy line",          :exec mc-copy-line}]}         [b/kosp_c      [f/kos_f2]     c/term]
     ^{:doc/actions [{:program c/hc,    :action "duplicate line",     :exec hc-dup-line}
