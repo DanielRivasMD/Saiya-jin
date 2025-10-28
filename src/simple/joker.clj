@@ -42,9 +42,9 @@
    ; action glyphs
     ^{:doc/actions [{:program c/sys,   :action "Control center"}]}                                 [a/kotcsp_db   [c/kotcsp_lock]]
     ^{:doc/actions [{:program c/sys,   :action "Speak"}]}                                          [a/kotcsp_re   [a/kotcs_re]]
-    ^{:doc/actions [{:program c/sys,   :action "Launch Alacritty"}]}                               [a/kotcsp_rs   [:launch "Alacritty"]]
-    ^{:doc/actions [{:program c/sys,   :action "Launch Arc"}]}                                     [a/kotcsp_ro   [:launch "Arc"]]
-    ^{:doc/actions [{:program c/sys,   :action "Launch Mail"}]}                                    [a/kotcsp_rc   [:launch "Mail"]]
+    ^{:doc/actions [{:program c/sys,   :action "Launch Arc"}]}                                     [a/kotcsp_rs   [:launch "Arc"]]
+    ^{:doc/actions [{:program c/sys,   :action "Launch Alacritty"}]}                               [a/kotcsp_ro   [:launch "Alacritty"]]
+    ^{:doc/actions [{:program c/sys,   :action "Launch Ghostty"}]}                                 [a/kotcsp_rc   [:launch "Ghostty"]]
     ^{:doc/actions [{:program c/sys,   :action "Listen"}]}                                         [a/kotcsp_sp   [c/kwp_us]]
 
     ; numeric-glyphs
