@@ -86,7 +86,7 @@
 (def kwp_us (mk K W P _us))
 
 (def kewp_us (mk K E W P _us))
-(def kewqp_us (mk K E W Q P _us))
+(def kwqp_us (mk K W Q P _us))
 (def krp_us (mk K R P _us))
 (def kep_us (mk K E P _us))
 (def kqp_us (mk K Q P _us))
