@@ -43,7 +43,7 @@
     ^{:doc/actions [{:program c/hc,    :action "collapse selection", :exec hc-collapse}
                     {:program c/zp,    :action "zellij escape",      :exec zp-escape}
                     {:program c/zt,    :action "zellij escape",      :exec zt-escape}
-                    {:program c/zx,    :action "zellij escape",      :exec zx-escape}]}            [c/kh_caps [a/kotc_rs]  nil    {:alone [c/k_esc]}]
+                    {:program c/zx,    :action "zellij escape",      :exec zx-escape}]}            [c/kh_caps [a/kotc]  nil    {:alone [c/k_esc]}]
 
     ; grave
     ; TODO: repurpose rctl alone
