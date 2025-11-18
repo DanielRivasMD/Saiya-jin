@@ -3045,10 +3045,7 @@
       :exec ["SwitchToMode \"Normal\";"]}]}
   [:##caps_lock [:!OTleft_command] nil {:alone [:escape]}]
   ^{:doc/actions [{:program "Alfred", :action "window switcher"}]}
-  [:#Pleft_control
-   [:#Pleft_control]
-   nil
-   {:alone [:!EWQ#Pnon_us_pound]}]
+  [:#Pleft_control [:#Pleft_control] nil {:alone [:!WQ#Pnon_us_pound]}]
   ^{:doc/actions
     [{:program "System", :action "global in-app window cycler"}]}
   [:#Pleft_option [:left_option] nil {:alone [:!Otab]}]
