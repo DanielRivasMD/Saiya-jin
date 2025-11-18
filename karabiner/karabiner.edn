@@ -890,119 +890,119 @@
 {:des "Joker Mode",
  :rules
  [^{:doc/actions [{}]}
-  [:!OTCR#Pleft_arrow [:!OTCRleft_arrow]]
+  [:!OTC#Pleft_arrow [:!OTCleft_arrow]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pright_arrow [:!OTCRright_arrow]]
+  [:!OTC#Pright_arrow [:!OTCright_arrow]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pup_arrow [:!OTCRup_arrow]]
+  [:!OTC#Pup_arrow [:!OTCup_arrow]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pdown_arrow [:!OTCRdown_arrow]]
+  [:!OTC#Pdown_arrow [:!OTCdown_arrow]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Popen_bracket [:!OTCRopen_bracket]]
+  [:!OTC#Popen_bracket [:!OTCopen_bracket]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pclose_bracket [:!OTCRclose_bracket]]
+  [:!OTC#Pclose_bracket [:!OTCclose_bracket]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Psemicolon [:!OTCRsemicolon]]
+  [:!OTC#Psemicolon [:!OTCsemicolon]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pquote [:!OTCRquote]]
+  [:!OTC#Pquote [:!OTCquote]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pbackslash [:!OTCRbackslash]]
+  [:!OTC#Pbackslash [:!OTCbackslash]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pcomma [:!OTCRcomma]]
+  [:!OTC#Pcomma [:!OTCcomma]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pperiod [:!OTCRperiod]]
+  [:!OTC#Pperiod [:!OTCperiod]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pslash [:!OTCRslash]]
+  [:!OTC#Pslash [:!OTCslash]]
   ^{:doc/actions [{:program "System", :action "Control center"}]}
-  [:!OTCR#Pdelete_or_backspace [:!OTCR#Pkeypad_num_lock]]
+  [:!OTC#Pdelete_or_backspace [:!OTCkeypad_num_lock]]
   ^{:doc/actions [{:program "System", :action "Speak"}]}
-  [:!OTCR#Preturn_or_enter [:!OTCRreturn_or_enter]]
+  [:!OTC#Preturn_or_enter [:!OTCreturn_or_enter]]
   ^{:doc/actions [{:program "System", :action "Launch Arc"}]}
-  [:!OTCR#Pright_shift [:launch "Arc"]]
+  [:!OTC#Pright_shift [:launch "Arc"]]
   ^{:doc/actions [{:program "System", :action "Launch Alacritty"}]}
-  [:!OTCR#Pright_option [:launch "Alacritty"]]
+  [:!OTC#Pright_option [:launch "Alacritty"]]
   ^{:doc/actions [{:program "System", :action "Launch Ghostty"}]}
-  [:!OTCR#Pright_command [:launch "Ghostty"]]
+  [:!OTC#Pright_command [:launch "Ghostty"]]
   ^{:doc/actions [{:program "System", :action "Listen"}]}
-  [:!OTCR#Pspacebar [:!W#Pnon_us_pound]]
+  [:!OTC#Pspacebar [:!W#Pnon_us_pound]]
   ^{:doc/actions [{}]}
-  [:!OTCR#P1 [:!OTCR1]]
+  [:!OTC#P1 [:!OTC1]]
   ^{:doc/actions [{}]}
-  [:!OTCR#P2 [:!OTCR2]]
+  [:!OTC#P2 [:!OTC2]]
   ^{:doc/actions [{}]}
-  [:!OTCR#P3 [:!OTCR3]]
+  [:!OTC#P3 [:!OTC3]]
   ^{:doc/actions [{}]}
-  [:!OTCR#P4 [:!OTCR4]]
+  [:!OTC#P4 [:!OTC4]]
   ^{:doc/actions [{}]}
-  [:!OTCR#P5 [:!OTCR5]]
+  [:!OTC#P5 [:!OTC5]]
   ^{:doc/actions [{}]}
-  [:!OTCR#P6 [:!OTCR6]]
+  [:!OTC#P6 [:!OTC6]]
   ^{:doc/actions [{}]}
-  [:!OTCR#P7 [:!OTCR7]]
+  [:!OTC#P7 [:!OTC7]]
   ^{:doc/actions [{}]}
-  [:!OTCR#P8 [:!OTCR8]]
+  [:!OTC#P8 [:!OTC8]]
   ^{:doc/actions [{}]}
-  [:!OTCR#P9 [:!OTCR9]]
+  [:!OTC#P9 [:!OTC9]]
   ^{:doc/actions [{}]}
-  [:!OTCR#P0 [:!OTCR0]]
+  [:!OTC#P0 [:!OTC0]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Phyphen [:!OTCRhyphen]]
+  [:!OTC#Phyphen [:!OTChyphen]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pequal_sign [:!OTCRequal_sign]]
+  [:!OTC#Pequal_sign [:!OTCequal_sign]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pa [:!OTCRa]]
+  [:!OTC#Pa [:!OTCa]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pb [:!OTCRb]]
+  [:!OTC#Pb [:!OTCb]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pc [:!OTCRc]]
+  [:!OTC#Pc [:!OTCc]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pd [:!OTCRd]]
+  [:!OTC#Pd [:!OTCd]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pe [:!OTCRe]]
+  [:!OTC#Pe [:!OTCe]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pf [:!OTCRf]]
+  [:!OTC#Pf [:!OTCf]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pg [:!OTCRg]]
+  [:!OTC#Pg [:!OTCg]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Ph [:!OTCRh]]
+  [:!OTC#Ph [:!OTCh]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pi [:!OTCRi]]
+  [:!OTC#Pi [:!OTCi]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pj [:!OTCRj]]
+  [:!OTC#Pj [:!OTCj]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pk [:!OTCRk]]
+  [:!OTC#Pk [:!OTCk]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pl [:!OTCRl]]
+  [:!OTC#Pl [:!OTCl]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pm [:!OTCRm]]
+  [:!OTC#Pm [:!OTCm]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pn [:!OTCRn]]
+  [:!OTC#Pn [:!OTCn]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Po [:!OTCRo]]
+  [:!OTC#Po [:!OTCo]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pp [:!OTCRp]]
+  [:!OTC#Pp [:!OTCp]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pq [:!OTCRq]]
+  [:!OTC#Pq [:!OTCq]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pr [:!OTCRr]]
+  [:!OTC#Pr [:!OTCr]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Ps [:!OTCRs]]
+  [:!OTC#Ps [:!OTCs]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pt [:!OTCRt]]
+  [:!OTC#Pt [:!OTCt]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pu [:!OTCRu]]
+  [:!OTC#Pu [:!OTCu]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pv [:!OTCRv]]
+  [:!OTC#Pv [:!OTCv]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pw [:!OTCRw]]
+  [:!OTC#Pw [:!OTCw]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Px [:!OTCRx]]
+  [:!OTC#Px [:!OTCx]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Py [:!OTCRy]]
+  [:!OTC#Py [:!OTCy]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pz [:!OTCRz]]
+  [:!OTC#Pz [:!OTCz]]
   ^{:doc/actions [{}]}
-  [:!OTCR#Pright_control [:!OTCRright_control]]]}
+  [:!OTC#Pright_control [:!OTCright_control]]]}
 {:des "Command Mode",
  :rules
  [^{:doc/actions
@@ -3043,7 +3043,7 @@
      {:program "zellij-except",
       :action "zellij escape",
       :exec ["SwitchToMode \"Normal\";"]}]}
-  [:##caps_lock [:!OTCright_shift] nil {:alone [:escape]}]
+  [:##caps_lock [:!OTleft_command] nil {:alone [:escape]}]
   ^{:doc/actions [{:program "Alfred", :action "window switcher"}]}
   [:#Pleft_control
    [:#Pleft_control]
