@@ -78,7 +78,7 @@
 (def kp_esc (mk P _esc))
 (def kp_tab (mk P _tab))
 
-(def kotcsp_lock (mk K O T C R P _lock))
+(def kotc_lock (mk K O T C _lock))
 
 (def koc_us (mk K O C _us))
 (def kocs_us (mk K O C S _us))

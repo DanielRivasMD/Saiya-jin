@@ -68,6 +68,7 @@
 (def ktc_rc (c/mk c/K c/T c/C c/_rc))
 (def ktc_sp (c/mk c/K c/T c/C c/_sp))
 
+(def kotc    (c/mk c/K c/O c/T c/_lc))
 (def kotc_db (c/mk c/K c/O c/T c/C c/_db))
 (def kotc_re (c/mk c/K c/O c/T c/C c/_re))
 (def kotc_rs (c/mk c/K c/O c/T c/C c/_rs))
