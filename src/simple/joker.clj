@@ -62,6 +62,7 @@
     ^{:doc/actions [{}]}                                                                           [n/kotcp_eq    [n/kotc_eq]]
 
 ; TODO: add keypad binds
+; TODO: annotate rectangle & system binds
 
     ; alphabetic-glyphs
     ^{:doc/actions [{}]}                                                                           [b/kotcp_a     [b/kotc_a]]

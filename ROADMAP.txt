@@ -8,10 +8,12 @@
 - doc simple sequences
 
 ==================================================
-src/profile/keymod.clj:    ; TODO: repurpose rctl alone
-src/mode/tab.clj:    ; TODO: relocate z-mode, update empty
-src/apps/browser.clj:; TODO: update config
 src/apps/zoom.clj:; TODO: homogenize to format
-src/mode/z.clj:    ; TODO: update old mapping for nushell
+src/apps/browser.clj:; TODO: update config
+src/simple/joker.clj:; TODO: add keypad binds
+src/simple/joker.clj:; TODO: annotate rectangle & system binds
+src/mode/tab.clj:    ; TODO: relocate z-mode, update empty
+src/profile/keymod.clj:    ; TODO: repurpose rctl alone
 src/simple/ropt.clj:    ; TODO: annotate command line keys => history picker, etc
+src/mode/z.clj:    ; TODO: update old mapping for nushell
 ==================================================
