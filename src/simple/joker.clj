@@ -90,7 +90,7 @@
     ^{:doc/actions [{}]}                                                                           [b/kotcp_x     [b/kotc_x]]
     ^{:doc/actions [{}]}                                                                           [b/kotcp_y     [b/kotc_y]]
     ^{:doc/actions [{}]}                                                                           [b/kotcp_z     [b/kotc_z]]
-    ^{:doc/actions [{}]}                                                                           [b/kotcp_rt    [b/kotc_rt]]]})
+    ^{:doc/actions [{:program c/sys,   :action "Launch Notes"}]}                                   [b/kotcp_rt    [:launch "Notes"]]]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
