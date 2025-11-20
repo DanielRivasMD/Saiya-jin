@@ -1001,8 +1001,8 @@
   [:!OTC#Py [:!OTCy]]
   ^{:doc/actions [{}]}
   [:!OTC#Pz [:!OTCz]]
-  ^{:doc/actions [{}]}
-  [:!OTC#Pright_control [:!OTCright_control]]]}
+  ^{:doc/actions [{:program "System", :action "Launch Notes"}]}
+  [:!OTC#Pright_control [:launch "Notes"]]]}
 {:des "Command Mode",
  :rules
  [^{:doc/actions
