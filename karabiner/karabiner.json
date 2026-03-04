@@ -6683,8 +6683,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "right_control",
-            "modifiers" : [ "left_command", "left_control", "left_option" ]
+            "shell_command" : "osascript -e 'tell application \"Notes\" to activate'"
           } ],
           "type" : "basic"
         } ]
@@ -17955,7 +17954,7 @@
         }, {
           "to_if_alone" : [ {
             "key_code" : "non_us_pound",
-            "modifiers" : [ "right_command", "right_control", "right_option" ]
+            "modifiers" : [ "right_command", "right_control" ]
           } ],
           "from" : {
             "key_code" : "left_control",
