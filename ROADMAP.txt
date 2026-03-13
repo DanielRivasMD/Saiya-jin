@@ -1,19 +1,21 @@
 - autogenerate katana config from saiyajin source => clojure -> edn & kbd
-- create a function that autogenerates self binds
+- create a function that autogenerates self binds?
+- add helix diagnostics
 - babel micro & helix fully functional, lazygit, zellij
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
-- sync browser hotkeys
+- sync browser hotkeys => needed?
+- how to perform terminal sequences in ubuntu?
 - document terminal sequences
 - document properly massive overhall
-- doc simple sequences
+- refactor justfile
 
 ==================================================
 src/apps/zoom.clj:; TODO: homogenize to format
 src/apps/browser.clj:; TODO: update config
+src/profile/keymod.clj:    ; TODO: repurpose rctl alone
+src/mode/tab.clj:    ; TODO: relocate z-mode, update empty
+src/simple/ropt.clj:    ; TODO: annotate command line keys => history picker, etc
 src/simple/joker.clj:; TODO: add keypad binds
 src/simple/joker.clj:; TODO: annotate rectangle & system binds
-src/mode/tab.clj:    ; TODO: relocate z-mode, update empty
-src/profile/keymod.clj:    ; TODO: repurpose rctl alone
-src/simple/ropt.clj:    ; TODO: annotate command line keys => history picker, etc
 src/mode/z.clj:    ; TODO: update old mapping for nushell
 ==================================================
