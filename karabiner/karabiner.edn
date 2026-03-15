@@ -1431,17 +1431,8 @@
   ^{:doc/actions
     [{:program "term", :action "terminal", :sequence "` .// `"}]}
   [:!TS#Pright_command [:spacebar :period :slash :slash :spacebar]]
-  ^{:doc/actions
-    [{:program "helix-insert",
-      :action "mode normal",
-      :exec ["normal_mode"]}
-     {:program "helix-normal",
-      :action "mode insert",
-      :exec ["insert_mode"]}
-     {:program "helix-select",
-      :action "mode normal",
-      :exec ["normal_mode"]}]}
-  [:!TS#Pspacebar [:!Sf13]]
+  ^{:doc/actions [{}]}
+  [:!TS#Pspacebar [:!TSspacebar]]
   ^{:doc/actions [{}]}
   [:!T#P1 [:!T1]]
   ^{:doc/actions [{}]}
@@ -3018,12 +3009,7 @@
   [:!Sf19 :keypad_asterisk]]}
 {:des "Modifier key remappings",
  :rules
- [[:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]
-  [:!C#Pq
-   ["command-q" 1]
-   nil
-   {:delayed {:invoked ["command-q" 0], :canceled ["commandq" 0]}}]
-  ^{:doc/actions [{:program "Alfred", :action "menu search"}]}
+ [^{:doc/actions [{:program "Alfred", :action "menu search"}]}
   [:#Pescape [:!EWright_shift] nil {:alone [:!EW#Pnon_us_pound]}]
   ^{:doc/actions [{:program "System", :action "mouse mode"}]}
   [:#Pkeypad_num_lock
@@ -3044,6 +3030,17 @@
       :action "zellij escape",
       :exec ["SwitchToMode \"Normal\";"]}]}
   [:##caps_lock [:!OTleft_command] nil {:alone [:escape]}]
+  ^{:doc/actions
+    [{:program "helix-insert",
+      :action "mode normal",
+      :exec ["normal_mode"]}
+     {:program "helix-normal",
+      :action "mode insert",
+      :exec ["insert_mode"]}
+     {:program "helix-select",
+      :action "mode normal",
+      :exec ["normal_mode"]}]}
+  [:#Pright_control [:right_control] nil {:alone [:!Tf12]}]
   ^{:doc/actions [{:program "Alfred", :action "window switcher"}]}
   [:#Pleft_control [:#Pleft_control] nil {:alone [:!WQ#Pnon_us_pound]}]
   ^{:doc/actions
