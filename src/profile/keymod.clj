@@ -29,11 +29,7 @@
   ; key modifiers
   {:des "Modifier key remappings"
    :rules
-   [; quit
-    [:!C#Pq [:!Cq ["command-q" 0]] ["command-q" 1]]
-    [:!C#Pq ["command-q" 1] nil {:delayed {:invoked ["command-q" 0] :canceled ["commandq" 0]}}]
-
-    ; esc
+   [; esc
     ^{:doc/actions [{:program c/alf,   :action "menu search"}]}                                    [c/kp_esc  [c/kew_rs]  nil    {:alone [c/kewp_us]}]
 
     ; zero
