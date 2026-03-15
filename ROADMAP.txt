@@ -10,12 +10,11 @@
 - refactor justfile
 
 ==================================================
-src/apps/zoom.clj:; TODO: homogenize to format
 src/apps/browser.clj:; TODO: update config
-src/profile/keymod.clj:    ; TODO: repurpose rctl alone
+src/apps/zoom.clj:; TODO: homogenize to format
 src/mode/tab.clj:    ; TODO: relocate z-mode, update empty
-src/simple/ropt.clj:    ; TODO: annotate command line keys => history picker, etc
 src/simple/joker.clj:; TODO: add keypad binds
 src/simple/joker.clj:; TODO: annotate rectangle & system binds
 src/mode/z.clj:    ; TODO: update old mapping for nushell
+src/simple/ropt.clj:    ; TODO: annotate command line keys => history picker, etc
 ==================================================
