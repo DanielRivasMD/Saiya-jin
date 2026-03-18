@@ -466,19 +466,16 @@
   [:#Pclose_bracket [:!Tend] :term]
   ^{:doc/actions
     [{:program "helix-common",
-      :action "lower case",
-      :exec ["switch_to_lowercase"]}]}
-  [:#Psemicolon [:!Of13]]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "upper case",
-      :exec ["switch_to_uppercase"]}]}
-  [:#Pquote [:!Of14]]
-  ^{:doc/actions
-    [{:program "helix-common",
       :action "switch case",
       :exec ["switch_case"]}]}
-  [:#Pbackslash [:!Of15]]
+  [:#Psemicolon [:!Of13]]
+  ^{:doc/actions [{}]}
+  [:#Pquote [:quote]]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "split close",
+      :exec ["wclose"]}]}
+  [:#Pbackslash [:!Of6]]
   ^{:doc/actions
     [{:program "helix-common",
       :action "move forward",
@@ -538,7 +535,7 @@
      {:program "micro", :action "split down", :exec ["HSplit"]}]}
   [:#Pright_option [:!Th] :term]
   ^{:doc/actions
-    [{:program "helix-common", :action "close window", :exec ["wonly"]}
+    [{:program "helix-common", :action "split close", :exec ["wonly"]}
      {:program "lazygit", :action "zoom", :exec ["nextScreenMode"]}
      {:program "micro", :action "close window", :exec ["Unsplit"]}]}
   [:#Pright_command [:!Tj] :term]
@@ -585,10 +582,16 @@
   [:#P9 [:9]]
   ^{:doc/actions [{}]}
   [:#P0 [:0]]
-  ^{:doc/actions [{}]}
-  [:#Phyphen [:hyphen]]
-  ^{:doc/actions [{}]}
-  [:#Pequal_sign [:equal_sign]]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "lower case",
+      :exec ["switch_to_lowercase"]}]}
+  [:#Phyphen [:!Of14]]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "upper case",
+      :exec ["switch_to_uppercase"]}]}
+  [:#Pequal_sign [:!Of15]]
   ^{:doc/actions [{}]}
   [:!S#P1 [:!S1]]
   ^{:doc/actions [{}]}
@@ -752,12 +755,12 @@
   [:#Pdown_arrow [:!Ty] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
-      :action "page up",
+      :action "swap left",
       :exec ["MoveTab \"Left\";"]}]}
   [:#Popen_bracket [:!TSf1] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
-      :action "page down",
+      :action "swap right",
       :exec ["MoveTab \"Right\";"]}]}
   [:#Pclose_bracket [:!TSf2] :term]
   ^{:doc/actions
