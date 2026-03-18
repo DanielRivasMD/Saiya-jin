@@ -38,7 +38,8 @@
 (def hc-redo                 ["redo"])
 (def hc-switch-case          ["switch_case"])
 (def hc-undo                 ["undo"])
-(def hc-unsplit              ["wonly"])
+(def hc-wclose               ["wclose"])
+(def hc-wonly                ["wonly"])
 (def hc-upper-case           ["switch_to_uppercase"])
 (def hc-vsplit               ["vsplit"])
 
@@ -95,9 +96,9 @@
     ; technical glyphs
     ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hc-dec}]}               [t/kp_ob       [r/kt_hm]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hc-inc}]}               [t/kp_cb       [r/kt_ed]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "lower case",         :exec hc-lower-case}]}        [t/kp_sc       [f/ko_f13]]
-    ^{:doc/actions [{:program c/hc,    :action "upper case",         :exec hc-upper-case}]}        [t/kp_qu       [f/ko_f14]]
-    ^{:doc/actions [{:program c/hc,    :action "switch case",        :exec hc-switch-case}]}       [t/kp_bl       [f/ko_f15]]
+    ^{:doc/actions [{:program c/hc,    :action "switch case",        :exec hc-switch-case}]}       [t/kp_sc       [f/ko_f13]]
+    ^{:doc/actions [{}]}                                                                           [t/kp_qu       [t/k_qu]]
+    ^{:doc/actions [{:program c/hc,    :action "split close",        :exec hc-wclose}]}            [t/kp_bl       [f/ko_f6]]
     ^{:doc/actions [{:program c/hc,    :action "move forward",       :exec hc-prev-move}]}         [t/kp_cm       [r/kt_pu]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "move backward",      :exec hc-next-move}]}         [t/kp_pe       [r/kt_pd]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "repeat last move",   :exec hc-last-move}]}         [t/kp_sl       [f/ko_f16]]
@@ -128,7 +129,7 @@
                     {:program c/mc,    :action "split right",        :exec mc-vsplit}]}            [a/kp_rs       [b/kt_v]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "split down",         :exec hc-hsplit}
                     {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/kp_ro       [b/kt_h]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "close window",       :exec hc-unsplit}
+    ^{:doc/actions [{:program c/hc,    :action "split close",        :exec hc-wonly}
                     {:program c/lg,    :action "zoom",               :exec lg-zoom}
                     {:program c/mc,    :action "close window",       :exec mc-unsplit}]}           [a/kp_rc       [b/kt_j]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "last file",          :exec hc-last-tab}
@@ -152,8 +153,8 @@
     ^{:doc/actions [{}]}                                                                           [n/kp_8        [n/k_8]]
     ^{:doc/actions [{}]}                                                                           [n/kp_9        [n/k_9]]
     ^{:doc/actions [{}]}                                                                           [n/kp_0        [n/k_0]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_hy       [n/k_hy]]
-    ^{:doc/actions [{}]}                                                                           [n/kp_eq       [n/k_eq]]
+    ^{:doc/actions [{:program c/hc,    :action "lower case",         :exec hc-lower-case}]}        [n/kp_hy       [f/ko_f14]]
+    ^{:doc/actions [{:program c/hc,    :action "upper case",         :exec hc-upper-case}]}        [n/kp_eq       [f/ko_f15]]
 
     ^{:doc/actions [{}]}                                                                           [n/ksp_1       [n/ks_1]]
     ^{:doc/actions [{}]}                                                                           [n/ksp_2       [n/ks_2]]
