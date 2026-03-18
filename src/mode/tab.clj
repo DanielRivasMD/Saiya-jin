@@ -52,8 +52,8 @@
                     {:program c/lg,    :action "scroll down",        :exec lg-scroll-down}]}       [r/kp_ad       [b/kt_y]       c/term]
 
    ; technical glyphs
-    ^{:doc/actions [{:program c/zj,    :action "page up",            :exec zj-swap-tab-left}]}     [t/kp_ob       [f/kts_f1]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "page down",          :exec zj-swap-tab-right}]}    [t/kp_cb       [f/kts_f2]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "swap left",          :exec zj-swap-tab-left}]}     [t/kp_ob       [f/kts_f1]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "swap right",         :exec zj-swap-tab-right}]}    [t/kp_cb       [f/kts_f2]     c/term]
     ^{:doc/actions [{:program c/zj,    :action "plugin monocle",     :exec zj-plug-monocle}]}      [t/kp_sc       [f/ks_f6]      c/term]
     ^{:doc/actions [{:program c/zj,    :action "plugin jump-list",   :exec zj-plug-jump}]}         [t/kp_qu       [f/ks_f5]      c/term]
     ^{:doc/actions [{:program c/zj,    :action "tab sync",           :exec zj-toggle-sync}]}       [t/kp_bl       [f/ks_f4]      c/term]
