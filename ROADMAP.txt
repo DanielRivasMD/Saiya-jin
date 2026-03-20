@@ -1,6 +1,5 @@
 - autogenerate katana config from saiyajin source => clojure -> edn & kbd
-- create a function that autogenerates self binds?
-- add helix diagnostics
+- create a function that autogenerates self binds??
 - babel micro & helix fully functional, lazygit, zellij
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
 - sync browser hotkeys => needed?
