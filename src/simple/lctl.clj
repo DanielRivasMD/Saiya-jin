@@ -24,6 +24,10 @@
 (def hc-split-down           ["jump_view_down"])
 (def hc-jump                 ["goto_word"])
 (def mc-jump                 ["JumpLine"])
+(def hc-scroll-up            ["scroll_up"])
+(def lg-scroll-up            ["scrollUpMain-alt2"])
+(def hc-scroll-down          ["scroll_down"])
+(def lg-scroll-down          ["scrollDownMain-alt2"])
 
 (defn lctl []
 
@@ -44,8 +48,10 @@
 
     ^{:doc/actions [{}]}                                                                           [r/ktsp_al     [r/kts_al]]
     ^{:doc/actions [{}]}                                                                           [r/ktsp_ar     [r/kts_ar]]
-    ^{:doc/actions [{}]}                                                                           [r/ktsp_au     [r/kts_au]]
-    ^{:doc/actions [{}]}                                                                           [r/ktsp_ad     [r/kts_ad]]
+    ^{:doc/actions [{:program c/hc,    :action "scroll up",          :exec hc-scroll-up}
+                    {:program c/lg,    :action "scroll up",          :exec lg-scroll-up}]}         [r/ktsp_au     [b/kt_x]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "scroll down",        :exec hc-scroll-down}
+                    {:program c/lg,    :action "scroll down",        :exec lg-scroll-down}]}       [r/ktsp_ad     [b/kt_y]       c/term]
 
     ; technical glyphs
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`[[`"}]}           [t/ktp_ob      [t/k_ob t/k_ob]]
