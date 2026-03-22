@@ -36,10 +36,6 @@
    [; esc
     ^{:doc/actions [{:program c/alf,   :action "menu search"}]}                                    [c/kp_esc  [c/kew_rs]    nil       {:alone [c/kewp_us]}]
 
-    ; TODO: deprecate
-    ; ; zero
-    ; ^{:doc/actions [{:program c/sys,   :action "mouse mode"}]}                                     [c/kp_lock [c/keq_rs]    nil       {:alone [c/k_lock]}]
-
     ; joker
     ^{:doc/actions [{:program c/hc,    :action "collapse selection", :exec hc-collapse}
                     {:program c/zp,    :action "zellij escape",      :exec zp-escape}
