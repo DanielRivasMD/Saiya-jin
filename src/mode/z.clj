@@ -119,22 +119,28 @@
 
     ; TODO: embed terminal actions => command editor, navi widget, etc
     ; action glyphs
-    ^{:doc/actions [{:program c/hc,    :action "close tab",          :exec hc-close-tab}
+    ^{:doc/actions [{:program c/tm,    :action "command line editor"}
+                    {:program c/hc,    :action "close tab",          :exec hc-close-tab}
                     {:program c/lg,    :action "increase content",   :exec lg-inc-content}
                     {:program c/mc,    :action "close tab",          :exec mc-close-tab}]}         [a/kp_db       [b/kt_g]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "file picker",        :exec hc-file-picker}
+    ^{:doc/actions [{:program c/tm,    :action "clear screen"}
+                    {:program c/hc,    :action "file picker",        :exec hc-file-picker}
                     {:program c/lg,    :action "commit",             :exec lg-commit}
                     {:program c/mc,    :action "open file",          :exec mc-open-file}]}         [a/kp_re       [b/kt_l]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "split right",        :exec hc-vsplit}
+    ^{:doc/actions [{:program c/tm,    :action "fzf file widget"}
+                    {:program c/hc,    :action "split right",        :exec hc-vsplit}
                     {:program c/lg,    :action "decrease content",   :exec lg-dec-content}
                     {:program c/mc,    :action "split right",        :exec mc-vsplit}]}            [a/kp_rs       [b/kt_v]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "split down",         :exec hc-hsplit}
-                    {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/kp_ro       [b/kt_h]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "split close",        :exec hc-wonly}
+    ^{:doc/actions [{:program c/tm,    :action "zoxide widget"}
+                    {:program c/hc,    :action "split down",         :exec hc-hsplit}
+                    {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/kp_ro       [b/kt_s]       c/term]
+    ^{:doc/actions [{:program c/tm,    :action "fzf cd widget"}
+                    {:program c/hc,    :action "split close",        :exec hc-wonly}
                     {:program c/lg,    :action "zoom",               :exec lg-zoom}
-                    {:program c/mc,    :action "close window",       :exec mc-unsplit}]}           [a/kp_rc       [b/kt_j]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "last file",          :exec hc-last-tab}
-                    {:program c/lg,    :action "recent",             :exec lg-recent}]}            [a/kp_sp       [b/kt_o]       c/term]
+                    {:program c/mc,    :action "close window",       :exec mc-unsplit}]}           [a/kp_rc       [b/kt_r]       c/term]
+    ^{:doc/actions [{:program c/tm,    :action "navi widget"}
+                    {:program c/hc,    :action "last file",          :exec hc-last-tab}
+                    {:program c/lg,    :action "recent",             :exec lg-recent}]}            [a/kp_sp       [b/kt_t]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
