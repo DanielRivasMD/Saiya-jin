@@ -34,32 +34,33 @@
   {:des "Modifier key remappings"
    :rules
    [; esc
-    ^{:doc/actions [{:program c/alf,   :action "menu search"}]}                                    [c/kp_esc  [c/kew_rs]  nil    {:alone [c/kewp_us]}]
+    ^{:doc/actions [{:program c/alf,   :action "menu search"}]}                                    [c/kp_esc  [c/kew_rs]    nil       {:alone [c/kewp_us]}]
 
-    ; zero
-    ^{:doc/actions [{:program c/sys,   :action "mouse mode"}]}                                     [c/kp_lock [c/keq_rs]  nil    {:alone [c/k_lock]}]
+    ; TODO: deprecate
+    ; ; zero
+    ; ^{:doc/actions [{:program c/sys,   :action "mouse mode"}]}                                     [c/kp_lock [c/keq_rs]    nil       {:alone [c/k_lock]}]
 
     ; joker
     ^{:doc/actions [{:program c/hc,    :action "collapse selection", :exec hc-collapse}
                     {:program c/zp,    :action "zellij escape",      :exec zp-escape}
                     {:program c/zt,    :action "zellij escape",      :exec zt-escape}
-                    {:program c/zx,    :action "zellij escape",      :exec zx-escape}]}            [c/kh_caps [a/kotc]  nil    {:alone [c/k_esc]}]
+                    {:program c/zx,    :action "zellij escape",      :exec zx-escape}]}            [c/kh_caps [a/kotc]      nil       {:alone [c/k_esc]}]
 
     ; grave
     ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hi-normal}
                     {:program c/hn,    :action "mode insert",        :exec hn-insert}
-                    {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [b/kp_rt   [b/k_rt]    nil    {:alone [f/kt_f12]}]
+                    {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [b/kp_rt   [b/k_rt]      nil       {:alone [f/kt_f12]}]
 
     ; lefts
-    ^{:doc/actions [{:program c/alf,   :action "window switcher"}]}                                [a/kp_lt   [a/kp_lt]   nil    {:alone [c/kwqp_us]}]
-    ^{:doc/actions [{:program c/sys,   :action "global in-app window cycler"}]}                    [a/kp_lo   [a/k_lo]    nil    {:alone [c/ko_tab]}]
-    ^{:doc/actions [{:program c/sys,   :action "switch most recent app"}]}                         [a/kp_lc   [a/k_lc]    nil    {:alone [c/kc_tab]}]
+    ^{:doc/actions [{:program c/alf,   :action "window switcher"}]}                                [a/kp_lt   [a/kp_lt]     nil       {:alone [c/kwqp_us]}]
+    ^{:doc/actions [{:program c/sys,   :action "global in-app window cycler"}]}                    [a/kp_lo   [a/k_lo]      nil       {:alone [c/ko_tab]}]
+    ^{:doc/actions [{:program c/sys,   :action "switch most recent app"}]}                         [a/kp_lc   [a/k_lc]      nil       {:alone [c/kc_tab]}]
 
     ; rights
-    ^{:doc/actions [{:program c/zj,    :action "history edit",       :exec zj-history}]}           [a/kp_rs   [a/k_rs]    c/term {:alone [f/kts_f12]}]
-    ^{:doc/actions [{:program c/sys,   :action "browser input / term edit"}]}                      [a/kp_rs   [a/k_rs]    nil    {:alone [c/krp_us]}]
-    ^{:doc/actions [{:program c/alf,   :action "paste"}]}                                          [a/kp_ro   [a/k_ro]    nil    {:alone [c/kep_us]}]
-    ^{:doc/actions [{:program c/alf,   :action "clipboard select"}]}                               [a/kp_rc   [a/k_rc]    nil    {:alone [c/kqp_us]}]]})
+    ^{:doc/actions [{:program c/zj,    :action "history edit",       :exec zj-history}]}           [a/kp_rs   [a/k_rs]      c/term    {:alone [f/kts_f12]}]
+    ^{:doc/actions [{:program c/sys,   :action "browser input"}]}                                  [a/kp_rs   [a/k_rs]      nil       {:alone [c/krp_us]}]
+    ^{:doc/actions [{:program c/alf,   :action "paste"}]}                                          [a/kp_ro   [a/k_ro]      nil       {:alone [c/kep_us]}]
+    ^{:doc/actions [{:program c/alf,   :action "clipboard select"}]}                               [a/kp_rc   [a/k_rc]      nil       {:alone [c/kqp_us]}]]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
