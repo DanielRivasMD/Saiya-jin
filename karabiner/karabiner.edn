@@ -266,12 +266,12 @@
   [:#Pdown_arrow [:!Of12] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
-      :action "home",
+      :action "increase size",
       :exec ["Resize \"Decrease\";"]}]}
   [:#Popen_bracket [:!TSf4] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
-      :action "end",
+      :action "decrease size",
       :exec ["Resize \"Increase\";"]}]}
   [:#Pclose_bracket [:!TSf5] :term]
   ^{:doc/actions [{}]}
@@ -293,7 +293,7 @@
      {:program "zellij-lock",
       :action "mode normal",
       :exec ["SwitchToMode \"Normal\";"]}]}
-  [:#Pdelete_or_backspace [:!TSf11] :term]
+  [:#Pdelete_or_backspace [:!TSf6] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "pane float toggle",
@@ -301,24 +301,24 @@
   [:#Preturn_or_enter [:!TSf7] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
-      :action "mode search",
-      :exec ["SwitchToMode \"EnterSearch\"; SearchInput 0;"]}
-     {:program "zellij-enter",
-      :action "mode normal",
-      :exec ["SwitchToMode \"Normal\";"]}]}
+      :action "tab break pane",
+      :exec ["BreakPane;"]}]}
   [:#Pright_shift [:!TSf8] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "pane float pop",
       :exec ["TogglePaneEmbedOrFloating;"]}]}
   [:#Pright_option [:!TSf9] :term]
-  ^{:doc/actions [{}]}
-  [:#Pright_command [:!TSf10]]
+  ^{:doc/actions
+    [{:program "zellij-shared",
+      :action "tab sync",
+      :exec ["ToggleActiveSyncTab;"]}]}
+  [:#Pright_command [:!TSf10] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "pane float pin",
       :exec ["TogglePanePinned;"]}]}
-  [:#Pspacebar [:!TSf6] :term]
+  [:#Pspacebar [:!TSf11] :term]
   ^{:doc/actions [{}]}
   [:#P1 [:1]]
   ^{:doc/actions [{}]}
@@ -744,21 +744,15 @@
       :exec ["GoToNextTab;"]}]}
   [:#Pright_arrow [:!Sf2] :term]
   ^{:doc/actions
-    [{:program "helix-common",
+    [{:program "zellij-shared",
       :action "scroll up",
-      :exec ["scroll_up"]}
-     {:program "lazygit",
-      :action "scroll up",
-      :exec ["scrollUpMain-alt2"]}]}
-  [:#Pup_arrow [:!Tx] :term]
+      :exec ["ScrollUp;"]}]}
+  [:#Pup_arrow [:!OSf11] :term]
   ^{:doc/actions
-    [{:program "helix-common",
+    [{:program "zellij-shared",
       :action "scroll down",
-      :exec ["scroll_down"]}
-     {:program "lazygit",
-      :action "scroll down",
-      :exec ["scrollDownMain-alt2"]}]}
-  [:#Pdown_arrow [:!Ty] :term]
+      :exec ["ScrollDown;"]}]}
+  [:#Pdown_arrow [:!OSf12] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "swap left",
@@ -769,23 +763,8 @@
       :action "swap right",
       :exec ["MoveTab \"Right\";"]}]}
   [:#Pclose_bracket [:!TSf2] :term]
-  ^{:doc/actions
-    [{:program "zellij-shared",
-      :action "plugin monocle",
-      :exec
-      ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/monocle.wasm\" { floating true; }; SwitchToMode \"Normal\";"]}]}
-  [:#Psemicolon [:!Sf6] :term]
-  ^{:doc/actions
-    [{:program "zellij-shared",
-      :action "plugin jump-list",
-      :exec
-      ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/zellij-jump-list.wasm\" { floating true; move_to_focused_tab true; };"]}]}
-  [:#Pquote [:!Sf5] :term]
-  ^{:doc/actions
-    [{:program "zellij-shared",
-      :action "tab sync",
-      :exec ["ToggleActiveSyncTab;"]}]}
-  [:#Pbackslash [:!Sf4] :term]
+  ^{:doc/actions [{}]}
+  [:#Pbackslash [:backslash] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "tab close",
@@ -802,8 +781,11 @@
   [:#Pright_shift [:!Sf9] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
-      :action "tab break pane",
-      :exec ["BreakPane;"]}]}
+      :action "mode search",
+      :exec ["SwitchToMode \"EnterSearch\"; SearchInput 0;"]}
+     {:program "zellij-enter",
+      :action "mode normal",
+      :exec ["SwitchToMode \"Normal\";"]}]}
   [:#Pright_option [:!Sf10] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
@@ -1355,10 +1337,22 @@
   [:!TS#Pleft_arrow [:!TSleft_arrow]]
   ^{:doc/actions [{}]}
   [:!TS#Pright_arrow [:!TSright_arrow]]
-  ^{:doc/actions [{}]}
-  [:!TS#Pup_arrow [:!TSup_arrow]]
-  ^{:doc/actions [{}]}
-  [:!TS#Pdown_arrow [:!TSdown_arrow]]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "scroll up",
+      :exec ["scroll_up"]}
+     {:program "lazygit",
+      :action "scroll up",
+      :exec ["scrollUpMain-alt2"]}]}
+  [:!TS#Pup_arrow [:!Tx] :term]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "scroll down",
+      :exec ["scroll_down"]}
+     {:program "lazygit",
+      :action "scroll down",
+      :exec ["scrollDownMain-alt2"]}]}
+  [:!TS#Pdown_arrow [:!Ty] :term]
   ^{:doc/actions
     [{:program "term", :action "terminal", :sequence "`[[`"}]}
   [:!T#Popen_bracket [:open_bracket :open_bracket]]
