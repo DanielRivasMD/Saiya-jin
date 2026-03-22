@@ -117,7 +117,7 @@
     ^{:doc/actions [{}]}                                                                           [t/ksp_pe      [t/ks_pe]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
 
-    ; TODO: document terminal actions => command editor, navi widget, etc
+    ; TODO: embed terminal actions => command editor, navi widget, etc
     ; action glyphs
     ^{:doc/actions [{:program c/hc,    :action "close tab",          :exec hc-close-tab}
                     {:program c/lg,    :action "increase content",   :exec lg-inc-content}

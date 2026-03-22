@@ -72,6 +72,7 @@
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` => `"}]}         [a/ktp_rs      [a/k_sp n/k_eq t/ks_pe a/k_sp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` ** `"}]}         [a/ktp_ro      [a/k_sp n/ks_8 n/ks_8 a/k_sp]]
     ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` // `"}]}         [a/ktp_rc      [a/k_sp t/k_sl t/k_sl a/k_sp]]
+		; TODO: update jumpers => goto line & goto column helix
     ^{:doc/actions [{:program c/hc     :action "jumper"              :exec hc-jump}
                     {:program c/mc     :action "jumper"              :exec mc-jump}]}              [a/ktp_sp      [a/kt_sp]]
 

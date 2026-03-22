@@ -3,7 +3,6 @@
 - babel micro & helix fully functional, lazygit, zellij
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
 - sync browser hotkeys => needed?
-- how to perform terminal sequences in ubuntu?
 - document terminal sequences
 - document properly massive overhall
 - refactor justfile
