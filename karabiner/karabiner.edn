@@ -508,7 +508,8 @@
   ^{:doc/actions [{}]}
   [:!S#Pslash [:!Sslash]]
   ^{:doc/actions
-    [{:program "helix-common",
+    [{:program "term", :action "command line editor"}
+     {:program "helix-common",
       :action "close tab",
       :exec [":buffer-close"]}
      {:program "lazygit",
@@ -517,36 +518,41 @@
      {:program "micro", :action "close tab", :exec ["Quit"]}]}
   [:#Pdelete_or_backspace [:!Tg] :term]
   ^{:doc/actions
-    [{:program "helix-common",
+    [{:program "term", :action "clear screen"}
+     {:program "helix-common",
       :action "file picker",
       :exec ["file_picker"]}
      {:program "lazygit", :action "commit", :exec ["commitChanges"]}
      {:program "micro", :action "open file", :exec ["OpenFile"]}]}
   [:#Preturn_or_enter [:!Tl] :term]
   ^{:doc/actions
-    [{:program "helix-common", :action "split right", :exec ["vsplit"]}
+    [{:program "term", :action "fzf file widget"}
+     {:program "helix-common", :action "split right", :exec ["vsplit"]}
      {:program "lazygit",
       :action "decrease content",
       :exec ["decreaseContextInDiffView"]}
      {:program "micro", :action "split right", :exec ["VSplit"]}]}
   [:#Pright_shift [:!Tv] :term]
   ^{:doc/actions
-    [{:program "helix-common", :action "split down", :exec ["hsplit"]}
+    [{:program "term", :action "zoxide widget"}
+     {:program "helix-common", :action "split down", :exec ["hsplit"]}
      {:program "micro", :action "split down", :exec ["HSplit"]}]}
-  [:#Pright_option [:!Th] :term]
+  [:#Pright_option [:!Ts] :term]
   ^{:doc/actions
-    [{:program "helix-common", :action "split close", :exec ["wonly"]}
+    [{:program "term", :action "fzf cd widget"}
+     {:program "helix-common", :action "split close", :exec ["wonly"]}
      {:program "lazygit", :action "zoom", :exec ["nextScreenMode"]}
      {:program "micro", :action "close window", :exec ["Unsplit"]}]}
-  [:#Pright_command [:!Tj] :term]
+  [:#Pright_command [:!Tr] :term]
   ^{:doc/actions
-    [{:program "helix-common",
+    [{:program "term", :action "navi widget"}
+     {:program "helix-common",
       :action "last file",
       :exec ["goto_last_accessed_file"]}
      {:program "lazygit",
       :action "recent",
       :exec ["openRecentRepos"]}]}
-  [:#Pspacebar [:!To] :term]
+  [:#Pspacebar [:!Tt] :term]
   ^{:doc/actions [{}]}
   [:!S#Pdelete_or_backspace [:!Sdelete_or_backspace]]
   ^{:doc/actions [{}]}
@@ -2797,17 +2803,19 @@
     [{:program "helix-common",
       :action "changed file picker",
       :exec ["buffer_picker"]}]}
-  [:!E#Pleft_command [:!Tt] :term]
+  [:!E#Pleft_command [:!Th] :term]
   ^{:doc/actions
-    [{:program "helix-common",
+    [{:program "term", :action "atuin widget"}
+     {:program "helix-common",
       :action "file picker",
       :exec ["file_explorer"]}]}
-  [:!E#Pleft_option [:!Ts] :term]
+  [:!E#Pleft_option [:!Tj] :term]
   ^{:doc/actions
-    [{:program "helix-common",
+    [{:program "term", :action "fzf history"}
+     {:program "helix-common",
       :action "buffer picker",
       :exec ["changed_file_picker"]}]}
-  [:!E#Pleft_control [:!Tr] :term]
+  [:!E#Pleft_control [:!To] :term]
   ^{:doc/actions [{}]}
   [:!E#Pleft_shift [:!Eleft_shift]]
   ^{:doc/actions [{}]}
@@ -3014,11 +3022,6 @@
  :rules
  [^{:doc/actions [{:program "Alfred", :action "menu search"}]}
   [:#Pescape [:!EWright_shift] nil {:alone [:!EW#Pnon_us_pound]}]
-  ^{:doc/actions [{:program "System", :action "mouse mode"}]}
-  [:#Pkeypad_num_lock
-   [:!EQright_shift]
-   nil
-   {:alone [:keypad_num_lock]}]
   ^{:doc/actions
     [{:program "helix-common",
       :action "collapse selection",
@@ -3057,8 +3060,7 @@
       :action "history edit",
       :exec ["EditScrollback; SwitchToMode \"Normal\";"]}]}
   [:#Pright_shift [:right_shift] :term {:alone [:!TSf12]}]
-  ^{:doc/actions
-    [{:program "System", :action "browser input / term edit"}]}
+  ^{:doc/actions [{:program "System", :action "browser input"}]}
   [:#Pright_shift [:right_shift] nil {:alone [:!R#Pnon_us_pound]}]
   ^{:doc/actions [{:program "Alfred", :action "paste"}]}
   [:#Pright_option [:right_option] nil {:alone [:!E#Pnon_us_pound]}]
