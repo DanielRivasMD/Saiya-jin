@@ -20,8 +20,6 @@
 ; programs
 (def alf "Alfred")
 (def sys "System")
-(def ay  "alacritty")
-(def br  "broot")
 (def mc  "micro")
 (def hc  "helix-common")
 (def hi  "helix-insert")
