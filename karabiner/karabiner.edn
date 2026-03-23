@@ -5,7 +5,7 @@
 
 {:browser ["company.thebrowser.Browser"],
  :finder ["com.apple.finder"],
- :mail ["io.canarymail.mac"],
+ :mail ["com.apple.mail"],
  :skim ["net.sourceforge.skim-app.skim"],
  :term ["org.alacritty" "com.mitchellh.ghostty"],
  :zoom ["us.zoom.xos"]}
