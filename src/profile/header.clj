@@ -47,8 +47,7 @@
    :applications
    {c/browser ["company.thebrowser.Browser"]
     c/finder  ["com.apple.finder"]
-		; TODO: update mail
-    c/mail    ["io.canarymail.mac"]
+    c/mail    ["com.apple.mail"]
     c/skim    ["net.sourceforge.skim-app.skim"]
     c/term    ["org.alacritty", "com.mitchellh.ghostty"]
     c/zoom    ["us.zoom.xos"]}
