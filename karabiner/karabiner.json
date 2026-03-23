@@ -2273,7 +2273,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f11",
+            "key_code" : "f6",
             "modifiers" : [ "left_control", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -2360,6 +2360,9 @@
             "name" : "w-mode",
             "value" : 1,
             "type" : "variable_if"
+          }, {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty", "com.mitchellh.ghostty" ]
           } ],
           "type" : "basic"
         }, {
@@ -2370,7 +2373,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f6",
+            "key_code" : "f11",
             "modifiers" : [ "left_control", "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3238,8 +3241,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f14",
-            "modifiers" : [ "left_option" ]
+            "key_code" : "quote"
           } ],
           "conditions" : [ {
             "name" : "z-mode",
@@ -3255,7 +3257,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f15",
+            "key_code" : "f6",
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
@@ -3533,7 +3535,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "h",
+            "key_code" : "s",
             "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
@@ -3553,7 +3555,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "j",
+            "key_code" : "r",
             "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
@@ -3573,7 +3575,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "o",
+            "key_code" : "t",
             "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
@@ -3861,7 +3863,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "hyphen"
+            "key_code" : "f14",
+            "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
             "name" : "z-mode",
@@ -3877,7 +3880,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "equal_sign"
+            "key_code" : "f15",
+            "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
             "name" : "z-mode",
@@ -5070,8 +5074,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "x",
-            "modifiers" : [ "left_control" ]
+            "key_code" : "f11",
+            "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "tab-mode",
@@ -5090,8 +5094,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "y",
-            "modifiers" : [ "left_control" ]
+            "key_code" : "f12",
+            "modifiers" : [ "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "tab-mode",
@@ -5144,54 +5148,13 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "semicolon",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f6",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty", "com.mitchellh.ghostty" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "quote",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "f5",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "org.alacritty", "com.mitchellh.ghostty" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "backslash",
             "modifiers" : {
               "optional" : [ "caps_lock" ]
             }
           },
           "to" : [ {
-            "key_code" : "f4",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "backslash"
           } ],
           "conditions" : [ {
             "name" : "tab-mode",
@@ -10068,8 +10031,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "up_arrow",
-            "modifiers" : [ "left_control", "left_shift" ]
+            "key_code" : "x",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty", "com.mitchellh.ghostty" ]
           } ],
           "type" : "basic"
         }, {
@@ -10081,8 +10048,12 @@
             }
           },
           "to" : [ {
-            "key_code" : "down_arrow",
-            "modifiers" : [ "left_control", "left_shift" ]
+            "key_code" : "y",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "org.alacritty", "com.mitchellh.ghostty" ]
           } ],
           "type" : "basic"
         }, {
@@ -10574,8 +10545,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "f13",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "spacebar",
+            "modifiers" : [ "left_control", "left_shift" ]
           } ],
           "type" : "basic"
         }, {
@@ -13932,7 +13903,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "t",
+            "key_code" : "h",
             "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
@@ -13949,7 +13920,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "s",
+            "key_code" : "j",
             "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
@@ -13966,7 +13937,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "r",
+            "key_code" : "o",
             "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
@@ -17854,58 +17825,6 @@
       }, {
         "description" : "Modifier key remappings",
         "manipulators" : [ {
-          "from" : {
-            "key_code" : "q",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "q",
-            "modifiers" : [ "left_command" ]
-          }, {
-            "set_variable" : {
-              "name" : "command-q",
-              "value" : 0
-            }
-          } ],
-          "conditions" : [ {
-            "name" : "command-q",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "to_delayed_action" : {
-            "to_if_invoked" : [ {
-              "set_variable" : {
-                "name" : "command-q",
-                "value" : 0
-              }
-            } ],
-            "to_if_canceled" : [ {
-              "set_variable" : {
-                "name" : "commandq",
-                "value" : 0
-              }
-            } ]
-          },
-          "from" : {
-            "key_code" : "q",
-            "modifiers" : {
-              "mandatory" : [ "left_command" ],
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "command-q",
-              "value" : 1
-            }
-          } ],
-          "type" : "basic"
-        }, {
           "to_if_alone" : [ {
             "key_code" : "non_us_pound",
             "modifiers" : [ "right_control", "right_option" ]
@@ -17923,21 +17842,6 @@
           "type" : "basic"
         }, {
           "to_if_alone" : [ {
-            "key_code" : "keypad_num_lock"
-          } ],
-          "from" : {
-            "key_code" : "keypad_num_lock",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "right_shift",
-            "modifiers" : [ "right_command", "right_option" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "to_if_alone" : [ {
             "key_code" : "escape"
           } ],
           "from" : {
@@ -17949,6 +17853,21 @@
           "to" : [ {
             "key_code" : "left_command",
             "modifiers" : [ "left_control", "left_option" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "f12",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "from" : {
+            "key_code" : "right_control",
+            "modifiers" : {
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_control"
           } ],
           "type" : "basic"
         }, {
