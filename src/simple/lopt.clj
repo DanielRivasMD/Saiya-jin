@@ -40,12 +40,13 @@
 (def mc-select-next-para     ["SelectToParagraphNext"])
 
 (def hc-format               [":format"])
+(def hc-git-blame            [":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"])
 (def hc-copy                 ["yank_to_clipboard"])
 (def mc-copy                 ["Copy"])
 (def hc-spawn-multi          ["search_selection", "extend_search_next"])
 (def mc-spawn-multi          ["SpawnMultiCursor"])
-(def hc-toggle-com           ["toggle_comments"])
-(def mc-toggle-com           ["lua:comment.comment"])
+(def hc-comment              ["toggle_comments"])
+(def mc-comment              ["lua:comment.comment"])
 (def hc-search               ["search"])
 (def mc-search               ["FindLiteral"])
 (def hc-find-prev            ["search_prev"])
@@ -207,13 +208,13 @@
 
     ; alphabetic glyphs
     ^{:doc/actions [{:program c/hc,    :action "format",             :exec hc-format}]}            [b/kop_a       [b/ko_a]       c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kop_b       [f/ko_f1]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "git blame",          :exec hc-git-blame}]}         [b/kop_b       [f/ko_f1]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "copy",               :exec hc-copy}
                     {:program c/mc,    :action "copy",               :exec mc-copy}]}              [b/kop_c       [f/ko_f2]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "spawn multi",        :exec hc-spawn-multi}
                     {:program c/mc,    :action "spawn multi",        :exec mc-spawn-multi}]}       [b/kop_d       [f/ko_f4]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "toggle comments",    :exec hc-toggle-com}
-                    {:program c/mc,    :action "toggle comments",    :exec mc-toggle-com}]}        [b/kop_e       [b/ko_e]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "toggle comments",    :exec hc-comment}
+                    {:program c/mc,    :action "toggle comments",    :exec mc-comment}]}           [b/kop_e       [b/ko_e]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "search",             :exec hc-search}
                     {:program c/mc,    :action "search",             :exec mc-search}]}            [b/kop_f       [f/ko_f5]      c/term]
     ^{:doc/actions [{}]}                                                                           [b/kop_g       [b/ko_g]       c/term]
