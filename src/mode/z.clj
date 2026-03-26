@@ -23,7 +23,6 @@
 (def hc-file-picker          ["file_picker"])
 (def hc-hsplit               ["hsplit"])
 (def hc-inc                  ["increment"])
-(def hc-last-mod             ["goto_last_modification"])
 (def hc-last-move            ["repeat_last_motion"])
 (def hc-last-tab             ["goto_last_accessed_file"])
 (def hc-lower-case           ["switch_to_lowercase"])
@@ -147,7 +146,7 @@
     ^{:doc/actions [{}]}                                                                           [a/ksp_rs      [a/ks_rs]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_ro      [a/ks_ro]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_rc      [a/ks_rc]]
-    ^{:doc/actions [{:program c/hc,    :action "last modification",  :exec hc-last-mod}]}          [a/ksp_sp      [f/ko_f17]]
+    ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_sp]]
 
     ; numeric glyphs
     ^{:doc/actions [{}]}                                                                           [n/kp_1        [n/k_1]]
