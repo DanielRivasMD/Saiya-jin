@@ -103,6 +103,16 @@
 (def kq_esc (c/mk c/K c/Q c/_esc))
 (def kq_tab (c/mk c/K c/Q c/_tab))
 
+(def kr_db (c/mk c/K c/R c/_db))
+(def kr_re (c/mk c/K c/R c/_re))
+(def kr_sp (c/mk c/K c/R c/_sp))
+(def kr_lc (c/mk c/K c/R c/_lc))
+(def kr_lo (c/mk c/K c/R c/_lo))
+(def kr_lt (c/mk c/K c/R c/_lt))
+(def kr_ls (c/mk c/K c/R c/_ls))
+(def kr_esc (c/mk c/K c/R c/_esc))
+(def kr_tab (c/mk c/K c/R c/_tab))
+
 (def kewq_db (c/mk c/K c/E c/W c/Q c/_db))
 (def kewq_re (c/mk c/K c/E c/W c/Q c/_re))
 (def kewq_rs (c/mk c/K c/E c/W c/Q c/_rs))
@@ -282,6 +292,16 @@
 (def kqp_ls (c/mk c/K c/Q c/P c/_ls))
 (def kqp_esc (c/mk c/K c/Q c/P c/_esc))
 (def kqp_tab (c/mk c/K c/Q c/P c/_tab))
+
+(def krp_db (c/mk c/K c/R c/P c/_db))
+(def krp_re (c/mk c/K c/R c/P c/_re))
+(def krp_sp (c/mk c/K c/R c/P c/_sp))
+(def krp_lc (c/mk c/K c/R c/P c/_lc))
+(def krp_lo (c/mk c/K c/R c/P c/_lo))
+(def krp_lt (c/mk c/K c/R c/P c/_lt))
+(def krp_ls (c/mk c/K c/R c/P c/_ls))
+(def krp_esc (c/mk c/K c/R c/P c/_esc))
+(def krp_tab (c/mk c/K c/R c/P c/_tab))
 
 (def kewqp_db  (c/mk c/K c/E c/W c/Q c/P c/_db))
 (def kewqp_re  (c/mk c/K c/E c/W c/Q c/P c/_re))
