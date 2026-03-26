@@ -1,3 +1,4 @@
+- document helix pop-up menu bindings
 - autogenerate katana config from saiyajin source => clojure -> edn & kbd
 - create a function that autogenerates self binds??
 - babel micro & helix fully functional, lazygit, zellij
