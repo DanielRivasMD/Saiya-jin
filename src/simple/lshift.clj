@@ -26,6 +26,10 @@
 (def hc-delete-line-end ["kill_to_line_end"])
 (def mc-delete-line-end ["SelectToEndOfLine,Delete"])
 
+(def hi-normal               ["normal_mode"])
+(def hn-insert               ["insert_mode"])
+(def hs-normal               ["normal_mode"])
+
 (defn lshift []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -52,12 +56,14 @@
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
-    ^{:doc/actions [{:program c/hc,    :action "delete next char",   :exec hc-delete}]}            [a/ksp_rs      [:delete_forward]]
+    ^{:doc/actions [{:program c/hc,    :action "delete next char",   :exec hc-delete}]}            [a/ksp_rs      [c/k_delf]]
     ^{:doc/actions [{:program c/hc,    :action "delete next word",   :exec hc-delete-word-right}
                     {:program c/mc,    :action "delete next word",   :exec mc-delete-word-right}]} [a/ksp_ro      [b/ko_d]]
     ^{:doc/actions [{:program c/hc,    :action "delete line start",  :exec hc-delete-line-end}
                     {:program c/mc,    :action "delete line start",  :exec mc-delete-line-end}]}   [a/ksp_rc      [b/kt_k]]
-    ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_sp]]
+    ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hi-normal}
+                    {:program c/hn,    :action "mode insert",        :exec hn-insert}
+                    {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [a/ksp_sp      [f/kt_f12]]
 
     ; numeric-glyphs
     ^{:doc/actions [{}]}                                                                           [n/ksp_1       [n/ks_1]]
