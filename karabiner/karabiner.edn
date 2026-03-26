@@ -563,11 +563,8 @@
   [:!S#Pright_option [:!Sright_option]]
   ^{:doc/actions [{}]}
   [:!S#Pright_command [:!Sright_command]]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "last modification",
-      :exec ["goto_last_modification"]}]}
-  [:!S#Pspacebar [:!Of17]]
+  ^{:doc/actions [{}]}
+  [:!S#Pspacebar [:!Sspacebar]]
   ^{:doc/actions [{}]}
   [:#P1 [:1]]
   ^{:doc/actions [{}]}
@@ -2174,8 +2171,17 @@
       :action "delete line start",
       :exec ["SelectToEndOfLine,Delete"]}]}
   [:!S#Pright_command [:!Tk]]
-  ^{:doc/actions [{}]}
-  [:!S#Pspacebar [:!Sspacebar]]
+  ^{:doc/actions
+    [{:program "helix-insert",
+      :action "mode normal",
+      :exec ["normal_mode"]}
+     {:program "helix-normal",
+      :action "mode insert",
+      :exec ["insert_mode"]}
+     {:program "helix-select",
+      :action "mode normal",
+      :exec ["normal_mode"]}]}
+  [:!S#Pspacebar [:!Tf12]]
   ^{:doc/actions [{}]}
   [:!S#P1 [:!S1]]
   ^{:doc/actions [{}]}
@@ -2730,7 +2736,20 @@
   [:!WS#Pz [:!WSz]]]}
 {:des "Shift Mode",
  :rules
- [^{:doc/actions
+ [^{:doc/actions [{}]}
+  [:!R#Pleft_arrow [:!Rleft_arrow]]
+  ^{:doc/actions [{}]}
+  [:!R#Pright_arrow [:!Rright_arrow]]
+  ^{:doc/actions [{}]}
+  [:!R#Pup_arrow [:!Rup_arrow]]
+  ^{:doc/actions [{}]}
+  [:!R#Pdown_arrow [:!Rdown_arrow]]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "last modification",
+      :exec ["goto_last_modification"]}]}
+  [:!R#Pspacebar [:!Of17]]
+  ^{:doc/actions
     [{:program "helix-common",
       :action "delete line start",
       :exec ["kill_to_line_start"]}
@@ -2738,6 +2757,11 @@
       :action "delete line start",
       :exec ["SelectToStartOfLine,Delete"]}]}
   [:!R#Pleft_command [:!Wu]]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "goto column",
+      :exec ["goto_column"]}]}
+  [:!R#Pleft_option [:!Sf4]]
   ^{:doc/actions
     [{:program "helix-common",
       :action "delete prev word",
@@ -2750,7 +2774,14 @@
     [{:program "helix-common",
       :action "delete prev char",
       :exec ["delete_char_backward"]}]}
-  [:!R#Pleft_shift [:delete_or_backspace]]]}
+  [:!R#Pleft_shift [:delete_or_backspace]]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "go to column",
+      :exec ["goto_line"]}]}
+  [:!R#Pescape [:!Sf5]]
+  ^{:doc/actions [{}]}
+  [:!R#Ptab [:!Rtab]]]}
 {:des "Option Mode",
  :rules
  [^{:doc/actions [{}]}
