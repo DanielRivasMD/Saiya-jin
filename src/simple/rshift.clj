@@ -45,7 +45,7 @@
     ^{:doc/actions  [{:program c/hc,   :action "delete prev word",   :exec hc-del-word-back}
                      {:program c/mc,   :action "delete prev word",   :exec mc-del-word-back}]}     [a/krp_lt      [c/kw_w]]
     ^{:doc/actions [{:program c/hc,    :action "delete prev char",   :exec hc-del-char-back}]}     [a/krp_ls      [c/k_delb]]
-    ^{:doc/actions [{:program c/hc,    :action "go to column",       :exec hc-goto-line}]}         [a/krp_esc     [f/ks_f5]]
+    ^{:doc/actions [{:program c/hc,    :action "go to column",       :exec hc-goto-line}]}         [a/krp_caps    [f/ks_f5]]
     ^{:doc/actions [{}]}                                                                           [a/krp_tab     [a/kr_tab]]
     ]})
 
