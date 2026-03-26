@@ -64,6 +64,11 @@
 (def kq_al (c/mk c/K c/Q c/_al))
 (def kq_ar (c/mk c/K c/Q c/_ar))
 
+(def kr_au (c/mk c/K c/R c/_au))
+(def kr_ad (c/mk c/K c/R c/_ad))
+(def kr_al (c/mk c/K c/R c/_al))
+(def kr_ar (c/mk c/K c/R c/_ar))
+
 (def kewq_au (c/mk c/K c/E c/W c/Q c/_au))
 (def kewq_ad (c/mk c/K c/E c/W c/Q c/_ad))
 (def kewq_al (c/mk c/K c/E c/W c/Q c/_al))
@@ -183,6 +188,11 @@
 (def kqp_ad  (c/mk c/K c/Q c/P c/_ad))
 (def kqp_al  (c/mk c/K c/Q c/P c/_al))
 (def kqp_ar  (c/mk c/K c/Q c/P c/_ar))
+
+(def krp_au  (c/mk c/K c/R c/P c/_au))
+(def krp_ad  (c/mk c/K c/R c/P c/_ad))
+(def krp_al  (c/mk c/K c/R c/P c/_al))
+(def krp_ar  (c/mk c/K c/R c/P c/_ar))
 
 (def kewqp_au  (c/mk c/K c/E c/W c/Q c/P c/_au))
 (def kewqp_ad  (c/mk c/K c/E c/W c/Q c/P c/_ad))
