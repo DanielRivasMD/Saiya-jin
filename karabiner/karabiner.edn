@@ -1819,7 +1819,11 @@
   ^{:doc/actions
     [{:program "helix-common", :action "format", :exec [":format"]}]}
   [:!O#Pa [:!Oa] :term]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "git blame",
+      :exec
+      [":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"]}]}
   [:!O#Pb [:!Of1] :term]
   ^{:doc/actions
     [{:program "helix-common",
@@ -2779,7 +2783,7 @@
     [{:program "helix-common",
       :action "go to column",
       :exec ["goto_line"]}]}
-  [:!R#Pescape [:!Sf5]]
+  [:!R#Pcaps_lock [:!Sf5]]
   ^{:doc/actions [{}]}
   [:!R#Ptab [:!Rtab]]]}
 {:des "Option Mode",
