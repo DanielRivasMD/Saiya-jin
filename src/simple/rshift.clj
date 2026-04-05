@@ -19,11 +19,11 @@
 (def hc-goto-line            ["goto_line"])
 (def hc-goto-column          ["goto_column"])
 (def hc-last-mod             ["goto_last_modification"])
-
 (def hc-del-char-back        ["delete_char_backward"])
 (def hc-del-word-back        ["delete_word_backward"])
-(def mc-del-word-back        ["DeleteWordLeft"])
 (def hc-del-start-line       ["kill_to_line_start"])
+
+(def mc-del-word-back        ["DeleteWordLeft"])
 (def mc-del-start-line       ["SelectToStartOfLine,Delete"])
 
 (defn rshift []
@@ -33,11 +33,6 @@
   {:des "Shift Mode"
    :rules
    [;
-    ^{:doc/actions [{}]}                                                                           [r/krp_al      [r/kr_al]]
-    ^{:doc/actions [{}]}                                                                           [r/krp_ar      [r/kr_ar]]
-    ^{:doc/actions [{}]}                                                                           [r/krp_au      [r/kr_au]]
-    ^{:doc/actions [{}]}                                                                           [r/krp_ad      [r/kr_ad]]
-
     ^{:doc/actions [{:program c/hc,    :action "last modification",  :exec hc-last-mod}]}          [a/krp_sp      [f/ko_f17]]
     ^{:doc/actions [{:program c/hc,    :action "delete line start",  :exec hc-del-start-line}
                     {:program c/mc,    :action "delete line start",  :exec mc-del-start-line}]}    [a/krp_lc      [c/kw_u]]
