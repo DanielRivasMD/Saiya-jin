@@ -17,17 +17,19 @@
 (def out-file "lctl.edn")
 
 (def hc-split-left           ["jump_view_left"])
-(def mc-prev-split           ["PreviousSplit"])
 (def hc-split-right          ["jump_view_right"])
-(def mc-next-split           ["NextSplit"])
 (def hc-split-up             ["jump_view_up"])
 (def hc-split-down           ["jump_view_down"])
 (def hc-jump                 ["goto_word"])
-(def mc-jump                 ["JumpLine"])
 (def hc-scroll-up            ["scroll_up"])
-(def lg-scroll-up            ["scrollUpMain-alt2"])
 (def hc-scroll-down          ["scroll_down"])
+
+(def lg-scroll-up            ["scrollUpMain-alt2"])
 (def lg-scroll-down          ["scrollDownMain-alt2"])
+
+(def mc-prev-split           ["PreviousSplit"])
+(def mc-next-split           ["NextSplit"])
+(def mc-jump                 ["JumpLine"])
 
 (defn lctl []
 
@@ -54,39 +56,38 @@
                     {:program c/lg,    :action "scroll down",        :exec lg-scroll-down}]}       [r/ktsp_ad     [b/kt_y]       c/term]
 
     ; technical glyphs
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`[[`"}]}           [t/ktp_ob      [t/k_ob t/k_ob]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`]]`"}]}           [t/ktp_cb      [t/k_cb t/k_cb]]
+    ^{:doc/actions [{}]}                                                                           [t/ktp_ob      [t/kt_ob]]
+    ^{:doc/actions [{}]}                                                                           [t/ktp_cb      [t/kt_cb]]
     ^{:doc/actions [{}]}                                                                           [t/ktp_sc      [t/kt_sc]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`'''`"}]}          [t/ktp_qu      [t/k_qu t/k_qu t/k_qu]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` || `"}]}         [t/ktp_bl      [a/k_sp t/k_bl t/k_bl a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` << `"}]}         [t/ktp_cm      [a/k_sp t/ks_cm t/ks_cm a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` >> `"}]}         [t/ktp_pe      [a/k_sp t/ks_pe t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`/// `"}]}         [t/ktp_sl      [t/k_sl t/k_sl t/k_sl a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [t/ktp_qu      [t/kt_qu]]
+    ^{:doc/actions [{}]}                                                                           [t/ktp_bl      [t/kt_bl]]
+    ^{:doc/actions [{}]}                                                                           [t/ktp_cm      [t/kt_cm]]
+    ^{:doc/actions [{}]}                                                                           [t/ktp_pe      [t/kt_pe]]
+    ^{:doc/actions [{}]}                                                                           [t/ktp_sl      [t/kt_sl]]
 
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`{{`"}]}           [t/ktsp_ob     [t/ks_ob t/ks_ob]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`}}`"}]}           [t/ktsp_cb     [t/ks_cb t/ks_cb]]
+    ^{:doc/actions [{}]}                                                                           [t/ktsp_ob     [t/kts_ob]]
+    ^{:doc/actions [{}]}                                                                           [t/ktsp_cb     [t/kts_cb]]
     ^{:doc/actions [{}]}                                                                           [t/ktsp_sc     [t/kts_sc]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`\"\"\"`"}]}       [t/ktsp_qu     [t/ks_qu t/ks_qu t/ks_qu]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .|| `"}]}        [t/ktsp_bl     [a/k_sp t/k_pe t/ks_bl t/ks_bl a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` <<< `"}]}        [t/ktsp_cm     [a/k_sp t/ks_cm t/ks_cm t/ks_cm a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` >>> `"}]}        [t/ktsp_pe     [a/k_sp t/ks_pe t/ks_pe t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` /// `"}]}        [t/ktsp_sl     [t/k_sl t/k_sl t/k_sl a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [t/ktsp_qu     [t/kts_qu]]
+    ^{:doc/actions [{}]}                                                                           [t/ktsp_bl     [t/kts_bl]]
+    ^{:doc/actions [{}]}                                                                           [t/ktsp_cm     [t/kts_cm]]
+    ^{:doc/actions [{}]}                                                                           [t/ktsp_pe     [t/kts_pe]]
+    ^{:doc/actions [{}]}                                                                           [t/ktsp_sl     [t/kts_sl]]
 
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/ktp_db      [a/kt_db]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` == `"}]}         [a/ktp_re      [a/k_sp n/k_eq n/k_eq a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` => `"}]}         [a/ktp_rs      [a/k_sp n/k_eq t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` ** `"}]}         [a/ktp_ro      [a/k_sp n/ks_8 n/ks_8 a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` // `"}]}         [a/ktp_rc      [a/k_sp t/k_sl t/k_sl a/k_sp]]
-		; TODO: update jumpers => goto line & goto column helix
+    ^{:doc/actions [{:program c/tm     :action "cli flag"            :sequence "` --`"}]}          [a/ktp_re      [a/k_sp n/k_hy n/k_hy]]
+    ^{:doc/actions [{}]}                                                                           [a/ktp_rs      [a/kt_rs]]
+    ^{:doc/actions [{}]}                                                                           [a/ktp_ro      [a/kt_ro]]
+    ^{:doc/actions [{}]}                                                                           [a/ktp_rc      [a/kt_rc]]
     ^{:doc/actions [{:program c/hc     :action "jumper"              :exec hc-jump}
                     {:program c/mc     :action "jumper"              :exec mc-jump}]}              [a/ktp_sp      [a/kt_sp]]
 
     ^{:doc/actions [{}]}                                                                           [a/ktsp_db     [a/kts_db]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .== `"}]}        [a/ktsp_re     [a/k_sp t/k_pe n/k_eq n/k_eq a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .=> `"}]}        [a/ktsp_rs     [a/k_sp t/k_pe n/k_eq t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .** `"}]}        [a/ktsp_ro     [a/k_sp t/k_pe n/ks_8 n/ks_8 a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .// `"}]}        [a/ktsp_rc     [a/k_sp t/k_pe t/k_sl t/k_sl a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [a/ktsp_re     [a/kts_re]]
+    ^{:doc/actions [{}]}                                                                           [a/ktsp_rs     [a/kts_rs]]
+    ^{:doc/actions [{}]}                                                                           [a/ktsp_ro     [a/kts_ro]]
+    ^{:doc/actions [{}]}                                                                           [a/ktsp_rc     [a/kts_rc]]
     ^{:doc/actions [{}]}                                                                           [a/ktsp_sp     [a/kts_sp]]
 
     ; numeric glyphs
@@ -94,27 +95,27 @@
     ^{:doc/actions [{}]}                                                                           [n/ktp_2       [n/kt_2]]
     ^{:doc/actions [{}]}                                                                           [n/ktp_3       [n/kt_3]]
     ^{:doc/actions [{}]}                                                                           [n/ktp_4       [n/kt_4]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` %% `"}]}         [n/ktp_5       [a/k_sp n/ks_5 n/ks_5 a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [n/ktp_5       [n/kt_5]]
     ^{:doc/actions [{}]}                                                                           [n/ktp_6       [n/kt_6]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` && `"}]}         [n/ktp_7       [a/k_sp n/ks_7 n/ks_7 a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [n/ktp_7       [n/kt_7]]
     ^{:doc/actions [{}]}                                                                           [n/ktp_8       [n/kt_8]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`((`"}]}           [n/ktp_9       [n/ks_9 n/ks_9]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "`))`"}]}           [n/ktp_0       [n/ks_0 n/ks_0]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` -- `"}]}         [n/ktp_hy      [a/k_sp n/k_hy n/k_hy a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` ++ `"}]}         [n/ktp_eq      [a/k_sp n/ks_eq n/ks_eq a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [n/ktp_9       [n/kt_9]]
+    ^{:doc/actions [{}]}                                                                           [n/ktp_0       [n/kt_0]]
+    ^{:doc/actions [{}]}                                                                           [n/ktp_hy      [n/kt_hy]]
+    ^{:doc/actions [{}]}                                                                           [n/ktp_eq      [n/kt_eq]]
 
     ^{:doc/actions [{}]}                                                                           [n/ktsp_1      [n/kts_1]]
     ^{:doc/actions [{}]}                                                                           [n/ktsp_2      [n/kts_2]]
     ^{:doc/actions [{}]}                                                                           [n/ktsp_3      [n/kts_3]]
     ^{:doc/actions [{}]}                                                                           [n/ktsp_4      [n/kts_4]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .%% `"}]}        [n/ktsp_5      [a/k_sp t/k_pe n/ks_5 n/ks_5 a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [n/ktsp_5      [n/kts_5]]
     ^{:doc/actions [{}]}                                                                           [n/ktsp_6      [n/kts_6]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .&& `"}]}        [n/ktsp_7      [a/k_sp t/k_pe n/ks_7 n/ks_7 a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [n/ktsp_7      [n/kts_7]]
     ^{:doc/actions [{}]}                                                                           [n/ktsp_8      [n/kts_8]]
     ^{:doc/actions [{}]}                                                                           [n/ktsp_9      [n/kts_9]]
     ^{:doc/actions [{}]}                                                                           [n/ktsp_0      [n/kts_0]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .-- `"}]}        [n/ktsp_hy     [a/k_sp t/k_pe n/k_hy n/k_hy a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "terminal"            :sequence "` .++ `"}]}        [n/ktsp_eq     [a/k_sp t/k_pe n/ks_eq n/ks_eq a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [n/ktsp_hy     [n/kts_hy]]
+    ^{:doc/actions [{}]}                                                                           [n/ktsp_eq     [n/kts_eq]]
 
     ; alphabetic-glyphs
     ^{:doc/actions [{}]}                                                                           [b/ktp_a       [b/kt_a]]
@@ -171,7 +172,8 @@
     ^{:doc/actions [{}]}                                                                           [b/ktsp_x      [b/kts_x]]
     ^{:doc/actions [{}]}                                                                           [b/ktsp_y      [b/kts_y]]
     ^{:doc/actions [{}]}                                                                           [b/ktsp_z      [b/kts_z]]
-    ^{:doc/actions [{}]}                                                                           [b/ktsp_rt     [b/kts_rt]]]})
+    ^{:doc/actions [{}]}                                                                           [b/ktsp_rt     [b/kts_rt]]
+    ]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
