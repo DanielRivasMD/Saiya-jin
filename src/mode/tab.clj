@@ -16,23 +16,25 @@
 
 (def out-file "tab.edn")
 
+(def z-normal-mode           ["SwitchToMode \"Normal\";"])
+
 ; (def zj-plug-jump            ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/zellij-jump-list.wasm\" { floating true; move_to_focused_tab true; };"])
 ; (def zj-plug-monocle         ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/monocle.wasm\" { floating true; }; SwitchToMode \"Normal\";"])
 (def zj-plug-room            ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/room.wasm\" { floating true; ignore_case true; };"])
 
 (def zj-prev-tab             ["GoToPreviousTab;"])
 (def zj-next-tab             ["GoToNextTab;"])
-(def zj-swap-tab-left        ["MoveTab \"Left\";"])
-(def zj-swap-tab-right       ["MoveTab \"Right\";"])
-(def zj-entersearch-mode     ["SwitchToMode \"EnterSearch\"; SearchInput 0;"])
-(def zj-close-tab            ["CloseTab;"])
-(def zj-new-tab              ["NewTab;"])
-(def zj-rename-tab-mode      ["SwitchToMode \"RenameTab\"; TabNameInput 0;"])
-(def zt-abort-rename         ["UndoRenameTab; SwitchToMode \"Normal\";"])
-(def zj-last-tab             ["ToggleTab;"])
 (def zj-scroll-up            ["ScrollUp;"])
 (def zj-scroll-down          ["ScrollDown;"])
-(def z-normal-mode           ["SwitchToMode \"Normal\";"])
+(def zj-swap-tab-left        ["MoveTab \"Left\";"])
+(def zj-swap-tab-right       ["MoveTab \"Right\";"])
+(def zj-close-tab            ["CloseTab;"])
+(def zj-new-tab              ["NewTab;"])
+(def zj-entersearch-mode     ["SwitchToMode \"EnterSearch\"; SearchInput 0;"])
+(def zj-rename-tab-mode      ["SwitchToMode \"RenameTab\"; TabNameInput 0;"])
+(def zj-last-tab             ["ToggleTab;"])
+
+(def zt-abort-rename         ["UndoRenameTab; SwitchToMode \"Normal\";"])
 
 (defn tab-mode []
 
@@ -53,7 +55,6 @@
     ; ^{:doc/actions [{:program c/zj,    :action "plugin monocle",     :exec zj-plug-monocle}]}      [t/kp_sc       [f/ks_f6]      c/term]
     ; ^{:doc/actions [{:program c/zj,    :action "plugin jump-list",   :exec zj-plug-jump}]}         [t/kp_qu       [f/ks_f5]      c/term]
     ^{:doc/actions [{}]}                                                                           [t/kp_bl       [t/k_bl]       c/term]
-    ; TODO: relocate z-mode, update empty
     ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_pe       [b/ko_x]       c/term]
     ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_cm       [b/ko_y]       c/term]
     ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_sl       [b/ko_z]       c/term]
@@ -110,7 +111,7 @@
     ^{:doc/actions [{}]}                                                                           [b/kp_y        [b/k_y]]
     ^{:doc/actions [{}]}                                                                           [b/kp_z        [b/k_z]]
     ^{:doc/actions [{}]}                                                                           [b/kp_rt       [b/k_rt]]
-		]})
+    ]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
