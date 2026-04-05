@@ -116,7 +116,6 @@
     ^{:doc/actions [{}]}                                                                           [t/ksp_pe      [t/ks_pe]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
 
-    ; TODO: embed terminal actions => command editor, navi widget, etc
     ; action glyphs
     ^{:doc/actions [{:program c/tm,    :action "command line editor"}
                     {:program c/hc,    :action "close tab",          :exec hc-close-tab}
@@ -134,6 +133,7 @@
                     {:program c/hc,    :action "split down",         :exec hc-hsplit}
                     {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/kp_ro       [b/kt_s]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "fzf cd widget"}
+                    {:program c/hp,    :action "open split right"}
                     {:program c/hc,    :action "split close",        :exec hc-wonly}
                     {:program c/lg,    :action "zoom",               :exec lg-zoom}
                     {:program c/mc,    :action "close window",       :exec mc-unsplit}]}           [a/kp_rc       [b/kt_r]       c/term]
@@ -230,7 +230,8 @@
     ^{:doc/actions [{}]}                                                                           [b/ksp_x       [b/ks_x]]
     ^{:doc/actions [{}]}                                                                           [b/ksp_y       [b/ks_y]]
     ^{:doc/actions [{}]}                                                                           [b/ksp_z       [b/ks_z]]
-    ^{:doc/actions [{}]}                                                                           [b/ksp_rt      [b/ks_rt]]]})
+    ^{:doc/actions [{}]}                                                                           [b/ksp_rt      [b/ks_rt]]
+    ]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
