@@ -96,6 +96,8 @@
 
 (def kq_db (c/mk c/K c/Q c/_db))
 (def kq_re (c/mk c/K c/Q c/_re))
+(def kq_ro (c/mk c/K c/Q c/_ro))
+(def kq_rc (c/mk c/K c/Q c/_rc))
 (def kq_sp (c/mk c/K c/Q c/_sp))
 (def kq_lc (c/mk c/K c/Q c/_lc))
 (def kq_lo (c/mk c/K c/Q c/_lo))
@@ -273,6 +275,7 @@
 
 (def kep_db (c/mk c/K c/E c/P c/_db))
 (def kep_re (c/mk c/K c/E c/P c/_re))
+(def kep_rc (c/mk c/K c/E c/P c/_rc))
 (def kep_sp (c/mk c/K c/E c/P c/_sp))
 (def kep_lc (c/mk c/K c/E c/P c/_lc))
 (def kep_lo (c/mk c/K c/E c/P c/_lo))
@@ -291,6 +294,7 @@
 
 (def kqp_db (c/mk c/K c/Q c/P c/_db))
 (def kqp_re (c/mk c/K c/Q c/P c/_re))
+(def kqp_ro (c/mk c/K c/Q c/P c/_ro))
 (def kqp_sp (c/mk c/K c/Q c/P c/_sp))
 (def kqp_lc (c/mk c/K c/Q c/P c/_lc))
 (def kqp_lo (c/mk c/K c/Q c/P c/_lo))
