@@ -39,37 +39,36 @@
     ^{:doc/actions [{}]}                                                                           [r/kerp_ad     [r/ker_ad]]
 
     ; technical glyphs
-    [:!E#Popen_bracket [:!S3 :open_bracket]]                                                         ; '#['
-    [:!E#Pclose_bracket [:close_bracket :spacebar]]                                                  ; '] '
-    [:!E#Psemicolon [:semicolon :spacebar]]                                                          ; '; '
-    [:!E#Pquote [:quote :slash :quote]]                                                              ; ''/''
+    ^{:doc/actions [{}]}                                                                           [t/kep_ob      [t/ke_ob]]
+    ^{:doc/actions [{}]}                                                                           [t/kep_cb      [t/ke_cb]]
+    ^{:doc/actions [{}]}                                                                           [t/kep_sc      [t/ke_sc]]
+    ^{:doc/actions [{}]}                                                                           [t/kep_qu      [t/ke_qu]]
     ^{:doc/actions [{}]}                                                                           [t/kep_bl      [t/ke_bl]]
-    [:!E#Pcomma [:comma :spacebar]]                                                                  ; ', '
-    [:!E#Pperiod [:period :spacebar]]                                                                ; '. '
-    [:!E#Pslash [:spacebar :hyphen]]                                                                 ; ' -'
+    ^{:doc/actions [{}]}                                                                           [t/kep_cm      [t/ke_cm]]
+    ^{:doc/actions [{}]}                                                                           [t/kep_pe      [t/ke_pe]]
+    ^{:doc/actions [{}]}                                                                           [t/kep_sl      [t/ke_sl]]
 
-    [:!ER#Popen_bracket [:!S4 :!Sopen_bracket]]                                                      ; '${'
-    [:!ER#Pclose_bracket [:!Sclose_bracket :spacebar]]                                               ; '} '
-    [:!ER#Psemicolon [:!Ssemicolon :spacebar]]                                                       ; ': '
-    [:!ER#Pquote [:!Squote :slash :!Squote]]                                                         ; '"/"'
+    ^{:doc/actions [{}]}                                                                           [t/kerp_ob     [t/ker_ob]]
+    ^{:doc/actions [{}]}                                                                           [t/kerp_cb     [t/ker_cb]]
+    ^{:doc/actions [{}]}                                                                           [t/kerp_sc     [t/ker_sc]]
+    ^{:doc/actions [{}]}                                                                           [t/kerp_qu     [t/ker_qu]]
     ^{:doc/actions [{}]}                                                                           [t/kerp_bl     [t/ker_bl]]
-    [:!ER#Pcomma [:!Scomma :!Ssemicolon]]                                                            ; '<:'
-    [:!ER#Pperiod [:!Speriod :!Ssemicolon]]                                                          ; '>:'
-    [:!ER#Pslash [:spacebar :hyphen :hyphen]]                                                        ; ' --'
+    ^{:doc/actions [{}]}                                                                           [t/kerp_cm     [t/ker_cm]]
+    ^{:doc/actions [{}]}                                                                           [t/kerp_pe     [t/ker_pe]]
+    ^{:doc/actions [{}]}                                                                           [t/kerp_sl     [t/ker_sl]]
 
     ; action glyphs
-    ; TODO: annotate command line keys => history picker, etc
     ^{:doc/actions [{}]}                                                                           [a/kep_db      [a/ke_db]]
     ^{:doc/actions [{}]}                                                                           [a/kep_re      [a/ke_re]]
-    ^{:doc/actions [{}]}                                                                           [a/kep_sp      [a/ke_sp]]
+    ^{:doc/actions [{:program c/sys,   :action "prompt espanso"}]}                                 [a/kep_sp      [a/ke_sp]]
     ^{:doc/actions [{:program c/hc,    :action "changed file picker",:exec hc-buffer-picker}]}     [a/kep_lc      [b/kt_h]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "atuin widget"}
                     {:program c/hc,    :action "file picker",        :exec hc-file-picker}]}       [a/kep_lo      [b/kt_j]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "fzf history"}
                     {:program c/hc,    :action "buffer picker",      :exec hc-change-picker}]}     [a/kep_lt      [b/kt_o]       c/term]
     ^{:doc/actions [{}]}                                                                           [a/kep_ls      [a/ke_ls]]
-    ^{:doc/actions [{}]}                                                                           [b/kep_rt      [b/ke_rt]]
-    [:!E#Pcaps_lock [:caps_lock]]
+    ^{:doc/actions [{}]}                                                                           [a/kep_caps    [a/ke_caps]]
+    ^{:doc/actions [{}]}                                                                           [a/kep_tab     [a/ke_tab]]
 
     ^{:doc/actions [{}]}                                                                           [a/kerp_db     [a/ker_db]]
     ^{:doc/actions [{}]}                                                                           [a/kerp_re     [a/ker_re]]
@@ -78,8 +77,8 @@
     ^{:doc/actions [{}]}                                                                           [a/kerp_lo     [a/ker_lo]]
     ^{:doc/actions [{}]}                                                                           [a/kerp_lt     [a/ker_lt]]
     ^{:doc/actions [{}]}                                                                           [a/kerp_ls     [a/ker_ls]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_rt     [b/ker_rt]]
-    ; [:!E#Pcaps_lock [:caps_lock]]
+    ^{:doc/actions [{}]}                                                                           [a/kerp_caps   [a/ker_caps]]
+    ^{:doc/actions [{}]}                                                                           [a/kerp_tab    [a/ker_tab]]
 
     ; numeric-glyphs
     ^{:doc/actions [{}]}                                                                           [n/kep_1       [n/ke_1]]
@@ -90,8 +89,8 @@
     ^{:doc/actions [{}]}                                                                           [n/kep_6       [n/ke_6]]
     ^{:doc/actions [{}]}                                                                           [n/kep_7       [n/ke_7]]
     ^{:doc/actions [{}]}                                                                           [n/kep_8       [n/ke_8]]
-    [:!E#P9 [:!Scomma :!S9]]                                                                         ; '<('
-    [:!E#P0 [:!S0 :spacebar]]                                                                        ; ') '
+    ^{:doc/actions [{}]}                                                                           [n/kep_9       [n/ke_9]]
+    ^{:doc/actions [{}]}                                                                           [n/kep_0       [n/ke_0]]
     ^{:doc/actions [{}]}                                                                           [n/kep_hy      [n/ke_hy]]
     ^{:doc/actions [{}]}                                                                           [n/kep_eq      [n/ke_eq]]
 
@@ -103,16 +102,16 @@
     ^{:doc/actions [{}]}                                                                           [n/kerp_6      [n/ker_6]]
     ^{:doc/actions [{}]}                                                                           [n/kerp_7      [n/ker_7]]
     ^{:doc/actions [{}]}                                                                           [n/kerp_8      [n/ker_8]]
-    [:!ER#P9 [:!S4 :!S9]]                                                                            ; '$('
+    ^{:doc/actions [{}]}                                                                           [n/kerp_9      [n/ker_9]]
     ^{:doc/actions [{}]}                                                                           [n/kerp_0      [n/ker_0]]
     ^{:doc/actions [{}]}                                                                           [n/kerp_hy     [n/ker_hy]]
     ^{:doc/actions [{}]}                                                                           [n/kerp_eq     [n/ker_eq]]
 
     ; alphabetic-glyphs
     ^{:doc/actions [{}]}                                                                           [b/kep_a       [b/ke_a]]
-    [:!E#Pb [:b :u :g :!Ssemicolon :spacebar]]                                                       ; 'bug: '
+    ^{:doc/actions [{}]}                                                                           [b/kep_b       [b/ke_b]]
     ^{:doc/actions [{}]}                                                                           [b/kep_c       [b/ke_c]]
-    [:!E#Pd [:d :o :c :!Ssemicolon :spacebar]]                                                       ; 'doc: '
+    ^{:doc/actions [{}]}                                                                           [b/kep_d       [b/ke_d]]
     ^{:doc/actions [{}]}                                                                           [b/kep_e       [b/ke_e]]
     ^{:doc/actions [{}]}                                                                           [b/kep_f       [b/ke_f]]
     ^{:doc/actions [{}]}                                                                           [b/kep_g       [b/ke_g]]
@@ -128,19 +127,19 @@
     ^{:doc/actions [{}]}                                                                           [b/kep_q       [b/ke_q]]
     ^{:doc/actions [{}]}                                                                           [b/kep_r       [b/ke_r]]
     ^{:doc/actions [{}]}                                                                           [b/kep_s       [b/ke_s]]
-    [:!E#Pt [:t :e :s :t :!Ssemicolon :spacebar]]                                                    ; 'test: '
+    ^{:doc/actions [{}]}                                                                           [b/kep_t       [b/ke_t]]
     ^{:doc/actions [{}]}                                                                           [b/kep_u       [b/ke_u]]
     ^{:doc/actions [{}]}                                                                           [b/kep_v       [b/ke_v]]
-    [:!E#Pw [:w :i :p :!Ssemicolon :spacebar]]                                                       ; 'wip: '
-    [:!E#Px [:f :i :x :!Ssemicolon :spacebar]]                                                       ; 'fix: '
+    ^{:doc/actions [{}]}                                                                           [b/kep_w       [b/ke_w]]
+    ^{:doc/actions [{}]}                                                                           [b/kep_x       [b/ke_x]]
     ^{:doc/actions [{}]}                                                                           [b/kep_y       [b/ke_y]]
     ^{:doc/actions [{}]}                                                                           [b/kep_z       [b/ke_z]]
-    [:!E#Pright_control [:!Ssemicolon :i :n :!Ssemicolon]]                                           ; ' ∈ '
+    ^{:doc/actions [{}]}                                                                           [b/kep_rt      [b/ke_rt]]
 
     ^{:doc/actions [{}]}                                                                           [b/kerp_a      [b/ker_a]]
-    [:!ER#Pb [:!Sb :!Su :!Sg :!Ssemicolon :spacebar]]                                                ; 'BUG: '
+    ^{:doc/actions [{}]}                                                                           [b/kerp_b      [b/ker_b]]
     ^{:doc/actions [{}]}                                                                           [b/kerp_c      [b/ker_c]]
-    [:!ER#Pd [:!Sd :!So :!Sc :!Ssemicolon :spacebar]]                                                ; 'DOC: '
+    ^{:doc/actions [{}]}                                                                           [b/kerp_d      [b/ker_d]]
     ^{:doc/actions [{}]}                                                                           [b/kerp_e      [b/ker_e]]
     ^{:doc/actions [{}]}                                                                           [b/kerp_f      [b/ker_f]]
     ^{:doc/actions [{}]}                                                                           [b/kerp_g      [b/ker_g]]
@@ -156,14 +155,14 @@
     ^{:doc/actions [{}]}                                                                           [b/kerp_q      [b/ker_q]]
     ^{:doc/actions [{}]}                                                                           [b/kerp_r      [b/ker_r]]
     ^{:doc/actions [{}]}                                                                           [b/kerp_s      [b/ker_s]]
-    [:!ER#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]                                           ; 'TODO: '
+    ^{:doc/actions [{}]}                                                                           [b/kerp_t      [b/ker_t]]
     ^{:doc/actions [{}]}                                                                           [b/kerp_u      [b/ker_u]]
     ^{:doc/actions [{}]}                                                                           [b/kerp_v      [b/ker_v]]
-    [:!ER#Pw [:!Sw :!Si :!Sp :!Ssemicolon :spacebar]]                                                ; 'WIP: '
-    [:!ER#Px [:!Sf :!Si :!Sx :!Ssemicolon :spacebar]]                                                ; 'FIX: '
+    ^{:doc/actions [{}]}                                                                           [b/kerp_w      [b/ker_w]]
+    ^{:doc/actions [{}]}                                                                           [b/kerp_x      [b/ker_x]]
     ^{:doc/actions [{}]}                                                                           [b/kerp_y      [b/ker_y]]
     ^{:doc/actions [{}]}                                                                           [b/kerp_z      [b/ker_z]]
-    [:!ER#Pright_control [:!Ssemicolon :period :i :n :!Ssemicolon]]                                  ; ' .∈ '
+    ^{:doc/actions [{}]}                                                                           [b/kerp_rt     [b/ker_rt]]
     ]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
