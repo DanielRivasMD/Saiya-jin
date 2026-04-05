@@ -1,20 +1,16 @@
-- reorganize command declarations
 - document helix pop-up menu bindings
 - autogenerate katana config from saiyajin source => clojure -> edn & kbd
 - create a function that autogenerates self binds??
 - babel micro & helix fully functional, lazygit, zellij
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
 - sync browser hotkeys => needed?
-- document terminal sequences
 - document properly massive overhall
 - refactor justfile
 
 ==================================================
 src/apps/browser.clj:; TODO: update config
 src/apps/zoom.clj:; TODO: homogenize to format
-src/mode/tab.clj:    ; TODO: relocate z-mode, update empty
 src/simple/joker.clj:; TODO: add keypad binds
 src/simple/joker.clj:; TODO: annotate rectangle & system binds
 src/mode/z.clj:    ; TODO: update old mapping for nushell
-src/simple/ropt.clj:    ; TODO: annotate command line keys => history picker, etc
 ==================================================
