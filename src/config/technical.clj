@@ -189,6 +189,15 @@
 (def kotcs_pe (c/mk c/K c/O c/T c/C c/R c/_pe))
 (def kotcs_sl (c/mk c/K c/O c/T c/C c/R c/_sl))
 
+(def kr_ob   (c/mk c/K c/R c/_ob))
+(def kr_cb   (c/mk c/K c/R c/_cb))
+(def kr_sc   (c/mk c/K c/R c/_sc))
+(def kr_qu   (c/mk c/K c/R c/_qu))
+(def kr_bl   (c/mk c/K c/R c/_bl))
+(def kr_cm   (c/mk c/K c/R c/_cm))
+(def kr_pe   (c/mk c/K c/R c/_pe))
+(def kr_sl   (c/mk c/K c/R c/_sl))
+
 (def ker_ob  (c/mk c/K c/E c/R c/_ob))
 (def ker_cb  (c/mk c/K c/E c/R c/_cb))
 (def ker_sc  (c/mk c/K c/E c/R c/_sc))
@@ -404,6 +413,15 @@
 (def kotcsp_cm (c/mk c/K c/O c/T c/C c/R c/P c/_cm))
 (def kotcsp_pe (c/mk c/K c/O c/T c/C c/R c/P c/_pe))
 (def kotcsp_sl (c/mk c/K c/O c/T c/C c/R c/P c/_sl))
+
+(def krp_ob   (c/mk c/K c/R c/P c/_ob))
+(def krp_cb   (c/mk c/K c/R c/P c/_cb))
+(def krp_sc   (c/mk c/K c/R c/P c/_sc))
+(def krp_qu   (c/mk c/K c/R c/P c/_qu))
+(def krp_bl   (c/mk c/K c/R c/P c/_bl))
+(def krp_cm   (c/mk c/K c/R c/P c/_cm))
+(def krp_pe   (c/mk c/K c/R c/P c/_pe))
+(def krp_sl   (c/mk c/K c/R c/P c/_sl))
 
 (def kerp_ob  (c/mk c/K c/E c/R c/P c/_ob))
 (def kerp_cb  (c/mk c/K c/E c/R c/P c/_cb))
