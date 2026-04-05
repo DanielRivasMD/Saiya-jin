@@ -2234,6 +2234,22 @@
   ^{:doc/actions [{}]}
   [:!QR#Pdown_arrow [:!QRdown_arrow]]
   ^{:doc/actions [{}]}
+  [:!Q#Popen_bracket [:!Eopen_bracket]]
+  ^{:doc/actions [{}]}
+  [:!Q#Pclose_bracket [:!Eclose_bracket]]
+  ^{:doc/actions [{}]}
+  [:!Q#Psemicolon [:!Esemicolon]]
+  ^{:doc/actions [{}]}
+  [:!Q#Pquote [:!Equote]]
+  ^{:doc/actions [{}]}
+  [:!Q#Pbackslash [:!Ebackslash]]
+  ^{:doc/actions [{}]}
+  [:!Q#Pcomma [:!Ecomma]]
+  ^{:doc/actions [{}]}
+  [:!Q#Pperiod [:!Eperiod]]
+  ^{:doc/actions [{}]}
+  [:!Q#Pslash [:!Eslash]]
+  ^{:doc/actions [{}]}
   [:!QR#Popen_bracket [:!QRopen_bracket]]
   ^{:doc/actions [{}]}
   [:!QR#Pclose_bracket [:!QRclose_bracket]]
@@ -2253,6 +2269,8 @@
   [:!Q#Pdelete_or_backspace [:!Qdelete_or_backspace]]
   ^{:doc/actions [{}]}
   [:!Q#Preturn_or_enter [:!Qreturn_or_enter]]
+  ^{:doc/actions [{}]}
+  [:!Q#Pright_option [:!Qright_option]]
   ^{:doc/actions
     [{:program "helix-common",
       :action "save jump",
@@ -2737,22 +2755,32 @@
   [:!ER#Pup_arrow [:!ERup_arrow]]
   ^{:doc/actions [{}]}
   [:!ER#Pdown_arrow [:!ERdown_arrow]]
-  ^{:doc/actions [{}]}
-  [:!E#Popen_bracket [:!Eopen_bracket]]
-  ^{:doc/actions [{}]}
-  [:!E#Pclose_bracket [:!Eclose_bracket]]
-  ^{:doc/actions [{}]}
-  [:!E#Psemicolon [:!Esemicolon]]
-  ^{:doc/actions [{}]}
-  [:!E#Pquote [:!Equote]]
-  ^{:doc/actions [{}]}
-  [:!E#Pbackslash [:!Ebackslash]]
-  ^{:doc/actions [{}]}
-  [:!E#Pcomma [:!Ecomma]]
-  ^{:doc/actions [{}]}
-  [:!E#Pperiod [:!Eperiod]]
-  ^{:doc/actions [{}]}
-  [:!E#Pslash [:!Eslash]]
+  ^{:doc/actions
+    [{:program "R", :action "tidyverse", :sequence "` %<+% `"}]}
+  [:!E#Popen_bracket
+   [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
+  ^{:doc/actions
+    [{:program "R", :action "tidyverse", :sequence "` %+>% `"}]}
+  [:!E#Pclose_bracket
+   [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
+  ^{:doc/actions
+    [{:program "R", :action "tidyverse", :sequence "` %$% `"}]}
+  [:!E#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]
+  ^{:doc/actions
+    [{:program "R", :action "tidyverse", :sequence "` %T>% `"}]}
+  [:!E#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]
+  ^{:doc/actions
+    [{:program "R", :action "tidyverse", :sequence "` %<>% `"}]}
+  [:!E#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]
+  ^{:doc/actions
+    [{:program "R", :action "tidyverse", :sequence "` %<% `"}]}
+  [:!E#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
+  ^{:doc/actions
+    [{:program "R", :action "tidyverse", :sequence "` %!>% `"}]}
+  [:!E#Pperiod [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]
+  ^{:doc/actions
+    [{:program "R", :action "tidyverse", :sequence "` %>% `"}]}
+  [:!E#Pslash [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
   ^{:doc/actions [{}]}
   [:!ER#Popen_bracket [:!ERopen_bracket]]
   ^{:doc/actions [{}]}
@@ -2771,9 +2799,11 @@
   [:!ER#Pslash [:!ERslash]]
   ^{:doc/actions [{}]}
   [:!E#Pdelete_or_backspace [:!Edelete_or_backspace]]
+  ^{:doc/actions [{}]}
+  [:!E#Preturn_or_enter [:!Qreturn_or_enter]]
   ^{:doc/actions
     [{:program "term", :action "cli flag", :sequence "` --`"}]}
-  [:!E#Preturn_or_enter [:spacebar :hyphen :hyphen]]
+  [:!E#Pright_command [:spacebar :hyphen :hyphen]]
   ^{:doc/actions [{:program "System", :action "prompt espanso"}]}
   [:!E#Pspacebar [:!Espacebar]]
   ^{:doc/actions
