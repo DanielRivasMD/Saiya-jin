@@ -2699,7 +2699,31 @@
   [:!WS#Pz [:!WSz]]]}
 {:des "Shift Mode",
  :rules
- [^{:doc/actions
+ [^{:doc/actions [{}]}
+  [:!R#Pleft_arrow [:!Rleft_arrow]]
+  ^{:doc/actions [{}]}
+  [:!R#Pright_arrow [:!Rright_arrow]]
+  ^{:doc/actions [{}]}
+  [:!R#Pup_arrow [:!Rup_arrow]]
+  ^{:doc/actions [{}]}
+  [:!R#Pdown_arrow [:!Rdown_arrow]]
+  ^{:doc/actions [{}]}
+  [:!R#Popen_bracket [:!Ropen_bracket]]
+  ^{:doc/actions [{}]}
+  [:!R#Pclose_bracket [:!Rclose_bracket]]
+  ^{:doc/actions [{}]}
+  [:!R#Psemicolon [:!Rsemicolon]]
+  ^{:doc/actions [{}]}
+  [:!R#Pquote [:!Rquote]]
+  ^{:doc/actions [{}]}
+  [:!R#Pbackslash [:!Rbackslash]]
+  ^{:doc/actions [{}]}
+  [:!R#Pcomma [:!Rcomma]]
+  ^{:doc/actions [{}]}
+  [:!R#Pperiod [:!Rperiod]]
+  ^{:doc/actions [{}]}
+  [:!R#Pslash [:!Rslash]]
+  ^{:doc/actions
     [{:program "helix-common",
       :action "last modification",
       :exec ["goto_last_modification"]}]}
@@ -2736,7 +2760,85 @@
       :exec ["goto_line"]}]}
   [:!R#Pcaps_lock [:!Sf5]]
   ^{:doc/actions [{}]}
-  [:!R#Ptab [:!Rtab]]]}
+  [:!R#Ptab [:!Rtab]]
+  ^{:doc/actions [{}]}
+  [:!R#P1 [:!R1]]
+  ^{:doc/actions [{}]}
+  [:!R#P2 [:!R2]]
+  ^{:doc/actions [{}]}
+  [:!R#P3 [:!R3]]
+  ^{:doc/actions [{}]}
+  [:!R#P4 [:!R4]]
+  ^{:doc/actions [{}]}
+  [:!R#P5 [:!R5]]
+  ^{:doc/actions [{}]}
+  [:!R#P6 [:!R6]]
+  ^{:doc/actions [{}]}
+  [:!R#P7 [:!R7]]
+  ^{:doc/actions [{}]}
+  [:!R#P8 [:!R8]]
+  ^{:doc/actions [{}]}
+  [:!R#P9 [:!R9]]
+  ^{:doc/actions [{}]}
+  [:!R#P0 [:!R0]]
+  ^{:doc/actions [{}]}
+  [:!R#Phyphen [:!Rhyphen]]
+  ^{:doc/actions [{}]}
+  [:!R#Pequal_sign [:!Requal_sign]]
+  ^{:doc/actions [{}]}
+  [:!R#Pa [:!Ra]]
+  ^{:doc/actions [{}]}
+  [:!R#Pb [:!Rb]]
+  ^{:doc/actions [{}]}
+  [:!R#Pc [:!Rc]]
+  ^{:doc/actions [{}]}
+  [:!R#Pd [:!Rd]]
+  ^{:doc/actions [{}]}
+  [:!R#Pe [:!Re]]
+  ^{:doc/actions [{}]}
+  [:!R#Pf [:!Rf]]
+  ^{:doc/actions [{}]}
+  [:!R#Pg [:!Rg]]
+  ^{:doc/actions [{}]}
+  [:!R#Ph [:!Rh]]
+  ^{:doc/actions [{}]}
+  [:!R#Pi [:!Ri]]
+  ^{:doc/actions [{}]}
+  [:!R#Pj [:!Rj]]
+  ^{:doc/actions [{}]}
+  [:!R#Pk [:!Rk]]
+  ^{:doc/actions [{}]}
+  [:!R#Pl [:!Rl]]
+  ^{:doc/actions [{}]}
+  [:!R#Pm [:!Rm]]
+  ^{:doc/actions [{}]}
+  [:!R#Pn [:!Rn]]
+  ^{:doc/actions [{}]}
+  [:!R#Po [:!Ro]]
+  ^{:doc/actions [{}]}
+  [:!R#Pp [:!Rp]]
+  ^{:doc/actions [{}]}
+  [:!R#Pq [:!Rq]]
+  ^{:doc/actions [{}]}
+  [:!R#Pr [:!Rr]]
+  ^{:doc/actions [{}]}
+  [:!R#Ps [:!Rs]]
+  ^{:doc/actions [{}]}
+  [:!R#Pt [:!Rt]]
+  ^{:doc/actions [{}]}
+  [:!R#Pu [:!Ru]]
+  ^{:doc/actions [{}]}
+  [:!R#Pv [:!Rv]]
+  ^{:doc/actions [{}]}
+  [:!R#Pw [:!Rw]]
+  ^{:doc/actions [{}]}
+  [:!R#Px [:!Rx]]
+  ^{:doc/actions [{}]}
+  [:!R#Py [:!Ry]]
+  ^{:doc/actions [{}]}
+  [:!R#Pz [:!Rz]]
+  ^{:doc/actions [{}]}
+  [:!R#Pright_control [:!Rright_control]]]}
 {:des "Option Mode",
  :rules
  [^{:doc/actions [{}]}
@@ -3003,26 +3105,12 @@
   [:!ER#Pz [:!ERz]]
   ^{:doc/actions [{}]}
   [:!ER#Pright_control [:!ERright_control]]]}
-{:des "Additional keys - MacPro",
+{:des "Additional keys",
  :rules
  [[:#Pdelete_or_backspace [:grave_accent_and_tilde] :pro]
-  [:!C#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :pro]
-  [:!O#Pdelete_or_backspace
-   [:spacebar :!Sgrave_accent_and_tilde :spacebar]
-   :pro]
+  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :pro]
   [:#Pdelete_or_backspace [:grave_accent_and_tilde] :air]
-  [:!T#Pdelete_or_backspace
-   [:grave_accent_and_tilde
-    :grave_accent_and_tilde
-    :grave_accent_and_tilde]
-   :air]
   [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :air]
-  [:!O#Pdelete_or_backspace
-   [:spacebar :!Sgrave_accent_and_tilde :spacebar]
-   :air]
-  [:!C#Pdelete_or_backspace
-   [:spacebar :equal_sign :!Sgrave_accent_and_tilde :spacebar]
-   :air]
   [:f1 :display_brightness_decrement :air]
   [:f2 :display_brightness_increment :air]
   [:f3 :illumination_decrement :air]
@@ -3032,9 +3120,6 @@
   [:f12 :volume_increment :air]
   [:#Pdelete_or_backspace [:grave_accent_and_tilde] :master]
   [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :master]
-  [:!O#Pdelete_or_backspace
-   [:spacebar :!Sgrave_accent_and_tilde :spacebar]
-   :master]
   [:#Pkeypad_hyphen :mute]
   [:#Pkeypad_plus :volume_increment]
   [:#Pkeypad_enter :volume_decrement]
