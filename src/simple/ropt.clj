@@ -59,7 +59,7 @@
 
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/kep_db      [a/ke_db]]
-    ^{:doc/actions [{}]}                                                                           [a/kep_re      [a/ke_re]]
+    ^{:doc/actions [{:program c/tm     :action "cli flag"            :sequence "` --`"}]}          [a/kep_re      [a/k_sp n/k_hy n/k_hy]]
     ^{:doc/actions [{:program c/sys,   :action "prompt espanso"}]}                                 [a/kep_sp      [a/ke_sp]]
     ^{:doc/actions [{:program c/hc,    :action "changed file picker",:exec hc-buffer-picker}]}     [a/kep_lc      [b/kt_h]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "atuin widget"}
