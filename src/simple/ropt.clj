@@ -39,14 +39,14 @@
     ^{:doc/actions [{}]}                                                                           [r/kerp_ad     [r/ker_ad]]
 
     ; technical glyphs
-    ^{:doc/actions [{}]}                                                                           [t/kep_ob      [t/ke_ob]]
-    ^{:doc/actions [{}]}                                                                           [t/kep_cb      [t/ke_cb]]
-    ^{:doc/actions [{}]}                                                                           [t/kep_sc      [t/ke_sc]]
-    ^{:doc/actions [{}]}                                                                           [t/kep_qu      [t/ke_qu]]
-    ^{:doc/actions [{}]}                                                                           [t/kep_bl      [t/ke_bl]]
-    ^{:doc/actions [{}]}                                                                           [t/kep_cm      [t/ke_cm]]
-    ^{:doc/actions [{}]}                                                                           [t/kep_pe      [t/ke_pe]]
-    ^{:doc/actions [{}]}                                                                           [t/kep_sl      [t/ke_sl]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %<+% `"}]}       [t/kep_ob      [a/k_sp n/ks_5 t/ks_cm n/ks_eq n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %+>% `"}]}       [t/kep_cb      [a/k_sp n/ks_5 n/ks_eq t/ks_pe n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %$% `"}]}        [t/kep_sc      [a/k_sp n/ks_5 n/ks_4 n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %T>% `"}]}       [t/kep_qu      [a/k_sp n/ks_5 b/ks_t t/ks_pe n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %<>% `"}]}       [t/kep_bl      [a/k_sp n/ks_5 t/ks_cm t/ks_pe n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %<% `"}]}        [t/kep_cm      [a/k_sp n/ks_5 t/ks_cm n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %!>% `"}]}       [t/kep_pe      [a/k_sp n/ks_5 n/ks_1 t/ks_pe n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %>% `"}]}        [t/kep_sl      [a/k_sp n/ks_5 t/ks_pe n/ks_5 a/k_sp]]
 
     ^{:doc/actions [{}]}                                                                           [t/kerp_ob     [t/ker_ob]]
     ^{:doc/actions [{}]}                                                                           [t/kerp_cb     [t/ker_cb]]
@@ -59,7 +59,8 @@
 
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/kep_db      [a/ke_db]]
-    ^{:doc/actions [{:program c/tm     :action "cli flag"            :sequence "` --`"}]}          [a/kep_re      [a/k_sp n/k_hy n/k_hy]]
+    ^{:doc/actions [{}]}                                                                           [a/kep_re      [a/kq_re]]
+    ^{:doc/actions [{:program c/tm     :action "cli flag"            :sequence "` --`"}]}          [a/kep_rc      [a/k_sp n/k_hy n/k_hy]]
     ^{:doc/actions [{:program c/sys,   :action "prompt espanso"}]}                                 [a/kep_sp      [a/ke_sp]]
     ^{:doc/actions [{:program c/hc,    :action "changed file picker",:exec hc-buffer-picker}]}     [a/kep_lc      [b/kt_h]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "atuin widget"}
