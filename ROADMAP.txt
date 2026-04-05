@@ -1,13 +1,13 @@
 - document helix pop-up menu bindings
 - autogenerate katana config from saiyajin source => clojure -> edn & kbd
-- create a function that autogenerates self binds??
-- babel micro & helix fully functional, lazygit, zellij
+- babel micro, helix, lazygit & zellij fully functional; serpl, autodocument binds
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
 - sync browser hotkeys => needed?
 - document properly massive overhall
 - refactor justfile
 
 ==================================================
+src/simple/keyboards.clj; TODO: update documentation
 src/apps/browser.clj:; TODO: update config
 src/apps/zoom.clj:; TODO: homogenize to format
 src/simple/joker.clj:; TODO: add keypad binds
