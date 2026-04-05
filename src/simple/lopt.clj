@@ -19,92 +19,44 @@
 (def hc-prev-word            ["move_prev_word_start", "collapse_selection"])
 (def hc-next-word            ["move_next_word_end", "collapse_selection"])
 (def hc-prev-para            ["goto_prev_paragraph"  "collapse_selection"])
-(def lg-prev-page            ["prevPage"])
-(def mc-prev-para            ["ParagraphPrevious"])
-(def ze-half-up              ["HalfPageScrollUp;"])
 (def hc-next-para            ["goto_next_paragraph"  "collapse_selection"])
-(def lg-next-page            ["nextPage"])
-(def mc-next-para            ["ParagraphNext"])
-(def ze-half-down            ["HalfPageScrollDown;"])
 (def hc-select-prev-word     ["extend_prev_word_start"])
-(def mc-select-prev-word     ["SelectWordLeft"])
 (def hc-select-next-word     ["extend_next_word_end"])
-(def mc-select-next-word     ["SelectWordRight"])
-(def hi-select-prev-para     ["select_mode" "goto_prev_paragraph" "insert_mode"])
-(def hn-select-prev-para     ["select_mode" "goto_prev_paragraph" "normal_mode"])
-(def hs-select-prev-para     ["select_mode" "goto_prev_paragraph" "select_mode"])
-(def mc-select-prev-para     ["SelectToParagraphPrevious"])
-(def hi-select-next-para     ["select_mode" "goto_next_paragraph" "append_mode"])
-(def hn-select-next-para     ["select_mode" "goto_next_paragraph" "normal_mode"])
-(def hs-select-next-para     ["select_mode" "goto_next_paragraph" "select_mode"])
-(def mc-select-next-para     ["SelectToParagraphNext"])
-
 (def hc-format               [":format"])
 (def hc-git-blame            [":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"])
 (def hc-copy                 ["yank_to_clipboard"])
-(def mc-copy                 ["Copy"])
 (def hc-spawn-multi          ["search_selection", "extend_search_next"])
-(def mc-spawn-multi          ["SpawnMultiCursor"])
 (def hc-comment              ["toggle_comments"])
-(def mc-comment              ["lua:comment.comment"])
 (def hc-search               ["search"])
-(def mc-search               ["FindLiteral"])
 (def hc-find-prev            ["search_prev"])
-(def mc-find-prev            ["FindPrevious"])
 (def hc-spawn-down           ["normal_mode", "copy_selection_on_next_line", "MODE"])
-(def mc-spawn-down           ["SpawnMultiCursorDown"])
 (def hc-spawn-up             ["normal_mode", "copy_selection_on_prev_line", "MODE"])
-(def mc-spawn-up             ["SpawnMultiCursorUp"])
 (def hc-find-next            ["search_next"])
-(def mc-find-next            ["FindNext"])
 (def hc-record               ["record_macro"])
-(def mc-record               ["ToggleMacro"])
 (def hc-new                  [":new"])
-(def mc-new                  ["AddTab"])
 (def hc-quit                 ["normal_mode", ":quit-all"])
-(def mc-quit                 ["QuitAll"])
 (def hc-reload               ["normal_mode", ":reload-all", "MODE"])
 (def hc-write-quit           ["normal_mode", ":write-quit-all"])
-(def mc-write-quit           ["Save,QuitAll"])
 (def hc-paste                ["paste_clipboard_before"])
-(def mc-paste                ["Paste"])
 (def hc-write                ["normal_mode", ":write"])
-(def mc-write                ["Save"])
 (def hc-todor-compile        [":sh just todor"])
 (def hc-cut                  ["yank_to_clipboard", "delete_selection_noyank"])
-(def mc-cut                  ["Cut"])
 (def hc-skip-multi           ["search_selection", "search_next"])
-(def mc-skip-multi           ["SkipMultiCursor"])
 (def hc-rm-multi             ["search_selection", "search_prev"])
-(def mc-rm-multi             ["RemoveMultiCursor"])
 (def hc-cmd                  ["command_mode"])
-(def mc-cmd                  ["CommandMode"])
-
 (def hc-select-all           ["select_all"])
-(def mc-select-all           ["SelectAll"])
 (def hc-copy-line            ["extend_to_line_bounds", "yank_to_clipboard"])
-(def mc-copy-line            ["CopyLine"])
 (def hc-dup-line             ["extend_to_line_bounds", "yank", "paste_after", "goto_line_start"])
-(def mc-dup-line             ["DuplicateLine"])
 (def hc-global-search        ["global_search"])
-(def mc-global-search        ["Find"])
 (def hc-indent               ["indent"])
-(def mc-indent               ["IndentSelection"])
 (def hc-line-down            ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"])
-(def mc-line-down            ["MoveLinesDown"])
 (def hc-line-up              ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"])
-(def mc-line-up              ["MoveLinesUp"])
 (def hc-select-line          ["goto_line_end", "select_mode", "goto_line_start", "MODE"])
-(def mc-select-line          ["SelectLine"])
 (def hc-play                 ["replay_macro"])
-(def mc-play                 ["PlayMacro"])
 (def hc-unindent             ["unindent"])
-(def mc-unindent             ["OutdentSelection"])
 (def hc-paste-in-place       ["replace_selections_with_clipboard"])
 (def hc-cut-line             ["extend_to_line_bounds", "delete_selection_noyank"])
-(def mc-cut-line             ["CutLine"])
 (def hc-copy-diag            [":yank-diagnostic"])
-(def mc-shell                ["ShellMode"])
 (def hc-yazi                 [":sh zellij run --name explorer --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- yazi $(pwd)"])
 (def hc-lazygit              [":sh zellij run --name lazygit  --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- lazygit"])
 (def hc-serpl                [":sh zellij run --name serpl    --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- serpl"])
@@ -112,6 +64,58 @@
 (def hc-watch                [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch"])
 (def hc-btm                  [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- btm"])
 (def hc-shell                [":sh zellij run --name canvas   --pinned false --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- zsh"])
+
+(def hi-select-prev-para     ["select_mode" "goto_prev_paragraph" "insert_mode"])
+(def hi-select-next-para     ["select_mode" "goto_next_paragraph" "append_mode"])
+
+(def hn-select-prev-para     ["select_mode" "goto_prev_paragraph" "normal_mode"])
+(def hn-select-next-para     ["select_mode" "goto_next_paragraph" "normal_mode"])
+
+(def hs-select-prev-para     ["select_mode" "goto_prev_paragraph" "select_mode"])
+(def hs-select-next-para     ["select_mode" "goto_next_paragraph" "select_mode"])
+
+(def lg-prev-page            ["prevPage"])
+(def lg-next-page            ["nextPage"])
+
+(def mc-prev-para            ["ParagraphPrevious"])
+(def mc-next-para            ["ParagraphNext"])
+(def mc-select-prev-word     ["SelectWordLeft"])
+(def mc-select-next-word     ["SelectWordRight"])
+(def mc-select-prev-para     ["SelectToParagraphPrevious"])
+(def mc-select-next-para     ["SelectToParagraphNext"])
+(def mc-copy                 ["Copy"])
+(def mc-spawn-multi          ["SpawnMultiCursor"])
+(def mc-comment              ["lua:comment.comment"])
+(def mc-search               ["FindLiteral"])
+(def mc-find-prev            ["FindPrevious"])
+(def mc-spawn-down           ["SpawnMultiCursorDown"])
+(def mc-spawn-up             ["SpawnMultiCursorUp"])
+(def mc-find-next            ["FindNext"])
+(def mc-record               ["ToggleMacro"])
+(def mc-new                  ["AddTab"])
+(def mc-quit                 ["QuitAll"])
+(def mc-write-quit           ["Save,QuitAll"])
+(def mc-paste                ["Paste"])
+(def mc-write                ["Save"])
+(def mc-cut                  ["Cut"])
+(def mc-skip-multi           ["SkipMultiCursor"])
+(def mc-rm-multi             ["RemoveMultiCursor"])
+(def mc-cmd                  ["CommandMode"])
+(def mc-select-all           ["SelectAll"])
+(def mc-copy-line            ["CopyLine"])
+(def mc-dup-line             ["DuplicateLine"])
+(def mc-global-search        ["Find"])
+(def mc-indent               ["IndentSelection"])
+(def mc-line-down            ["MoveLinesDown"])
+(def mc-line-up              ["MoveLinesUp"])
+(def mc-select-line          ["SelectLine"])
+(def mc-play                 ["PlayMacro"])
+(def mc-unindent             ["OutdentSelection"])
+(def mc-cut-line             ["CutLine"])
+(def mc-shell                ["ShellMode"])
+
+(def ze-half-down            ["HalfPageScrollDown;"])
+(def ze-half-up              ["HalfPageScrollUp;"])
 
 (defn lopt []
 
@@ -146,37 +150,37 @@
                     {:program c/mc,    :action "select next para",   :exec mc-select-next-para}]}  [r/kosp_ad     [r/kos_ad]     c/term]
 
     ; technical glyphs
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` <= `"}]}         [t/kop_ob      [a/k_sp t/ks_cm n/k_eq a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` >= `"}]}         [t/kop_cb      [a/k_sp t/ks_pe n/k_eq a/k_sp]]
-    ^{:doc/actions [{}]}                                                                           [t/kop_sc      [t/ko_sc]]
+    ^{:doc/actions [{:program c/tm,    :action "less or equal",      :sequence "` <= `"}]}         [t/kop_ob      [a/k_sp t/ks_cm n/k_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "more or equal",      :sequence "` >= `"}]}         [t/kop_cb      [a/k_sp t/ks_pe n/k_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "AND",                :sequence "` & `"}]}          [t/kop_sc      [a/k_sp n/ks_7 a/k_sp]]
     ^{:doc/actions [{}]}                                                                           [t/kop_qu      [t/ko_qu]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` | `"}]}          [t/kop_bl      [a/k_sp t/ks_bl a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` < `"}]}          [t/kop_cm      [a/k_sp t/ks_cm a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` > `"}]}          [t/kop_pe      [a/k_sp t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` ? `"}]}          [t/kop_sl      [a/k_sp t/ks_sl a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "OR",                 :sequence "` | `"}]}          [t/kop_bl      [a/k_sp t/ks_bl a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "less than",          :sequence "` < `"}]}          [t/kop_cm      [a/k_sp t/ks_cm a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "more than",          :sequence "` > `"}]}          [t/kop_pe      [a/k_sp t/ks_pe a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "NOT equal",          :sequence "` != `"}]}        [t/kop_sl      [a/k_sp n/ks_1 n/k_eq a/k_sp]]
 
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .<= `"}]}        [t/kosp_ob     [a/k_sp t/k_pe t/ks_cm n/k_eq a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .>= `"}]}        [t/kosp_cb     [a/k_sp t/k_pe t/ks_pe n/k_eq a/k_sp]]
-    ^{:doc/actions [{}]}                                                                           [t/kosp_sc     [t/kos_sc]]
+    ^{:doc/actions [{:program c/tm,    :action "dot less or equal",  :sequence "` .<= `"}]}        [t/kosp_ob     [a/k_sp t/k_pe t/ks_cm n/k_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "dot more or equal",  :sequence "` .>= `"}]}        [t/kosp_cb     [a/k_sp t/k_pe t/ks_pe n/k_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "double AND",         :sequence "` && `"}]}         [t/kosp_sc     [a/k_sp n/ks_7 n/ks_7 a/k_sp]]
     ^{:doc/actions [{}]}                                                                           [t/kosp_qu     [t/kos_qu]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .| `"}]}         [t/kosp_bl     [a/k_sp t/k_pe t/ks_bl a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .< `"}]}         [t/kosp_cm     [a/k_sp t/k_pe t/ks_cm a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .> `"}]}         [t/kosp_pe     [a/k_sp t/k_pe t/ks_pe a/k_sp]]
-    ^{:doc/actions [{}]}                                                                           [t/kosp_sl     [t/kos_sl]]
+    ^{:doc/actions [{:program c/tm,    :action "double OR",          :sequence "` || `"}]}         [t/kosp_bl     [a/k_sp t/ks_bl t/ks_bl a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "dot less than",      :sequence "` .< `"}]}         [t/kosp_cm     [a/k_sp t/k_pe t/ks_cm a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "dot more than",      :sequence "` .> `"}]}         [t/kosp_pe     [a/k_sp t/k_pe t/ks_pe a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "dot NOT equal",      :sequence "` .!= `"}]}       [t/kosp_sl     [a/k_sp t/k_pe n/ks_1 n/k_eq a/k_sp]]
 
     ; action glyphs
-    ^{:doc/actions [{}]}                                                                           [a/kop_db      [a/ko_db]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` = `"}]}          [a/kop_re      [a/k_sp n/k_eq a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` |> `"}]}         [a/kop_rs      [a/k_sp t/ks_bl t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` * `"}]}          [a/kop_ro      [a/k_sp n/ks_8 a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` / `"}]}          [a/kop_rc      [a/k_sp t/k_sl a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "julia pipe",         :sequence "` |> `"}]}         [a/kop_db      [a/k_sp t/ks_bl t/ks_pe a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "assign",             :sequence "` = `"}]}          [a/kop_re      [a/k_sp n/k_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm     :action "compare",            :sequence "` == `"}]}         [a/kop_rs      [a/k_sp n/k_eq n/k_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "multiply",           :sequence "` * `"}]}          [a/kop_ro      [a/k_sp n/ks_8 a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "divide",             :sequence "` / `"}]}          [a/kop_rc      [a/k_sp t/k_sl a/k_sp]]
     ^{:doc/actions [{:program c/alf,   :action "prompt"}]}                                         [a/kop_sp      [c/koc_us]]
 
-    ^{:doc/actions [{}]}                                                                           [a/kosp_db     [a/kosp_db]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .= `"}]}         [a/kosp_re     [a/k_sp t/k_pe n/k_eq a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .|> `"}]}        [a/kosp_rs     [a/k_sp t/k_pe t/ks_bl t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .* `"}]}         [a/kosp_ro     [a/k_sp t/k_pe n/ks_8 a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` ./ `"}]}         [a/kosp_rc     [a/k_sp t/k_pe t/k_sl a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "dot julia pipe",     :sequence "` .|> `"}]}        [a/kosp_db     [a/k_sp t/k_pe t/ks_bl t/ks_pe a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "dot assign",         :sequence "` .= `"}]}         [a/kosp_re     [a/k_sp t/k_pe n/k_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm     :action "dot compare",        :sequence "` .== `"}]}        [a/kosp_rs     [a/k_sp t/k_pe n/k_eq n/k_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "dot multiply",       :sequence "` .* `"}]}         [a/kosp_ro     [a/k_sp t/k_pe n/ks_8 a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "dot divide",         :sequence "` ./ `"}]}         [a/kosp_rc     [a/k_sp t/k_pe t/k_sl a/k_sp]]
     ^{:doc/actions [{:program c/alf,   :action "file prompt"}]}                                    [a/kosp_sp     [c/kocs_us]]
 
     ; numeric glyphs
@@ -184,27 +188,27 @@
     ^{:doc/actions [{}]}                                                                           [n/kop_2       [n/ko_2]]
     ^{:doc/actions [{}]}                                                                           [n/kop_3       [n/ko_3]]
     ^{:doc/actions [{}]}                                                                           [n/kop_4       [n/ko_4]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` % `"}]}          [n/kop_5       [a/k_sp n/ks_5 a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` ^ `"}]}          [n/kop_6       [a/k_sp n/ks_6 a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` & `"}]}          [n/kop_7       [a/k_sp n/ks_7 a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [n/kop_5       [n/ko_5]]
+    ^{:doc/actions [{}]}                                                                           [n/kop_6       [n/ko_6]]
+    ^{:doc/actions [{}]}                                                                           [n/kop_7       [n/ko_7]]
     ^{:doc/actions [{}]}                                                                           [n/kop_8       [n/ko_8]]
     ^{:doc/actions [{}]}                                                                           [n/kop_9       [n/ko_9]]
     ^{:doc/actions [{}]}                                                                           [n/kop_0       [n/ko_0]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` - `"}]}          [n/kop_hy      [a/k_sp n/k_hy a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` + `"}]}          [n/kop_eq      [a/k_sp n/ks_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "substract",          :sequence "` - `"}]}          [n/kop_hy      [a/k_sp n/k_hy a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "add",                :sequence "` + `"}]}          [n/kop_eq      [a/k_sp n/ks_eq a/k_sp]]
 
     ^{:doc/actions [{}]}                                                                           [n/kosp_1      [n/kos_1]]
     ^{:doc/actions [{}]}                                                                           [n/kosp_2      [n/kos_2]]
     ^{:doc/actions [{}]}                                                                           [n/kosp_3      [n/kos_3]]
     ^{:doc/actions [{}]}                                                                           [n/kosp_4      [n/kos_4]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .% `"}]}         [n/kosp_5      [a/k_sp t/k_pe n/ks_5 a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .^ `"}]}         [n/kosp_6      [a/k_sp t/k_pe n/ks_6 a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .& `"}]}         [n/kosp_7      [a/k_sp t/k_pe n/ks_7 a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [n/kosp_5      [n/kos_5]]
+    ^{:doc/actions [{}]}                                                                           [n/kosp_6      [n/kos_6]]
+    ^{:doc/actions [{}]}                                                                           [n/kosp_7      [n/kos_7]]
     ^{:doc/actions [{}]}                                                                           [n/kosp_8      [n/kos_8]]
     ^{:doc/actions [{}]}                                                                           [n/kosp_9      [n/kos_9]]
     ^{:doc/actions [{}]}                                                                           [n/kosp_0      [n/kos_0]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .- `"}]}         [n/kosp_hy     [a/k_sp t/k_pe n/k_hy a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terminal",           :sequence "` .+ `"}]}         [n/kosp_eq     [a/k_sp t/k_pe n/ks_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "dot substract",      :sequence "` .- `"}]}         [n/kosp_hy     [a/k_sp t/k_pe n/k_hy a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "dot add",            :sequence "` .+ `"}]}         [n/kosp_eq     [a/k_sp t/k_pe n/ks_eq a/k_sp]]
 
     ; alphabetic glyphs
     ^{:doc/actions [{:program c/hc,    :action "format",             :exec hc-format}]}            [b/kop_a       [b/ko_a]       c/term]
@@ -291,7 +295,8 @@
     ^{:doc/actions [{}]}                                                                           [b/kosp_y      [b/kos_y]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "yank diagnostic",    :exec hc-copy-diag}]}         [b/kosp_z      [b/kos_z]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch shell",       :exec hc-shell}
-                    {:program c/mc,    :action "shell mode",         :exec mc-shell}]}             [b/kosp_rt     [f/kos_f10]     c/term]]})
+                    {:program c/mc,    :action "shell mode",         :exec mc-shell}]}             [b/kosp_rt     [f/kos_f10]     c/term]
+    ]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
