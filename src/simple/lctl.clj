@@ -76,7 +76,7 @@
 
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/ktp_db      [a/kt_db]]
-    ^{:doc/actions [{:program c/tm     :action "cli flag"            :sequence "` --`"}]}          [a/ktp_re      [a/k_sp n/k_hy n/k_hy]]
+    ^{:doc/actions [{}]}                                                                           [a/ktp_re      [a/kt_re]]
     ^{:doc/actions [{}]}                                                                           [a/ktp_rs      [a/kt_rs]]
     ^{:doc/actions [{}]}                                                                           [a/ktp_ro      [a/kt_ro]]
     ^{:doc/actions [{}]}                                                                           [a/ktp_rc      [a/kt_rc]]
