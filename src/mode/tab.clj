@@ -64,7 +64,7 @@
     ^{:doc/actions [{:program c/zj,    :action "plugin room",        :exec zj-plug-room}]}         [a/kp_re       [f/ks_f8]      c/term]
     ^{:doc/actions [{:program c/zj,    :action "tab new",            :exec zj-new-tab}]}           [a/kp_rs       [f/ks_f9]      c/term]
     ^{:doc/actions [{:program c/zj,    :action "mode search",        :exec zj-entersearch-mode}
-                    {:program c/ze,    :action "mode normal",        :exec z-normal-mode}]}            [a/kp_ro       [f/ks_f10]     c/term]
+                    {:program c/ze,    :action "mode normal",        :exec z-normal-mode}]}        [a/kp_ro       [f/ks_f10]     c/term]
     ^{:doc/actions [{:program c/zj,    :action "mode tab rename",    :exec zj-rename-tab-mode}
                     {:program c/zt,    :action "abort tab reanme",   :exec zt-abort-rename}]}      [a/kp_rc       [f/ks_f11]     c/term]
     ^{:doc/actions [{:program c/zj,    :action "tab jump back",      :exec zj-last-tab}]}          [a/kp_sp       [f/ks_f12]     c/term]
