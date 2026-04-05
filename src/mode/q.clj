@@ -25,8 +25,9 @@
 (def zj-pane-new-right       ["NewPane \"Right\";"])
 (def zj-pane-new-down        ["NewPane \"Down\";"])
 (def zj-rename-pane-mode     ["SwitchToMode \"RenamePane\"; PaneNameInput 0;"])
-(def zp-abort-rename         ["UndoRenamePane; SwitchToMode \"Normal\";"])
 (def zj-last-pane            ["SwitchFocus;"])
+
+(def zp-abort-rename         ["UndoRenamePane; SwitchToMode \"Normal\";"])
 
 (defn q-mode []
 
