@@ -40,12 +40,12 @@
     ^{:doc/actions [{}]}                                                                           [t/kotcp_sl    [t/kotc_sl]]
 
    ; action glyphs
-    ^{:doc/actions [{:program c/sys,   :action "Control center"}]}                                 [a/kotcp_db    [c/kotc_lock]]
-    ^{:doc/actions [{:program c/sys,   :action "Speak"}]}                                          [a/kotcp_re    [a/kotc_re]]
-    ^{:doc/actions [{:program c/sys,   :action "Launch Arc"}]}                                     [a/kotcp_rs    [:launch "Arc"]]
-    ^{:doc/actions [{:program c/sys,   :action "Launch Alacritty"}]}                               [a/kotcp_ro    [:launch "Alacritty"]]
-    ^{:doc/actions [{:program c/sys,   :action "Launch Ghostty"}]}                                 [a/kotcp_rc    [:launch "Ghostty"]]
-    ^{:doc/actions [{:program c/sys,   :action "Listen"}]}                                         [a/kotcp_sp    [c/kwp_us]]
+    ^{:doc/actions [{:program c/sys,   :action "control center"}]}                                 [a/kotcp_db    [c/kotc_lock]]
+    ^{:doc/actions [{:program c/sys,   :action "speak"}]}                                          [a/kotcp_re    [a/kotc_re]]
+    ^{:doc/actions [{}]}                                                                           [a/kotcp_rs    [a/kotcp_rs]]
+    ^{:doc/actions [{}]}                                                                           [a/kotcp_ro    [a/kotcp_ro]]
+    ^{:doc/actions [{}]}                                                                           [a/kotcp_rc    [a/kotcp_rc]]
+    ^{:doc/actions [{:program c/sys,   :action "listen"}]}                                         [a/kotcp_sp    [c/kwp_us]]
 
     ; numeric-glyphs
     ^{:doc/actions [{}]}                                                                           [n/kotcp_1     [n/kotc_1]]
@@ -91,7 +91,8 @@
     ^{:doc/actions [{}]}                                                                           [b/kotcp_x     [b/kotc_x]]
     ^{:doc/actions [{}]}                                                                           [b/kotcp_y     [b/kotc_y]]
     ^{:doc/actions [{}]}                                                                           [b/kotcp_z     [b/kotc_z]]
-    ^{:doc/actions [{:program c/sys,   :action "Launch Notes"}]}                                   [b/kotcp_rt    [:launch "Notes"]]]})
+    ^{:doc/actions [{}]}                                                                           [b/kotcp_rt    [b/kotcp_rt]]
+    ]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
