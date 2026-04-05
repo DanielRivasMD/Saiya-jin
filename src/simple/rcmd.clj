@@ -40,14 +40,14 @@
     ^{:doc/actions [{}]}                                                                           [r/kqrp_ad     [r/kqr_ad]]
 
     ; technical glyphs
-    ; ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %<+% `"}]}       [t/kqp_ob      [a/k_sp n/ks_5 t/ks_cm n/ks_eq n/ks_5 a/k_sp]]
-    ; ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %+>% `"}]}       [t/kqp_cb      [a/k_sp n/ks_5 n/ks_eq t/ks_pe n/ks_5 a/k_sp]]
-    ; ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %$% `"}]}        [t/kqp_sc      [a/k_sp n/ks_5 n/ks_4 n/ks_5 a/k_sp]]
-    ; ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %T>% `"}]}       [t/kqp_qu      [a/k_sp n/ks_5 b/ks_t t/ks_pe n/ks_5 a/k_sp]]
-    ; ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %<>% `"}]}       [t/kqp_bl      [a/k_sp n/ks_5 t/ks_cm t/ks_pe n/ks_5 a/k_sp]]
-    ; ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %<% `"}]}        [t/kqp_cm      [a/k_sp n/ks_5 t/ks_cm n/ks_5 a/k_sp]]
-    ; ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %>% `"}]}        [t/kqp_pe      [a/k_sp n/ks_5 t/ks_pe n/ks_5 a/k_sp]]
-    ; ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %!>% `"}]}       [t/kqp_sl      [a/k_sp n/ks_5 n/ks_1 t/ks_pe n/ks_5 a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_ob      [t/ke_ob]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_cb      [t/ke_cb]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_sc      [t/ke_sc]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_qu      [t/ke_qu]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_bl      [t/ke_bl]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_cm      [t/ke_cm]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_pe      [t/ke_pe]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_sl      [t/ke_sl]]
 
     ^{:doc/actions [{}]}                                                                           [t/kqrp_ob     [t/kqr_ob]]
     ^{:doc/actions [{}]}                                                                           [t/kqrp_cb     [t/kqr_cb]]
@@ -61,6 +61,7 @@
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/kqp_db      [a/kq_db]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_re      [a/kq_re]]
+    ^{:doc/actions [{}]}                                                                           [a/kqp_ro      [a/kq_ro]]
     ^{:doc/actions [{:program c/hc,    :action "save jump",          :exec hc-jump-save}]}         [a/kqp_sp      [f/ks_f14]     c/term]
     ^{:doc/actions [{:program c/hc,    :action "jump forward",       :exec hc-jump-forward}]}      [a/kqp_lc      [f/ks_f15]     c/term]
     ^{:doc/actions [{:program c/hc,    :action "jumplist picker",    :exec hc-jump-picker}]}       [a/kqp_lo      [f/ks_f16]     c/term]
