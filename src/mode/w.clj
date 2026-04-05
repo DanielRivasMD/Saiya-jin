@@ -16,6 +16,8 @@
 
 (def out-file "w.edn")
 
+(def z-normal-mode           ["SwitchToMode \"Normal\";"])
+
 (def zj-move-left            ["MovePane \"Left\";"])
 (def zj-move-rigth           ["MovePane \"Right\";"])
 (def zj-move-up              ["MovePane \"Up\";"])
@@ -28,7 +30,6 @@
 (def zj-toggle-sync          ["ToggleActiveSyncTab;"])
 (def zj-toggle-embed         ["TogglePaneEmbedOrFloating;"])
 (def zj-locked-mode          ["SwitchToMode \"Locked\";"])
-(def z-normal-mode           ["SwitchToMode \"Normal\";"])
 
 (defn w-mode []
 
@@ -103,7 +104,8 @@
     ^{:doc/actions [{}]}                                                                           [b/kp_x        [b/k_x]]
     ^{:doc/actions [{}]}                                                                           [b/kp_y        [b/k_y]]
     ^{:doc/actions [{}]}                                                                           [b/kp_z        [b/k_z]]
-    ^{:doc/actions [{}]}                                                                           [b/kp_rt       [b/k_rt]]]})
+    ^{:doc/actions [{}]}                                                                           [b/kp_rt       [b/k_rt]]
+    ]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
