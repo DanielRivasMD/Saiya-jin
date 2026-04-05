@@ -24,6 +24,7 @@
 (def hc  "helix-common")
 (def hi  "helix-insert")
 (def hn  "helix-normal")
+(def hp  "helix-popup")
 (def hs  "helix-select")
 (def lg  "lazygit")
 (def tm  "term")
