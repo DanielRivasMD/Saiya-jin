@@ -126,18 +126,20 @@
                     {:program c/lg,    :action "commit",             :exec lg-commit}
                     {:program c/mc,    :action "open file",          :exec mc-open-file}]}         [a/kp_re       [b/kt_l]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "fzf file widget"}
+                    {:program c/hp,    :action "open vertically"}
                     {:program c/hc,    :action "split right",        :exec hc-vsplit}
                     {:program c/lg,    :action "decrease content",   :exec lg-dec-content}
                     {:program c/mc,    :action "split right",        :exec mc-vsplit}]}            [a/kp_rs       [b/kt_v]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "zoxide widget"}
+                    {:program c/hp,    :action "open horizontally"}
                     {:program c/hc,    :action "split down",         :exec hc-hsplit}
                     {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/kp_ro       [b/kt_s]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "fzf cd widget"}
-                    {:program c/hp,    :action "open split right"}
                     {:program c/hc,    :action "split close",        :exec hc-wonly}
                     {:program c/lg,    :action "zoom",               :exec lg-zoom}
                     {:program c/mc,    :action "close window",       :exec mc-unsplit}]}           [a/kp_rc       [b/kt_r]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "navi widget"}
+                    {:program c/hp,    :action "toggle preview"}
                     {:program c/hc,    :action "last file",          :exec hc-last-tab}
                     {:program c/lg,    :action "recent",             :exec lg-recent}]}            [a/kp_sp       [b/kt_t]       c/term]
 
