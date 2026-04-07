@@ -1,4 +1,3 @@
-- document helix pop-up menu bindings
 - autogenerate katana config from saiyajin source => clojure -> edn & kbd
 - babel micro, helix, lazygit & zellij fully functional; serpl, autodocument binds
 - system events & alfred hotkeys will remain annotated & render by `babel`, but ignore for semi-autogeneration
