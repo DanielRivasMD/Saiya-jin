@@ -16,11 +16,6 @@
 
 (def out-file "rcmd.edn")
 
-(def hc-jump-save            ["save_selection"])
-(def hc-jump-backward        ["jump_backward"])
-(def hc-jump-picker          ["jumplist_picker"])
-(def hc-jump-forward         ["jump_forward"])
-
 (defn rcmd []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -62,10 +57,10 @@
     ^{:doc/actions [{}]}                                                                           [a/kqp_db      [a/kq_db]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_re      [a/kq_re]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_ro      [a/kq_ro]]
-    ^{:doc/actions [{:program c/hc,    :action "save jump",          :exec hc-jump-save}]}         [a/kqp_sp      [f/ks_f14]     c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jump forward",       :exec hc-jump-forward}]}      [a/kqp_lc      [f/ks_f15]     c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jumplist picker",    :exec hc-jump-picker}]}       [a/kqp_lo      [f/ks_f16]     c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jump backqard",      :exec hc-jump-backward}]}     [a/kqp_lt      [f/ks_f17]     c/term]
+    ^{:doc/actions [{}]}                                                                           [a/kqp_sp      [a/kq_sp]]
+    ^{:doc/actions [{}]}                                                                           [a/kqp_lc      [a/kq_lc]]
+    ^{:doc/actions [{}]}                                                                           [a/kqp_lo      [a/kq_lo]]
+    ^{:doc/actions [{}]}                                                                           [a/kqp_lt      [a/kq_lt]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_ls      [a/kq_ls]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_caps    [a/kq_caps]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_tab     [a/kq_tab]]
