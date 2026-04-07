@@ -40,14 +40,14 @@
     ^{:doc/actions [{}]}                                                                           [r/kqrp_ad     [r/kqr_ad]]
 
     ; technical glyphs
-    ^{:doc/actions [{}]}                                                                           [t/kqp_ob      [t/ke_ob]]
-    ^{:doc/actions [{}]}                                                                           [t/kqp_cb      [t/ke_cb]]
-    ^{:doc/actions [{}]}                                                                           [t/kqp_sc      [t/ke_sc]]
-    ^{:doc/actions [{}]}                                                                           [t/kqp_qu      [t/ke_qu]]
-    ^{:doc/actions [{}]}                                                                           [t/kqp_bl      [t/ke_bl]]
-    ^{:doc/actions [{}]}                                                                           [t/kqp_cm      [t/ke_cm]]
-    ^{:doc/actions [{}]}                                                                           [t/kqp_pe      [t/ke_pe]]
-    ^{:doc/actions [{}]}                                                                           [t/kqp_sl      [t/ke_sl]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_ob      [t/kq_ob]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_cb      [t/kq_cb]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_sc      [t/kq_sc]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_qu      [t/kq_qu]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_bl      [t/kq_bl]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_cm      [t/kq_cm]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_pe      [t/kq_pe]]
+    ^{:doc/actions [{}]}                                                                           [t/kqp_sl      [t/kq_sl]]
 
     ^{:doc/actions [{}]}                                                                           [t/kqrp_ob     [t/kqr_ob]]
     ^{:doc/actions [{}]}                                                                           [t/kqrp_cb     [t/kqr_cb]]
