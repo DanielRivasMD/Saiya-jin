@@ -527,6 +527,7 @@
   [:#Preturn_or_enter [:!Tl] :term]
   ^{:doc/actions
     [{:program "term", :action "fzf file widget"}
+     {:program "helix-popup", :action "open vertically"}
      {:program "helix-common", :action "split right", :exec ["vsplit"]}
      {:program "lazygit",
       :action "decrease content",
@@ -535,18 +536,19 @@
   [:#Pright_shift [:!Tv] :term]
   ^{:doc/actions
     [{:program "term", :action "zoxide widget"}
+     {:program "helix-popup", :action "open horizontally"}
      {:program "helix-common", :action "split down", :exec ["hsplit"]}
      {:program "micro", :action "split down", :exec ["HSplit"]}]}
   [:#Pright_option [:!Ts] :term]
   ^{:doc/actions
     [{:program "term", :action "fzf cd widget"}
-     {:program "helix-popup", :action "open split right"}
      {:program "helix-common", :action "split close", :exec ["wonly"]}
      {:program "lazygit", :action "zoom", :exec ["nextScreenMode"]}
      {:program "micro", :action "close window", :exec ["Unsplit"]}]}
   [:#Pright_command [:!Tr] :term]
   ^{:doc/actions
     [{:program "term", :action "navi widget"}
+     {:program "helix-popup", :action "toggle preview"}
      {:program "helix-common",
       :action "last file",
       :exec ["goto_last_accessed_file"]}
@@ -1096,7 +1098,7 @@
   [:!CS#Pslash [:!CSslash]]
   ^{:doc/actions [{}]}
   [:!C#Pdelete_or_backspace [:!Cdelete_or_backspace]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "helix-popup", :action "open background"}]}
   [:!C#Preturn_or_enter [:!Creturn_or_enter]]
   ^{:doc/actions [{}]}
   [:!C#Pright_shift [:!Cright_shift]]
@@ -2234,21 +2236,21 @@
   ^{:doc/actions [{}]}
   [:!QR#Pdown_arrow [:!QRdown_arrow]]
   ^{:doc/actions [{}]}
-  [:!Q#Popen_bracket [:!Eopen_bracket]]
+  [:!Q#Popen_bracket [:!Qopen_bracket]]
   ^{:doc/actions [{}]}
-  [:!Q#Pclose_bracket [:!Eclose_bracket]]
+  [:!Q#Pclose_bracket [:!Qclose_bracket]]
   ^{:doc/actions [{}]}
-  [:!Q#Psemicolon [:!Esemicolon]]
+  [:!Q#Psemicolon [:!Qsemicolon]]
   ^{:doc/actions [{}]}
-  [:!Q#Pquote [:!Equote]]
+  [:!Q#Pquote [:!Qquote]]
   ^{:doc/actions [{}]}
-  [:!Q#Pbackslash [:!Ebackslash]]
+  [:!Q#Pbackslash [:!Qbackslash]]
   ^{:doc/actions [{}]}
-  [:!Q#Pcomma [:!Ecomma]]
+  [:!Q#Pcomma [:!Qcomma]]
   ^{:doc/actions [{}]}
-  [:!Q#Pperiod [:!Eperiod]]
+  [:!Q#Pperiod [:!Qperiod]]
   ^{:doc/actions [{}]}
-  [:!Q#Pslash [:!Eslash]]
+  [:!Q#Pslash [:!Qslash]]
   ^{:doc/actions [{}]}
   [:!QR#Popen_bracket [:!QRopen_bracket]]
   ^{:doc/actions [{}]}
@@ -2271,26 +2273,14 @@
   [:!Q#Preturn_or_enter [:!Qreturn_or_enter]]
   ^{:doc/actions [{}]}
   [:!Q#Pright_option [:!Qright_option]]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "save jump",
-      :exec ["save_selection"]}]}
-  [:!Q#Pspacebar [:!Sf14] :term]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "jump forward",
-      :exec ["jump_forward"]}]}
-  [:!Q#Pleft_command [:!Sf15] :term]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "jumplist picker",
-      :exec ["jumplist_picker"]}]}
-  [:!Q#Pleft_option [:!Sf16] :term]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "jump backqard",
-      :exec ["jump_backward"]}]}
-  [:!Q#Pleft_control [:!Sf17] :term]
+  ^{:doc/actions [{}]}
+  [:!Q#Pspacebar [:!Qspacebar]]
+  ^{:doc/actions [{}]}
+  [:!Q#Pleft_command [:!Qleft_command]]
+  ^{:doc/actions [{}]}
+  [:!Q#Pleft_option [:!Qleft_option]]
+  ^{:doc/actions [{}]}
+  [:!Q#Pleft_control [:!Qleft_control]]
   ^{:doc/actions [{}]}
   [:!Q#Pleft_shift [:!Qleft_shift]]
   ^{:doc/actions [{}]}
@@ -2736,11 +2726,8 @@
       :action "delete line start",
       :exec ["SelectToStartOfLine,Delete"]}]}
   [:!R#Pleft_command [:!Wu]]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "goto column",
-      :exec ["goto_column"]}]}
-  [:!R#Pleft_option [:!Sf4]]
+  ^{:doc/actions [{}]}
+  [:!R#Pleft_option [:!Rleft_option]]
   ^{:doc/actions
     [{:program "helix-common",
       :action "delete prev word",
@@ -2754,11 +2741,8 @@
       :action "delete prev char",
       :exec ["delete_char_backward"]}]}
   [:!R#Pleft_shift [:delete_or_backspace]]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "go to column",
-      :exec ["goto_line"]}]}
-  [:!R#Pcaps_lock [:!Sf5]]
+  ^{:doc/actions [{}]}
+  [:!R#Pcaps_lock [:!Rcaps_lock]]
   ^{:doc/actions [{}]}
   [:!R#Ptab [:!Rtab]]
   ^{:doc/actions [{}]}
@@ -2901,11 +2885,11 @@
   [:!ER#Pslash [:!ERslash]]
   ^{:doc/actions [{}]}
   [:!E#Pdelete_or_backspace [:!Edelete_or_backspace]]
-  ^{:doc/actions [{}]}
-  [:!E#Preturn_or_enter [:!Qreturn_or_enter]]
   ^{:doc/actions
     [{:program "term", :action "cli flag", :sequence "` --`"}]}
-  [:!E#Pright_command [:spacebar :hyphen :hyphen]]
+  [:!E#Preturn_or_enter [:spacebar :hyphen :hyphen]]
+  ^{:doc/actions [{}]}
+  [:!E#Pright_command [:!Eright_command]]
   ^{:doc/actions [{:program "System", :action "prompt espanso"}]}
   [:!E#Pspacebar [:!Espacebar]]
   ^{:doc/actions
@@ -2935,14 +2919,26 @@
   [:!ER#Pdelete_or_backspace [:!ERdelete_or_backspace]]
   ^{:doc/actions [{}]}
   [:!ER#Preturn_or_enter [:!ERreturn_or_enter]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pspacebar [:!ERspacebar]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pleft_command [:!ERleft_command]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pleft_option [:!ERleft_option]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pleft_control [:!ERleft_control]]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "save jump",
+      :exec ["save_selection"]}]}
+  [:!ER#Pspacebar [:!Sf14] :term]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "jump forward",
+      :exec ["jump_forward"]}]}
+  [:!ER#Pleft_command [:!Sf15] :term]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "jumplist picker",
+      :exec ["jumplist_picker"]}]}
+  [:!ER#Pleft_option [:!Sf16] :term]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "jump backward",
+      :exec ["jump_backward"]}]}
+  [:!ER#Pleft_control [:!Sf17] :term]
   ^{:doc/actions [{}]}
   [:!ER#Pleft_shift [:!ERleft_shift]]
   ^{:doc/actions [{}]}
