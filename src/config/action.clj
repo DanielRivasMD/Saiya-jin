@@ -78,6 +78,7 @@
 
 (def ke_db (c/mk c/K c/E c/_db))
 (def ke_re (c/mk c/K c/E c/_re))
+(def ke_rc (c/mk c/K c/E c/_rc))
 (def ke_sp (c/mk c/K c/E c/_sp))
 (def ke_lc (c/mk c/K c/E c/_lc))
 (def ke_lo (c/mk c/K c/E c/_lo))
@@ -97,7 +98,6 @@
 (def kq_db (c/mk c/K c/Q c/_db))
 (def kq_re (c/mk c/K c/Q c/_re))
 (def kq_ro (c/mk c/K c/Q c/_ro))
-(def kq_rc (c/mk c/K c/Q c/_rc))
 (def kq_sp (c/mk c/K c/Q c/_sp))
 (def kq_lc (c/mk c/K c/Q c/_lc))
 (def kq_lo (c/mk c/K c/Q c/_lo))
