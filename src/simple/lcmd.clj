@@ -91,7 +91,7 @@
 
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/kcp_db      [a/kc_db]]
-    ^{:doc/actions [{}]}                                                                           [a/kcp_re      [a/kc_re]]
+    ^{:doc/actions [{:program c/hp,    :action "open background"}]}                                [a/kcp_re      [a/kc_re]]
     ^{:doc/actions [{}]}                                                                           [a/kcp_rs      [a/kc_rs]]
     ^{:doc/actions [{}]}                                                                           [a/kcp_ro      [a/kc_ro]]
     ^{:doc/actions [{}]}                                                                           [a/kcp_rc      [a/kc_rc]]
