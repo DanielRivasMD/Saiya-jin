@@ -114,6 +114,8 @@
 (def mc-cut-line             ["CutLine"])
 (def mc-shell                ["ShellMode"])
 
+(def sr-quit                 ["Quit"])
+
 (def ze-half-down            ["HalfPageScrollDown;"])
 (def ze-half-up              ["HalfPageScrollUp;"])
 
@@ -238,7 +240,8 @@
     ^{:doc/actions [{}]}                                                                           [b/kop_o       [f/ko_f6]      c/term]
     ^{:doc/actions [{}]}                                                                           [b/kop_p       [b/ko_p]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "quit",               :exec hc-quit}
-                    {:program c/mc,    :action "quit",               :exec mc-quit}]}              [b/kop_q       [b/ko_q]       c/term]
+                    {:program c/mc,    :action "quit",               :exec mc-quit}
+                    {:program c/sr,    :action "quit",               :exec sr-quit}]}              [b/kop_q       [b/ko_q]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "reload buffers",     :exec hc-reload}]}            [b/kop_r       [b/ko_r]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "save & quit",        :exec hc-write-quit}
                     {:program c/mc,    :action "save & quit",        :exec mc-write-quit}]}        [b/kop_s       [b/ko_s]       c/term]
