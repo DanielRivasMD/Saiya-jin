@@ -64,6 +64,7 @@
 (def _esc "escape")
 (def _tab "tab")
 (def _us "non_us_pound")
+(def _grave "grave_accent_and_tilde")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -90,6 +91,7 @@
 (def krp_us (mk K R P _us))
 (def kep_us (mk K E P _us))
 (def kqp_us (mk K Q P _us))
+(def ksp_grave (mk K S P _grave))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; primitive glyphs
