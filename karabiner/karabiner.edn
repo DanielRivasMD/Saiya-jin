@@ -424,7 +424,10 @@
       :exec ["goto_prev_comment"]}
      {:program "lazygit",
       :action "jump prev block",
-      :exec ["prevBlock-alt2"]}]}
+      :exec ["prevBlock-alt2"]}
+     {:program "serpl",
+      :action "loop backward",
+      :exec ["BackLoopOverTabs"]}]}
   [:#Pup_arrow [:!Tn] :term]
   ^{:doc/actions
     [{:program "helix-common",
@@ -432,7 +435,10 @@
       :exec ["goto_next_comment"]}
      {:program "lazygit",
       :action "jump next block",
-      :exec ["nextBlock-alt2"]}]}
+      :exec ["nextBlock-alt2"]}
+     {:program "serpl",
+      :action "loop forward",
+      :exec ["LoopOverTabs"]}]}
   [:#Pdown_arrow [:!Tp] :term]
   ^{:doc/actions
     [{:program "helix-common", :action "undo", :exec ["undo"]}
@@ -523,7 +529,8 @@
       :action "file picker",
       :exec ["file_picker"]}
      {:program "lazygit", :action "commit", :exec ["commitChanges"]}
-     {:program "micro", :action "open file", :exec ["OpenFile"]}]}
+     {:program "micro", :action "open file", :exec ["OpenFile"]}
+     {:program "serpl", :action "help", :exec ["ShowHelp"]}]}
   [:#Preturn_or_enter [:!Tl] :term]
   ^{:doc/actions
     [{:program "term", :action "fzf file widget"}
@@ -552,9 +559,8 @@
      {:program "helix-common",
       :action "last file",
       :exec ["goto_last_accessed_file"]}
-     {:program "lazygit",
-      :action "recent",
-      :exec ["openRecentRepos"]}]}
+     {:program "lazygit", :action "recent", :exec ["openRecentRepos"]}
+     {:program "serpl", :action "replace", :exec ["ProcessReplace"]}]}
   [:#Pspacebar [:!Tt] :term]
   ^{:doc/actions [{}]}
   [:!S#Pdelete_or_backspace [:!Sdelete_or_backspace]]
@@ -1849,7 +1855,8 @@
     [{:program "helix-common",
       :action "quit",
       :exec ["normal_mode" ":quit-all"]}
-     {:program "micro", :action "quit", :exec ["QuitAll"]}]}
+     {:program "micro", :action "quit", :exec ["QuitAll"]}
+     {:program "serpl", :action "quit", :exec ["Quit"]}]}
   [:!O#Pq [:!Oq] :term]
   ^{:doc/actions
     [{:program "helix-common",
@@ -3104,9 +3111,9 @@
 {:des "Additional keys",
  :rules
  [[:#Pdelete_or_backspace [:grave_accent_and_tilde] :pro]
-  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :pro]
+  [:!R#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :pro]
   [:#Pdelete_or_backspace [:grave_accent_and_tilde] :air]
-  [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :air]
+  [:!R#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :air]
   [:f1 :display_brightness_decrement :air]
   [:f2 :display_brightness_increment :air]
   [:f3 :illumination_decrement :air]
