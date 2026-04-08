@@ -64,6 +64,11 @@
 (def mc-unsplit              ["Unsplit"])
 (def mc-vsplit               ["VSplit"])
 
+(def sr-loop-forward         ["LoopOverTabs"])
+(def sr-loop-backward        ["BackLoopOverTabs"])
+(def sr-replace              ["ProcessReplace"])
+(def sr-help                 ["ShowHelp"])
+
 (defn z-mode []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -79,9 +84,11 @@
                     {:program c/lg,    :action "jump next tab",      :exec lg-next-tab}
                     {:program c/mc,    :action "jump next buffer",   :exec mc-next-tab}]}          [r/kp_ar       [b/kt_f]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "prev comment",       :exec hc-prev-comm}
-                    {:program c/lg,    :action "jump prev block",    :exec lg-prev-block}]}        [r/kp_au       [b/kt_n]       c/term]
+                    {:program c/lg,    :action "jump prev block",    :exec lg-prev-block}
+                    {:program c/sr,    :action "loop backward",      :exec sr-loop-backward}]}     [r/kp_au       [b/kt_n]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "next comment",       :exec hc-next-comm}
-                    {:program c/lg,    :action "jump next block",    :exec lg-next-block}]}        [r/kp_ad       [b/kt_p]       c/term]
+                    {:program c/lg,    :action "jump next block",    :exec lg-next-block}
+                    {:program c/sr,    :action "loop forward",       :exec sr-loop-forward}]}      [r/kp_ad       [b/kt_p]       c/term]
 
     ^{:doc/actions [{:program c/hc,    :action "undo",               :exec hc-undo}
                     {:program c/mc,    :action "undo",               :exec mc-undo}]}              [r/ksp_al      [r/ko_pu]       c/term]
@@ -124,7 +131,8 @@
     ^{:doc/actions [{:program c/tm,    :action "clear screen"}
                     {:program c/hc,    :action "file picker",        :exec hc-file-picker}
                     {:program c/lg,    :action "commit",             :exec lg-commit}
-                    {:program c/mc,    :action "open file",          :exec mc-open-file}]}         [a/kp_re       [b/kt_l]       c/term]
+                    {:program c/mc,    :action "open file",          :exec mc-open-file}
+                    {:program c/sr,    :action "help",               :exec sr-help}]}              [a/kp_re       [b/kt_l]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "fzf file widget"}
                     {:program c/hp,    :action "open vertically"}
                     {:program c/hc,    :action "split right",        :exec hc-vsplit}
@@ -141,7 +149,8 @@
     ^{:doc/actions [{:program c/tm,    :action "navi widget"}
                     {:program c/hp,    :action "toggle preview"}
                     {:program c/hc,    :action "last file",          :exec hc-last-tab}
-                    {:program c/lg,    :action "recent",             :exec lg-recent}]}            [a/kp_sp       [b/kt_t]       c/term]
+                    {:program c/lg,    :action "recent",             :exec lg-recent}
+                    {:program c/sr,    :action "replace",            :exec sr-replace}]}           [a/kp_sp       [b/kt_t]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
