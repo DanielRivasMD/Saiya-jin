@@ -19,11 +19,11 @@
    [;
     ; keys - MacPro
     [:#Pdelete_or_backspace [:grave_accent_and_tilde] :pro]                                               ; '`'
-    [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :pro]                                           ; '~'
+    [:!R#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :pro]                                           ; '~'
 
     ; keys - MacAir
     [:#Pdelete_or_backspace [:grave_accent_and_tilde] :air]                                               ; '`'
-    [:!S#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :air]                                           ; '~'
+    [:!R#Pdelete_or_backspace [:!Sgrave_accent_and_tilde] :air]                                           ; '~'
     [:f1 :display_brightness_decrement :air]
     [:f2 :display_brightness_increment :air]
     [:f3 :illumination_decrement :air]
