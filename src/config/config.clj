@@ -27,6 +27,7 @@
 (def hp  "helix-popup")
 (def hs  "helix-select")
 (def lg  "lazygit")
+(def sr  "serpl")
 (def tm  "term")
 (def zj  "zellij-shared")
 (def ze  "zellij-enter")
