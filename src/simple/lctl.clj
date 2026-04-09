@@ -20,16 +20,9 @@
 (def hc-split-right          ["jump_view_right"])
 (def hc-split-up             ["jump_view_up"])
 (def hc-split-down           ["jump_view_down"])
-(def hc-jump                 ["goto_word"])
-(def hc-scroll-up            ["scroll_up"])
-(def hc-scroll-down          ["scroll_down"])
-
-(def lg-scroll-up            ["scrollUpMain-alt2"])
-(def lg-scroll-down          ["scrollDownMain-alt2"])
 
 (def mc-prev-split           ["PreviousSplit"])
 (def mc-next-split           ["NextSplit"])
-(def mc-jump                 ["JumpLine"])
 
 (defn lctl []
 
@@ -50,10 +43,8 @@
 
     ^{:doc/actions [{}]}                                                                           [r/ktsp_al     [r/kts_al]]
     ^{:doc/actions [{}]}                                                                           [r/ktsp_ar     [r/kts_ar]]
-    ^{:doc/actions [{:program c/hc,    :action "scroll up",          :exec hc-scroll-up}
-                    {:program c/lg,    :action "scroll up",          :exec lg-scroll-up}]}         [r/ktsp_au     [b/kt_x]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "scroll down",        :exec hc-scroll-down}
-                    {:program c/lg,    :action "scroll down",        :exec lg-scroll-down}]}       [r/ktsp_ad     [b/kt_y]       c/term]
+    ^{:doc/actions [{}]}                                                                           [r/ktsp_au     [r/kts_au]]
+    ^{:doc/actions [{}]}                                                                           [r/ktsp_ad     [r/kts_ad]]
 
     ; technical glyphs
     ^{:doc/actions [{}]}                                                                           [t/ktp_ob      [t/kt_ob]]
@@ -80,8 +71,7 @@
     ^{:doc/actions [{}]}                                                                           [a/ktp_rs      [a/kt_rs]]
     ^{:doc/actions [{}]}                                                                           [a/ktp_ro      [a/kt_ro]]
     ^{:doc/actions [{}]}                                                                           [a/ktp_rc      [a/kt_rc]]
-    ^{:doc/actions [{:program c/hc     :action "jumper"              :exec hc-jump}
-                    {:program c/mc     :action "jumper"              :exec mc-jump}]}              [a/ktp_sp      [a/kt_sp]]
+    ^{:doc/actions [{}]}                                                                           [a/ktp_sp      [a/kt_sp]]
 
     ^{:doc/actions [{}]}                                                                           [a/ktsp_db     [a/kts_db]]
     ^{:doc/actions [{}]}                                                                           [a/ktsp_re     [a/kts_re]]
