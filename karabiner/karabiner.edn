@@ -549,9 +549,9 @@
   [:#Pright_option [:!Ts] :term]
   ^{:doc/actions
     [{:program "term", :action "fzf cd widget"}
-     {:program "helix-common", :action "split close", :exec ["wonly"]}
+     {:program "helix-common", :action "unsplit", :exec ["wonly"]}
      {:program "lazygit", :action "zoom", :exec ["nextScreenMode"]}
-     {:program "micro", :action "close window", :exec ["Unsplit"]}]}
+     {:program "micro", :action "split close", :exec ["Unsplit"]}]}
   [:#Pright_command [:!Tr] :term]
   ^{:doc/actions
     [{:program "term", :action "navi widget"}
@@ -1965,7 +1965,11 @@
       :exec ["global_search"]}
      {:program "micro", :action "global search", :exec ["Find"]}]}
   [:!OS#Pf [:!OSf5] :term]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "git diff",
+      :exec
+      [":sh zellij run --name git-diff --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- git diff %{buffer_name} | delta --paging=always"]}]}
   [:!OS#Pg [:!OSg] :term]
   ^{:doc/actions [{}]}
   [:!OS#Ph [:!OSh] :term]
@@ -2907,7 +2911,7 @@
   [:!E#Pspacebar [:!Espacebar]]
   ^{:doc/actions
     [{:program "helix-common",
-      :action "changed file picker",
+      :action "buffer picker",
       :exec ["buffer_picker"]}]}
   [:!E#Pleft_command [:!Th] :term]
   ^{:doc/actions
@@ -2919,7 +2923,7 @@
   ^{:doc/actions
     [{:program "term", :action "fzf history"}
      {:program "helix-common",
-      :action "buffer picker",
+      :action "change picker",
       :exec ["changed_file_picker"]}]}
   [:!E#Pleft_control [:!To] :term]
   ^{:doc/actions [{}]}
@@ -3152,17 +3156,8 @@
       :action "zellij escape",
       :exec ["SwitchToMode \"Normal\";"]}]}
   [:##caps_lock [:!OTleft_command] nil {:alone [:escape]}]
-  ^{:doc/actions
-    [{:program "helix-insert",
-      :action "mode normal",
-      :exec ["normal_mode"]}
-     {:program "helix-normal",
-      :action "mode insert",
-      :exec ["insert_mode"]}
-     {:program "helix-select",
-      :action "mode normal",
-      :exec ["normal_mode"]}]}
-  [:#Pright_control [:right_control] nil {:alone [:!Tf12]}]
+  ^{:doc/actions [{}]}
+  [:#Pright_control [:right_control]]
   ^{:doc/actions [{:program "Alfred", :action "window switcher"}]}
   [:#Pleft_control [:#Pleft_control] nil {:alone [:!WQ#Pnon_us_pound]}]
   ^{:doc/actions
