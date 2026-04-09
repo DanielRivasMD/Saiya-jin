@@ -24,9 +24,18 @@
 (def hc-select-line-end      ["select_mode", "goto_line_end", "MODE"])
 (def hc-select-file-start    ["extend_to_file_start"])
 (def hc-select-file-end      ["extend_to_file_end"])
+(def hc-scroll-up            ["scroll_up"])
+(def hc-scroll-down          ["scroll_down"])
+(def hc-jump                 ["goto_word"])
+
+(def hi-completion           ["completion"])
+(def hn-hover                ["hover"])
+(def hs-hover                ["hover"])
 
 (def lg-top                  ["gotoTop"])
 (def lg-bottom               ["gotoBottom"])
+(def lg-scroll-up            ["scrollUpMain-alt2"])
+(def lg-scroll-down          ["scrollDownMain-alt2"])
 
 (def mc-line-start           ["StartOfLine"])
 (def mc-line-end             ["EndOfLine"])
@@ -36,6 +45,7 @@
 (def mc-select-line-end      ["SelectToEndOfLine"])
 (def mc-select-file-start    ["SelectToStart"])
 (def mc-select-file-end      ["SelectToEnd"])
+(def mc-jump                 ["JumpLine"])
 
 (def ze-page-up              ["PageScrollUp;"])
 (def ze-page-down            ["PageScrollDown;"])
@@ -90,12 +100,18 @@
     ^{:doc/actions [{}]}                                                                           [t/kcsp_sl     [t/kcs_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{}]}                                                                           [a/kcp_db      [a/kc_db]]
-    ^{:doc/actions [{:program c/hp,    :action "open background"}]}                                [a/kcp_re      [a/kc_re]]
-    ^{:doc/actions [{}]}                                                                           [a/kcp_rs      [a/kc_rs]]
+    ^{:doc/actions [{:program c/hc,    :action "scroll up",          :exec hc-scroll-up}
+                    {:program c/lg,    :action "scroll up",          :exec lg-scroll-up}]}         [a/kcp_db      [b/kt_x]       c/term]
+    ^{:doc/actions [{:program c/hi,    :action "completion",         :exec hi-completion}
+                    {:program c/hn,    :action "hover",              :exec hn-hover}
+                    {:program c/hs,    :action "hover",              :exec hs-hover}
+                    {:program c/hp,    :action "open background"}]}                                [a/kcp_re      [a/kc_re]]
+    ^{:doc/actions [{:program c/hc,    :action "scroll down",        :exec hc-scroll-down}
+                    {:program c/lg,    :action "scroll down",        :exec lg-scroll-down}]}       [a/kcp_rs      [b/kt_y]       c/term]
     ^{:doc/actions [{}]}                                                                           [a/kcp_ro      [a/kc_ro]]
     ^{:doc/actions [{}]}                                                                           [a/kcp_rc      [a/kc_rc]]
-    ^{:doc/actions [{}]}                                                                           [a/kcp_sp      [a/kc_sp]]
+    ^{:doc/actions [{:program c/hc     :action "jumper"              :exec hc-jump}
+                    {:program c/mc     :action "jumper"              :exec mc-jump}]}              [a/kcp_sp      [a/kt_sp]]
 
     ^{:doc/actions [{}]}                                                                           [a/kcsp_db     [a/kcs_db]]
     ^{:doc/actions [{}]}                                                                           [a/kcsp_re     [a/kcs_re]]
