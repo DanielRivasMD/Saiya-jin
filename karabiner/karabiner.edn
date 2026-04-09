@@ -1102,18 +1102,38 @@
   [:!CS#Pperiod [:!CSperiod]]
   ^{:doc/actions [{}]}
   [:!CS#Pslash [:!CSslash]]
-  ^{:doc/actions [{}]}
-  [:!C#Pdelete_or_backspace [:!Cdelete_or_backspace]]
-  ^{:doc/actions [{:program "helix-popup", :action "open background"}]}
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "scroll up",
+      :exec ["scroll_up"]}
+     {:program "lazygit",
+      :action "scroll up",
+      :exec ["scrollUpMain-alt2"]}]}
+  [:!C#Pdelete_or_backspace [:!Tx] :term]
+  ^{:doc/actions
+    [{:program "helix-insert",
+      :action "completion",
+      :exec ["completion"]}
+     {:program "helix-normal", :action "hover", :exec ["hover"]}
+     {:program "helix-select", :action "hover", :exec ["hover"]}
+     {:program "helix-popup", :action "open background"}]}
   [:!C#Preturn_or_enter [:!Creturn_or_enter]]
-  ^{:doc/actions [{}]}
-  [:!C#Pright_shift [:!Cright_shift]]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "scroll down",
+      :exec ["scroll_down"]}
+     {:program "lazygit",
+      :action "scroll down",
+      :exec ["scrollDownMain-alt2"]}]}
+  [:!C#Pright_shift [:!Ty] :term]
   ^{:doc/actions [{}]}
   [:!C#Pright_option [:!Cright_option]]
   ^{:doc/actions [{}]}
   [:!C#Pright_command [:!Cright_command]]
-  ^{:doc/actions [{}]}
-  [:!C#Pspacebar [:!Cspacebar]]
+  ^{:doc/actions
+    [{:program "helix-common", :action "jumper", :exec ["goto_word"]}
+     {:program "micro", :action "jumper", :exec ["JumpLine"]}]}
+  [:!C#Pspacebar [:!Tspacebar]]
   ^{:doc/actions [{}]}
   [:!CS#Pdelete_or_backspace [:!CSdelete_or_backspace]]
   ^{:doc/actions [{}]}
@@ -1320,22 +1340,10 @@
   [:!TS#Pleft_arrow [:!TSleft_arrow]]
   ^{:doc/actions [{}]}
   [:!TS#Pright_arrow [:!TSright_arrow]]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "scroll up",
-      :exec ["scroll_up"]}
-     {:program "lazygit",
-      :action "scroll up",
-      :exec ["scrollUpMain-alt2"]}]}
-  [:!TS#Pup_arrow [:!Tx] :term]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "scroll down",
-      :exec ["scroll_down"]}
-     {:program "lazygit",
-      :action "scroll down",
-      :exec ["scrollDownMain-alt2"]}]}
-  [:!TS#Pdown_arrow [:!Ty] :term]
+  ^{:doc/actions [{}]}
+  [:!TS#Pup_arrow [:!TSup_arrow]]
+  ^{:doc/actions [{}]}
+  [:!TS#Pdown_arrow [:!TSdown_arrow]]
   ^{:doc/actions [{}]}
   [:!T#Popen_bracket [:!Topen_bracket]]
   ^{:doc/actions [{}]}
@@ -1378,9 +1386,7 @@
   [:!T#Pright_option [:!Tright_option]]
   ^{:doc/actions [{}]}
   [:!T#Pright_command [:!Tright_command]]
-  ^{:doc/actions
-    [{:program "helix-common", :action "jumper", :exec ["goto_word"]}
-     {:program "micro", :action "jumper", :exec ["JumpLine"]}]}
+  ^{:doc/actions [{}]}
   [:!T#Pspacebar [:!Tspacebar]]
   ^{:doc/actions [{}]}
   [:!TS#Pdelete_or_backspace [:!TSdelete_or_backspace]]
