@@ -24,6 +24,7 @@
 (def hc-select-next-word     ["extend_next_word_end"])
 (def hc-format               [":format"])
 (def hc-git-blame            [":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"])
+(def hc-git-diff             [":sh zellij run --name git-diff --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- git diff %{buffer_name} | delta --paging=always"])
 (def hc-copy                 ["yank_to_clipboard"])
 (def hc-spawn-multi          ["search_selection", "extend_search_next"])
 (def hc-comment              ["toggle_comments"])
@@ -270,7 +271,7 @@
     ^{:doc/actions [{:program c/hc,    :action "file explorer",      :exec hc-yazi}]}              [b/kosp_e      [b/kos_e]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "global search",      :exec hc-global-search}
                     {:program c/mc,    :action "global search",      :exec mc-global-search}]}     [b/kosp_f      [f/kos_f5]     c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_g      [b/kos_g]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "git diff",           :exec hc-git-diff}]}          [b/kosp_g      [b/kos_g]      c/term]
     ^{:doc/actions [{}]}                                                                           [b/kosp_h      [b/kos_h]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "indent",             :exec hc-indent}
                     {:program c/mc,    :action "indent",             :exec mc-indent}]}            [b/kosp_i      [b/kos_i]      c/term]
