@@ -22,10 +22,6 @@
 (def zx-escape               ["SwitchToMode \"Normal\";"])
 (def zj-history              ["EditScrollback; SwitchToMode \"Normal\";"])
 
-(def hi-normal               ["normal_mode"])
-(def hn-insert               ["insert_mode"])
-(def hs-normal               ["normal_mode"])
-
 (defn keymod []
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -43,9 +39,7 @@
                     {:program c/zx,    :action "zellij escape",      :exec zx-escape}]}            [c/kh_caps [a/kotc]      nil       {:alone [c/k_esc]}]
 
     ; grave
-    ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hi-normal}
-                    {:program c/hn,    :action "mode insert",        :exec hn-insert}
-                    {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [b/kp_rt   [b/k_rt]      nil       {:alone [f/kt_f12]}]
+    ^{:doc/actions [{}]}                                                                           [b/kp_rt   [b/k_rt]]
 
     ; lefts
     ^{:doc/actions [{:program c/alf,   :action "window switcher"}]}                                [a/kp_lt   [a/kp_lt]     nil       {:alone [c/kwqp_us]}]
