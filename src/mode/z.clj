@@ -143,9 +143,9 @@
                     {:program c/hc,    :action "split down",         :exec hc-hsplit}
                     {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/kp_ro       [b/kt_s]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "fzf cd widget"}
-                    {:program c/hc,    :action "split close",        :exec hc-wonly}
+                    {:program c/hc,    :action "unsplit",            :exec hc-wonly}
                     {:program c/lg,    :action "zoom",               :exec lg-zoom}
-                    {:program c/mc,    :action "close window",       :exec mc-unsplit}]}           [a/kp_rc       [b/kt_r]       c/term]
+                    {:program c/mc,    :action "split close",        :exec mc-unsplit}]}           [a/kp_rc       [b/kt_r]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "navi widget"}
                     {:program c/hp,    :action "toggle preview"}
                     {:program c/hc,    :action "last file",          :exec hc-last-tab}
