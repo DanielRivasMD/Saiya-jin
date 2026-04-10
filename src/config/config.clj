@@ -87,8 +87,15 @@
 (def koc_lock (mk K O C _lock))
 (def ktc_lock (mk K T C _lock))
 (def kotc_lock (mk K O T C _lock))
-(def kr_lock (mk K R _lock))
+
+(def ks_lock (mk K S _lock))
+(def kos_lock (mk K O S _lock))
+(def kts_lock (mk K T S _lock))
+(def kcs_lock (mk K C S _lock))
+(def kots_lock (mk K O T S _lock))
 (def kocs_lock (mk K O C S _lock))
+(def ktcs_lock (mk K T C S _lock))
+(def kotcs_lock (mk K O T C S _lock))
 
 (def ksp_grave (mk K S P _grave))
 
@@ -199,13 +206,15 @@
 ; compound glyphs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(def koc_sp (mk O C _sp))
+(def kocp_sp (mk O C P _sp ))
+
+(def ktc_sp (mk T C _sp))
+(def ktcp_sp (mk T C P _sp ))
+
 (def kew_rs (mk K E W _rs))
 (def keq_rs (mk K E Q _rs))
 (def kewq_rs (mk K E W Q _rs))
-
-(def kwq_ro (mk K W Q _ro))
-
-(def kew_rc (mk K E W _rc))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
