@@ -913,17 +913,17 @@
   ^{:doc/actions [{}]}
   [:!OTC#Pslash [:!OTCslash]]
   ^{:doc/actions [{:program "System", :action "control center"}]}
-  [:!OTC#Pdelete_or_backspace [:!OTCkeypad_num_lock]]
+  [:!OTC#Pdelete_or_backspace [:!Tf13]]
   ^{:doc/actions [{:program "System", :action "speak"}]}
-  [:!OTC#Preturn_or_enter [:!OTCreturn_or_enter]]
-  ^{:doc/actions [{}]}
-  [:!OTC#Pright_shift [:!OTC#Pright_shift]]
+  [:!OTC#Preturn_or_enter [:!Tf14]]
+  ^{:doc/actions [{:program "System", :action "input keyboard"}]}
+  [:!OTC#Pright_shift [:!Tf15]]
   ^{:doc/actions [{}]}
   [:!OTC#Pright_option [:!OTC#Pright_option]]
   ^{:doc/actions [{}]}
   [:!OTC#Pright_command [:!OTC#Pright_command]]
   ^{:doc/actions [{:program "System", :action "listen"}]}
-  [:!OTC#Pspacebar [:!TCkeypad_num_lock]]
+  [:!OTC#Pspacebar [:!Tf16]]
   ^{:doc/actions [{}]}
   [:!OTC#P1 [:!OTC1]]
   ^{:doc/actions [{}]}
@@ -3174,7 +3174,7 @@
       :exec ["EditScrollback; SwitchToMode \"Normal\";"]}]}
   [:#Pright_shift [:right_shift] :term {:alone [:!TSf12]}]
   ^{:doc/actions [{:program "System", :action "browser input"}]}
-  [:#Pright_shift [:right_shift] nil {:alone [:!Rkeypad_num_lock]}]
+  [:#Pright_shift [:right_shift] nil {:alone [:!Skeypad_num_lock]}]
   ^{:doc/actions [{:program "Alfred", :action "paste"}]}
   [:#Pright_option [:right_option] nil {:alone [:!Okeypad_num_lock]}]
   ^{:doc/actions [{:program "Alfred", :action "clipboard select"}]}
