@@ -886,23 +886,25 @@
   [:#Pright_control [:right_control]]]}
 {:des "Joker Mode",
  :rules
- [^{:doc/actions [{}]}
+ [^{:doc/actions [{:program "System", :action "left space"}]}
   [:!OTC#Pleft_arrow [:!OTCleft_arrow]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "System", :action "right space"}]}
   [:!OTC#Pright_arrow [:!OTCright_arrow]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "System", :action "focus dock"}]}
   [:!OTC#Pup_arrow [:!OTCup_arrow]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "System", :action "focus menu"}]}
   [:!OTC#Pdown_arrow [:!OTCdown_arrow]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "top center sixth"}]}
   [:!OTC#Popen_bracket [:!OTCopen_bracket]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "top right sixth"}]}
   [:!OTC#Pclose_bracket [:!OTCclose_bracket]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "bottom left sixth"}]}
   [:!OTC#Psemicolon [:!OTCsemicolon]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions
+    [{:program "Rectangle", :action "bottom center sixth"}]}
   [:!OTC#Pquote [:!OTCquote]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions
+    [{:program "Rectangle", :action "bottom right sixth"}]}
   [:!OTC#Pbackslash [:!OTCbackslash]]
   ^{:doc/actions [{}]}
   [:!OTC#Pcomma [:!OTCcomma]]
@@ -921,7 +923,7 @@
   ^{:doc/actions [{}]}
   [:!OTC#Pright_command [:!OTC#Pright_command]]
   ^{:doc/actions [{:program "System", :action "listen"}]}
-  [:!OTC#Pspacebar [:!W#Pnon_us_pound]]
+  [:!OTC#Pspacebar [:!TCkeypad_num_lock]]
   ^{:doc/actions [{}]}
   [:!OTC#P1 [:!OTC1]]
   ^{:doc/actions [{}]}
@@ -946,57 +948,57 @@
   [:!OTC#Phyphen [:!OTChyphen]]
   ^{:doc/actions [{}]}
   [:!OTC#Pequal_sign [:!OTCequal_sign]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "System", :action "app windows"}]}
   [:!OTC#Pa [:!OTCa]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "last third"}]}
   [:!OTC#Pb [:!OTCb]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "first third"}]}
   [:!OTC#Pc [:!OTCc]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "System", :action "show desktop"}]}
   [:!OTC#Pd [:!OTCd]]
   ^{:doc/actions [{}]}
   [:!OTC#Pe [:!OTCe]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "maximize"}]}
   [:!OTC#Pf [:!OTCf]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "center"}]}
   [:!OTC#Pg [:!OTCg]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "left half"}]}
   [:!OTC#Ph [:!OTCh]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "bottom right"}]}
   [:!OTC#Pi [:!OTCi]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "bottom half"}]}
   [:!OTC#Pj [:!OTCj]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "top half"}]}
   [:!OTC#Pk [:!OTCk]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "right half"}]}
   [:!OTC#Pl [:!OTCl]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "System", :action "merge windows"}]}
   [:!OTC#Pm [:!OTCm]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "last two thirds"}]}
   [:!OTC#Pn [:!OTCn]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "top right"}]}
   [:!OTC#Po [:!OTCo]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "top left sixth"}]}
   [:!OTC#Pp [:!OTCp]]
   ^{:doc/actions [{}]}
   [:!OTC#Pq [:!OTCq]]
   ^{:doc/actions [{}]}
   [:!OTC#Pr [:!OTCr]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "System", :action "mission control"}]}
   [:!OTC#Ps [:!OTCs]]
   ^{:doc/actions [{}]}
   [:!OTC#Pt [:!OTCt]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "bottom left"}]}
   [:!OTC#Pu [:!OTCu]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "center third"}]}
   [:!OTC#Pv [:!OTCv]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "System", :action "tak screenshot"}]}
   [:!OTC#Pw [:!OTCw]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "first two thirds"}]}
   [:!OTC#Px [:!OTCx]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "top left"}]}
   [:!OTC#Py [:!OTCy]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions [{:program "Rectangle", :action "restore"}]}
   [:!OTC#Pz [:!OTCz]]
   ^{:doc/actions [{}]}
   [:!OTC#Pright_control [:!OTC#Pright_control]]]}
@@ -1703,7 +1705,7 @@
     [{:program "term", :action "divide", :sequence "` / `"}]}
   [:!O#Pright_command [:spacebar :slash :spacebar]]
   ^{:doc/actions [{:program "Alfred", :action "prompt"}]}
-  [:!O#Pspacebar [:!OCnon_us_pound]]
+  [:!O#Pspacebar [:!OCkeypad_num_lock]]
   ^{:doc/actions
     [{:program "term", :action "dot julia pipe", :sequence "` .|> `"}]}
   [:!OS#Pdelete_or_backspace
@@ -1722,7 +1724,7 @@
     [{:program "term", :action "dot divide", :sequence "` ./ `"}]}
   [:!OS#Pright_command [:spacebar :period :slash :spacebar]]
   ^{:doc/actions [{:program "Alfred", :action "file prompt"}]}
-  [:!OS#Pspacebar [:!OCSnon_us_pound]]
+  [:!OS#Pspacebar [:!OCSkeypad_num_lock]]
   ^{:doc/actions [{}]}
   [:!O#P1 [:!O1]]
   ^{:doc/actions [{}]}
@@ -3141,7 +3143,7 @@
 {:des "Modifier key remappings",
  :rules
  [^{:doc/actions [{:program "Alfred", :action "menu search"}]}
-  [:#Pescape [:!EWright_shift] nil {:alone [:!EW#Pnon_us_pound]}]
+  [:#Pescape [:!EWright_shift] nil {:alone [:!OTkeypad_num_lock]}]
   ^{:doc/actions
     [{:program "helix-common",
       :action "collapse selection",
@@ -3159,7 +3161,7 @@
   ^{:doc/actions [{}]}
   [:#Pright_control [:right_control]]
   ^{:doc/actions [{:program "Alfred", :action "window switcher"}]}
-  [:#Pleft_control [:#Pleft_control] nil {:alone [:!WQ#Pnon_us_pound]}]
+  [:#Pleft_control [:#Pleft_control] nil {:alone [:!Ckeypad_num_lock]}]
   ^{:doc/actions
     [{:program "System", :action "global in-app window cycler"}]}
   [:#Pleft_option [:left_option] nil {:alone [:!Otab]}]
@@ -3172,9 +3174,12 @@
       :exec ["EditScrollback; SwitchToMode \"Normal\";"]}]}
   [:#Pright_shift [:right_shift] :term {:alone [:!TSf12]}]
   ^{:doc/actions [{:program "System", :action "browser input"}]}
-  [:#Pright_shift [:right_shift] nil {:alone [:!R#Pnon_us_pound]}]
+  [:#Pright_shift [:right_shift] nil {:alone [:!Rkeypad_num_lock]}]
   ^{:doc/actions [{:program "Alfred", :action "paste"}]}
-  [:#Pright_option [:right_option] nil {:alone [:!E#Pnon_us_pound]}]
+  [:#Pright_option [:right_option] nil {:alone [:!Okeypad_num_lock]}]
   ^{:doc/actions [{:program "Alfred", :action "clipboard select"}]}
-  [:#Pright_command [:right_command] nil {:alone [:!Q#Pnon_us_pound]}]]}
+  [:#Pright_command
+   [:right_command]
+   nil
+   {:alone [:!Tkeypad_num_lock]}]]}
   ]}]}
