@@ -40,12 +40,12 @@
     ^{:doc/actions [{}]}                                                                           [t/kotcp_sl    [t/kotc_sl]]
 
    ; action glyphs
-    ^{:doc/actions [{:program c/sys,   :action "control center"}]}                                 [a/kotcp_db    [c/kotc_lock]]
-    ^{:doc/actions [{:program c/sys,   :action "speak"}]}                                          [a/kotcp_re    [a/kotc_re]]
-    ^{:doc/actions [{}]}                                                                           [a/kotcp_rs    [a/kotcp_rs]]
+    ^{:doc/actions [{:program c/sys,   :action "control center"}]}                                 [a/kotcp_db    [f/kt_f13]]
+    ^{:doc/actions [{:program c/sys,   :action "speak"}]}                                          [a/kotcp_re    [f/kt_f14]]
+    ^{:doc/actions [{:program c/sys,   :action "input keyboard"}]}                                 [a/kotcp_rs    [f/kt_f15]]
     ^{:doc/actions [{}]}                                                                           [a/kotcp_ro    [a/kotcp_ro]]
     ^{:doc/actions [{}]}                                                                           [a/kotcp_rc    [a/kotcp_rc]]
-    ^{:doc/actions [{:program c/sys,   :action "listen"}]}                                         [a/kotcp_sp    [c/ktc_lock]]
+    ^{:doc/actions [{:program c/sys,   :action "listen"}]}                                         [a/kotcp_sp    [f/kt_f16]]
 
     ; numeric-glyphs
     ^{:doc/actions [{}]}                                                                           [n/kotcp_1     [n/kotc_1]]
