@@ -29,7 +29,8 @@
   ; key modifiers
   {:des "Modifier key remappings"
    :rules
-   [; esc
+   [;
+    ; esc
     ^{:doc/actions [{:program c/alf,   :action "menu search"}]}                                    [c/kp_esc  [c/kew_rs]    nil       {:alone [c/kot_lock]}]
 
     ; joker
@@ -48,7 +49,7 @@
 
     ; rights
     ^{:doc/actions [{:program c/zj,    :action "history edit",       :exec zj-history}]}           [a/kp_rs   [a/k_rs]      c/term    {:alone [f/kts_f12]}]
-    ^{:doc/actions [{:program c/sys,   :action "browser input"}]}                                  [a/kp_rs   [a/k_rs]      nil       {:alone [c/kr_lock]}]
+    ^{:doc/actions [{:program c/sys,   :action "browser input"}]}                                  [a/kp_rs   [a/k_rs]      nil       {:alone [c/ks_lock]}]
     ^{:doc/actions [{:program c/alf,   :action "paste"}]}                                          [a/kp_ro   [a/k_ro]      nil       {:alone [c/ko_lock]}]
     ^{:doc/actions [{:program c/alf,   :action "clipboard select"}]}                               [a/kp_rc   [a/k_rc]      nil       {:alone [c/kt_lock]}]]})
 
