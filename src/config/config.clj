@@ -19,6 +19,7 @@
 
 ; programs
 (def alf "Alfred")
+(def rec "Rectangle")
 (def sys "System")
 (def mc  "micro")
 (def hc  "helix-common")
@@ -79,18 +80,16 @@
 (def kp_esc (mk P _esc))
 (def kp_tab (mk P _tab))
 
+(def ko_lock (mk K O _lock))
+(def kt_lock (mk K T _lock))
+(def kc_lock (mk K C _lock))
+(def kot_lock (mk K O T _lock))
+(def koc_lock (mk K O C _lock))
+(def ktc_lock (mk K T C _lock))
 (def kotc_lock (mk K O T C _lock))
+(def kr_lock (mk K R _lock))
+(def kocs_lock (mk K O C S _lock))
 
-(def koc_us (mk K O C _us))
-(def kocs_us (mk K O C S _us))
-
-(def kwp_us (mk K W P _us))
-
-(def kewp_us (mk K E W P _us))
-(def kwqp_us (mk K W Q P _us))
-(def krp_us (mk K R P _us))
-(def kep_us (mk K E P _us))
-(def kqp_us (mk K Q P _us))
 (def ksp_grave (mk K S P _grave))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
