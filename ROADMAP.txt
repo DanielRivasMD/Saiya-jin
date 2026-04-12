@@ -1,8 +1,8 @@
 - autogenerate katana config from saiyajin source => clojure -> edn & kbd
 - babel micro, helix, lazygit, serpl & zellij fully functional; autodocument binds
 - sync browser hotkeys => needed?
-- document properly massive overhall
 - refactor justfile
+- update readme
 
 ==================================================
 src/simple/keyboards.clj; TODO: update documentation
