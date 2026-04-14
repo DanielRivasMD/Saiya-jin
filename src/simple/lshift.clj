@@ -47,16 +47,16 @@
     ; technical glyphs
     ^{:doc/actions [{}]}                                                                           [t/ksp_ob      [t/ks_ob]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_cb      [t/ks_cb]]
-    ^{:doc/actions [{:program c/tm,    :action "terniary clause",    :sequence "` : `"}]}          [t/ksp_sc      [a/k_sp t/ks_sc a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_sc      [t/ks_sc]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_qu      [t/ks_qu]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_bl      [t/ks_bl]]
-    ^{:doc/actions [{:program c/tm,    :action "left assign",        :sequence "' <- '"}]}         [t/ksp_cm      [a/k_sp t/ks_cm n/k_hy a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "right assign",       :sequence "` -> `"}]}         [t/ksp_pe      [a/k_sp n/k_hy t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terniary compare",   :sequence "` ? `"}]}          [t/ksp_sl      [a/k_sp t/ks_sl a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_cm      [t/ks_cm]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_pe      [t/ks_pe]]
+    ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/tm     :action "define",             :sequence "` => `"}]}         [a/ksp_db      [a/k_sp n/k_eq t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "go assign",          :sequence "` := `"}]}         [a/ksp_re      [a/k_sp t/ks_sc n/k_eq a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
+    ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
     ^{:doc/actions [{:program c/hc,    :action "delete next char",   :exec hc-delete}]}            [a/ksp_rs      [c/k_delf]]
     ^{:doc/actions [{:program c/hc,    :action "delete next word",   :exec hc-delete-word-right}
                     {:program c/mc,    :action "delete next word",   :exec mc-delete-word-right}]} [a/ksp_ro      [b/ko_d]]
