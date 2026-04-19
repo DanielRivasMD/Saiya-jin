@@ -65,6 +65,7 @@
 (def hc-watch                [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch"])
 (def hc-btm                  [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- btm"])
 (def hc-shell                [":sh zellij run --name canvas   --pinned false --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- zsh"])
+(def hc-buffer-copy          [":sh copy2clipboard %{buffer_name}"])
 
 (def hi-select-prev-para     ["select_mode" "goto_prev_paragraph" "insert_mode"])
 (def hi-select-next-para     ["select_mode" "goto_next_paragraph" "append_mode"])
@@ -296,8 +297,8 @@
     ^{:doc/actions [{:program c/hc,    :action "launch watch",       :exec hc-watch}]}             [b/kosp_w      [b/kos_w]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "cut line",           :exec hc-cut-line}
                     {:program c/mc,    :action "cut line",           :exec mc-cut-line}]}          [b/kosp_x      [b/kos_x]      c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_y      [b/kos_y]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "yank diagnostic",    :exec hc-copy-diag}]}         [b/kosp_z      [b/kos_z]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "yank diagnostic",    :exec hc-copy-diag}]}         [b/kosp_y      [b/kos_y]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "copy buffer",        :exec hc-buffer-copy}]}       [b/kosp_z      [b/kos_z]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch shell",       :exec hc-shell}
                     {:program c/mc,    :action "shell mode",         :exec mc-shell}]}             [b/kosp_rt     [f/kos_f10]     c/term]
     ]})
