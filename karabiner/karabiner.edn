@@ -2063,12 +2063,15 @@
       :exec ["extend_to_line_bounds" "delete_selection_noyank"]}
      {:program "micro", :action "cut line", :exec ["CutLine"]}]}
   [:!OS#Px [:!OSx] :term]
-  ^{:doc/actions [{}]}
-  [:!OS#Py [:!OSy] :term]
   ^{:doc/actions
     [{:program "helix-common",
       :action "yank diagnostic",
       :exec [":yank-diagnostic"]}]}
+  [:!OS#Py [:!OSy] :term]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "copy buffer",
+      :exec [":sh copy2clipboard %{buffer_name}"]}]}
   [:!OS#Pz [:!OSz] :term]
   ^{:doc/actions
     [{:program "helix-common",
