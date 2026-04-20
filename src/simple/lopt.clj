@@ -40,7 +40,7 @@
 (def hc-write-quit           ["normal_mode", ":write-quit-all"])
 (def hc-paste                ["paste_clipboard_before"])
 (def hc-write                ["normal_mode", ":write"])
-(def hc-todor-compile        [":sh just todor"])
+(def hc-todor-compile        [":sh roadmap"])
 (def hc-cut                  ["yank_to_clipboard", "delete_selection_noyank"])
 (def hc-skip-multi           ["search_selection", "search_next"])
 (def hc-rm-multi             ["search_selection", "search_prev"])
