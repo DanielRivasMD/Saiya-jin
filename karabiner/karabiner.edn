@@ -1882,7 +1882,7 @@
   ^{:doc/actions
     [{:program "helix-common",
       :action "compile todo",
-      :exec [":sh just todor"]}]}
+      :exec [":sh roadmap"]}]}
   [:!O#Pt [:!Ot] :term]
   ^{:doc/actions [{}]}
   [:!O#Pu [:!Ou] :term]
