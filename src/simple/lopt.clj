@@ -156,8 +156,8 @@
     ; technical glyphs
     ^{:doc/actions [{:program c/tm,    :action "less or equal",      :sequence "` <= `"}]}         [t/kop_ob      [a/k_sp t/ks_cm n/k_eq a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "more or equal",      :sequence "` >= `"}]}         [t/kop_cb      [a/k_sp t/ks_pe n/k_eq a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "AND",                :sequence "` & `"}]}          [t/kop_sc      [a/k_sp n/ks_7 a/k_sp]]
-    ^{:doc/actions [{}]}                                                                           [t/kop_qu      [t/ko_qu]]
+    ^{:doc/actions [{:program c/tm,    :action "terniary compare",   :sequence "` ? `"}]}          [t/kop_sc      [a/k_sp t/ks_sl a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "AND",                :sequence "` & `"}]}          [t/kop_qu      [a/k_sp n/ks_7 a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "OR",                 :sequence "` | `"}]}          [t/kop_bl      [a/k_sp t/ks_bl a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "less than",          :sequence "` < `"}]}          [t/kop_cm      [a/k_sp t/ks_cm a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "more than",          :sequence "` > `"}]}          [t/kop_pe      [a/k_sp t/ks_pe a/k_sp]]
@@ -165,8 +165,8 @@
 
     ^{:doc/actions [{:program c/tm,    :action "dot less or equal",  :sequence "` .<= `"}]}        [t/kosp_ob     [a/k_sp t/k_pe t/ks_cm n/k_eq a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "dot more or equal",  :sequence "` .>= `"}]}        [t/kosp_cb     [a/k_sp t/k_pe t/ks_pe n/k_eq a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "double AND",         :sequence "` && `"}]}         [t/kosp_sc     [a/k_sp n/ks_7 n/ks_7 a/k_sp]]
-    ^{:doc/actions [{}]}                                                                           [t/kosp_qu     [t/kos_qu]]
+    ^{:doc/actions [{:program c/tm,    :action "terniary clause",    :sequence "` : `"}]}          [t/kosp_sc     [a/k_sp t/ks_sc a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "double AND",         :sequence "` && `"}]}         [t/kosp_qu     [a/k_sp n/ks_7 n/ks_7 a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "double OR",          :sequence "` || `"}]}         [t/kosp_bl     [a/k_sp t/ks_bl t/ks_bl a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "dot less than",      :sequence "` .< `"}]}         [t/kosp_cm     [a/k_sp t/k_pe t/ks_cm a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "dot more than",      :sequence "` .> `"}]}         [t/kosp_pe     [a/k_sp t/k_pe t/ks_pe a/k_sp]]
