@@ -35,14 +35,14 @@
     ^{:doc/actions [{}]}                                                                           [r/kqrp_ad     [r/kqr_ad]]
 
     ; technical glyphs
-    ^{:doc/actions [{}]}                                                                           [t/kqp_ob      [t/ks_ob]]
-    ^{:doc/actions [{}]}                                                                           [t/kqp_cb      [t/ks_cb]]
-    ^{:doc/actions [{:program c/tm,    :action "terniary clause",    :sequence "` : `"}]}          [t/kqp_sc      [a/k_sp t/ks_sc a/k_sp]]
-    ^{:doc/actions [{}]}                                                                           [t/kqp_qu      [t/ks_qu]]
-    ^{:doc/actions [{}]}                                                                           [t/kqp_bl      [t/ks_bl]]
-    ^{:doc/actions [{:program c/tm,    :action "left assign",        :sequence "' <- '"}]}         [t/kqp_cm      [a/k_sp t/ks_cm n/k_hy a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "right assign",       :sequence "` -> `"}]}         [t/kqp_pe      [a/k_sp n/k_hy t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "terniary compare",   :sequence "` ? `"}]}          [t/kqp_sl      [a/k_sp t/ks_sl a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "left assign",        :sequence "' <- '"}]}         [t/kqp_ob      [a/k_sp t/ks_cm n/k_hy a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "right assign",       :sequence "` -> `"}]}         [t/kqp_cb      [a/k_sp n/k_hy t/ks_pe a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "variable expansion", :sequence "${}"}]}            [t/kqp_sc      [n/ks_4 t/ks_ob]]
+    ^{:doc/actions [{:program c/tm,    :action "command subs",       :sequence "$()"}]}            [t/kqp_qu      [n/ks_4 n/ks_9]]
+    ^{:doc/actions [{:program c/tm,    :action "process subs",       :sequence "<()"}]}            [t/kqp_bl      [t/ks_cm n/ks_9]]
+    ^{:doc/actions [{:program c/tm,    :action "rust attribute",     :sequence "#[]"}]}            [t/kqp_cm      [n/ks_3 t/k_ob]]
+    ^{:doc/actions [{:program c/tm,    :action "rust documentation", :sequence "`//! `"}]}         [t/kqp_pe      [t/k_sl t/k_sl n/ks_1 a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "shebang",            :sequence "`#!/`"}]}          [t/kqp_sl      [n/ks_3 n/ks_1 t/k_sl]]
 
     ^{:doc/actions [{}]}                                                                           [t/kqrp_ob     [t/kqr_ob]]
     ^{:doc/actions [{}]}                                                                           [t/kqrp_cb     [t/kqr_cb]]
@@ -54,9 +54,9 @@
     ^{:doc/actions [{}]}                                                                           [t/kqrp_sl     [t/kqr_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/tm     :action "define",             :sequence "` => `"}]}         [a/kqp_db      [a/k_sp n/k_eq t/ks_pe a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "go assign",          :sequence "` := `"}]}         [a/kqp_re      [a/k_sp t/ks_sc n/k_eq a/k_sp]]
-    ^{:doc/actions [{}]}                                                                           [a/kqp_sp      [a/kq_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "define",             :sequence "` => `"}]}         [a/kqp_db      [a/k_sp n/k_eq t/ks_pe a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "go assign",          :sequence "` := `"}]}         [a/kqp_re      [a/k_sp t/ks_sc n/k_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "end of options",     :sequence "` -- `"}]}         [a/kqp_sp      [a/k_sp n/k_hy n/k_hy a/k_sp]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_lc      [a/kq_lc]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_lo      [a/kq_lo]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_lt      [a/kq_lt]]
