@@ -62,8 +62,8 @@
     ^{:doc/actions [{}]}                                                                           [t/kerp_sl     [t/ker_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/tm     :action "tilde",              :sequence "`~`"}]}            [a/kep_db      [c/ksp_grave]]
-    ^{:doc/actions [{:program c/tm     :action "cli flag",           :sequence "` --`"}]}          [a/kep_re      [a/k_sp n/k_hy n/k_hy]]
+    ^{:doc/actions [{:program c/tm,    :action "define",             :sequence "` => `"}]}         [a/kep_db      [a/k_sp n/k_eq t/ks_pe a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "go assign",          :sequence "` := `"}]}         [a/kep_re      [a/k_sp t/ks_sc n/k_eq a/k_sp]]
     ^{:doc/actions [{:program c/sys,   :action "prompt espanso"}]}                                 [a/kep_sp      [a/ke_sp]]
     ^{:doc/actions [{:program c/hc,    :action "buffer picker",      :exec hc-buffer-picker}]}     [a/kep_lc      [b/kt_h]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "atuin widget"}
