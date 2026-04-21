@@ -1644,10 +1644,11 @@
   ^{:doc/actions
     [{:program "term", :action "more or equal", :sequence "` >= `"}]}
   [:!O#Pclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]
+  ^{:doc/actions
+    [{:program "term", :action "terniary compare", :sequence "` ? `"}]}
+  [:!O#Psemicolon [:spacebar :!Sslash :spacebar]]
   ^{:doc/actions [{:program "term", :action "AND", :sequence "` & `"}]}
-  [:!O#Psemicolon [:spacebar :!S7 :spacebar]]
-  ^{:doc/actions [{}]}
-  [:!O#Pquote [:!Oquote]]
+  [:!O#Pquote [:spacebar :!S7 :spacebar]]
   ^{:doc/actions [{:program "term", :action "OR", :sequence "` | `"}]}
   [:!O#Pbackslash [:spacebar :!Sbackslash :spacebar]]
   ^{:doc/actions
@@ -1672,10 +1673,11 @@
   [:!OS#Pclose_bracket
    [:spacebar :period :!Speriod :equal_sign :spacebar]]
   ^{:doc/actions
+    [{:program "term", :action "terniary clause", :sequence "` : `"}]}
+  [:!OS#Psemicolon [:spacebar :!Ssemicolon :spacebar]]
+  ^{:doc/actions
     [{:program "term", :action "double AND", :sequence "` && `"}]}
-  [:!OS#Psemicolon [:spacebar :!S7 :!S7 :spacebar]]
-  ^{:doc/actions [{}]}
-  [:!OS#Pquote [:!OSquote]]
+  [:!OS#Pquote [:spacebar :!S7 :!S7 :spacebar]]
   ^{:doc/actions
     [{:program "term", :action "double OR", :sequence "` || `"}]}
   [:!OS#Pbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]
@@ -2250,26 +2252,34 @@
   [:!QR#Pup_arrow [:!QRup_arrow]]
   ^{:doc/actions [{}]}
   [:!QR#Pdown_arrow [:!QRdown_arrow]]
-  ^{:doc/actions [{}]}
-  [:!Q#Popen_bracket [:!Sopen_bracket]]
-  ^{:doc/actions [{}]}
-  [:!Q#Pclose_bracket [:!Sclose_bracket]]
   ^{:doc/actions
-    [{:program "term", :action "terniary clause", :sequence "` : `"}]}
-  [:!Q#Psemicolon [:spacebar :!Ssemicolon :spacebar]]
-  ^{:doc/actions [{}]}
-  [:!Q#Pquote [:!Squote]]
-  ^{:doc/actions [{}]}
-  [:!Q#Pbackslash [:!Sbackslash]]
-  ^{:doc/actions
-    [{:program "term", :action "left assign", :sequence "' <- '"}]}
-  [:!Q#Pcomma [:spacebar :!Scomma :hyphen :spacebar]]
+    [{:program "term", :action "left assign", :sequence "` <- `"}]}
+  [:!Q#Popen_bracket [:spacebar :!Scomma :hyphen :spacebar]]
   ^{:doc/actions
     [{:program "term", :action "right assign", :sequence "` -> `"}]}
-  [:!Q#Pperiod [:spacebar :hyphen :!Speriod :spacebar]]
+  [:!Q#Pclose_bracket [:spacebar :hyphen :!Speriod :spacebar]]
   ^{:doc/actions
-    [{:program "term", :action "terniary compare", :sequence "` ? `"}]}
-  [:!Q#Pslash [:spacebar :!Sslash :spacebar]]
+    [{:program "term",
+      :action "variable expansion",
+      :sequence "`${}`"}]}
+  [:!Q#Psemicolon [:!S4 :!Sopen_bracket]]
+  ^{:doc/actions
+    [{:program "term", :action "command subs", :sequence "`$()`"}]}
+  [:!Q#Pquote [:!S4 :!S9]]
+  ^{:doc/actions
+    [{:program "term", :action "process subs", :sequence "`<()`"}]}
+  [:!Q#Pbackslash [:!Scomma :!S9]]
+  ^{:doc/actions
+    [{:program "term", :action "rust attribute", :sequence "`#[]`"}]}
+  [:!Q#Pcomma [:!S3 :open_bracket]]
+  ^{:doc/actions
+    [{:program "term",
+      :action "rust documentation",
+      :sequence "`//! `"}]}
+  [:!Q#Pperiod [:slash :slash :!S1 :spacebar]]
+  ^{:doc/actions
+    [{:program "term", :action "shebang", :sequence "`#!/`"}]}
+  [:!Q#Pslash [:!S3 :!S1 :slash]]
   ^{:doc/actions [{}]}
   [:!QR#Popen_bracket [:!QRopen_bracket]]
   ^{:doc/actions [{}]}
@@ -2286,15 +2296,14 @@
   [:!QR#Pperiod [:!QRperiod]]
   ^{:doc/actions [{}]}
   [:!QR#Pslash [:!QRslash]]
+  ^{:doc/actions [{:program "term", :action "tilde", :sequence "`~`"}]}
+  [:!Q#Pdelete_or_backspace [:!S#Pgrave_accent_and_tilde]]
   ^{:doc/actions
-    [{:program "term", :action "define", :sequence "` => `"}]}
-  [:!Q#Pdelete_or_backspace
-   [:spacebar :equal_sign :!Speriod :spacebar]]
+    [{:program "term", :action "cli flag", :sequence "` --`"}]}
+  [:!Q#Preturn_or_enter [:spacebar :hyphen :hyphen]]
   ^{:doc/actions
-    [{:program "term", :action "go assign", :sequence "` := `"}]}
-  [:!Q#Preturn_or_enter [:spacebar :!Ssemicolon :equal_sign :spacebar]]
-  ^{:doc/actions [{}]}
-  [:!Q#Pspacebar [:!Qspacebar]]
+    [{:program "term", :action "end of options", :sequence "` -- `"}]}
+  [:!Q#Pspacebar [:spacebar :hyphen :hyphen :spacebar]]
   ^{:doc/actions [{}]}
   [:!Q#Pleft_command [:!Qleft_command]]
   ^{:doc/actions [{}]}
@@ -2411,8 +2420,9 @@
   [:!Q#Pr [:!Qr]]
   ^{:doc/actions [{}]}
   [:!Q#Ps [:!Qs]]
-  ^{:doc/actions [{}]}
-  [:!Q#Pt [:!Qt]]
+  ^{:doc/actions
+    [{:program "term", :action "todo", :sequence "TODO: "}]}
+  [:!Q#Pt [:!St :!So :!Sd :!So :!Ssemicolon :spacebar]]
   ^{:doc/actions [{}]}
   [:!Q#Pu [:!Qu]]
   ^{:doc/actions [{}]}
@@ -2862,31 +2872,29 @@
   ^{:doc/actions [{}]}
   [:!ER#Pdown_arrow [:!ERdown_arrow]]
   ^{:doc/actions
-    [{:program "R", :action "tidyverse", :sequence "` %<+% `"}]}
-  [:!E#Popen_bracket
-   [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
+    [{:program "R", :action "tree update", :sequence "` %<% `"}]}
+  [:!E#Popen_bracket [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "tidyverse", :sequence "` %+>% `"}]}
-  [:!E#Pclose_bracket
-   [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
+    [{:program "R", :action "R pipe", :sequence "` %>% `"}]}
+  [:!E#Pclose_bracket [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "tidyverse", :sequence "` %$% `"}]}
-  [:!E#Psemicolon [:spacebar :!S5 :!S4 :!S5 :spacebar]]
+    [{:program "R", :action "assign pipe", :sequence "` %<>% `"}]}
+  [:!E#Psemicolon [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "tidyverse", :sequence "` %T>% `"}]}
+    [{:program "R", :action "tee pipe", :sequence "` %T>% `"}]}
   [:!E#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "tidyverse", :sequence "` %<>% `"}]}
-  [:!E#Pbackslash [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]
+    [{:program "R", :action "exposition pipe", :sequence "` %$% `"}]}
+  [:!E#Pbackslash [:spacebar :!S5 :!S4 :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "tidyverse", :sequence "` %<% `"}]}
-  [:!E#Pcomma [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
+    [{:program "R", :action "tidyverse", :sequence "` %<+% `"}]}
+  [:!E#Pcomma [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
   ^{:doc/actions
     [{:program "R", :action "tidyverse", :sequence "` %!>% `"}]}
   [:!E#Pperiod [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "tidyverse", :sequence "` %>% `"}]}
-  [:!E#Pslash [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
+    [{:program "R", :action "tree update", :sequence "` %+>% `"}]}
+  [:!E#Pslash [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
   ^{:doc/actions [{}]}
   [:!ER#Popen_bracket [:!ERopen_bracket]]
   ^{:doc/actions [{}]}
@@ -2903,11 +2911,13 @@
   [:!ER#Pperiod [:!ERperiod]]
   ^{:doc/actions [{}]}
   [:!ER#Pslash [:!ERslash]]
-  ^{:doc/actions [{:program "term", :action "tilde", :sequence "`~`"}]}
-  [:!E#Pdelete_or_backspace [:!S#Pgrave_accent_and_tilde]]
   ^{:doc/actions
-    [{:program "term", :action "cli flag", :sequence "` --`"}]}
-  [:!E#Preturn_or_enter [:spacebar :hyphen :hyphen]]
+    [{:program "term", :action "define", :sequence "` => `"}]}
+  [:!E#Pdelete_or_backspace
+   [:spacebar :equal_sign :!Speriod :spacebar]]
+  ^{:doc/actions
+    [{:program "term", :action "go assign", :sequence "` := `"}]}
+  [:!E#Preturn_or_enter [:spacebar :!Ssemicolon :equal_sign :spacebar]]
   ^{:doc/actions [{:program "System", :action "prompt espanso"}]}
   [:!E#Pspacebar [:!Espacebar]]
   ^{:doc/actions
