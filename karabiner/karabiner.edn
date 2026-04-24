@@ -1627,7 +1627,11 @@
   ^{:doc/actions
     [{:program "helix-insert",
       :action "select next para",
-      :exec ["select_mode" "goto_next_paragraph" "append_mode"]}
+      :exec
+      ["select_mode"
+       "goto_next_paragraph"
+       "append_mode"
+       "extend_char_left"]}
      {:program "helix-normal",
       :action "select next para",
       :exec ["select_mode" "goto_next_paragraph" "normal_mode"]}
@@ -2007,7 +2011,7 @@
   ^{:doc/actions
     [{:program "helix-common",
       :action "select line",
-      :exec ["goto_line_end" "select_mode" "goto_line_start" "MODE"]}
+      :exec ["extend_to_line_bounds" "MODE"]}
      {:program "micro", :action "select line", :exec ["SelectLine"]}]}
   [:!OS#Pl [:!OSl] :term]
   ^{:doc/actions
@@ -2024,7 +2028,34 @@
       :action "unindent",
       :exec ["OutdentSelection"]}]}
   [:!OS#Po [:!OSf6] :term]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions
+    [{:program "helix-insert",
+      :action "select para",
+      :exec
+      ["goto_next_paragraph"
+       "collapse_selection"
+       "select_mode"
+       "goto_prev_paragraph"
+       "trim_selections"
+       "insert_mode"]}
+     {:program "helix-normal",
+      :action "select para",
+      :exec
+      ["goto_next_paragraph"
+       "collapse_selection"
+       "select_mode"
+       "goto_prev_paragraph"
+       "trim_selections"
+       "normal_mode"]}
+     {:program "helix-select",
+      :action "select para",
+      :exec
+      ["goto_next_paragraph"
+       "collapse_selection"
+       "select_mode"
+       "goto_prev_paragraph"
+       "trim_selections"
+       "select_mode"]}]}
   [:!OS#Pp [:!OSp] :term]
   ^{:doc/actions
     [{:program "helix-common",
