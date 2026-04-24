@@ -52,7 +52,7 @@
 (def hc-indent               ["indent"])
 (def hc-line-down            ["normal_mode", "extend_to_line_bounds", "delete_selection", "paste_after", "MODE"])
 (def hc-line-up              ["normal_mode", "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "MODE"])
-(def hc-select-line          ["goto_line_end", "select_mode", "goto_line_start", "MODE"])
+(def hc-select-line          ["extend_to_line_bounds", "MODE"])
 (def hc-play                 ["replay_macro"])
 (def hc-unindent             ["unindent"])
 (def hc-paste-in-place       ["replace_selections_with_clipboard"])
@@ -68,13 +68,16 @@
 (def hc-buffer-copy          [":sh copy2clipboard %{buffer_name}"])
 
 (def hi-select-prev-para     ["select_mode" "goto_prev_paragraph" "insert_mode"])
-(def hi-select-next-para     ["select_mode" "goto_next_paragraph" "append_mode"])
+(def hi-select-next-para     ["select_mode" "goto_next_paragraph" "append_mode" "extend_char_left"])
+(def hi-select-para          ["goto_next_paragraph" "collapse_selection" "select_mode" "goto_prev_paragraph" "trim_selections" "insert_mode"])
 
 (def hn-select-prev-para     ["select_mode" "goto_prev_paragraph" "normal_mode"])
 (def hn-select-next-para     ["select_mode" "goto_next_paragraph" "normal_mode"])
+(def hn-select-para          ["goto_next_paragraph" "collapse_selection" "select_mode" "goto_prev_paragraph" "trim_selections" "normal_mode"])
 
 (def hs-select-prev-para     ["select_mode" "goto_prev_paragraph" "select_mode"])
 (def hs-select-next-para     ["select_mode" "goto_next_paragraph" "select_mode"])
+(def hs-select-para          ["goto_next_paragraph" "collapse_selection" "select_mode" "goto_prev_paragraph" "trim_selections" "select_mode"])
 
 (def lg-prev-page            ["prevPage"])
 (def lg-next-page            ["nextPage"])
@@ -287,7 +290,9 @@
     ^{:doc/actions [{}]}                                                                           [b/kosp_n      [b/kos_n]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "unindent",           :exec hc-unindent}
                     {:program c/mc,    :action "unindent",           :exec mc-unindent}]}          [b/kosp_o      [f/kos_f6]     c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_p      [b/kos_p]      c/term]
+    ^{:doc/actions [{:program c/hi,    :action "select para",        :exec hi-select-para}
+                    {:program c/hn,    :action "select para",        :exec hn-select-para}
+                    {:program c/hs,    :action "select para",        :exec hs-select-para}]}       [b/kosp_p      [b/kos_p]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch lazygit",     :exec hc-lazygit}]}           [b/kosp_q      [b/kos_q]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch serpl",       :exec hc-serpl}]}             [b/kosp_r      [b/kos_r]      c/term]
     ^{:doc/actions [{}]}                                                                           [b/kosp_s      [b/kos_s]      c/term]
