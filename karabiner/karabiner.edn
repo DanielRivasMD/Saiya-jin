@@ -1944,7 +1944,7 @@
     [{:program "helix-common",
       :action "monitor system",
       :exec
-      [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- btm"]}]}
+      [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- btm > /dev/null 2>&1"]}]}
   [:!OS#Pb [:!OSf1] :term]
   ^{:doc/actions
     [{:program "helix-common",
@@ -1965,7 +1965,7 @@
     [{:program "helix-common",
       :action "file explorer",
       :exec
-      [":sh zellij run --name explorer --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- yazi $(pwd)"]}]}
+      [":sh zellij run --name explorer --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- yazi $(pwd) > /dev/null 2>&1"]}]}
   [:!OS#Pe [:!OSe] :term]
   ^{:doc/actions
     [{:program "helix-common",
@@ -1977,7 +1977,7 @@
     [{:program "helix-common",
       :action "git diff",
       :exec
-      [":sh zellij run --name git-diff --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- git diff %{buffer_name} | delta --paging=always"]}]}
+      [":sh zellij run --name git-diff --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- git diff %{buffer_name} | delta --paging=always > /dev/null 2>&1"]}]}
   [:!OS#Pg [:!OSg] :term]
   ^{:doc/actions [{}]}
   [:!OS#Ph [:!OSh] :term]
@@ -2061,13 +2061,13 @@
     [{:program "helix-common",
       :action "launch lazygit",
       :exec
-      [":sh zellij run --name lazygit  --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- lazygit"]}]}
+      [":sh zellij run --name lazygit  --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- lazygit > /dev/null 2>&1"]}]}
   [:!OS#Pq [:!OSq] :term]
   ^{:doc/actions
     [{:program "helix-common",
       :action "launch serpl",
       :exec
-      [":sh zellij run --name serpl    --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- serpl"]}]}
+      [":sh zellij run --name serpl    --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- serpl > /dev/null 2>&1"]}]}
   [:!OS#Pr [:!OSr] :term]
   ^{:doc/actions [{}]}
   [:!OS#Ps [:!OSs] :term]
@@ -2075,7 +2075,7 @@
     [{:program "helix-common",
       :action "interactive todo",
       :exec
-      [":sh zellij run --name todor    --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- todor --delete"]}]}
+      [":sh zellij run --name todor    --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- todor --delete > /dev/null 2>&1"]}]}
   [:!OS#Pt [:!OSt] :term]
   ^{:doc/actions [{}]}
   [:!OS#Pu [:!OSu] :term]
@@ -2088,7 +2088,7 @@
     [{:program "helix-common",
       :action "launch watch",
       :exec
-      [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch"]}]}
+      [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch > /dev/null 2>&1"]}]}
   [:!OS#Pw [:!OSw] :term]
   ^{:doc/actions
     [{:program "helix-common",
@@ -2110,7 +2110,7 @@
     [{:program "helix-common",
       :action "launch shell",
       :exec
-      [":sh zellij run --name canvas   --pinned false --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- zsh"]}
+      [":sh zellij run --name canvas   --pinned false --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- zsh > /dev/null 2>&1"]}
      {:program "micro", :action "shell mode", :exec ["ShellMode"]}]}
   [:!OS#Pright_control [:!OSf10] :term]]}
 {:des "Shift Mode",
