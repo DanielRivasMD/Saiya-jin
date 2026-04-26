@@ -24,7 +24,6 @@
 (def hc-select-next-word     ["extend_next_word_end"])
 (def hc-format               [":format"])
 (def hc-git-blame            [":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"])
-(def hc-git-diff             [":sh zellij run --name git-diff --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- git diff %{buffer_name} | delta --paging=always > /dev/null 2>&1"])
 (def hc-copy                 ["yank_to_clipboard"])
 (def hc-spawn-multi          ["search_selection", "extend_search_next"])
 (def hc-comment              ["toggle_comments"])
@@ -56,17 +55,20 @@
 (def hc-play                 ["replay_macro"])
 (def hc-unindent             ["unindent"])
 (def hc-paste-in-place       ["replace_selections_with_clipboard"])
-(def hc-cut-line             ["extend_to_line_bounds", "delete_selection_noyank"])
+(def hc-cut-line             ["extend_to_line_bounds", "yank_to_clipboard", "delete_selection_noyank"])
 (def hc-copy-diag            [":yank-diagnostic"])
+(def hc-git-diff             [":sh zellij run --name git-diff --pinned true                  --floating  --width 100%% --height 100%% --x    0 --y    0 -- git diff %{buffer_name} | delta --paging=always > /dev/null 2>&1"])
 (def hc-yazi                 [":sh zellij run --name explorer --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- yazi $(pwd) > /dev/null 2>&1"])
 (def hc-lazygit              [":sh zellij run --name lazygit  --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- lazygit > /dev/null 2>&1"])
 (def hc-serpl                [":sh zellij run --name serpl    --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- serpl > /dev/null 2>&1"])
 (def hc-todor-interactive    [":sh zellij run --name todor    --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- todor --delete > /dev/null 2>&1"])
-(def hc-watch                [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch > /dev/null 2>&1"])
-(def hc-btm                  [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- btm > /dev/null 2>&1"])
+(def hc-install              [":sh zellij run --name install  --pinned true                  --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just install > /dev/null 2>&1"])
+(def hc-watch                [":sh zellij run --name watch    --pinned true                  --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch > /dev/null 2>&1"])
+(def hc-btm                  [":sh zellij run --name bottom   --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- btm > /dev/null 2>&1"])
 (def hc-shell                [":sh zellij run --name canvas   --pinned false --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- zsh > /dev/null 2>&1"])
 (def hc-buffer-copy          [":sh copy2clipboard %{buffer_name}"])
 
+; TODO: refactor as one command => hi-select, hn-select & hs-select, etc
 (def hi-select-prev-para     ["select_mode" "goto_prev_paragraph" "insert_mode"])
 (def hi-select-next-para     ["select_mode" "goto_next_paragraph" "append_mode" "extend_char_left"])
 (def hi-select-para          ["goto_next_paragraph" "collapse_selection" "select_mode" "goto_prev_paragraph" "trim_selections" "insert_mode"])
@@ -295,7 +297,7 @@
                     {:program c/hs,    :action "select para",        :exec hs-select-para}]}       [b/kosp_p      [b/kos_p]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch lazygit",     :exec hc-lazygit}]}           [b/kosp_q      [b/kos_q]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "launch serpl",       :exec hc-serpl}]}             [b/kosp_r      [b/kos_r]      c/term]
-    ^{:doc/actions [{}]}                                                                           [b/kosp_s      [b/kos_s]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "launch install",     :exec hc-install}]}           [b/kosp_s      [b/kos_s]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "interactive todo",   :exec hc-todor-interactive}]} [b/kosp_t      [b/kos_t]      c/term]
     ^{:doc/actions [{}]}                                                                           [b/kosp_u      [b/kos_u]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "paste in place",     :exec hc-paste-in-place}]}    [b/kosp_v      [b/kos_v]      c/term]
