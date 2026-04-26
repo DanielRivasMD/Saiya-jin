@@ -19,10 +19,6 @@
 (def hc-change-picker        ["changed_file_picker"])
 (def hc-file-picker          ["file_explorer"])
 (def hc-buffer-picker        ["buffer_picker"])
-(def hc-jump-save            ["save_selection"])
-(def hc-jump-backward        ["jump_backward"])
-(def hc-jump-picker          ["jumplist_picker"])
-(def hc-jump-forward         ["jump_forward"])
 
 (defn ropt []
 
@@ -76,10 +72,10 @@
 
     ^{:doc/actions [{}]}                                                                           [a/kerp_db     [a/ker_db]]
     ^{:doc/actions [{}]}                                                                           [a/kerp_re     [a/ker_re]]
-    ^{:doc/actions [{:program c/hc,    :action "save jump",          :exec hc-jump-save}]}         [a/kerp_sp     [f/ks_f14]     c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jump forward",       :exec hc-jump-forward}]}      [a/kerp_lc     [f/ks_f15]     c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jumplist picker",    :exec hc-jump-picker}]}       [a/kerp_lo     [f/ks_f16]     c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jump backward",      :exec hc-jump-backward}]}     [a/kerp_lt     [f/ks_f17]     c/term]
+    ^{:doc/actions [{}]}                                                                           [a/kerp_sp     [a/ker_sp]]
+    ^{:doc/actions [{}]}                                                                           [a/kerp_lc     [a/ker_lc]]
+    ^{:doc/actions [{}]}                                                                           [a/kerp_lo     [a/ker_lo]]
+    ^{:doc/actions [{}]}                                                                           [a/kerp_lt     [a/ker_lt]]
     ^{:doc/actions [{}]}                                                                           [a/kerp_ls     [a/ker_ls]]
     ^{:doc/actions [{}]}                                                                           [a/kerp_caps   [a/ker_caps]]
     ^{:doc/actions [{}]}                                                                           [a/kerp_tab    [a/ker_tab]]
