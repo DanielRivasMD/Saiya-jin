@@ -39,14 +39,14 @@
     ^{:doc/actions [{}]}                                                                           [r/kerp_ad     [r/ker_ad]]
 
     ; technical glyphs
-    ^{:doc/actions [{:program c/R,     :action "tree update",        :sequence "` %<% `"}]}        [t/kep_ob      [a/k_sp n/ks_5 t/ks_cm n/ks_5 a/k_sp]]
-    ^{:doc/actions [{:program c/R,     :action "R pipe",             :sequence "` %>% `"}]}        [t/kep_cb      [a/k_sp n/ks_5 t/ks_pe n/ks_5 a/k_sp]]
-    ^{:doc/actions [{:program c/R,     :action "assign pipe",        :sequence "` %<>% `"}]}       [t/kep_sc      [a/k_sp n/ks_5 t/ks_cm t/ks_pe n/ks_5 a/k_sp]]
-    ^{:doc/actions [{:program c/R,     :action "tee pipe",           :sequence "` %T>% `"}]}       [t/kep_qu      [a/k_sp n/ks_5 b/ks_t t/ks_pe n/ks_5 a/k_sp]]
-    ^{:doc/actions [{:program c/R,     :action "exposition pipe",    :sequence "` %$% `"}]}        [t/kep_bl      [a/k_sp n/ks_5 n/ks_4 n/ks_5 a/k_sp]]
-    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %<+% `"}]}       [t/kep_cm      [a/k_sp n/ks_5 t/ks_cm n/ks_eq n/ks_5 a/k_sp]]
-    ^{:doc/actions [{:program c/R,     :action "tidyverse",          :sequence "` %!>% `"}]}       [t/kep_pe      [a/k_sp n/ks_5 n/ks_1 t/ks_pe n/ks_5 a/k_sp]]
-    ^{:doc/actions [{:program c/R,     :action "tree update",        :sequence "` %+>% `"}]}       [t/kep_sl      [a/k_sp n/ks_5 n/ks_eq t/ks_pe n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "R tree update",      :sequence "` %<% `"}]}        [t/kep_ob      [a/k_sp n/ks_5 t/ks_cm n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "R pipe",             :sequence "` %>% `"}]}        [t/kep_cb      [a/k_sp n/ks_5 t/ks_pe n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "R assign pipe",      :sequence "` %<>% `"}]}       [t/kep_sc      [a/k_sp n/ks_5 t/ks_cm t/ks_pe n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "R tee pipe",         :sequence "` %T>% `"}]}       [t/kep_qu      [a/k_sp n/ks_5 b/ks_t t/ks_pe n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "R exposition pipe",  :sequence "` %$% `"}]}        [t/kep_bl      [a/k_sp n/ks_5 n/ks_4 n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "R tidyverse",        :sequence "` %<+% `"}]}       [t/kep_cm      [a/k_sp n/ks_5 t/ks_cm n/ks_eq n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "R tidyverse",        :sequence "` %!>% `"}]}       [t/kep_pe      [a/k_sp n/ks_5 n/ks_1 t/ks_pe n/ks_5 a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "R tree update",      :sequence "` %+>% `"}]}       [t/kep_sl      [a/k_sp n/ks_5 n/ks_eq t/ks_pe n/ks_5 a/k_sp]]
 
     ^{:doc/actions [{}]}                                                                           [t/kerp_ob     [t/ker_ob]]
     ^{:doc/actions [{}]}                                                                           [t/kerp_cb     [t/ker_cb]]
