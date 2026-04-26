@@ -21,6 +21,7 @@
 ; (def zj-plug-jump            ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/zellij-jump-list.wasm\" { floating true; move_to_focused_tab true; };"])
 ; (def zj-plug-monocle         ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/monocle.wasm\" { floating true; }; SwitchToMode \"Normal\";"])
 (def zj-plug-room            ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/room.wasm\" { floating true; ignore_case true; };"])
+(def zj-history              ["EditScrollback; SwitchToMode \"Normal\";"])
 
 (def zj-prev-tab             ["GoToPreviousTab;"])
 (def zj-next-tab             ["GoToNextTab;"])
@@ -54,7 +55,7 @@
     ^{:doc/actions [{:program c/zj,    :action "swap right",         :exec zj-swap-tab-right}]}    [t/kp_cb       [f/kts_f2]     c/term]
     ; ^{:doc/actions [{:program c/zj,    :action "plugin monocle",     :exec zj-plug-monocle}]}      [t/kp_sc       [f/ks_f6]      c/term]
     ; ^{:doc/actions [{:program c/zj,    :action "plugin jump-list",   :exec zj-plug-jump}]}         [t/kp_qu       [f/ks_f5]      c/term]
-    ^{:doc/actions [{}]}                                                                           [t/kp_bl       [t/k_bl]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "history edit",       :exec zj-history}]}           [t/kp_bl       [f/ks_f4]       c/term]
     ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_pe       [b/ko_x]       c/term]
     ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_cm       [b/ko_y]       c/term]
     ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_sl       [b/ko_z]       c/term]
