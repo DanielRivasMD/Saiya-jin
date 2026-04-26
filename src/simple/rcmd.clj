@@ -54,7 +54,7 @@
     ^{:doc/actions [{}]}                                                                           [t/kqrp_sl     [t/kqr_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/tm     :action "tilde",              :sequence "`~`"}]}            [a/kqp_db      [c/ksp_grave]]
+    ^{:doc/actions [{}]}                                                                           [a/kqp_db      [a/ks_db]]
     ^{:doc/actions [{:program c/tm     :action "cli flag",           :sequence "` --`"}]}          [a/kqp_re      [a/k_sp n/k_hy n/k_hy]]
     ^{:doc/actions [{:program c/tm,    :action "end of options",     :sequence "` -- `"}]}         [a/kqp_sp      [a/k_sp n/k_hy n/k_hy a/k_sp]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_lc      [a/kq_lc]]
