@@ -20,7 +20,6 @@
 (def zp-escape               ["UndoRenamePane; SwitchToMode \"Normal\";"])
 (def zt-escape               ["UndoRenameTab; SwitchToMode \"Normal\";"])
 (def zx-escape               ["SwitchToMode \"Normal\";"])
-(def zj-history              ["EditScrollback; SwitchToMode \"Normal\";"])
 
 (defn keymod []
 
@@ -48,7 +47,7 @@
     ^{:doc/actions [{:program c/sys,   :action "switch most recent app"}]}                         [a/kp_lc   [a/k_lc]      nil       {:alone [c/kc_tab]}]
 
     ; rights
-    ^{:doc/actions [{:program c/zj,    :action "history edit",       :exec zj-history}]}           [a/kp_rs   [a/k_rs]      c/term    {:alone [f/kts_f12]}]
+    ^{:doc/actions [{}]}                                                                           [a/kp_rs   [a/k_rs]      c/term    {:alone [f/kts_f12]}]
     ^{:doc/actions [{:program c/sys,   :action "browser input"}]}                                  [a/kp_rs   [a/k_rs]      nil       {:alone [c/ks_lock]}]
     ^{:doc/actions [{:program c/alf,   :action "paste"}]}                                          [a/kp_ro   [a/k_ro]      nil       {:alone [c/ko_lock]}]
     ^{:doc/actions [{:program c/alf,   :action "clipboard select"}]}                               [a/kp_rc   [a/k_rc]      nil       {:alone [c/kt_lock]}]]})
