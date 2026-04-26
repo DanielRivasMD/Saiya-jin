@@ -1947,7 +1947,7 @@
     [{:program "helix-common",
       :action "monitor system",
       :exec
-      [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- btm > /dev/null 2>&1"]}]}
+      [":sh zellij run --name bottom   --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- btm > /dev/null 2>&1"]}]}
   [:!OS#Pb [:!OSf1] :term]
   ^{:doc/actions
     [{:program "helix-common",
@@ -1980,7 +1980,7 @@
     [{:program "helix-common",
       :action "git diff",
       :exec
-      [":sh zellij run --name git-diff --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- git diff %{buffer_name} | delta --paging=always > /dev/null 2>&1"]}]}
+      [":sh zellij run --name git-diff --pinned true                  --floating  --width 100%% --height 100%% --x    0 --y    0 -- git diff %{buffer_name} | delta --paging=always > /dev/null 2>&1"]}]}
   [:!OS#Pg [:!OSg] :term]
   ^{:doc/actions [{}]}
   [:!OS#Ph [:!OSh] :term]
@@ -2072,7 +2072,11 @@
       :exec
       [":sh zellij run --name serpl    --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- serpl > /dev/null 2>&1"]}]}
   [:!OS#Pr [:!OSr] :term]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "launch install",
+      :exec
+      [":sh zellij run --name install  --pinned true                  --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just install > /dev/null 2>&1"]}]}
   [:!OS#Ps [:!OSs] :term]
   ^{:doc/actions
     [{:program "helix-common",
@@ -2091,12 +2095,15 @@
     [{:program "helix-common",
       :action "launch watch",
       :exec
-      [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch > /dev/null 2>&1"]}]}
+      [":sh zellij run --name watch    --pinned true                  --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch > /dev/null 2>&1"]}]}
   [:!OS#Pw [:!OSw] :term]
   ^{:doc/actions
     [{:program "helix-common",
       :action "cut line",
-      :exec ["extend_to_line_bounds" "delete_selection_noyank"]}
+      :exec
+      ["extend_to_line_bounds"
+       "yank_to_clipboard"
+       "delete_selection_noyank"]}
      {:program "micro", :action "cut line", :exec ["CutLine"]}]}
   [:!OS#Px [:!OSx] :term]
   ^{:doc/actions
@@ -2154,8 +2161,8 @@
   [:!S#Pperiod [:!Speriod]]
   ^{:doc/actions [{}]}
   [:!S#Pslash [:!Sslash]]
-  ^{:doc/actions [{}]}
-  [:!S#Pdelete_or_backspace [:!Sdelete_or_backspace]]
+  ^{:doc/actions [{:program "term", :action "tilde", :sequence "`~`"}]}
+  [:!S#Pdelete_or_backspace [:!S#Pgrave_accent_and_tilde]]
   ^{:doc/actions [{}]}
   [:!S#Preturn_or_enter [:!Sreturn_or_enter]]
   ^{:doc/actions
@@ -2330,8 +2337,8 @@
   [:!QR#Pperiod [:!QRperiod]]
   ^{:doc/actions [{}]}
   [:!QR#Pslash [:!QRslash]]
-  ^{:doc/actions [{:program "term", :action "tilde", :sequence "`~`"}]}
-  [:!Q#Pdelete_or_backspace [:!S#Pgrave_accent_and_tilde]]
+  ^{:doc/actions [{}]}
+  [:!Q#Pdelete_or_backspace [:!Sdelete_or_backspace]]
   ^{:doc/actions
     [{:program "term", :action "cli flag", :sequence "` --`"}]}
   [:!Q#Preturn_or_enter [:spacebar :hyphen :hyphen]]
@@ -2906,28 +2913,30 @@
   ^{:doc/actions [{}]}
   [:!ER#Pdown_arrow [:!ERdown_arrow]]
   ^{:doc/actions
-    [{:program "R", :action "tree update", :sequence "` %<% `"}]}
+    [{:program "term", :action "R tree update", :sequence "` %<% `"}]}
   [:!E#Popen_bracket [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "R pipe", :sequence "` %>% `"}]}
+    [{:program "term", :action "R pipe", :sequence "` %>% `"}]}
   [:!E#Pclose_bracket [:spacebar :!S5 :!Speriod :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "assign pipe", :sequence "` %<>% `"}]}
+    [{:program "term", :action "R assign pipe", :sequence "` %<>% `"}]}
   [:!E#Psemicolon [:spacebar :!S5 :!Scomma :!Speriod :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "tee pipe", :sequence "` %T>% `"}]}
+    [{:program "term", :action "R tee pipe", :sequence "` %T>% `"}]}
   [:!E#Pquote [:spacebar :!S5 :!St :!Speriod :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "exposition pipe", :sequence "` %$% `"}]}
+    [{:program "term",
+      :action "R exposition pipe",
+      :sequence "` %$% `"}]}
   [:!E#Pbackslash [:spacebar :!S5 :!S4 :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "tidyverse", :sequence "` %<+% `"}]}
+    [{:program "term", :action "R tidyverse", :sequence "` %<+% `"}]}
   [:!E#Pcomma [:spacebar :!S5 :!Scomma :!Sequal_sign :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "tidyverse", :sequence "` %!>% `"}]}
+    [{:program "term", :action "R tidyverse", :sequence "` %!>% `"}]}
   [:!E#Pperiod [:spacebar :!S5 :!S1 :!Speriod :!S5 :spacebar]]
   ^{:doc/actions
-    [{:program "R", :action "tree update", :sequence "` %+>% `"}]}
+    [{:program "term", :action "R tree update", :sequence "` %+>% `"}]}
   [:!E#Pslash [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
   ^{:doc/actions [{}]}
   [:!ER#Popen_bracket [:!ERopen_bracket]]
