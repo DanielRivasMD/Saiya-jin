@@ -769,8 +769,11 @@
       :action "swap right",
       :exec ["MoveTab \"Right\";"]}]}
   [:#Pclose_bracket [:!TSf2] :term]
-  ^{:doc/actions [{}]}
-  [:#Pbackslash [:backslash] :term]
+  ^{:doc/actions
+    [{:program "zellij-shared",
+      :action "history edit",
+      :exec ["EditScrollback; SwitchToMode \"Normal\";"]}]}
+  [:#Pbackslash [:!Sf4] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "tab close",
@@ -2978,26 +2981,14 @@
   [:!ER#Pdelete_or_backspace [:!ERdelete_or_backspace]]
   ^{:doc/actions [{}]}
   [:!ER#Preturn_or_enter [:!ERreturn_or_enter]]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "save jump",
-      :exec ["save_selection"]}]}
-  [:!ER#Pspacebar [:!Sf14] :term]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "jump forward",
-      :exec ["jump_forward"]}]}
-  [:!ER#Pleft_command [:!Sf15] :term]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "jumplist picker",
-      :exec ["jumplist_picker"]}]}
-  [:!ER#Pleft_option [:!Sf16] :term]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "jump backward",
-      :exec ["jump_backward"]}]}
-  [:!ER#Pleft_control [:!Sf17] :term]
+  ^{:doc/actions [{}]}
+  [:!ER#Pspacebar [:!ERspacebar]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_command [:!ERleft_command]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_option [:!ERleft_option]]
+  ^{:doc/actions [{}]}
+  [:!ER#Pleft_control [:!ERleft_control]]
   ^{:doc/actions [{}]}
   [:!ER#Pleft_shift [:!ERleft_shift]]
   ^{:doc/actions [{}]}
@@ -3208,10 +3199,7 @@
   ^{:doc/actions
     [{:program "System", :action "switch most recent app"}]}
   [:#Pleft_command [:left_command] nil {:alone [:!Ctab]}]
-  ^{:doc/actions
-    [{:program "zellij-shared",
-      :action "history edit",
-      :exec ["EditScrollback; SwitchToMode \"Normal\";"]}]}
+  ^{:doc/actions [{}]}
   [:#Pright_shift [:right_shift] :term {:alone [:!TSf12]}]
   ^{:doc/actions [{:program "System", :action "browser input"}]}
   [:#Pright_shift [:right_shift] nil {:alone [:!Skeypad_num_lock]}]
