@@ -2100,10 +2100,7 @@
   ^{:doc/actions
     [{:program "helix-common",
       :action "cut line",
-      :exec
-      ["extend_to_line_bounds"
-       "yank_to_clipboard"
-       "delete_selection_noyank"]}
+      :exec ["extend_to_line_bounds" "delete_selection_noyank"]}
      {:program "micro", :action "cut line", :exec ["CutLine"]}]}
   [:!OS#Px [:!OSx] :term]
   ^{:doc/actions
