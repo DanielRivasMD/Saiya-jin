@@ -55,7 +55,7 @@
 (def hc-play                 ["replay_macro"])
 (def hc-unindent             ["unindent"])
 (def hc-paste-in-place       ["replace_selections_with_clipboard"])
-(def hc-cut-line             ["extend_to_line_bounds", "yank_to_clipboard", "delete_selection_noyank"])
+(def hc-cut-line             ["extend_to_line_bounds", "delete_selection_noyank"])
 (def hc-copy-diag            [":yank-diagnostic"])
 (def hc-git-diff             [":sh zellij run --name git-diff --pinned true                  --floating  --width 100%% --height 100%% --x    0 --y    0 -- git diff %{buffer_name} | delta --paging=always > /dev/null 2>&1"])
 (def hc-yazi                 [":sh zellij run --name explorer --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- yazi $(pwd) > /dev/null 2>&1"])
