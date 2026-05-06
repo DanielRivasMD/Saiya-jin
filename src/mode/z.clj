@@ -16,8 +16,6 @@
 
 (def out-file "z.edn")
 
-(def nu                      [])
-
 (def hc-close-tab            [":buffer-close"])
 (def hc-dec                  ["decrement"])
 (def hc-file-picker          ["file_picker"])
@@ -117,11 +115,6 @@
     ^{:doc/actions [{}]}                                                                           [t/ksp_cm      [t/ks_cm]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_pe      [t/ks_pe]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
-
-    ; TODO: update old mapping for nushell
-    ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_pe      [b/ko_x]       c/term]
-    ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_cm      [b/ko_y]       c/term]
-    ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/ksp_sl      [b/ko_z]       c/term]
 
     ; action glyphs
     ^{:doc/actions [{:program c/tm,    :action "command line editor"}
