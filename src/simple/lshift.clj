@@ -55,7 +55,7 @@
     ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/tm     :action "tilde",              :sequence "`~`"}]}            [a/ksp_db      [c/ksp_grave]]
+    ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
     ^{:doc/actions [{:program c/hc,    :action "delete next char",   :exec hc-delete}]}            [a/ksp_rs      [c/k_delf]]
     ^{:doc/actions [{:program c/hc,    :action "delete next word",   :exec hc-delete-word-right}
