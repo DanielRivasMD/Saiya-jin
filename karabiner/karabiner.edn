@@ -921,10 +921,10 @@
   [:!OTC#Preturn_or_enter [:!Tf14]]
   ^{:doc/actions [{:program "System", :action "input keyboard"}]}
   [:!OTC#Pright_shift [:!Tf15]]
-  ^{:doc/actions [{}]}
-  [:!OTC#Pright_option [:!OTC#Pright_option]]
-  ^{:doc/actions [{}]}
-  [:!OTC#Pright_command [:!OTC#Pright_command]]
+  ^{:doc/actions [{:program "Alfred", :action "file prompt"}]}
+  [:!OTC#Pright_option [:!OCSkeypad_num_lock]]
+  ^{:doc/actions [{:program "Alfred", :action "prompt"}]}
+  [:!OTC#Pright_command [:!OCkeypad_num_lock]]
   ^{:doc/actions [{:program "System", :action "listen"}]}
   [:!OTC#Pspacebar [:!Tf16]]
   ^{:doc/actions [{}]}
@@ -995,7 +995,7 @@
   [:!OTC#Pu [:!OTCu]]
   ^{:doc/actions [{:program "Rectangle", :action "center third"}]}
   [:!OTC#Pv [:!OTCv]]
-  ^{:doc/actions [{:program "System", :action "tak screenshot"}]}
+  ^{:doc/actions [{:program "System", :action "take screenshot"}]}
   [:!OTC#Pw [:!OTCw]]
   ^{:doc/actions [{:program "Rectangle", :action "first two thirds"}]}
   [:!OTC#Px [:!OTCx]]
@@ -1651,13 +1651,13 @@
   ^{:doc/actions
     [{:program "term", :action "more or equal", :sequence "` >= `"}]}
   [:!O#Pclose_bracket [:spacebar :!Speriod :equal_sign :spacebar]]
-  ^{:doc/actions
-    [{:program "term", :action "terniary compare", :sequence "` ? `"}]}
-  [:!O#Psemicolon [:spacebar :!Sslash :spacebar]]
+  ^{:doc/actions [{:program "term", :action "OR", :sequence "` | `"}]}
+  [:!O#Psemicolon [:spacebar :!Sbackslash :spacebar]]
   ^{:doc/actions [{:program "term", :action "AND", :sequence "` & `"}]}
   [:!O#Pquote [:spacebar :!S7 :spacebar]]
-  ^{:doc/actions [{:program "term", :action "OR", :sequence "` | `"}]}
-  [:!O#Pbackslash [:spacebar :!Sbackslash :spacebar]]
+  ^{:doc/actions
+    [{:program "term", :action "compare", :sequence "` == `"}]}
+  [:!O#Pbackslash [:spacebar :equal_sign :equal_sign :spacebar]]
   ^{:doc/actions
     [{:program "term", :action "less than", :sequence "` < `"}]}
   [:!O#Pcomma [:spacebar :!Scomma :spacebar]]
@@ -1665,8 +1665,8 @@
     [{:program "term", :action "more than", :sequence "` > `"}]}
   [:!O#Pperiod [:spacebar :!Speriod :spacebar]]
   ^{:doc/actions
-    [{:program "term", :action "NOT equal", :sequence "` != `"}]}
-  [:!O#Pslash [:spacebar :!S1 :equal_sign :spacebar]]
+    [{:program "term", :action "terniary compare", :sequence "` ? `"}]}
+  [:!O#Pslash [:spacebar :!Sslash :spacebar]]
   ^{:doc/actions
     [{:program "term",
       :action "dot less or equal",
@@ -1680,14 +1680,15 @@
   [:!OS#Pclose_bracket
    [:spacebar :period :!Speriod :equal_sign :spacebar]]
   ^{:doc/actions
-    [{:program "term", :action "terniary clause", :sequence "` : `"}]}
-  [:!OS#Psemicolon [:spacebar :!Ssemicolon :spacebar]]
+    [{:program "term", :action "double OR", :sequence "` || `"}]}
+  [:!OS#Psemicolon [:spacebar :!Sbackslash :!Sbackslash :spacebar]]
   ^{:doc/actions
     [{:program "term", :action "double AND", :sequence "` && `"}]}
   [:!OS#Pquote [:spacebar :!S7 :!S7 :spacebar]]
   ^{:doc/actions
-    [{:program "term", :action "double OR", :sequence "` || `"}]}
-  [:!OS#Pbackslash [:spacebar :!Sbackslash :!Sbackslash :spacebar]]
+    [{:program "term", :action "dot compare", :sequence "` .== `"}]}
+  [:!OS#Pbackslash
+   [:spacebar :period :equal_sign :equal_sign :spacebar]]
   ^{:doc/actions
     [{:program "term", :action "dot less than", :sequence "` .< `"}]}
   [:!OS#Pcomma [:spacebar :period :!Scomma :spacebar]]
@@ -1695,45 +1696,46 @@
     [{:program "term", :action "dot more than", :sequence "` .> `"}]}
   [:!OS#Pperiod [:spacebar :period :!Speriod :spacebar]]
   ^{:doc/actions
-    [{:program "term", :action "dot NOT equal", :sequence "` .!= `"}]}
-  [:!OS#Pslash [:spacebar :period :!S1 :equal_sign :spacebar]]
+    [{:program "term", :action "terniary clause", :sequence "` : `"}]}
+  [:!OS#Pslash [:spacebar :!Ssemicolon :spacebar]]
   ^{:doc/actions
-    [{:program "term", :action "julia pipe", :sequence "` |> `"}]}
-  [:!O#Pdelete_or_backspace
-   [:spacebar :!Sbackslash :!Speriod :spacebar]]
+    [{:program "term", :action "NOT equal", :sequence "` != `"}]}
+  [:!O#Pdelete_or_backspace [:spacebar :!S1 :equal_sign :spacebar]]
   ^{:doc/actions
     [{:program "term", :action "assign", :sequence "` = `"}]}
   [:!O#Preturn_or_enter [:spacebar :equal_sign :spacebar]]
   ^{:doc/actions
-    [{:program "term", :action "compare", :sequence "` == `"}]}
-  [:!O#Pright_shift [:spacebar :equal_sign :equal_sign :spacebar]]
+    [{:program "term", :action "julia pipe", :sequence "` |> `"}]}
+  [:!O#Pright_shift [:spacebar :!Sbackslash :!Speriod :spacebar]]
   ^{:doc/actions
     [{:program "term", :action "multiply", :sequence "` * `"}]}
   [:!O#Pright_option [:spacebar :!S8 :spacebar]]
   ^{:doc/actions
     [{:program "term", :action "divide", :sequence "` / `"}]}
   [:!O#Pright_command [:spacebar :slash :spacebar]]
-  ^{:doc/actions [{:program "Alfred", :action "prompt"}]}
-  [:!O#Pspacebar [:!OCkeypad_num_lock]]
   ^{:doc/actions
-    [{:program "term", :action "dot julia pipe", :sequence "` .|> `"}]}
+    [{:program "term", :action "cli flag", :sequence "` --`"}]}
+  [:!O#Pspacebar [:spacebar :hyphen :hyphen]]
+  ^{:doc/actions
+    [{:program "term", :action "dot NOT equal", :sequence "` .!= `"}]}
   [:!OS#Pdelete_or_backspace
-   [:spacebar :period :!Sbackslash :!Speriod :spacebar]]
+   [:spacebar :period :!S1 :equal_sign :spacebar]]
   ^{:doc/actions
     [{:program "term", :action "dot assign", :sequence "` .= `"}]}
   [:!OS#Preturn_or_enter [:spacebar :period :equal_sign :spacebar]]
   ^{:doc/actions
-    [{:program "term", :action "dot compare", :sequence "` .== `"}]}
+    [{:program "term", :action "dot julia pipe", :sequence "` .|> `"}]}
   [:!OS#Pright_shift
-   [:spacebar :period :equal_sign :equal_sign :spacebar]]
+   [:spacebar :period :!Sbackslash :!Speriod :spacebar]]
   ^{:doc/actions
     [{:program "term", :action "dot multiply", :sequence "` .* `"}]}
   [:!OS#Pright_option [:spacebar :period :!S8 :spacebar]]
   ^{:doc/actions
     [{:program "term", :action "dot divide", :sequence "` ./ `"}]}
   [:!OS#Pright_command [:spacebar :period :slash :spacebar]]
-  ^{:doc/actions [{:program "Alfred", :action "file prompt"}]}
-  [:!OS#Pspacebar [:!OCSkeypad_num_lock]]
+  ^{:doc/actions
+    [{:program "term", :action "end of options", :sequence "` -- `"}]}
+  [:!OS#Pspacebar [:spacebar :hyphen :hyphen :spacebar]]
   ^{:doc/actions [{}]}
   [:!O#P1 [:!O1]]
   ^{:doc/actions [{}]}
@@ -2158,8 +2160,8 @@
   [:!S#Pperiod [:!Speriod]]
   ^{:doc/actions [{}]}
   [:!S#Pslash [:!Sslash]]
-  ^{:doc/actions [{:program "term", :action "tilde", :sequence "`~`"}]}
-  [:!S#Pdelete_or_backspace [:!S#Pgrave_accent_and_tilde]]
+  ^{:doc/actions [{}]}
+  [:!S#Pdelete_or_backspace [:!Sdelete_or_backspace]]
   ^{:doc/actions [{}]}
   [:!S#Preturn_or_enter [:!Sreturn_or_enter]]
   ^{:doc/actions
@@ -2282,14 +2284,6 @@
   [:!Q#Pup_arrow [:!Qup_arrow]]
   ^{:doc/actions [{}]}
   [:!Q#Pdown_arrow [:!Qdown_arrow]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pleft_arrow [:!QRleft_arrow]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pright_arrow [:!QRright_arrow]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pup_arrow [:!QRup_arrow]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pdown_arrow [:!QRdown_arrow]]
   ^{:doc/actions
     [{:program "term", :action "left assign", :sequence "` <- `"}]}
   [:!Q#Popen_bracket [:spacebar :!Scomma :hyphen :spacebar]]
@@ -2319,29 +2313,13 @@
     [{:program "term", :action "shebang", :sequence "`#!/`"}]}
   [:!Q#Pslash [:!S3 :!S1 :slash]]
   ^{:doc/actions [{}]}
-  [:!QR#Popen_bracket [:!QRopen_bracket]]
+  [:!Q#Pdelete_or_backspace [:!Qdelete_or_backspace]]
   ^{:doc/actions [{}]}
-  [:!QR#Pclose_bracket [:!QRclose_bracket]]
+  [:!Q#Preturn_or_enter [:!Qreturn_or_enter]]
   ^{:doc/actions [{}]}
-  [:!QR#Psemicolon [:!QRsemicolon]]
+  [:!Q#Pright_shift [:!Qright_shift]]
   ^{:doc/actions [{}]}
-  [:!QR#Pquote [:!QRquote]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pbackslash [:!QRbackslash]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pcomma [:!QRcomma]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pperiod [:!QRperiod]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pslash [:!QRslash]]
-  ^{:doc/actions [{}]}
-  [:!Q#Pdelete_or_backspace [:!Sdelete_or_backspace]]
-  ^{:doc/actions
-    [{:program "term", :action "cli flag", :sequence "` --`"}]}
-  [:!Q#Preturn_or_enter [:spacebar :hyphen :hyphen]]
-  ^{:doc/actions
-    [{:program "term", :action "end of options", :sequence "` -- `"}]}
-  [:!Q#Pspacebar [:spacebar :hyphen :hyphen :spacebar]]
+  [:!Q#Pspacebar [:!Qspacebar]]
   ^{:doc/actions [{}]}
   [:!Q#Pleft_command [:!Qleft_command]]
   ^{:doc/actions [{}]}
@@ -2354,24 +2332,6 @@
   [:!Q#Pcaps_lock [:!Qcaps_lock]]
   ^{:doc/actions [{}]}
   [:!Q#Ptab [:!Qtab]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pdelete_or_backspace [:!QRdelete_or_backspace]]
-  ^{:doc/actions [{}]}
-  [:!QR#Preturn_or_enter [:!QRreturn_or_enter]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pspacebar [:!QRspacebar]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pleft_command [:!QRleft_command]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pleft_option [:!QRleft_option]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pleft_control [:!QRleft_control]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pleft_shift [:!QRleft_shift]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pcaps_lock [:!QRcaps_lock]]
-  ^{:doc/actions [{}]}
-  [:!QR#Ptab [:!QRtab]]
   ^{:doc/actions [{}]}
   [:!Q#P1 [:!Q1]]
   ^{:doc/actions [{}]}
@@ -2396,30 +2356,6 @@
   [:!Q#Phyphen [:!Qhyphen]]
   ^{:doc/actions [{}]}
   [:!Q#Pequal_sign [:!Qequal_sign]]
-  ^{:doc/actions [{}]}
-  [:!QR#P1 [:!QR1]]
-  ^{:doc/actions [{}]}
-  [:!QR#P2 [:!QR2]]
-  ^{:doc/actions [{}]}
-  [:!QR#P3 [:!QR3]]
-  ^{:doc/actions [{}]}
-  [:!QR#P4 [:!QR4]]
-  ^{:doc/actions [{}]}
-  [:!QR#P5 [:!QR5]]
-  ^{:doc/actions [{}]}
-  [:!QR#P6 [:!QR6]]
-  ^{:doc/actions [{}]}
-  [:!QR#P7 [:!QR7]]
-  ^{:doc/actions [{}]}
-  [:!QR#P8 [:!QR8]]
-  ^{:doc/actions [{}]}
-  [:!QR#P9 [:!QR9]]
-  ^{:doc/actions [{}]}
-  [:!QR#P0 [:!QR0]]
-  ^{:doc/actions [{}]}
-  [:!QR#Phyphen [:!QRhyphen]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pequal_sign [:!QRequal_sign]]
   ^{:doc/actions [{}]}
   [:!Q#Pa [:!Qa]]
   ^{:doc/actions [{}]}
@@ -2474,61 +2410,7 @@
   ^{:doc/actions [{}]}
   [:!Q#Pz [:!Qz]]
   ^{:doc/actions [{}]}
-  [:!Q#Pright_control [:!Qright_control]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pa [:!QRa]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pb [:!QRb]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pc [:!QRc]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pd [:!QRd]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pe [:!QRe]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pf [:!QRf]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pg [:!QRg]]
-  ^{:doc/actions [{}]}
-  [:!QR#Ph [:!QRh]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pi [:!QRi]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pj [:!QRj]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pk [:!QRk]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pl [:!QRl]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pm [:!QRm]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pn [:!QRn]]
-  ^{:doc/actions [{}]}
-  [:!QR#Po [:!QRo]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pp [:!QRp]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pq [:!QRq]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pr [:!QRr]]
-  ^{:doc/actions [{}]}
-  [:!QR#Ps [:!QRs]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pt [:!QRt]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pu [:!QRu]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pv [:!QRv]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pw [:!QRw]]
-  ^{:doc/actions [{}]}
-  [:!QR#Px [:!QRx]]
-  ^{:doc/actions [{}]}
-  [:!QR#Py [:!QRy]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pz [:!QRz]]
-  ^{:doc/actions [{}]}
-  [:!QR#Pright_control [:!QRright_control]]]}
+  [:!Q#Pright_control [:!Qright_control]]]}
 {:des "RControl Mode",
  :rules
  [^{:doc/actions [{}]}
@@ -2901,14 +2783,6 @@
   [:!E#Pup_arrow [:!Eup_arrow]]
   ^{:doc/actions [{}]}
   [:!E#Pdown_arrow [:!Edown_arrow]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pleft_arrow [:!ERleft_arrow]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pright_arrow [:!ERright_arrow]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pup_arrow [:!ERup_arrow]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pdown_arrow [:!ERdown_arrow]]
   ^{:doc/actions
     [{:program "term", :action "R tree update", :sequence "` %<% `"}]}
   [:!E#Popen_bracket [:spacebar :!S5 :!Scomma :!S5 :spacebar]]
@@ -2935,29 +2809,14 @@
   ^{:doc/actions
     [{:program "term", :action "R tree update", :sequence "` %+>% `"}]}
   [:!E#Pslash [:spacebar :!S5 :!Sequal_sign :!Speriod :!S5 :spacebar]]
-  ^{:doc/actions [{}]}
-  [:!ER#Popen_bracket [:!ERopen_bracket]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pclose_bracket [:!ERclose_bracket]]
-  ^{:doc/actions [{}]}
-  [:!ER#Psemicolon [:!ERsemicolon]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pquote [:!ERquote]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pbackslash [:!ERbackslash]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pcomma [:!ERcomma]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pperiod [:!ERperiod]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pslash [:!ERslash]]
-  ^{:doc/actions
-    [{:program "term", :action "define", :sequence "` => `"}]}
-  [:!E#Pdelete_or_backspace
-   [:spacebar :equal_sign :!Speriod :spacebar]]
+  ^{:doc/actions [{:program "term", :action "tilde", :sequence "`~`"}]}
+  [:!E#Pdelete_or_backspace [:!S#Pgrave_accent_and_tilde]]
   ^{:doc/actions
     [{:program "term", :action "go assign", :sequence "` := `"}]}
   [:!E#Preturn_or_enter [:spacebar :!Ssemicolon :equal_sign :spacebar]]
+  ^{:doc/actions
+    [{:program "term", :action "define", :sequence "` => `"}]}
+  [:!E#Pright_shift [:spacebar :equal_sign :!Speriod :spacebar]]
   ^{:doc/actions [{:program "System", :action "prompt espanso"}]}
   [:!E#Pspacebar [:!Espacebar]]
   ^{:doc/actions
@@ -2984,24 +2843,6 @@
   ^{:doc/actions [{}]}
   [:!E#Ptab [:!Etab]]
   ^{:doc/actions [{}]}
-  [:!ER#Pdelete_or_backspace [:!ERdelete_or_backspace]]
-  ^{:doc/actions [{}]}
-  [:!ER#Preturn_or_enter [:!ERreturn_or_enter]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pspacebar [:!ERspacebar]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pleft_command [:!ERleft_command]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pleft_option [:!ERleft_option]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pleft_control [:!ERleft_control]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pleft_shift [:!ERleft_shift]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pcaps_lock [:!ERcaps_lock]]
-  ^{:doc/actions [{}]}
-  [:!ER#Ptab [:!ERtab]]
-  ^{:doc/actions [{}]}
   [:!E#P1 [:!E1]]
   ^{:doc/actions [{}]}
   [:!E#P2 [:!E2]]
@@ -3025,30 +2866,6 @@
   [:!E#Phyphen [:!Ehyphen]]
   ^{:doc/actions [{}]}
   [:!E#Pequal_sign [:!Eequal_sign]]
-  ^{:doc/actions [{}]}
-  [:!ER#P1 [:!ER1]]
-  ^{:doc/actions [{}]}
-  [:!ER#P2 [:!ER2]]
-  ^{:doc/actions [{}]}
-  [:!ER#P3 [:!ER3]]
-  ^{:doc/actions [{}]}
-  [:!ER#P4 [:!ER4]]
-  ^{:doc/actions [{}]}
-  [:!ER#P5 [:!ER5]]
-  ^{:doc/actions [{}]}
-  [:!ER#P6 [:!ER6]]
-  ^{:doc/actions [{}]}
-  [:!ER#P7 [:!ER7]]
-  ^{:doc/actions [{}]}
-  [:!ER#P8 [:!ER8]]
-  ^{:doc/actions [{}]}
-  [:!ER#P9 [:!ER9]]
-  ^{:doc/actions [{}]}
-  [:!ER#P0 [:!ER0]]
-  ^{:doc/actions [{}]}
-  [:!ER#Phyphen [:!ERhyphen]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pequal_sign [:!ERequal_sign]]
   ^{:doc/actions [{}]}
   [:!E#Pa [:!Ea]]
   ^{:doc/actions [{}]}
@@ -3102,61 +2919,7 @@
   ^{:doc/actions [{}]}
   [:!E#Pz [:!Ez]]
   ^{:doc/actions [{}]}
-  [:!E#Pright_control [:!Eright_control]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pa [:!ERa]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pb [:!ERb]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pc [:!ERc]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pd [:!ERd]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pe [:!ERe]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pf [:!ERf]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pg [:!ERg]]
-  ^{:doc/actions [{}]}
-  [:!ER#Ph [:!ERh]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pi [:!ERi]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pj [:!ERj]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pk [:!ERk]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pl [:!ERl]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pm [:!ERm]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pn [:!ERn]]
-  ^{:doc/actions [{}]}
-  [:!ER#Po [:!ERo]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pp [:!ERp]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pq [:!ERq]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pr [:!ERr]]
-  ^{:doc/actions [{}]}
-  [:!ER#Ps [:!ERs]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pt [:!ERt]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pu [:!ERu]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pv [:!ERv]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pw [:!ERw]]
-  ^{:doc/actions [{}]}
-  [:!ER#Px [:!ERx]]
-  ^{:doc/actions [{}]}
-  [:!ER#Py [:!ERy]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pz [:!ERz]]
-  ^{:doc/actions [{}]}
-  [:!ER#Pright_control [:!ERright_control]]]}
+  [:!E#Pright_control [:!Eright_control]]]}
 {:des "Additional keys",
  :rules
  [[:#Pdelete_or_backspace [:grave_accent_and_tilde] :pro]
@@ -3180,7 +2943,7 @@
 {:des "Modifier key remappings",
  :rules
  [^{:doc/actions [{:program "Alfred", :action "menu search"}]}
-  [:#Pescape [:!EWright_shift] nil {:alone [:!OTkeypad_num_lock]}]
+  [:#Pescape [:!OTkeypad_num_lock]]
   ^{:doc/actions
     [{:program "helix-common",
       :action "collapse selection",
@@ -3198,7 +2961,7 @@
   ^{:doc/actions [{}]}
   [:#Pright_control [:right_control]]
   ^{:doc/actions [{:program "Alfred", :action "window switcher"}]}
-  [:#Pleft_control [:#Pleft_control] nil {:alone [:!Ckeypad_num_lock]}]
+  [:#Pleft_control [:left_control] nil {:alone [:!Ckeypad_num_lock]}]
   ^{:doc/actions
     [{:program "System", :action "global in-app window cycler"}]}
   [:#Pleft_option [:left_option] nil {:alone [:!Otab]}]
