@@ -43,8 +43,8 @@
     ^{:doc/actions [{:program c/sys,   :action "control center"}]}                                 [a/kotcp_db    [f/kt_f13]]
     ^{:doc/actions [{:program c/sys,   :action "speak"}]}                                          [a/kotcp_re    [f/kt_f14]]
     ^{:doc/actions [{:program c/sys,   :action "input keyboard"}]}                                 [a/kotcp_rs    [f/kt_f15]]
-    ^{:doc/actions [{:program c/alf,   :action "file prompt"}]}                                    [a/kotcp_ro      [c/kocs_lock]]
-    ^{:doc/actions [{:program c/alf,   :action "prompt"}]}                                         [a/kotcp_rc      [c/koc_lock]]
+    ^{:doc/actions [{:program c/alf,   :action "file prompt"}]}                                    [a/kotcp_ro    [c/kocs_lock]]
+    ^{:doc/actions [{:program c/alf,   :action "prompt"}]}                                         [a/kotcp_rc    [c/koc_lock]]
     ^{:doc/actions [{:program c/sys,   :action "listen"}]}                                         [a/kotcp_sp    [f/kt_f16]]
 
     ; numeric-glyphs
@@ -60,8 +60,6 @@
     ^{:doc/actions [{}]}                                                                           [n/kotcp_0     [n/kotc_0]]
     ^{:doc/actions [{}]}                                                                           [n/kotcp_hy    [n/kotc_hy]]
     ^{:doc/actions [{}]}                                                                           [n/kotcp_eq    [n/kotc_eq]]
-
-; TODO: add keypad binds
 
     ; alphabetic-glyphs
     ^{:doc/actions [{:program c/sys,   :action "app windows"}]}                                    [b/kotcp_a     [b/kotc_a]]
@@ -86,7 +84,7 @@
     ^{:doc/actions [{}]}                                                                           [b/kotcp_t     [b/kotc_t]]
     ^{:doc/actions [{:program c/rec,   :action "bottom left"}]}                                    [b/kotcp_u     [b/kotc_u]]
     ^{:doc/actions [{:program c/rec,   :action "center third"}]}                                   [b/kotcp_v     [b/kotc_v]]
-    ^{:doc/actions [{:program c/sys,   :action "tak screenshot"}]}                                 [b/kotcp_w     [b/kotc_w]]
+    ^{:doc/actions [{:program c/sys,   :action "take screenshot"}]}                                [b/kotcp_w     [b/kotc_w]]
     ^{:doc/actions [{:program c/rec,   :action "first two thirds"}]}                               [b/kotcp_x     [b/kotc_x]]
     ^{:doc/actions [{:program c/rec,   :action "top left"}]}                                       [b/kotcp_y     [b/kotc_y]]
     ^{:doc/actions [{:program c/rec    :action "restore"}]}                                        [b/kotcp_z     [b/kotc_z]]
