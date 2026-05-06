@@ -8,16 +8,14 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; action glyphs
+(def kotc    (c/mk c/K c/O c/T c/_lc))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (def k_lc (c/mk c/_lc))
 (def k_lo (c/mk c/_lo))
 (def k_lt (c/mk c/_lt))
 (def k_ls (c/mk c/_ls))
-
-(def kp_lc (c/mk c/P c/_lc))
-(def kp_lo (c/mk c/P c/_lo))
-(def kp_lt (c/mk c/P c/_lt))
-(def kp_ls (c/mk c/P c/_ls))
 
 (def k_db (c/mk c/_db))
 (def k_re (c/mk c/_re))
@@ -25,6 +23,8 @@
 (def k_ro (c/mk c/_ro))
 (def k_rc (c/mk c/_rc))
 (def k_sp (c/mk c/_sp))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def ko_db (c/mk c/K c/O c/_db))
 (def ko_re (c/mk c/K c/O c/_re))
@@ -47,6 +47,15 @@
 (def kc_rc (c/mk c/K c/C c/_rc))
 (def kc_sp (c/mk c/K c/C c/_sp))
 
+(def kw_db (c/mk c/K c/W c/_db))
+(def kw_re (c/mk c/K c/W c/_re))
+(def kw_rs (c/mk c/K c/W c/_rs))
+(def kw_ro (c/mk c/K c/W c/_ro))
+(def kw_rc (c/mk c/K c/W c/_rc))
+(def kw_sp (c/mk c/K c/W c/_sp))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (def kot_db (c/mk c/K c/O c/T c/_db))
 (def kot_re (c/mk c/K c/O c/T c/_re))
 (def kot_rs (c/mk c/K c/O c/T c/_rs))
@@ -68,7 +77,6 @@
 (def ktc_rc (c/mk c/K c/T c/C c/_rc))
 (def ktc_sp (c/mk c/K c/T c/C c/_sp))
 
-(def kotc    (c/mk c/K c/O c/T c/_lc))
 (def kotc_db (c/mk c/K c/O c/T c/C c/_db))
 (def kotc_re (c/mk c/K c/O c/T c/C c/_re))
 (def kotc_rs (c/mk c/K c/O c/T c/C c/_rs))
@@ -76,28 +84,11 @@
 (def kotc_rc (c/mk c/K c/O c/T c/C c/_rc))
 (def kotc_sp (c/mk c/K c/O c/T c/C c/_sp))
 
-(def ke_db (c/mk c/K c/E c/_db))
-(def ke_re (c/mk c/K c/E c/_re))
-(def ke_rc (c/mk c/K c/E c/_rc))
-(def ke_sp (c/mk c/K c/E c/_sp))
-(def ke_lc (c/mk c/K c/E c/_lc))
-(def ke_lo (c/mk c/K c/E c/_lo))
-(def ke_lt (c/mk c/K c/E c/_lt))
-(def ke_ls (c/mk c/K c/E c/_ls))
-(def ke_caps (c/mk c/K c/E c/_caps))
-(def ke_tab (c/mk c/K c/E c/_tab))
-(def ke_esc (c/mk c/K c/E c/_esc))
-
-(def kw_db (c/mk c/K c/W c/_db))
-(def kw_re (c/mk c/K c/W c/_re))
-(def kw_rs (c/mk c/K c/W c/_rs))
-(def kw_ro (c/mk c/K c/W c/_ro))
-(def kw_rc (c/mk c/K c/W c/_rc))
-(def kw_sp (c/mk c/K c/W c/_sp))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def kq_db (c/mk c/K c/Q c/_db))
 (def kq_re (c/mk c/K c/Q c/_re))
-(def kq_ro (c/mk c/K c/Q c/_ro))
+(def kq_rs (c/mk c/K c/Q c/_rs))
 (def kq_sp (c/mk c/K c/Q c/_sp))
 (def kq_lc (c/mk c/K c/Q c/_lc))
 (def kq_lo (c/mk c/K c/Q c/_lo))
@@ -105,25 +96,19 @@
 (def kq_ls (c/mk c/K c/Q c/_ls))
 (def kq_caps (c/mk c/K c/Q c/_caps))
 (def kq_tab (c/mk c/K c/Q c/_tab))
-(def kq_esc (c/mk c/K c/Q c/_esc))
 
-(def kr_db (c/mk c/K c/R c/_db))
-(def kr_re (c/mk c/K c/R c/_re))
-(def kr_sp (c/mk c/K c/R c/_sp))
-(def kr_lc (c/mk c/K c/R c/_lc))
-(def kr_lo (c/mk c/K c/R c/_lo))
-(def kr_lt (c/mk c/K c/R c/_lt))
-(def kr_ls (c/mk c/K c/R c/_ls))
-(def kr_caps (c/mk c/K c/R c/_caps))
-(def kr_tab (c/mk c/K c/R c/_tab))
-(def kr_esc (c/mk c/K c/R c/_esc))
+(def ke_db (c/mk c/K c/E c/_db))
+(def ke_re (c/mk c/K c/E c/_re))
+(def ke_rs (c/mk c/K c/E c/_rs))
+(def ke_sp (c/mk c/K c/E c/_sp))
+(def ke_lc (c/mk c/K c/E c/_lc))
+(def ke_lo (c/mk c/K c/E c/_lo))
+(def ke_lt (c/mk c/K c/E c/_lt))
+(def ke_ls (c/mk c/K c/E c/_ls))
+(def ke_caps (c/mk c/K c/E c/_caps))
+(def ke_tab (c/mk c/K c/E c/_tab))
 
-(def kewq_db (c/mk c/K c/E c/W c/Q c/_db))
-(def kewq_re (c/mk c/K c/E c/W c/Q c/_re))
-(def kewq_rs (c/mk c/K c/E c/W c/Q c/_rs))
-(def kewq_ro (c/mk c/K c/E c/W c/Q c/_ro))
-(def kewq_rc (c/mk c/K c/E c/W c/Q c/_rc))
-(def kewq_sp (c/mk c/K c/E c/W c/Q c/_sp))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def ks_db (c/mk c/K c/S c/_db))
 (def ks_re (c/mk c/K c/S c/_re))
@@ -131,6 +116,16 @@
 (def ks_ro (c/mk c/K c/S c/_ro))
 (def ks_rc (c/mk c/K c/S c/_rc))
 (def ks_sp (c/mk c/K c/S c/_sp))
+
+(def kr_sp (c/mk c/K c/R c/_sp))
+(def kr_lc (c/mk c/K c/R c/_lc))
+(def kr_lo (c/mk c/K c/R c/_lo))
+(def kr_lt (c/mk c/K c/R c/_lt))
+(def kr_ls (c/mk c/K c/R c/_ls))
+(def kr_caps (c/mk c/K c/R c/_caps))
+(def kr_tab (c/mk c/K c/R c/_tab))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def kos_db (c/mk c/K c/O c/S c/_db))
 (def kos_re (c/mk c/K c/O c/S c/_re))
@@ -152,6 +147,15 @@
 (def kcs_ro (c/mk c/K c/C c/S c/_ro))
 (def kcs_rc (c/mk c/K c/C c/S c/_rc))
 (def kcs_sp (c/mk c/K c/C c/S c/_sp))
+
+(def kws_db (c/mk c/K c/W c/S c/_db))
+(def kws_re (c/mk c/K c/W c/S c/_re))
+(def kws_rs (c/mk c/K c/W c/S c/_rs))
+(def kws_ro (c/mk c/K c/W c/S c/_ro))
+(def kws_rc (c/mk c/K c/W c/S c/_rc))
+(def kws_sp (c/mk c/K c/W c/S c/_sp))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def kots_db (c/mk c/K c/O c/T c/S c/_db))
 (def kots_re (c/mk c/K c/O c/T c/S c/_re))
@@ -181,41 +185,12 @@
 (def kotcs_rc (c/mk c/K c/O c/T c/C c/R c/_rc))
 (def kotcs_sp (c/mk c/K c/O c/T c/C c/R c/_sp))
 
-(def ker_db (c/mk c/K c/E c/R c/_db))
-(def ker_re (c/mk c/K c/E c/R c/_re))
-(def ker_sp (c/mk c/K c/E c/R c/_sp))
-(def ker_lc (c/mk c/K c/E c/R c/_lc))
-(def ker_lo (c/mk c/K c/E c/R c/_lo))
-(def ker_lt (c/mk c/K c/E c/R c/_lt))
-(def ker_ls (c/mk c/K c/E c/R c/_ls))
-(def ker_caps (c/mk c/K c/E c/R c/_caps))
-(def ker_tab (c/mk c/K c/E c/R c/_tab))
-(def ker_esc (c/mk c/K c/E c/R c/_esc))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(def kws_db (c/mk c/K c/W c/S c/_db))
-(def kws_re (c/mk c/K c/W c/S c/_re))
-(def kws_rs (c/mk c/K c/W c/S c/_rs))
-(def kws_ro (c/mk c/K c/W c/S c/_ro))
-(def kws_rc (c/mk c/K c/W c/S c/_rc))
-(def kws_sp (c/mk c/K c/W c/S c/_sp))
-
-(def kqr_db (c/mk c/K c/Q c/R c/_db))
-(def kqr_re (c/mk c/K c/Q c/R c/_re))
-(def kqr_sp (c/mk c/K c/Q c/R c/_sp))
-(def kqr_lc (c/mk c/K c/Q c/R c/_lc))
-(def kqr_lo (c/mk c/K c/Q c/R c/_lo))
-(def kqr_lt (c/mk c/K c/Q c/R c/_lt))
-(def kqr_ls (c/mk c/K c/Q c/R c/_ls))
-(def kqr_caps (c/mk c/K c/Q c/R c/_caps))
-(def kqr_tab (c/mk c/K c/Q c/R c/_tab))
-(def kqr_esc (c/mk c/K c/Q c/R c/_esc))
-
-(def kewqs_db (c/mk c/K c/E c/W c/Q c/S c/_db))
-(def kewqs_re (c/mk c/K c/E c/W c/Q c/S c/_re))
-(def kewqs_rs (c/mk c/K c/E c/W c/Q c/S c/_rs))
-(def kewqs_ro (c/mk c/K c/E c/W c/Q c/S c/_ro))
-(def kewqs_rc (c/mk c/K c/E c/W c/Q c/S c/_rc))
-(def kewqs_sp (c/mk c/K c/E c/W c/Q c/S c/_sp))
+(def kp_lc (c/mk c/P c/_lc))
+(def kp_lo (c/mk c/P c/_lo))
+(def kp_lt (c/mk c/P c/_lt))
+(def kp_ls (c/mk c/P c/_ls))
 
 (def kp_db   (c/mk c/P c/_db))
 (def kp_re   (c/mk c/P c/_re))
@@ -223,6 +198,8 @@
 (def kp_ro   (c/mk c/P c/_ro))
 (def kp_rc   (c/mk c/P c/_rc))
 (def kp_sp   (c/mk c/P c/_sp))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def kop_db  (c/mk c/K c/O c/P c/_db))
 (def kop_re  (c/mk c/K c/O c/P c/_re))
@@ -244,6 +221,15 @@
 (def kcp_ro  (c/mk c/K c/C c/P c/_ro))
 (def kcp_rc  (c/mk c/K c/C c/P c/_rc))
 (def kcp_sp  (c/mk c/K c/C c/P c/_sp))
+
+(def kwp_db  (c/mk c/K c/W c/P c/_db))
+(def kwp_re  (c/mk c/K c/W c/P c/_re))
+(def kwp_rs  (c/mk c/K c/W c/P c/_rs))
+(def kwp_ro  (c/mk c/K c/W c/P c/_ro))
+(def kwp_rc  (c/mk c/K c/W c/P c/_rc))
+(def kwp_sp  (c/mk c/K c/W c/P c/_sp))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def kotp_db (c/mk c/K c/O c/T c/P c/_db))
 (def kotp_re (c/mk c/K c/O c/T c/P c/_re))
@@ -273,28 +259,11 @@
 (def kotcp_rc (c/mk c/K c/O c/T c/C c/P c/_rc))
 (def kotcp_sp (c/mk c/K c/O c/T c/C c/P c/_sp))
 
-(def kep_db (c/mk c/K c/E c/P c/_db))
-(def kep_re (c/mk c/K c/E c/P c/_re))
-(def kep_rc (c/mk c/K c/E c/P c/_rc))
-(def kep_sp (c/mk c/K c/E c/P c/_sp))
-(def kep_lc (c/mk c/K c/E c/P c/_lc))
-(def kep_lo (c/mk c/K c/E c/P c/_lo))
-(def kep_lt (c/mk c/K c/E c/P c/_lt))
-(def kep_ls (c/mk c/K c/E c/P c/_ls))
-(def kep_caps (c/mk c/K c/E c/P c/_caps))
-(def kep_tab (c/mk c/K c/E c/P c/_tab))
-(def kep_esc (c/mk c/K c/E c/P c/_esc))
-
-(def kwp_db  (c/mk c/K c/W c/P c/_db))
-(def kwp_re  (c/mk c/K c/W c/P c/_re))
-(def kwp_rs  (c/mk c/K c/W c/P c/_rs))
-(def kwp_ro  (c/mk c/K c/W c/P c/_ro))
-(def kwp_rc  (c/mk c/K c/W c/P c/_rc))
-(def kwp_sp  (c/mk c/K c/W c/P c/_sp))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def kqp_db (c/mk c/K c/Q c/P c/_db))
 (def kqp_re (c/mk c/K c/Q c/P c/_re))
-(def kqp_ro (c/mk c/K c/Q c/P c/_ro))
+(def kqp_rs (c/mk c/K c/Q c/P c/_rs))
 (def kqp_sp (c/mk c/K c/Q c/P c/_sp))
 (def kqp_lc (c/mk c/K c/Q c/P c/_lc))
 (def kqp_lo (c/mk c/K c/Q c/P c/_lo))
@@ -302,25 +271,19 @@
 (def kqp_ls (c/mk c/K c/Q c/P c/_ls))
 (def kqp_caps (c/mk c/K c/Q c/P c/_caps))
 (def kqp_tab (c/mk c/K c/Q c/P c/_tab))
-(def kqp_esc (c/mk c/K c/Q c/P c/_esc))
 
-(def krp_db (c/mk c/K c/R c/P c/_db))
-(def krp_re (c/mk c/K c/R c/P c/_re))
-(def krp_sp (c/mk c/K c/R c/P c/_sp))
-(def krp_lc (c/mk c/K c/R c/P c/_lc))
-(def krp_lo (c/mk c/K c/R c/P c/_lo))
-(def krp_lt (c/mk c/K c/R c/P c/_lt))
-(def krp_ls (c/mk c/K c/R c/P c/_ls))
-(def krp_caps (c/mk c/K c/R c/P c/_caps))
-(def krp_tab (c/mk c/K c/R c/P c/_tab))
-(def krp_esc (c/mk c/K c/R c/P c/_esc))
+(def kep_db (c/mk c/K c/E c/P c/_db))
+(def kep_re (c/mk c/K c/E c/P c/_re))
+(def kep_rs (c/mk c/K c/E c/P c/_rs))
+(def kep_sp (c/mk c/K c/E c/P c/_sp))
+(def kep_lc (c/mk c/K c/E c/P c/_lc))
+(def kep_lo (c/mk c/K c/E c/P c/_lo))
+(def kep_lt (c/mk c/K c/E c/P c/_lt))
+(def kep_ls (c/mk c/K c/E c/P c/_ls))
+(def kep_caps (c/mk c/K c/E c/P c/_caps))
+(def kep_tab (c/mk c/K c/E c/P c/_tab))
 
-(def kewqp_db  (c/mk c/K c/E c/W c/Q c/P c/_db))
-(def kewqp_re  (c/mk c/K c/E c/W c/Q c/P c/_re))
-(def kewqp_rs  (c/mk c/K c/E c/W c/Q c/P c/_rs))
-(def kewqp_ro  (c/mk c/K c/E c/W c/Q c/P c/_ro))
-(def kewqp_rc  (c/mk c/K c/E c/W c/Q c/P c/_rc))
-(def kewqp_sp  (c/mk c/K c/E c/W c/Q c/P c/_sp))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def ksp_db   (c/mk c/K c/S c/P c/_db))
 (def ksp_re   (c/mk c/K c/S c/P c/_re))
@@ -328,6 +291,16 @@
 (def ksp_ro   (c/mk c/K c/S c/P c/_ro))
 (def ksp_rc   (c/mk c/K c/S c/P c/_rc))
 (def ksp_sp   (c/mk c/K c/S c/P c/_sp))
+
+(def krp_sp (c/mk c/K c/R c/P c/_sp))
+(def krp_lc (c/mk c/K c/R c/P c/_lc))
+(def krp_lo (c/mk c/K c/R c/P c/_lo))
+(def krp_lt (c/mk c/K c/R c/P c/_lt))
+(def krp_ls (c/mk c/K c/R c/P c/_ls))
+(def krp_caps (c/mk c/K c/R c/P c/_caps))
+(def krp_tab (c/mk c/K c/R c/P c/_tab))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def kosp_db  (c/mk c/K c/O c/S c/P c/_db))
 (def kosp_re  (c/mk c/K c/O c/S c/P c/_re))
@@ -349,6 +322,15 @@
 (def kcsp_ro  (c/mk c/K c/C c/S c/P c/_ro))
 (def kcsp_rc  (c/mk c/K c/C c/S c/P c/_rc))
 (def kcsp_sp  (c/mk c/K c/C c/S c/P c/_sp))
+
+(def kwsp_db  (c/mk c/K c/W c/S c/P c/_db))
+(def kwsp_re  (c/mk c/K c/W c/S c/P c/_re))
+(def kwsp_rs  (c/mk c/K c/W c/S c/P c/_rs))
+(def kwsp_ro  (c/mk c/K c/W c/S c/P c/_ro))
+(def kwsp_rc  (c/mk c/K c/W c/S c/P c/_rc))
+(def kwsp_sp  (c/mk c/K c/W c/S c/P c/_sp))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def kotsp_db (c/mk c/K c/O c/T c/S c/P c/_db))
 (def kotsp_re (c/mk c/K c/O c/T c/S c/P c/_re))
@@ -377,41 +359,5 @@
 (def kotcsp_ro (c/mk c/K c/O c/T c/C c/R c/P c/_ro))
 (def kotcsp_rc (c/mk c/K c/O c/T c/C c/R c/P c/_rc))
 (def kotcsp_sp (c/mk c/K c/O c/T c/C c/R c/P c/_sp))
-
-(def kerp_db (c/mk c/K c/E c/R c/P c/_db))
-(def kerp_re (c/mk c/K c/E c/R c/P c/_re))
-(def kerp_sp (c/mk c/K c/E c/R c/P c/_sp))
-(def kerp_lc (c/mk c/K c/E c/R c/P c/_lc))
-(def kerp_lo (c/mk c/K c/E c/R c/P c/_lo))
-(def kerp_lt (c/mk c/K c/E c/R c/P c/_lt))
-(def kerp_ls (c/mk c/K c/E c/R c/P c/_ls))
-(def kerp_caps (c/mk c/K c/E c/R c/P c/_caps))
-(def kerp_tab (c/mk c/K c/E c/R c/P c/_tab))
-(def kerp_esc (c/mk c/K c/E c/R c/P c/_esc))
-
-(def kwsp_db  (c/mk c/K c/W c/S c/P c/_db))
-(def kwsp_re  (c/mk c/K c/W c/S c/P c/_re))
-(def kwsp_rs  (c/mk c/K c/W c/S c/P c/_rs))
-(def kwsp_ro  (c/mk c/K c/W c/S c/P c/_ro))
-(def kwsp_rc  (c/mk c/K c/W c/S c/P c/_rc))
-(def kwsp_sp  (c/mk c/K c/W c/S c/P c/_sp))
-
-(def kqrp_db (c/mk c/K c/Q c/R c/P c/_db))
-(def kqrp_re (c/mk c/K c/Q c/R c/P c/_re))
-(def kqrp_sp (c/mk c/K c/Q c/R c/P c/_sp))
-(def kqrp_lc (c/mk c/K c/Q c/R c/P c/_lc))
-(def kqrp_lo (c/mk c/K c/Q c/R c/P c/_lo))
-(def kqrp_lt (c/mk c/K c/Q c/R c/P c/_lt))
-(def kqrp_ls (c/mk c/K c/Q c/R c/P c/_ls))
-(def kqrp_caps (c/mk c/K c/Q c/R c/P c/_caps))
-(def kqrp_tab (c/mk c/K c/Q c/R c/P c/_tab))
-(def kqrp_esc (c/mk c/K c/Q c/R c/P c/_esc))
-
-(def kewqsp_db  (c/mk c/K c/E c/W c/Q c/S c/P c/_db))
-(def kewqsp_re  (c/mk c/K c/E c/W c/Q c/S c/P c/_re))
-(def kewqsp_rs  (c/mk c/K c/E c/W c/Q c/S c/P c/_rs))
-(def kewqsp_ro  (c/mk c/K c/E c/W c/Q c/S c/P c/_ro))
-(def kewqsp_rc  (c/mk c/K c/E c/W c/Q c/S c/P c/_rc))
-(def kewqsp_sp  (c/mk c/K c/E c/W c/Q c/S c/P c/_sp))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
