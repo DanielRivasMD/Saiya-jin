@@ -33,11 +33,6 @@
     ^{:doc/actions [{}]}                                                                           [r/kep_au      [r/ke_au]]
     ^{:doc/actions [{}]}                                                                           [r/kep_ad      [r/ke_ad]]
 
-    ^{:doc/actions [{}]}                                                                           [r/kerp_al     [r/ker_al]]
-    ^{:doc/actions [{}]}                                                                           [r/kerp_ar     [r/ker_ar]]
-    ^{:doc/actions [{}]}                                                                           [r/kerp_au     [r/ker_au]]
-    ^{:doc/actions [{}]}                                                                           [r/kerp_ad     [r/ker_ad]]
-
     ; technical glyphs
     ^{:doc/actions [{:program c/tm,    :action "R tree update",      :sequence "` %<% `"}]}        [t/kep_ob      [a/k_sp n/ks_5 t/ks_cm n/ks_5 a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "R pipe",             :sequence "` %>% `"}]}        [t/kep_cb      [a/k_sp n/ks_5 t/ks_pe n/ks_5 a/k_sp]]
@@ -48,18 +43,10 @@
     ^{:doc/actions [{:program c/tm,    :action "R tidyverse",        :sequence "` %!>% `"}]}       [t/kep_pe      [a/k_sp n/ks_5 n/ks_1 t/ks_pe n/ks_5 a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "R tree update",      :sequence "` %+>% `"}]}       [t/kep_sl      [a/k_sp n/ks_5 n/ks_eq t/ks_pe n/ks_5 a/k_sp]]
 
-    ^{:doc/actions [{}]}                                                                           [t/kerp_ob     [t/ker_ob]]
-    ^{:doc/actions [{}]}                                                                           [t/kerp_cb     [t/ker_cb]]
-    ^{:doc/actions [{}]}                                                                           [t/kerp_sc     [t/ker_sc]]
-    ^{:doc/actions [{}]}                                                                           [t/kerp_qu     [t/ker_qu]]
-    ^{:doc/actions [{}]}                                                                           [t/kerp_bl     [t/ker_bl]]
-    ^{:doc/actions [{}]}                                                                           [t/kerp_cm     [t/ker_cm]]
-    ^{:doc/actions [{}]}                                                                           [t/kerp_pe     [t/ker_pe]]
-    ^{:doc/actions [{}]}                                                                           [t/kerp_sl     [t/ker_sl]]
-
     ; action glyphs
-    ^{:doc/actions [{:program c/tm,    :action "define",             :sequence "` => `"}]}         [a/kep_db      [a/k_sp n/k_eq t/ks_pe a/k_sp]]
+    ^{:doc/actions [{:program c/tm     :action "tilde",              :sequence "`~`"}]}            [a/kep_db      [c/ksp_grave]]
     ^{:doc/actions [{:program c/tm,    :action "go assign",          :sequence "` := `"}]}         [a/kep_re      [a/k_sp t/ks_sc n/k_eq a/k_sp]]
+    ^{:doc/actions [{:program c/tm,    :action "define",             :sequence "` => `"}]}         [a/kep_rs      [a/k_sp n/k_eq t/ks_pe a/k_sp]]
     ^{:doc/actions [{:program c/sys,   :action "prompt espanso"}]}                                 [a/kep_sp      [a/ke_sp]]
     ^{:doc/actions [{:program c/hc,    :action "buffer picker",      :exec hc-buffer-picker}]}     [a/kep_lc      [b/kt_h]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "atuin widget"}
@@ -69,16 +56,6 @@
     ^{:doc/actions [{}]}                                                                           [a/kep_ls      [a/ke_ls]]
     ^{:doc/actions [{}]}                                                                           [a/kep_caps    [a/ke_caps]]
     ^{:doc/actions [{}]}                                                                           [a/kep_tab     [a/ke_tab]]
-
-    ^{:doc/actions [{}]}                                                                           [a/kerp_db     [a/ker_db]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_re     [a/ker_re]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_sp     [a/ker_sp]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_lc     [a/ker_lc]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_lo     [a/ker_lo]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_lt     [a/ker_lt]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_ls     [a/ker_ls]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_caps   [a/ker_caps]]
-    ^{:doc/actions [{}]}                                                                           [a/kerp_tab    [a/ker_tab]]
 
     ; numeric-glyphs
     ^{:doc/actions [{}]}                                                                           [n/kep_1       [n/ke_1]]
@@ -93,19 +70,6 @@
     ^{:doc/actions [{}]}                                                                           [n/kep_0       [n/ke_0]]
     ^{:doc/actions [{}]}                                                                           [n/kep_hy      [n/ke_hy]]
     ^{:doc/actions [{}]}                                                                           [n/kep_eq      [n/ke_eq]]
-
-    ^{:doc/actions [{}]}                                                                           [n/kerp_1      [n/ker_1]]
-    ^{:doc/actions [{}]}                                                                           [n/kerp_2      [n/ker_2]]
-    ^{:doc/actions [{}]}                                                                           [n/kerp_3      [n/ker_3]]
-    ^{:doc/actions [{}]}                                                                           [n/kerp_4      [n/ker_4]]
-    ^{:doc/actions [{}]}                                                                           [n/kerp_5      [n/ker_5]]
-    ^{:doc/actions [{}]}                                                                           [n/kerp_6      [n/ker_6]]
-    ^{:doc/actions [{}]}                                                                           [n/kerp_7      [n/ker_7]]
-    ^{:doc/actions [{}]}                                                                           [n/kerp_8      [n/ker_8]]
-    ^{:doc/actions [{}]}                                                                           [n/kerp_9      [n/ker_9]]
-    ^{:doc/actions [{}]}                                                                           [n/kerp_0      [n/ker_0]]
-    ^{:doc/actions [{}]}                                                                           [n/kerp_hy     [n/ker_hy]]
-    ^{:doc/actions [{}]}                                                                           [n/kerp_eq     [n/ker_eq]]
 
     ; alphabetic-glyphs
     ^{:doc/actions [{}]}                                                                           [b/kep_a       [b/ke_a]]
@@ -135,34 +99,6 @@
     ^{:doc/actions [{}]}                                                                           [b/kep_y       [b/ke_y]]
     ^{:doc/actions [{}]}                                                                           [b/kep_z       [b/ke_z]]
     ^{:doc/actions [{}]}                                                                           [b/kep_rt      [b/ke_rt]]
-
-    ^{:doc/actions [{}]}                                                                           [b/kerp_a      [b/ker_a]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_b      [b/ker_b]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_c      [b/ker_c]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_d      [b/ker_d]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_e      [b/ker_e]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_f      [b/ker_f]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_g      [b/ker_g]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_h      [b/ker_h]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_i      [b/ker_i]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_j      [b/ker_j]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_k      [b/ker_k]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_l      [b/ker_l]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_m      [b/ker_m]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_n      [b/ker_n]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_o      [b/ker_o]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_p      [b/ker_p]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_q      [b/ker_q]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_r      [b/ker_r]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_s      [b/ker_s]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_t      [b/ker_t]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_u      [b/ker_u]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_v      [b/ker_v]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_w      [b/ker_w]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_x      [b/ker_x]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_y      [b/ker_y]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_z      [b/ker_z]]
-    ^{:doc/actions [{}]}                                                                           [b/kerp_rt     [b/ker_rt]]
     ]})
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
