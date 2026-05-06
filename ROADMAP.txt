@@ -1,13 +1,7 @@
-- autogenerate katana config from saiyajin source => clojure -> edn & kbd
 - babel micro, helix, lazygit, serpl & zellij fully functional; autodocument binds
 - sync browser hotkeys => needed?
 - refactor justfile
 - update readme
 
 ==================================================
-src/simple/keyboards.clj; TODO: update documentation
-src/apps/browser.clj:; TODO: update config
-src/apps/zoom.clj:; TODO: homogenize to format
-src/simple/joker.clj:; TODO: add keypad binds
-src/mode/z.clj:    ; TODO: update old mapping for nushell
 ==================================================
