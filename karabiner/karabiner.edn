@@ -122,8 +122,11 @@
   [:#Psemicolon [:semicolon]]
   ^{:doc/actions [{}]}
   [:#Pquote [:quote]]
-  ^{:doc/actions [{}]}
-  [:#Pbackslash [:backslash]]
+  ^{:doc/actions
+    [{:program "zellij-shared",
+      :action "pane focus",
+      :exec ["ToggleFocusFullscreen;"]}]}
+  [:#Pbackslash [:!Tf7] :term]
   ^{:doc/actions [{}]}
   [:#Pcomma [:comma]]
   ^{:doc/actions [{}]}
@@ -137,9 +140,10 @@
   [:#Pdelete_or_backspace [:!Tf6] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
-      :action "pane focus",
-      :exec ["ToggleFocusFullscreen;"]}]}
-  [:#Preturn_or_enter [:!Tf7] :term]
+      :action "plugin pane picker",
+      :exec
+      ["LaunchOrFocusPlugin \"zellij-pane-picker\" { floating true; move_to_focused_tab true; }; }"]}]}
+  [:#Preturn_or_enter [:!Sf5] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "pane split right",
@@ -311,14 +315,14 @@
   [:#Pright_option [:!TSf9] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
-      :action "tab sync",
-      :exec ["ToggleActiveSyncTab;"]}]}
-  [:#Pright_command [:!TSf10] :term]
-  ^{:doc/actions
-    [{:program "zellij-shared",
       :action "pane float pin",
       :exec ["TogglePanePinned;"]}]}
-  [:#Pspacebar [:!TSf11] :term]
+  [:#Pright_command [:!TSf11] :term]
+  ^{:doc/actions
+    [{:program "zellij-shared",
+      :action "tab sync",
+      :exec ["ToggleActiveSyncTab;"]}]}
+  [:#Pspacebar [:!TSf10] :term]
   ^{:doc/actions [{}]}
   [:#P1 [:1]]
   ^{:doc/actions [{}]}
@@ -921,10 +925,6 @@
   [:!OTC#Preturn_or_enter [:!Tf14]]
   ^{:doc/actions [{:program "System", :action "input keyboard"}]}
   [:!OTC#Pright_shift [:!Tf15]]
-  ^{:doc/actions [{:program "Alfred", :action "file prompt"}]}
-  [:!OTC#Pright_option [:!OCSkeypad_num_lock]]
-  ^{:doc/actions [{:program "Alfred", :action "prompt"}]}
-  [:!OTC#Pright_command [:!OCkeypad_num_lock]]
   ^{:doc/actions [{:program "System", :action "listen"}]}
   [:!OTC#Pspacebar [:!Tf16]]
   ^{:doc/actions [{}]}
@@ -1136,9 +1136,16 @@
   ^{:doc/actions [{}]}
   [:!C#Pright_command [:!Cright_command]]
   ^{:doc/actions
-    [{:program "helix-common", :action "jumper", :exec ["goto_word"]}
-     {:program "micro", :action "jumper", :exec ["JumpLine"]}]}
-  [:!C#Pspacebar [:!Tspacebar]]
+    [{:program "helix-insert",
+      :action "mode normal",
+      :exec ["normal_mode"]}
+     {:program "helix-normal",
+      :action "mode insert",
+      :exec ["insert_mode"]}
+     {:program "helix-select",
+      :action "mode normal",
+      :exec ["normal_mode"]}]}
+  [:!S#Pspacebar [:!Tf12]]
   ^{:doc/actions [{}]}
   [:!CS#Pdelete_or_backspace [:!CSdelete_or_backspace]]
   ^{:doc/actions [{}]}
@@ -1391,7 +1398,9 @@
   [:!T#Pright_option [:!Tright_option]]
   ^{:doc/actions [{}]}
   [:!T#Pright_command [:!Tright_command]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions
+    [{:program "helix-common", :action "jumper", :exec ["goto_word"]}
+     {:program "micro", :action "jumper", :exec ["JumpLine"]}]}
   [:!T#Pspacebar [:!Tspacebar]]
   ^{:doc/actions [{}]}
   [:!TS#Pdelete_or_backspace [:!TSdelete_or_backspace]]
@@ -1713,9 +1722,8 @@
   ^{:doc/actions
     [{:program "term", :action "divide", :sequence "` / `"}]}
   [:!O#Pright_command [:spacebar :slash :spacebar]]
-  ^{:doc/actions
-    [{:program "term", :action "cli flag", :sequence "` --`"}]}
-  [:!O#Pspacebar [:spacebar :hyphen :hyphen]]
+  ^{:doc/actions [{}]}
+  [:!O#Pspacebar [:!Ospacebar]]
   ^{:doc/actions
     [{:program "term", :action "dot NOT equal", :sequence "` .!= `"}]}
   [:!OS#Pdelete_or_backspace
@@ -1733,9 +1741,8 @@
   ^{:doc/actions
     [{:program "term", :action "dot divide", :sequence "` ./ `"}]}
   [:!OS#Pright_command [:spacebar :period :slash :spacebar]]
-  ^{:doc/actions
-    [{:program "term", :action "end of options", :sequence "` -- `"}]}
-  [:!OS#Pspacebar [:spacebar :hyphen :hyphen :spacebar]]
+  ^{:doc/actions [{}]}
+  [:!OS#Pspacebar [:!OSspacebar]]
   ^{:doc/actions [{}]}
   [:!O#P1 [:!O1]]
   ^{:doc/actions [{}]}
@@ -2160,10 +2167,10 @@
   [:!S#Pperiod [:!Speriod]]
   ^{:doc/actions [{}]}
   [:!S#Pslash [:!Sslash]]
-  ^{:doc/actions [{}]}
-  [:!S#Pdelete_or_backspace [:!Sdelete_or_backspace]]
-  ^{:doc/actions [{}]}
-  [:!S#Preturn_or_enter [:!Sreturn_or_enter]]
+  ^{:doc/actions [{:program "Alfred", :action "file prompt"}]}
+  [:!S#Pdelete_or_backspace [:!OCSkeypad_num_lock]]
+  ^{:doc/actions [{:program "Alfred", :action "prompt"}]}
+  [:!S#Preturn_or_enter [:!OCkeypad_num_lock]]
   ^{:doc/actions
     [{:program "helix-common",
       :action "delete next char",
@@ -2185,17 +2192,8 @@
       :action "delete line start",
       :exec ["SelectToEndOfLine,Delete"]}]}
   [:!S#Pright_command [:!Tk]]
-  ^{:doc/actions
-    [{:program "helix-insert",
-      :action "mode normal",
-      :exec ["normal_mode"]}
-     {:program "helix-normal",
-      :action "mode insert",
-      :exec ["insert_mode"]}
-     {:program "helix-select",
-      :action "mode normal",
-      :exec ["normal_mode"]}]}
-  [:!S#Pspacebar [:!Tf12]]
+  ^{:doc/actions [{}]}
+  [:!S#Pspacebar [:!Sdelete_or_backspace]]
   ^{:doc/actions [{}]}
   [:!S#P1 [:!S1]]
   ^{:doc/actions [{}]}
@@ -2314,10 +2312,12 @@
   [:!Q#Pslash [:!S3 :!S1 :slash]]
   ^{:doc/actions [{}]}
   [:!Q#Pdelete_or_backspace [:!Qdelete_or_backspace]]
-  ^{:doc/actions [{}]}
-  [:!Q#Preturn_or_enter [:!Qreturn_or_enter]]
-  ^{:doc/actions [{}]}
-  [:!Q#Pright_shift [:!Qright_shift]]
+  ^{:doc/actions
+    [{:program "term", :action "end of options", :sequence "` -- `"}]}
+  [:!Q#Preturn_or_enter [:spacebar :hyphen :hyphen :spacebar]]
+  ^{:doc/actions
+    [{:program "term", :action "cli flag", :sequence "` --`"}]}
+  [:!Q#Pright_shift [:spacebar :hyphen :hyphen]]
   ^{:doc/actions [{}]}
   [:!Q#Pspacebar [:!Qspacebar]]
   ^{:doc/actions [{}]}
