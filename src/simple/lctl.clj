@@ -20,9 +20,11 @@
 (def hc-split-right          ["jump_view_right"])
 (def hc-split-up             ["jump_view_up"])
 (def hc-split-down           ["jump_view_down"])
+(def hc-jump                 ["goto_word"])
 
 (def mc-prev-split           ["PreviousSplit"])
 (def mc-next-split           ["NextSplit"])
+(def mc-jump                 ["JumpLine"])
 
 (defn lctl []
 
@@ -71,7 +73,8 @@
     ^{:doc/actions [{}]}                                                                           [a/ktp_rs      [a/kt_rs]]
     ^{:doc/actions [{}]}                                                                           [a/ktp_ro      [a/kt_ro]]
     ^{:doc/actions [{}]}                                                                           [a/ktp_rc      [a/kt_rc]]
-    ^{:doc/actions [{}]}                                                                           [a/ktp_sp      [a/kt_sp]]
+    ^{:doc/actions [{:program c/hc     :action "jumper"              :exec hc-jump}
+                    {:program c/mc     :action "jumper"              :exec mc-jump}]}              [a/ktp_sp      [a/kt_sp]]
 
     ^{:doc/actions [{}]}                                                                           [a/ktsp_db     [a/kts_db]]
     ^{:doc/actions [{}]}                                                                           [a/ktsp_re     [a/kts_re]]
