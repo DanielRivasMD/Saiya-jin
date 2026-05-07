@@ -60,8 +60,8 @@
     ^{:doc/actions [{:program c/zj,    :action "pane float toggle",  :exec zj-toggle-float}]}      [a/kp_re       [f/kts_f7]     c/term]
     ^{:doc/actions [{:program c/zj,    :action "tab break pane",     :exec zj-break-pane}]}        [a/kp_rs       [f/kts_f8]     c/term]
     ^{:doc/actions [{:program c/zj,    :action "pane float pop",     :exec zj-toggle-embed}]}      [a/kp_ro       [f/kts_f9]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "tab sync",           :exec zj-toggle-sync}]}       [a/kp_rc       [f/kts_f10]    c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane float pin",     :exec zj-toggle-pin}]}        [a/kp_sp       [f/kts_f11]    c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane float pin",     :exec zj-toggle-pin}]}        [a/kp_rc       [f/kts_f11]    c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab sync",           :exec zj-toggle-sync}]}       [a/kp_sp       [f/kts_f10]    c/term]
 
     ; numeric-glyphs
     ^{:doc/actions [{}]}                                                                           [n/kp_1        [n/k_1]]
