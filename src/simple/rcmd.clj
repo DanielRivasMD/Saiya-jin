@@ -41,8 +41,8 @@
 
     ; action glyphs
     ^{:doc/actions [{}]}                                                                           [a/kqp_db      [a/kq_db]]
-    ^{:doc/actions [{}]}                                                                           [a/kqp_re      [a/kq_re]]
-    ^{:doc/actions [{}]}                                                                           [a/kqp_rs      [a/kq_rs]]
+    ^{:doc/actions [{:program c/tm,    :action "end of options",     :sequence "` -- `"}]}         [a/kqp_re      [a/k_sp n/k_hy n/k_hy a/k_sp]]
+    ^{:doc/actions [{:program c/tm     :action "cli flag",           :sequence "` --`"}]}          [a/kqp_rs      [a/k_sp n/k_hy n/k_hy]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_sp      [a/kq_sp]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_lc      [a/kq_lc]]
     ^{:doc/actions [{}]}                                                                           [a/kqp_lo      [a/kq_lo]]
