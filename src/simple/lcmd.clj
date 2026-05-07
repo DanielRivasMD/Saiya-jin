@@ -114,7 +114,7 @@
     ^{:doc/actions [{}]}                                                                           [a/kcp_rc      [a/kc_rc]]
     ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hi-normal}
                     {:program c/hn,    :action "mode insert",        :exec hn-insert}
-                    {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [a/ksp_sp      [f/kt_f12]]
+                    {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [a/kcp_sp      [f/kt_f12]]
 
     ^{:doc/actions [{}]}                                                                           [a/kcsp_db     [a/kcs_db]]
     ^{:doc/actions [{}]}                                                                           [a/kcsp_re     [a/kcs_re]]
