@@ -26,6 +26,7 @@
 (def zj-pane-new-down        ["NewPane \"Down\";"])
 (def zj-rename-pane-mode     ["SwitchToMode \"RenamePane\"; PaneNameInput 0;"])
 (def zj-last-pane            ["SwitchFocus;"])
+(def zj-pane-picker          ["LaunchOrFocusPlugin \"zellij-pane-picker\" { floating true; move_to_focused_tab true; }; }"])
 
 (def zp-abort-rename         ["UndoRenamePane; SwitchToMode \"Normal\";"])
 
@@ -37,29 +38,29 @@
    :rules
    [:q-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program c/zj,    :action "pane left",          :exec zj-pane-left}]}         [r/kp_al       [f/kt_f1]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane right",         :exec zj-pane-right}]}        [r/kp_ar       [f/kt_f2]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane up",            :exec zj-pane-up}]}           [r/kp_au       [f/kt_f4]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane down",          :exec zj-pane-down}]}         [r/kp_ad       [f/kt_f5]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane left",          :exec zj-pane-left}]}         [r/kp_al       [f/kt_f1]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane right",         :exec zj-pane-right}]}        [r/kp_ar       [f/kt_f2]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane up",            :exec zj-pane-up}]}           [r/kp_au       [f/kt_f4]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane down",          :exec zj-pane-down}]}         [r/kp_ad       [f/kt_f5]      c/term]
 
     ; technical glyphs
     ^{:doc/actions [{}]}                                                                           [t/kp_ob       [t/k_ob]]
     ^{:doc/actions [{}]}                                                                           [t/kp_cb       [t/k_cb]]
     ^{:doc/actions [{}]}                                                                           [t/kp_sc       [t/k_sc]]
     ^{:doc/actions [{}]}                                                                           [t/kp_qu       [t/k_qu]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_bl       [t/k_bl]]
+    ^{:doc/actions [{:program c/zj,    :action "pane focus",         :exec zj-pane-focus}]}        [t/kp_bl       [f/kt_f7]      c/term]
     ^{:doc/actions [{}]}                                                                           [t/kp_cm       [t/k_cm]]
     ^{:doc/actions [{}]}                                                                           [t/kp_pe       [t/k_pe]]
     ^{:doc/actions [{}]}                                                                           [t/kp_sl       [t/k_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/zj,    :action "pane close",         :exec zj-pane-close}]}        [a/kp_db       [f/kt_f6]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane focus",         :exec zj-pane-focus}]}        [a/kp_re       [f/kt_f7]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane split right",   :exec zj-pane-new-right}]}    [a/kp_rs       [f/kt_f8]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane split down",    :exec zj-pane-new-down}]}     [a/kp_ro       [f/kt_f9]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane close",         :exec zj-pane-close}]}        [a/kp_db       [f/kt_f6]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "plugin pane picker", :exec zj-pane-picker}]}       [a/kp_re       [f/ks_f5]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane split right",   :exec zj-pane-new-right}]}    [a/kp_rs       [f/kt_f8]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane split down",    :exec zj-pane-new-down}]}     [a/kp_ro       [f/kt_f9]      c/term]
     ^{:doc/actions [{:program c/zj,    :action "mode pane rename",   :exec zj-rename-pane-mode}
-                    {:program c/zp,    :action "abort pane rename",  :exec zp-abort-rename}]}      [a/kp_rc       [f/kt_f10]       c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane jump back",     :exec zj-last-pane}]}         [a/kp_sp       [f/kt_f11]       c/term]
+                    {:program c/zp,    :action "abort pane rename",  :exec zp-abort-rename}]}      [a/kp_rc       [f/kt_f10]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane jump back",     :exec zj-last-pane}]}         [a/kp_sp       [f/kt_f11]     c/term]
 
     ; numeric glyphs
     ^{:doc/actions [{}]}                                                                           [n/kp_1        [n/k_1]]
