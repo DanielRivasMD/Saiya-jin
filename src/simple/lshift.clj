@@ -58,7 +58,7 @@
                     {:program c/mc,    :action "delete next word",   :exec mc-delete-word-right}]} [a/ksp_ro      [b/ko_d]]
     ^{:doc/actions [{:program c/hc,    :action "delete line start",  :exec hc-delete-line-end}
                     {:program c/mc,    :action "delete line start",  :exec mc-delete-line-end}]}   [a/ksp_rc      [b/kt_k]]
-    ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_db]]
+    ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_sp]]
 
     ; numeric-glyphs
     ^{:doc/actions [{}]}                                                                           [n/ksp_1       [n/ks_1]]
