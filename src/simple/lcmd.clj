@@ -26,11 +26,14 @@
 (def hc-select-file-end      ["extend_to_file_end"])
 (def hc-scroll-up            ["scroll_up"])
 (def hc-scroll-down          ["scroll_down"])
-(def hc-jump                 ["goto_word"])
 
 (def hi-completion           ["completion"])
 (def hn-hover                ["hover"])
 (def hs-hover                ["hover"])
+
+(def hi-normal               ["normal_mode"])
+(def hn-insert               ["insert_mode"])
+(def hs-normal               ["normal_mode"])
 
 (def lg-top                  ["gotoTop"])
 (def lg-bottom               ["gotoBottom"])
@@ -45,7 +48,6 @@
 (def mc-select-line-end      ["SelectToEndOfLine"])
 (def mc-select-file-start    ["SelectToStart"])
 (def mc-select-file-end      ["SelectToEnd"])
-(def mc-jump                 ["JumpLine"])
 
 (def ze-page-up              ["PageScrollUp;"])
 (def ze-page-down            ["PageScrollDown;"])
@@ -110,8 +112,9 @@
                     {:program c/lg,    :action "scroll down",        :exec lg-scroll-down}]}       [a/kcp_rs      [b/kt_y]       c/term]
     ^{:doc/actions [{}]}                                                                           [a/kcp_ro      [a/kc_ro]]
     ^{:doc/actions [{}]}                                                                           [a/kcp_rc      [a/kc_rc]]
-    ^{:doc/actions [{:program c/hc     :action "jumper"              :exec hc-jump}
-                    {:program c/mc     :action "jumper"              :exec mc-jump}]}              [a/kcp_sp      [a/kt_sp]]
+    ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hi-normal}
+                    {:program c/hn,    :action "mode insert",        :exec hn-insert}
+                    {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [a/ksp_sp      [f/kt_f12]]
 
     ^{:doc/actions [{}]}                                                                           [a/kcsp_db     [a/kcs_db]]
     ^{:doc/actions [{}]}                                                                           [a/kcsp_re     [a/kcs_re]]
