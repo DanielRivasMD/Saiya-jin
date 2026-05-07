@@ -183,14 +183,14 @@
     ^{:doc/actions [{:program c/tm,    :action "julia pipe",         :sequence "` |> `"}]}         [a/kop_rs      [a/k_sp t/ks_bl t/ks_pe a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "multiply",           :sequence "` * `"}]}          [a/kop_ro      [a/k_sp n/ks_8 a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "divide",             :sequence "` / `"}]}          [a/kop_rc      [a/k_sp t/k_sl a/k_sp]]
-    ^{:doc/actions [{:program c/tm     :action "cli flag",           :sequence "` --`"}]}          [a/kop_sp      [a/k_sp n/k_hy n/k_hy]]
+    ^{:doc/actions [{}]}                                                                           [a/kop_sp      [a/ko_sp]]
 
     ^{:doc/actions [{:program c/tm,    :action "dot NOT equal",      :sequence "` .!= `"}]}        [a/kosp_db     [a/k_sp t/k_pe n/ks_1 n/k_eq a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "dot assign",         :sequence "` .= `"}]}         [a/kosp_re     [a/k_sp t/k_pe n/k_eq a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "dot julia pipe",     :sequence "` .|> `"}]}        [a/kosp_rs     [a/k_sp t/k_pe t/ks_bl t/ks_pe a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "dot multiply",       :sequence "` .* `"}]}         [a/kosp_ro     [a/k_sp t/k_pe n/ks_8 a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "dot divide",         :sequence "` ./ `"}]}         [a/kosp_rc     [a/k_sp t/k_pe t/k_sl a/k_sp]]
-    ^{:doc/actions [{:program c/tm,    :action "end of options",     :sequence "` -- `"}]}         [a/kosp_sp     [a/k_sp n/k_hy n/k_hy a/k_sp]]
+    ^{:doc/actions [{}]}                                                                           [a/kosp_sp     [a/kos_sp]]
 
     ; numeric glyphs
     ^{:doc/actions [{}]}                                                                           [n/kop_1       [n/ko_1]]
