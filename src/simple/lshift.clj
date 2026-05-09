@@ -51,8 +51,10 @@
     ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/alf,   :action "file prompt"}]}                                    [a/ksp_db      [c/kocs_lock]]
-    ^{:doc/actions [{:program c/alf,   :action "prompt"}]}                                         [a/ksp_re      [c/koc_lock]]
+    ; TODO: bind new mail?
+    ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
+    ; TODO: bind browser window selector
+    ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
     ^{:doc/actions [{:program c/hc,    :action "delete next char",   :exec hc-delete}]}            [a/ksp_rs      [c/k_delf]]
     ^{:doc/actions [{:program c/hc,    :action "delete next word",   :exec hc-delete-word-right}
                     {:program c/mc,    :action "delete next word",   :exec mc-delete-word-right}]} [a/ksp_ro      [b/ko_d]]
