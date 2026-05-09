@@ -44,8 +44,8 @@
     ^{:doc/actions [{:program c/zj,    :action "pane down",          :exec zj-pane-down}]}         [r/kp_ad       [f/kt_f5]      c/term]
 
     ; technical glyphs
-    ^{:doc/actions [{}]}                                                                           [t/kp_ob       [t/k_ob]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_cb       [t/k_cb]]
+    ^{:doc/actions [{}]}                                                                           [t/kp_ob       [f/kos_f7]]
+    ^{:doc/actions [{}]}                                                                           [t/kp_cb       [f/kos_f8]]
     ^{:doc/actions [{}]}                                                                           [t/kp_sc       [t/k_sc]]
     ^{:doc/actions [{}]}                                                                           [t/kp_qu       [t/k_qu]]
     ^{:doc/actions [{:program c/zj,    :action "pane focus",         :exec zj-pane-focus}]}        [t/kp_bl       [f/kt_f7]      c/term]
