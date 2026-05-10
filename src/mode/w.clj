@@ -12,24 +12,15 @@
             [config.numeric :as n]
             [config.alphabetic :as b]
             [config.function :as f]
+
+            [config.helix :as hx]
+            [config.lazygit :as lg]
+            [config.micro :as mc]
+            [config.serpl :as sr]
+            [config.zellij :as zj]
 ))
 
 (def out-file "w.edn")
-
-(def z-normal-mode           ["SwitchToMode \"Normal\";"])
-
-(def zj-move-left            ["MovePane \"Left\";"])
-(def zj-move-rigth           ["MovePane \"Right\";"])
-(def zj-move-up              ["MovePane \"Up\";"])
-(def zj-move-down            ["MovePane \"Down\";"])
-(def zj-size-inc             ["Resize \"Increase\";"])
-(def zj-size-dec             ["Resize \"Decrease\";"])
-(def zj-toggle-pin           ["TogglePanePinned;"])
-(def zj-toggle-float         ["ToggleFloatingPanes;"])
-(def zj-break-pane           ["BreakPane;"])
-(def zj-toggle-sync          ["ToggleActiveSyncTab;"])
-(def zj-toggle-embed         ["TogglePaneEmbedOrFloating;"])
-(def zj-locked-mode          ["SwitchToMode \"Locked\";"])
 
 (defn w-mode []
 
@@ -39,14 +30,14 @@
    :rules
    [:w-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program c/zj,    :action "move left",          :exec zj-move-left}]}         [r/kp_al       [f/ko_f8]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "move right",         :exec zj-move-rigth}]}        [r/kp_ar       [f/ko_f9]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "move up",            :exec zj-move-up}]}           [r/kp_au       [f/ko_f11]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "move down",          :exec zj-move-down}]}         [r/kp_ad       [f/ko_f12]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "move left",          :exec zj/move-left}]}         [r/kp_al       [f/ko_f8]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "move right",         :exec zj/move-rigth}]}        [r/kp_ar       [f/ko_f9]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "move up",            :exec zj/move-up}]}           [r/kp_au       [f/ko_f11]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "move down",          :exec zj/move-down}]}         [r/kp_ad       [f/ko_f12]     c/term]
 
     ; technical glyphs
-    ^{:doc/actions [{:program c/zj,    :action "increase size",      :exec zj-size-dec}]}          [t/kp_ob       [f/kts_f4]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "decrease size",      :exec zj-size-inc}]}          [t/kp_cb       [f/kts_f5]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "increase size",      :exec zj/size-dec}]}          [t/kp_ob       [f/kts_f4]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "decrease size",      :exec zj/size-inc}]}          [t/kp_cb       [f/kts_f5]     c/term]
     ^{:doc/actions [{}]}                                                                           [t/kp_sc       [t/k_sc]]
     ^{:doc/actions [{}]}                                                                           [t/kp_qu       [t/k_qu]]
     ^{:doc/actions [{}]}                                                                           [t/kp_bl       [t/k_bl]]
@@ -55,13 +46,13 @@
     ^{:doc/actions [{}]}                                                                           [t/kp_sl       [t/k_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/zj,    :action "mode lock",          :exec zj-locked-mode}
-                    {:program c/zl,    :action "mode normal",        :exec z-normal-mode}]}        [a/kp_db       [f/kts_f6]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane float toggle",  :exec zj-toggle-float}]}      [a/kp_re       [f/kts_f7]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "tab break pane",     :exec zj-break-pane}]}        [a/kp_rs       [f/kts_f8]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane float pop",     :exec zj-toggle-embed}]}      [a/kp_ro       [f/kts_f9]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane float pin",     :exec zj-toggle-pin}]}        [a/kp_rc       [f/kts_f11]    c/term]
-    ^{:doc/actions [{:program c/zj,    :action "tab sync",           :exec zj-toggle-sync}]}       [a/kp_sp       [f/kts_f10]    c/term]
+    ^{:doc/actions [{:program c/zj,    :action "mode lock",          :exec zj/locked-mode}
+                    {:program c/zl,    :action "mode normal",        :exec zj/z-normal-mode}]}     [a/kp_db       [f/kts_f6]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane float toggle",  :exec zj/toggle-float}]}      [a/kp_re       [f/kts_f7]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab break pane",     :exec zj/break-pane}]}        [a/kp_rs       [f/kts_f8]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane float pop",     :exec zj/toggle-embed}]}      [a/kp_ro       [f/kts_f9]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane float pin",     :exec zj/toggle-pin}]}        [a/kp_rc       [f/kts_f11]    c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab sync",           :exec zj/toggle-sync}]}       [a/kp_sp       [f/kts_f10]    c/term]
 
     ; numeric-glyphs
     ^{:doc/actions [{}]}                                                                           [n/kp_1        [n/k_1]]
