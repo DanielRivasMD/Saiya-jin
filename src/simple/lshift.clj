@@ -12,20 +12,15 @@
             [config.numeric :as n]
             [config.alphabetic :as b]
             [config.function :as f]
+
+            [config.helix :as hx]
+            [config.lazygit :as lg]
+            [config.micro :as mc]
+            [config.serpl :as sr]
+            [config.zellij :as zj]
 ))
 
 (def out-file "lshift.edn")
-
-(def hc-select-left ["extend_char_left"])
-(def hc-select-right ["extend_char_right"])
-(def hc-select-up ["extend_line_up"])
-(def hc-select-down ["extend_line_down"])
-(def hc-delete ["delete_selection_noyank"])
-(def hc-delete-word-right ["delete_word_forward"])
-(def hc-delete-line-end ["kill_to_line_end"])
-
-(def mc-delete-word-right ["DeleteWordRight"])
-(def mc-delete-line-end ["SelectToEndOfLine,Delete"])
 
 (defn lshift []
 
@@ -35,10 +30,10 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/hc,    :action "select prev char",   :exec hc-select-left}]}       [r/ksp_al      [r/ks_al]]
-    ^{:doc/actions [{:program c/hc,    :action "select next char",   :exec hc-select-right}]}      [r/ksp_ar      [r/ks_ar]]
-    ^{:doc/actions [{:program c/hc,    :action "select line up",     :exec hc-select-up}]}         [r/ksp_au      [r/ks_au]]
-    ^{:doc/actions [{:program c/hc,    :action "select line down",   :exec hc-select-down}]}       [r/ksp_ad      [r/ks_ad]]
+    ^{:doc/actions [{:program c/hc,    :action "select prev char",   :exec hx/select-left}]}       [r/ksp_al      [r/ks_al]]
+    ^{:doc/actions [{:program c/hc,    :action "select next char",   :exec hx/select-right}]}      [r/ksp_ar      [r/ks_ar]]
+    ^{:doc/actions [{:program c/hc,    :action "select line up",     :exec hx/select-up}]}         [r/ksp_au      [r/ks_au]]
+    ^{:doc/actions [{:program c/hc,    :action "select line down",   :exec hx/select-down}]}       [r/ksp_ad      [r/ks_ad]]
 
     ; technical glyphs
     ^{:doc/actions [{}]}                                                                           [t/ksp_ob      [t/ks_ob]]
@@ -55,11 +50,11 @@
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ; TODO: bind browser window selector
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
-    ^{:doc/actions [{:program c/hc,    :action "delete next char",   :exec hc-delete}]}            [a/ksp_rs      [c/k_delf]]
-    ^{:doc/actions [{:program c/hc,    :action "delete next word",   :exec hc-delete-word-right}
-                    {:program c/mc,    :action "delete next word",   :exec mc-delete-word-right}]} [a/ksp_ro      [b/ko_d]]
-    ^{:doc/actions [{:program c/hc,    :action "delete line start",  :exec hc-delete-line-end}
-                    {:program c/mc,    :action "delete line start",  :exec mc-delete-line-end}]}   [a/ksp_rc      [b/kt_k]]
+    ^{:doc/actions [{:program c/hc,    :action "delete next char",   :exec hx/delete}]}            [a/ksp_rs      [c/k_delf]]
+    ^{:doc/actions [{:program c/hc,    :action "delete next word",   :exec hx/delete-word-right}
+                    {:program c/mc,    :action "delete next word",   :exec mc/delete-word-right}]} [a/ksp_ro      [b/ko_d]]
+    ^{:doc/actions [{:program c/hc,    :action "delete line start",  :exec hx/delete-line-end}
+                    {:program c/mc,    :action "delete line start",  :exec mc/delete-line-end}]}   [a/ksp_rc      [b/kt_k]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_sp]]
 
     ; numeric-glyphs
