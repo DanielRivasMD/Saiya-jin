@@ -12,17 +12,15 @@
             [config.numeric :as n]
             [config.alphabetic :as b]
             [config.function :as f]
+
+            [config.helix :as hx]
+            [config.lazygit :as lg]
+            [config.micro :as mc]
+            [config.serpl :as sr]
+            [config.zellij :as zj]
 ))
 
 (def out-file "rshift.edn")
-
-(def hc-last-mod             ["goto_last_modification"])
-(def hc-del-char-back        ["delete_char_backward"])
-(def hc-del-word-back        ["delete_word_backward"])
-(def hc-del-start-line       ["kill_to_line_start"])
-
-(def mc-del-word-back        ["DeleteWordLeft"])
-(def mc-del-start-line       ["SelectToStartOfLine,Delete"])
 
 (defn rshift []
 
@@ -48,13 +46,13 @@
     ^{:doc/actions [{}]}                                                                           [t/krp_sl      [t/kr_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/hc,    :action "last modification",  :exec hc-last-mod}]}          [a/krp_sp      [f/ko_f17]]
-    ^{:doc/actions [{:program c/hc,    :action "delete line start",  :exec hc-del-start-line}
-                    {:program c/mc,    :action "delete line start",  :exec mc-del-start-line}]}    [a/krp_lc      [c/kw_u]]
+    ^{:doc/actions [{:program c/hc,    :action "last modification",  :exec hx/last-mod}]}          [a/krp_sp      [f/ko_f17]]
+    ^{:doc/actions [{:program c/hc,    :action "delete line start",  :exec hx/del-start-line}
+                    {:program c/mc,    :action "delete line start",  :exec mc/del-start-line}]}    [a/krp_lc      [c/kw_u]]
     ^{:doc/actions [{}]}                                                                           [a/krp_lo      [a/kr_lo]]
-    ^{:doc/actions [{:program c/hc,    :action "delete prev word",   :exec hc-del-word-back}
-                    {:program c/mc,    :action "delete prev word",   :exec mc-del-word-back}]}     [a/krp_lt      [c/kw_w]]
-    ^{:doc/actions [{:program c/hc,    :action "delete prev char",   :exec hc-del-char-back}]}     [a/krp_ls      [c/k_delb]]
+    ^{:doc/actions [{:program c/hc,    :action "delete prev word",   :exec hx/del-word-back}
+                    {:program c/mc,    :action "delete prev word",   :exec mc/del-word-back}]}     [a/krp_lt      [c/kw_w]]
+    ^{:doc/actions [{:program c/hc,    :action "delete prev char",   :exec hx/del-char-back}]}     [a/krp_ls      [c/k_delb]]
     ^{:doc/actions [{}]}                                                                           [a/krp_caps    [a/kr_caps]]
     ^{:doc/actions [{}]}                                                                           [a/krp_tab     [a/kr_tab]]
 
