@@ -12,19 +12,15 @@
             [config.numeric :as n]
             [config.alphabetic :as b]
             [config.function :as f]
+
+            [config.helix :as hx]
+            [config.lazygit :as lg]
+            [config.micro :as mc]
+            [config.serpl :as sr]
+            [config.zellij :as zj]
 ))
 
 (def out-file "lctl.edn")
-
-(def hc-split-left           ["jump_view_left"])
-(def hc-split-right          ["jump_view_right"])
-(def hc-split-up             ["jump_view_up"])
-(def hc-split-down           ["jump_view_down"])
-(def hc-jump                 ["goto_word"])
-
-(def mc-prev-split           ["PreviousSplit"])
-(def mc-next-split           ["NextSplit"])
-(def mc-jump                 ["JumpLine"])
 
 (defn lctl []
 
@@ -34,14 +30,14 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/hc,    :action "jump split left",    :exec hc-split-left}
-                    {:program c/mc,    :action "jump split left",    :exec mc-prev-split}]}        [r/ktp_al      [r/kt_al]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jump split right",   :exec hc-split-right}
-                    {:program c/mc,    :action "jump split right",   :exec mc-next-split}]}        [r/ktp_ar      [r/kt_ar]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jump split up",      :exec hc-split-up}
-                    {:program c/mc,    :action "jump split up",      :exec mc-prev-split}]}        [r/ktp_au      [r/kt_au]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jump split down",    :exec hc-split-down}
-                    {:program c/mc,    :action "jump split down",    :exec mc-next-split}]}        [r/ktp_ad      [r/kt_ad]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split left",    :exec hx/split-left}
+                    {:program c/mc,    :action "jump split left",    :exec mc/prev-split}]}        [r/ktp_al      [r/kt_al]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split right",   :exec hx/split-right}
+                    {:program c/mc,    :action "jump split right",   :exec mc/next-split}]}        [r/ktp_ar      [r/kt_ar]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split up",      :exec hx/split-up}
+                    {:program c/mc,    :action "jump split up",      :exec mc/prev-split}]}        [r/ktp_au      [r/kt_au]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump split down",    :exec hx/split-down}
+                    {:program c/mc,    :action "jump split down",    :exec mc/next-split}]}        [r/ktp_ad      [r/kt_ad]      c/term]
 
     ^{:doc/actions [{}]}                                                                           [r/ktsp_al     [r/kts_al]]
     ^{:doc/actions [{}]}                                                                           [r/ktsp_ar     [r/kts_ar]]
@@ -73,8 +69,8 @@
     ^{:doc/actions [{}]}                                                                           [a/ktp_rs      [a/kt_rs]]
     ^{:doc/actions [{}]}                                                                           [a/ktp_ro      [a/kt_ro]]
     ^{:doc/actions [{}]}                                                                           [a/ktp_rc      [a/kt_rc]]
-    ^{:doc/actions [{:program c/hc     :action "jumper"              :exec hc-jump}
-                    {:program c/mc     :action "jumper"              :exec mc-jump}]}              [a/ktp_sp      [a/kt_sp]]
+    ^{:doc/actions [{:program c/hc     :action "jumper"              :exec hx/jump}
+                    {:program c/mc     :action "jumper"              :exec mc/jump}]}              [a/ktp_sp      [a/kt_sp]]
 
     ^{:doc/actions [{}]}                                                                           [a/ktsp_db     [a/kts_db]]
     ^{:doc/actions [{}]}                                                                           [a/ktsp_re     [a/kts_re]]
