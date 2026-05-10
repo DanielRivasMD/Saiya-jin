@@ -12,28 +12,15 @@
             [config.numeric :as n]
             [config.alphabetic :as b]
             [config.function :as f]
+
+            [config.helix :as hx]
+            [config.lazygit :as lg]
+            [config.micro :as mc]
+            [config.serpl :as sr]
+            [config.zellij :as zj]
 ))
 
 (def out-file "tab.edn")
-
-(def z-normal-mode           ["SwitchToMode \"Normal\";"])
-
-(def zj-plug-room            ["LaunchOrFocusPlugin \"file:~/.config/zellij/plugins/room.wasm\" { floating true; ignore_case true; };"])
-(def zj-history              ["EditScrollback; SwitchToMode \"Normal\";"])
-
-(def zj-prev-tab             ["GoToPreviousTab;"])
-(def zj-next-tab             ["GoToNextTab;"])
-(def zj-scroll-up            ["ScrollUp;"])
-(def zj-scroll-down          ["ScrollDown;"])
-(def zj-swap-tab-left        ["MoveTab \"Left\";"])
-(def zj-swap-tab-right       ["MoveTab \"Right\";"])
-(def zj-close-tab            ["CloseTab;"])
-(def zj-new-tab              ["NewTab;"])
-(def zj-entersearch-mode     ["SwitchToMode \"EnterSearch\"; SearchInput 0;"])
-(def zj-rename-tab-mode      ["SwitchToMode \"RenameTab\"; TabNameInput 0;"])
-(def zj-last-tab             ["ToggleTab;"])
-
-(def zt-abort-rename         ["UndoRenameTab; SwitchToMode \"Normal\";"])
 
 (defn tab-mode []
 
@@ -43,30 +30,30 @@
    :rules
    [:tab-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program c/zj,    :action "prev tab",           :exec zj-prev-tab}]}          [r/kp_al       [f/ks_f1]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "next tab",           :exec zj-next-tab}]}          [r/kp_ar       [f/ks_f2]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "scroll up",          :exec zj-scroll-up}]}         [r/kp_au       [f/kos_f11]    c/term]
-    ^{:doc/actions [{:program c/zj,    :action "scroll down",        :exec zj-scroll-down}]}       [r/kp_ad       [f/kos_f12]    c/term]
+    ^{:doc/actions [{:program c/zj,    :action "prev tab",           :exec zj/prev-tab}]}          [r/kp_al       [f/ks_f1]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "next tab",           :exec zj/next-tab}]}          [r/kp_ar       [f/ks_f2]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "scroll up",          :exec zj/scroll-up}]}         [r/kp_au       [f/kos_f11]    c/term]
+    ^{:doc/actions [{:program c/zj,    :action "scroll down",        :exec zj/scroll-down}]}       [r/kp_ad       [f/kos_f12]    c/term]
 
    ; technical glyphs
-    ^{:doc/actions [{:program c/zj,    :action "swap left",          :exec zj-swap-tab-left}]}     [t/kp_ob       [f/kts_f1]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "swap right",         :exec zj-swap-tab-right}]}    [t/kp_cb       [f/kts_f2]     c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "plugin jump-list",   :exec zj-pane-picker}]}       [t/kp_sc       [f/ks_f5]      c/term]
-    ; ^{:doc/actions [{:program c/zj,    :action "plugin monocle",     :exec zj-plug-monocle}]}      [t/kp_qu       [f/ks_f6]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "history edit",       :exec zj-history}]}           [t/kp_bl       [f/ks_f4]       c/term]
+    ^{:doc/actions [{:program c/zj,    :action "swap left",          :exec zj/swap-tab-left}]}     [t/kp_ob       [f/kts_f1]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "swap right",         :exec zj/swap-tab-right}]}    [t/kp_cb       [f/kts_f2]     c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "plugin jump-list",   :exec zj/pane-picker}]}       [t/kp_sc       [f/ks_f5]      c/term]
+    ; ^{:doc/actions [{:program c/zj,    :action "plugin monocle",     :exec zj/plug-monocle}]}      [t/kp_qu       [f/ks_f6]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "history edit",       :exec zj/history}]}           [t/kp_bl       [f/ks_f4]       c/term]
     ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_pe       [b/ko_x]       c/term]
     ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_cm       [b/ko_y]       c/term]
     ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_sl       [b/ko_z]       c/term]
 
    ; action glyphs
-    ^{:doc/actions [{:program c/zj,    :action "tab close",          :exec zj-close-tab}]}         [a/kp_db       [f/ks_f7]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "plugin room",        :exec zj-plug-room}]}         [a/kp_re       [f/ks_f8]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "tab new",            :exec zj-new-tab}]}           [a/kp_rs       [f/ks_f9]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "mode search",        :exec zj-entersearch-mode}
-                    {:program c/ze,    :action "mode normal",        :exec z-normal-mode}]}        [a/kp_ro       [f/ks_f10]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "mode tab rename",    :exec zj-rename-tab-mode}
-                    {:program c/zt,    :action "abort tab reanme",   :exec zt-abort-rename}]}      [a/kp_rc       [f/ks_f11]     c/term]
-    ^{:doc/actions [{:program c/zj,    :action "tab jump back",      :exec zj-last-tab}]}          [a/kp_sp       [f/ks_f12]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab close",          :exec zj/close-tab}]}         [a/kp_db       [f/ks_f7]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "plugin room",        :exec zj/plug-room}]}         [a/kp_re       [f/ks_f8]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab new",            :exec zj/new-tab}]}           [a/kp_rs       [f/ks_f9]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "mode search",        :exec zj/entersearch-mode}
+                    {:program c/ze,    :action "mode normal",        :exec zj/z-normal-mode}]}     [a/kp_ro       [f/ks_f10]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "mode tab rename",    :exec zj/rename-tab-mode}
+                    {:program c/zt,    :action "abort tab reanme",   :exec zj/t-abort-rename}]}    [a/kp_rc       [f/ks_f11]     c/term]
+    ^{:doc/actions [{:program c/zj,    :action "tab jump back",      :exec zj/last-tab}]}          [a/kp_sp       [f/ks_f12]     c/term]
 
    ; numeric glyphs
     ^{:doc/actions [{}]}                                                                           [n/kp_1        [n/k_1]]
