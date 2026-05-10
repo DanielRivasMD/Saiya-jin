@@ -12,45 +12,15 @@
             [config.numeric :as n]
             [config.alphabetic :as b]
             [config.function :as f]
+
+            [config.helix :as hx]
+            [config.lazygit :as lg]
+            [config.micro :as mc]
+            [config.serpl :as sr]
+            [config.zellij :as zj]
 ))
 
 (def out-file "lcmd.edn")
-
-(def hc-line-start           ["goto_line_start"])
-(def hc-line-end             ["goto_line_end", "move_char_right"])
-(def hc-file-start           ["goto_file_start"])
-(def hc-file-end             ["goto_last_line"])
-(def hc-select-line-start    ["select_mode", "goto_line_start", "MODE"])
-(def hc-select-line-end      ["select_mode", "goto_line_end", "MODE"])
-(def hc-select-file-start    ["extend_to_file_start"])
-(def hc-select-file-end      ["extend_to_file_end"])
-(def hc-scroll-up            ["scroll_up"])
-(def hc-scroll-down          ["scroll_down"])
-
-(def hi-completion           ["completion"])
-(def hn-hover                ["hover"])
-(def hs-hover                ["hover"])
-
-(def hi-normal               ["normal_mode"])
-(def hn-insert               ["insert_mode"])
-(def hs-normal               ["normal_mode"])
-
-(def lg-top                  ["gotoTop"])
-(def lg-bottom               ["gotoBottom"])
-(def lg-scroll-up            ["scrollUpMain-alt2"])
-(def lg-scroll-down          ["scrollDownMain-alt2"])
-
-(def mc-line-start           ["StartOfLine"])
-(def mc-line-end             ["EndOfLine"])
-(def mc-file-start           ["CursorStart"])
-(def mc-file-end             ["CursorEnd"])
-(def mc-select-line-start    ["SelectToStartOfLine"])
-(def mc-select-line-end      ["SelectToEndOfLine"])
-(def mc-select-file-start    ["SelectToStart"])
-(def mc-select-file-end      ["SelectToEnd"])
-
-(def ze-page-up              ["PageScrollUp;"])
-(def ze-page-down            ["PageScrollDown;"])
 
 (defn lcmd []
 
@@ -60,27 +30,27 @@
    :rules
    [;
     ; arrow glyphs
-    ^{:doc/actions [{:program c/hc,    :action "goto line start",    :exec hc-line-start}
-                    {:program c/mc,    :action "goto line start",    :exec mc-line-start}]}        [r/kc_al       [b/kt_a]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "goto line end",      :exec hc-line-end}
-                    {:program c/mc,    :action "goto line end",      :exec mc-line-end}]}          [r/kc_ar       [b/kt_e]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "goto file start",    :exec hc-file-start}
-                    {:program c/lg,    :action "goto top",           :exec lg-top}
-                    {:program c/mc,    :action "goto file start",    :exec mc-file-start}
-                    {:program c/ze,    :action "page up",            :exec ze-page-up}]}           [r/kc_au       [r/k_hm]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "goto file end",      :exec hc-file-end}
-                    {:program c/lg,    :action "goto bottom",        :exec lg-bottom}
-                    {:program c/mc,    :action "goto file end",      :exec mc-file-end}
-                    {:program c/ze,    :action "page down",          :exec ze-page-down}]}         [r/kc_ad       [r/k_ed]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "goto line start",    :exec hx/line-start}
+                    {:program c/mc,    :action "goto line start",    :exec mc/line-start}]}        [r/kc_al       [b/kt_a]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "goto line end",      :exec hx/line-end}
+                    {:program c/mc,    :action "goto line end",      :exec mc/line-end}]}          [r/kc_ar       [b/kt_e]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "goto file start",    :exec hx/file-start}
+                    {:program c/lg,    :action "goto top",           :exec lg/top}
+                    {:program c/mc,    :action "goto file start",    :exec mc/file-start}
+                    {:program c/ze,    :action "page up",            :exec zj/e-page-up}]}         [r/kc_au       [r/k_hm]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "goto file end",      :exec hx/file-end}
+                    {:program c/lg,    :action "goto bottom",        :exec lg/bottom}
+                    {:program c/mc,    :action "goto file end",      :exec mc/file-end}
+                    {:program c/ze,    :action "page down",          :exec zj/e-page-down}]}       [r/kc_ad       [r/k_ed]       c/term]
 
-    ^{:doc/actions [{:program c/hc,    :action "select line start",  :exec hc-select-line-start}
-                    {:program c/mc,    :action "select line start",  :exec mc-select-line-start}]} [r/kcs_al      [r/ko_al]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "select line end",    :exec hc-select-line-end}
-                    {:program c/mc,    :action "select line end",    :exec mc-select-line-end}]}   [r/kcs_ar      [r/ko_ar]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "select file start",  :exec hc-select-file-start}
-                    {:program c/mc,    :action "select file start",  :exec mc-select-file-start}]} [r/kcs_au      [r/ko_au]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "select file end",    :exec hc-select-file-end}
-                    {:program c/mc,    :action "select file end",    :exec mc-select-file-end}]}   [r/kcs_ad      [r/ko_ad]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "select line start",  :exec hx/select-line-start}
+                    {:program c/mc,    :action "select line start",  :exec mc/select-line-start}]} [r/kcs_al      [r/ko_al]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "select line end",    :exec hx/select-line-end}
+                    {:program c/mc,    :action "select line end",    :exec mc/select-line-end}]}   [r/kcs_ar      [r/ko_ar]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "select file start",  :exec hx/select-file-start}
+                    {:program c/mc,    :action "select file start",  :exec mc/select-file-start}]} [r/kcs_au      [r/ko_au]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "select file end",    :exec hx/select-file-end}
+                    {:program c/mc,    :action "select file end",    :exec mc/select-file-end}]}   [r/kcs_ad      [r/ko_ad]      c/term]
 
     ; technical glyphs
     ^{:doc/actions [{}]}                                                                           [t/kcp_ob      [t/kc_ob]]
@@ -102,19 +72,19 @@
     ^{:doc/actions [{}]}                                                                           [t/kcsp_sl     [t/kcs_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/hc,    :action "scroll up",          :exec hc-scroll-up}
-                    {:program c/lg,    :action "scroll up",          :exec lg-scroll-up}]}         [a/kcp_db      [b/kt_x]       c/term]
-    ^{:doc/actions [{:program c/hi,    :action "completion",         :exec hi-completion}
-                    {:program c/hn,    :action "hover",              :exec hn-hover}
-                    {:program c/hs,    :action "hover",              :exec hs-hover}
+    ^{:doc/actions [{:program c/hc,    :action "scroll up",          :exec hx/scroll-up}
+                    {:program c/lg,    :action "scroll up",          :exec lg/scroll-up}]}         [a/kcp_db      [b/kt_x]       c/term]
+    ^{:doc/actions [{:program c/hi,    :action "completion",         :exec hx/i-completion}
+                    {:program c/hn,    :action "hover",              :exec hx/n-hover}
+                    {:program c/hs,    :action "hover",              :exec hx/s-hover}
                     {:program c/hp,    :action "open background"}]}                                [a/kcp_re      [a/kc_re]]
-    ^{:doc/actions [{:program c/hc,    :action "scroll down",        :exec hc-scroll-down}
-                    {:program c/lg,    :action "scroll down",        :exec lg-scroll-down}]}       [a/kcp_rs      [b/kt_y]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "scroll down",        :exec hx/scroll-down}
+                    {:program c/lg,    :action "scroll down",        :exec lg/scroll-down}]}       [a/kcp_rs      [b/kt_y]       c/term]
     ^{:doc/actions [{}]}                                                                           [a/kcp_ro      [a/kc_ro]]
     ^{:doc/actions [{}]}                                                                           [a/kcp_rc      [a/kc_rc]]
-    ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hi-normal}
-                    {:program c/hn,    :action "mode insert",        :exec hn-insert}
-                    {:program c/hs,    :action "mode normal",        :exec hs-normal}]}            [a/kcp_sp      [f/kt_f12]]
+    ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hx/i-normal}
+                    {:program c/hn,    :action "mode insert",        :exec hx/n-insert}
+                    {:program c/hs,    :action "mode normal",        :exec hx/s-normal}]}          [a/kcp_sp      [f/kt_f12]]
 
     ^{:doc/actions [{}]}                                                                           [a/kcsp_db     [a/kcs_db]]
     ^{:doc/actions [{}]}                                                                           [a/kcsp_re     [a/kcs_re]]
