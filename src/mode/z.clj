@@ -12,60 +12,15 @@
             [config.numeric :as n]
             [config.alphabetic :as b]
             [config.function :as f]
+
+            [config.helix :as hx]
+            [config.lazygit :as lg]
+            [config.micro :as mc]
+            [config.serpl :as sr]
+            [config.zellij :as zj]
 ))
 
 (def out-file "z.edn")
-
-(def hc-close-tab            [":buffer-close"])
-(def hc-dec                  ["decrement"])
-(def hc-file-picker          ["file_picker"])
-(def hc-hsplit               ["hsplit"])
-(def hc-inc                  ["increment"])
-(def hc-last-move            ["repeat_last_motion"])
-(def hc-last-tab             ["goto_last_accessed_file"])
-(def hc-lower-case           ["switch_to_lowercase"])
-(def hc-next-comm            ["goto_next_comment"])
-(def hc-next-diff            ["goto_next_change"])
-(def hc-next-move            ["normal_mode", "find_till_char", "MODE"])
-(def hc-next-tab             ["goto_next_buffer"])
-(def hc-prev-comm            ["goto_prev_comment"])
-(def hc-prev-diff            ["goto_prev_change"])
-(def hc-prev-move            ["normal_mode", "till_prev_char", "MODE"])
-(def hc-prev-tab             ["goto_previous_buffer"])
-(def hc-redo                 ["redo"])
-(def hc-switch-case          ["switch_case"])
-(def hc-undo                 ["undo"])
-(def hc-wclose               ["wclose"])
-(def hc-wonly                ["wonly"])
-(def hc-upper-case           ["switch_to_uppercase"])
-(def hc-vsplit               ["vsplit"])
-
-(def lg-recent               ["openRecentRepos"])
-(def lg-commit               ["commitChanges"])
-(def lg-inc-content          ["increaseContextInDiffView"])
-(def lg-dec-content          ["decreaseContextInDiffView"])
-(def lg-next-block           ["nextBlock-alt2"])
-(def lg-next-tab             ["nextTab"])
-(def lg-prev-block           ["prevBlock-alt2"])
-(def lg-prev-tab             ["prevTab"])
-(def lg-zoom                 ["nextScreenMode"])
-
-(def mc-close-tab            ["Quit"])
-(def mc-hsplit               ["HSplit"])
-(def mc-next-diff            ["DiffNext"])
-(def mc-next-tab             ["NextTab"])
-(def mc-open-file            ["OpenFile"])
-(def mc-prev-diff            ["DiffPrevious"])
-(def mc-prev-tab             ["PreviousTab"])
-(def mc-redo                 ["Redo"])
-(def mc-undo                 ["Undo"])
-(def mc-unsplit              ["Unsplit"])
-(def mc-vsplit               ["VSplit"])
-
-(def sr-loop-forward         ["LoopOverTabs"])
-(def sr-loop-backward        ["BackLoopOverTabs"])
-(def sr-replace              ["ProcessReplace"])
-(def sr-help                 ["ShowHelp"])
 
 (defn z-mode []
 
@@ -75,37 +30,37 @@
    :rules
    [:z-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program c/hc,    :action "jump prev buffer",   :exec hc-prev-tab}
-                    {:program c/lg,    :action "jump prev tab",      :exec lg-prev-tab}
-                    {:program c/mc,    :action "jump prev buffer",   :exec mc-prev-tab}]}          [r/kp_al       [b/kt_b]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "jump next buffer",   :exec hc-next-tab}
-                    {:program c/lg,    :action "jump next tab",      :exec lg-next-tab}
-                    {:program c/mc,    :action "jump next buffer",   :exec mc-next-tab}]}          [r/kp_ar       [b/kt_f]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "prev comment",       :exec hc-prev-comm}
-                    {:program c/lg,    :action "jump prev block",    :exec lg-prev-block}
-                    {:program c/sr,    :action "loop backward",      :exec sr-loop-backward}]}     [r/kp_au       [b/kt_n]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "next comment",       :exec hc-next-comm}
-                    {:program c/lg,    :action "jump next block",    :exec lg-next-block}
-                    {:program c/sr,    :action "loop forward",       :exec sr-loop-forward}]}      [r/kp_ad       [b/kt_p]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump prev buffer",   :exec hx/prev-tab}
+                    {:program c/lg,    :action "jump prev tab",      :exec lg/prev-tab}
+                    {:program c/mc,    :action "jump prev buffer",   :exec mc/prev-tab}]}          [r/kp_al       [b/kt_b]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "jump next buffer",   :exec hx/next-tab}
+                    {:program c/lg,    :action "jump next tab",      :exec lg/next-tab}
+                    {:program c/mc,    :action "jump next buffer",   :exec mc/next-tab}]}          [r/kp_ar       [b/kt_f]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "prev comment",       :exec hx/prev-comm}
+                    {:program c/lg,    :action "jump prev block",    :exec lg/prev-block}
+                    {:program c/sr,    :action "loop backward",      :exec sr/loop-backward}]}     [r/kp_au       [b/kt_n]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "next comment",       :exec hx/next-comm}
+                    {:program c/lg,    :action "jump next block",    :exec lg/next-block}
+                    {:program c/sr,    :action "loop forward",       :exec sr/loop-forward}]}      [r/kp_ad       [b/kt_p]       c/term]
 
-    ^{:doc/actions [{:program c/hc,    :action "undo",               :exec hc-undo}
-                    {:program c/mc,    :action "undo",               :exec mc-undo}]}              [r/ksp_al      [r/ko_pu]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "redo",               :exec hc-redo}
-                    {:program c/mc,    :action "redo",               :exec mc-redo}]}              [r/ksp_ar      [r/ko_pd]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "prev-diff",          :exec hc-prev-diff}
-                    {:program c/mc,    :action "prev diff",          :exec mc-prev-diff}]}         [r/ksp_au      [r/ko_hm]       c/term]
-    ^{:doc/actions [{:program c/hc,    :action "next-diff",          :exec hc-next-diff}
-                    {:program c/mc,    :action "next diff",          :exec mc-next-diff}]}         [r/ksp_ad      [r/ko_ed]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "undo",               :exec hx/undo}
+                    {:program c/mc,    :action "undo",               :exec mc/undo}]}              [r/ksp_al      [r/ko_pu]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "redo",               :exec hx/redo}
+                    {:program c/mc,    :action "redo",               :exec mc/redo}]}              [r/ksp_ar      [r/ko_pd]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "prev-diff",          :exec hx/prev-diff}
+                    {:program c/mc,    :action "prev diff",          :exec mc/prev-diff}]}         [r/ksp_au      [r/ko_hm]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "next-diff",          :exec hx/next-diff}
+                    {:program c/mc,    :action "next diff",          :exec mc/next-diff}]}         [r/ksp_ad      [r/ko_ed]       c/term]
 
     ; technical glyphs
-    ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hc-dec}]}               [t/kp_ob       [r/kt_hm]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hc-inc}]}               [t/kp_cb       [r/kt_ed]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "switch case",        :exec hc-switch-case}]}       [t/kp_sc       [f/ko_f13]]
+    ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hx/decrement}]}         [t/kp_ob       [r/kt_hm]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hx/increment}]}         [t/kp_cb       [r/kt_ed]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "switch case",        :exec hx/switch-case}]}       [t/kp_sc       [f/ko_f13]]
     ^{:doc/actions [{}]}                                                                           [t/kp_qu       [t/k_qu]]
-    ^{:doc/actions [{:program c/hc,    :action "split close",        :exec hc-wclose}]}            [t/kp_bl       [f/ko_f6]]
-    ^{:doc/actions [{:program c/hc,    :action "move forward",       :exec hc-prev-move}]}         [t/kp_cm       [r/kt_pu]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "move backward",      :exec hc-next-move}]}         [t/kp_pe       [r/kt_pd]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "repeat last move",   :exec hc-last-move}]}         [t/kp_sl       [f/ko_f16]]
+    ^{:doc/actions [{:program c/hc,    :action "split close",        :exec hx/wclose}]}            [t/kp_bl       [f/ko_f6]]
+    ^{:doc/actions [{:program c/hc,    :action "move forward",       :exec hx/prev-move}]}         [t/kp_cm       [r/kt_pu]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "move backward",      :exec hx/next-move}]}         [t/kp_pe       [r/kt_pd]      c/term]
+    ^{:doc/actions [{:program c/hc,    :action "repeat last move",   :exec hx/last-move}]}         [t/kp_sl       [f/ko_f16]]
 
     ^{:doc/actions [{}]}                                                                           [t/ksp_ob      [t/ks_ob]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_cb      [t/ks_cb]]
@@ -118,32 +73,32 @@
 
     ; action glyphs
     ^{:doc/actions [{:program c/tm,    :action "command line editor"}
-                    {:program c/hc,    :action "close tab",          :exec hc-close-tab}
-                    {:program c/lg,    :action "increase content",   :exec lg-inc-content}
-                    {:program c/mc,    :action "close tab",          :exec mc-close-tab}]}         [a/kp_db       [b/kt_g]       c/term]
+                    {:program c/hc,    :action "close tab",          :exec hx/close-tab}
+                    {:program c/lg,    :action "increase content",   :exec lg/inc-content}
+                    {:program c/mc,    :action "close tab",          :exec mc/close-tab}]}         [a/kp_db       [b/kt_g]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "clear screen"}
-                    {:program c/hc,    :action "file picker",        :exec hc-file-picker}
-                    {:program c/lg,    :action "commit",             :exec lg-commit}
-                    {:program c/mc,    :action "open file",          :exec mc-open-file}
-                    {:program c/sr,    :action "help",               :exec sr-help}]}              [a/kp_re       [b/kt_l]       c/term]
+                    {:program c/hc,    :action "file picker",        :exec hx/file-picker-hx}
+                    {:program c/lg,    :action "commit",             :exec lg/commit}
+                    {:program c/mc,    :action "open file",          :exec mc/open-file}
+                    {:program c/sr,    :action "help",               :exec sr/help}]}              [a/kp_re       [b/kt_l]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "fzf file widget"}
                     {:program c/hp,    :action "open vertically"}
-                    {:program c/hc,    :action "split right",        :exec hc-vsplit}
-                    {:program c/lg,    :action "decrease content",   :exec lg-dec-content}
-                    {:program c/mc,    :action "split right",        :exec mc-vsplit}]}            [a/kp_rs       [b/kt_v]       c/term]
+                    {:program c/hc,    :action "split right",        :exec hx/vsplit}
+                    {:program c/lg,    :action "decrease content",   :exec lg/dec-content}
+                    {:program c/mc,    :action "split right",        :exec mc/vsplit}]}            [a/kp_rs       [b/kt_v]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "zoxide widget"}
                     {:program c/hp,    :action "open horizontally"}
-                    {:program c/hc,    :action "split down",         :exec hc-hsplit}
-                    {:program c/mc,    :action "split down",         :exec mc-hsplit}]}            [a/kp_ro       [b/kt_s]       c/term]
+                    {:program c/hc,    :action "split down",         :exec hx/hsplit}
+                    {:program c/mc,    :action "split down",         :exec mc/hsplit}]}            [a/kp_ro       [b/kt_s]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "fzf cd widget"}
-                    {:program c/hc,    :action "unsplit",            :exec hc-wonly}
-                    {:program c/lg,    :action "zoom",               :exec lg-zoom}
-                    {:program c/mc,    :action "split close",        :exec mc-unsplit}]}           [a/kp_rc       [b/kt_r]       c/term]
+                    {:program c/hc,    :action "unsplit",            :exec hx/wonly}
+                    {:program c/lg,    :action "zoom",               :exec lg/zoom}
+                    {:program c/mc,    :action "split close",        :exec mc/unsplit}]}           [a/kp_rc       [b/kt_r]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "navi widget"}
                     {:program c/hp,    :action "toggle preview"}
-                    {:program c/hc,    :action "last file",          :exec hc-last-tab}
-                    {:program c/lg,    :action "recent",             :exec lg-recent}
-                    {:program c/sr,    :action "replace",            :exec sr-replace}]}           [a/kp_sp       [b/kt_t]       c/term]
+                    {:program c/hc,    :action "last file",          :exec hx/last-tab}
+                    {:program c/lg,    :action "recent",             :exec lg/recent}
+                    {:program c/sr,    :action "replace",            :exec sr/replace-serpl}]}           [a/kp_sp       [b/kt_t]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
@@ -163,8 +118,8 @@
     ^{:doc/actions [{}]}                                                                           [n/kp_8        [n/k_8]]
     ^{:doc/actions [{}]}                                                                           [n/kp_9        [n/k_9]]
     ^{:doc/actions [{}]}                                                                           [n/kp_0        [n/k_0]]
-    ^{:doc/actions [{:program c/hc,    :action "lower case",         :exec hc-lower-case}]}        [n/kp_hy       [f/ko_f14]]
-    ^{:doc/actions [{:program c/hc,    :action "upper case",         :exec hc-upper-case}]}        [n/kp_eq       [f/ko_f15]]
+    ^{:doc/actions [{:program c/hc,    :action "lower case",         :exec hx/lower-case}]}        [n/kp_hy       [f/ko_f14]]
+    ^{:doc/actions [{:program c/hc,    :action "upper case",         :exec hx/upper-case}]}        [n/kp_eq       [f/ko_f15]]
 
     ^{:doc/actions [{}]}                                                                           [n/ksp_1       [n/ks_1]]
     ^{:doc/actions [{}]}                                                                           [n/ksp_2       [n/ks_2]]
