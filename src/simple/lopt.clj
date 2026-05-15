@@ -116,13 +116,13 @@
     ^{:doc/actions [{:program c/tm,    :action "dot add",            :sequence "` .+ `"}]}         [n/kosp_eq     [a/k_sp t/k_pe n/ks_eq a/k_sp]]
 
     ; alphabetic glyphs
-    ^{:doc/actions [{:program c/hc,    :action "format",             :exec hx/format-hx}]}         [b/kop_a       [b/ko_a]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "format",             :exec hx/sh-format}]}         [b/kop_a       [b/ko_a]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "git blame",          :exec hx/git-blame}]}         [b/kop_b       [f/ko_f1]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "copy",               :exec hx/copy}
                     {:program c/mc,    :action "copy",               :exec mc/copy}]}              [b/kop_c       [f/ko_f2]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "spawn multi",        :exec hx/spawn-multi}
                     {:program c/mc,    :action "spawn multi",        :exec mc/spawn-multi}]}       [b/kop_d       [f/ko_f4]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "toggle comments",    :exec hx/comment-hx}
+    ^{:doc/actions [{:program c/hc,    :action "toggle comments",    :exec hx/toggle-comment}
                     {:program c/mc,    :action "toggle comments",    :exec mc/comment-mc}]}        [b/kop_e       [b/ko_e]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "search",             :exec hx/search}
                     {:program c/mc,    :action "search",             :exec mc/search}]}            [b/kop_f       [f/ko_f5]      c/term]

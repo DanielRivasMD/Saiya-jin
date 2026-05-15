@@ -77,7 +77,7 @@
                     {:program c/lg,    :action "increase content",   :exec lg/inc-content}
                     {:program c/mc,    :action "close tab",          :exec mc/close-tab}]}         [a/kp_db       [b/kt_g]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "clear screen"}
-                    {:program c/hc,    :action "file picker",        :exec hx/file-picker-hx}
+                    {:program c/hc,    :action "file picker",        :exec hx/file-picker}
                     {:program c/lg,    :action "commit",             :exec lg/commit}
                     {:program c/mc,    :action "open file",          :exec mc/open-file}
                     {:program c/sr,    :action "help",               :exec sr/help}]}              [a/kp_re       [b/kt_l]       c/term]

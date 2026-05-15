@@ -27,11 +27,11 @@
 (def next-para               ["goto_next_paragraph"  "collapse_selection"])
 (def select-prev-word        ["extend_prev_word_start"])
 (def select-next-word        ["extend_next_word_end"])
-(def format-hx               [":format"])
+(def sh-format               [":format"])
 (def git-blame               [":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"])
 (def copy                    ["yank_to_clipboard"])
 (def spawn-multi             ["search_selection", "extend_search_next"])
-(def comment-hx              ["toggle_comments"])
+(def toggle-comment          ["toggle_comments"])
 (def search                  ["search"])
 (def find-prev               ["search_prev"])
 (def spawn-down              ["normal_mode", "copy_selection_on_next_line", "MODE"])
@@ -68,13 +68,13 @@
 (def serpl                   [":sh zellij run --name serpl    --pinned true  --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- serpl > /dev/null 2>&1"])
 (def todor-interactive       [":sh zellij run --name todor    --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- todor --delete > /dev/null 2>&1"])
 (def install                 [":sh zellij run --name install  --pinned true                  --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just install > /dev/null 2>&1"])
-(def watch                   [":sh zellij run --name watch    --pinned true                  --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch > /dev/null 2>&1"])
+(def watch                   [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch > /dev/null 2>&1"])
 (def btm                     [":sh zellij run --name bottom   --pinned true  --close-on-exit --floating  --width  50%% --height 100%% --x 50%% --y    0 -- btm > /dev/null 2>&1"])
 (def shell                   [":sh zellij run --name canvas   --pinned false --close-on-exit --floating  --width 100%% --height 100%% --x    0 --y    0 -- zsh > /dev/null 2>&1"])
 (def buffer-copy             [":sh copy2clipboard %{buffer_name}"])
 
 (def change-picker           ["changed_file_picker"])
-(def file-picker-hx             ["file_explorer"])
+(def file-explorer           ["file_explorer"])
 (def buffer-picker           ["buffer_picker"])
 
 (def select-left             ["extend_char_left"])
@@ -92,7 +92,7 @@
 
 (def close-tab               [":buffer-close"])
 (def decrement               ["decrement"])
-(def file-picker-hx          ["file_picker"])
+(def file-picker             ["file_picker"])
 (def hsplit                  ["hsplit"])
 (def increment               ["increment"])
 (def last-move               ["repeat_last_motion"])
@@ -124,7 +124,6 @@
 (def n-insert                ["insert_mode"])
 (def s-normal                ["normal_mode"])
 
-; TODO: refactor as one command => hi-select, hn-select & hs-select, etc
 (def i-select-prev-para      ["select_mode" "goto_prev_paragraph" "insert_mode"])
 (def i-select-next-para      ["select_mode" "goto_next_paragraph" "append_mode" "extend_char_left"])
 (def i-select-para           ["goto_next_paragraph" "collapse_selection" "select_mode" "goto_prev_paragraph" "trim_selections" "insert_mode"])

@@ -52,7 +52,7 @@
     ^{:doc/actions [{:program c/sys,   :action "prompt espanso"}]}                                 [a/kep_sp      [a/ke_sp]]
     ^{:doc/actions [{:program c/hc,    :action "buffer picker",      :exec hx/buffer-picker}]}     [a/kep_lc      [b/kt_h]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "atuin widget"}
-                    {:program c/hc,    :action "file picker",        :exec hx/file-picker-hx}]}       [a/kep_lo      [b/kt_j]       c/term]
+                    {:program c/hc,    :action "file picker",        :exec hx/file-explorer}]}     [a/kep_lo      [b/kt_j]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "fzf history"}
                     {:program c/hc,    :action "change picker",      :exec hx/change-picker}]}     [a/kep_lt      [b/kt_o]       c/term]
     ^{:doc/actions [{}]}                                                                           [a/kep_ls      [a/ke_ls]]
