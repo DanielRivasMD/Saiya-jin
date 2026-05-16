@@ -2104,7 +2104,7 @@
     [{:program "helix-common",
       :action "launch watch",
       :exec
-      [":sh zellij run --name watch    --pinned true                  --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch > /dev/null 2>&1"]}]}
+      [":sh zellij run --name watch    --pinned true  --close-on-exit --floating  --width  50%% --height  50%% --x 50%% --y    0 -- just watch > /dev/null 2>&1"]}]}
   [:!OS#Pw [:!OSw] :term]
   ^{:doc/actions
     [{:program "helix-common",
