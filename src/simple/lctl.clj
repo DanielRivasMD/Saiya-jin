@@ -69,7 +69,7 @@
     ^{:doc/actions [{}]}                                                                           [a/ktp_rs      [a/kt_rs]]
     ^{:doc/actions [{}]}                                                                           [a/ktp_ro      [a/kt_ro]]
     ^{:doc/actions [{}]}                                                                           [a/ktp_rc      [a/kt_rc]]
-    ^{:doc/actions [{:program c/zom,   :action "toogle camera"}]}                                  [a/ktp_sp      [b/kcs_v]      c/zoom]
+    ^{:doc/actions [{:program c/zom,   :action "toggle camera"}]}                                  [a/ktp_sp      [b/kcs_v]      c/zoom]
     ^{:doc/actions [{:program c/hc     :action "jumper"              :exec hx/jump}
                     {:program c/mc     :action "jumper"              :exec mc/jump}]}              [a/ktp_sp      [a/kt_sp]      c/term]
 
