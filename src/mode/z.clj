@@ -43,21 +43,27 @@
                     {:program c/lg,    :action "jump next block",    :exec lg/next-block}
                     {:program c/sr,    :action "loop forward",       :exec sr/loop-forward}]}      [r/kp_ad       [b/kt_p]       c/term]
 
+    ^{:doc/actions [{:program c/brv,   :action "go backward"}]}                                    [r/ksp_al      [t/kc_ob]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "go forward"}]}                                     [r/ksp_ar      [t/kc_cb]      c/browser]
+
+    ^{:doc/actions [{:program c/fin,   :action "go backward"}]}                                    [r/ksp_al      [t/kc_ob]      c/finder]
+    ^{:doc/actions [{:program c/fin,   :action "go forward"}]}                                     [r/ksp_ar      [t/kc_cb]      c/finder]
+
     ^{:doc/actions [{:program c/hc,    :action "undo",               :exec hx/undo}
-                    {:program c/mc,    :action "undo",               :exec mc/undo}]}              [r/ksp_al      [r/ko_pu]       c/term]
+                    {:program c/mc,    :action "undo",               :exec mc/undo}]}              [r/ksp_al      [r/ko_pu]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "redo",               :exec hx/redo}
-                    {:program c/mc,    :action "redo",               :exec mc/redo}]}              [r/ksp_ar      [r/ko_pd]       c/term]
+                    {:program c/mc,    :action "redo",               :exec mc/redo}]}              [r/ksp_ar      [r/ko_pd]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "prev-diff",          :exec hx/prev-diff}
-                    {:program c/mc,    :action "prev diff",          :exec mc/prev-diff}]}         [r/ksp_au      [r/ko_hm]       c/term]
+                    {:program c/mc,    :action "prev diff",          :exec mc/prev-diff}]}         [r/ksp_au      [r/ko_hm]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "next-diff",          :exec hx/next-diff}
-                    {:program c/mc,    :action "next diff",          :exec mc/next-diff}]}         [r/ksp_ad      [r/ko_ed]       c/term]
+                    {:program c/mc,    :action "next diff",          :exec mc/next-diff}]}         [r/ksp_ad      [r/ko_ed]      c/term]
 
     ; technical glyphs
     ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hx/decrement}]}         [t/kp_ob       [r/kt_hm]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hx/increment}]}         [t/kp_cb       [r/kt_ed]      c/term]
-    ^{:doc/actions [{:program c/hc,    :action "switch case",        :exec hx/switch-case}]}       [t/kp_sc       [f/ko_f13]]
-    ^{:doc/actions [{}]}                                                                           [t/kp_qu       [t/k_qu]]
-    ^{:doc/actions [{:program c/hc,    :action "split close",        :exec hx/wclose}]}            [t/kp_bl       [f/ko_f6]]
+    ^{:doc/actions [{:program c/hc,    :action "buffer picker",      :exec hx/buffer-picker}]}     [t/kp_sc       [f/ko_f13]]
+    ^{:doc/actions [{:program c/hc,    :action "file picker",        :exec hx/file-explorer}]}     [t/kp_qu       [t/k_qu]]
+    ^{:doc/actions [{:program c/hc,    :action "change picker",      :exec hx/change-picker}]}     [t/kp_bl       [f/ko_f6]]
     ^{:doc/actions [{:program c/hc,    :action "move forward",       :exec hx/prev-move}]}         [t/kp_cm       [r/kt_pu]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "move backward",      :exec hx/next-move}]}         [t/kp_pe       [r/kt_pd]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "repeat last move",   :exec hx/last-move}]}         [t/kp_sl       [f/ko_f16]]
@@ -72,6 +78,21 @@
     ^{:doc/actions [{}]}                                                                           [t/ksp_sl      [t/ks_sl]]
 
     ; action glyphs
+    ; ^{:doc/actions [{}]}                                                                           [a/kp_db       [a/k_db]]
+    ^{:doc/actions [{:program c/brv,   :action "select tab"}]}                                     [a/kp_re       [f/kt_f1]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "select"}]}                                         [a/kp_rs       [f/kt_f2]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "select bookmark"}]}                                [a/kp_ro       [f/kt_f3]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "edit url"}]}                                       [a/kp_rc       [f/kt_f4]      c/browser]
+    ; ^{:doc/actions [{}]}                                                                           [a/kp_sp       [a/k_sp]]
+
+    ; ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
+    ; ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
+    ^{:doc/actions [{:program c/brv,   :action "select new"}]}                                     [a/ksp_rs      [f/kt_f5]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "select bookmark new"}]}                            [a/ksp_ro      [f/kt_f6]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "edit url new"}]}                                   [a/ksp_rc      [f/kt_f7]      c/browser]
+    ; ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_sp]]
+
+; TODO: remap open horizontal & open vertical
     ^{:doc/actions [{:program c/tm,    :action "command line editor"}
                     {:program c/hc,    :action "close tab",          :exec hx/close-tab}
                     {:program c/lg,    :action "increase content",   :exec lg/inc-content}
@@ -98,7 +119,7 @@
                     {:program c/hp,    :action "toggle preview"}
                     {:program c/hc,    :action "last file",          :exec hx/last-tab}
                     {:program c/lg,    :action "recent",             :exec lg/recent}
-                    {:program c/sr,    :action "replace",            :exec sr/replace-serpl}]}           [a/kp_sp       [b/kt_t]       c/term]
+                    {:program c/sr,    :action "replace",            :exec sr/replace-serpl}]}     [a/kp_sp       [b/kt_t]       c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
@@ -118,8 +139,8 @@
     ^{:doc/actions [{}]}                                                                           [n/kp_8        [n/k_8]]
     ^{:doc/actions [{}]}                                                                           [n/kp_9        [n/k_9]]
     ^{:doc/actions [{}]}                                                                           [n/kp_0        [n/k_0]]
-    ^{:doc/actions [{:program c/hc,    :action "lower case",         :exec hx/lower-case}]}        [n/kp_hy       [f/ko_f14]]
-    ^{:doc/actions [{:program c/hc,    :action "upper case",         :exec hx/upper-case}]}        [n/kp_eq       [f/ko_f15]]
+    ; ^{:doc/actions [[n/kp_hy       [f/ko_f14]]
+    ^{:doc/actions [{:program c/hc,    :action "split close",        :exec hx/wclose}]}            [n/kp_eq       [f/ko_f15]]
 
     ^{:doc/actions [{}]}                                                                           [n/ksp_1       [n/ks_1]]
     ^{:doc/actions [{}]}                                                                           [n/ksp_2       [n/ks_2]]
