@@ -86,7 +86,7 @@
     ^{:doc/actions [{:program c/tm,    :action "dot julia pipe",     :sequence "` .|> `"}]}        [a/kosp_rs     [a/k_sp t/k_pe t/ks_bl t/ks_pe a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "dot multiply",       :sequence "` .* `"}]}         [a/kosp_ro     [a/k_sp t/k_pe n/ks_8 a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "dot divide",         :sequence "` ./ `"}]}         [a/kosp_rc     [a/k_sp t/k_pe t/k_sl a/k_sp]]
-    ^{:doc/actions [{:program c/alf,   :action "file prompt"}]}                                    [a/kosp_sp      [c/kocs_lock]]
+    ^{:doc/actions [{:program c/alf,   :action "file prompt"}]}                                    [a/kosp_sp     [c/kocs_lock]]
 
     ; numeric glyphs
     ^{:doc/actions [{}]}                                                                           [n/kop_1       [n/ko_1]]
