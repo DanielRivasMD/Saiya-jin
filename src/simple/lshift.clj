@@ -48,13 +48,13 @@
     ; action glyphs
     ; TODO: bind new mail?
     ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
-    ^{:doc/actions [{:program c/brv,   :action "box focus"}]}                                      [a/ksp_re      [f/ko_f10]     c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "vimium box focus"}]}                               [a/ksp_re      [f/ko_f10]     c/browser]
     ^{:doc/actions [{:program c/hc,    :action "delete next char",   :exec hx/delete}]}            [a/ksp_rs      [c/k_delf]]
     ^{:doc/actions [{:program c/hc,    :action "delete next word",   :exec hx/delete-word-right}
                     {:program c/mc,    :action "delete next word",   :exec mc/delete-word-right}]} [a/ksp_ro      [b/ko_d]]
     ^{:doc/actions [{:program c/hc,    :action "delete line start",  :exec hx/delete-line-end}
                     {:program c/mc,    :action "delete line start",  :exec mc/delete-line-end}]}   [a/ksp_rc      [b/kt_k]]
-    ^{:doc/actions [{:program c/brv,   :action "toggle sidebar"}]}                                 [a/ksp_sp      [f/ko_f11]     c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "brave toggle sidebar"}]}                           [a/ksp_sp      [f/ko_f11]     c/browser]
     ^{:doc/actions [{:program c/fin,   :action "toggle sidebar"}]}                                 [a/ksp_sp      [b/ktc_s]      c/finder]
 
     ; numeric-glyphs

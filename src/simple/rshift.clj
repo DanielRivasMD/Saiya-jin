@@ -46,7 +46,7 @@
     ^{:doc/actions [{}]}                                                                           [t/krp_sl      [t/kr_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/brv,   :action "toggle sidebar"}]}                                 [a/krp_sp      [f/ko_f12]     c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "brave toggle sidebar"}]}                           [a/krp_sp      [f/ko_f12]     c/browser]
     ^{:doc/actions [{:program c/hc,    :action "last modification",  :exec hx/last-mod}]}          [a/krp_sp      [f/ko_f17]     c/term]
     ^{:doc/actions [{:program c/hc,    :action "delete line start",  :exec hx/del-start-line}
                     {:program c/mc,    :action "delete line start",  :exec mc/del-start-line}]}    [a/krp_lc      [c/kw_u]]
