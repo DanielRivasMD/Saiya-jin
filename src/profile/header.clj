@@ -45,7 +45,7 @@
      }}
 
    :applications
-   {c/browser ["company.thebrowser.Browser"]
+   {c/browser ["company.thebrowser.Browser", "com.brave.Browser"]
     c/finder  ["com.apple.finder"]
     c/mail    ["com.apple.mail"]
     c/skim    ["net.sourceforge.skim-app.skim"]
