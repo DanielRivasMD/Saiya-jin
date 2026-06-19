@@ -440,14 +440,15 @@
   [:#Psemicolon [:!Of13]]
   ^{:doc/actions
     [{:program "helix-common",
-      :action "file picker",
-      :exec ["file_explorer"]}]}
-  [:#Pquote [:quote]]
-  ^{:doc/actions
-    [{:program "helix-common",
       :action "change picker",
       :exec ["changed_file_picker"]}]}
-  [:#Pbackslash [:!Of6]]
+  [:#Pquote [:!Of14]]
+  ^{:doc/actions
+    [{:program "term", :action "fzf file widget"}
+     {:program "helix-popup", :action "open vertically"}
+     {:program "helix-common", :action "split right", :exec ["vsplit"]}
+     {:program "micro", :action "split right", :exec ["VSplit"]}]}
+  [:#Pbackslash [:!Tv] :term]
   ^{:doc/actions
     [{:program "helix-common",
       :action "move forward",
@@ -515,20 +516,19 @@
      {:program "serpl", :action "help", :exec ["ShowHelp"]}]}
   [:#Preturn_or_enter [:!Tl] :term]
   ^{:doc/actions
-    [{:program "term", :action "fzf file widget"}
-     {:program "helix-popup", :action "open vertically"}
-     {:program "helix-common", :action "split right", :exec ["vsplit"]}
-     {:program "lazygit",
-      :action "decrease content",
-      :exec ["decreaseContextInDiffView"]}
-     {:program "micro", :action "split right", :exec ["VSplit"]}]}
-  [:#Pright_shift [:!Tv] :term]
-  ^{:doc/actions
     [{:program "term", :action "zoxide widget"}
      {:program "helix-popup", :action "open horizontally"}
      {:program "helix-common", :action "split down", :exec ["hsplit"]}
+     {:program "lazygit",
+      :action "decrease content",
+      :exec ["decreaseContextInDiffView"]}
      {:program "micro", :action "split down", :exec ["HSplit"]}]}
-  [:#Pright_option [:!Ts] :term]
+  [:#Pright_shift [:!Ts] :term]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "file picker",
+      :exec ["file_explorer"]}]}
+  [:#Pright_option [:!Of15]]
   ^{:doc/actions
     [{:program "term", :action "fzf cd widget"}
      {:program "helix-common", :action "unsplit", :exec ["wonly"]}
@@ -580,7 +580,7 @@
     [{:program "helix-common",
       :action "split close",
       :exec ["wclose"]}]}
-  [:#Pequal_sign [:!Of15]]
+  [:#Pequal_sign [:!Of18]]
   ^{:doc/actions [{}]}
   [:!S#P1 [:!S1]]
   ^{:doc/actions [{}]}
@@ -2187,6 +2187,11 @@
       :action "delete line start",
       :exec ["SelectToEndOfLine,Delete"]}]}
   [:!S#Pright_command [:!Tk]]
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "last modification",
+      :exec ["goto_last_modification"]}]}
+  [:!S#Pspacebar [:!Of17] :term]
   ^{:doc/actions [{:program "Brave", :action "brave toggle sidebar"}]}
   [:!S#Pspacebar [:!Of11] :browser]
   ^{:doc/actions [{:program "Finder", :action "toggle sidebar"}]}
@@ -2967,6 +2972,8 @@
   ^{:doc/actions
     [{:program "System", :action "switch most recent app"}]}
   [:#Pleft_command [:left_command] nil {:alone [:!Ctab]}]
+  ^{:doc/actions [{}]}
+  [:#Pright_shift [:right_shift] :term {:alone [:!TSf12]}]
   ^{:doc/actions [{:program "Alfred", :action "paste"}]}
   [:#Pright_option [:right_option] nil {:alone [:!Okeypad_num_lock]}]
   ^{:doc/actions [{:program "Alfred", :action "clipboard select"}]}
