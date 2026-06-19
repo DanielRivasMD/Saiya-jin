@@ -43,8 +43,8 @@
                     {:program c/lg,    :action "jump next block",    :exec lg/next-block}
                     {:program c/sr,    :action "loop forward",       :exec sr/loop-forward}]}      [r/kp_ad       [b/kt_p]       c/term]
 
-    ^{:doc/actions [{:program c/brv,   :action "go backward"}]}                                    [r/ksp_al      [t/kc_ob]      c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "go forward"}]}                                     [r/ksp_ar      [t/kc_cb]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "brave go backward"}]}                              [r/ksp_al      [t/kc_ob]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "brave go forward"}]}                               [r/ksp_ar      [t/kc_cb]      c/browser]
 
     ^{:doc/actions [{:program c/fin,   :action "go backward"}]}                                    [r/ksp_al      [t/kc_ob]      c/finder]
     ^{:doc/actions [{:program c/fin,   :action "go forward"}]}                                     [r/ksp_ar      [t/kc_cb]      c/finder]
@@ -79,17 +79,17 @@
 
     ; action glyphs
     ; ^{:doc/actions [{}]}                                                                           [a/kp_db       [a/k_db]]
-    ^{:doc/actions [{:program c/brv,   :action "select tab"}]}                                     [a/kp_re       [f/kt_f1]      c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "select"}]}                                         [a/kp_rs       [f/kt_f2]      c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "select bookmark"}]}                                [a/kp_ro       [f/kt_f3]      c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "edit url"}]}                                       [a/kp_rc       [f/kt_f4]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "vimium select tab"}]}                              [a/kp_re       [f/kt_f1]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "vimium select"}]}                                  [a/kp_rs       [f/kt_f2]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "vimium select bookmark"}]}                         [a/kp_ro       [f/kt_f3]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "vimium edit url"}]}                                [a/kp_rc       [f/kt_f4]      c/browser]
     ; ^{:doc/actions [{}]}                                                                           [a/kp_sp       [a/k_sp]]
 
     ; ^{:doc/actions [{}]}                                                                           [a/ksp_db      [a/ks_db]]
     ; ^{:doc/actions [{}]}                                                                           [a/ksp_re      [a/ks_re]]
-    ^{:doc/actions [{:program c/brv,   :action "select new"}]}                                     [a/ksp_rs      [f/kt_f5]      c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "select bookmark new"}]}                            [a/ksp_ro      [f/kt_f6]      c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "edit url new"}]}                                   [a/ksp_rc      [f/kt_f7]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "vimium select new"}]}                              [a/ksp_rs      [f/kt_f5]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "vimium select bookmark new"}]}                     [a/ksp_ro      [f/kt_f6]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "vimium edit url new"}]}                            [a/ksp_rc      [f/kt_f7]      c/browser]
     ; ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_sp]]
 
 ; TODO: remap open horizontal & open vertical
