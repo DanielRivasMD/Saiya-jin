@@ -1,5 +1,3 @@
-- babel micro, helix, lazygit, serpl & zellij fully functional; autodocument binds
-- sync browser hotkeys => needed?
 - refactor justfile
 - update readme
 
