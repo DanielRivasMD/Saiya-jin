@@ -62,11 +62,15 @@
     ^{:doc/actions [{:program c/hc,    :action "decrement number",   :exec hx/decrement}]}         [t/kp_ob       [r/kt_hm]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "increment number",   :exec hx/increment}]}         [t/kp_cb       [r/kt_ed]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "buffer picker",      :exec hx/buffer-picker}]}     [t/kp_sc       [f/ko_f13]]
-    ^{:doc/actions [{:program c/hc,    :action "file picker",        :exec hx/file-explorer}]}     [t/kp_qu       [t/k_qu]]
-    ^{:doc/actions [{:program c/hc,    :action "change picker",      :exec hx/change-picker}]}     [t/kp_bl       [f/ko_f6]]
+    ^{:doc/actions [{:program c/hc,    :action "change picker",      :exec hx/change-picker}]}     [t/kp_qu       [f/ko_f14]]
+    ^{:doc/actions [{:program c/tm,    :action "fzf file widget"}
+                    {:program c/hp,    :action "open vertically"}
+                    {:program c/hc,    :action "split right",        :exec hx/vsplit}
+                    {:program c/mc,    :action "split right",        :exec mc/vsplit}]}            [t/kp_bl       [b/kt_v]       c/term]
     ^{:doc/actions [{:program c/hc,    :action "move forward",       :exec hx/prev-move}]}         [t/kp_cm       [r/kt_pu]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "move backward",      :exec hx/next-move}]}         [t/kp_pe       [r/kt_pd]      c/term]
     ^{:doc/actions [{:program c/hc,    :action "repeat last move",   :exec hx/last-move}]}         [t/kp_sl       [f/ko_f16]]
+
 
     ^{:doc/actions [{}]}                                                                           [t/ksp_ob      [t/ks_ob]]
     ^{:doc/actions [{}]}                                                                           [t/ksp_cb      [t/ks_cb]]
@@ -92,7 +96,6 @@
     ^{:doc/actions [{:program c/brv,   :action "vimium edit url new"}]}                            [a/ksp_rc      [f/kt_f7]      c/browser]
     ; ^{:doc/actions [{}]}                                                                           [a/ksp_sp      [a/ks_sp]]
 
-; TODO: remap open horizontal & open vertical
     ^{:doc/actions [{:program c/tm,    :action "command line editor"}
                     {:program c/hc,    :action "close tab",          :exec hx/close-tab}
                     {:program c/lg,    :action "increase content",   :exec lg/inc-content}
@@ -102,15 +105,12 @@
                     {:program c/lg,    :action "commit",             :exec lg/commit}
                     {:program c/mc,    :action "open file",          :exec mc/open-file}
                     {:program c/sr,    :action "help",               :exec sr/help}]}              [a/kp_re       [b/kt_l]       c/term]
-    ^{:doc/actions [{:program c/tm,    :action "fzf file widget"}
-                    {:program c/hp,    :action "open vertically"}
-                    {:program c/hc,    :action "split right",        :exec hx/vsplit}
-                    {:program c/lg,    :action "decrease content",   :exec lg/dec-content}
-                    {:program c/mc,    :action "split right",        :exec mc/vsplit}]}            [a/kp_rs       [b/kt_v]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "zoxide widget"}
                     {:program c/hp,    :action "open horizontally"}
                     {:program c/hc,    :action "split down",         :exec hx/hsplit}
-                    {:program c/mc,    :action "split down",         :exec mc/hsplit}]}            [a/kp_ro       [b/kt_s]       c/term]
+                    {:program c/lg,    :action "decrease content",   :exec lg/dec-content}
+                    {:program c/mc,    :action "split down",         :exec mc/hsplit}]}            [a/kp_rs       [b/kt_s]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "file picker",        :exec hx/file-explorer}]}     [a/kp_ro       [f/ko_f15]]
     ^{:doc/actions [{:program c/tm,    :action "fzf cd widget"}
                     {:program c/hc,    :action "unsplit",            :exec hx/wonly}
                     {:program c/lg,    :action "zoom",               :exec lg/zoom}
@@ -140,7 +140,7 @@
     ^{:doc/actions [{}]}                                                                           [n/kp_9        [n/k_9]]
     ^{:doc/actions [{}]}                                                                           [n/kp_0        [n/k_0]]
     ; ^{:doc/actions [[n/kp_hy       [f/ko_f14]]
-    ^{:doc/actions [{:program c/hc,    :action "split close",        :exec hx/wclose}]}            [n/kp_eq       [f/ko_f15]]
+    ^{:doc/actions [{:program c/hc,    :action "split close",        :exec hx/wclose}]}            [n/kp_eq       [f/ko_f18]]
 
     ^{:doc/actions [{}]}                                                                           [n/ksp_1       [n/ks_1]]
     ^{:doc/actions [{}]}                                                                           [n/ksp_2       [n/ks_2]]
