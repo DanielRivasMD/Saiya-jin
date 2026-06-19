@@ -82,6 +82,7 @@
                     {:program c/lg,    :action "scroll down",        :exec lg/scroll-down}]}       [a/kcp_rs      [b/kt_y]       c/term]
     ^{:doc/actions [{}]}                                                                           [a/kcp_ro      [a/kc_ro]]
     ^{:doc/actions [{}]}                                                                           [a/kcp_rc      [a/kc_rc]]
+    ^{:doc/actions [{:program c/brv,   :action "brave current tab1"}]}                             [a/kcp_sp      [a/kc_sp]      c/browser]
     ^{:doc/actions [{:program c/zom,   :action "toogle mute"}]}                                    [a/kcp_sp      [b/kcs_a]      c/zoom]
     ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hx/i-normal}
                     {:program c/hn,    :action "mode insert",        :exec hx/n-insert}
@@ -92,7 +93,7 @@
     ^{:doc/actions [{}]}                                                                           [a/kcsp_rs     [a/kcs_rs]]
     ^{:doc/actions [{}]}                                                                           [a/kcsp_ro     [a/kcs_ro]]
     ^{:doc/actions [{}]}                                                                           [a/kcsp_rc     [a/kcs_rc]]
-    ^{:doc/actions [{}]}                                                                           [a/kcsp_sp     [a/kcs_sp]]
+    ^{:doc/actions [{:program c/brv,   :action "brave open tab1"}]}                                [a/kcsp_sp     [a/kcs_sp]     c/browser]
 
     ; numeric glyphs
     ^{:doc/actions [{}]}                                                                           [n/kcp_1       [n/kc_1]]
