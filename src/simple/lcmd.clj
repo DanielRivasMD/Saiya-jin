@@ -82,9 +82,10 @@
                     {:program c/lg,    :action "scroll down",        :exec lg/scroll-down}]}       [a/kcp_rs      [b/kt_y]       c/term]
     ^{:doc/actions [{}]}                                                                           [a/kcp_ro      [a/kc_ro]]
     ^{:doc/actions [{}]}                                                                           [a/kcp_rc      [a/kc_rc]]
+    ^{:doc/actions [{:program c/zom,   :action "toogle mute"}]}                                    [a/kcp_sp      [b/kcs_a]      c/zoom]
     ^{:doc/actions [{:program c/hi,    :action "mode normal",        :exec hx/i-normal}
                     {:program c/hn,    :action "mode insert",        :exec hx/n-insert}
-                    {:program c/hs,    :action "mode normal",        :exec hx/s-normal}]}          [a/kcp_sp      [f/kt_f12]]
+                    {:program c/hs,    :action "mode normal",        :exec hx/s-normal}]}          [a/kcp_sp      [f/kt_f12]     c/term]
 
     ^{:doc/actions [{}]}                                                                           [a/kcsp_db     [a/kcs_db]]
     ^{:doc/actions [{}]}                                                                           [a/kcsp_re     [a/kcs_re]]
