@@ -54,6 +54,7 @@
                     {:program c/mc,    :action "delete next word",   :exec mc/delete-word-right}]} [a/ksp_ro      [b/ko_d]]
     ^{:doc/actions [{:program c/hc,    :action "delete line start",  :exec hx/delete-line-end}
                     {:program c/mc,    :action "delete line start",  :exec mc/delete-line-end}]}   [a/ksp_rc      [b/kt_k]]
+    ^{:doc/actions [{:program c/hc,    :action "last modification",  :exec hx/last-mod}]}          [a/ksp_sp      [f/ko_f17]     c/term]
     ^{:doc/actions [{:program c/brv,   :action "brave toggle sidebar"}]}                           [a/ksp_sp      [f/ko_f11]     c/browser]
     ^{:doc/actions [{:program c/fin,   :action "toggle sidebar"}]}                                 [a/ksp_sp      [b/ktc_s]      c/finder]
 
