@@ -47,9 +47,7 @@
     ^{:doc/actions [{:program c/sys,   :action "switch most recent app"}]}                         [a/kp_lc   [a/k_lc]      nil       {:alone [c/kc_tab]}]
 
     ; rights
-    ; TODO: assign right shift
-    ; ^{:doc/actions [{}]}                                                                           [a/kp_rs   [a/k_rs]      c/term    {:alone [f/kts_f12]}]
-    ; ^{:doc/actions [{:program c/sys,   :action "browser input"}]}                                  [a/kp_rs   [a/k_rs]      nil       {:alone [c/ks_lock]}]
+    ^{:doc/actions [{}]}                                                                           [a/kp_rs   [a/k_rs]      c/term    {:alone [f/kts_f12]}]
     ^{:doc/actions [{:program c/alf,   :action "paste"}]}                                          [a/kp_ro   [a/k_ro]      nil       {:alone [c/ko_lock]}]
     ^{:doc/actions [{:program c/alf,   :action "clipboard select"}]}                               [a/kp_rc   [a/k_rc]      nil       {:alone [c/kt_lock]}]]})
 
