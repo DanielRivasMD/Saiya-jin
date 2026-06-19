@@ -50,11 +50,11 @@
     ^{:doc/actions [{:program c/tm,    :action "go assign",          :sequence "` := `"}]}         [a/kep_re      [a/k_sp t/ks_sc n/k_eq a/k_sp]]
     ^{:doc/actions [{:program c/tm,    :action "define",             :sequence "` => `"}]}         [a/kep_rs      [a/k_sp n/k_eq t/ks_pe a/k_sp]]
     ^{:doc/actions [{:program c/sys,   :action "prompt espanso"}]}                                 [a/kep_sp      [a/ke_sp]]
-    ^{:doc/actions [{:program c/hc,    :action "buffer picker",      :exec hx/buffer-picker}]}     [a/kep_lc      [b/kt_h]       c/term]
+    ^{:doc/actions [{:program c/hc,    :action "lower case",         :exec hx/lower-case}]}        [a/kep_lc      [b/kt_h]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "atuin widget"}
-                    {:program c/hc,    :action "file picker",        :exec hx/file-explorer}]}     [a/kep_lo      [b/kt_j]       c/term]
+                    {:program c/hc,    :action "switch case",        :exec hx/switch-case}]}       [a/kep_lo      [b/kt_j]       c/term]
     ^{:doc/actions [{:program c/tm,    :action "fzf history"}
-                    {:program c/hc,    :action "change picker",      :exec hx/change-picker}]}     [a/kep_lt      [b/kt_o]       c/term]
+                    {:program c/hc,    :action "upper case",         :exec hx/upper-case}]}        [a/kep_lt      [b/kt_o]       c/term]
     ^{:doc/actions [{}]}                                                                           [a/kep_ls      [a/ke_ls]]
     ^{:doc/actions [{}]}                                                                           [a/kep_caps    [a/ke_caps]]
     ^{:doc/actions [{}]}                                                                           [a/kep_tab     [a/ke_tab]]
