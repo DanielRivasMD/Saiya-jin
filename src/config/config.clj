@@ -19,8 +19,12 @@
 
 ; programs
 (def alf "Alfred")
+(def brv "Brave")
+(def fin "Finder")
 (def rec "Rectangle")
 (def sys "System")
+(def zom "Zoom")
+
 (def mc  "micro")
 (def hc  "helix-common")
 (def hi  "helix-insert")
@@ -208,6 +212,11 @@
 
 (def koc_sp (mk O C _sp))
 (def kocp_sp (mk O C P _sp ))
+
+(def koc_au (mk K O C _au))
+(def koc_ad (mk K O C _ad))
+(def koc_al (mk K O C _al))
+(def koc_ar (mk K O C _ar))
 
 (def ktc_sp (mk T C _sp))
 (def ktcp_sp (mk T C P _sp ))
