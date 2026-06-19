@@ -30,8 +30,8 @@
    :rules
    [:tab-mode
     ; arrow glyphs
-    ^{:doc/actions [{:program c/brv,   :action "prev tab"}]}                                       [r/kp_au       [c/koc_al]     c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "next tab"}]}                                       [r/kp_ad       [c/koc_ar]     c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "brave prev tab"}]}                                 [r/kp_au       [c/koc_al]     c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "brave next tab"}]}                                 [r/kp_ad       [c/koc_ar]     c/browser]
 
     ^{:doc/actions [{:program c/zj,    :action "prev tab",           :exec zj/prev-tab}]}          [r/kp_al       [f/ks_f1]      c/term]
     ^{:doc/actions [{:program c/zj,    :action "next tab",           :exec zj/next-tab}]}          [r/kp_ar       [f/ks_f2]      c/term]
@@ -39,7 +39,7 @@
     ^{:doc/actions [{:program c/zj,    :action "scroll down",        :exec zj/scroll-down}]}       [r/kp_ad       [f/kos_f12]    c/term]
 
    ; technical glyphs
-    ^{:doc/actions [{:program c/brv,   :action "split tab"}]}                                      [t/kp_bl       [f/ko_f7]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "brave split tab"}]}                                [t/kp_bl       [f/ko_f7]      c/browser]
 
     ^{:doc/actions [{:program c/zj,    :action "swap left",          :exec zj/swap-tab-left}]}     [t/kp_ob       [f/kts_f1]     c/term]
     ^{:doc/actions [{:program c/zj,    :action "swap right",         :exec zj/swap-tab-right}]}    [t/kp_cb       [f/kts_f2]     c/term]
@@ -51,11 +51,11 @@
     ; ^{:doc/actions [{:program c/ay,    :action "nushell motion",     :exec nu}]}                   [t/kp_sl       [b/ko_z]       c/term]
 
    ; action glyphs
-    ^{:doc/actions [{:program c/brv,   :action "tab close"}]}                                      [a/kp_db       [b/kc_w]       c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "tab new"}]}                                        [a/kp_rs       [b/kc_t]       c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "duplicate tab"}]}                                  [a/kp_ro       [f/kt_f11]     c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "unsplit tab"}]}                                    [a/kp_rc       [f/kt_f12]     c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "tab jump back"}]}                                  [a/kp_sp       [f/kt_f10]     c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "brave tab close"}]}                                [a/kp_db       [b/kc_w]       c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "brave tab new"}]}                                  [a/kp_rs       [b/kc_t]       c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "brave duplicate tab"}]}                            [a/kp_ro       [f/kt_f11]     c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "brave unsplit tab"}]}                              [a/kp_rc       [f/kt_f12]     c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "vimium tab jump back"}]}                           [a/kp_sp       [f/kt_f10]     c/browser]
 		
     ^{:doc/actions [{:program c/zj,    :action "tab close",          :exec zj/close-tab}]}         [a/kp_db       [f/ks_f7]      c/term]
     ^{:doc/actions [{:program c/zj,    :action "plugin room",        :exec zj/plug-room}]}         [a/kp_re       [f/ks_f8]      c/term]
