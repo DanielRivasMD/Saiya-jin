@@ -3,7 +3,7 @@
 
 :applications
 
-{:browser ["company.thebrowser.Browser"],
+{:browser ["company.thebrowser.Browser" "com.brave.Browser"],
  :finder ["com.apple.finder"],
  :mail ["com.apple.mail"],
  :skim ["net.sourceforge.skim-app.skim"],
@@ -27,70 +27,6 @@
  :w-mode {:key :w},
  :z-mode {:key :z}}
 :main [
-{:des "Browser overwrite Arc",
- :rules
- [[:#Pright_shift :right_shift [:browser] {:alone [:!Of1]}]
-  [:!EWQ#Pdelete_or_backspace :!Of2 [:browser]]
-  [:!EWQ#Pright_option :!Of3 [:browser]]
-  [:!EWQ#Preturn_or_enter :!Of4 [:browser]]
-  [:!EWQ#Pright_shift :!Of5 [:browser]]
-  [:!EWQ#Pright_command :!Of6 [:browser]]
-  [:!EWQ#Pspacebar :!Of7 [:browser]]
-  [:!OC#Pspacebar [:!Of8] [:browser]]
-  [:!R#Pup_arrow [:!Of9] [:browser]]
-  [:!R#Pdown_arrow [:!Of10] [:browser]]
-  [:!EWQ#Pup_arrow :!Of11 [:browser]]
-  [:!EWQ#Pdown_arrow :!Of12 [:browser]]
-  [:!T#Pspacebar [:!Cs] [:browser]]
-  [:!C#Preturn_or_enter [:!Co] [:browser]]
-  [:!OC#P1 [:!T1] [:browser]]
-  [:!OC#P2 [:!T2] [:browser]]
-  [:!OC#P3 [:!T3] [:browser]]
-  [:!OC#P4 [:!T4] [:browser]]
-  [:!OC#P5 [:!T5] [:browser]]
-  [:!OC#Pkeypad_1 [:!T1] [:browser]]
-  [:!OC#Pkeypad_2 [:!T2] [:browser]]
-  [:!OC#Pkeypad_3 [:!T3] [:browser]]
-  [:!OC#Pkeypad_4 [:!T4] [:browser]]
-  [:!OC#Pkeypad_5 [:!T5] [:browser]]
-  [:!OC#Pdelete_or_backspace [:!Cw] [:browser]]
-  [:!OC#Preturn_or_enter [:!OCn] [:browser]]
-  [:!OC#Pright_shift [:!Ct] [:browser]]
-  [:!OC#Pright_command [:!STCr] [:browser]]
-  [:!OC#Pright_option [:!SCt] [:browser]]
-  [:!OT#Pdelete_or_backspace [:!TShyphen] [:browser]]
-  [:!OT#Pright_shift [:!TSequal_sign] [:browser]]
-  [:!OT#Pright_option [:!STCv] [:browser]]
-  [:!OT#Pleft_arrow [:!TSopen_bracket] [:browser]]
-  [:!OT#Pright_arrow [:!TSclose_bracket] [:browser]]
-  [:!OTC#Pdelete_or_backspace [:!SCk] [:browser]]
-  [:!OTC#Pspacebar [:!Cd] [:browser]]
-  [:!OTC#Preturn_or_enter [:!Cn] [:browser]]
-  [:!EWQ#Pleft_arrow [:!Copen_bracket] [:browser]]
-  [:!EWQ#Pright_arrow [:!Cclose_bracket] [:browser]]
-  [:!TC#Pdelete_or_backspace [:!SCw] [:browser]]
-  [:!TC#Preturn_or_enter [:!TCn] [:browser]]
-  [:!TC#Pright_shift [:!Cy] [:browser]]
-  [:!TC#Pright_option [:!SCj] [:browser]]
-  [:!TC#Pright_command [:!STCa] [:browser]]
-  [:!TC#Pspacebar [:!STs] [:browser]]
-  [:!O#Pright_control [:!Cl] [:browser]]
-  [:!W#Pright_shift [:!Cf] [:browser]]
-  [:!W#Pspacebar [:!Cj] [:browser]]
-  [:!O#Ph [:!Cg] [:browser]]
-  [:!O#Pl [:!SCg] [:browser]]
-  [:!O#Pc [:!SCc] [:browser]]
-  [:!SO#Pc [:!SOCc] [:browser]]]}
-{:des "Finder",
- :rules
- [[:!EWQ#Pleft_arrow [:!Copen_bracket] [:finder]]
-  [:!EWQ#Pright_arrow [:!Cclose_bracket] [:finder]]
-  [:!T#Pspacebar [:!TCs] [:finder]]]}
-{:des "",
- :rules
- [[:!C#Pspacebar :!SC#Pa [:zoom]]
-  [:!T#Pspacebar :!SC#Pv [:zoom]]
-  [:#Pright_shift :right_shift [:zoom] {:alone [:!SC#Ph]}]]}
 {:des "Q mode",
  :rules
  [:q-mode
@@ -133,6 +69,21 @@
   [:#Pperiod [:period]]
   ^{:doc/actions [{}]}
   [:#Pslash [:slash]]
+  ^{:doc/actions
+    [{:program "Brave", :action "vimium new tab background"}]}
+  [:#Pdelete_or_backspace [:!Of1] :browser]
+  ^{:doc/actions [{:program "Brave", :action "vimium activate link"}]}
+  [:#Preturn_or_enter [:!Of2] :browser]
+  ^{:doc/actions
+    [{:program "Brave", :action "vimium new tab foreground"}]}
+  [:#Pright_shift [:!Of3] :browser]
+  ^{:doc/actions [{:program "Brave", :action "vimium download link"}]}
+  [:#Pright_option [:!Of4] :browser]
+  ^{:doc/actions [{:program "Brave", :action "vimium copy url link"}]}
+  [:#Pright_command [:!Of5] :browser]
+  ^{:doc/actions
+    [{:program "Brave", :action "vimium new tab multiple"}]}
+  [:#Pspacebar [:!Of6] :browser]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "pane close",
@@ -444,6 +395,14 @@
       :action "loop forward",
       :exec ["LoopOverTabs"]}]}
   [:#Pdown_arrow [:!Tp] :term]
+  ^{:doc/actions [{:program "Brave", :action "brave go backward"}]}
+  [:!S#Pleft_arrow [:!Copen_bracket] :browser]
+  ^{:doc/actions [{:program "Brave", :action "brave go forward"}]}
+  [:!S#Pright_arrow [:!Cclose_bracket] :browser]
+  ^{:doc/actions [{:program "Finder", :action "go backward"}]}
+  [:!S#Pleft_arrow [:!Copen_bracket] :finder]
+  ^{:doc/actions [{:program "Finder", :action "go forward"}]}
+  [:!S#Pright_arrow [:!Cclose_bracket] :finder]
   ^{:doc/actions
     [{:program "helix-common", :action "undo", :exec ["undo"]}
      {:program "micro", :action "undo", :exec ["Undo"]}]}
@@ -476,15 +435,18 @@
   [:#Pclose_bracket [:!Tend] :term]
   ^{:doc/actions
     [{:program "helix-common",
-      :action "switch case",
-      :exec ["switch_case"]}]}
+      :action "buffer picker",
+      :exec ["buffer_picker"]}]}
   [:#Psemicolon [:!Of13]]
-  ^{:doc/actions [{}]}
+  ^{:doc/actions
+    [{:program "helix-common",
+      :action "file picker",
+      :exec ["file_explorer"]}]}
   [:#Pquote [:quote]]
   ^{:doc/actions
     [{:program "helix-common",
-      :action "split close",
-      :exec ["wclose"]}]}
+      :action "change picker",
+      :exec ["changed_file_picker"]}]}
   [:#Pbackslash [:!Of6]]
   ^{:doc/actions
     [{:program "helix-common",
@@ -517,6 +479,22 @@
   [:!S#Pperiod [:!Speriod]]
   ^{:doc/actions [{}]}
   [:!S#Pslash [:!Sslash]]
+  ^{:doc/actions [{:program "Brave", :action "vimium select tab"}]}
+  [:#Preturn_or_enter [:!Tf1] :browser]
+  ^{:doc/actions [{:program "Brave", :action "vimium select"}]}
+  [:#Pright_shift [:!Tf2] :browser]
+  ^{:doc/actions
+    [{:program "Brave", :action "vimium select bookmark"}]}
+  [:#Pright_option [:!Tf3] :browser]
+  ^{:doc/actions [{:program "Brave", :action "vimium edit url"}]}
+  [:#Pright_command [:!Tf4] :browser]
+  ^{:doc/actions [{:program "Brave", :action "vimium select new"}]}
+  [:!S#Pright_shift [:!Tf5] :browser]
+  ^{:doc/actions
+    [{:program "Brave", :action "vimium select bookmark new"}]}
+  [:!S#Pright_option [:!Tf6] :browser]
+  ^{:doc/actions [{:program "Brave", :action "vimium edit url new"}]}
+  [:!S#Pright_command [:!Tf7] :browser]
   ^{:doc/actions
     [{:program "term", :action "command line editor"}
      {:program "helix-common",
@@ -600,13 +578,8 @@
   [:#P0 [:0]]
   ^{:doc/actions
     [{:program "helix-common",
-      :action "lower case",
-      :exec ["switch_to_lowercase"]}]}
-  [:#Phyphen [:!Of14]]
-  ^{:doc/actions
-    [{:program "helix-common",
-      :action "upper case",
-      :exec ["switch_to_uppercase"]}]}
+      :action "split close",
+      :exec ["wclose"]}]}
   [:#Pequal_sign [:!Of15]]
   ^{:doc/actions [{}]}
   [:!S#P1 [:!S1]]
@@ -743,6 +716,10 @@
 {:des "Tab Mode",
  :rules
  [:tab-mode
+  ^{:doc/actions [{:program "Brave", :action "brave prev tab"}]}
+  [:#Pup_arrow [:!OCleft_arrow] :browser]
+  ^{:doc/actions [{:program "Brave", :action "brave next tab"}]}
+  [:#Pdown_arrow [:!OCright_arrow] :browser]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "prev tab",
@@ -763,6 +740,8 @@
       :action "scroll down",
       :exec ["ScrollDown;"]}]}
   [:#Pdown_arrow [:!OSf12] :term]
+  ^{:doc/actions [{:program "Brave", :action "brave split tab"}]}
+  [:#Pbackslash [:!Of7] :browser]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "swap left",
@@ -778,6 +757,16 @@
       :action "history edit",
       :exec ["EditScrollback; SwitchToMode \"Normal\";"]}]}
   [:#Pbackslash [:!Sf4] :term]
+  ^{:doc/actions [{:program "Brave", :action "brave tab close"}]}
+  [:#Pdelete_or_backspace [:!Cw] :browser]
+  ^{:doc/actions [{:program "Brave", :action "brave tab new"}]}
+  [:#Pright_shift [:!Ct] :browser]
+  ^{:doc/actions [{:program "Brave", :action "brave duplicate tab"}]}
+  [:#Pright_option [:!Tf11] :browser]
+  ^{:doc/actions [{:program "Brave", :action "brave unsplit tab"}]}
+  [:#Pright_command [:!Tf12] :browser]
+  ^{:doc/actions [{:program "Brave", :action "vimium tab jump back"}]}
+  [:#Pspacebar [:!Tf10] :browser]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "tab close",
@@ -1135,6 +1124,10 @@
   [:!C#Pright_option [:!Cright_option]]
   ^{:doc/actions [{}]}
   [:!C#Pright_command [:!Cright_command]]
+  ^{:doc/actions [{:program "Brave", :action "brave current tab1"}]}
+  [:!C#Pspacebar [:!Cspacebar] :browser]
+  ^{:doc/actions [{:program "Zoom", :action "toogle mute"}]}
+  [:!C#Pspacebar [:!CSa] :zoom]
   ^{:doc/actions
     [{:program "helix-insert",
       :action "mode normal",
@@ -1145,7 +1138,7 @@
      {:program "helix-select",
       :action "mode normal",
       :exec ["normal_mode"]}]}
-  [:!C#Pspacebar [:!Tf12]]
+  [:!C#Pspacebar [:!Tf12] :term]
   ^{:doc/actions [{}]}
   [:!CS#Pdelete_or_backspace [:!CSdelete_or_backspace]]
   ^{:doc/actions [{}]}
@@ -1156,8 +1149,8 @@
   [:!CS#Pright_option [:!CSright_option]]
   ^{:doc/actions [{}]}
   [:!CS#Pright_command [:!CSright_command]]
-  ^{:doc/actions [{}]}
-  [:!CS#Pspacebar [:!CSspacebar]]
+  ^{:doc/actions [{:program "Brave", :action "brave open tab1"}]}
+  [:!CS#Pspacebar [:!CSspacebar] :browser]
   ^{:doc/actions [{}]}
   [:!C#P1 [:!C1]]
   ^{:doc/actions [{}]}
@@ -1398,10 +1391,12 @@
   [:!T#Pright_option [:!Tright_option]]
   ^{:doc/actions [{}]}
   [:!T#Pright_command [:!Tright_command]]
+  ^{:doc/actions [{:program "Zoom", :action "toggle camera"}]}
+  [:!T#Pspacebar [:!CSv] :zoom]
   ^{:doc/actions
     [{:program "helix-common", :action "jumper", :exec ["goto_word"]}
      {:program "micro", :action "jumper", :exec ["JumpLine"]}]}
-  [:!T#Pspacebar [:!Tspacebar]]
+  [:!T#Pspacebar [:!Tspacebar] :term]
   ^{:doc/actions [{}]}
   [:!TS#Pdelete_or_backspace [:!TSdelete_or_backspace]]
   ^{:doc/actions [{}]}
@@ -2169,8 +2164,8 @@
   [:!S#Pslash [:!Sslash]]
   ^{:doc/actions [{}]}
   [:!S#Pdelete_or_backspace [:!Sdelete_or_backspace]]
-  ^{:doc/actions [{}]}
-  [:!S#Preturn_or_enter [:!Sreturn_or_enter]]
+  ^{:doc/actions [{:program "Brave", :action "vimium box focus"}]}
+  [:!S#Preturn_or_enter [:!Of10] :browser]
   ^{:doc/actions
     [{:program "helix-common",
       :action "delete next char",
@@ -2192,8 +2187,10 @@
       :action "delete line start",
       :exec ["SelectToEndOfLine,Delete"]}]}
   [:!S#Pright_command [:!Tk]]
-  ^{:doc/actions [{}]}
-  [:!S#Pspacebar [:!Sspacebar]]
+  ^{:doc/actions [{:program "Brave", :action "brave toggle sidebar"}]}
+  [:!S#Pspacebar [:!Of11] :browser]
+  ^{:doc/actions [{:program "Finder", :action "toggle sidebar"}]}
+  [:!S#Pspacebar [:!TCs] :finder]
   ^{:doc/actions [{}]}
   [:!S#P1 [:!S1]]
   ^{:doc/actions [{}]}
@@ -2663,11 +2660,13 @@
   [:!R#Pperiod [:!Rperiod]]
   ^{:doc/actions [{}]}
   [:!R#Pslash [:!Rslash]]
+  ^{:doc/actions [{:program "Brave", :action "brave toggle sidebar"}]}
+  [:!R#Pspacebar [:!Of12] :browser]
   ^{:doc/actions
     [{:program "helix-common",
       :action "last modification",
       :exec ["goto_last_modification"]}]}
-  [:!R#Pspacebar [:!Of17]]
+  [:!R#Pspacebar [:!Of17] :term]
   ^{:doc/actions
     [{:program "helix-common",
       :action "delete line start",
@@ -2821,20 +2820,20 @@
   [:!E#Pspacebar [:!Espacebar]]
   ^{:doc/actions
     [{:program "helix-common",
-      :action "buffer picker",
-      :exec ["buffer_picker"]}]}
+      :action "lower case",
+      :exec ["switch_to_lowercase"]}]}
   [:!E#Pleft_command [:!Th] :term]
   ^{:doc/actions
     [{:program "term", :action "atuin widget"}
      {:program "helix-common",
-      :action "file picker",
-      :exec ["file_explorer"]}]}
+      :action "switch case",
+      :exec ["switch_case"]}]}
   [:!E#Pleft_option [:!Tj] :term]
   ^{:doc/actions
     [{:program "term", :action "fzf history"}
      {:program "helix-common",
-      :action "change picker",
-      :exec ["changed_file_picker"]}]}
+      :action "upper case",
+      :exec ["switch_to_uppercase"]}]}
   [:!E#Pleft_control [:!To] :term]
   ^{:doc/actions [{}]}
   [:!E#Pleft_shift [:!Eleft_shift]]
@@ -2968,10 +2967,6 @@
   ^{:doc/actions
     [{:program "System", :action "switch most recent app"}]}
   [:#Pleft_command [:left_command] nil {:alone [:!Ctab]}]
-  ^{:doc/actions [{}]}
-  [:#Pright_shift [:right_shift] :term {:alone [:!TSf12]}]
-  ^{:doc/actions [{:program "System", :action "browser input"}]}
-  [:#Pright_shift [:right_shift] nil {:alone [:!Skeypad_num_lock]}]
   ^{:doc/actions [{:program "Alfred", :action "paste"}]}
   [:#Pright_option [:right_option] nil {:alone [:!Okeypad_num_lock]}]
   ^{:doc/actions [{:program "Alfred", :action "clipboard select"}]}
