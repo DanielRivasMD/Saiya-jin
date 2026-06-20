@@ -72,12 +72,15 @@
     ^{:doc/actions [{}]}                                                                           [t/kcsp_sl     [t/kcs_sl]]
 
     ; action glyphs
+    ^{:doc/actions [{:program c/brv,   :action "vimium scrool up"}]}                               [a/kcp_db      [f/ko_f8]      c/browser]
     ^{:doc/actions [{:program c/hc,    :action "scroll up",          :exec hx/scroll-up}
                     {:program c/lg,    :action "scroll up",          :exec lg/scroll-up}]}         [a/kcp_db      [b/kt_x]       c/term]
+    ^{:doc/actions [{:program c/brv,   :action "vimium box focus"}]}                               [a/kcp_re      [f/ko_f10]     c/browser]
     ^{:doc/actions [{:program c/hi,    :action "completion",         :exec hx/i-completion}
                     {:program c/hn,    :action "hover",              :exec hx/n-hover}
                     {:program c/hs,    :action "hover",              :exec hx/s-hover}
                     {:program c/hp,    :action "open background"}]}                                [a/kcp_re      [a/kc_re]]
+    ^{:doc/actions [{:program c/brv,   :action "vimium scroll down"}]}                             [a/kcp_rs      [f/ko_f9]      c/browser]
     ^{:doc/actions [{:program c/hc,    :action "scroll down",        :exec hx/scroll-down}
                     {:program c/lg,    :action "scroll down",        :exec lg/scroll-down}]}       [a/kcp_rs      [b/kt_y]       c/term]
     ^{:doc/actions [{}]}                                                                           [a/kcp_ro      [a/kc_ro]]
