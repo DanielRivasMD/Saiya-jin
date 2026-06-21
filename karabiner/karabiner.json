@@ -6472,6 +6472,23 @@
             }
           },
           "to" : [ {
+            "key_code" : "f8",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "company.thebrowser.Browser", "com.brave.Browser" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "delete_or_backspace",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
             "key_code" : "x",
             "modifiers" : [ "left_control" ]
           } ],
@@ -6489,8 +6506,42 @@
             }
           },
           "to" : [ {
+            "key_code" : "f10",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "company.thebrowser.Browser", "com.brave.Browser" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
             "key_code" : "return_or_enter",
             "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_shift",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ],
+              "optional" : [ "caps_lock" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "f9",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "company.thebrowser.Browser", "com.brave.Browser" ]
           } ],
           "type" : "basic"
         }, {
@@ -13042,12 +13093,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "f10",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_if",
-            "bundle_identifiers" : [ "company.thebrowser.Browser", "com.brave.Browser" ]
+            "key_code" : "return_or_enter",
+            "modifiers" : [ "left_shift" ]
           } ],
           "type" : "basic"
         }, {
