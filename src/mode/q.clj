@@ -46,9 +46,9 @@
     ^{:doc/actions [{}]}                                                                           [t/kp_sl       [t/k_sl]]
 
     ; action glyphs
-    ^{:doc/actions [{:program c/brv,   :action "vimium new tab background"}]}                      [a/kp_db       [f/ko_f1]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "vimium new tab foreground"}]}                      [a/kp_db       [f/ko_f1]      c/browser]
     ^{:doc/actions [{:program c/brv,   :action "vimium activate link"}]}                           [a/kp_re       [f/ko_f2]      c/browser]
-    ^{:doc/actions [{:program c/brv,   :action "vimium new tab foreground"}]}                      [a/kp_rs       [f/ko_f3]      c/browser]
+    ^{:doc/actions [{:program c/brv,   :action "vimium new tab background"}]}                      [a/kp_rs       [f/ko_f3]      c/browser]
     ^{:doc/actions [{:program c/brv,   :action "vimium download link"}]}                           [a/kp_ro       [f/ko_f4]      c/browser]
     ^{:doc/actions [{:program c/brv,   :action "vimium copy url link"}]}                           [a/kp_rc       [f/ko_f5]      c/browser]
     ^{:doc/actions [{:program c/brv,   :action "vimium new tab multiple"}]}                        [a/kp_sp       [f/ko_f6]      c/browser]
