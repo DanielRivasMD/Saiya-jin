@@ -40,7 +40,7 @@
     ^{:doc/actions [{}]}                                                                           [t/kp_cb       [f/kos_f8]]
     ^{:doc/actions [{}]}                                                                           [t/kp_sc       [t/k_sc]]
     ^{:doc/actions [{}]}                                                                           [t/kp_qu       [t/k_qu]]
-    ^{:doc/actions [{:program c/zj,    :action "pane focus",         :exec zj/pane-focus}]}        [t/kp_bl       [f/kt_f7]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane split right",   :exec zj/pane-new-right}]}    [t/kp_bl       [f/kt_f8]      c/term]
     ^{:doc/actions [{}]}                                                                           [t/kp_cm       [t/k_cm]]
     ^{:doc/actions [{}]}                                                                           [t/kp_pe       [t/k_pe]]
     ^{:doc/actions [{}]}                                                                           [t/kp_sl       [t/k_sl]]
@@ -55,8 +55,8 @@
 
     ^{:doc/actions [{:program c/zj,    :action "pane close",         :exec zj/pane-close}]}        [a/kp_db       [f/kt_f6]      c/term]
     ^{:doc/actions [{:program c/zj,    :action "plugin pane picker", :exec zj/pane-picker}]}       [a/kp_re       [f/ks_f5]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane split right",   :exec zj/pane-new-right}]}    [a/kp_rs       [f/kt_f8]      c/term]
-    ^{:doc/actions [{:program c/zj,    :action "pane split down",    :exec zj/pane-new-down}]}     [a/kp_ro       [f/kt_f9]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane split down",    :exec zj/pane-new-down}]}     [a/kp_rs       [f/kt_f9]      c/term]
+    ^{:doc/actions [{:program c/zj,    :action "pane focus",         :exec zj/pane-focus}]}        [a/kp_ro       [f/kt_f7]      c/term]
     ^{:doc/actions [{:program c/zj,    :action "mode pane rename",   :exec zj/rename-pane-mode}
                     {:program c/zp,    :action "abort pane rename",  :exec zj/p-abort-rename}]}    [a/kp_rc       [f/kt_f10]     c/term]
     ^{:doc/actions [{:program c/zj,    :action "pane jump back",     :exec zj/last-pane}]}         [a/kp_sp       [f/kt_f11]     c/term]
