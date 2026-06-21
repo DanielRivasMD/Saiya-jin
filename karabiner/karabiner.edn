@@ -1096,6 +1096,8 @@
   [:!CS#Pperiod [:!CSperiod]]
   ^{:doc/actions [{}]}
   [:!CS#Pslash [:!CSslash]]
+  ^{:doc/actions [{:program "Brave", :action "vimium scrool up"}]}
+  [:!C#Pdelete_or_backspace [:!Of8] :browser]
   ^{:doc/actions
     [{:program "helix-common",
       :action "scroll up",
@@ -1104,6 +1106,8 @@
       :action "scroll up",
       :exec ["scrollUpMain-alt2"]}]}
   [:!C#Pdelete_or_backspace [:!Tx] :term]
+  ^{:doc/actions [{:program "Brave", :action "vimium box focus"}]}
+  [:!C#Preturn_or_enter [:!Of10] :browser]
   ^{:doc/actions
     [{:program "helix-insert",
       :action "completion",
@@ -1112,6 +1116,8 @@
      {:program "helix-select", :action "hover", :exec ["hover"]}
      {:program "helix-popup", :action "open background"}]}
   [:!C#Preturn_or_enter [:!Creturn_or_enter]]
+  ^{:doc/actions [{:program "Brave", :action "vimium scroll down"}]}
+  [:!C#Pright_shift [:!Of9] :browser]
   ^{:doc/actions
     [{:program "helix-common",
       :action "scroll down",
@@ -2164,8 +2170,8 @@
   [:!S#Pslash [:!Sslash]]
   ^{:doc/actions [{}]}
   [:!S#Pdelete_or_backspace [:!Sdelete_or_backspace]]
-  ^{:doc/actions [{:program "Brave", :action "vimium box focus"}]}
-  [:!S#Preturn_or_enter [:!Of10] :browser]
+  ^{:doc/actions [{}]}
+  [:!S#Preturn_or_enter [:!Sreturn_or_enter]]
   ^{:doc/actions
     [{:program "helix-common",
       :action "delete next char",
