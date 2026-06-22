@@ -249,7 +249,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f7",
+            "key_code" : "f8",
             "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
@@ -477,7 +477,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f8",
+            "key_code" : "f9",
             "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
@@ -497,7 +497,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f9",
+            "key_code" : "f7",
             "modifiers" : [ "left_control" ]
           } ],
           "conditions" : [ {
