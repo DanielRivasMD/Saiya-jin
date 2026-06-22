@@ -60,9 +60,9 @@
   [:#Pquote [:quote]]
   ^{:doc/actions
     [{:program "zellij-shared",
-      :action "pane focus",
-      :exec ["ToggleFocusFullscreen;"]}]}
-  [:#Pbackslash [:!Tf7] :term]
+      :action "pane split right",
+      :exec ["NewPane \"Right\";"]}]}
+  [:#Pbackslash [:!Tf8] :term]
   ^{:doc/actions [{}]}
   [:#Pcomma [:comma]]
   ^{:doc/actions [{}]}
@@ -70,12 +70,12 @@
   ^{:doc/actions [{}]}
   [:#Pslash [:slash]]
   ^{:doc/actions
-    [{:program "Brave", :action "vimium new tab background"}]}
+    [{:program "Brave", :action "vimium new tab foreground"}]}
   [:#Pdelete_or_backspace [:!Of1] :browser]
   ^{:doc/actions [{:program "Brave", :action "vimium activate link"}]}
   [:#Preturn_or_enter [:!Of2] :browser]
   ^{:doc/actions
-    [{:program "Brave", :action "vimium new tab foreground"}]}
+    [{:program "Brave", :action "vimium new tab background"}]}
   [:#Pright_shift [:!Of3] :browser]
   ^{:doc/actions [{:program "Brave", :action "vimium download link"}]}
   [:#Pright_option [:!Of4] :browser]
@@ -97,14 +97,14 @@
   [:#Preturn_or_enter [:!Sf5] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
-      :action "pane split right",
-      :exec ["NewPane \"Right\";"]}]}
-  [:#Pright_shift [:!Tf8] :term]
-  ^{:doc/actions
-    [{:program "zellij-shared",
       :action "pane split down",
       :exec ["NewPane \"Down\";"]}]}
-  [:#Pright_option [:!Tf9] :term]
+  [:#Pright_shift [:!Tf9] :term]
+  ^{:doc/actions
+    [{:program "zellij-shared",
+      :action "pane focus",
+      :exec ["ToggleFocusFullscreen;"]}]}
+  [:#Pright_option [:!Tf7] :term]
   ^{:doc/actions
     [{:program "zellij-shared",
       :action "mode pane rename",
@@ -2831,8 +2831,8 @@
   [:!E#Pspacebar [:!Espacebar]]
   ^{:doc/actions
     [{:program "helix-common",
-      :action "lower case",
-      :exec ["switch_to_lowercase"]}]}
+      :action "upper case",
+      :exec ["switch_to_uppercase"]}]}
   [:!E#Pleft_command [:!Th] :term]
   ^{:doc/actions
     [{:program "term", :action "atuin widget"}
@@ -2843,8 +2843,8 @@
   ^{:doc/actions
     [{:program "term", :action "fzf history"}
      {:program "helix-common",
-      :action "upper case",
-      :exec ["switch_to_uppercase"]}]}
+      :action "lower case",
+      :exec ["switch_to_lowercase"]}]}
   [:!E#Pleft_control [:!To] :term]
   ^{:doc/actions [{}]}
   [:!E#Pleft_shift [:!Eleft_shift]]
