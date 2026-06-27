@@ -101,7 +101,7 @@
 (def ktcs_lock (mk K T C S _lock))
 (def kotcs_lock (mk K O T C S _lock))
 
-(def k_grave (mk K _grave))
+(def k_grave (mk _grave))
 (def ksp_grave (mk K S P _grave))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

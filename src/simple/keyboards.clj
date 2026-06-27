@@ -5,7 +5,20 @@
 (ns simple.keyboards
   (:require [clojure.java.io :as io]
             [clojure.pprint :as pp]
-            [config.config :as c]))
+            [config.config :as c]
+            [config.arrows :as r]
+            [config.technical :as t]
+            [config.action :as a]
+            [config.numeric :as n]
+            [config.alphabetic :as b]
+            [config.function :as f]
+
+            [config.helix :as hx]
+            [config.lazygit :as lg]
+            [config.micro :as mc]
+            [config.serpl :as sr]
+            [config.zellij :as zj]
+))
 
 (def out-file "keyboards.edn")
 
@@ -18,10 +31,10 @@
    :rules
    [;
     ; keys - MacPro
-    [:#Pdelete_or_backspace [:grave_accent_and_tilde] :pro]                                               ; '`'
+    ^{:doc/actions [{}]}                                                                           [a/k_db        [c/k_grave]    :pro]
 
     ; keys - MacAir
-    [:#Pdelete_or_backspace [:grave_accent_and_tilde] :air]                                               ; '`'
+    ^{:doc/actions [{}]}                                                                           [a/k_db        [c/k_grave]    :air]
     [:f1 :display_brightness_decrement :air]
     [:f2 :display_brightness_increment :air]
     [:f3 :illumination_decrement :air]
@@ -31,7 +44,7 @@
     [:f12 :volume_increment :air]
 
     ; keys - Master
-    [:#Pdelete_or_backspace [:grave_accent_and_tilde] :master]                                               ; '`'
+    ^{:doc/actions [{}]}                                                                           [a/k_db        [c/k_grave]    :master]
 
     ; keypad
     [:#Pkeypad_hyphen :mute]
