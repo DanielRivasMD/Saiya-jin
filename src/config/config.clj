@@ -101,6 +101,7 @@
 (def ktcs_lock (mk K T C S _lock))
 (def kotcs_lock (mk K O T C S _lock))
 
+(def k_grave (mk K _grave))
 (def ksp_grave (mk K S P _grave))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -211,7 +212,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def koc_sp (mk O C _sp))
-(def kocp_sp (mk O C P _sp ))
+(def kocp_sp (mk O C P _sp))
 
 (def koc_au (mk K O C _au))
 (def koc_ad (mk K O C _ad))
@@ -219,7 +220,7 @@
 (def koc_ar (mk K O C _ar))
 
 (def ktc_sp (mk T C _sp))
-(def ktcp_sp (mk T C P _sp ))
+(def ktcp_sp (mk T C P _sp))
 
 (def kew_rs (mk K E W _rs))
 (def keq_rs (mk K E Q _rs))
