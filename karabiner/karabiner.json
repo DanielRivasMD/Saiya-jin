@@ -15931,10 +15931,7 @@
         "description" : "Additional keys",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "delete_or_backspace",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
+            "key_code" : "delete_or_backspace"
           },
           "to" : [ {
             "key_code" : "grave_accent_and_tilde"
@@ -15949,10 +15946,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "delete_or_backspace",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
+            "key_code" : "delete_or_backspace"
           },
           "to" : [ {
             "key_code" : "grave_accent_and_tilde"
@@ -16072,10 +16066,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "delete_or_backspace",
-            "modifiers" : {
-              "optional" : [ "caps_lock" ]
-            }
+            "key_code" : "delete_or_backspace"
           },
           "to" : [ {
             "key_code" : "grave_accent_and_tilde"
