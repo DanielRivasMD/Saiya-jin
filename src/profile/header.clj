@@ -55,6 +55,7 @@
    :devices
    {:pro    [{:vendor_id 1452 :product_id 832}]
     :air    [{:vendor_id 1452 :product_id 641}]
+    :togo   [{:vendor_id 1133 :product_id 45964}]
     :master [{:vendor_id 1133 :product_id 45915}]}
 
    :templates
